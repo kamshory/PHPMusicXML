@@ -5,6 +5,7 @@ namespace MusicXML\Model;
 namespace MusicXML\Model;
 
 use Clef;
+use Transpose;
 use DateTime;
 use MusicXML\MusicXMLWriter;
 
@@ -23,6 +24,13 @@ class Attributes extends MusicXMLWriter
      * @var string
      */
     public $divisions;
+    
+    /**
+     * Key
+     * @Element
+     * @var Key
+     */
+    public $key;
 
     /**
      * Staves
@@ -44,4 +52,11 @@ class Attributes extends MusicXMLWriter
      * @var Clef
      */
     public $clef;
+    
+    /**
+     * Transpose
+     * @Element
+     * @var Transpose
+     */
+    public $transpose;
 }

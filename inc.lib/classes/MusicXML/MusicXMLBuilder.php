@@ -278,6 +278,6 @@ class MusicXMLBuilder
      */
     private function _notNullAndNotEmpty($value)
     {
-        return $value != null && !empty($value);
+        return $value !== null && (!is_string($value) || (is_string($value) && !empty($value)));
     }
 }

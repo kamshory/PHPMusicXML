@@ -4,18 +4,23 @@ namespace MusicXML;
 
 use DateTime;
 use DOMNode;
+use MusicXML\Model\Attributes;
+use MusicXML\Model\Clef;
 use MusicXML\Model\Encoding;
 use MusicXML\Model\Identification;
-use MusicXML\Model\InstrumentName;
-use MusicXML\Model\InstrumentSound;
+use MusicXML\Model\Key;
+use MusicXML\Model\Measure;
 use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
+use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Software;
 use MusicXML\Model\Supports;
+use MusicXML\Model\Time;
+use MusicXML\Model\Transpose;
 
 class MusicXML
 {
@@ -32,9 +37,7 @@ class MusicXML
         $scorePartWise->setIdentification($this->getIdentification());        
         
         $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroupList = array();        
-        
-        
+        $scorePartWise->partList->partGroupList = array();            
         
         // start add score part
         // this block will be iterated each channel
@@ -59,7 +62,52 @@ class MusicXML
         $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
         // end add score part
         
-                
+        $scorePartWise->parts = array();
+        
+        $part = new Part();
+        $part->id = "P1";
+        $part->measureList = array();
+        
+        $measure = new Measure();
+        $measure->setNumber(1);
+        
+        $measure->attributesList = array();
+        
+        $key = new Key();
+        $key->fifths = "1";
+        
+        $time = new Time();
+        $time->beats = 3;
+        $time->beatType = 4;
+        
+        $clef = new Clef();
+        $clef->sign = "F";
+        $clef->line = 4;
+        
+        $transpose = new Transpose();
+        
+        $transpose->diatonic = 0;
+        $transpose->chromatic = 0;
+        $transpose->octaveChange = 0;
+        
+        
+        $attributes = new Attributes();
+        $attributes->divisions = 1;
+        $attributes->staves = 1;
+        $attributes->key = $key;
+        $attributes->time = $time;
+        
+        $attributes->clef = $clef;
+        
+        $attributes->transpose = $transpose;
+        
+        
+        $measure->attributesList[] = $attributes;
+        
+        $part->measureList[] = $measure;
+        
+        $scorePartWise->parts[] = $part;
+        
         
         return $scorePartWise->toXml($domdoc, "score-partwise");
     }

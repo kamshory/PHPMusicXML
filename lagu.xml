@@ -26,7 +26,32 @@
         <midi-channel>1</midi-channel>
         <midi-program>1</midi-program>
         <volume>78.7402</volume>
+        <pan>0</pan>
       </midi-instrument>
     </score-part>
   </part-list>
+  <parts id="P1">
+    <measure number="1">
+      <attributes>
+        <divisions>1</divisions>
+        <key>
+          <fifths>1</fifths>
+        </key>
+        <staves>1</staves>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+        <transpose>
+          <diatonic>0</diatonic>
+          <chromatic>0</chromatic>
+          <octave-change>0</octave-change>
+        </transpose>
+      </attributes>
+    </measure>
+  </parts>
 </score-partwise>
