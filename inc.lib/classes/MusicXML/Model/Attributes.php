@@ -4,8 +4,6 @@ namespace MusicXML\Model;
 
 namespace MusicXML\Model;
 
-use Clef;
-use Transpose;
 use DateTime;
 use MusicXML\MusicXMLWriter;
 
@@ -13,6 +11,7 @@ use MusicXML\MusicXMLWriter;
  * Attributes
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Attributes.kt
  * @Xml
+ * @Path /path/measure/attribute
  * @Data
  */
 class Attributes extends MusicXMLWriter
@@ -42,7 +41,7 @@ class Attributes extends MusicXMLWriter
     /**
      * Time
      * @Element
-     * @var DateTime
+     * @var Time
      */
     public $time;
 

@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * ScorePart
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/ScorePart.kt
  * @Xml
+ * @Path /path-list/score-part
  * @Data
  */
 class ScorePart extends MusicXMLWriter
@@ -48,7 +49,7 @@ class ScorePart extends MusicXMLWriter
      * Midi device
      *
      * @Element(name="midi-device")
-     * @var MidiInstrument
+     * @var MidiDevice
      */
     public $midiDevice;
     

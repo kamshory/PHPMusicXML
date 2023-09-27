@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Slur
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Slur.kt
  * @Xml
+ * @Path /path/measure/note/notation/slur
  * @Data
  */
 class Slur extends MusicXMLWriter

@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Part
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Part.kt
  * @Xml
+ * @Path /path
  * @Data
  */
 class Part extends MusicXMLWriter

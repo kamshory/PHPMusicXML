@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Time
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Time.kt
  * @Xml
+ * @Path /path/measure/attribute/time
  * @Data
  */
 class Time extends MusicXMLWriter

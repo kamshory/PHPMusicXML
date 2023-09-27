@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Supports
  * @Xml
+ * @Path /identification/encoding/supports
  * @Data
  */
 class Supports extends MusicXMLWriter

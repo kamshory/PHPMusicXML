@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Clef
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Clef.kt
  * @Xml
+ * @Path /path/measure/attribute/clef
  * @Data
  */
 class Clef extends MusicXMLWriter

@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Transpose
  * @Xml
+ * @Path /path/measure/attribute/transpose
  * @Data
  */
 class Transpose extends MusicXMLWriter

@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Direction
  * @Xml
+ * @Path /path/measure/direction
  * @Data
  */
 class Direction extends MusicXMLWriter
@@ -23,7 +24,7 @@ class Direction extends MusicXMLWriter
      * Direction type
      *
      * @PropertyElement(name="direction-type")
-     * @var string
+     * @var DirectionType
      */
     public $directionType;
     
@@ -34,4 +35,12 @@ class Direction extends MusicXMLWriter
      * @var string
      */
     public $staff;
+    
+    /**
+     * Sound
+     *
+     * @PropertyElement
+     * @var Sound
+     */
+    public $sound;
 }

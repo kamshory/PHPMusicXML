@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * MidiDevice
  * @Xml
+ * @Path /path-list/score-part/midi-device
  * @Data
  */
 class MidiDevice extends MusicXMLWriter

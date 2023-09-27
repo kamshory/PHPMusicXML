@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Measure
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Measure.kt
  * @Xml
+ * @Path /path/measure
  * @Data
  */
 class Measure extends MusicXMLWriter
@@ -43,4 +44,20 @@ class Measure extends MusicXMLWriter
      * @var Attributes[]
      */
     public $attributesList;
+    
+    /**
+     * Backup
+     *
+     * @Element
+     * @var Backup[]
+     */
+    public $backup;
+    
+    /**
+     * Direction
+     *
+     * @Element
+     * @var Direction[]
+     */
+    public $direction;
 }

@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Notation
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Notation.kt
  * @Xml
+ * @Path /path/measure/note/notation
  * @Data
  */
 class Notation extends MusicXMLWriter

@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Note
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Note.kt
  * @Xml
+ * @Path /path/measure/note
  * @Data
  */
 class Note extends MusicXMLWriter
@@ -99,4 +100,11 @@ class Note extends MusicXMLWriter
      * @var Beam
      */
     public $beam;
+    
+    /**
+     * Tie
+     * @PropertyElement
+     * @var Tie
+     */
+    public $tie;
 }

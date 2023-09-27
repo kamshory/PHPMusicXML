@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * ScoreInstrument
  * @Xml
+ * @Path /path-list/score-part/score-instrument
  * @Data
  */
 class ScoreInstrument extends MusicXMLWriter

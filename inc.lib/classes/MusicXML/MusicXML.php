@@ -44,7 +44,7 @@ class MusicXML extends MusicXMLBase
     {
         $tempoEnevts = $midi->getTempoEvents();
         print_r($tempoEnevts);
-        
+        echo "TIME BASE = ".$midi->getTimeBase();
         $domdoc = $this->getDOMDocument();
         $domdoc->appendChild($this->convertMidiToMusicXML($midi, $domdoc, $version));
         return $domdoc->saveXML();

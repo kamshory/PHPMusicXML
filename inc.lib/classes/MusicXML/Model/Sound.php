@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Sound
  * @Xml
+ * @Path /path/measure/direction/sound
  * @Data
  */
 class Sound extends MusicXMLWriter

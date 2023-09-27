@@ -62,10 +62,14 @@ class MidiMeasure extends Midi{
     private function getTempoEvent($tempo, $start, $end)
     {
         $tempoEvent = new stdClass;
+        $tempoEvent->timeBase = $this->getTimebase();
         $tempoEvent->tempo = $tempo;
+        $tempoEvent->bpm = 60000000/$tempo;
         $tempoEvent->start = $start;
         $tempoEvent->end = $end;
         $tempoEvent->range = $end-$start;
+        
+        $tempoEvent->quarterNoteDuration = $tempoEvent->bpm/15;
         return $tempoEvent;
     }
 

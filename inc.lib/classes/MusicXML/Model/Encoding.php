@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Encoding
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Encoding.kt
  * @Xml
+ * @Path /identification/encoding
  * @Data
  */
 class Encoding extends MusicXMLWriter
@@ -29,7 +30,7 @@ class Encoding extends MusicXMLWriter
     /**
      * Supports
      * @PropertyElement
-     * @var string
+     * @var Supports
      */
     public $supports;
 }
