@@ -32,7 +32,7 @@ class Direction extends MusicXMLWriter
      * Staff
      *
      * @PropertyElement
-     * @var string
+     * @var integer
      */
     public $staff;
     

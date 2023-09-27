@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="4.0">
+  <identification>
+    <rights>Namira Jl.KH.Wahid Hasyim II No.44 Kediri Jawa Timur</rights>
+    <encoding>
+      <software>Planetbiru</software>
+      <encoding-date>2023-09-27</encoding-date>
+      <supports element="accidental" type="yes"/>
+      <supports element="beam" type="yes"/>
+      <supports element="print" attribute="new-page" type="no"/>
+      <supports element="print" attribute="new-system" type="no"/>
+      <supports element="stem" type="yes"/>
+    </encoding>
+  </identification>
+  <part-list/>
+</score-partwise>

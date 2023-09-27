@@ -26,6 +26,7 @@ use MusicXML\Model\Transpose;
 class MusicXML extends MusicXMLBase
 {
     const SCORE_PARTWISE = "score-partwise";
+    const SOFTWARE_NAME = "Planetbiru";
     public function loadMidi($midiPath)
     {
         $midi = new MidiMeasure();
@@ -170,6 +171,12 @@ class MusicXML extends MusicXMLBase
                                 $end = strrpos($line,'"');
                                 $txt = substr($line,$start,$end-$start);
                                 $xml .= "<$tag>".htmlspecialchars($txt)."</$tag>\n";
+                                
+                                if($tag == 'CopyrightNotice')
+                                {
+                                    $scorePartWise->identification->copyrights = $txt;
+                                }
+                                
                             }
                             else
                             {
@@ -324,16 +331,20 @@ class MusicXML extends MusicXMLBase
         return $scorePartWise->toXml($domdoc, "score-partwise");
     }
     
-    public function getIdentification()
+    public function getIdentification($copyright = "")
     {
         $identification = new Identification();
         
-        $identification->setCopyrights("Namira Jl.KH.Wahid Hasyim II No.44 Kediri Jawa Timur");
+        $identification->setCopyrights($copyright);
         
         $identification->encoding = new Encoding();
         $identification->encoding->encodingDate = new DateTime();
         $identification->encoding->softwareList = array();
-        $identification->encoding->softwareList[] = new Software(array('description'=>'MuseScore 4.1.1'));       
+        
+        $software = new Software();
+        $software->setDescription(self::SOFTWARE_NAME);
+        
+        $identification->encoding->softwareList[] = $software;       
         
         $identification->encoding->supports[] = array();   
         $identification->encoding->supports[] = new Supports(array('element'=>'accidental', 'type'=>'yes'));
