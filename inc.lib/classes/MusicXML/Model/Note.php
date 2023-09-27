@@ -13,6 +13,20 @@ use MusicXML\MusicXMLWriter;
 class Note extends MusicXMLWriter
 {
     /**
+     * Dynamics
+     *
+     * @var float
+     */
+    public $dynamics;
+    
+    /**
+     * Direction
+     *
+     * @var [type]
+     */
+    public $direction;
+    
+    /**
      * Pitch
      * 
      * @Element
@@ -22,7 +36,7 @@ class Note extends MusicXMLWriter
 
     /**
      * @PropertyElement
-     * @var string
+     * @var float
      */
     public $duration;
 
