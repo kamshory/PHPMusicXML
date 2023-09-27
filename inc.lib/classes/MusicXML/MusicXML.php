@@ -4,6 +4,7 @@ namespace MusicXML;
 
 use DateTime;
 use DOMDocument;
+use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
@@ -37,20 +38,30 @@ class MusicXML extends MusicXMLBase
     /**
      * Convert MIDI to MusicXML
      *
-     * @param Midi $midi
-     * @param string $version
+     * @param MidiMeasure $midi
+     * @param string $version Version of MusicXML
      * @return string
      */
     public function midiToMusicXml($midi, $version = "4.0")
     {
         $tempoEnevts = $midi->getTempoEvents();
-        print_r($tempoEnevts);
-        echo "TIME BASE = ".$midi->getTimeBase();
         $domdoc = $this->getDOMDocument();
         $domdoc->appendChild($this->convertMidiToMusicXML($midi, $domdoc, $version));
         return $domdoc->saveXML();
     }
+
+    private $partList = array();
+    private $partVolume = array();
+    private $partPan = array();
     
+    /**
+     * Convert Midi to MusicXML
+     *
+     * @param MidiMeasure $midi
+     * @param DOMDocument $domdoc
+     * @param string $version
+     * @return DOMNode
+     */
     public function convertMidiToMusicXML($midi, $domdoc, $version = "4.0")
     {
         $scorePartWise = new ScorePartWise();
@@ -68,6 +79,9 @@ class MusicXML extends MusicXMLBase
 
         $xml = "";
         $ttype = 0;
+
+        $instrumentList = $midi->getInstrumentList();
+        $drumSet = $midi->getDrumset();
         
         
         for ($i=0; $i<$tc; $i++)
@@ -93,6 +107,17 @@ class MusicXML extends MusicXMLBase
                             eval("\$".$msg[3].';'); // $p
                             $ch = isset($ch) ? $ch : 0;
                             $p = isset($p) ? $p : 0;
+
+
+                            $instrument = $this->getInstrumentName($p, $ch);
+                            $instrumentName = isset($instrument[0]) ? $instrument[0] : '';
+
+                            $partId = "P".$ch;
+                            $p1 = $p + 1;
+                            $instrumentId = $ch == 10 ? "P".$ch."-I".$p1 : "P".$ch."-I1";
+                            $this->partList[$instrumentId] = array('instrumentId'=>$instrumentId, 'partId'=>$partId, 'channelId'=>$ch, 'programId'=>$p1, 'instrument'=>$instrument, 'port'=>$ch);
+
+                            //echo "ProgramChange Channel=\"$ch\" Number=\"$p\" Name=\"$instrumentName\"\r\n";
                         $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
                             break;
         
@@ -129,7 +154,17 @@ class MusicXML extends MusicXMLBase
                             $ch = isset($ch) ? $ch : 0;
                             $c = isset($c) ? $c : 0;
                             $v = isset($v) ? $v : 0;
-                            
+
+                            $partId = "P".$ch;
+                            if($c == 7 && (!isset($this->partVolume[$partId])))
+                            {
+                                $this->partVolume[$partId] = $v;
+                            }
+                            if($c == 10 && (!isset($this->partPan[$partId]) || $this->partPan[$partId] == 0))
+                            {
+                                $this->partPan[$partId] = $v;
+                                echo "PAN = $v\r\n";
+                            }
                             $xml .= "<ControlChange Channel=\"$ch\" Control=\"$c\" Value=\"$v\"/>\n";
                             break;
         
@@ -237,6 +272,38 @@ class MusicXML extends MusicXMLBase
           }
           $xml .= "</MIDIFile>";
  
+
+        $channelId  = array_column($this->partList, 'channelId');
+        $programId = array_column($this->partList, 'programId');
+        array_multisort($channelId, SORT_ASC, $programId, SORT_ASC, $this->partList);
+
+        foreach($this->partList as $part)
+        {
+            // start add score part
+            // this block will be iterated each channel
+            $partId = $part['partId'];
+            $partName = $part['instrument'][0];
+            $partAbbreviation = isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
+
+            $instrumentName = isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
+            $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
+
+            $midiChannel = $part['channelId'];
+            $midiProgramId = $part['programId'];
+            $instrumentId = $part['instrumentId'];
+            
+            $volumeRaw = isset($this->partVolume[$partId]) ? $this->partVolume[$partId] : 0;
+            $volume = $volumeRaw * 100 / 127;
+            $panRaw = isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
+            $pan = ($panRaw - 64) * 90 / 64;
+            
+            $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
+            $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
+            $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
+            
+            $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
+            // end add score part
+        }
           
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }

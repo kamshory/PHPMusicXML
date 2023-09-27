@@ -13,5 +13,140 @@
       <supports element="stem" type="yes"/>
     </encoding>
   </identification>
-  <part-list/>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Piano</part-name>
+      <part-abbreviation>Pno.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Pno.</instrument-name>
+        <instrument-sound>piano</instrument-sound>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>100</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P2">
+      <part-name>Picked Bass</part-name>
+      <score-instrument id="P2-I1">
+        <instrument-sound>picked.bass</instrument-sound>
+      </score-instrument>
+      <midi-device id="P2-I1" port="2"></midi-device>
+      <midi-instrument id="P2-I1">
+        <midi-channel>2</midi-channel>
+        <midi-program>35</midi-program>
+        <volume>97.637795275591</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P3">
+      <part-name>Ensemble Strings</part-name>
+      <score-instrument id="P3-I1">
+        <instrument-sound>ensemble.strings</instrument-sound>
+      </score-instrument>
+      <midi-device id="P3-I1" port="3"></midi-device>
+      <midi-instrument id="P3-I1">
+        <midi-channel>3</midi-channel>
+        <midi-program>49</midi-program>
+        <volume>0</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P4">
+      <part-name>Syn Calliope</part-name>
+      <score-instrument id="P4-I1">
+        <instrument-sound>syn.calliope</instrument-sound>
+      </score-instrument>
+      <midi-device id="P4-I1" port="4"></midi-device>
+      <midi-instrument id="P4-I1">
+        <midi-channel>4</midi-channel>
+        <midi-program>83</midi-program>
+        <volume>97.637795275591</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P5">
+      <part-name>Nylon Str Guitar</part-name>
+      <score-instrument id="P5-I1">
+        <instrument-sound>nylon.str.guitar</instrument-sound>
+      </score-instrument>
+      <midi-device id="P5-I1" port="5"></midi-device>
+      <midi-instrument id="P5-I1">
+        <midi-channel>5</midi-channel>
+        <midi-program>25</midi-program>
+        <volume>78.740157480315</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P6">
+      <part-name>Ensemble Strings</part-name>
+      <score-instrument id="P6-I1">
+        <instrument-sound>ensemble.strings</instrument-sound>
+      </score-instrument>
+      <midi-device id="P6-I1" port="6"></midi-device>
+      <midi-instrument id="P6-I1">
+        <midi-channel>6</midi-channel>
+        <midi-program>49</midi-program>
+        <volume>49.606299212598</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P7">
+      <part-name>Clean Guitar</part-name>
+      <score-instrument id="P7-I1">
+        <instrument-sound>clean.guitar</instrument-sound>
+      </score-instrument>
+      <midi-device id="P7-I1" port="7"></midi-device>
+      <midi-instrument id="P7-I1">
+        <midi-channel>7</midi-channel>
+        <midi-program>28</midi-program>
+        <volume>93.700787401575</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P8">
+      <part-name>Voice Oohs</part-name>
+      <score-instrument id="P8-I1">
+        <instrument-sound>voice.oohs</instrument-sound>
+      </score-instrument>
+      <midi-device id="P8-I1" port="8"></midi-device>
+      <midi-instrument id="P8-I1">
+        <midi-channel>8</midi-channel>
+        <midi-program>54</midi-program>
+        <volume>78.740157480315</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P9">
+      <part-name>Orchestra Hit</part-name>
+      <score-instrument id="P9-I1">
+        <instrument-sound>orchestra.hit</instrument-sound>
+      </score-instrument>
+      <midi-device id="P9-I1" port="9"></midi-device>
+      <midi-instrument id="P9-I1">
+        <midi-channel>9</midi-channel>
+        <midi-program>56</midi-program>
+        <volume>78.740157480315</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P10">
+      <part-name>Instrument 26</part-name>
+      <part-abbreviation>Instrument 26</part-abbreviation>
+      <score-instrument id="P10-I26">
+        <instrument-name>Instrument 26</instrument-name>
+        <instrument-sound>instrument.26</instrument-sound>
+      </score-instrument>
+      <midi-device id="P10-I26" port="10"></midi-device>
+      <midi-instrument id="P10-I26">
+        <midi-channel>10</midi-channel>
+        <midi-program>26</midi-program>
+        <volume>100</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
 </score-partwise>
