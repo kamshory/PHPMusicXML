@@ -34,6 +34,10 @@ class MusicXML
         $scorePartWise->partList = new PartList();
         $scorePartWise->partList->partGroupList = array();        
         
+        
+        
+        // start add score part
+        // this block will be iterated each channel
         $partId = "P1";
         $partName = "Cinta Pertama dan Terakhir";
         $partAbbreviation = "Pno.";
@@ -53,7 +57,7 @@ class MusicXML
         $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
         
         $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
-
+        // end add score part
         
                 
         
@@ -79,39 +83,6 @@ class MusicXML
         $identification->encoding->supports[] = new Supports(array('element'=>'stem', 'type'=>'yes'));
         
         return $identification;
-    }
-    
-    /**
-     * Get score part
-     *
-     * @return ScorePart
-     */
-    public function getScorePart2()
-    {
-        $scorePart = new ScorePart();
-        $scorePart->setId('P2');
-        $scorePart->setPartName('Cinta Pertama dan Terakhir');
-        $scorePart->setPartAbbreviation('Pno.');
-        
-        $scoreInstrument = new ScoreInstrument();
-        
-        $scoreInstrument->setId('P2-I1');
-        $scoreInstrument->setInstrumentName('Piano');
-        $scoreInstrument->setInstrumentSound('keyboard.piano');     
-        
-        $midiInstrument = new MidiInstrument();
-        
-        $midiInstrument->setId('P2-I1');
-        $midiInstrument->setMidiChannel(1);
-        $midiInstrument->setMidiProgram(1);
-        $midiInstrument->setVolume(78.7402);
-        $midiInstrument->setPan(0);
-        
-        $scorePart->scoreInstrument = $scoreInstrument;
-        
-        $scorePart->midiInstrument = $midiInstrument;
-        
-        return $scorePart;
     }
     
     private function getMidiDevice($midiId, $port)
@@ -168,48 +139,10 @@ class MusicXML
         $scorePart->setId($partId);
         $scorePart->setPartName($partName);
         $scorePart->setPartAbbreviation($partAbbreviation);
-        
-        
-        
         $scorePart->setScoreInstrument($scoreInstrument);
-        
         $scorePart->setMidiInstrument($midiInstrument);
-        
         $scorePart->setMidiDevice($midiDevice);
-        
         return $scorePart;
     }
     
-    /**
-     * Get score part
-     *
-     * @return ScorePart
-     */
-    public function getScorePart1()
-    {
-        $scorePart = new ScorePart();
-        $scorePart->setId('P1');
-        $scorePart->setPartName('Cinta Pertama dan Terakhir');
-        $scorePart->setPartAbbreviation('Pno.');
-        
-        $scoreInstrument = new ScoreInstrument();
-        
-        $scoreInstrument->setId('P1-I1');
-        $scoreInstrument->setInstrumentName('Piano');
-        $scoreInstrument->setInstrumentSound('keyboard.piano');     
-        
-        $midiInstrument = new MidiInstrument();
-        
-        $midiInstrument->setId('P1-I1');
-        $midiInstrument->setMidiChannel(1);
-        $midiInstrument->setMidiProgram(1);
-        $midiInstrument->setVolume(78.7402);
-        $midiInstrument->setPan(0);
-        
-        $scorePart->scoreInstrument = $scoreInstrument;
-        
-        $scorePart->midiInstrument = $midiInstrument;
-        
-        return $scorePart;
-    }
 }
