@@ -29,14 +29,6 @@ class Identification extends MusicXMLWriter
     public $encoding;
     
     /**
-     * Creator
-     * 
-     * @PropertyElement(name="creator")
-     * @var string
-     */
-    public $creator;
-    
-    /**
      * Creator type
      *
      * @Attribute(name="type")

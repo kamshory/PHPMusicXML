@@ -8,6 +8,7 @@ use MusicXML\Model\Encoding;
 use MusicXML\Model\Identification;
 use MusicXML\Model\InstrumentName;
 use MusicXML\Model\InstrumentSound;
+use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\PartList;
 use MusicXML\Model\ScoreInstrument;
@@ -33,12 +34,27 @@ class MusicXML
         $scorePartWise->partList = new PartList();
         $scorePartWise->partList->partGroupList = array();        
         
+        $partId = "P1";
+        $partName = "Cinta Pertama dan Terakhir";
+        $partAbbreviation = "Pno.";
+
+        $instrumentName = "Piano";
+        $instrumentSound = "keyboard.piano";
+
+        $midiChannel = 1;
+        $midiProgramId = 1;
+        $instrumentId = 'P1-I1';
         
-        $scorePartWise->partList->scorePartList[] = $this->getScorePart();
-        $scorePartWise->partList->scorePartList[] = new ScorePart();
-        $scorePartWise->partList->scorePartList[] = new ScorePart();
-        $scorePartWise->partList->scorePartList[] = new ScorePart();
-        $scorePartWise->partList->scorePartList[] = new ScorePart();
+        $volume = 78.7402;
+        $pan = 0;
+        
+        $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
+        $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
+        $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
+        
+        $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
+
+        
                 
         
         return $scorePartWise->toXml($domdoc, "score-partwise");
@@ -70,7 +86,106 @@ class MusicXML
      *
      * @return ScorePart
      */
-    public function getScorePart()
+    public function getScorePart2()
+    {
+        $scorePart = new ScorePart();
+        $scorePart->setId('P2');
+        $scorePart->setPartName('Cinta Pertama dan Terakhir');
+        $scorePart->setPartAbbreviation('Pno.');
+        
+        $scoreInstrument = new ScoreInstrument();
+        
+        $scoreInstrument->setId('P2-I1');
+        $scoreInstrument->setInstrumentName('Piano');
+        $scoreInstrument->setInstrumentSound('keyboard.piano');     
+        
+        $midiInstrument = new MidiInstrument();
+        
+        $midiInstrument->setId('P2-I1');
+        $midiInstrument->setMidiChannel(1);
+        $midiInstrument->setMidiProgram(1);
+        $midiInstrument->setVolume(78.7402);
+        $midiInstrument->setPan(0);
+        
+        $scorePart->scoreInstrument = $scoreInstrument;
+        
+        $scorePart->midiInstrument = $midiInstrument;
+        
+        return $scorePart;
+    }
+    
+    private function getMidiDevice($midiId, $port)
+    {
+        $midiDevice = new MidiDevice();
+        $midiDevice->setId($midiId);
+        $midiDevice->setPort($port);
+        return $midiDevice;
+    }
+    
+    /**
+     * Get score instrument
+     *
+     * @return ScoreInstrument
+     */
+    private function getScoreInstrument($instrumentId, $instrumentName, $instrumentSound)
+    {
+        $scoreInstrument = new ScoreInstrument();     
+        $scoreInstrument->setId($instrumentId);
+        $scoreInstrument->setInstrumentName($instrumentName);
+        $scoreInstrument->setInstrumentSound($instrumentSound);     
+        return $scoreInstrument;
+    }
+    
+    /**
+     * Get score instrument
+     *
+     * @return MidiInstrument
+     */
+    private function getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume = 100, $pan = 0)
+    {
+        $midiInstrument = new MidiInstrument();
+        $midiInstrument->setId($instrumentId);
+        $midiInstrument->setMidiChannel($midiChannel);
+        $midiInstrument->setMidiProgram($midiProgramId);
+        $midiInstrument->setVolume($volume);
+        $midiInstrument->setPan($pan);         
+        return $midiInstrument;
+    }
+    
+    /**
+     * Get score part
+     *
+     * @param string $partId
+     * @param string $partName
+     * @param string $partAbbreviation
+     * @param ScoreInstrument $scoreInstrument
+     * @param MidiInstrument $midiInstrument
+     * @return ScorePart
+     */
+    public function getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice) //NOSONAR
+    {
+        $scorePart = new ScorePart();
+        $scorePart->setId($partId);
+        $scorePart->setPartName($partName);
+        $scorePart->setPartAbbreviation($partAbbreviation);
+        
+        
+        
+        $scorePart->setScoreInstrument($scoreInstrument);
+        
+        $scorePart->setMidiInstrument($midiInstrument);
+        
+        $scorePart->setMidiDevice($midiDevice);
+        
+        return $scorePart;
+    }
+    
+    /**
+     * Get score part
+     *
+     * @return ScorePart
+     */
+    public function getScorePart1()
     {
         $scorePart = new ScorePart();
         $scorePart->setId('P1');

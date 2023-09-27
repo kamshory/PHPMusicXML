@@ -8,7 +8,6 @@ use DOMText;
 use MusicXML\MusicXMLWriter;
 use MusicXML\Util\PicoAnnotationParser;
 use MusicXML\XMLPropertyInfo;
-use SimpleXMLElement;
 
 class MusicXMLBuilder
 {
@@ -166,107 +165,101 @@ class MusicXMLBuilder
         $domnode = $domdoc->createElement($tagName);
         foreach($this->object as $propertyName=>$propertyValue)
         {
-            if($propertyValue != null)
+            $propertInfo = $this->getPropertyInfo($propertyName);
+            if(is_array($propertyValue))
             {
-                $propertInfo = $this->getPropertyInfo($propertyName);
-                if(is_array($propertyValue))
+                // process array
+                foreach($propertyValue as $value)
+                {
+                    if($value instanceof MusicXMLWriter)
+                    {
+                        if($propertInfo->getElement())
+                        {
+                            if($this->_notNullAndNotEmpty($propertInfo->getElementName()))
+                            {
+                                $tag = $propertInfo->getElementName();
+                            }
+                            else
+                            {
+                                $tag = $propertInfo->getName();
+                            }
+                            $child = $value->toXml($domdoc, $tag);
+                            $domnode->appendChild($child);
+                        }
+                        else if($propertInfo->getPropertyElement())
+                        {
+                            if($this->_notNullAndNotEmpty($propertInfo->getPropertyElementName()))
+                            {
+                                $tag = $propertInfo->getPropertyElementName();
+                            }
+                            else
+                            {
+                                $tag = $propertInfo->getName();
+                            }
+                            $child = $value->toXml($domdoc, $tag);
+                            $domnode->appendChild($child);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // process object
+                if($propertyValue instanceof MusicXMLWriter)
                 {
                     
-            
-                    // process array
-                    foreach($propertyValue as $value)
+                    if($propertInfo->getElement())
                     {
-                        if($value instanceof MusicXMLWriter)
-                        {
-                            if($propertInfo->getElement())
-                            {
-                                if($this->_notNullAndNotEmpty($propertInfo->getElementName()))
-                                {
-                                    $tag = $propertInfo->getElementName();
-                                }
-                                else
-                                {
-                                    $tag = $propertInfo->getName();
-                                }
-                                $child = $value->toXml($domdoc, $tag);
-                                $domnode->appendChild($child);
-                            }
-                            else if($propertInfo->getPropertyElement())
-                            {
-                                if($this->_notNullAndNotEmpty($propertInfo->getPropertyElementName()))
-                                {
-                                    $tag = $propertInfo->getPropertyElementName();
-                                }
-                                else
-                                {
-                                    $tag = $propertInfo->getName();
-                                }
-                                $child = $value->toXml($domdoc, $tag);
-                                $domnode->appendChild($child);
-                            }
-                        }
+                        $child = $propertyValue->toXml($domdoc, $propertInfo->getElementName());
+                        $domnode->appendChild($child);
                     }
                 }
                 else
                 {
-                    // process object
-                    if($propertyValue instanceof MusicXMLWriter)
+                    
+                    // Traditional and PHP data type
+                    if($propertInfo->getPropertyElement())
                     {
                         
-                        if($propertInfo->getElement())
-                        {
-                            $child = $propertyValue->toXml($domdoc, $propertInfo->getElementName());
-                            $domnode->appendChild($child);
-                        }
-                    }
-                    else
-                    {
-                        
-                        // Traditional and PHP data type
-                        if($propertInfo->getPropertyElement())
+                        if(is_array($propertyValue))
                         {
                             
-                            if(is_array($propertyValue))
+                            foreach($propertyValue as $value)
                             {
-                                
-                                foreach($propertyValue as $value)
+                                if($value instanceof MusicXMLWriter)
                                 {
-                                    if($value instanceof MusicXMLWriter)
-                                    {
-                                        $child = $value->toXml($domdoc, $propertInfo->getPropertyElementName());
-                                        $domnode->appendChild($child);
-                                    }
+                                    $child = $value->toXml($domdoc, $propertInfo->getPropertyElementName());
+                                    $domnode->appendChild($child);
                                 }
+                            }
+                        }
+                        else
+                        {
+                            
+                            $value = "";
+                            if($propertyValue instanceof DateTime)
+                            {
+                                $value = $propertyValue->format('Y-m-d');
                             }
                             else
                             {
-                                
-                                $value = "";
-                                if($propertyValue instanceof DateTime)
-                                {
-                                    $value = $propertyValue->format('Y-m-d');
-                                }
-                                else
-                                {
-                                    $value = $propertyValue;
-                                }
-                                $domnode->appendChild($domdoc->createElement($propertInfo->getPropertyElementName(), $value));
+                                $value = $propertyValue;
                             }
+                            $domnode->appendChild($domdoc->createElement($propertInfo->getPropertyElementName(), $value));
                         }
-                        else if($propertInfo->getAttribute())
+                    }
+                    else if($propertInfo->getAttribute())
+                    {
+                        
+                        if($this->_notNullAndNotEmpty($propertyValue))
                         {
-                            
-                            if($this->_notNullAndNotEmpty($propertyValue))
-                            {
-                                $domnode->setAttribute($propertInfo->getAttributeName(), $propertyValue);
-                            }
+                            $domnode->setAttribute($propertInfo->getAttributeName(), $propertyValue);
                         }
-                        else if($propertInfo->getTextContent())
-                        {
-                            
-                            $newText = new DOMText($propertyValue);
-                            $domnode->appendChild($newText);
-                        }
+                    }
+                    else if($propertInfo->getTextContent())
+                    {
+                        $newText = new DOMText($propertyValue);
+                        $domnode->appendChild($newText);
                     }
                 }
             }

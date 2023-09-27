@@ -45,9 +45,17 @@ class ScorePart extends MusicXMLWriter
     public $scoreInstrument;
     
     /**
+     * Midi device
+     *
+     * @Element(name="midi-device")
+     * @var MidiInstrument
+     */
+    public $midiDevice;
+    
+    /**
      * Midi instrument
      *
-     * @Element(name="score-instrument")
+     * @Element(name="midi-instrument")
      * @var MidiInstrument
      */
     public $midiInstrument;
