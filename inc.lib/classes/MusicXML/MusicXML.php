@@ -48,9 +48,7 @@ class MusicXML
     {
         $identification = new Identification();
         
-        $identification->setCreator("Kamshory");
-        $identification->setCreatorType("software");
-        $identification->setCopyright("Namira Jl.KH.Wahid Hasyim II No.44 Kediri Jawa Timur");
+        $identification->setCopyrights("Namira Jl.KH.Wahid Hasyim II No.44 Kediri Jawa Timur");
         
         $identification->encoding = new Encoding();
         $identification->encoding->encodingDate = new DateTime();

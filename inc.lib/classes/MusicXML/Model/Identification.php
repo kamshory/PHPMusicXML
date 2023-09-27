@@ -15,10 +15,10 @@ class Identification extends MusicXMLWriter
     /**
      * Copyright
      * 
-     * @PropertyElement(name="right")
+     * @PropertyElement(name="rights")
      * @var string
      */
-    public $copyright;
+    public $copyrights;
     
     /**
      * Description
