@@ -4,6 +4,7 @@ namespace MusicXML;
 
 use DOMDocument;
 use DOMImplementation;
+use Midi\MidiMeasure;
 
 class MusicXMLBase
 {
@@ -12,6 +13,14 @@ class MusicXMLBase
     const DOCUMENT_ID = "score-partwise";
     const PUBLIC_ID = "-//Recordare//DTD MusicXML 4.0 Partwise//EN";
     const SYSTEM_ID = "http://www.musicxml.org/dtds/partwise.dtd";
+
+    public function loadMidi($midiPath)
+    {
+        $midi = new MidiMeasure();
+        $midi->importMid($midiPath);
+        return $midi;
+    }
+
     protected $noteList = array(
         //Do          Re           Mi    Fa           So           La           Ti
         'C0', 'Cs0', 'D0', 'Ds0', 'E0', 'F0', 'Fs0', 'G0', 'Gs0', 'A0', 'As0', 'B0',

@@ -60,19 +60,20 @@ class MusicXML extends MusicXMLBase
     private $measures = array();
 
     /**
+     * Channel 10 instrument list
+     *
+     * @var array
+     */
+    private $channel10 = array();
+
+    /**
      * Copyright
      *
      * @var string
      */
     private $copyright = "";
 
-    public function loadMidi($midiPath)
-    {
-        $midi = new MidiMeasure();
-        $midi->importMid($midiPath);
-        return $midi;
-    }
-    
+
     /**
      * Convert MIDI to MusicXML
      *
@@ -91,15 +92,13 @@ class MusicXML extends MusicXMLBase
     {
         $tm = $msg[0] / (1.6 * $timebase);
         $tmInteger = floor($tm);
-        if(!isset($this->measures[$ch]))
-        {
+        if (!isset($this->measures[$ch])) {
             $this->measures[$ch] = array();
         }
-        if(!isset($this->measures[$ch][$tmInteger]))
-        {
+        if (!isset($this->measures[$ch][$tmInteger])) {
             $this->measures[$ch][$tmInteger] = array();
         }
-        $this->measures[$ch][$tmInteger][] = array('time'=>$tm, 'channel'=>$ch, 'note'=>$n, 'velocity'=>$v, 'event'=>$msg[1], 'message'=>$msg);
+        $this->measures[$ch][$tmInteger][] = array('time' => $tm, 'channel' => $ch, 'note' => $n, 'velocity' => $v, 'event' => $msg[1], 'message' => $msg);
     }
     private function processDuration()
     {
@@ -114,32 +113,26 @@ class MusicXML extends MusicXMLBase
      */
     private function processDuration1()
     {
-        foreach($this->measures as $ch=>$chValue)
-        {
-            foreach($chValue as $tmInteger=>$tmIntegerValue)
-            {
-                foreach($tmIntegerValue as $note=>$noteValue)
-                {
- 
+        foreach ($this->measures as $ch => $chValue) {
+            foreach ($chValue as $tmInteger => $tmIntegerValue) {
+                foreach ($tmIntegerValue as $note => $noteValue) {
+
                     $chIdx = $noteValue['channel'];
                     $noteIdx = $noteValue['note'];
-                    $index = "n".$chIdx."_".$noteIdx;
+                    $index = "n" . $chIdx . "_" . $noteIdx;
 
-                    if(isset($lastTime[$index]))
-                    {
+                    if (isset($lastTime[$index])) {
                         $lt = $lastTime[$index];
-                    }
-                    else
-                    {
+                    } else {
                         $lt = 0;
                     }
 
                     $duration = $noteValue['time'] - $lt;
                     $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                     $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
- 
+
                     $lastTime[$index] = $noteValue['time'];
-                }               
+                }
             }
         }
     }
@@ -151,16 +144,12 @@ class MusicXML extends MusicXMLBase
      */
     private function processDuration2()
     {
-        foreach($this->measures as $ch=>$chValue)
-        {
-            foreach($chValue as $tmInteger=>$tmIntegerValue)
-            {
-                foreach($tmIntegerValue as $note=>$noteValue)
-                {
-                    if(isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last']))
-                    {
+        foreach ($this->measures as $ch => $chValue) {
+            foreach ($chValue as $tmInteger => $tmIntegerValue) {
+                foreach ($tmIntegerValue as $note => $noteValue) {
+                    if (isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last'])) {
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
-                    }                 
+                    }
                 }
             }
         }
@@ -190,17 +179,15 @@ class MusicXML extends MusicXMLBase
     public function findLastOn($messages)
     {
         $last = 0;
-        foreach($messages as $idx=>$note)
-        {
-            if($note['event'] == 'On')
-            {
+        foreach ($messages as $idx => $note) {
+            if ($note['event'] == 'On') {
                 $last = $idx;
             }
         }
         return $last;
     }
 
-    
+
 
     /**
      * Build part list
@@ -210,189 +197,180 @@ class MusicXML extends MusicXMLBase
      */
     private function buildPartList($midi)
     {
+        $this->channel10 = array();
         $this->copyright = null;
         $tracks = $midi->getTracks();
         $tc = count($tracks);
         $xml = "";
         $ttype = 0;
-        for ($i=0; $i<$tc; $i++)
-        {
+        for ($i = 0; $i < $tc; $i++) {
             $xml .= "<Track Number=\"$i\">\n";
             $track = $tracks[$i];
             $mc = count($track);
             $last = 0;
-            for ($j=0;$j<$mc;$j++){
-                $msg = explode(' ',$track[$j]);
+            for ($j = 0; $j < $mc; $j++) {
+                $msg = explode(' ', $track[$j]);
                 $t = (int) $msg[0];
-                if ($ttype==1){//delta
+                if ($ttype == 1) { //delta
                     $dt = $t - $last;
                     $last = $t;
                 }
                 $xml .= "  <Event>\n";
-                $xml .= ($ttype==1)?"    <Delta>$dt</Delta>\n":"    <Absolute>$t</Absolute>\n";
-                $xml .= '    ';       
-                switch($msg[1]){
+                $xml .= ($ttype == 1) ? "    <Delta>$dt</Delta>\n" : "    <Absolute>$t</Absolute>\n";
+                $xml .= '    ';
+                switch ($msg[1]) {
                     case 'PrCh':
-                        eval("\$".$msg[2].';'); // $ch
-                        eval("\$".$msg[3].';'); // $p
+                        eval("\$" . $msg[2] . ';'); // $ch
+                        eval("\$" . $msg[3] . ';'); // $p
                         $ch = isset($ch) ? $ch : 0;
                         $p = isset($p) ? $p : 0;
 
                         $instrument = $this->getInstrumentName($p, $ch);
-            
-                        $partId = "P".$ch;
-                        $p1 = $p + 1;
-                        $instrumentId = $ch == 10 ? "P".$ch."-I".$p1 : "P".$ch."-I1";
-                        $this->partList[$instrumentId] = array('instrumentId'=>$instrumentId, 'channelId'=>$ch, 'partId'=>$partId, 'channelId'=>$ch, 'programId'=>$p1, 'instrument'=>$instrument, 'port'=>$ch);
 
-                        
-                    $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
+                        $partId = "P" . $ch;
+                        $p1 = $p + 1;
+                        $instrumentId = $ch == 10 ? "P" . $ch . "-I" . $p1 : "P" . $ch . "-I1";
+                        $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $ch, 'partId' => $partId, 'channelId' => $ch, 'programId' => $p1, 'instrument' => $instrument, 'port' => $ch);
+
+
+                        $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
                         break;
-    
+
                     case 'On':
                     case 'Off':
-                        eval("\$".$msg[2].';'); // $ch
-                        eval("\$".$msg[3].';'); // $n
-                        eval("\$".$msg[4].';'); // $v
-                        
+                        eval("\$" . $msg[2] . ';'); // $ch
+                        eval("\$" . $msg[3] . ';'); // $n
+                        eval("\$" . $msg[4] . ';'); // $v
+
                         $ch = isset($ch) ? $ch : 0;
                         $n = isset($n) ? $n : 0;
                         $v = isset($v) ? $v : 0;
-                        if($ch == 10 && !isset($channel10[$n+1]))
-                        {
-                            $channel10[$n+1] = array('note'=>$n+1, 'ch'=>$ch, 'n'=>$n, 'v'=>$v, 'message'=>$msg);
+                        if ($ch == 10 && !isset($this->channel10[$n + 1])) {
+                            $this->channel10[$n + 1] = array('note' => $n + 1, 'ch' => $ch, 'n' => $n, 'v' => $v, 'message' => $msg);
                         }
                         $this->processTime($msg, $midi->getTimebase(), $n, $ch, $v);
-                        
-                        
-                    $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
+
+
+                        $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
                         break;
-    
+
                     case 'PoPr':
-                        eval("\$".$msg[2].';'); // $ch
-                        eval("\$".$msg[3].';'); // $n
-                        eval("\$".$msg[4].';'); // $v
-                        
+                        eval("\$" . $msg[2] . ';'); // $ch
+                        eval("\$" . $msg[3] . ';'); // $n
+                        eval("\$" . $msg[4] . ';'); // $v
+
                         $ch = isset($ch) ? $ch : 0;
                         $n = isset($n) ? $n : 0;
                         $v = isset($v) ? $v : 0;
-                        
+
                         $xml .= "<PolyKeyPressure Channel=\"$ch\" Note=\"$n\" Pressure=\"$v\"/>\n";
                         break;
-    
+
                     case 'Par':
-                        eval("\$".$msg[2].';'); // ch
-                        eval("\$".$msg[3].';'); // c
-                        eval("\$".$msg[4].';'); // v
-                        
+                        eval("\$" . $msg[2] . ';'); // ch
+                        eval("\$" . $msg[3] . ';'); // c
+                        eval("\$" . $msg[4] . ';'); // v
+
                         $ch = isset($ch) ? $ch : 0;
                         $c = isset($c) ? $c : 0;
                         $v = isset($v) ? $v : 0;
 
-                        $partId = "P".$ch;
-                        if($c == 7 && (!isset($this->partVolume[$partId])))
-                        {
+                        $partId = "P" . $ch;
+                        if ($c == 7 && (!isset($this->partVolume[$partId]))) {
                             $this->partVolume[$partId] = $v;
                         }
-                        if($c == 10 && (!isset($this->partPan[$partId]) || $this->partPan[$partId] == 0))
-                        {
+                        if ($c == 10 && (!isset($this->partPan[$partId]) || $this->partPan[$partId] == 0)) {
                             $this->partPan[$partId] = $v;
                         }
-                        
-                        
+
+
                         $xml .= "<ControlChange Channel=\"$ch\" Control=\"$c\" Value=\"$v\"/>\n";
                         break;
-    
+
                     case 'ChPr':
-                        eval("\$".$msg[2].';'); // ch
-                        eval("\$".$msg[3].';'); // v
-                        
+                        eval("\$" . $msg[2] . ';'); // ch
+                        eval("\$" . $msg[3] . ';'); // v
+
                         $ch = isset($ch) ? $ch : 0;
                         $v = isset($v) ? $v : 0;
-                        
+
                         $xml .= "<ChannelKeyPressure Channel=\"$ch\" Pressure=\"$v\"/>\n";
                         break;
-    
+
                     case 'Pb':
-                        eval("\$".$msg[2].';'); // ch
-                        eval("\$".$msg[3].';'); // v
-                        
+                        eval("\$" . $msg[2] . ';'); // ch
+                        eval("\$" . $msg[3] . ';'); // v
+
                         $ch = isset($ch) ? $ch : 0;
                         $v = isset($v) ? $v : 0;
-                        
+
                         $xml .= "<PitchBendChange Channel=\"$ch\" Value=\"$v\"/>\n";
                         break;
-    
+
                     case 'Seqnr':
                         $xml .= "<SequenceNumber Value=\"{$msg[2]}\"/>\n";
                         break;
-    
+
                     case 'Meta':
-                        $txttypes = array('Text','Copyright','TrkName','InstrName','Lyric','Marker','Cue');
+                        $txttypes = array('Text', 'Copyright', 'TrkName', 'InstrName', 'Lyric', 'Marker', 'Cue');
                         $mtype = $msg[2];
-    
+
                         $pos = array_search($mtype, $txttypes);
-                        if ($pos !== false)
-                        {
-                            $tags = array('TextEvent','CopyrightNotice','TrackName','InstrumentName','Lyric','Marker','CuePoint');
+                        if ($pos !== false) {
+                            $tags = array('TextEvent', 'CopyrightNotice', 'TrackName', 'InstrumentName', 'Lyric', 'Marker', 'CuePoint');
                             $tag = $tags[$pos];
                             $line = $track[$j];
-                            $start = strpos($line,'"')+1;
-                            $end = strrpos($line,'"');
-                            $txt = substr($line,$start,$end-$start);
-                            $xml .= "<$tag>".htmlspecialchars($txt)."</$tag>\n";
-                            
-                            if($tag == 'CopyrightNotice')
-                            {
+                            $start = strpos($line, '"') + 1;
+                            $end = strrpos($line, '"');
+                            $txt = substr($line, $start, $end - $start);
+                            $xml .= "<$tag>" . htmlspecialchars($txt) . "</$tag>\n";
+
+                            if ($tag == 'CopyrightNotice') {
                                 $this->copyright = $txt;
                             }
-                            
-                        }
-                        else
-                        {
-                            if ($mtype == 'TrkEnd')
-                            {$xml .= "<EndOfTrack/>\n";}
-                            else if ($mtype == '0x20' || $mtype == '0x21') // ChannelPrefix ???
-                            {$xml .= "<MIDIChannelPrefix Value=\"{$msg[3]}\"/>\n";}
+                        } else {
+                            if ($mtype == 'TrkEnd') {
+                                $xml .= "<EndOfTrack/>\n";
+                            } else if ($mtype == '0x20' || $mtype == '0x21') {
+                                $xml .= "<MIDIChannelPrefix Value=\"{$msg[3]}\"/>\n";
+                            }
                         }
                         break;
-    
+
                     case 'Tempo':
                         $xml .= "<SetTempo Value=\"{$msg[2]}\"/>\n";
                         break;
-    
+
                     case 'SMPTE':
                         $xml .= "<SMPTEOffset TimeCodeType=\"1\" Hour=\"{$msg[2]}\" Minute=\"{$msg[3]}\" Second=\"{$msg[4]}\" Frame=\"{$msg[5]}\" FractionalFrame=\"{$msg[6]}\"/>\n"; //TimeCodeType???
                         break;
-    
+
                     case 'TimeSig': // LogDenum???
-                        $ts = explode('/',$msg[2]);
-                    $xml .= "<TimeSignature Numerator=\"{$ts[0]}\" LogDenominator=\"".log($ts[1])/log(2)."\" MIDIClocksPerMetronomeClick=\"{$msg[3]}\" ThirtySecondsPer24Clocks=\"{$msg[4]}\"/>\n";
+                        $ts = explode('/', $msg[2]);
+                        $xml .= "<TimeSignature Numerator=\"{$ts[0]}\" LogDenominator=\"" . log($ts[1]) / log(2) . "\" MIDIClocksPerMetronomeClick=\"{$msg[3]}\" ThirtySecondsPer24Clocks=\"{$msg[4]}\"/>\n";
                         break;
-    
+
                     case 'KeySig':
-                        $mode = ($msg[3]=='major')?0:1;
+                        $mode = ($msg[3] == 'major') ? 0 : 1;
                         $xml .= "<KeySignature Fifths=\"{$msg[2]}\" Mode=\"$mode\"/>\n"; // ???
                         break;
-    
+
                     case 'SeqSpec':
                         $line = $track[$j];
-                        $start = strpos($line,'SeqSpec')+8;
-                        $data = substr($line,$start);
+                        $start = strpos($line, 'SeqSpec') + 8;
+                        $data = substr($line, $start);
                         $xml .= "<SequencerSpecific>$data</SequencerSpecific>\n";
                         break;
-    
+
                     case 'SysEx':
                         $str = '';
-                        for ($k=3;$k<count($msg);$k++) 
-                        {
-                            $str .= $msg[$k].' ';
+                        for ($k = 3; $k < count($msg); $k++) {
+                            $str .= $msg[$k] . ' ';
                         }
                         $str = trim(strtoupper($str));
                         $xml .= "<SystemExclusive>$str</SystemExclusive>\n";
                         break;
                     default:
-                        
                 }
                 $xml .= "  </Event>\n";
             }
@@ -413,15 +391,12 @@ class MusicXML extends MusicXMLBase
     {
         $scorePartWise = new ScorePartWise();
         $scorePartWise->version = $version;
-        $scorePartWise->identification = $this->getIdentification();        
+        $scorePartWise->identification = $this->getIdentification();
         $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroupList = array();     
- 
-        $channel10 = array();        
-        
+        $scorePartWise->partList->partGroupList = array();
+
         $this->buildPartList($midi);
-        if(isset($this->copyright))
-        {
+        if (isset($this->copyright)) {
             $scorePartWise->identification->copyrights = $this->copyright;
         }
 
@@ -430,54 +405,29 @@ class MusicXML extends MusicXMLBase
         array_multisort($channelIdX, SORT_ASC, $programIdX, SORT_ASC, $this->partList);
 
         // begin part list
-        foreach($this->partList as $part)
-        {
+        $partIndex = 1;
+        foreach ($this->partList as $part) {
             // start add score part
             // this block will be iterated each channel
 
             $partId = $part['partId'];
             $channelId = $part['channelId'];
             $partName = $part['instrument'][0];
-            if($partId == "P1")
-            {
+            if ($partIndex == 1) {
                 $partName = $title;
             }
             $partAbbreviation = isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
             $instrumentName = $part['instrument'][0];
             $programId = $part['programId'];
 
-            if($channelId == 10)
-            {
-                
-                $scorePart = new ScorePart();
-                $scorePart->scoreInstrument = array();
-                $scorePart->midiInstrument = array();
-                ksort($channel10);
-                foreach($channel10 as $key=>$value)
-                {
-                    $scoreInstrument = new ScoreInstrument();
-                    $midiInstrument = new MidiInstrument();
-                    $id = $partId.'-I'.$key;
-                    $scoreInstrument->id = $id;
-                    $scoreInstrument->instrumentName = 'Instrument '.$key;
-                    $midiInstrument->id = $id;
-                    $midiInstrument->midiChannel = $channelId;
-                    $midiInstrument->midiProgram = $programId;
-                    $midiInstrument->midiUnpitched = $key;
-                    $midiInstrument->volume = isset($value['v']) ? (floatval(sprintf("%.4f", ($value['v'] * 100 / 127)))) : 0;
-                    $scorePart->scoreInstrument[] = $scoreInstrument;
-                    $scorePart->midiInstrument[] = $midiInstrument;
-                }
+            if ($channelId == 10) {
+
+                $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId);
                 $scorePartWise->partList->scorePartList[] = $scorePart;
-            }
-            else
-            {
-                if(isset($this->instrumentList[$programId-1]) && isset($this->instrumentList[$programId-1][2]))
-                {
-                    $instrumentSound = $this->instrumentList[$programId-1][2];
-                }
-                else
-                {
+            } else {
+                if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
+                    $instrumentSound = $this->instrumentList[$programId - 1][2];
+                } else {
                     $this->getIsntrumentSound($channelId, $programId, $instrumentName);
                     $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
                 }
@@ -491,10 +441,11 @@ class MusicXML extends MusicXMLBase
                 $pan = ($panRaw - 64) * 90 / 64;
                 $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
                 $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
-                $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);               
+                $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
                 $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
             // end add score part
+            $partIndex++;
         }
         // end part list
 
@@ -503,17 +454,15 @@ class MusicXML extends MusicXMLBase
         $this->processDuration();
 
         $maxMeasure = $this->getMaxMeasure();
-        
+
         // begin part
-        foreach($this->partList as $part)
-        {
+        foreach ($this->partList as $part) {
             $partId = $part['partId'];
             $channelId = $part['channelId'];
             $parts = new Part();
             $parts->id = $partId;
             $parts->measureList = array();
-            for($measureIndex = 1; $measureIndex <= $maxMeasure; $measureIndex++)
-            {
+            for ($measureIndex = 1; $measureIndex <= $maxMeasure; $measureIndex++) {
                 $measure = $this->getMeasure($channelId, $measureIndex);
                 $parts->measureList[] = $measure;
             }
@@ -522,7 +471,38 @@ class MusicXML extends MusicXMLBase
         // end part
 
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
-    } 
+    }
+
+    /**
+     * Get score part channel 10
+     *
+     * @param integer $partId
+     * @param integer $channelId
+     * @param integer $programId
+     * @return ScorePart
+     */
+    private function getScorePartChannel10($partId, $channelId, $programId)
+    {
+        $scorePart = new ScorePart();
+        $scorePart->scoreInstrument = array();
+        $scorePart->midiInstrument = array();
+        ksort($this->channel10);
+        foreach ($this->channel10 as $key => $value) {
+            $scoreInstrument = new ScoreInstrument();
+            $midiInstrument = new MidiInstrument();
+            $id = $partId . '-I' . $key;
+            $scoreInstrument->id = $id;
+            $scoreInstrument->instrumentName = 'Instrument ' . $key;
+            $midiInstrument->id = $id;
+            $midiInstrument->midiChannel = $channelId;
+            $midiInstrument->midiProgram = $programId;
+            $midiInstrument->midiUnpitched = $key;
+            $midiInstrument->volume = isset($value['v']) ? (floatval(sprintf("%.4f", ($value['v'] * 100 / 127)))) : 0;
+            $scorePart->scoreInstrument[] = $scoreInstrument;
+            $scorePart->midiInstrument[] = $midiInstrument;
+        }
+        return $scorePart;
+    }
 
     /**
      * Get max measure
@@ -532,19 +512,17 @@ class MusicXML extends MusicXMLBase
     private function getMaxMeasure()
     {
         $lastTime = 0;
-        foreach($this->measures as $msrs)
-        {
+        foreach ($this->measures as $msrs) {
             $val = end($msrs);
             $end = end($val);
             $curLastTime = $end['time'] + (isset($end['duration']) ? $end['duration'] : 0);
-            if($curLastTime > $lastTime)
-            {
+            if ($curLastTime > $lastTime) {
                 $lastTime = $curLastTime;
             }
         }
         return floor($lastTime);
     }
-    
+
     /**
      * Get programs
      *
@@ -554,10 +532,8 @@ class MusicXML extends MusicXMLBase
     private function getProgramChange($midiEventMessages)
     {
         $messages = array();
-        foreach($midiEventMessages as $message)
-        {
-            if($message['event'] == 'PrCh')
-            {
+        foreach ($midiEventMessages as $message) {
+            if ($message['event'] == 'PrCh') {
                 $messages[] = $message;
             }
         }
@@ -573,10 +549,8 @@ class MusicXML extends MusicXMLBase
     private function getNotes($midiEventMessages)
     {
         $messages = array();
-        foreach($midiEventMessages as $message)
-        {
-            if($message['event'] == 'On' || $message['event'] == 'Off')
-            {
+        foreach ($midiEventMessages as $message) {
+            if ($message['event'] == 'On' || $message['event'] == 'Off') {
                 $messages[] = $message;
             }
         }
@@ -595,8 +569,7 @@ class MusicXML extends MusicXMLBase
         $pitch = new Pitch();
         $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
         $pitch->octave = intval(preg_replace("/^[\-\d]/", "", $pitchStr));
-        if(strpos($pitchStr, 's') !== false)
-        {
+        if (strpos($pitchStr, 's') !== false) {
             $pitch->alter = 1;
         }
         return $pitch;
@@ -625,25 +598,19 @@ class MusicXML extends MusicXMLBase
     {
         $measure = new Measure();
         $measure->number = $measureIndex;
-        if($this->hasMessage($channelId, $measureIndex))
-        {
+        if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $programChange = $this->getProgramChange($midiEventMessages);
-            if(!empty($programChange))
-            {
-                foreach($programChange as $message)
-                {
+            if (!empty($programChange)) {
+                foreach ($programChange as $message) {
                     // do it here
                 }
             }
 
-            
-            
-
             $measure->attributesList = array();
             $attribute = new Attributes();
             $attribute->divisions = 1;
-            
+
             $key = new Key();
             $key->fifths = 3;
             $attribute->key = $key;
@@ -652,9 +619,9 @@ class MusicXML extends MusicXMLBase
             $time->beats = 3;
             $time->beatType = 4;
             $attribute->time = $time;
-            
+
             $attribute->staves = 2;
-            
+
             $attribute->clef = array();
             $clef1 = new Clef();
             $clef1->number = 1;
@@ -666,25 +633,21 @@ class MusicXML extends MusicXMLBase
             $clef2->sign = 'G';
             $clef2->line = 2;
             $attribute->clef[] = $clef2;
-            
+
             $measure->attributesList[] = $attribute;
 
             $noteMessages = $this->getNotes($midiEventMessages);
-            foreach($noteMessages as $message)
-            {
-                if($message['note'] > 17)
-                {
+            foreach ($noteMessages as $message) {
+                if ($message['note'] > 17) {
                     // audiable
                     $pitch = $this->getPitch($message['note']);
                     $measure->noteList = array();
                     $note = new Note();
                     $note->pitch = $pitch;
                     $measure->noteList[] = $note;
-                }               
+                }
             }
-        }
-        else
-        {
+        } else {
             $measure->attributesList = array();
             $attribute = new Attributes();
             $attribute->divisions = 1;
@@ -692,7 +655,7 @@ class MusicXML extends MusicXMLBase
         }
         return $measure;
     }
-    
+
     /**
      * Undocumented function
      *
@@ -703,11 +666,11 @@ class MusicXML extends MusicXMLBase
     public function getMusicXml($domdoc, $version = "4.0")
     {
         $scorePartWise = new ScorePartWise();
-        $scorePartWise->version = $version;           
-        $scorePartWise->setIdentification($this->getIdentification());        
+        $scorePartWise->version = $version;
+        $scorePartWise->setIdentification($this->getIdentification());
         $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroupList = array();            
-        
+        $scorePartWise->partList->partGroupList = array();
+
         // start add score part
         // this block will be iterated each channel
         $partId = "P1";
@@ -720,61 +683,61 @@ class MusicXML extends MusicXMLBase
         $midiChannel = 1;
         $midiProgramId = 1;
         $instrumentId = 'P1-I1';
-        
+
         $volume = 78.7402;
         $pan = 0;
-        
+
         $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
         $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
         $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
-        
+
         $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
         // end add score part
-        
+
         $scorePartWise->parts = array();
-        
+
         $part = new Part();
         $part->id = "P1";
         $part->measureList = array();
-        
+
         $measure = new Measure();
         $measure->number = 1;
-        
+
         $measure->attributesList = array();
-        
+
         $key = new Key();
         $key->fifths = 1;
-        
+
         $time = new Time();
         $time->beats = 3;
         $time->beatType = 4;
-        
+
         $clef = new Clef();
         $clef->sign = "F";
         $clef->line = 4;
-        
-        $transpose = new Transpose();      
+
+        $transpose = new Transpose();
         $transpose->diatonic = 0;
         $transpose->chromatic = 0;
-        $transpose->octaveChange = 0;     
-        
+        $transpose->octaveChange = 0;
+
         $attributes = new Attributes();
         $attributes->divisions = 1;
         $attributes->staves = 1;
         $attributes->key = $key;
         $attributes->time = $time;
-        $attributes->clef = $clef;  
-        $attributes->transpose = $transpose; 
-        
+        $attributes->clef = $clef;
+        $attributes->transpose = $transpose;
+
         $measure->attributesList[] = $attributes;
-        
+
         $part->measureList[] = $measure;
-   
-        $scorePartWise->parts[] = $part;        
-        
+
+        $scorePartWise->parts[] = $part;
+
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }
-    
+
     /**
      * Get identification
      *
@@ -784,28 +747,28 @@ class MusicXML extends MusicXMLBase
     public function getIdentification($copyright = "")
     {
         $identification = new Identification();
-        
+
         $identification->copyrights = $copyright;
-        
+
         $identification->encoding = new Encoding();
         $identification->encoding->encodingDate = new DateTime();
         $identification->encoding->softwareList = array();
-        
+
         $software = new Software();
         $software->description = self::SOFTWARE_NAME;
-        
-        $identification->encoding->softwareList[] = $software;       
-        
-        $identification->encoding->supports[] = array();   
-        $identification->encoding->supports[] = new Supports(array('element'=>'accidental', 'type'=>'yes'));
-        $identification->encoding->supports[] = new Supports(array('element'=>'beam', 'type'=>'yes'));
-        $identification->encoding->supports[] = new Supports(array('element'=>'print', 'attribute'=>'new-page', 'type'=>'no'));
-        $identification->encoding->supports[] = new Supports(array('element'=>'print', 'attribute'=>'new-system', 'type'=>'no'));
-        $identification->encoding->supports[] = new Supports(array('element'=>'stem', 'type'=>'yes'));
-        
+
+        $identification->encoding->softwareList[] = $software;
+
+        $identification->encoding->supports[] = array();
+        $identification->encoding->supports[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'beam', 'type' => 'yes'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-page', 'type' => 'no'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-system', 'type' => 'no'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'stem', 'type' => 'yes'));
+
         return $identification;
     }
-    
+
     /**
      * Get MIDI device
      *
@@ -820,7 +783,7 @@ class MusicXML extends MusicXMLBase
         $midiDevice->port = $port;
         return $midiDevice;
     }
-    
+
     /**
      * Get score instrument
      *
@@ -828,13 +791,13 @@ class MusicXML extends MusicXMLBase
      */
     private function getScoreInstrument($instrumentId, $instrumentName, $instrumentSound)
     {
-        $scoreInstrument = new ScoreInstrument();     
+        $scoreInstrument = new ScoreInstrument();
         $scoreInstrument->id = $instrumentId;
         $scoreInstrument->instrumentName = $instrumentName;
-        $scoreInstrument->instrumentSound = $instrumentSound;     
+        $scoreInstrument->instrumentSound = $instrumentSound;
         return $scoreInstrument;
     }
-    
+
     /**
      * Get score instrument
      *
@@ -847,10 +810,10 @@ class MusicXML extends MusicXMLBase
         $midiInstrument->midiChannel = $midiChannel;
         $midiInstrument->midiProgram = $midiProgramId;
         $midiInstrument->volume = $volume;
-        $midiInstrument->pan = $pan;         
+        $midiInstrument->pan = $pan;
         return $midiInstrument;
     }
-    
+
     /**
      * Get score part
      *
@@ -874,5 +837,4 @@ class MusicXML extends MusicXMLBase
         $scorePart->midiDevice = $midiDevice;
         return $scorePart;
     }
-    
 }
