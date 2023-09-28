@@ -289,14 +289,14 @@ class MusicXML extends MusicXMLBase
             $channelId = $part['channelId'];
             $instrumentName = $part['instrument'][0];
             $programId = $part['programId'];
-            $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
             if(isset($this->instrumentList[$programId-1]) && isset($this->instrumentList[$programId-1][2]))
             {
-                echo $this->instrumentList[$programId-1][2]."\r\n";
+                $instrumentSound = $this->instrumentList[$programId-1][2];
             }
             else
             {
                 $this->getIsntrumentSound($channelId, $programId, $instrumentName);
+                $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
             }
 
             $midiChannel = $part['channelId'];
@@ -305,6 +305,7 @@ class MusicXML extends MusicXMLBase
             
             $volumeRaw = isset($this->partVolume[$partId]) ? $this->partVolume[$partId] : 0;
             $volume = $volumeRaw * 100 / 127;
+            $volume = (float) sprintf("%.4f", $volume);
             $panRaw = isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
             $pan = ($panRaw - 64) * 90 / 64;
             
