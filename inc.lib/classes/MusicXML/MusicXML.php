@@ -28,9 +28,7 @@ use MusicXML\Model\Transpose;
 
 class MusicXML extends MusicXMLBase
 {
-    const SCORE_PARTWISE = "score-partwise";
-    const SOFTWARE_NAME = "Planetbiru";
-
+ 
     /**
      * Part list
      *
@@ -544,40 +542,6 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
-     * Get programs
-     *
-     * @param array $midiEventMessages
-     * @return array
-     */
-    private function getProgramChange($midiEventMessages)
-    {
-        $messages = array();
-        foreach ($midiEventMessages as $message) {
-            if ($message['event'] == 'PrCh') {
-                $messages[] = $message;
-            }
-        }
-        return $messages;
-    }
-
-    /**
-     * Get notes
-     *
-     * @param array $midiEventMessages
-     * @return array
-     */
-    private function getNotes($midiEventMessages)
-    {
-        $messages = array();
-        foreach ($midiEventMessages as $message) {
-            if ($message['event'] == 'On' || $message['event'] == 'Off') {
-                $messages[] = $message;
-            }
-        }
-        return $messages;
-    }
-
-    /**
      * Check that measure has message or not
      *
      * @param integer $channelId
@@ -740,36 +704,7 @@ class MusicXML extends MusicXMLBase
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }
 
-    /**
-     * Get identification
-     *
-     * @param string $copyright
-     * @return Identification
-     */
-    public function getIdentification($copyright = "")
-    {
-        $identification = new Identification();
-
-        $identification->copyrights = $copyright;
-
-        $identification->encoding = new Encoding();
-        $identification->encoding->encodingDate = new DateTime();
-        $identification->encoding->softwareList = array();
-
-        $software = new Software();
-        $software->description = self::SOFTWARE_NAME;
-
-        $identification->encoding->softwareList[] = $software;
-
-        $identification->encoding->supports[] = array();
-        $identification->encoding->supports[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'beam', 'type' => 'yes'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-page', 'type' => 'no'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-system', 'type' => 'no'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'stem', 'type' => 'yes'));
-
-        return $identification;
-    }
+    
 
     
 }

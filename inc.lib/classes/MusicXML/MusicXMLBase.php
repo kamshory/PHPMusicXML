@@ -2,14 +2,19 @@
 
 namespace MusicXML;
 
+use DateTime;
 use DOMDocument;
 use DOMImplementation;
 use Midi\MidiMeasure;
+use MusicXML\Model\Encoding;
+use MusicXML\Model\Identification;
 use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Pitch;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
+use MusicXML\Model\Software;
+use MusicXML\Model\Supports;
 
 class MusicXMLBase
 {
@@ -18,6 +23,9 @@ class MusicXMLBase
     const DOCUMENT_ID = "score-partwise";
     const PUBLIC_ID = "-//Recordare//DTD MusicXML 4.0 Partwise//EN";
     const SYSTEM_ID = "http://www.musicxml.org/dtds/partwise.dtd";
+    const SCORE_PARTWISE = "score-partwise";
+    const SOFTWARE_NAME = "Planetbiru";
+
 
     public function loadMidi($midiPath)
     {
@@ -172,7 +180,71 @@ class MusicXMLBase
         }
         return $pitch;
     }
+
+    /**
+     * Get programs
+     *
+     * @param array $midiEventMessages
+     * @return array
+     */
+    protected function getProgramChange($midiEventMessages)
+    {
+        $messages = array();
+        foreach ($midiEventMessages as $message) {
+            if ($message['event'] == 'PrCh') {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
+    }
+
+    /**
+     * Get notes
+     *
+     * @param array $midiEventMessages
+     * @return array
+     */
+    protected function getNotes($midiEventMessages)
+    {
+        $messages = array();
+        foreach ($midiEventMessages as $message) {
+            if ($message['event'] == 'On' || $message['event'] == 'Off') {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
+    }
     
+    /**
+     * Get identification
+     *
+     * @param string $copyright
+     * @return Identification
+     */
+    public function getIdentification($copyright = "")
+    {
+        $identification = new Identification();
+
+        $identification->copyrights = $copyright;
+
+        $identification->encoding = new Encoding();
+        $identification->encoding->encodingDate = new DateTime();
+        $identification->encoding->softwareList = array();
+
+        $software = new Software();
+        $software->description = self::SOFTWARE_NAME;
+
+        $identification->encoding->softwareList[] = $software;
+
+        $identification->encoding->supports[] = array();
+        $identification->encoding->supports[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'beam', 'type' => 'yes'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-page', 'type' => 'no'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-system', 'type' => 'no'));
+        $identification->encoding->supports[] = new Supports(array('element' => 'stem', 'type' => 'yes'));
+
+        return $identification;
+    }
     protected $instrumentList = array(
         0 => array('Piano', 'Pno.', 'keyboard.piano'),
         1 => array('Bright Piano', 'B. Pno.'),
