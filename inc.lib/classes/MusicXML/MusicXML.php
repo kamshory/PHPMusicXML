@@ -310,6 +310,27 @@ class MusicXML extends MusicXMLBase
             if($channelId == 10)
             {
                 $scorePart = new ScorePart();
+                $scorePart->scoreInstrument = array();
+                $scorePart->midiInstrument = array();
+                ksort($channel10);
+                foreach($channel10 as $key=>$value)
+                {
+                    $scoreInstrument = new ScoreInstrument();
+                    $midiInstrument = new MidiInstrument();
+
+                    $id = $partId.'-I'.$key;
+                    $scoreInstrument->id = $id;
+                    $scoreInstrument->instrumentName = 'Instrument '.$key;
+
+                    $midiInstrument->id = $id;
+                    $midiInstrument->midiChannel = $channelId;
+                    $midiInstrument->midiProgram = $programId;
+                    $midiInstrument->midiUnpitched = $key;
+                    $midiInstrument->volume = isset($value['v']) ? (floatval(sprintf("%.4f", ($value['v'] * 100 / 127)))) : 0;
+
+                    $scorePart->scoreInstrument[] = $scoreInstrument;
+                    $scorePart->midiInstrument[] = $midiInstrument;
+                }
 
                 $scorePartWise->partList->scorePartList[] = $scorePart;
             }
@@ -524,7 +545,8 @@ class MusicXML extends MusicXMLBase
         $scorePart->setId($partId);
         $scorePart->setPartName($partName);
         $scorePart->setPartAbbreviation($partAbbreviation);
-        $scorePart->setScoreInstrument($scoreInstrument);
+        $scorePart->scoreInstrument = array();
+        $scorePart->scoreInstrument[] = $scoreInstrument;
         $scorePart->midiInstrument = array();
         $scorePart->midiInstrument[] = $midiInstrument;
         $scorePart->setMidiDevice($midiDevice);

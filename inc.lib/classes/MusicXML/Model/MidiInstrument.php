@@ -35,6 +35,14 @@ class MidiInstrument extends MusicXMLWriter
      * @var string
      */
     public $midiProgram;
+
+    /**
+     * MIDI unpitched
+     *
+     * @PropertyElement(name="midi-unpitched")
+     * @var integer
+     */
+    public $midiUnpitched;
     
     /**
      * Volume
