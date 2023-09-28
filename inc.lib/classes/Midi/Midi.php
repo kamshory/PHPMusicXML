@@ -144,13 +144,13 @@ public function getMsgCount($tn){
 public function addMsg($tn, $msgStr, $ttype=0){ //0:absolute, 1:delta
 	$track = $this->tracks[$tn];
 
-	if ($ttype==1){
+	if ($ttype==1)
+	{
 		$last = $this->_getTime($track[count($track)-1]);
 		$msg = explode(' ',$msgStr);
 		$dt = (int) $msg[0];
 		$msg[0] = $last + $dt;
-		$msgStr = implode(' ',$msg);
-		
+		$msgStr = implode(' ', $msg);	
 	}
 
 	$track[] = $msgStr;
@@ -161,7 +161,6 @@ public function addMsg($tn, $msgStr, $ttype=0){ //0:absolute, 1:delta
 // adds message at adequate position of track $n (slower than addMsg)
 //---------------------------------------------------------------
 public function insertMsg($tn,$msgStr){
-	echo($msgStr);
 	$time = $this->_getTime($msgStr);
 	$track = $this->tracks[$tn];
 	$mc = count($track);
@@ -1255,7 +1254,7 @@ private function _parseTrack($binStr, $tn)//NOSONAR
 			  $note = ord($binStr[$p+1]);
 			  $vel = ord($binStr[$p+2]);
 			  $last = 'On';
-			  $track[] = "$time On ch=$chan n=$note v=$vel";
+			  $track[] = "$time On ch=$chan n=$note v=$vel dt=$dt";
 			  $p+=3;
 			  break;
 		  case 0x08: //Off
@@ -1263,7 +1262,7 @@ private function _parseTrack($binStr, $tn)//NOSONAR
 			  $note = ord($binStr[$p+1]);
 			  $vel = ord($binStr[$p+2]);
 			  $last = 'Off';
-			  $track[] = "$time Off ch=$chan n=$note v=$vel";
+			  $track[] = "$time Off ch=$chan n=$note v=$vel dt=$dt";
 			  $p+=3;
 			  break;
 		  case 0x0A: //PoPr = PolyPressure
@@ -1454,7 +1453,7 @@ private function _parseTrack($binStr, $tn)//NOSONAR
 						  case 'Off':
 							  $note = ord(@$binStr[$p]);
 							  $vel = ord(@$binStr[$p+1]);
-							  $track[] = "$time $last ch=$chan n=$note v=$vel";
+							  $track[] = "$time $last ch=$chan n=$note v=$vel dt=$dt";
 							  $p+=2;
 							  break;
 						  case 'PrCh':

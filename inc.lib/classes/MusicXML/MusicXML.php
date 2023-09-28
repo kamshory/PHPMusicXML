@@ -52,7 +52,100 @@ class MusicXML extends MusicXMLBase
     private $partList = array();
     private $partVolume = array();
     private $partPan = array();
-    
+
+    private $measures = array();
+
+    private function processTime($msg, $timebase, $n, $ch, $v)
+    {
+        $tm = $msg[0] / $timebase;
+        $tmInteger = floor($tm);
+        $tmDec = $tm - $tmInteger;
+
+        if(!isset($this->measures[$ch]))
+        {
+            $this->measures[$ch] = array();
+        }
+        if(!isset($this->measures[$ch][$tmInteger]))
+        {
+            $this->measures[$ch][$tmInteger] = array();
+        }
+        $this->measures[$ch][$tmInteger][] = array('time'=>$tm, 'channel'=>$ch, 'note'=>$n, 'velocity'=>$v, 'event'=>$msg[1], 'message'=>$msg);
+    }
+    private function processDuration()
+    {
+        $lastTime = array();
+        $lastIndex = array();
+        foreach($this->measures as $ch=>$chValue)
+        {
+            foreach($chValue as $tmInteger=>$tmIntegerValue)
+            {
+                foreach($tmIntegerValue as $note=>$noteValue)
+                {
+ 
+                    $chIdx = $noteValue['channel'];
+                    $noteIdx = $noteValue['note'];
+                    $index = "n".$chIdx."_".$noteIdx;
+
+                    if(isset($lastTime[$index]))
+                    {
+                        $lt = $lastTime[$index];
+                    }
+                    else
+                    {
+                        $lt = 0;
+                    }
+
+                    $duration = $noteValue['time'] - $lt;
+                    $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
+                    $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
+ 
+                    $lastTime[$index] = $noteValue['time'];
+                    if($ch == 1)
+                    {
+                        //echo $index." $tmInteger $lt \r\n";
+                    }
+
+                    
+                }
+                
+            }
+        }
+        foreach($this->measures as $ch=>$chValue)
+        {
+            foreach($chValue as $tmInteger=>$tmIntegerValue)
+            {
+                foreach($tmIntegerValue as $note=>$noteValue)
+                {
+                    if(isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last']))
+                    {
+                        $this->measures[$ch][$tmInteger][$note]['duration'] = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+
+    public function setNoteDuration($ch, $indexOn, $duration)
+    {
+
+        $x = $this->measures[$ch][$indexOn];
+        $lastOn = $this->findLastOn($x);
+        $this->measures[$ch][$indexOn][$lastOn]['duration'] = $duration;
+    }
+    public function findLastOn($x)
+    {
+        $last = 0;
+        foreach($x as $idx=>$note)
+        {
+            if($note['event'] == 'On')
+            {
+                $last = $idx;
+            }
+        }
+        return $last;
+    }
     /**
      * Convert Midi to MusicXML
      *
@@ -125,15 +218,18 @@ class MusicXML extends MusicXMLBase
                             eval("\$".$msg[2].';'); // $ch
                             eval("\$".$msg[3].';'); // $n
                             eval("\$".$msg[4].';'); // $v
+                            eval("\$".$msg[5].';'); // $dt
                             
                             $ch = isset($ch) ? $ch : 0;
                             $n = isset($n) ? $n : 0;
                             $v = isset($v) ? $v : 0;
+                            $dt = isset($dt) ? $dt : 0;
                             if($ch == 10 && !isset($channel10[$n+1]))
                             {
                                 $channel10[$n+1] = array('note'=>$n+1, 'ch'=>$ch, 'n'=>$n, 'v'=>$v, 'message'=>$msg);
                             }
-                            //echo ($msg[0])."\r\n";
+                            $this->processTime($msg, $midi->getTimebase(), $n, $ch, $v);
+                            
                             
                         $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
                             break;
@@ -368,6 +464,28 @@ class MusicXML extends MusicXMLBase
 
         $scorePartWise->parts = array();
 
+        $this->processDuration();
+
+        //print_r($this->measures[1]);
+        error_reporting(0);
+
+        $lastTime = 0;
+        foreach($this->measures as $ch=>$msrs)
+        {
+            $val = end($msrs);
+            $end = end($val);
+            if(is_array($end))
+            {
+                
+                $curLastTime = $end['time'] + (isset($end['duration']) ? $end['duration'] : 0);
+                if($curLastTime > $lastTime)
+                {
+                    $lastTime = $curLastTime;
+                }
+            }
+        }
+        $maxMeasure = ceil($lastTime);
+
         // begin part
         foreach($this->partList as $part)
         {
@@ -378,14 +496,18 @@ class MusicXML extends MusicXMLBase
 
             $parts->measureList = array();
 
-            $measure = new Measure();
-            $measure->number = 1;
-            $measure->attributesList = array();
+            for($msr = 1; $msr <= $maxMeasure; $msr++)
+            {
 
-            $attribute = new Attributes();
-            $measure->attributesList[] = $attribute;
+                $measure = new Measure();
+                $measure->number = $msr;
+                $measure->attributesList = array();
 
-            $parts->measureList[] = $measure;
+                $attribute = new Attributes();
+                $measure->attributesList[] = $attribute;
+
+                $parts->measureList[] = $measure;
+            }
 
             $scorePartWise->parts[] = $parts;
         }
