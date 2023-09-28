@@ -32,18 +32,18 @@ class Attributes extends MusicXMLWriter
     public $key;
 
     /**
-     * Staves
-     * @PropertyElement
-     * @var string
-     */
-    public $staves;
-
-    /**
      * Time
      * @Element
      * @var Time
      */
     public $time;
+
+    /**
+     * Staves
+     * @PropertyElement
+     * @var string
+     */
+    public $staves;
 
     /**
      * Clef

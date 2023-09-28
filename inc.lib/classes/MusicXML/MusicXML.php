@@ -57,7 +57,7 @@ class MusicXML extends MusicXMLBase
 
     private function processTime($msg, $timebase, $n, $ch, $v)
     {
-        $tm = $msg[0] / $timebase;
+        $tm = $msg[0] / 4 * $timebase;
         $tmInteger = floor($tm);
         $tmDec = $tm - $tmInteger;
 
@@ -514,9 +514,12 @@ class MusicXML extends MusicXMLBase
                     $key->fifths = 3;
                     $attribute->key = $key;
 
+                    
+
                     $time = new Time();
                     $time->beats = 3;
                     $time->beatType = 4;
+                    $attribute->time = $time;
 
                     $attribute->staves = 2;
 
@@ -527,7 +530,17 @@ class MusicXML extends MusicXMLBase
                     $clef1->line = 2;
                     $attribute->clef[] = $clef1;
 
+                    $clef2 = new Clef();
+                    $clef2->number = 2;
+                    $clef2->sign = 'G';
+                    $clef2->line = 2;
+                    $attribute->clef[] = $clef2;
+
                     $measure->attributesList[] = $attribute;
+                }
+                else
+                {
+                    
                 }
 
                 $parts->measureList[] = $measure;
