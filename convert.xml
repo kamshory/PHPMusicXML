@@ -150,11 +150,11 @@
       </midi-instrument>
     </score-part>
     <score-part id="P10">
-      <part-name>Instrument 26</part-name>
-      <part-abbreviation>Instrument 26</part-abbreviation>
+      <part-name>Automobile Brake Drums</part-name>
+      <part-abbreviation>Aut. Brk. Dr.</part-abbreviation>
       <score-instrument id="P10-I26">
-        <instrument-name>Instrument 26</instrument-name>
-        <instrument-sound>instrument.26</instrument-sound>
+        <instrument-name>Automobile Brake Drums</instrument-name>
+        <instrument-sound>automobile.brake.drums</instrument-sound>
       </score-instrument>
       <midi-device id="P10-I26" port="10"></midi-device>
       <midi-instrument id="P10-I26">

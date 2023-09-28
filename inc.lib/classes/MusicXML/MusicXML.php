@@ -107,16 +107,20 @@ class MusicXML extends MusicXMLBase
                             $ch = isset($ch) ? $ch : 0;
                             $p = isset($p) ? $p : 0;
 
+                            if($ch == 10)
+                            {
+                                print_r($msg);
+                            }
+
 
                             $instrument = $this->getInstrumentName($p, $ch);
-                            $instrumentName = isset($instrument[0]) ? $instrument[0] : '';
-
+             
                             $partId = "P".$ch;
                             $p1 = $p + 1;
                             $instrumentId = $ch == 10 ? "P".$ch."-I".$p1 : "P".$ch."-I1";
                             $this->partList[$instrumentId] = array('instrumentId'=>$instrumentId, 'partId'=>$partId, 'channelId'=>$ch, 'programId'=>$p1, 'instrument'=>$instrument, 'port'=>$ch);
 
-                            //echo "ProgramChange Channel=\"$ch\" Number=\"$p\" Name=\"$instrumentName\"\r\n";
+                           
                         $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
                             break;
         

@@ -43,7 +43,15 @@ class MusicXMLBase
     {
         if ($channelId == 10) {
             $id = $instrumentId + 1;
-            return array('Instrument ' . $id, 'Instrument ' . $id);
+            if(isset($this->drumSet[$instrumentId]))
+            {
+                return $this->drumSet[$instrumentId];
+            }
+            else
+            {
+                return array('Instrument ' . $id, 'Instrument ' . $id);
+            }
+            
         } else {
             return $this->instrumentList[$instrumentId];
         }
@@ -180,6 +188,7 @@ class MusicXMLBase
     );
 
     protected $drumSet = array(
+        25 => array('Automobile Brake Drums', 'Aut. Brk. Dr.'),
         35 => array('Acoustic Bass Drum', ''),
         36 => array('Bass Drum 1', ''),
         37 => array('Side Stick', ''),
