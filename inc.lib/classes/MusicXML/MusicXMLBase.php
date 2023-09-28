@@ -271,15 +271,15 @@ class MusicXMLBase
         22 => array('Harmonica', ''),
         23 => array('Tango Accordion', ''),
         24 => array('Classical Guitar', 'Guit.', 'pluck.guitar.nylon-string'),
-        25 => array('Steel String Guitar', ''),
+        25 => array('Acoustic Guitar', 'Guit.', 'pluck.guitar.acoustic'),
         26 => array('Jazz Electric Gtr', ''),
         27 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
         28 => array('Muted Guitar', ''),
-        29 => array('Overdrive Guitar', ''),
-        30 => array('Distortion Guitar', ''),
+        29 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
+        30 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
         31 => array('Guitar Harmonics', ''),
         32 => array('Acoustic Bass', ''),
-        33 => array('Fingered Bass', ''),
+        33 => array('5-str. Electric Bass', 'El. B', 'pluck.bass.electric'),
         34 => array('Bass Guitar', 'B. Guit.', 'pluck.bass'),
         35 => array('Fretless Bass', ''),
         36 => array('Slap Bass 1', ''),
@@ -292,10 +292,10 @@ class MusicXMLBase
         43 => array('Contrabass', ''),
         44 => array('Tremolo Strings', ''),
         45 => array('Pizzicato Strings', ''),
-        46 => array('Orchestral Harp', ''),
+        46 => array('Harp', 'Hrp.', 'pluck.harp'),
         47 => array('Timpani', ''),
         48 => array('Violins (section)', 'Vlns.', 'strings.group'),
-        49 => array('Slow Strings', ''),
+        49 => array('Strings', 'St.', 'strings.group'),
         50 => array('Synth Strings 1', ''),
         51 => array('Synth Strings 2', ''),
         52 => array('Choir Aahs', ''),
@@ -1345,10 +1345,21 @@ class MusicXMLBase
     public function getIsntrumentSound($channelId, $programId, $instrumentName)
     {
         $array = explode(" ", strtolower($instrumentName));
-        $this->match1($array, $channelId, $programId, $instrumentName);
+        return $this->match1($array, $channelId, $programId, $instrumentName);
     }
+
+    /**
+     * Check instrument name
+     *
+     * @param array $explodedName
+     * @param integer $channelId
+     * @param integer $programId
+     * @param string $instrumentName
+     * @return string|null
+     */
     protected function match1($explodedName, $channelId, $programId, $instrumentName)
     {
+        $found = array();
         foreach($explodedName as $search)
         {
             foreach($this->instrumentSoundList as $index=>$chk)
@@ -1357,9 +1368,24 @@ class MusicXMLBase
                 if(in_array($search, $chkArr))
                 {
                     echo "NAME = $instrumentName; SERACH = '$search', CHANNEL ID = $channelId, PROGRAM ID = $programId; $index; $chk \r\n";
+                    if(!isset($found[$chk]))
+                    {
+                        $found[$chk] = 1;
+                    }
+                    else
+                    {
+                        $found[$chk] ++;
+                    }
                 }
             }
         }
+        if(!empty($found))
+        {
+            arsort($found);
+            $keys = array_keys($found);
+            return $keys[0];
+        }
+        return null;
     }
     
 }
