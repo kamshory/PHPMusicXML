@@ -292,4 +292,54 @@
       </midi-instrument>
     </score-part>
   </part-list>
+  <parts id="P1">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P2">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P3">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P4">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P5">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P6">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P7">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P8">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P9">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
+  <parts id="P10">
+    <measure number="1">
+      <attributes/>
+    </measure>
+  </parts>
 </score-partwise>

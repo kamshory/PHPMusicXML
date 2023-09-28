@@ -109,12 +109,6 @@ class MusicXML extends MusicXMLBase
                             $ch = isset($ch) ? $ch : 0;
                             $p = isset($p) ? $p : 0;
 
-                            if($ch == 10)
-                            {
-                                print_r($msg);
-                            }
-
-
                             $instrument = $this->getInstrumentName($p, $ch);
              
                             $partId = "P".$ch;
@@ -139,6 +133,7 @@ class MusicXML extends MusicXMLBase
                             {
                                 $channel10[$n+1] = array('note'=>$n+1, 'ch'=>$ch, 'n'=>$n, 'v'=>$v, 'message'=>$msg);
                             }
+                            //echo ($msg[0])."\r\n";
                             
                         $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
                             break;
@@ -290,6 +285,9 @@ class MusicXML extends MusicXMLBase
         $programIdX = array_column($this->partList, 'programId');
         array_multisort($channelIdX, SORT_ASC, $programIdX, SORT_ASC, $this->partList);
 
+
+
+        // begin part list
         foreach($this->partList as $part)
         {
             // start add score part
@@ -345,12 +343,6 @@ class MusicXML extends MusicXMLBase
                     $this->getIsntrumentSound($channelId, $programId, $instrumentName);
                     $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
                 }
-                if($channelId == 10)
-                {
-                    print_r($channel10);
-                    ksort($channel10);
-                    print_r($channel10);
-                }
 
                 $midiChannel = $part['channelId'];
                 $midiProgramId = $part['programId'];
@@ -372,6 +364,32 @@ class MusicXML extends MusicXMLBase
             }
             // end add score part
         }
+        // end part list
+
+        $scorePartWise->parts = array();
+
+        // begin part
+        foreach($this->partList as $part)
+        {
+            $partId = $part['partId'];
+
+            $parts = new Part();
+            $parts->id = $partId;
+
+            $parts->measureList = array();
+
+            $measure = new Measure();
+            $measure->number = 1;
+            $measure->attributesList = array();
+
+            $attribute = new Attributes();
+            $measure->attributesList[] = $attribute;
+
+            $parts->measureList[] = $measure;
+
+            $scorePartWise->parts[] = $parts;
+        }
+        // end part
           
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }
