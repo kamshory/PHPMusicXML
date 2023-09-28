@@ -48,7 +48,7 @@ class Attributes extends MusicXMLWriter
     /**
      * Clef
      * @Element
-     * @var Clef
+     * @var Clef[]
      */
     public $clef;
     

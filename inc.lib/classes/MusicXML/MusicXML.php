@@ -207,7 +207,7 @@ class MusicXML extends MusicXMLBase
                             $partId = "P".$ch;
                             $p1 = $p + 1;
                             $instrumentId = $ch == 10 ? "P".$ch."-I".$p1 : "P".$ch."-I1";
-                            $this->partList[$instrumentId] = array('instrumentId'=>$instrumentId, 'partId'=>$partId, 'channelId'=>$ch, 'programId'=>$p1, 'instrument'=>$instrument, 'port'=>$ch);
+                            $this->partList[$instrumentId] = array('instrumentId'=>$instrumentId, 'channelId'=>$ch, 'partId'=>$partId, 'channelId'=>$ch, 'programId'=>$p1, 'instrument'=>$instrument, 'port'=>$ch);
 
                            
                         $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
@@ -487,9 +487,11 @@ class MusicXML extends MusicXMLBase
         $maxMeasure = ceil($lastTime);
 
         // begin part
-        foreach($this->partList as $part)
+        //print_r($this->measures);
+        foreach($this->partList as $pid=>$part)
         {
             $partId = $part['partId'];
+            $channelId = $part['channelId'];
 
             $parts = new Part();
             $parts->id = $partId;
@@ -498,13 +500,35 @@ class MusicXML extends MusicXMLBase
 
             for($msr = 1; $msr <= $maxMeasure; $msr++)
             {
-
                 $measure = new Measure();
                 $measure->number = $msr;
-                $measure->attributesList = array();
 
-                $attribute = new Attributes();
-                $measure->attributesList[] = $attribute;
+                if(isset($this->measures[$channelId]) && isset($this->measures[$channelId][$msr]))
+                {
+                    $measure->attributesList = array();
+
+                    $attribute = new Attributes();
+                    $attribute->divisions = 1;
+
+                    $key = new Key();
+                    $key->fifths = 3;
+                    $attribute->key = $key;
+
+                    $time = new Time();
+                    $time->beats = 3;
+                    $time->beatType = 4;
+
+                    $attribute->staves = 2;
+
+                    $attribute->clef = array();
+                    $clef1 = new Clef();
+                    $clef1->number = 1;
+                    $clef1->sign = 'G';
+                    $clef1->line = 2;
+                    $attribute->clef[] = $clef1;
+
+                    $measure->attributesList[] = $attribute;
+                }
 
                 $parts->measureList[] = $measure;
             }
