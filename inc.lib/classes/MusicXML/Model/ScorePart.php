@@ -41,7 +41,7 @@ class ScorePart extends MusicXMLWriter
      * Score instrument
      *
      * @Element(name="score-instrument")
-     * @var ScoreInstrument
+     * @var ScoreInstrument[]
      */
     public $scoreInstrument;
     
