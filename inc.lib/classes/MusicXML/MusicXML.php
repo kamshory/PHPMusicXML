@@ -42,11 +42,10 @@ class MusicXML extends MusicXMLBase
      * @param string $version Version of MusicXML
      * @return string
      */
-    public function midiToMusicXml($midi, $version = "4.0")
+    public function midiToMusicXml($midi, $title, $version = "4.0")
     {
-        $tempoEnevts = $midi->getTempoEvents();
         $domdoc = $this->getDOMDocument();
-        $domdoc->appendChild($this->convertMidiToMusicXML($midi, $domdoc, $version));
+        $domdoc->appendChild($this->convertMidiToMusicXML($midi, $title, $domdoc, $version));
         return $domdoc->saveXML();
     }
 
@@ -62,7 +61,7 @@ class MusicXML extends MusicXMLBase
      * @param string $version
      * @return DOMNode
      */
-    public function convertMidiToMusicXML($midi, $domdoc, $version = "4.0")
+    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0")
     {
         $scorePartWise = new ScorePartWise();
         $scorePartWise->version = $version;
@@ -273,9 +272,9 @@ class MusicXML extends MusicXMLBase
           $xml .= "</MIDIFile>";
  
 
-        $channelId  = array_column($this->partList, 'channelId');
-        $programId = array_column($this->partList, 'programId');
-        array_multisort($channelId, SORT_ASC, $programId, SORT_ASC, $this->partList);
+        $channelIdX  = array_column($this->partList, 'channelId');
+        $programIdX = array_column($this->partList, 'programId');
+        array_multisort($channelIdX, SORT_ASC, $programIdX, SORT_ASC, $this->partList);
 
         foreach($this->partList as $part)
         {
@@ -283,10 +282,16 @@ class MusicXML extends MusicXMLBase
             // this block will be iterated each channel
             $partId = $part['partId'];
             $partName = $part['instrument'][0];
+            if($partId == "P1")
+            {
+                $partName = $title;
+            }
             $partAbbreviation = isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
-
-            $instrumentName = isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
+            $channelId = $part['channelId'];
+            $instrumentName = $part['instrument'][0];
+            $programId = $part['programId'];
             $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
+            $this->getIsntrumentSound($channelId, $programId, $instrumentName);
 
             $midiChannel = $part['channelId'];
             $midiProgramId = $part['programId'];
@@ -297,6 +302,8 @@ class MusicXML extends MusicXMLBase
             $panRaw = isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
             $pan = ($panRaw - 64) * 90 / 64;
             
+            
+
             $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
             $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
             $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);

@@ -9,7 +9,7 @@ $musicXML = new MusicXML();
 try
 {
     $midi = $musicXML->loadMidi("sherina.mid");
-    $xml = $musicXML->midiToMusicXml($midi, "4.0");
+    $xml = $musicXML->midiToMusicXml($midi, "Cinta Pertama dan Terakhir", "4.0");
     file_put_contents("convert.xml", $xml);
 }
 catch(Exception $e)
