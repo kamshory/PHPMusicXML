@@ -14,26 +14,26 @@ use MusicXML\MusicXMLWriter;
 class Pitch extends MusicXMLWriter
 {
     /**
-     * Number
+     * Step
      *
-     * @Attribute
+     * @PropertyElement
      * @var string
      */
-    public $number;
+    public $step;
     
     /**
-     * Orientation
+     * Alter
      *
-     * @Attribute
-     * @var string
+     * @PropertyElement
+     * @var integer
      */
-    public $orientation;
+    public $alter;
     
     /**
-     * Type
+     * Octave
      *
-     * @Attribute
-     * @var string
+     * @PropertyElement
+     * @var integer
      */
-    public $type;
+    public $octave;
 }
