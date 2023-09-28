@@ -219,12 +219,10 @@ class MusicXML extends MusicXMLBase
                             eval("\$".$msg[2].';'); // $ch
                             eval("\$".$msg[3].';'); // $n
                             eval("\$".$msg[4].';'); // $v
-                            eval("\$".$msg[5].';'); // $dt
                             
                             $ch = isset($ch) ? $ch : 0;
                             $n = isset($n) ? $n : 0;
                             $v = isset($v) ? $v : 0;
-                            $dt = isset($dt) ? $dt : 0;
                             if($ch == 10 && !isset($channel10[$n+1]))
                             {
                                 $channel10[$n+1] = array('note'=>$n+1, 'ch'=>$ch, 'n'=>$n, 'v'=>$v, 'message'=>$msg);
@@ -358,16 +356,6 @@ class MusicXML extends MusicXMLBase
                             $str = trim(strtoupper($str));
                             $xml .= "<SystemExclusive>$str</SystemExclusive>\n";
                             break;
-        /* 
-        <AllSoundOff Channel="9"/>
-        <ResetAllControllers Channel="9"/>
-        <LocalControl Channel="9" Value="on"/>
-        <AllNotesOff Channel="9"/>
-        <OmniOff Channel="9"/>
-        <OmniOn Channel="9"/>
-        <MonoMode Channel="9" Value="5"/>
-        <PolyMode Channel="9"/>
-        */
                         default:
                            
                     }
@@ -381,7 +369,6 @@ class MusicXML extends MusicXMLBase
         $channelIdX  = array_column($this->partList, 'channelId');
         $programIdX = array_column($this->partList, 'programId');
         array_multisort($channelIdX, SORT_ASC, $programIdX, SORT_ASC, $this->partList);
-
 
         // begin part list
         foreach($this->partList as $part)
@@ -450,8 +437,6 @@ class MusicXML extends MusicXMLBase
                 $volume = (float) sprintf("%.4f", $volume);
                 $panRaw = isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
                 $pan = ($panRaw - 64) * 90 / 64;
-                
-                
 
                 $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
                 $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
@@ -478,7 +463,7 @@ class MusicXML extends MusicXMLBase
                 $lastTime = $curLastTime;
             }
         }
-        $maxMeasure = ceil($lastTime);
+        $maxMeasure = floor($lastTime);
         
         // begin part
         foreach($this->partList as $pid=>$part)
