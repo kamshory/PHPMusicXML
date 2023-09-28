@@ -100,6 +100,12 @@ class MusicXML extends MusicXMLBase
         }
         $this->measures[$ch][$tmInteger][] = array('time' => $tm, 'channel' => $ch, 'note' => $n, 'velocity' => $v, 'event' => $msg[1], 'message' => $msg);
     }
+
+    /**
+     * Process duration
+     *
+     * @return void
+     */
     private function processDuration()
     {
         $this->processDuration1();
@@ -538,25 +544,6 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
-     * Get max measure
-     *
-     * @return integer
-     */
-    private function getMaxMeasure()
-    {
-        $lastTime = 0;
-        foreach ($this->measures as $msrs) {
-            $val = end($msrs);
-            $end = end($val);
-            $curLastTime = $end['time'] + (isset($end['duration']) ? $end['duration'] : 0);
-            if ($curLastTime > $lastTime) {
-                $lastTime = $curLastTime;
-            }
-        }
-        return floor($lastTime);
-    }
-
-    /**
      * Get programs
      *
      * @param array $midiEventMessages
@@ -588,24 +575,6 @@ class MusicXML extends MusicXMLBase
             }
         }
         return $messages;
-    }
-
-    /**
-     * Get picth from note
-     *
-     * @param integer $note
-     * @return Pitch
-     */
-    private function getPitch($note)
-    {
-        $pitchStr = $this->noteList[$note];
-        $pitch = new Pitch();
-        $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
-        $pitch->octave = intval(preg_replace("/^[\-\d]/", "", $pitchStr));
-        if (strpos($pitchStr, 's') !== false) {
-            $pitch->alter = 1;
-        }
-        return $pitch;
     }
 
     /**
@@ -802,72 +771,5 @@ class MusicXML extends MusicXMLBase
         return $identification;
     }
 
-    /**
-     * Get MIDI device
-     *
-     * @param integer $midiId
-     * @param integer $port
-     * @return MidiDevice
-     */
-    private function getMidiDevice($midiId, $port)
-    {
-        $midiDevice = new MidiDevice();
-        $midiDevice->id = $midiId;
-        $midiDevice->port = $port;
-        return $midiDevice;
-    }
-
-    /**
-     * Get score instrument
-     *
-     * @return ScoreInstrument
-     */
-    private function getScoreInstrument($instrumentId, $instrumentName, $instrumentSound)
-    {
-        $scoreInstrument = new ScoreInstrument();
-        $scoreInstrument->id = $instrumentId;
-        $scoreInstrument->instrumentName = $instrumentName;
-        $scoreInstrument->instrumentSound = $instrumentSound;
-        return $scoreInstrument;
-    }
-
-    /**
-     * Get score instrument
-     *
-     * @return MidiInstrument
-     */
-    private function getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume = 100, $pan = 0)
-    {
-        $midiInstrument = new MidiInstrument();
-        $midiInstrument->id = $instrumentId;
-        $midiInstrument->midiChannel = $midiChannel;
-        $midiInstrument->midiProgram = $midiProgramId;
-        $midiInstrument->volume = $volume;
-        $midiInstrument->pan = $pan;
-        return $midiInstrument;
-    }
-
-    /**
-     * Get score part
-     *
-     * @param string $partId
-     * @param string $partName
-     * @param string $partAbbreviation
-     * @param ScoreInstrument $scoreInstrument
-     * @param MidiInstrument $midiInstrument
-     * @return ScorePart
-     */
-    public function getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice)
-    {
-        $scorePart = new ScorePart();
-        $scorePart->id = $partId;
-        $scorePart->partName = $partName;
-        $scorePart->partAbbreviation = $partAbbreviation;
-        $scorePart->scoreInstrument = array();
-        $scorePart->scoreInstrument[] = $scoreInstrument;
-        $scorePart->midiInstrument = array();
-        $scorePart->midiInstrument[] = $midiInstrument;
-        $scorePart->midiDevice = $midiDevice;
-        return $scorePart;
-    }
+    
 }

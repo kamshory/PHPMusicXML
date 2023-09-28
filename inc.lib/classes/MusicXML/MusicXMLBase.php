@@ -5,6 +5,11 @@ namespace MusicXML;
 use DOMDocument;
 use DOMImplementation;
 use Midi\MidiMeasure;
+use MusicXML\Model\MidiDevice;
+use MusicXML\Model\MidiInstrument;
+use MusicXML\Model\Pitch;
+use MusicXML\Model\ScoreInstrument;
+use MusicXML\Model\ScorePart;
 
 class MusicXMLBase
 {
@@ -21,6 +26,8 @@ class MusicXMLBase
         return $midi;
     }
 
+
+
     protected $noteList = array(
         //Do          Re           Mi    Fa           So           La           Ti
         'C0', 'Cs0', 'D0', 'Ds0', 'E0', 'F0', 'Fs0', 'G0', 'Gs0', 'A0', 'As0', 'B0',
@@ -36,6 +43,74 @@ class MusicXMLBase
         'C10','Cs10','D10','Ds10','E10','F10','Fs10','G10');
 
 
+    /**
+     * Get MIDI device
+     *
+     * @param integer $midiId
+     * @param integer $port
+     * @return MidiDevice
+     */
+    protected function getMidiDevice($midiId, $port)
+    {
+        $midiDevice = new MidiDevice();
+        $midiDevice->id = $midiId;
+        $midiDevice->port = $port;
+        return $midiDevice;
+    }
+
+    /**
+     * Get score instrument
+     *
+     * @return ScoreInstrument
+     */
+    protected function getScoreInstrument($instrumentId, $instrumentName, $instrumentSound)
+    {
+        $scoreInstrument = new ScoreInstrument();
+        $scoreInstrument->id = $instrumentId;
+        $scoreInstrument->instrumentName = $instrumentName;
+        $scoreInstrument->instrumentSound = $instrumentSound;
+        return $scoreInstrument;
+    }
+
+    /**
+     * Get score instrument
+     *
+     * @return MidiInstrument
+     */
+    protected function getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume = 100, $pan = 0)
+    {
+        $midiInstrument = new MidiInstrument();
+        $midiInstrument->id = $instrumentId;
+        $midiInstrument->midiChannel = $midiChannel;
+        $midiInstrument->midiProgram = $midiProgramId;
+        $midiInstrument->volume = $volume;
+        $midiInstrument->pan = $pan;
+        return $midiInstrument;
+    }
+
+    /**
+     * Get score part
+     *
+     * @param string $partId
+     * @param string $partName
+     * @param string $partAbbreviation
+     * @param ScoreInstrument $scoreInstrument
+     * @param MidiInstrument $midiInstrument
+     * @return ScorePart
+     */
+    public function getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice)
+    {
+        $scorePart = new ScorePart();
+        $scorePart->id = $partId;
+        $scorePart->partName = $partName;
+        $scorePart->partAbbreviation = $partAbbreviation;
+        $scorePart->scoreInstrument = array();
+        $scorePart->scoreInstrument[] = $scoreInstrument;
+        $scorePart->midiInstrument = array();
+        $scorePart->midiInstrument[] = $midiInstrument;
+        $scorePart->midiDevice = $midiDevice;
+        return $scorePart;
+    }
     /**
      * Create new DOMDocument
      *
@@ -79,6 +154,25 @@ class MusicXMLBase
             return $this->instrumentList[$instrumentId];
         }
     }
+
+    /**
+     * Get picth from note
+     *
+     * @param integer $note
+     * @return Pitch
+     */
+    protected function getPitch($note)
+    {
+        $pitchStr = $this->noteList[$note];
+        $pitch = new Pitch();
+        $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
+        $pitch->octave = intval(preg_replace("/^[\-\d]/", "", $pitchStr));
+        if (strpos($pitchStr, 's') !== false) {
+            $pitch->alter = 1;
+        }
+        return $pitch;
+    }
+    
     protected $instrumentList = array(
         0 => array('Piano', 'Pno.', 'keyboard.piano'),
         1 => array('Bright Piano', 'B. Pno.'),
@@ -1181,7 +1275,7 @@ class MusicXMLBase
         $array = explode(" ", strtolower($instrumentName));
         $this->match1($array, $channelId, $programId, $instrumentName);
     }
-    private function match1($explodedName, $channelId, $programId, $instrumentName)
+    protected function match1($explodedName, $channelId, $programId, $instrumentName)
     {
         foreach($explodedName as $search)
         {
