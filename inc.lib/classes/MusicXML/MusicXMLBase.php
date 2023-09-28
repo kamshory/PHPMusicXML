@@ -119,7 +119,7 @@ class MusicXMLBase
         45 => array('Pizzicato Strings', ''),
         46 => array('Orchestral Harp', ''),
         47 => array('Timpani', ''),
-        48 => array('Violas (section)', 'Vlns.', 'strings.group'),
+        48 => array('Violins (section)', 'Vlns.', 'strings.group'),
         49 => array('Slow Strings', ''),
         50 => array('Synth Strings 1', ''),
         51 => array('Synth Strings 2', ''),
