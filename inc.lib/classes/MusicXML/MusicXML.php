@@ -485,6 +485,7 @@ class MusicXML extends MusicXMLBase
             }
         }
         $maxMeasure = ceil($lastTime);
+        //$fp = fopen("a.txt", "a");
 
         // begin part
         //print_r($this->measures);
@@ -505,6 +506,7 @@ class MusicXML extends MusicXMLBase
 
                 if(isset($this->measures[$channelId]) && isset($this->measures[$channelId][$msr]))
                 {
+                    /*
                     $measure->attributesList = array();
 
                     $attribute = new Attributes();
@@ -537,10 +539,15 @@ class MusicXML extends MusicXMLBase
                     $attribute->clef[] = $clef2;
 
                     $measure->attributesList[] = $attribute;
+                    */
                 }
                 else
                 {
-                    
+                    $measure->attributesList = array();
+                    $attribute = new Attributes();
+                    $attribute->divisions = 1;
+                    $measure->attributesList[] = $attribute;
+                    //fwrite($fp, $attribute."\r\n");
                 }
 
                 $parts->measureList[] = $measure;
@@ -549,6 +556,7 @@ class MusicXML extends MusicXMLBase
             $scorePartWise->parts[] = $parts;
         }
         // end part
+        //fclose($fp);
           
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }
