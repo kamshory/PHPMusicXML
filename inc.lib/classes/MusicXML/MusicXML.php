@@ -8,21 +8,15 @@ use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
-use MusicXML\Model\Encoding;
-use MusicXML\Model\Identification;
 use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
-use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
-use MusicXML\Model\Pitch;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
-use MusicXML\Model\Software;
-use MusicXML\Model\Supports;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
 
@@ -490,7 +484,8 @@ class MusicXML extends MusicXMLBase
 
         $this->processDuration();
 
-        $maxMeasure = floor($midi->getDurationRaw()/(1.5*$midi->getTimebase())) - 4;
+        $factor = 4;
+        $maxMeasure = floor($midi->getDurationRaw()/($factor * $midi->getTimebase()));
 
         // begin part
         foreach ($this->partList as $part) {
