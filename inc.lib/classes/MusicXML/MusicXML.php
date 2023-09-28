@@ -162,7 +162,6 @@ class MusicXML extends MusicXMLBase
                             if($c == 10 && (!isset($this->partPan[$partId]) || $this->partPan[$partId] == 0))
                             {
                                 $this->partPan[$partId] = $v;
-                                echo "PAN = $v\r\n";
                             }
                             $xml .= "<ControlChange Channel=\"$ch\" Control=\"$c\" Value=\"$v\"/>\n";
                             break;
@@ -291,7 +290,14 @@ class MusicXML extends MusicXMLBase
             $instrumentName = $part['instrument'][0];
             $programId = $part['programId'];
             $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
-            $this->getIsntrumentSound($channelId, $programId, $instrumentName);
+            if(isset($this->instrumentList[$programId-1]) && isset($this->instrumentList[$programId-1][2]))
+            {
+                echo $this->instrumentList[$programId-1][2]."\r\n";
+            }
+            else
+            {
+                $this->getIsntrumentSound($channelId, $programId, $instrumentName);
+            }
 
             $midiChannel = $part['channelId'];
             $midiProgramId = $part['programId'];
