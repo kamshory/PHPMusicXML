@@ -2,9 +2,6 @@
 
 namespace MusicXML\Model;
 
-namespace MusicXML\Model;
-
-use DateTime;
 use MusicXML\MusicXMLWriter;
 
 /**

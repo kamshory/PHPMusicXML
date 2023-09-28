@@ -9,6 +9,40 @@ use stdClass;
  */
 class MidiMeasure extends Midi
 {
+    /**
+     * Get duration
+     *
+     * @return float
+     */
+    public function getDurationRaw()
+    {
+        $duration = 0;
+        $t = 0;
+        $track = $this->tracks[0];
+ 
+        foreach ($this->tracks as $trk) {
+            $mc = count($trk);
+            for ($i = 0; $i < $mc; $i++) {
+                $msg = explode(' ', $trk[$i]);
+                if (@$msg[1] == 'Tempo') {
+                    $dt = (int)$msg[0] - $t;
+                    $duration += $dt;
+                    $t = (int)$msg[0];
+                }
+            }
+        }
+        # find last event in all tracks
+        $end_time = $t;
+        foreach ($this->tracks as $track) {
+            $msg = explode(' ', $track[count($track) - 1]);
+            $end_time = max($end_time, (int)$msg[0]);
+        }
+        if ($end_time > $t) {
+            $dt = $end_time - $t;
+            $duration += $dt;
+        }
+        return $duration;
+    }
 
     /**
      * Get duration

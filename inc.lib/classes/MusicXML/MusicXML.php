@@ -90,7 +90,7 @@ class MusicXML extends MusicXMLBase
 
     private function processTime($msg, $timebase, $n, $ch, $v)
     {
-        $tm = $msg[0] / (1.6 * $timebase);
+        $tm = $msg[0] / (4 * $timebase);
         $tmInteger = floor($tm);
         if (!isset($this->measures[$ch])) {
             $this->measures[$ch] = array();
@@ -195,13 +195,13 @@ class MusicXML extends MusicXMLBase
      * @param MidiMeasure $midi
      * @return void
      */
-    private function buildPartList($midi)
+    private function buildPartList($midi) // NOSONAR
     {
         $this->channel10 = array();
         $this->copyright = null;
         $tracks = $midi->getTracks();
         $tc = count($tracks);
-        $xml = "";
+        $xml = ""; // NOSONAR
         $ttype = 0;
         for ($i = 0; $i < $tc; $i++) {
             $xml .= "<Track Number=\"$i\">\n";
@@ -230,7 +230,7 @@ class MusicXML extends MusicXMLBase
                         $partId = "P" . $ch;
                         $p1 = $p + 1;
                         $instrumentId = $ch == 10 ? "P" . $ch . "-I" . $p1 : "P" . $ch . "-I1";
-                        $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $ch, 'partId' => $partId, 'channelId' => $ch, 'programId' => $p1, 'instrument' => $instrument, 'port' => $ch);
+                        $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $ch, 'partId' => $partId, 'programId' => $p1, 'instrument' => $instrument, 'port' => $ch);
 
 
                         $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
@@ -380,6 +380,39 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
+     * Ger part ab
+     *
+     * @param array $part
+     * @return string
+     */
+    private function getPartAbbreviation($part)
+    {
+        return isset($part) && isset($part['instrument']) && isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
+    }
+
+    /**
+     * Get part volume
+     *
+     * @param integer $partId
+     * @return integer
+     */
+    private function getPartVolume($partId)
+    {
+        return isset($this->partVolume[$partId]) ? $this->partVolume[$partId] : 0;
+    }
+
+    /**
+     * Get part pan
+     *
+     * @param integer $partId
+     * @return integer
+     */
+    private function getPartPan($partId)
+    {
+        return isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
+    }
+
+    /**
      * Convert Midi to MusicXML
      *
      * @param MidiMeasure $midi
@@ -387,7 +420,7 @@ class MusicXML extends MusicXMLBase
      * @param string $version
      * @return DOMNode
      */
-    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0")
+    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0") 
     {
         $scorePartWise = new ScorePartWise();
         $scorePartWise->version = $version;
@@ -416,7 +449,7 @@ class MusicXML extends MusicXMLBase
             if ($partIndex == 1) {
                 $partName = $title;
             }
-            $partAbbreviation = isset($part['instrument'][1]) ? $part['instrument'][1] : $part['instrument'][0];
+            $partAbbreviation = $this->getPartAbbreviation($part);
             $instrumentName = $part['instrument'][0];
             $programId = $part['programId'];
 
@@ -434,10 +467,10 @@ class MusicXML extends MusicXMLBase
                 $midiChannel = $part['channelId'];
                 $midiProgramId = $part['programId'];
                 $instrumentId = $part['instrumentId'];
-                $volumeRaw = isset($this->partVolume[$partId]) ? $this->partVolume[$partId] : 0;
+                $volumeRaw = $this->getPartVolume($partId);
                 $volume = $volumeRaw * 100 / 127;
-                $volume = (float) sprintf("%.4f", $volume);
-                $panRaw = isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
+                $volume = floatval(sprintf("%.4f", $volume));
+                $panRaw = $this->getPartPan($partId);
                 $pan = ($panRaw - 64) * 90 / 64;
                 $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
                 $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
@@ -453,7 +486,7 @@ class MusicXML extends MusicXMLBase
 
         $this->processDuration();
 
-        $maxMeasure = $this->getMaxMeasure();
+        $maxMeasure = floor($midi->getDurationRaw()/(1.5*$midi->getTimebase())) - 4;
 
         // begin part
         foreach ($this->partList as $part) {
