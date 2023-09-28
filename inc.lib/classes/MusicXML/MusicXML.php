@@ -30,6 +30,42 @@ class MusicXML extends MusicXMLBase
 {
     const SCORE_PARTWISE = "score-partwise";
     const SOFTWARE_NAME = "Planetbiru";
+
+    /**
+     * Part list
+     *
+     * @var array
+     */
+    private $partList = array();
+
+    /**
+     * Part volume
+     *
+     * @var array
+     */
+    private $partVolume = array();
+
+    /**
+     * Pat pan
+     *
+     * @var array
+     */
+    private $partPan = array();
+
+    /**
+     * Measures
+     *
+     * @var array
+     */
+    private $measures = array();
+
+    /**
+     * Copyright
+     *
+     * @var string
+     */
+    private $copyright = "";
+
     public function loadMidi($midiPath)
     {
         $midi = new MidiMeasure();
@@ -51,18 +87,10 @@ class MusicXML extends MusicXMLBase
         return $domdoc->saveXML();
     }
 
-    private $partList = array();
-    private $partVolume = array();
-    private $partPan = array();
-
-    private $measures = array();
-
     private function processTime($msg, $timebase, $n, $ch, $v)
     {
         $tm = $msg[0] / (1.6 * $timebase);
         $tmInteger = floor($tm);
-        $tmDec = $tm - $tmInteger;
-
         if(!isset($this->measures[$ch]))
         {
             $this->measures[$ch] = array();
@@ -75,8 +103,17 @@ class MusicXML extends MusicXMLBase
     }
     private function processDuration()
     {
-        $lastTime = array();
-        $lastIndex = array();
+        $this->processDuration1();
+        $this->processDuration2();
+    }
+
+    /**
+     * Process duration
+     *
+     * @return void
+     */
+    private function processDuration1()
+    {
         foreach($this->measures as $ch=>$chValue)
         {
             foreach($chValue as $tmInteger=>$tmIntegerValue)
@@ -105,6 +142,15 @@ class MusicXML extends MusicXMLBase
                 }               
             }
         }
+    }
+
+    /**
+     * Process duration
+     *
+     * @return void
+     */
+    private function processDuration2()
+    {
         foreach($this->measures as $ch=>$chValue)
         {
             foreach($chValue as $tmInteger=>$tmIntegerValue)
@@ -120,16 +166,31 @@ class MusicXML extends MusicXMLBase
         }
     }
 
+    /**
+     * Set note duration
+     *
+     * @param integer $ch
+     * @param integer $indexOn
+     * @param float $duration
+     * @return void
+     */
     public function setNoteDuration($ch, $indexOn, $duration)
     {
         $x = $this->measures[$ch][$indexOn];
         $lastOn = $this->findLastOn($x);
         $this->measures[$ch][$indexOn][$lastOn]['duration'] = $duration;
     }
-    public function findLastOn($x)
+
+    /**
+     * Find last On
+     *
+     * @param array $messages
+     * @return integer
+     */
+    public function findLastOn($messages)
     {
         $last = 0;
-        foreach($x as $idx=>$note)
+        foreach($messages as $idx=>$note)
         {
             if($note['event'] == 'On')
             {
@@ -138,29 +199,22 @@ class MusicXML extends MusicXMLBase
         }
         return $last;
     }
+
+    
+
     /**
-     * Convert Midi to MusicXML
+     * Build part list
      *
      * @param MidiMeasure $midi
-     * @param DOMDocument $domdoc
-     * @param string $version
-     * @return DOMNode
+     * @return void
      */
-    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0")
+    private function buildPartList($midi)
     {
-        $scorePartWise = new ScorePartWise();
-        $scorePartWise->version = $version;
-        $scorePartWise->setIdentification($this->getIdentification());        
-        $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroupList = array();     
+        $this->copyright = null;
         $tracks = $midi->getTracks();
         $tc = count($tracks);
-
         $xml = "";
         $ttype = 0;
-
-        $channel10 = array();        
-        
         for ($i=0; $i<$tc; $i++)
         {
             $xml .= "<Track Number=\"$i\">\n";
@@ -290,7 +344,7 @@ class MusicXML extends MusicXMLBase
                             
                             if($tag == 'CopyrightNotice')
                             {
-                                $scorePartWise->identification->copyrights = $txt;
+                                $this->copyright = $txt;
                             }
                             
                         }
@@ -345,6 +399,31 @@ class MusicXML extends MusicXMLBase
             $xml .= "</Track>\n";
         }
         $xml .= "</MIDIFile>";
+    }
+
+    /**
+     * Convert Midi to MusicXML
+     *
+     * @param MidiMeasure $midi
+     * @param DOMDocument $domdoc
+     * @param string $version
+     * @return DOMNode
+     */
+    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0")
+    {
+        $scorePartWise = new ScorePartWise();
+        $scorePartWise->version = $version;
+        $scorePartWise->identification = $this->getIdentification();        
+        $scorePartWise->partList = new PartList();
+        $scorePartWise->partList->partGroupList = array();     
+ 
+        $channel10 = array();        
+        
+        $this->buildPartList($midi);
+        if(isset($this->copyright))
+        {
+            $scorePartWise->identification->copyrights = $this->copyright;
+        }
 
         $channelIdX  = array_column($this->partList, 'channelId');
         $programIdX = array_column($this->partList, 'programId');
@@ -423,18 +502,7 @@ class MusicXML extends MusicXMLBase
 
         $this->processDuration();
 
-        $lastTime = 0;
-        foreach($this->measures as $ch=>$msrs)
-        {
-            $val = end($msrs);
-            $end = end($val);
-            $curLastTime = $end['time'] + (isset($end['duration']) ? $end['duration'] : 0);
-            if($curLastTime > $lastTime)
-            {
-                $lastTime = $curLastTime;
-            }
-        }
-        $maxMeasure = floor($lastTime);
+        $maxMeasure = $this->getMaxMeasure();
         
         // begin part
         foreach($this->partList as $part)
@@ -455,6 +523,27 @@ class MusicXML extends MusicXMLBase
 
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     } 
+
+    /**
+     * Get max measure
+     *
+     * @return integer
+     */
+    private function getMaxMeasure()
+    {
+        $lastTime = 0;
+        foreach($this->measures as $msrs)
+        {
+            $val = end($msrs);
+            $end = end($val);
+            $curLastTime = $end['time'] + (isset($end['duration']) ? $end['duration'] : 0);
+            if($curLastTime > $lastTime)
+            {
+                $lastTime = $curLastTime;
+            }
+        }
+        return floor($lastTime);
+    }
     
     /**
      * Get programs
@@ -514,6 +603,18 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
+     * Check that measure has message or not
+     *
+     * @param integer $channelId
+     * @param integer $measureIndex
+     * @return boolean
+     */
+    private function hasMessage($channelId, $measureIndex)
+    {
+        return isset($this->measures[$channelId]) && isset($this->measures[$channelId][$measureIndex]);
+    }
+
+    /**
      * Get measure
      *
      * @param integer $channelId
@@ -524,7 +625,7 @@ class MusicXML extends MusicXMLBase
     {
         $measure = new Measure();
         $measure->number = $measureIndex;
-        if(isset($this->measures[$channelId]) && isset($this->measures[$channelId][$measureIndex]))
+        if($this->hasMessage($channelId, $measureIndex))
         {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $programChange = $this->getProgramChange($midiEventMessages);
@@ -568,22 +669,18 @@ class MusicXML extends MusicXMLBase
             
             $measure->attributesList[] = $attribute;
 
-
             $noteMessages = $this->getNotes($midiEventMessages);
-            if(!empty($noteMessages))
+            foreach($noteMessages as $message)
             {
-                foreach($noteMessages as $message)
+                if($message['note'] > 17)
                 {
-                    if($message['note'] > 17)
-                    {
-                        // audiable
-                        $pitch = $this->getPitch($message['note']);
-                        $measure->noteList = array();
-                        $note = new Note();
-                        $note->pitch = $pitch;
-                        $measure->noteList[] = $note;
-                    }               
-                }
+                    // audiable
+                    $pitch = $this->getPitch($message['note']);
+                    $measure->noteList = array();
+                    $note = new Note();
+                    $note->pitch = $pitch;
+                    $measure->noteList[] = $note;
+                }               
             }
         }
         else
@@ -675,7 +772,7 @@ class MusicXML extends MusicXMLBase
    
         $scorePartWise->parts[] = $part;        
         
-        return $scorePartWise->toXml($domdoc, "score-partwise");
+        return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }
     
     /**
