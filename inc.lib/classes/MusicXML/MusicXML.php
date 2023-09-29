@@ -202,6 +202,7 @@ class MusicXML extends MusicXMLBase
      */
     private function buildPartList($midi) // NOSONAR
     {
+        $timebase = $midi->getTimebase();
         $this->channel10 = array();
         $this->copyright = null;
         $tracks = $midi->getTracks();
@@ -252,7 +253,7 @@ class MusicXML extends MusicXMLBase
                         if ($ch == 10 && !isset($this->channel10[$n + 1])) {
                             $this->channel10[$n + 1] = array('note' => $n + 1, 'ch' => $ch, 'n' => $n, 'v' => $v, 'message' => $msg);
                         }
-                        $this->processTime($msg, $midi->getTimebase(), $n, $ch, $v);
+                        $this->processTime($msg, $timebase, $n, $ch, $v);
 
 
                         $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
@@ -425,6 +426,7 @@ class MusicXML extends MusicXMLBase
      */
     public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0") 
     {
+        $timebase = $midi->getTimebase();
         $scorePartWise = new ScorePartWise();
         $scorePartWise->version = $version;
         $scorePartWise->identification = $this->getIdentification();
@@ -489,7 +491,7 @@ class MusicXML extends MusicXMLBase
         $this->processDuration();
 
         $factor = 4;
-        $maxMeasure = floor($midi->getDurationRaw()/($factor * $midi->getTimebase()));
+        $maxMeasure = floor($midi->getDurationRaw()/($factor * $timebase));
 
         // begin part
         foreach ($this->partList as $part) {
@@ -499,7 +501,7 @@ class MusicXML extends MusicXMLBase
             $parts->id = $partId;
             $parts->measureList = array();
             for ($measureIndex = 1; $measureIndex <= $maxMeasure; $measureIndex++) {
-                $measure = $this->getMeasure($channelId, $measureIndex);
+                $measure = $this->getMeasure($channelId, $measureIndex, $timebase);
                 $parts->measureList[] = $measure;
             }
             $scorePartWise->parts[] = $parts;
@@ -569,7 +571,7 @@ class MusicXML extends MusicXMLBase
      * @param integer $measureIndex
      * @return Measure
      */
-    private function getMeasure($channelId, $measureIndex)
+    private function getMeasure($channelId, $measureIndex, $timebase)
     {
         $measure = new Measure();
         $measure->number = $measureIndex;
@@ -619,6 +621,7 @@ class MusicXML extends MusicXMLBase
                     $measure->noteList = array();
                     $note = new Note();
                     $note->pitch = $pitch;
+                    $note->duration = floatval(sprintf("%.4f", $message['duration']));
                     $measure->noteList[] = $note;
                 }
             }
