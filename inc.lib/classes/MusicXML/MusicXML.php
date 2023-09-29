@@ -5,6 +5,8 @@ namespace MusicXML;
 use DOMDocument;
 use DOMNode;
 use Midi\MidiMeasure;
+use MusicXML\Map\ModelMap;
+use MusicXML\Map\NodeType;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Key;
@@ -70,7 +72,21 @@ class MusicXML extends MusicXMLBase
     public function loadXml($path)
     {
         $domdoc = new DOMDocument();
-        $domdoc->loadXML($path);
+        $domdoc->loadXML(file_get_contents($path));
+        $nodes = $domdoc->childNodes;
+        $object = null;
+        foreach($nodes as $node)
+        {
+            if($node->nodeType == NodeType::ELEMENT && isset(ModelMap::MAP[$node->tagName]))
+            {
+                $className = ModelMap::MAP[$node->tagName];
+                $object = new $className($node);
+                break;
+            }
+        }
+        echo $object;
+        
+        
     }
 
 

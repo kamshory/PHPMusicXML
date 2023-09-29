@@ -7,7 +7,7 @@ require_once "inc.lib/autoload.php";
 $musicXML = new MusicXML();
 try
 {
-    $midi = $musicXML->loadXml("rosa.xml");
+    $midi = $musicXML->loadXml("convert.xml");
     
 }
 catch(Exception $e)
