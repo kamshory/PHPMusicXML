@@ -2,7 +2,6 @@
 
 namespace MusicXML;
 
-use DateTime;
 use DOMDocument;
 use DOMNode;
 use Midi\MidiMeasure;
@@ -20,6 +19,9 @@ use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
 
+/**
+ * @version 1.0.0
+ */
 class MusicXML extends MusicXMLBase
 {
  
@@ -65,6 +67,12 @@ class MusicXML extends MusicXMLBase
      */
     private $copyright = "";
 
+    public function loadXml($path)
+    {
+        $domdoc = new DOMDocument();
+        $domdoc->loadXML($path);
+    }
+
 
     /**
      * Convert MIDI to MusicXML
@@ -94,7 +102,7 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
-     * Process duration
+     * Process note duration
      *
      * @return void
      */
@@ -105,16 +113,16 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
-     * Process duration
+     * Prepare note information to calculate note duration
      *
      * @return void
      */
     private function processDuration1()
     {
+        $lastTime = array();
         foreach ($this->measures as $ch => $chValue) {
             foreach ($chValue as $tmInteger => $tmIntegerValue) {
                 foreach ($tmIntegerValue as $note => $noteValue) {
-
                     $chIdx = $noteValue['channel'];
                     $noteIdx = $noteValue['note'];
                     $index = "n" . $chIdx . "_" . $noteIdx;
@@ -124,11 +132,9 @@ class MusicXML extends MusicXMLBase
                     } else {
                         $lt = 0;
                     }
-
                     $duration = $noteValue['time'] - $lt;
                     $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                     $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
-
                     $lastTime[$index] = $noteValue['time'];
                 }
             }
@@ -136,7 +142,7 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
-     * Process duration
+     * Calculate note duration by information provided before
      *
      * @return void
      */
@@ -156,6 +162,7 @@ class MusicXML extends MusicXMLBase
     /**
      * Set note duration
      *
+     * @deprecated 1.0
      * @param integer $ch
      * @param integer $indexOn
      * @param float $duration
@@ -230,7 +237,6 @@ class MusicXML extends MusicXMLBase
                         $instrumentId = $ch == 10 ? "P" . $ch . "-I" . $p1 : "P" . $ch . "-I1";
                         $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $ch, 'partId' => $partId, 'programId' => $p1, 'instrument' => $instrument, 'port' => $ch);
 
-
                         $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
                         break;
 
@@ -280,7 +286,6 @@ class MusicXML extends MusicXMLBase
                         if ($c == 10 && (!isset($this->partPan[$partId]) || $this->partPan[$partId] == 0)) {
                             $this->partPan[$partId] = $v;
                         }
-
 
                         $xml .= "<ControlChange Channel=\"$ch\" Control=\"$c\" Value=\"$v\"/>\n";
                         break;
@@ -627,7 +632,7 @@ class MusicXML extends MusicXMLBase
     }
 
     /**
-     * Undocumented function
+     * Create Music XML manualy
      *
      * @param DOMDocument $domdoc
      * @param string $version
