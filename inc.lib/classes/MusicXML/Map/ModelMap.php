@@ -4,7 +4,7 @@ namespace MusicXML\Map;
 
 class ModelMap
 {
-    const MAP = array(
+    const CLASS_MAP = array(
         "score-partwise"=>"\\MusicXML\\Model\\ScorePartWise"
     );
 }

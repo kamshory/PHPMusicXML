@@ -77,9 +77,9 @@ class MusicXML extends MusicXMLBase
         $object = null;
         foreach($nodes as $node)
         {
-            if($node->nodeType == NodeType::ELEMENT && isset(ModelMap::MAP[$node->tagName]))
+            if($node->nodeType == NodeType::ELEMENT && isset(ModelMap::CLASS_MAP[$node->tagName]))
             {
-                $className = ModelMap::MAP[$node->tagName];
+                $className = ModelMap::CLASS_MAP[$node->tagName];
                 $object = new $className($node);
                 break;
             }
