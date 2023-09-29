@@ -14,7 +14,7 @@ use MusicXML\MusicXMLWriter;
 class ScorePartWise extends MusicXMLWriter
 {
     /**
-     * Version
+     * MusicXML version. Current version is 4.0
      *
      * @Attribute
      * @var string
@@ -22,7 +22,7 @@ class ScorePartWise extends MusicXMLWriter
     public $version;
     
     /**
-     * Identification
+     * Identification. Contains music identification
      *
      * @Element
      * @var Identification
@@ -30,7 +30,7 @@ class ScorePartWise extends MusicXMLWriter
     public $identification;
     
     /**
-     * Part list
+     * Part list. Contains all instrument used on the music
      *
      * @Element
      * @var PartList
@@ -38,7 +38,7 @@ class ScorePartWise extends MusicXMLWriter
     public $partList;
     
     /**
-     * Part
+     * Part. Part of the music. One part represent one instrument or group instrument
      *
      * @Element
      * @var Part[]
