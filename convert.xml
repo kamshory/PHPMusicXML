@@ -151,49 +151,49 @@
     </score-part>
     <score-part>
       <score-instrument id="P10-I37">
-        <instrument-name>Instrument 37</instrument-name>
+        <instrument-name>Bass Drum 1</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I39">
-        <instrument-name>Instrument 39</instrument-name>
+        <instrument-name>Acoustic Snare</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I41">
-        <instrument-name>Instrument 41</instrument-name>
+        <instrument-name>Electric Snare</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I42">
-        <instrument-name>Instrument 42</instrument-name>
+        <instrument-name>Low Floor Tom</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I43">
-        <instrument-name>Instrument 43</instrument-name>
+        <instrument-name>Closed Hi-Hat</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I44">
-        <instrument-name>Instrument 44</instrument-name>
+        <instrument-name>High Floor Tom</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I45">
-        <instrument-name>Instrument 45</instrument-name>
+        <instrument-name>Pedal Hi-Hat</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I46">
-        <instrument-name>Instrument 46</instrument-name>
+        <instrument-name>Low Tom</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I48">
-        <instrument-name>Instrument 48</instrument-name>
+        <instrument-name>Low Mid Tom</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I49">
-        <instrument-name>Instrument 49</instrument-name>
+        <instrument-name>High Mid Tom</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I50">
-        <instrument-name>Instrument 50</instrument-name>
+        <instrument-name>Crash Cymbal 1</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I70">
-        <instrument-name>Instrument 70</instrument-name>
+        <instrument-name>Cabase</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I76">
-        <instrument-name>Instrument 76</instrument-name>
+        <instrument-name>Claves</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I81">
-        <instrument-name>Instrument 81</instrument-name>
+        <instrument-name>Mute Triangle</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I82">
-        <instrument-name>Instrument 82</instrument-name>
+        <instrument-name>Open Triangle</instrument-name>
       </score-instrument>
       <score-instrument id="P10-I83">
         <instrument-name>Instrument 83</instrument-name>

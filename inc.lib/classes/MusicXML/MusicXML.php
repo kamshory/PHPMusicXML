@@ -452,8 +452,7 @@ class MusicXML extends MusicXMLBase
             $programId = $part['programId'];
 
             if ($channelId == 10) {
-
-                $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId);
+                $scorePart = $this->getScorePartChannel10($part, $partId, $channelId, $programId);
                 $scorePartWise->partList->scorePartList[] = $scorePart;
             } else {
                 if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
@@ -508,23 +507,37 @@ class MusicXML extends MusicXMLBase
     /**
      * Get score part channel 10
      *
+     * @param array $part
      * @param integer $partId
      * @param integer $channelId
      * @param integer $programId
      * @return ScorePart
      */
-    private function getScorePartChannel10($partId, $channelId, $programId)
+    private function getScorePartChannel10($part, $partId, $channelId, $programId)
     {
         $scorePart = new ScorePart();
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
         ksort($this->channel10);
         foreach ($this->channel10 as $key => $value) {
+           
+            echo "PROGRAM ID = $programId\r\n";
             $scoreInstrument = new ScoreInstrument();
             $midiInstrument = new MidiInstrument();
             $id = $partId . '-I' . $key;
             $scoreInstrument->id = $id;
-            $scoreInstrument->instrumentName = 'Instrument ' . $key;
+  
+            $midiCode = $value['note'] - 1;
+            echo "MIDI CODE = $midiCode\r\n";
+
+            if(isset($this->drumSet[$midiCode]) && isset($this->drumSet[$midiCode][0]))
+            {
+                $scoreInstrument->instrumentName = $this->drumSet[$midiCode][0];
+            }
+            else
+            {
+                $scoreInstrument->instrumentName = 'Instrument ' . $key;
+            }
             $midiInstrument->id = $id;
             $midiInstrument->midiChannel = $channelId;
             $midiInstrument->midiProgram = $programId;
