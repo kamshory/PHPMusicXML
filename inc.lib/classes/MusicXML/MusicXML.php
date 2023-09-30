@@ -637,7 +637,7 @@ class MusicXML extends MusicXMLBase
                     $measure->noteList = array();
                     $note = new Note();
                     $note->pitch = $pitch;
-                    $note->duration = floatval(sprintf("%.4f", $message['duration']));
+                    $note->duration = $message['duration'] * $timebase;
                     $measure->noteList[] = $note;
                 }
             }
