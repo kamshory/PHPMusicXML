@@ -514,18 +514,15 @@ class MusicXML extends MusicXMLBase
         foreach ($this->partList as $pid => $part) {
             $partId = $part['partId'];
             $channelId = $part['channelId'];
-            echo "$channelId PART = $pid\r\n";
             $parts = new Part();
             $parts->id = $partId;
             $parts->measureList = array();
             for ($measureIndex = 0; $measureIndex < $maxMeasure; $measureIndex++) {
-                $measure = $this->getMeasure($channelId, $measureIndex+1, $timebase);
+                $measure = $this->getMeasure($channelId, $measureIndex, $timebase);
                 $parts->measureList[] = $measure;
             }
             $scorePartWise->parts[] = $parts;
         }
-        print_r($this->partList['P1-I1']);
-        print_r(array_keys($this->measures[1][0]));
         // end part
 
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
@@ -594,7 +591,7 @@ class MusicXML extends MusicXMLBase
     private function getMeasure($channelId, $measureIndex, $timebase)
     {
         $measure = new Measure();
-        $measure->number = $measureIndex;
+        $measure->number = $measureIndex+1;
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $programChange = $this->getProgramChange($midiEventMessages);
@@ -632,13 +629,14 @@ class MusicXML extends MusicXMLBase
             $attribute->clef[] = $clef2;
 
             $measure->attributesList[] = $attribute;
+            $measure->noteList = array();
 
             $noteMessages = $this->getNotes($midiEventMessages);
             foreach ($noteMessages as $message) {
-                if ($message['note'] > 17) {
+                
+                if ($message['note'] >= 0) {
                     // audiable
                     $pitch = $this->getPitch($message['note']);
-                    $measure->noteList = array();
                     $note = new Note();
                     $note->pitch = $pitch;
                     $note->duration = $message['duration'] * $timebase;
