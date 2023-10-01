@@ -947,7 +947,7 @@
           <step>E</step>
           <octave>0</octave>
         </pitch>
-        <duration>424.75</duration>
+        <duration>422.5</duration>
       </note>
       <note>
         <pitch>
@@ -13607,6 +13607,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -15869,6 +15885,22 @@
     <measure number="85">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="86">
@@ -15909,6 +15941,22 @@
     <measure number="87">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
   </parts>
@@ -15916,6 +15964,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -15931,6 +15995,22 @@
     <measure number="4">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="5">
@@ -16431,6 +16511,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -24632,6 +24728,22 @@
     <measure number="84">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="85">
@@ -24678,6 +24790,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -28011,11 +28139,43 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="3">
@@ -29361,6 +29521,22 @@
     <measure number="27">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="28">
@@ -30646,16 +30822,64 @@
     <measure number="50">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="51">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="52">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="53">
@@ -33289,11 +33513,43 @@
     <measure number="84">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="85">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="86">
@@ -33335,6 +33591,22 @@
     <measure number="87">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
   </parts>
@@ -33342,6 +33614,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -34723,6 +35011,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -38820,6 +39124,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">
@@ -39321,6 +39641,22 @@
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
+        <key>
+          <fifths>3</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
       </attributes>
     </measure>
     <measure number="2">

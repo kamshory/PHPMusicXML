@@ -104,7 +104,7 @@ class MusicXML extends MusicXMLBase
         return $domdoc->saveXML();
     }
 
-    private function processTime($msg, $timebase, $n, $ch, $v)
+    private function processTime($event, $msg, $timebase, $n, $ch, $v)
     {
         $tm = $msg[0] / (4 * $timebase);
         $tmInteger = floor($tm);
@@ -114,7 +114,7 @@ class MusicXML extends MusicXMLBase
         if (!isset($this->measures[$ch][$tmInteger])) {
             $this->measures[$ch][$tmInteger] = array();
         }
-        $this->measures[$ch][$tmInteger][] = array('time' => $tm, 'channel' => $ch, 'note' => $n, 'velocity' => $v, 'event' => $msg[1], 'message' => $msg);
+        $this->measures[$ch][$tmInteger][] = array('time' => $tm, 'channel' => $ch, 'note' => $n, 'velocity' => $v, 'event' => $event, 'message' => $msg);
     }
 
     /**
@@ -208,6 +208,18 @@ class MusicXML extends MusicXMLBase
         return $last;
     }
 
+    private function addPartList(
+        $channelId, 
+        $partId,
+        $programId,
+        $instrumentId,
+        $instrument,
+        $port
+    )
+    {
+        $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $channelId, 'partId' => $partId, 'programId' => $programId, 'instrument' => $instrument, 'port' => $port);
+    }
+
 
 
     /**
@@ -252,8 +264,18 @@ class MusicXML extends MusicXMLBase
                         $partId = "P" . $ch;
                         $p1 = $p + 1;
                         $instrumentId = $ch == 10 ? "P" . $ch . "-I" . $p1 : "P" . $ch . "-I1";
-                        $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $ch, 'partId' => $partId, 'programId' => $p1, 'instrument' => $instrument, 'port' => $ch);
+                        $channelId = $ch;
+                        $programId = $p1;
+                        $port = $ch;
 
+                        $this->addPartList(
+                            $channelId, 
+                            $partId,
+                            $programId,
+                            $instrumentId,
+                            $instrument,
+                            $port
+                        );
                         $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
                         break;
 
@@ -269,7 +291,9 @@ class MusicXML extends MusicXMLBase
                         if ($ch == 10 && !isset($this->channel10[$n + 1])) {
                             $this->channel10[$n + 1] = array('note' => $n + 1, 'ch' => $ch, 'n' => $n, 'v' => $v, 'message' => $msg);
                         }
-                        $this->processTime($msg, $timebase, $n, $ch, $v);
+
+                        // add event
+                        $this->processTime($msg[1], $msg, $timebase, $n, $ch, $v);
 
 
                         $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
@@ -283,6 +307,9 @@ class MusicXML extends MusicXMLBase
                         $ch = isset($ch) ? $ch : 0;
                         $n = isset($n) ? $n : 0;
                         $v = isset($v) ? $v : 0;
+
+                        // add event
+                        $this->processTime($msg[1], $msg, $timebase, $n, $ch, $v);
 
                         $xml .= "<PolyKeyPressure Channel=\"$ch\" Note=\"$n\" Pressure=\"$v\"/>\n";
                         break;
@@ -304,6 +331,9 @@ class MusicXML extends MusicXMLBase
                             $this->partPan[$partId] = $v;
                         }
 
+                        // add event
+                        $this->processTime($msg[1], $msg, $timebase, $c, $ch, $v);
+
                         $xml .= "<ControlChange Channel=\"$ch\" Control=\"$c\" Value=\"$v\"/>\n";
                         break;
 
@@ -313,7 +343,7 @@ class MusicXML extends MusicXMLBase
 
                         $ch = isset($ch) ? $ch : 0;
                         $v = isset($v) ? $v : 0;
-
+                        $this->processTime($msg[1], $msg, $timebase, 0, $ch, $v);
                         $xml .= "<ChannelKeyPressure Channel=\"$ch\" Pressure=\"$v\"/>\n";
                         break;
 
@@ -323,7 +353,7 @@ class MusicXML extends MusicXMLBase
 
                         $ch = isset($ch) ? $ch : 0;
                         $v = isset($v) ? $v : 0;
-
+                        $this->processTime($msg[1], $msg, $timebase, 0, $ch, $v);
                         $xml .= "<PitchBendChange Channel=\"$ch\" Value=\"$v\"/>\n";
                         break;
 

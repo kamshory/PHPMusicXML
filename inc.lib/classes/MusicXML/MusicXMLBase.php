@@ -191,7 +191,7 @@ class MusicXMLBase
     {
         $messages = array();
         foreach ($midiEventMessages as $message) {
-            if ($message['event'] == 'PrCh') {
+            if ($message['event'] != 'On' && $message['event'] != 'Off') {
                 $messages[] = $message;
             }
         }
