@@ -510,18 +510,22 @@ class MusicXML extends MusicXMLBase
         $maxMeasure = floor($midi->getDurationRaw()/($factor * $timebase));
 
         // begin part
-        foreach ($this->partList as $part) {
+
+        foreach ($this->partList as $pid => $part) {
             $partId = $part['partId'];
             $channelId = $part['channelId'];
+            echo "$channelId PART = $pid\r\n";
             $parts = new Part();
             $parts->id = $partId;
             $parts->measureList = array();
-            for ($measureIndex = 1; $measureIndex <= $maxMeasure; $measureIndex++) {
-                $measure = $this->getMeasure($channelId, $measureIndex, $timebase);
+            for ($measureIndex = 0; $measureIndex < $maxMeasure; $measureIndex++) {
+                $measure = $this->getMeasure($channelId, $measureIndex+1, $timebase);
                 $parts->measureList[] = $measure;
             }
             $scorePartWise->parts[] = $parts;
         }
+        print_r($this->partList['P1-I1']);
+        print_r(array_keys($this->measures[1][0]));
         // end part
 
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
