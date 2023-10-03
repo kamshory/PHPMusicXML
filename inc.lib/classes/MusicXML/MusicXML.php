@@ -744,6 +744,7 @@ class MusicXML extends MusicXMLBase
      */
     private function getMeasure($partId, $channelId, $measureIndex, $timebase)
     {
+        $f = 1 / $timebase / 1000000;
         $measure = new Measure();
         $measure->number = $measureIndex+1;
         
@@ -766,6 +767,7 @@ class MusicXML extends MusicXMLBase
                     $directionKeys[$time] = $time;
                     $tempo = $message['value'];
                     $bpm = (int)(60000000/$tempo);
+                    echo "BPM = $bpm\r\n";
                     $tempoList[$time] = array('rawtime'=>$rawtime, 'tempo'=>$tempo, 'bpm'=>$bpm);
                     //echo "$partId $measureIndex $rawtime $tempo | BPM = $bpm\r\n";
                 }
