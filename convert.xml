@@ -150,6 +150,8 @@
       </midi-instrument>
     </score-part>
     <score-part id="P10">
+      <part-name>Automobile Brake Drums</part-name>
+      <part-abbreviation>Aut. Brk. Dr.</part-abbreviation>
       <score-instrument id="P10-I36">
         <instrument-name>Acoustic Bass Drum</instrument-name>
       </score-instrument>

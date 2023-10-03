@@ -631,7 +631,7 @@ class MusicXML extends MusicXMLBase
             $programId = $part['programId'];
 
             if ($channelId == 10) {
-                $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId);
+                $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
                 $scorePartWise->partList->scorePartList[] = $scorePart;
             } else {
                 if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
@@ -693,12 +693,17 @@ class MusicXML extends MusicXMLBase
      * @param integer $programId
      * @return ScorePart
      */
-    private function getScorePartChannel10($partId, $channelId, $programId)
+    private function getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation)
     {
         $scorePart = new ScorePart();
         $scorePart->id = $partId;
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
+
+        
+
+        $scorePart->partName = $partName;
+        $scorePart->partAbbreviation = $partAbbreviation;
         ksort($this->channel10);
         foreach ($this->channel10 as $key => $value) 
         {
