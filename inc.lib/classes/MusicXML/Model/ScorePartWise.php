@@ -43,5 +43,5 @@ class ScorePartWise extends MusicXMLWriter
      * @Element
      * @var Part[]
      */
-    public $parts;
+    public $part;
 }

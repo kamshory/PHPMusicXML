@@ -532,7 +532,7 @@ class MusicXML extends MusicXMLBase
         }
         // end part list
 
-        $scorePartWise->parts = array();
+        $scorePartWise->part = array();
 
         $this->processDuration();
 
@@ -541,7 +541,7 @@ class MusicXML extends MusicXMLBase
 
         // begin part
 
-        foreach ($this->partList as $pid => $part) {
+        foreach ($this->partList as $part) {
             $partId = $part['partId'];
             $channelId = $part['channelId'];
             $parts = new Part();
@@ -551,7 +551,7 @@ class MusicXML extends MusicXMLBase
                 $measure = $this->getMeasure($channelId, $measureIndex, $timebase);
                 $parts->measureList[] = $measure;
             }
-            $scorePartWise->parts[] = $parts;
+            $scorePartWise->part[] = $parts;
         }
         // end part
 
@@ -720,7 +720,7 @@ class MusicXML extends MusicXMLBase
         $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
         // end add score part
 
-        $scorePartWise->parts = array();
+        $scorePartWise->part = array();
 
         $part = new Part();
         $part->id = "P1";
@@ -759,7 +759,7 @@ class MusicXML extends MusicXMLBase
 
         $part->measureList[] = $measure;
 
-        $scorePartWise->parts[] = $part;
+        $scorePartWise->part[] = $part;
 
         return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
     }
