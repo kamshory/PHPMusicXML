@@ -143,12 +143,7 @@ class MusicXML extends MusicXMLBase
                         $chIdx = $noteValue['channel'];
                         $noteIdx = $noteValue['note'];
                         $index = "n" . $chIdx . "_" . $noteIdx;
-
-                        if (isset($lastTime[$index])) {
-                            $lt = $lastTime[$index];
-                        } else {
-                            $lt = 0;
-                        }
+                        $lt = $this->getLastTime($lastTime, $index);
                         $duration = $noteValue['time'] - $lt;
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                         $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
@@ -175,6 +170,23 @@ class MusicXML extends MusicXMLBase
                 }
             }
         }
+    }
+    
+    /**
+     * Get last time
+     *
+     * @param array $lastTime
+     * @param string $index
+     * @return float
+     */
+    private function getLastTime($lastTime, $index)
+    {
+        if (isset($lastTime[$index])) {
+            $lt = $lastTime[$index];
+        } else {
+            $lt = 0;
+        }
+        return $lt;
     }
 
     /**
