@@ -1390,6 +1390,8 @@ private function _parseTrack($binStr, $tn)//NOSONAR
 						  	$len = ord($binStr[$p+2]); # should be: 0x02 => $p+=5
 							  $vz  = $len>0 ? ord($binStr[$p+3]) : 0;
 							  $g   = ($len<=1 || ord($binStr[$p+4])==0) ?'major':'minor'; 
+							
+
 							  $track[] = "$time KeySig $vz $g";
 							  $p+=(3+$len);			   
 							  break;

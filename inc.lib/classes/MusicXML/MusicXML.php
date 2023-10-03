@@ -24,6 +24,7 @@ use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
+use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 use MusicXML\Util\MXL;
 
@@ -307,6 +308,16 @@ class MusicXML extends MusicXMLBase
                 'value' => $n
             );
         }
+        else if($eventName == 'KeySig')
+        {
+            $this->measures[0][$tmInteger][] = array(
+                'event' => $eventName, 
+                'message' => $message, 
+                'time' => $tm, 
+                'fifths' => $n, 
+                'mode' => $v
+            );
+        }
         else if($eventName == 'ChPr')
         {
             $this->measures[$ch][$tmInteger][] = array(
@@ -529,6 +540,7 @@ class MusicXML extends MusicXMLBase
                     case 'KeySig':
                         $mode = ($msg[3] == 'major') ? 0 : 1;
                         $xml .= "<KeySignature Fifths=\"{$msg[2]}\" Mode=\"$mode\"/>\n"; // ???
+                        $this->addEvent($msg[1], $msg, $timebase, intval($msg[2]), 0, $mode);
                         break;
 
                     case 'SeqSpec':
@@ -743,22 +755,35 @@ class MusicXML extends MusicXMLBase
         return isset($this->measures[$channelId]) && isset($this->measures[$channelId][$measureIndex]);
     }
 
-    private function getTempoList($controlEvents)
+    /**
+     * Get MIDI Events
+     *
+     * @param array $controlEvents
+     * @return MidiEvent
+     */
+    private function getEventList($controlEvents)
     {
         $tempoList = array();
+        $keySignatureList = array();
         foreach ($controlEvents as $message) 
         {
+            $time = $message['time'];
             if($message['event'] == 'Tempo')
             {
-                $time = $message['time'];
                 $rawtime = $message['rawtime'];
-                $directionKeys[$time] = $time;
                 $tempo = $message['value'];
                 $bpm = (int)(60000000/$tempo);
                 $tempoList[$time] = array('rawtime'=>$rawtime, 'tempo'=>$tempo, 'bpm'=>$bpm);
             }
+            if($message['event'] == 'KeySig')
+            {
+                $keySignatureList[$time] = array('fifths'=>$message['fifths'], 'mode'=>$message['mode']);
+            }
         }
-        return $tempoList;
+        $midiEvent = new MidiEvent();
+        $midiEvent->tempoList = $tempoList;
+        $midiEvent->keySignatureList = $keySignatureList;
+        return $midiEvent;
     }
     
     private function getDirections($tempoList)
@@ -818,7 +843,11 @@ class MusicXML extends MusicXMLBase
             
             // events whithout channel information
             $controlEvents0 = $this->getControlEvent($midiEventMessages);
-            $tempoList = $this->getTempoList($controlEvents0);
+            $midiEvent = $this->getEventList($controlEvents0);
+            $tempoList = $midiEvent->tempoList;
+            $keySignatureList = $midiEvent->keySignatureList;
+
+
             if(!empty($tempoList))
             {
                 $directions = $this->getDirections($tempoList);
@@ -826,6 +855,17 @@ class MusicXML extends MusicXMLBase
                 {
                     $measure->direction = $directions;
                 }
+            } 
+            if(!empty($keySignatureList))
+            {
+                $attributes = new Attributes();
+                $attributes->key = array();
+                $measure->attributesList = $this->initializeArray($measure->attributesList);
+                foreach($keySignatureList as $keySignature)
+                {
+                    $attributes->key[] = $this->getKey($keySignature['fifths'], $keySignature['mode']);
+                }
+                $measure->attributesList[] = $attributes;
             }       
         }
         if ($this->hasMessage($channelId, $measureIndex)) {
@@ -842,21 +882,20 @@ class MusicXML extends MusicXMLBase
             // begin add attribute
             $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attributes = new Attributes();
-            $attributes ->divisions = 1;         
-            $attributes ->key = $this->getKey(3);         
-            $attributes ->time = $this->getTime($this->timeSignature);
-            $attributes ->staves = 2;
-            $attributes ->clef = array();
+            $attributes->divisions = 1;         
+            $attributes->time = $this->getTime($this->timeSignature);
+            $attributes->staves = 2;
+            $attributes->clef = array();
             $clef1 = new Clef();
             $clef1->number = 1;
             $clef1->sign = 'G';
             $clef1->line = 2;
-            $attributes ->clef[] = $clef1;
+            $attributes->clef[] = $clef1;
             $clef2 = new Clef();
             $clef2->number = 2;
             $clef2->sign = 'G';
             $clef2->line = 2;
-            $attributes ->clef[] = $clef2;
+            $attributes->clef[] = $clef2;
             $measure->attributesList[] = $attributes ;
             // end add attribute
             
@@ -891,7 +930,7 @@ class MusicXML extends MusicXMLBase
         {
             $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attributes = new Attributes();
-            $attributes ->divisions = 1;
+            $attributes->divisions = 1;
             $measure->attributesList[] = $attributes ;
         }
         return $measure;
@@ -930,12 +969,14 @@ class MusicXML extends MusicXMLBase
      * Get key
      *
      * @param integer $fifths
+     * @param integer $mode
      * @return Key
      */
-    protected function getKey($fifths)
+    protected function getKey($fifths, $mode)
     {
         $key = new Key();
         $key->fifths = $fifths;
+        $key->mode = $mode;
         return $key;
     }
 

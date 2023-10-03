@@ -17,7 +17,15 @@ class Key extends MusicXMLWriter
      * Fifths
      *
      * @PropertyElement
-     * @var string
+     * @var integer
      */
     public $fifths;
+
+    /**
+     * Mode
+     *
+     * @PropertyElement
+     * @var integer
+     */
+    public $mode;
 }

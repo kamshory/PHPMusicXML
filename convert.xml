@@ -437,10 +437,13 @@
         <staff>1</staff>
       </note>
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -633,9 +636,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -804,9 +804,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -964,9 +961,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -1122,9 +1116,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -1209,9 +1200,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -1405,9 +1393,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -1485,9 +1470,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -1710,9 +1692,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -1831,9 +1810,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2056,9 +2032,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2211,9 +2184,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2452,9 +2422,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2523,9 +2490,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2686,9 +2650,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2792,9 +2753,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -2871,9 +2829,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3122,9 +3077,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3217,9 +3169,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3320,9 +3269,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3425,9 +3371,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3532,9 +3475,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3691,9 +3631,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3828,9 +3765,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -3987,9 +3921,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -4211,9 +4142,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -4307,9 +4235,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -4566,9 +4491,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -4997,9 +4919,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -5190,9 +5109,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -5396,9 +5312,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -5486,9 +5399,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -5692,9 +5602,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -5832,9 +5739,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6071,9 +5975,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6228,9 +6129,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6435,9 +6333,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6583,9 +6478,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6722,9 +6614,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6834,9 +6723,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -6995,9 +6881,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7172,9 +7055,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7283,9 +7163,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7388,9 +7265,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7495,9 +7369,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7654,9 +7525,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7791,9 +7659,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -7950,9 +7815,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -8174,9 +8036,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -8262,9 +8121,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -8534,9 +8390,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -8729,9 +8582,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -8934,9 +8784,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -9206,9 +9053,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -9314,9 +9158,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -9509,9 +9350,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -9705,9 +9543,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -9980,9 +9815,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -10043,9 +9875,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -10268,9 +10097,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -10497,9 +10323,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -10623,9 +10446,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -10815,9 +10635,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -11060,9 +10877,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -11368,9 +11182,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -11575,9 +11386,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -11663,9 +11471,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -11930,9 +11735,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -12155,9 +11957,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -12384,9 +12183,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -12510,9 +12306,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -12702,9 +12495,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -12947,9 +12737,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -13255,9 +13042,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -13462,9 +13246,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -13550,9 +13331,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -13808,9 +13586,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -14172,9 +13947,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -14539,9 +14311,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -14894,9 +14663,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15023,9 +14789,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15122,9 +14885,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15174,9 +14934,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15201,10 +14958,13 @@
   <part id="P2">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15531,9 +15291,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15620,9 +15377,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15741,9 +15495,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -15922,9 +15673,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16057,9 +15805,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16148,9 +15893,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16233,9 +15975,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16350,9 +16089,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16405,9 +16141,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16444,9 +16177,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16481,9 +16211,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16536,9 +16263,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16593,9 +16317,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16650,9 +16371,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16705,9 +16423,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16760,9 +16475,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16817,9 +16529,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16908,9 +16617,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -16963,9 +16669,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17054,9 +16757,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17109,9 +16809,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17166,9 +16863,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17223,9 +16917,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17278,9 +16969,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17333,9 +17021,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17390,9 +17075,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17481,9 +17163,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17536,9 +17215,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17611,9 +17287,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17686,9 +17359,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17707,9 +17377,6 @@
     <measure number="85">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17744,9 +17411,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17765,9 +17429,6 @@
     <measure number="87">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17787,10 +17448,13 @@
   <part id="P3">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17828,9 +17492,6 @@
     <measure number="4">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17866,9 +17527,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17913,9 +17571,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -17943,9 +17598,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -18383,10 +18035,13 @@
   <part id="P4">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -18601,9 +18256,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -18646,9 +18298,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -18797,9 +18446,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -18924,9 +18570,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19089,9 +18732,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19134,9 +18774,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19297,9 +18934,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19342,9 +18976,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19461,9 +19092,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19562,9 +19190,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19725,9 +19350,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19786,9 +19408,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -19914,9 +19533,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20067,9 +19683,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20188,9 +19801,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20323,9 +19933,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20478,9 +20085,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20600,9 +20204,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20729,9 +20330,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20827,9 +20425,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -20949,9 +20544,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21052,9 +20644,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21107,9 +20696,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21211,9 +20797,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21325,9 +20908,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21405,9 +20985,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21562,9 +21139,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21699,9 +21273,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21813,9 +21384,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -21936,9 +21504,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22046,9 +21611,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22166,9 +21728,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22268,9 +21827,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22388,9 +21944,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22529,9 +22082,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22665,9 +22215,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22818,9 +22365,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -22939,9 +22483,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23074,9 +22615,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23229,9 +22767,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23351,9 +22886,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23480,9 +23012,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23578,9 +23107,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23700,9 +23226,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23811,9 +23334,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -23992,9 +23512,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24113,9 +23630,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24269,9 +23783,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24315,9 +23826,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24478,9 +23986,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24647,9 +24152,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24752,9 +24254,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24824,9 +24323,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -24881,9 +24377,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25060,9 +24553,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25223,9 +24713,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25350,9 +24837,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25496,9 +24980,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25676,9 +25157,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25803,9 +25281,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -25935,9 +25410,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26035,9 +25507,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26157,9 +25626,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26270,9 +25736,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26375,9 +25838,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26521,9 +25981,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26701,9 +26158,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26828,9 +26282,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -26960,9 +26411,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27060,9 +26508,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27182,9 +26627,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27285,9 +26727,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27323,9 +26762,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27371,9 +26807,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27401,9 +26834,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27499,9 +26929,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27529,9 +26956,6 @@
     <measure number="84">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27559,9 +26983,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27591,10 +27012,13 @@
   <part id="P5">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -27850,9 +27274,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -28071,9 +27492,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -28292,9 +27710,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -28518,9 +27933,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -28742,9 +28154,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -28963,9 +28372,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -29137,9 +28543,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -29318,9 +28721,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -29373,9 +28773,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -29589,9 +28986,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -29810,9 +29204,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -30031,9 +29422,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -30257,9 +29645,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -30481,9 +29866,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -30702,9 +30084,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -30876,9 +30255,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31057,9 +30433,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31112,9 +30485,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31337,10 +30707,13 @@
   <part id="P6">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31368,9 +30741,6 @@
     <measure number="2">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31481,9 +30851,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31526,9 +30893,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31588,9 +30952,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31651,9 +31012,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31689,9 +31047,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31770,9 +31125,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31842,9 +31194,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -31923,9 +31272,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32012,9 +31358,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32092,9 +31435,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32163,9 +31503,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32234,9 +31571,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32306,9 +31640,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32386,9 +31717,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32492,9 +31820,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32581,9 +31906,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32854,9 +32176,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32875,9 +32194,6 @@
     <measure number="27">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -32929,9 +32245,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33039,9 +32352,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33116,9 +32426,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33197,9 +32504,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33269,9 +32573,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33350,9 +32651,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33439,9 +32737,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33519,9 +32814,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33590,9 +32882,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33661,9 +32950,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33733,9 +33019,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33813,9 +33096,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -33919,9 +33199,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34008,9 +33285,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34281,9 +33555,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34302,9 +33573,6 @@
     <measure number="50">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34323,9 +33591,6 @@
     <measure number="51">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34344,9 +33609,6 @@
     <measure number="52">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34435,9 +33697,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34472,9 +33731,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34545,9 +33801,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34772,9 +34025,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34909,9 +34159,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -34995,9 +34242,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35049,9 +34293,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35176,9 +34417,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35240,9 +34478,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35312,9 +34547,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35385,9 +34617,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35458,9 +34687,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35539,9 +34765,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35647,9 +34870,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -35753,9 +34973,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36021,9 +35238,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36059,9 +35273,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36105,9 +35316,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36177,9 +35385,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36250,9 +35455,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36323,9 +35525,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36404,9 +35603,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36512,9 +35708,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36618,9 +35811,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36886,9 +36076,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36924,9 +36111,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -36953,9 +36137,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37017,9 +36198,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37080,9 +36258,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37145,9 +36320,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37241,9 +36413,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37271,9 +36440,6 @@
     <measure number="84">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37292,9 +36458,6 @@
     <measure number="85">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37330,9 +36493,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37351,9 +36511,6 @@
     <measure number="87">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37373,10 +36530,13 @@
   <part id="P7">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37588,9 +36748,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37735,9 +36892,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -37931,9 +37085,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38019,9 +37170,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38074,9 +37222,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38221,9 +37366,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38417,9 +37559,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38513,9 +37652,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38803,9 +37939,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38884,9 +38017,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -38921,10 +38051,13 @@
   <part id="P8">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39207,9 +38340,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39310,9 +38440,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39355,9 +38482,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39444,9 +38568,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39567,9 +38688,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39664,9 +38782,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39715,9 +38830,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39786,9 +38898,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39832,9 +38941,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -39945,9 +39051,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40016,9 +39119,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40105,9 +39205,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40192,9 +39289,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40411,9 +39505,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40483,9 +39574,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40521,9 +39609,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40620,9 +39705,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40692,9 +39774,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40765,9 +39844,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40864,9 +39940,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -40996,9 +40069,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -41068,9 +40138,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -41279,9 +40346,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -41561,9 +40625,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -41755,9 +40816,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -42170,9 +41228,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -42467,9 +41522,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -42566,9 +41618,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -42665,9 +41714,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -42797,9 +41843,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -42869,9 +41912,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -43080,9 +42120,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -43362,9 +42399,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -43408,9 +42442,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -43493,10 +42524,13 @@
   <part id="P9">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -43805,9 +42839,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -43844,9 +42875,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -44059,10 +43087,13 @@
   <part id="P10">
     <measure number="1">
       <attributes>
-        <divisions>1</divisions>
         <key>
-          <fifths>3</fifths>
+          <fifths>0</fifths>
+          <mode>0</mode>
         </key>
+      </attributes>
+      <attributes>
+        <divisions>1</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -44387,9 +43418,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -44786,9 +43814,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -45233,9 +44258,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -45606,9 +44628,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -46027,9 +45046,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -46426,9 +45442,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -46873,9 +45886,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -47246,9 +46256,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -47667,9 +46674,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -48066,9 +47070,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -48513,9 +47514,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -48886,9 +47884,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -49158,9 +48153,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -49667,9 +48659,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -50192,9 +49181,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -50701,9 +49687,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -51226,9 +50209,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -51735,9 +50715,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -52260,9 +51237,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -52769,9 +51743,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -53170,9 +52141,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -53307,9 +52275,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -53568,9 +52533,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -53899,9 +52861,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -54184,9 +53143,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -54557,9 +53513,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -54818,9 +53771,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -55085,9 +54035,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -55364,9 +54311,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -55713,9 +54657,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -55798,9 +54739,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -56031,9 +54969,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -56572,9 +55507,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -57129,9 +56061,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -57670,9 +56599,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -58227,9 +57153,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -58768,9 +57691,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -59325,9 +58245,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -59866,9 +58783,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -60390,9 +59304,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -60846,9 +59757,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -61403,9 +60311,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -61944,9 +60849,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -62501,9 +61403,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -63042,9 +61941,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -63599,9 +62495,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -64140,9 +63033,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -64697,9 +63587,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -65098,9 +63985,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -65156,9 +64040,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -65194,9 +64075,6 @@
       </note>
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>3</fifths>
-        </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>

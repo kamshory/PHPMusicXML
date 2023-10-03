@@ -25,7 +25,7 @@ class Attributes extends MusicXMLWriter
     /**
      * Key
      * @Element
-     * @var Key
+     * @var Key[]
      */
     public $key;
 
