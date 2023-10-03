@@ -573,8 +573,8 @@ class MusicXML extends MusicXMLBase
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
         ksort($this->channel10);
-        foreach ($this->channel10 as $key => $value) {
-           
+        foreach ($this->channel10 as $key => $value) 
+        {
             $scoreInstrument = new ScoreInstrument();
             $midiInstrument = new MidiInstrument();
             $id = $partId . '-I' . $key;
@@ -625,27 +625,20 @@ class MusicXML extends MusicXMLBase
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $programChange = $this->getProgramChange($midiEventMessages);
-            if (!empty($programChange)) {
-                foreach ($programChange as $message) {
+            if (!empty($programChange)) 
+            {
+                foreach ($programChange as $message) 
+                {
                     // do it here
                 }
             }
 
             $measure->attributesList = array();
             $attribute = new Attributes();
-            $attribute->divisions = 1;
-
-            $key = new Key();
-            $key->fifths = 3;
-            $attribute->key = $key;
-
-            $time = new Time();
-            $time->beats = 3;
-            $time->beatType = 4;
-            $attribute->time = $time;
-
+            $attribute->divisions = 1;         
+            $attribute->key = $this->getKey(3);         
+            $attribute->time = $this->getTime(3, 4);
             $attribute->staves = 2;
-
             $attribute->clef = array();
             $clef1 = new Clef();
             $clef1->number = 1;
@@ -680,6 +673,34 @@ class MusicXML extends MusicXMLBase
             $measure->attributesList[] = $attribute;
         }
         return $measure;
+    }
+    
+    /**
+     * Get time
+     *
+     * @param integer $beats
+     * @param integer $beatType
+     * @return Time
+     */
+    protected function getTime($beats, $beatType)
+    {
+        $time = new Time();
+        $time->beats = $beats;
+        $time->beatType = $beatType;
+        return $time;
+    }
+    
+    /**
+     * Get key
+     *
+     * @param integer $fifths
+     * @return Key
+     */
+    protected function getKey($fifths)
+    {
+        $key = new Key();
+        $key->fifths = $fifths;
+        return $key;
     }
 
     /**
