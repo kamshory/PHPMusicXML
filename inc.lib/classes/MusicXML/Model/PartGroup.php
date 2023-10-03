@@ -6,7 +6,6 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * PartGroup
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/PartGroup.kt
  * @Xml
  * @Path /path-list/part-group
  * @Data

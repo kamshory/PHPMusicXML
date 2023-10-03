@@ -6,7 +6,6 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Note
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Note.kt
  * @Xml
  * @Path /path/measure/note
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
@@ -92,9 +91,9 @@ class Note extends MusicXMLWriter
 
     /**
      * @Element
-     * @var Notation
+     * @var Notations
      */
-    public $notation;
+    public $notations;
 
     /**
      * @Element

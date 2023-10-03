@@ -6,9 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Articulations
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Articulations.kt
  * @Xml
  * @Path /path/measure/note/notation/articulations
+ * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/articulations/
  * @Data
  */
 class Articulations extends MusicXMLWriter

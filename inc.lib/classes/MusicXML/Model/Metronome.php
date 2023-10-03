@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Metronome
  * @Xml
  * @Path /path/measure/direction/direction-type/metronome
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome/
  * @Data
  */
 class Metronome extends MusicXMLWriter

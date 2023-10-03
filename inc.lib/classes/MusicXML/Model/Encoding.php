@@ -6,9 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Encoding
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Encoding.kt
  * @Xml
  * @Path /identification/encoding
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/encoding/
  * @Data
  */
 class Encoding extends MusicXMLWriter
