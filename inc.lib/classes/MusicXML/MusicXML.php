@@ -20,6 +20,7 @@ use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
+use MusicXML\Util\MXL;
 
 /**
  * @version 1.0.0
@@ -103,7 +104,8 @@ class MusicXML extends MusicXMLBase
         $domdoc->appendChild($this->convertMidiToMusicXML($midi, $title, $domdoc, $version));
         if($format == "mxl")
         {
-            $xml = $domdoc->saveXML();
+            $mxl = new MXL();
+            return $mxl->createMxl($title, $domdoc->saveXML());
         }
         else
         {
