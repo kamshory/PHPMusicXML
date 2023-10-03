@@ -107,6 +107,7 @@ class MusicXML extends MusicXMLBase
      */
     public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::XML)
     {
+        $this->resetProperties();
         $domdoc = $this->getDOMDocument();
         $domdoc->appendChild($this->convertMidiToMusicXML($midi, $title, $domdoc, $version));
         if($format == MXL::MXL)
@@ -117,11 +118,24 @@ class MusicXML extends MusicXMLBase
         else
         {
             return $domdoc->saveXML();
-        }
-        
+        }  
     }
 
-    
+    /**
+     * Reset properties
+     *
+     * @return void
+     */
+    private function resetProperties()
+    {
+        $this->partList = array();
+        $this->partVolume = array();
+        $this->partPan = array();
+        $this->measures = array();
+        $this->channel10 = array();
+        $this->copyright = "";
+        $this->timeSignature = null;
+    }
 
     /**
      * Process note duration
@@ -898,9 +912,7 @@ class MusicXML extends MusicXMLBase
             $attributes->clef[] = $clef2;
             $measure->attributesList[] = $attributes ;
             // end add attribute
-            
-            
-            
+                     
             // begin add note
             $noteMessages = $this->getNotes($midiEventMessages);
             if(!empty($noteMessages))
