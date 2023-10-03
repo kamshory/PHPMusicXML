@@ -874,6 +874,7 @@ class MusicXML extends MusicXMLBase
                 {
                     $measure->direction = $directions;
                 }
+                echo "TEMPO\r\n";
             } 
             if(!empty($keySignatureList))
             {
@@ -922,6 +923,7 @@ class MusicXML extends MusicXMLBase
             $noteMessages = $this->getNotes($midiEventMessages);
             if(!empty($noteMessages))
             {
+                echo "NOTE\r\n";
                 $measure->noteList = $this->initializeArray($measure->noteList);
                 foreach ($noteMessages as $message) {
 

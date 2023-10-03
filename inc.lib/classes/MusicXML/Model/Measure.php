@@ -28,6 +28,14 @@ class Measure extends MusicXMLWriter
      * @var string
      */
     public $width;
+
+    /**
+     * Direction
+     *
+     * @Element
+     * @var Direction[]
+     */
+    public $direction;
     
     /**
      * Note list
@@ -53,11 +61,5 @@ class Measure extends MusicXMLWriter
      */
     public $backup;
     
-    /**
-     * Direction
-     *
-     * @Element
-     * @var Direction[]
-     */
-    public $direction;
+    
 }
