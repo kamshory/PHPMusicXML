@@ -97,11 +97,19 @@ class MusicXML extends MusicXMLBase
      * @param string $version Version of MusicXML
      * @return string
      */
-    public function midiToMusicXml($midi, $title, $version = "4.0")
+    public function midiToMusicXml($midi, $title, $version = "4.0", $format = "xml")
     {
         $domdoc = $this->getDOMDocument();
         $domdoc->appendChild($this->convertMidiToMusicXML($midi, $title, $domdoc, $version));
-        return $domdoc->saveXML();
+        if($format == "mxl")
+        {
+            $xml = $domdoc->saveXML();
+        }
+        else
+        {
+            return $domdoc->saveXML();
+        }
+        
     }
 
     private function processTime($event, $msg, $timebase, $n, $ch, $v)
