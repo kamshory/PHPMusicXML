@@ -633,7 +633,8 @@ class MusicXML extends MusicXMLBase
                 }
             }
 
-            $measure->attributesList = array();
+            // begin add attribute
+            $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attribute = new Attributes();
             $attribute->divisions = 1;         
             $attribute->key = $this->getKey(3);         
@@ -650,15 +651,17 @@ class MusicXML extends MusicXMLBase
             $clef2->sign = 'G';
             $clef2->line = 2;
             $attribute->clef[] = $clef2;
-
             $measure->attributesList[] = $attribute;
-            $measure->noteList = array();
-
+            // end add attribute
+            
+            
+            
+            // begin add note
             $noteMessages = $this->getNotes($midiEventMessages);
-            foreach ($noteMessages as $message) {
-                
-                if ($message['note'] >= 0) {
-                    // audiable
+            if(!empty($noteMessages))
+            {
+                $measure->noteList = $this->initializeArray($measure->noteList);
+                foreach ($noteMessages as $message) {
                     $pitch = $this->getPitch($message['note']);
                     $note = new Note();
                     $note->pitch = $pitch;
@@ -666,13 +669,32 @@ class MusicXML extends MusicXMLBase
                     $measure->noteList[] = $note;
                 }
             }
-        } else {
-            $measure->attributesList = array();
+            // end add note
+            
+        } 
+        else 
+        {
+            $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attribute = new Attributes();
             $attribute->divisions = 1;
             $measure->attributesList[] = $attribute;
         }
         return $measure;
+    }
+    
+    /**
+     * Initialize array
+     *
+     * @param array|null
+     * @return array
+     */
+    private function initializeArray($initialValue)
+    {
+        if(!isset($initialValue))
+        {
+            return array();
+        }
+        return $initialValue;
     }
     
     /**
