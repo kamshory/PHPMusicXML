@@ -436,7 +436,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -907,7 +907,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -1049,7 +1049,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -12418,7 +12418,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -13501,7 +13501,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -13669,7 +13669,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -13693,7 +13693,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -13707,7 +13707,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -15898,7 +15898,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -15927,7 +15927,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16071,7 +16071,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16111,7 +16111,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16148,7 +16148,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16582,7 +16582,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16611,7 +16611,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16663,7 +16663,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16687,7 +16687,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -16701,7 +16701,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -24695,7 +24695,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -24895,7 +24895,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -24987,7 +24987,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -25011,7 +25011,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -25025,7 +25025,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -28300,7 +28300,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -28329,7 +28329,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -28381,7 +28381,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -28555,7 +28555,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -28613,7 +28613,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -33505,7 +33505,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -33770,7 +33770,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -33901,7 +33901,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -33925,7 +33925,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -33939,7 +33939,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -35154,7 +35154,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -35230,7 +35230,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -35343,7 +35343,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -35367,7 +35367,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -35381,7 +35381,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -39420,7 +39420,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -39449,7 +39449,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -39501,7 +39501,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -39525,7 +39525,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -39539,7 +39539,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -39982,7 +39982,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -40011,7 +40011,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -40063,7 +40063,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -40087,7 +40087,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -40101,7 +40101,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -58816,7 +58816,7 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
@@ -58868,7 +58868,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>

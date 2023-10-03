@@ -789,16 +789,6 @@ class MusicXML extends MusicXMLBase
                         $sound->tempo = $bpm;
                         $directions[$rawtime]->sound = $sound;
                         
-                        
-                        /**
-                         * <direction-type>
-          <metronome parentheses="no">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>154</per-minute>
-            </metronome>
-          </direction-type>
-                         */
-                        
                         $directionType = new DirectionType();
                         $metronome = new Metronome();
                         $metronome->parentheses = 'no';
@@ -807,8 +797,8 @@ class MusicXML extends MusicXMLBase
                         $directionType->metronome = $metronome;
                         
                         $directions[$rawtime]->directionType = $directionType;
+                        $directions[$rawtime]->placement = 'above';
                         
-                        //echo $directionType;
                         
                         $lastBpm = $bpm;
                     }
@@ -873,13 +863,6 @@ class MusicXML extends MusicXMLBase
             $attributes = new Attributes();
             $attributes ->divisions = 1;
             $measure->attributesList[] = $attributes ;
-        }
-        if(isset($measure->direction))
-        {
-            foreach($measure->direction as $direction)
-            {
-                //echo $direction."\r\n";
-            }
         }
         return $measure;
     }
