@@ -73,6 +73,7 @@ class MusicXML extends MusicXMLBase
      * @var string
      */
     private $copyright = "";
+    private $timeSignature = null;
 
     public function loadXml($path)
     {
@@ -790,6 +791,19 @@ class MusicXML extends MusicXMLBase
         return $directions;
     }
     
+    
+    private function getTimeSignature($controlEvents0)
+    {
+        foreach ($controlEvents0 as $message) 
+        {
+            if($message['event'] == 'TimeSig')
+            {
+                return $message;
+            }
+        }
+        return null;
+    }
+    
     /**
      * Get measure
      *
@@ -806,11 +820,18 @@ class MusicXML extends MusicXMLBase
         if ($this->hasMessage(0, $measureIndex))
         {
             $midiEventMessages = $this->measures[0][$measureIndex];
-            $controlEvents = $this->getControlEvent($midiEventMessages);
             
-            $tempoList = $this->getTempoList($controlEvents);
-            
-            
+            // events whithout channel information
+            $controlEvents0 = $this->getControlEvent($midiEventMessages);
+            if(!isset($this->timeSignature))
+            {
+                $timeSignature = $this->getTimeSignature($controlEvents0);
+                if(isset($timeSignature))
+                {
+                    $this->timeSignature = $timeSignature;
+                }
+            }
+            $tempoList = $this->getTempoList($controlEvents0);
             if(!empty($tempoList))
             {
                 $directions = $this->getDirections($tempoList);
@@ -836,7 +857,7 @@ class MusicXML extends MusicXMLBase
             $attributes = new Attributes();
             $attributes ->divisions = 1;         
             $attributes ->key = $this->getKey(3);         
-            $attributes ->time = $this->getTime(3, 4);
+            $attributes ->time = $this->getTime(4, 4);
             $attributes ->staves = 2;
             $attributes ->clef = array();
             $clef1 = new Clef();
