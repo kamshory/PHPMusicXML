@@ -73,7 +73,7 @@ class Note extends MusicXMLWriter
 
     /**
      * @PropertyElement
-     * @var string
+     * @var integer
      */
     public $staff;
 

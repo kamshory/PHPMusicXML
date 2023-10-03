@@ -1384,7 +1384,6 @@ private function _parseTrack($binStr, $tn)//NOSONAR
 							  $mc = ord($binStr[$p+5]);
 							  $c = ord($binStr[$p+6]);
 							  $track[] = "$time TimeSig $z/$t $mc $c";
-							  echo "TIME SIGNATURE $time TimeSig $z/$t $mc $c \r\n";
 							  $p+=7;
 							  break;
 						  case 0x59: // KeySig

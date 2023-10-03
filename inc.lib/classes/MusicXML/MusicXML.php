@@ -24,6 +24,7 @@ use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
+use MusicXML\Properties\TimeSignature;
 use MusicXML\Util\MXL;
 
 /**
@@ -521,6 +522,7 @@ class MusicXML extends MusicXMLBase
 
                     case 'TimeSig': // LogDenum???
                         $ts = explode('/', $msg[2]);
+                        $this->timeSignature = new TimeSignature($msg);
                         $xml .= "<TimeSignature Numerator=\"{$ts[0]}\" LogDenominator=\"" . log($ts[1]) / log(2) . "\" MIDIClocksPerMetronomeClick=\"{$msg[3]}\" ThirtySecondsPer24Clocks=\"{$msg[4]}\"/>\n";
                         break;
 
@@ -694,6 +696,7 @@ class MusicXML extends MusicXMLBase
     private function getScorePartChannel10($partId, $channelId, $programId)
     {
         $scorePart = new ScorePart();
+        $scorePart->id = $partId;
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
         ksort($this->channel10);
@@ -791,19 +794,6 @@ class MusicXML extends MusicXMLBase
         return $directions;
     }
     
-    
-    private function getTimeSignature($controlEvents0)
-    {
-        foreach ($controlEvents0 as $message) 
-        {
-            if($message['event'] == 'TimeSig')
-            {
-                return $message;
-            }
-        }
-        return null;
-    }
-    
     /**
      * Get measure
      *
@@ -823,14 +813,6 @@ class MusicXML extends MusicXMLBase
             
             // events whithout channel information
             $controlEvents0 = $this->getControlEvent($midiEventMessages);
-            if(!isset($this->timeSignature))
-            {
-                $timeSignature = $this->getTimeSignature($controlEvents0);
-                if(isset($timeSignature))
-                {
-                    $this->timeSignature = $timeSignature;
-                }
-            }
             $tempoList = $this->getTempoList($controlEvents0);
             if(!empty($tempoList))
             {
@@ -857,7 +839,7 @@ class MusicXML extends MusicXMLBase
             $attributes = new Attributes();
             $attributes ->divisions = 1;         
             $attributes ->key = $this->getKey(3);         
-            $attributes ->time = $this->getTime(4, 4);
+            $attributes ->time = $this->getTime($this->timeSignature);
             $attributes ->staves = 2;
             $attributes ->clef = array();
             $clef1 = new Clef();
@@ -884,6 +866,7 @@ class MusicXML extends MusicXMLBase
                     $pitch = $this->getPitch($message['note']);
                     $note = new Note();
                     $note->pitch = $pitch;
+                    $note->staff = $channelId;
                     $note->duration = $message['duration'] * $timebase;
                     $measure->noteList[] = $note;
                 }
@@ -919,15 +902,14 @@ class MusicXML extends MusicXMLBase
     /**
      * Get time
      *
-     * @param integer $beats
-     * @param integer $beatType
+     * @param TimeSignature $timeSignature
      * @return Time
      */
-    protected function getTime($beats, $beatType)
+    protected function getTime($timeSignature)
     {
         $time = new Time();
-        $time->beats = $beats;
-        $time->beatType = $beatType;
+        $time->beats = $timeSignature->beats;
+        $time->beatType = $timeSignature->beatType;
         return $time;
     }
     
