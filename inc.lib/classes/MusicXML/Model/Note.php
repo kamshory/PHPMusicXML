@@ -16,16 +16,10 @@ class Note extends MusicXMLWriter
     /**
      * Dynamics
      *
+     * @Attribute
      * @var float
      */
     public $dynamics;
-    
-    /**
-     * Direction
-     *
-     * @var [type]
-     */
-    public $direction;
     
     /**
      * Pitch

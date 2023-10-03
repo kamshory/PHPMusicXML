@@ -868,11 +868,19 @@ class MusicXML extends MusicXMLBase
             {
                 $measure->noteList = $this->initializeArray($measure->noteList);
                 foreach ($noteMessages as $message) {
+
+                    $duration = $message['duration'] * $timebase;
+                    if($duration == 0)
+                    {
+                        $duration = 1;
+                    }
+
                     $pitch = $this->getPitch($message['note']);
                     $note = new Note();
                     $note->pitch = $pitch;
                     $note->staff = $channelId;
-                    $note->duration = $message['duration'] * $timebase;
+                    $note->dynamics = $message['value'];
+                    $note->duration = $duration;
                     $measure->noteList[] = $note;
                 }
             }
