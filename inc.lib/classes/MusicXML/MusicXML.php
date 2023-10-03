@@ -791,7 +791,12 @@ class MusicXML extends MusicXMLBase
             }
             if($message['event'] == 'KeySig')
             {
-                $keySignatureList[$time] = array('fifths'=>$message['fifths'], 'mode'=>$message['mode']);
+                $fifths = 3;
+                if($message['mode'] == 'minor')
+                {
+                    $fifths = $fifths * -1;
+                }
+                $keySignatureList[$time] = array('fifths'=>$fifths, 'mode'=>$message['mode']);
             }
         }
         $midiEvent = new MidiEvent();

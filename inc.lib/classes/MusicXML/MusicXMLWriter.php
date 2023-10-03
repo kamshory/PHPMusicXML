@@ -7,7 +7,6 @@ use MusicXML\Map\ModelParser;
 use MusicXML\Map\NodeType;
 use MusicXML\Util\PicoAnnotationParser;
 use ReflectionClass;
-use SimpleXMLElement;
 use stdClass;
 
 class MusicXMLWriter // NOSONAR
