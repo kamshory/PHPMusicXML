@@ -102,14 +102,14 @@ class MusicXML extends MusicXMLBase
      * @param string $version Version of MusicXML
      * @return string
      */
-    public function midiToMusicXml($midi, $title, $version = "4.0", $format = "xml")
+    public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::XML)
     {
         $domdoc = $this->getDOMDocument();
         $domdoc->appendChild($this->convertMidiToMusicXML($midi, $title, $domdoc, $version));
-        if($format == "mxl")
+        if($format == MXL::MXL)
         {
             $mxl = new MXL();
-            return $mxl->createMxl($title, $domdoc->saveXML());
+            return $mxl->xmlToMxl($title, $domdoc->saveXML());
         }
         else
         {
@@ -396,7 +396,7 @@ class MusicXML extends MusicXMLBase
                         );
                         // add event
                         $this->addEvent($msg[1], $msg, $timebase, $p, $ch);
-                        $xml .= "<ProgramChange Channel=\"$ch\" Number=\"$p\"/>\n";
+                        $xml .= "<controlEvents Channel=\"$ch\" Number=\"$p\"/>\n";
                         break;
 
                     case 'On':
@@ -734,6 +734,62 @@ class MusicXML extends MusicXMLBase
         return isset($this->measures[$channelId]) && isset($this->measures[$channelId][$measureIndex]);
     }
 
+    private function getTempoList($controlEvents)
+    {
+        $tempoList = array();
+        foreach ($controlEvents as $message) 
+        {
+            if($message['event'] == 'Tempo')
+            {
+                $time = $message['time'];
+                $rawtime = $message['rawtime'];
+                $directionKeys[$time] = $time;
+                $tempo = $message['value'];
+                $bpm = (int)(60000000/$tempo);
+                $tempoList[$time] = array('rawtime'=>$rawtime, 'tempo'=>$tempo, 'bpm'=>$bpm);
+            }
+        }
+        return $tempoList;
+    }
+    
+    private function getDirections($tempoList)
+    {
+        $lastBpm = 0;
+        $directions = array();
+        if(isset($tempoList))
+        {
+            foreach($tempoList as $value) 
+            {
+                $rawtime = $value['rawtime'];
+                $bpm = $value['bpm'];
+                if(!isset($directions[$rawtime]))
+                {
+                    $directions[$rawtime] = new Direction();
+                }
+                if($bpm != $lastBpm)
+                {
+                    $sound = new Sound();
+                    $sound->tempo = $bpm;
+                    $directions[$rawtime]->sound = $sound;
+                    
+                    $directionType = new DirectionType();
+                    $metronome = new Metronome();
+                    $metronome->parentheses = 'no';
+                    $metronome->perMinute = $bpm;
+                    $metronome->beatUnit = 'quarter';
+                    $directionType->metronome = $metronome;
+                    
+                    $directions[$rawtime]->directionType = $directionType;
+                    $directions[$rawtime]->placement = 'above';
+                    
+                    
+                    $lastBpm = $bpm;
+                }
+            }
+        }
+        return $directions;
+    }
+    
     /**
      * Get measure
      *
@@ -744,77 +800,32 @@ class MusicXML extends MusicXMLBase
      */
     private function getMeasure($partId, $channelId, $measureIndex, $timebase)
     {
-        $f = 1 / $timebase / 1000000;
         $measure = new Measure();
         $measure->number = $measureIndex+1;
         
         if ($this->hasMessage(0, $measureIndex))
         {
-            // 
-            
-            $directionKeys = array();
             $midiEventMessages = $this->measures[0][$measureIndex];
-            $programChange = $this->getControlEvent($midiEventMessages);
+            $controlEvents = $this->getControlEvent($midiEventMessages);
             
-            $tempoList = array();
+            $tempoList = $this->getTempoList($controlEvents);
             
-            foreach ($programChange as $message) 
-            {
-                if($message['event'] == 'Tempo')
-                {
-                    $time = $message['time'];
-                    $rawtime = $message['rawtime'];
-                    $directionKeys[$time] = $time;
-                    $tempo = $message['value'];
-                    $bpm = (int)(60000000/$tempo);
-                    echo "BPM = $bpm\r\n";
-                    $tempoList[$time] = array('rawtime'=>$rawtime, 'tempo'=>$tempo, 'bpm'=>$bpm);
-                    //echo "$partId $measureIndex $rawtime $tempo | BPM = $bpm\r\n";
-                }
-            }
+            
             if(!empty($tempoList))
             {
-                $lastBpm = 0;
-                $directions = array();
-                foreach($tempoList as $time=>$value) 
+                $directions = $this->getDirections($tempoList);
+                if(!empty($directions))
                 {
-                    $rawtime = $value['rawtime'];
-                    $tempo = $value['tempo'];
-                    $bpm = $value['bpm'];
-                    if(!isset($directions[$rawtime]))
-                    {
-                        $directions[$rawtime] = new Direction();
-                    }
-                    if($bpm != $lastBpm)
-                    {
-                        $sound = new Sound();
-                        $sound->tempo = $bpm;
-                        $directions[$rawtime]->sound = $sound;
-                        
-                        $directionType = new DirectionType();
-                        $metronome = new Metronome();
-                        $metronome->parentheses = 'no';
-                        $metronome->perMinute = $bpm;
-                        $metronome->beatUnit = 'quarter';
-                        $directionType->metronome = $metronome;
-                        
-                        $directions[$rawtime]->directionType = $directionType;
-                        $directions[$rawtime]->placement = 'above';
-                        
-                        
-                        $lastBpm = $bpm;
-                    }
+                    $measure->direction = $directions;
                 }
-                $measure->direction = $directions;
-                
             }       
         }
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
-            $programChange = $this->getControlEvent($midiEventMessages);
-            if (!empty($programChange)) 
+            $controlEvents = $this->getControlEvent($midiEventMessages);
+            if (!empty($controlEvents)) 
             {
-                foreach ($programChange as $message) 
+                foreach ($controlEvents as $message) 
                 {
                     // do it here
                 }
