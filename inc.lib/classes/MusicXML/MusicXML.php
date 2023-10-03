@@ -124,7 +124,7 @@ class MusicXML extends MusicXMLBase
         if (!isset($this->measures[$ch][$tmInteger])) {
             $this->measures[$ch][$tmInteger] = array();
         }
-        $this->measures[$ch][$tmInteger][] = array('time' => $tm, 'channel' => $ch, 'note' => $n, 'velocity' => $v, 'event' => $event, 'message' => $msg);
+        $this->measures[$ch][$tmInteger][] = array('time' => $tm, 'channel' => $ch, 'note' => $n, 'value' => $v, 'event' => $event, 'message' => $msg);
     }
 
     /**
@@ -640,6 +640,7 @@ class MusicXML extends MusicXMLBase
                 foreach ($programChange as $message) 
                 {
                     // do it here
+                    //print_r($message);
                 }
             }
 
