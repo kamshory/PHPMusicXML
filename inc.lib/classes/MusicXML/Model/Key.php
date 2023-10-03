@@ -25,7 +25,7 @@ class Key extends MusicXMLWriter
      * Mode
      *
      * @PropertyElement
-     * @var integer
+     * @var string
      */
     public $mode;
 }

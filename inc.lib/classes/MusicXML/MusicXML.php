@@ -247,9 +247,9 @@ class MusicXML extends MusicXMLBase
      * @param string $eventName Event name
      * @param array $message Parse message
      * @param integer $timebase Timebase
-     * @param integer $n
-     * @param integer $ch
-     * @param integer $v
+     * @param mixed $n
+     * @param mixed $ch
+     * @param mixed $v
      * @return void
      */
     private function addEvent($eventName, $message, $timebase, $n = 0, $ch = 0, $v = 0)
@@ -540,7 +540,7 @@ class MusicXML extends MusicXMLBase
                     case 'KeySig':
                         $mode = ($msg[3] == 'major') ? 0 : 1;
                         $xml .= "<KeySignature Fifths=\"{$msg[2]}\" Mode=\"$mode\"/>\n"; // ???
-                        $this->addEvent($msg[1], $msg, $timebase, intval($msg[2]), 0, $mode);
+                        $this->addEvent($msg[1], $msg, $timebase, intval($msg[2]), 0, $msg[3]);
                         break;
 
                     case 'SeqSpec':
