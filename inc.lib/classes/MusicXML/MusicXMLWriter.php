@@ -87,9 +87,9 @@ class MusicXMLWriter // NOSONAR
     private function loadXml($data)
     {
         $maps = $this->mapAttribute();
-        foreach($data->attributes as $attribute)
+        foreach($data->attributes as $attributes )
         {
-            echo "".$attribute->nodeName." = ".$attribute->nodeValue."\r\n";
+            echo "".$attributes ->nodeName." = ".$attributes ->nodeValue."\r\n";
         }
         foreach($data->childNodes as $child)
         {

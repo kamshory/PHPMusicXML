@@ -24,7 +24,7 @@ class Direction extends MusicXMLWriter
     /**
      * Direction type
      *
-     * @PropertyElement(name="direction-type")
+     * @Element(name="direction-type")
      * @var DirectionType
      */
     public $directionType;
@@ -40,7 +40,7 @@ class Direction extends MusicXMLWriter
     /**
      * Sound
      *
-     * @PropertyElement
+     * @Element
      * @var Sound
      */
     public $sound;

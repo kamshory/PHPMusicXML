@@ -19,5 +19,5 @@ class DirectionType extends MusicXMLWriter
      * @Element
      * @var Metronome
      */
-    public $metronom;
+    public $metronome;
 }

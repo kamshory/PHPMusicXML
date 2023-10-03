@@ -9,8 +9,11 @@ use MusicXML\Map\ModelMap;
 use MusicXML\Map\NodeType;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
+use MusicXML\Model\Direction;
+use MusicXML\Model\DirectionType;
 use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
+use MusicXML\Model\Metronome;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
@@ -18,6 +21,7 @@ use MusicXML\Model\PartList;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
+use MusicXML\Model\Sound;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
 use MusicXML\Util\MXL;
@@ -247,6 +251,7 @@ class MusicXML extends MusicXMLBase
      */
     private function addEvent($eventName, $message, $timebase, $n = 0, $ch = 0, $v = 0)
     {
+        $rawtime = $message[0];
         $tm = $message[0] / (4 * $timebase);
         $tmInteger = floor($tm);
         if (!isset($this->measures[$ch])) {
@@ -261,6 +266,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'control' => $n, 
                 'value' => $v
@@ -272,6 +278,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'number' => $n
             );
@@ -282,6 +289,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'note' => $n, 
                 'pressure' => $v
@@ -289,10 +297,11 @@ class MusicXML extends MusicXMLBase
         }
         else if($eventName == 'Seqnr' || $eventName == 'Tempo')
         {
-            $this->measures[$ch][$tmInteger][] = array(
+            $this->measures[0][$tmInteger][] = array(
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'rawtime' => $rawtime, 
                 'value' => $n
             );
         }
@@ -302,6 +311,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'pressure' => $v
             );
@@ -312,6 +322,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'value' => $v
             );
@@ -469,7 +480,7 @@ class MusicXML extends MusicXMLBase
 
                     case 'Seqnr':
                         $xml .= "<SequenceNumber Value=\"{$msg[2]}\"/>\n";
-                        $this->addEvent($msg[1], $msg, $timebase, 0, $msg[2]);
+                        $this->addEvent($msg[1], $msg, $timebase, $msg[2], 0);
                         break;
 
                     case 'Meta':
@@ -500,7 +511,7 @@ class MusicXML extends MusicXMLBase
 
                     case 'Tempo':
                         $xml .= "<SetTempo Value=\"{$msg[2]}\"/>\n";
-                        $this->addEvent($msg[1], $msg, $timebase, 0, $msg[2]);
+                        $this->addEvent($msg[1], $msg, $timebase, $msg[2], 0);
                         break;
 
                     case 'SMPTE':
@@ -660,7 +671,7 @@ class MusicXML extends MusicXMLBase
             $parts->id = $partId;
             $parts->measureList = array();
             for ($measureIndex = 0; $measureIndex < $maxMeasure; $measureIndex++) {
-                $measure = $this->getMeasure($channelId, $measureIndex, $timebase);
+                $measure = $this->getMeasure($partId, $channelId, $measureIndex, $timebase);
                 $parts->measureList[] = $measure;
             }
             $scorePartWise->part[] = $parts;
@@ -726,45 +737,116 @@ class MusicXML extends MusicXMLBase
     /**
      * Get measure
      *
+     * @param string $partId
      * @param integer $channelId
      * @param integer $measureIndex
      * @return Measure
      */
-    private function getMeasure($channelId, $measureIndex, $timebase)
+    private function getMeasure($partId, $channelId, $measureIndex, $timebase)
     {
         $measure = new Measure();
         $measure->number = $measureIndex+1;
+        
+        if ($this->hasMessage(0, $measureIndex))
+        {
+            // 
+            
+            $directionKeys = array();
+            $midiEventMessages = $this->measures[0][$measureIndex];
+            $programChange = $this->getControlEvent($midiEventMessages);
+            
+            $tempoList = array();
+            
+            foreach ($programChange as $message) 
+            {
+                if($message['event'] == 'Tempo')
+                {
+                    $time = $message['time'];
+                    $rawtime = $message['rawtime'];
+                    $directionKeys[$time] = $time;
+                    $tempo = $message['value'];
+                    $bpm = (int)(60000000/$tempo);
+                    $tempoList[$time] = array('rawtime'=>$rawtime, 'tempo'=>$tempo, 'bpm'=>$bpm);
+                    //echo "$partId $measureIndex $rawtime $tempo | BPM = $bpm\r\n";
+                }
+            }
+            if(!empty($tempoList))
+            {
+                $lastBpm = 0;
+                $directions = array();
+                foreach($tempoList as $time=>$value) 
+                {
+                    $rawtime = $value['rawtime'];
+                    $tempo = $value['tempo'];
+                    $bpm = $value['bpm'];
+                    if(!isset($directions[$rawtime]))
+                    {
+                        $directions[$rawtime] = new Direction();
+                    }
+                    if($bpm != $lastBpm)
+                    {
+                        $sound = new Sound();
+                        $sound->tempo = $bpm;
+                        $directions[$rawtime]->sound = $sound;
+                        
+                        
+                        /**
+                         * <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>154</per-minute>
+            </metronome>
+          </direction-type>
+                         */
+                        
+                        $directionType = new DirectionType();
+                        $metronome = new Metronome();
+                        $metronome->parentheses = 'no';
+                        $metronome->perMinute = $bpm;
+                        $metronome->beatUnit = 'quarter';
+                        $directionType->metronome = $metronome;
+                        
+                        $directions[$rawtime]->directionType = $directionType;
+                        
+                        //echo $directionType;
+                        
+                        $lastBpm = $bpm;
+                    }
+                }
+                $measure->direction = $directions;
+                
+            }       
+        }
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
-            $programChange = $this->getProgramChange($midiEventMessages);
+            $programChange = $this->getControlEvent($midiEventMessages);
             if (!empty($programChange)) 
             {
                 foreach ($programChange as $message) 
                 {
                     // do it here
-                    //print_r($message);
                 }
             }
 
             // begin add attribute
             $measure->attributesList = $this->initializeArray($measure->attributesList);
-            $attribute = new Attributes();
-            $attribute->divisions = 1;         
-            $attribute->key = $this->getKey(3);         
-            $attribute->time = $this->getTime(3, 4);
-            $attribute->staves = 2;
-            $attribute->clef = array();
+            $attributes = new Attributes();
+            $attributes ->divisions = 1;         
+            $attributes ->key = $this->getKey(3);         
+            $attributes ->time = $this->getTime(3, 4);
+            $attributes ->staves = 2;
+            $attributes ->clef = array();
             $clef1 = new Clef();
             $clef1->number = 1;
             $clef1->sign = 'G';
             $clef1->line = 2;
-            $attribute->clef[] = $clef1;
+            $attributes ->clef[] = $clef1;
             $clef2 = new Clef();
             $clef2->number = 2;
             $clef2->sign = 'G';
             $clef2->line = 2;
-            $attribute->clef[] = $clef2;
-            $measure->attributesList[] = $attribute;
+            $attributes ->clef[] = $clef2;
+            $measure->attributesList[] = $attributes ;
             // end add attribute
             
             
@@ -788,9 +870,16 @@ class MusicXML extends MusicXMLBase
         else 
         {
             $measure->attributesList = $this->initializeArray($measure->attributesList);
-            $attribute = new Attributes();
-            $attribute->divisions = 1;
-            $measure->attributesList[] = $attribute;
+            $attributes = new Attributes();
+            $attributes ->divisions = 1;
+            $measure->attributesList[] = $attributes ;
+        }
+        if(isset($measure->direction))
+        {
+            foreach($measure->direction as $direction)
+            {
+                //echo $direction."\r\n";
+            }
         }
         return $measure;
     }

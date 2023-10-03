@@ -436,6 +436,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <note>
@@ -898,6 +907,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <note>
@@ -1031,6 +1049,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <note>
@@ -12391,6 +12418,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <note>
@@ -13465,6 +13501,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <note>
@@ -13624,6 +13669,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -13639,11 +13693,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -15826,6 +15898,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -15846,6 +15927,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <note>
@@ -15981,6 +16071,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -16012,6 +16111,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <note>
@@ -16040,6 +16148,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <note>
@@ -16465,6 +16582,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -16485,6 +16611,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <attributes>
@@ -16528,6 +16663,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -16543,11 +16687,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -24533,6 +24695,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <note>
@@ -24724,6 +24895,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <attributes>
@@ -24807,6 +24987,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -24822,11 +25011,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -28093,6 +28300,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -28113,6 +28329,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <attributes>
@@ -28156,6 +28381,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -28321,6 +28555,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <note>
@@ -28370,6 +28613,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <note>
@@ -33253,6 +33505,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <note>
@@ -33509,6 +33770,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <attributes>
@@ -33631,6 +33901,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -33646,11 +33925,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -34857,6 +35154,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -34924,6 +35230,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <note>
@@ -35028,6 +35343,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -35043,11 +35367,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -39078,6 +39420,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -39098,6 +39449,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <attributes>
@@ -39141,6 +39501,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -39156,11 +39525,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -39595,6 +39982,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -39615,6 +40011,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <attributes>
@@ -39658,6 +40063,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="2">
       <attributes>
@@ -39673,11 +40087,29 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>56</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="56"/>
+      </direction>
     </measure>
     <measure number="5">
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="6">
       <attributes>
@@ -58384,6 +58816,15 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>76</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="76"/>
+      </direction>
     </measure>
     <measure number="80">
       <attributes>
@@ -58427,6 +58868,15 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>67</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="67"/>
+      </direction>
     </measure>
     <measure number="84">
       <note>

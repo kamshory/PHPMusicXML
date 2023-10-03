@@ -187,7 +187,7 @@ class MusicXMLBase
      * @param array $midiEventMessages
      * @return array
      */
-    protected function getProgramChange($midiEventMessages)
+    protected function getControlEvent($midiEventMessages)
     {
         $messages = array();
         foreach ($midiEventMessages as $message) {

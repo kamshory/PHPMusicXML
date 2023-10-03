@@ -13,6 +13,21 @@ use MusicXML\MusicXMLWriter;
  */
 class Metronome extends MusicXMLWriter
 {
+    /**
+     * Parentheses
+     *
+     * @Attribute
+     * @var string
+     */
+    public $parentheses;
+
+    /**
+     * Direction type
+     *
+     * @PropertyElement(name="direction-type")
+     * @var DirectionType
+     */
+    public $directionType;
 
     /**
      * Beat unit
@@ -20,7 +35,7 @@ class Metronome extends MusicXMLWriter
      * @PropertyElement(name="beat-unit")
      * @var string
      */
-    public $directionType;
+    public $beatUnit;
     
     /**
      * Per minute
