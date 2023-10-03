@@ -438,10 +438,10 @@ class MusicXML extends MusicXMLBase
                         if ($ch == 10 && !isset($this->channel10[$n + 1])) {
                             $this->channel10[$n + 1] = array('note' => $n + 1, 'ch' => $ch, 'n' => $n, 'v' => $v, 'message' => $msg);
                         }
-
                         // add event
                         $this->addEvent($msg[1], $msg, $timebase, $n, $ch, $v);
 
+                        print_r($msg);
 
                         $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
                         break;
@@ -689,7 +689,7 @@ class MusicXML extends MusicXMLBase
         $this->processDuration();
 
         $factor = 4;
-        $maxMeasure = floor($midi->getDurationRaw()/($factor * $timebase));
+        $maxMeasure = ceil($midi->getDurationRaw()/($factor * $timebase));
 
         // begin part
 
@@ -935,7 +935,7 @@ class MusicXML extends MusicXMLBase
                     $note = new Note();
                     $note->pitch = $pitch;
                     $note->staff = $channelId;
-                    $note->dynamics = $message['value'];
+                    $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
                     $note->duration = $duration;
                     $measure->noteList[] = $note;
                 }

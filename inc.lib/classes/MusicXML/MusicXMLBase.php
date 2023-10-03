@@ -38,6 +38,7 @@ class MusicXMLBase
 
     protected $noteList = array(
         //Do          Re           Mi    Fa           So           La           Ti
+        'C-1', 'Cs-1', 'D-1', 'Ds-1', 'E-1', 'F-1', 'Fs-1', 'G-1', 'Gs-1', 'A-1', 'As-1', 'B-1',
         'C0', 'Cs0', 'D0', 'Ds0', 'E0', 'F0', 'Fs0', 'G0', 'Gs0', 'A0', 'As0', 'B0',
         'C1', 'Cs1', 'D1', 'Ds1', 'E1', 'F1', 'Fs1', 'G1', 'Gs1', 'A1', 'As1', 'B1',
         'C2', 'Cs2', 'D2', 'Ds2', 'E2', 'F2', 'Fs2', 'G2', 'Gs2', 'A2', 'As2', 'B2',
@@ -174,10 +175,11 @@ class MusicXMLBase
         $pitchStr = $this->noteList[$note];
         $pitch = new Pitch();
         $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
-        $pitch->octave = intval(preg_replace("/^[\-\d]/", "", $pitchStr));
+        $pitch->octave = (preg_replace("/[^\-\d]/", "", $pitchStr));
         if (strpos($pitchStr, 's') !== false) {
             $pitch->alter = 1;
         }
+        echo $pitch;
         return $pitch;
     }
 
