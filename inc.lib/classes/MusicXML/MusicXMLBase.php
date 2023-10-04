@@ -208,6 +208,13 @@ class MusicXMLBase
         return $messages;
     }
     
+    /**
+     * Get minimum duration
+     *
+     * @param array $midiEventMessages
+     * @param integer $timebase
+     * @return float
+     */
     protected function getMinimumDuration($midiEventMessages, $timebase)
     {
         $min = $timebase;
