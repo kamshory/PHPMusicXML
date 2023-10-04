@@ -6,7 +6,6 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Pitch
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Pitch.kt
  * @Xml
  * @Path /path/measure/note/pitch
  * @Data

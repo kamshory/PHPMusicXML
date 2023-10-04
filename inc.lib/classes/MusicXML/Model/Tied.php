@@ -6,7 +6,6 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Tied
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Tied.kt
  * @Xml
  * @Path /path/measure/note/notation/tied
  * @Data

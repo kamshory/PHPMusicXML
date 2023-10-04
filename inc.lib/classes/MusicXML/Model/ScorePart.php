@@ -6,7 +6,6 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * ScorePart
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/ScorePart.kt
  * @Xml
  * @Path /path-list/score-part
  * @Data
