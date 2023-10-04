@@ -8,10 +8,14 @@ require_once "inc.lib/autoload.php";
 $musicXML = new MusicXML();
 try
 {
-    $midi = $musicXML->loadMidi("sherina.mid");
+    $midi = $musicXML->loadMidi("test.mid");
     $mxl = new MXL();
-    $xml = $musicXML->midiToMusicXml($midi, "Cinta Pertama dan Terakhir", "4.0", "xml");
-    //file_put_contents("convert.mxl", $mxl->createMxl("Cinta Pertama dan Terakhir", $xml));
+    $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", "xml");
+    
+    //compressed version]
+    //file_put_contents("convert.mxl", $mxl->createMxl("Test", $xml));
+    
+    //uncompressed version
     file_put_contents("test.xml", $xml);
 }
 catch(Exception $e)
