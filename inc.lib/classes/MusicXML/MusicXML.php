@@ -209,18 +209,29 @@ class MusicXML extends MusicXMLBase
                     if (isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last'])) {
 
                         $duration = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
-                        if($duration > 4/$timebase)
-                        {
-                            echo "TM INTEGER = $tmInteger; TIMEBASE = $timebase ".$this->measures[$ch][$tmInteger][$note]['event']." DURATION ".$this->measures[$ch][$tmInteger][$note]['duration']."\r\n";
-                            $duration = 4/$timebase;
-                            
-                        }
+                        $duration = $this->fixDuration($duration, $timebase);
 
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                     }
                 }
             }
         }
+    }
+    
+    /**
+     * Fix duration
+     *
+     * @param float $duration
+     * @param integer $timebase
+     * @return float
+     */
+    private function fixDuration($duration, $timebase)
+    {
+        if($duration > 4/$timebase)
+        {
+            $duration = 4/$timebase;
+        }
+        return $duration;
     }
     
     /**
@@ -932,13 +943,12 @@ class MusicXML extends MusicXMLBase
      */
     private function buildTimeDivisions($timebase)
     {
-        foreach($this->measures as $ch=>$measure)
+        foreach($this->measures as $measure)
         {
             foreach($measure as $measureIndex => $events)
             {
-                //echo "CH = $ch; INDEX = $measureIndex\r\n";
                 $minDuration = $timebase;
-                foreach($events as $index=>$event)
+                foreach($events as $event)
                 {
                     if(isset($event['duration']) && $event['duration'] > 0 && $event['duration'] < $minDuration)
                     {
@@ -950,13 +960,24 @@ class MusicXML extends MusicXMLBase
                 {
                     $divisions = 36;
                 }
-                if(!isset($this->measureDivisions[$measureIndex]) || $this->measureDivisions[$measureIndex] < $divisions)
-                {
-                    $this->measureDivisions[$measureIndex] = $divisions;
-                }
+                $this->setMeasureDivisions($measureIndex, $divisions);
             }
         }
-            
+    }
+    
+    /**
+     * Set measure divison
+     *
+     * @param integer $measureIndex
+     * @param float $divisions
+     * @return void
+     */
+    private function setMeasureDivisions($measureIndex, $divisions)
+    {
+        if(!isset($this->measureDivisions[$measureIndex]) || $this->measureDivisions[$measureIndex] < $divisions)
+        {
+            $this->measureDivisions[$measureIndex] = $divisions;
+        }
     }
     
     /**
@@ -1072,11 +1093,7 @@ class MusicXML extends MusicXMLBase
                 $measure->noteList[] = $note0;
 
                 foreach ($noteMessages as $message) {
-                    $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);
-                    
-                    echo "DIVISION = $divisions DURATION = $duration\r\n";
-
-                    
+                    $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);                    
                     $note = new Note();
                     
                     $note->voice = $channelId;
@@ -1129,7 +1146,6 @@ class MusicXML extends MusicXMLBase
         {
             $duration = $divisions * 16;
         }
-        echo "duration0 = $duration0, divisions = $divisions, timebase = $timebase; duration = $duration\r\n";
         return $duration;
     }
     
