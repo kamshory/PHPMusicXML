@@ -1065,8 +1065,7 @@ class MusicXML extends MusicXMLBase
             if(count($attributes->clef) > 1)
             {
                 $attributes->staves = count($attributes->clef);
-            }
-            
+            }     
             
             
             // end add attribute
@@ -1091,41 +1090,8 @@ class MusicXML extends MusicXMLBase
                 $note0->staff = $channelId;
                 $note0->type = $this->getNoteType($note0->duration, $divisions);
                 $measure->noteList[] = $note0;
-
-                foreach ($noteMessages as $message) {
-                    $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);                    
-                    $note = new Note();
-                    
-                    $note->voice = $channelId;
-                    $noteCode = $message['note'];
-                    if($message['value'] > 0 && $noteCode > 13)
-                    {
-                        $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
-                        $pitch = $this->getPitch($noteCode);
-                        $note->pitch = $pitch;
-                        if($pitch->alter > 0)
-                        {
-                            $note->accidental = 'sharp';
-                        }
-                        else if($pitch->alter < 0)
-                        {
-                            $note->accidental = 'flat';
-                        }
-                        $note->stem = 'up';
-                        
-                        
-                        $note->notations = $this->getNotation();
-                        
-                    }
-                    else
-                    {
-                        $rest = new Rest();
-                        $note->rest = $rest;
-                    }
-                    $note->duration = $duration;
-                    $note->type = $this->getNoteType($note->duration, $divisions);
-                    $measure->noteList[] = $note;
-                }
+                
+                $measure = $this->addMeasureElement($measure, $noteMessages, $channelId, $divisions, $timebase);
             }
             // end add note
             
@@ -1136,6 +1102,44 @@ class MusicXML extends MusicXMLBase
             $attributes->divisions = $this->getDivisions($measureIndex);
         }
         $measure->attributes = $attributes;
+        return $measure;
+    }
+    
+    private function addMeasureElement($measure, $noteMessages, $channelId, $divisions, $timebase)
+    {
+        // TODO: if there are notes overlaped, make backup
+
+        foreach ($noteMessages as $message) {
+            $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);                    
+            $note = new Note();
+            
+            $note->voice = $channelId;
+            $noteCode = $message['note'];
+            if($message['value'] > 0 && $noteCode > 13)
+            {
+                $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
+                $pitch = $this->getPitch($noteCode);
+                $note->pitch = $pitch;
+                if($pitch->alter > 0)
+                {
+                    $note->accidental = 'sharp';
+                }
+                else if($pitch->alter < 0)
+                {
+                    $note->accidental = 'flat';
+                }
+                $note->stem = 'up';
+                $note->notations = $this->getNotation();
+            }
+            else
+            {
+                $rest = new Rest();
+                $note->rest = $rest;
+            }
+            $note->duration = $duration;
+            $note->type = $this->getNoteType($note->duration, $divisions);
+            $measure->noteList[] = $note;
+        }
         return $measure;
     }
     
