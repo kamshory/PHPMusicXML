@@ -7,6 +7,7 @@ use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Map\ModelMap;
 use MusicXML\Map\NodeType;
+use MusicXML\Model\Articulations;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
@@ -15,6 +16,7 @@ use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
 use MusicXML\Model\Metronome;
 use MusicXML\Model\MidiInstrument;
+use MusicXML\Model\Notations;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
@@ -23,6 +25,7 @@ use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Sound;
+use MusicXML\Model\Staccato;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
 use MusicXML\Properties\MidiEvent;
@@ -69,6 +72,13 @@ class MusicXML extends MusicXMLBase
      * @var array
      */
     private $channel10 = array();
+    
+    /**
+     * Clef
+     *
+     * @var array
+     */
+    private $clefs = array();
 
     /**
      * Copyright
@@ -136,6 +146,7 @@ class MusicXML extends MusicXMLBase
         $this->channel10 = array();
         $this->copyright = "";
         $this->timeSignature = null;
+        $this->clefs = array();
     }
 
     /**
@@ -460,8 +471,6 @@ class MusicXML extends MusicXMLBase
                         // add event
                         $this->addEvent($msg[1], $msg, $timebase, $abstime, $n, $ch, $v);
 
-                        print_r($msg);
-
                         $xml .= "<Note{$msg[1]} Channel=\"$ch\" Note=\"$n\" Velocity=\"$v\"/>\n";
                         break;
 
@@ -698,6 +707,9 @@ class MusicXML extends MusicXMLBase
                 $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
                 $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
+            
+            $this->clefs[$channelId] = $this->getClef($channelId);
+            
             // end add score part
             $partIndex++;
         }
@@ -863,6 +875,47 @@ class MusicXML extends MusicXMLBase
     }
     
     /**
+     * Get cleft from notes
+     *
+     * @param integer $ch
+     * @return Clef[]
+     */
+    private function getClef($ch)
+    {
+        $clefs = array();
+        $min = 127;
+        $max = 0;
+        foreach($this->measures[$ch] as $measure)
+        {
+            foreach($measure as $event)
+            {
+                if($event['event'] == 'On')
+                {
+                    if($event['note'] < $min)
+                    {
+                        $min = $event['note'];
+                    }
+                    if($event['note'] > $max)
+                    {
+                        $max = $event['note'];
+                    }
+                }
+            }
+        }
+        $range = $max - $min;
+        
+        for($i = $max; $i > $min; $i-=36)
+        {
+            $clef1 = new Clef();
+            $clef1->sign = 'G';
+            $clef1->line = 2;
+            $clefs[] = $clef1;
+        }        
+        
+        return $clefs;
+    }
+    
+    /**
      * Get measure
      *
      * @param string $partId
@@ -909,6 +962,7 @@ class MusicXML extends MusicXMLBase
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $controlEvents = $this->getControlEvent($midiEventMessages);
+            $minDuration = $this->getMinimumDuration($midiEventMessages, $timebase);
             if (!empty($controlEvents)) 
             {
                 foreach ($controlEvents as $message) 
@@ -921,22 +975,20 @@ class MusicXML extends MusicXMLBase
             $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attributes = new Attributes();
             
-            $divisions = 1;
+            $divisions = ceil($timebase / (16 * $minDuration)) * 4;
             
             $attributes->divisions = $divisions;         
             $attributes->time = $this->getTime($this->timeSignature);
-            $attributes->staves = 2;
-            $attributes->clef = array();
-            $clef1 = new Clef();
-            $clef1->number = 1;
-            $clef1->sign = 'G';
-            $clef1->line = 2;
-            $attributes->clef[] = $clef1;
-            $clef2 = new Clef();
-            $clef2->number = 2;
-            $clef2->sign = 'G';
-            $clef2->line = 2;
-            $attributes->clef[] = $clef2;
+            
+            $attributes->clef = $this->clefs[$channelId];
+            
+            if(count($attributes->clef) > 1)
+            {
+                $attributes->staves = count($attributes->clef);
+            }
+            
+            
+            
             $measure->attributesList[] = $attributes ;
             // end add attribute
 
@@ -953,12 +1005,9 @@ class MusicXML extends MusicXMLBase
                 $note0 = new Note();
                 $note0->rest = new Rest();
                 $duration0 = $message0['abstime'] - ($measureIndex * 4 * $timebase);
-                echo "ABS = ".$message0['abstime']."\r\n";
-                echo "duration0 = ".$duration0."\r\n";
                 $duration0 = $duration0 * $divisions / ($timebase);
                 
                 $note0->duration = $duration0;
-                echo "DURATION0 = ".$note0->duration."\r\n";
                 $note0->voice = $channelId;
                 $note0->staff = $channelId;
                 $note0->type = $this->getNoteType($note0->duration, $divisions);
@@ -976,13 +1025,25 @@ class MusicXML extends MusicXMLBase
                     
                     $note = new Note();
                     
-                    $note->staff = $channelId;
                     $note->voice = $channelId;
                     if($message['value'] > 0)
                     {
                         $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
                         $pitch = $this->getPitch($message['note']);
                         $note->pitch = $pitch;
+                        if($pitch->alter > 0)
+                        {
+                            $note->accidental = 'sharp';
+                        }
+                        else if($pitch->alter < 0)
+                        {
+                            $note->accidental = 'flat';
+                        }
+                        $note->stem = 'up';
+                        
+                        
+                        $note->notations = $this->getNotation();
+                        
                     }
                     else
                     {
@@ -991,7 +1052,6 @@ class MusicXML extends MusicXMLBase
                     }
                     $note->duration = $duration;
                     $note->type = $this->getNoteType($note->duration, $divisions);
-                    echo "DURATION = ".$note->duration."\r\n";
                     $measure->noteList[] = $note;
                 }
             }
@@ -1006,6 +1066,18 @@ class MusicXML extends MusicXMLBase
             $measure->attributesList[] = $attributes ;
         }
         return $measure;
+    }
+    
+    private function getNotation()
+    {
+        $notation = new Notations();
+        $articulation = new Articulations();
+        $articulation->staccato = array();
+        $staccato = new Staccato();
+        $articulation->staccato[] = $staccato;
+        $notation->articulations = $articulation;
+        
+        return $notation;
     }
 
     private function getNoteType($duration, $divisions)

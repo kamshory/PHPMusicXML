@@ -198,6 +198,17 @@ class MusicXMLBase
         }
         return $messages;
     }
+    
+    protected function getMinimumDuration($midiEventMessages, $timebase)
+    {
+        $min = $timebase;
+        foreach ($midiEventMessages as $message) {
+            if (isset($message['duration']) && $message['duration'] > 0 && $message['duration'] < $min) {
+                $min = $message['duration'];
+            }
+        }
+        return $min;
+    }
 
     /**
      * Get notes

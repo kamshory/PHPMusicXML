@@ -14,8 +14,8 @@ use MusicXML\MusicXMLWriter;
 class Articulations extends MusicXMLWriter
 {
     /**
-     * @PropertyElement 
-     * @var string
+     * @Element 
+     * @var Staccato[]
      */
     public $staccato;
 }
