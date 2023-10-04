@@ -179,7 +179,6 @@ class MusicXMLBase
         if (strpos($pitchStr, 's') !== false) {
             $pitch->alter = 1;
         }
-        echo $pitch;
         return $pitch;
     }
 

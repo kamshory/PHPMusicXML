@@ -950,9 +950,11 @@ class MusicXML extends MusicXMLBase
                 $note0 = new Note();
                 $note0->rest = new Rest();
                 $duration0 = $message0['abstime'] - ($measureIndex * $timebase);
-                $note0->duration = $duration0 / 120;
+                $note0->duration = $duration0;
+                echo "DURATION0 = ".$note0->duration."\r\n";
                 $note0->voice = $channelId;
                 $note0->staff = $channelId;
+                $note0->type = $this->getNoteType($note0->duration, $timebase);
                 $measure->noteList[] = $note0;
 
                 foreach ($noteMessages as $message) {
@@ -978,7 +980,9 @@ class MusicXML extends MusicXMLBase
                         $rest = new Rest();
                         $note->rest = $rest;
                     }
-                    $note->duration = $duration / 120;
+                    $note->duration = $duration;
+                    $note->type = $this->getNoteType($note->duration, $timebase);
+                    echo "DURATION = ".$note->duration."\r\n";
                     $measure->noteList[] = $note;
                 }
             }
@@ -994,6 +998,26 @@ class MusicXML extends MusicXMLBase
         }
         return $measure;
     }
+
+    private function getNoteType($duration, $timebase)
+    {
+        $value = $duration/$timebase;
+        foreach($this->type as $type=>$valueType)
+        {
+            if($value >= $valueType)
+            {
+                return $type;
+            }
+        }
+        return 'whole';
+    }
+    private $type = array(
+        'whole'=>1,
+        'half'=>1/2,
+        'quarter'=>1/4,
+        'eighth'=>1/8,
+        '16th'=>1/16
+    );
     
     /**
      * Initialize array
