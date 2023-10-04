@@ -33,9 +33,9 @@ class Measure extends MusicXMLWriter
      * Attribute list
      *
      * @Element(name="attributes")
-     * @var Attributes[]
+     * @var Attributes
      */
-    public $attributesList;
+    public $attributes;
 
     /**
      * Direction

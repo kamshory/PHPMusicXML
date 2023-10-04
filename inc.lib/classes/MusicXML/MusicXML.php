@@ -988,6 +988,7 @@ class MusicXML extends MusicXMLBase
     private function getMeasure($partId, $channelId, $measureIndex, $timebase)
     {
         $measure = new Measure();
+        $attributes = new Attributes();
         $measure->number = $measureIndex+1;
         
         if ($this->hasMessage(0, $measureIndex))
@@ -1010,14 +1011,11 @@ class MusicXML extends MusicXMLBase
             } 
             if(!empty($keySignatureList))
             {
-                $attributes = new Attributes();
                 $attributes->key = array();
-                $measure->attributesList = $this->initializeArray($measure->attributesList);
                 foreach($keySignatureList as $keySignature)
                 {
                     $attributes->key[] = $this->getKey($keySignature['fifths'], $keySignature['mode']);
                 }
-                $measure->attributesList[] = $attributes;
             }       
         }
         if ($this->hasMessage($channelId, $measureIndex)) {
@@ -1033,8 +1031,6 @@ class MusicXML extends MusicXMLBase
             }
 
             // begin add attribute
-            $measure->attributesList = $this->initializeArray($measure->attributesList);
-            $attributes = new Attributes();
             
             $divisions = $this->getDivisions($measureIndex);
             $attributes->divisions = $divisions;       
@@ -1052,7 +1048,6 @@ class MusicXML extends MusicXMLBase
             
             
             
-            $measure->attributesList[] = $attributes ;
             // end add attribute
 
             // begin add note
@@ -1120,17 +1115,22 @@ class MusicXML extends MusicXMLBase
         } 
         else 
         {
-            $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attributes = new Attributes();
             $attributes->divisions = $this->getDivisions($measureIndex);
-            $measure->attributesList[] = $attributes ;
         }
+        $measure->attributes = $attributes;
         return $measure;
     }
     
     private function calculateDuration($duration0, $divisions, $timebase)
     {
-        return $duration0 * $divisions / ($timebase);
+        $duration = $divisions * $duration0 * $timebase / 4;
+        if($duration > $divisions * 16)
+        {
+            $duration = $divisions * 16;
+        }
+        echo "duration0 = $duration0, divisions = $divisions, timebase = $timebase; duration = $duration\r\n";
+        return $duration;
     }
     
     private function getNotation()
@@ -1256,7 +1256,6 @@ class MusicXML extends MusicXMLBase
         $measure = new Measure();
         $measure->number = 1;
 
-        $measure->attributesList = array();
 
         $key = new Key();
         $key->fifths = 1;
@@ -1282,7 +1281,7 @@ class MusicXML extends MusicXMLBase
         $attributes->clef = $clef;
         $attributes->transpose = $transpose;
 
-        $measure->attributesList[] = $attributes;
+        $measure->attributes = $attributes;
 
         $part->measureList[] = $measure;
 
