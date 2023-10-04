@@ -175,9 +175,18 @@ class MusicXMLBase
         $pitchStr = $this->noteList[$note];
         $pitch = new Pitch();
         $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
-        $pitch->octave = (preg_replace("/[^\-\d]/", "", $pitchStr));
+        $octaveStr = (preg_replace("/[^\-\d]/", "", $pitchStr));
+        if(empty($octaveStr))
+        {
+            $octaveStr = "0";
+        }
+        $pitch->octave = intval($octaveStr);
         if (strpos($pitchStr, 's') !== false) {
             $pitch->alter = 1;
+        }
+        if($pitch->step == 'B' && $pitch->octave == -1)
+        {
+            echo "NOTE = $note; PITH = ".$pitch."\r\n";
         }
         return $pitch;
     }

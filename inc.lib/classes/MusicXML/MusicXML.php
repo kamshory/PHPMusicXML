@@ -205,8 +205,16 @@ class MusicXML extends MusicXMLBase
             foreach ($chValue as $tmInteger => $tmIntegerValue) {
                 foreach ($tmIntegerValue as $note => $noteValue) {
                     if (isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last'])) {
-                        $this->measures[$ch][$tmInteger][$note]['duration'] = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
-                        //echo "TM INTEGER = $tmInteger; TIMEBASE = $timebase ".$this->measures[$ch][$tmInteger][$note]['event']." DURATION ".$this->measures[$ch][$tmInteger][$note]['duration']."\r\n";
+
+                        $duration = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
+                        if($duration > 4/$timebase)
+                        {
+                            echo "TM INTEGER = $tmInteger; TIMEBASE = $timebase ".$this->measures[$ch][$tmInteger][$note]['event']." DURATION ".$this->measures[$ch][$tmInteger][$note]['duration']."\r\n";
+                            $duration = 4/$timebase;
+                            
+                        }
+
+                        $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                     }
                 }
             }
@@ -976,6 +984,10 @@ class MusicXML extends MusicXMLBase
             $attributes = new Attributes();
             
             $divisions = ceil($timebase / (16 * $minDuration)) * 4;
+            if($divisions > 36)
+            {
+                $divisions = 36;
+            }
             
             $attributes->divisions = $divisions;         
             $attributes->time = $this->getTime($this->timeSignature);
@@ -1005,7 +1017,7 @@ class MusicXML extends MusicXMLBase
                 $note0 = new Note();
                 $note0->rest = new Rest();
                 $duration0 = $message0['abstime'] - ($measureIndex * 4 * $timebase);
-                $duration0 = $duration0 * $divisions / ($timebase);
+                $duration0 = $duration0 * $divisions / (24 * $timebase);
                 
                 $note0->duration = $duration0;
                 $note0->voice = $channelId;
@@ -1020,16 +1032,18 @@ class MusicXML extends MusicXMLBase
                         $duration = 1;
                     }
                     
-                    $duration = $duration * $divisions * 4 / ($timebase);
+                    $duration = $duration * $divisions / ($timebase * 24);
+                    echo "DIVISION = $divisions DURATION = $duration\r\n";
 
                     
                     $note = new Note();
                     
                     $note->voice = $channelId;
-                    if($message['value'] > 0)
+                    $noteCode = $message['note'];
+                    if($message['value'] > 0 && $noteCode > 13)
                     {
                         $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
-                        $pitch = $this->getPitch($message['note']);
+                        $pitch = $this->getPitch($noteCode);
                         $note->pitch = $pitch;
                         if($pitch->alter > 0)
                         {
