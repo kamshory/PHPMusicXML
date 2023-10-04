@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * MidiInstrument
  * @Xml
  * @Path /path-list/score-part/midi-instrument
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-instrument/
  * @Data
  */
 class MidiInstrument extends MusicXMLWriter

@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Supports
  * @Xml
  * @Path /identification/encoding/supports
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/supports/
  * @Data
  */
 class Supports extends MusicXMLWriter

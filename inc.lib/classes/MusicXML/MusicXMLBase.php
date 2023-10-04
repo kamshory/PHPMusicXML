@@ -38,6 +38,7 @@ class MusicXMLBase
 
     protected $noteList = array(
         //Do          Re           Mi    Fa           So           La           Ti
+        'C-1', 'Cs-1', 'D-1', 'Ds-1', 'E-1', 'F-1', 'Fs-1', 'G-1', 'Gs-1', 'A-1', 'As-1', 'B-1',
         'C0', 'Cs0', 'D0', 'Ds0', 'E0', 'F0', 'Fs0', 'G0', 'Gs0', 'A0', 'As0', 'B0',
         'C1', 'Cs1', 'D1', 'Ds1', 'E1', 'F1', 'Fs1', 'G1', 'Gs1', 'A1', 'As1', 'B1',
         'C2', 'Cs2', 'D2', 'Ds2', 'E2', 'F2', 'Fs2', 'G2', 'Gs2', 'A2', 'As2', 'B2',
@@ -174,9 +175,18 @@ class MusicXMLBase
         $pitchStr = $this->noteList[$note];
         $pitch = new Pitch();
         $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
-        $pitch->octave = intval(preg_replace("/^[\-\d]/", "", $pitchStr));
+        $octaveStr = (preg_replace("/[^\-\d]/", "", $pitchStr));
+        if(empty($octaveStr))
+        {
+            $octaveStr = "0";
+        }
+        $pitch->octave = intval($octaveStr);
         if (strpos($pitchStr, 's') !== false) {
             $pitch->alter = 1;
+        }
+        if($pitch->step == 'B' && $pitch->octave == -1)
+        {
+            echo "NOTE = $note; PITH = ".$pitch."\r\n";
         }
         return $pitch;
     }
@@ -187,15 +197,33 @@ class MusicXMLBase
      * @param array $midiEventMessages
      * @return array
      */
-    protected function getProgramChange($midiEventMessages)
+    protected function getControlEvent($midiEventMessages)
     {
         $messages = array();
         foreach ($midiEventMessages as $message) {
-            if ($message['event'] == 'PrCh') {
+            if ($message['event'] != 'On' && $message['event'] != 'Off') {
                 $messages[] = $message;
             }
         }
         return $messages;
+    }
+    
+    /**
+     * Get minimum duration
+     *
+     * @param array $midiEventMessages
+     * @param integer $timebase
+     * @return float
+     */
+    protected function getMinimumDuration($midiEventMessages, $timebase)
+    {
+        $min = $timebase;
+        foreach ($midiEventMessages as $message) {
+            if (isset($message['duration']) && $message['duration'] > 0 && $message['duration'] < $min) {
+                $min = $message['duration'];
+            }
+        }
+        return $min;
     }
 
     /**
@@ -232,7 +260,7 @@ class MusicXMLBase
         $identification->encoding->softwareList = array();
 
         $software = new Software();
-        $software->description = self::SOFTWARE_NAME;
+        $software->string = self::SOFTWARE_NAME;
 
         $identification->encoding->softwareList[] = $software;
 

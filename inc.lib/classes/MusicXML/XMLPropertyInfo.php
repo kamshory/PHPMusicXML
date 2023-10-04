@@ -277,13 +277,13 @@ class XMLPropertyInfo //NOSONAR
     /**
      * Set attribute
      *
-     * @param  boolean  $attribute  Attribute
+     * @param  boolean  $attributes  Attribute
      *
      * @return  self
      */ 
-    public function setAttribute($attribute)
+    public function setAttribute($attributes )
     {
-        $this->attribute = $attribute;
+        $this->attribute = $attributes ;
 
         return $this;
     }

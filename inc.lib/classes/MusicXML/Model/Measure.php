@@ -6,9 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Measure
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Measure.kt
  * @Xml
  * @Path /path/measure
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-partwise/
  * @Data
  */
 class Measure extends MusicXMLWriter
@@ -28,6 +28,22 @@ class Measure extends MusicXMLWriter
      * @var string
      */
     public $width;
+
+    /**
+     * Attribute list
+     *
+     * @Element(name="attributes")
+     * @var Attributes
+     */
+    public $attributes;
+
+    /**
+     * Direction
+     *
+     * @Element
+     * @var Direction[]
+     */
+    public $direction;
     
     /**
      * Note list
@@ -38,14 +54,6 @@ class Measure extends MusicXMLWriter
     public $noteList;
     
     /**
-     * Attribute list
-     *
-     * @Element(name="attributes")
-     * @var Attributes[]
-     */
-    public $attributesList;
-    
-    /**
      * Backup
      *
      * @Element
@@ -53,11 +61,5 @@ class Measure extends MusicXMLWriter
      */
     public $backup;
     
-    /**
-     * Direction
-     *
-     * @Element
-     * @var Direction[]
-     */
-    public $direction;
+    
 }

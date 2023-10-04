@@ -9,6 +9,7 @@ use MusicXML\MusicXMLWriter;
  * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Identification.kt
  * @Xml
  * @Path /identification
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/identification/
  * @Data
  */
 class Identification extends MusicXMLWriter

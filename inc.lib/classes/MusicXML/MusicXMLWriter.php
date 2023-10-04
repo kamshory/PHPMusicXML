@@ -3,9 +3,10 @@
 namespace MusicXML;
 
 use DOMNode;
+use MusicXML\Map\ModelParser;
+use MusicXML\Map\NodeType;
 use MusicXML\Util\PicoAnnotationParser;
 use ReflectionClass;
-use SimpleXMLElement;
 use stdClass;
 
 class MusicXMLWriter // NOSONAR
@@ -65,7 +66,43 @@ class MusicXMLWriter // NOSONAR
         }
         if($data != null)
         {
-            $this->loadData($data);
+            if($data instanceof DOMNode)
+            {
+                $this->loadXml($data);
+            }
+            else
+            {
+                $this->loadData($data);
+            }
+        }
+    }
+    
+    private function mapAttribute()
+    {
+        echo "PARSE PROP\r\n";
+        return ModelParser::parseModel($this->className, $this);
+    }
+    
+    private function loadXml($data)
+    {
+        $maps = $this->mapAttribute();
+        foreach($data->attributes as $attributes )
+        {
+            echo "".$attributes ->nodeName." = ".$attributes ->nodeValue."\r\n";
+        }
+        foreach($data->childNodes as $child)
+        {
+            if($child->nodeType == NodeType::ELEMENT)
+            {
+                // process element
+            }
+            else if($child->nodeType == NodeType::ATTRIBUTE)
+            {
+                // process element
+                echo "ATTRIBUTE\r\n";
+            }
+            
+            
         }
     }
     

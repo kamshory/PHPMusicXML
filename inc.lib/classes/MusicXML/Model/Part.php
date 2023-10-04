@@ -6,9 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Part
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Part.kt
  * @Xml
- * @Path /path
+ * @Path /part
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-partwise/
  * @Data
  */
 class Part extends MusicXMLWriter

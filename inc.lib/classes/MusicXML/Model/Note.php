@@ -6,7 +6,6 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Note
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Note.kt
  * @Xml
  * @Path /path/measure/note
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
@@ -17,16 +16,16 @@ class Note extends MusicXMLWriter
     /**
      * Dynamics
      *
+     * @Attribute
      * @var float
      */
     public $dynamics;
-    
+
     /**
-     * Direction
-     *
-     * @var [type]
+     * @Element
+     * @var Rest
      */
-    public $direction;
+    public $rest;
     
     /**
      * Pitch
@@ -53,18 +52,24 @@ class Note extends MusicXMLWriter
      * @var string
      */
     public $type;
-    
-    /**
-     * @PropertyElement
-     * @var string
-     */
-    public $stem;
 
     /**
      * @PropertyElement
      * @var string
      */
     public $accidental;
+    
+    /**
+     * @PropertyElement
+     * @var string
+     */
+    public $stem;
+    
+    /**
+     * @Element
+     * @var Notations
+     */
+    public $notations;
 
     /**
      * @PropertyElement
@@ -74,7 +79,7 @@ class Note extends MusicXMLWriter
 
     /**
      * @PropertyElement
-     * @var string
+     * @var integer
      */
     public $staff;
 
@@ -83,18 +88,6 @@ class Note extends MusicXMLWriter
      * @var string
      */
     public $chord;
-
-    /**
-     * @PropertyElement
-     * @var string
-     */
-    public $rest;
-
-    /**
-     * @Element
-     * @var Notation
-     */
-    public $notation;
 
     /**
      * @Element

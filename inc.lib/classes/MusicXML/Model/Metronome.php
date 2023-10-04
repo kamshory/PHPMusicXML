@@ -8,10 +8,26 @@ use MusicXML\MusicXMLWriter;
  * Metronome
  * @Xml
  * @Path /path/measure/direction/direction-type/metronome
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome/
  * @Data
  */
 class Metronome extends MusicXMLWriter
 {
+    /**
+     * Parentheses
+     *
+     * @Attribute
+     * @var string
+     */
+    public $parentheses;
+
+    /**
+     * Direction type
+     *
+     * @PropertyElement(name="direction-type")
+     * @var DirectionType
+     */
+    public $directionType;
 
     /**
      * Beat unit
@@ -19,7 +35,7 @@ class Metronome extends MusicXMLWriter
      * @PropertyElement(name="beat-unit")
      * @var string
      */
-    public $directionType;
+    public $beatUnit;
     
     /**
      * Per minute

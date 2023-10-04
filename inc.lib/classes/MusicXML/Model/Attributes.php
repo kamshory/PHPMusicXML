@@ -6,9 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Attributes
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Attributes.kt
  * @Xml
- * @Path /path/measure/attribute
+ * @Path /path/measure/attributes
+ * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/attributes/
  * @Data
  */
 class Attributes extends MusicXMLWriter
@@ -24,7 +24,7 @@ class Attributes extends MusicXMLWriter
     /**
      * Key
      * @Element
-     * @var Key
+     * @var Key[]
      */
     public $key;
 

@@ -6,9 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Beam
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Beam.kt
  * @Xml
  * @Path /path/measure/note/beam
+ * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/beam/
  * @Data
  */
 class Beam extends MusicXMLWriter

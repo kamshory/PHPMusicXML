@@ -6,9 +6,8 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Software
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Software.kt
  * @Xml
- * @Path /identification/encoding/softeare
+ * @Path /identification/encoding/software
  * @Data
  */
 class Software extends MusicXMLWriter
@@ -19,5 +18,5 @@ class Software extends MusicXMLWriter
      * @TextContent
      * @var string
      */
-    public $description;
+    public $string;
 }

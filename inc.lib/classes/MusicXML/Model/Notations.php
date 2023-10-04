@@ -6,12 +6,12 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Notation
- * Source https://github.com/talobin/MusicXML-Android/blob/master/parser/src/main/java/com/talobin/music/model/Notation.kt
  * @Xml
- * @Path /path/measure/note/notation
+ * @Path /path/measure/note/notations
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/notations/
  * @Data
  */
-class Notation extends MusicXMLWriter
+class Notations extends MusicXMLWriter
 {
     /**
      * Tied list
