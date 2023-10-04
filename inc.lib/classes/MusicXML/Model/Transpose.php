@@ -8,6 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Transpose
  * @Xml
  * @Path /path/measure/attribute/transpose
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/transpose/
  * @Data
  */
 class Transpose extends MusicXMLWriter
