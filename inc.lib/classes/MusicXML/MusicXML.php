@@ -18,6 +18,7 @@ use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
+use MusicXML\Model\Rest;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
@@ -140,20 +141,22 @@ class MusicXML extends MusicXMLBase
     /**
      * Process note duration
      *
+     * @param integer $timebase
      * @return void
      */
-    private function processDuration()
+    private function processDuration($timebase)
     {
-        $this->processDuration1();
-        $this->processDuration2();
+        $this->processDuration1($timebase);
+        $this->processDuration2($timebase);
     }
 
     /**
      * Prepare note information to calculate note duration
      *
+     * @param integer $timebase
      * @return void
      */
-    private function processDuration1()
+    private function processDuration1($timebase)
     {
         $lastTime = array();
         foreach ($this->measures as $ch => $chValue) {
@@ -169,8 +172,13 @@ class MusicXML extends MusicXMLBase
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                         $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
                         $lastTime[$index] = $noteValue['time'];
+                        echo "TM INTEGER = $tmInteger; TIMEBASE = $timebase ".$this->measures[$ch][$tmInteger][$note]['event']."\r\n";
                     }
                 }
+
+                // add rest before note here
+                
+
             }
         }
     }
@@ -178,9 +186,10 @@ class MusicXML extends MusicXMLBase
     /**
      * Calculate note duration by information provided before
      *
+     * @param integer $timebase
      * @return void
      */
-    private function processDuration2()
+    private function processDuration2($timebase)
     {
         foreach ($this->measures as $ch => $chValue) {
             foreach ($chValue as $tmInteger => $tmIntegerValue) {
@@ -266,7 +275,7 @@ class MusicXML extends MusicXMLBase
      * @param mixed $v
      * @return void
      */
-    private function addEvent($eventName, $message, $timebase, $n = 0, $ch = 0, $v = 0)
+    private function addEvent($eventName, $message, $timebase, $abstime, $n = 0, $ch = 0, $v = 0)
     {
         $rawtime = $message[0];
         $tm = $message[0] / (4 * $timebase);
@@ -283,6 +292,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'control' => $n, 
@@ -295,6 +305,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'number' => $n
@@ -306,6 +317,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'note' => $n, 
@@ -318,6 +330,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'rawtime' => $rawtime, 
                 'value' => $n
             );
@@ -328,6 +341,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'fifths' => $n, 
                 'mode' => $v
             );
@@ -338,6 +352,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'pressure' => $v
@@ -349,6 +364,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'rawtime' => $rawtime, 
                 'channel' => $ch, 
                 'value' => $v
@@ -360,6 +376,7 @@ class MusicXML extends MusicXMLBase
                 'event' => $eventName, 
                 'message' => $message, 
                 'time' => $tm, 
+                'abstime' => $abstime, 
                 'channel' => $ch, 
                 'note' => $n, 
                 'value' => $v
@@ -382,6 +399,7 @@ class MusicXML extends MusicXMLBase
         $tc = count($tracks);
         $xml = ""; // NOSONAR
         $ttype = 0;
+        $abstime = 0;
         for ($i = 0; $i < $tc; $i++) {
             $xml .= "<Track Number=\"$i\">\n";
             $track = $tracks[$i];
@@ -394,6 +412,7 @@ class MusicXML extends MusicXMLBase
                     $dt = $t - $last;
                     $last = $t;
                 }
+                $abstime += $t;
                 $xml .= "  <Event>\n";
                 $xml .= ($ttype == 1) ? "    <Delta>$dt</Delta>\n" : "    <Absolute>$t</Absolute>\n";
                 $xml .= '    ';
@@ -422,7 +441,7 @@ class MusicXML extends MusicXMLBase
                             $port
                         );
                         // add event
-                        $this->addEvent($msg[1], $msg, $timebase, $p, $ch);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, $p, $ch);
                         $xml .= "<controlEvents Channel=\"$ch\" Number=\"$p\"/>\n";
                         break;
 
@@ -439,7 +458,7 @@ class MusicXML extends MusicXMLBase
                             $this->channel10[$n + 1] = array('note' => $n + 1, 'ch' => $ch, 'n' => $n, 'v' => $v, 'message' => $msg);
                         }
                         // add event
-                        $this->addEvent($msg[1], $msg, $timebase, $n, $ch, $v);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, $n, $ch, $v);
 
                         print_r($msg);
 
@@ -456,7 +475,7 @@ class MusicXML extends MusicXMLBase
                         $v = isset($v) ? $v : 0;
 
                         // add event
-                        $this->addEvent($msg[1], $msg, $timebase, $n, $ch, $v);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, $n, $ch, $v);
 
                         $xml .= "<PolyKeyPressure Channel=\"$ch\" Note=\"$n\" Pressure=\"$v\"/>\n";
                         break;
@@ -479,7 +498,7 @@ class MusicXML extends MusicXMLBase
                         }
 
                         // add event
-                        $this->addEvent($msg[1], $msg, $timebase, $c, $ch, $v);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, $c, $ch, $v);
 
                         $xml .= "<ControlChange Channel=\"$ch\" Control=\"$c\" Value=\"$v\"/>\n";
                         break;
@@ -491,7 +510,7 @@ class MusicXML extends MusicXMLBase
                         $ch = isset($ch) ? $ch : 0;
                         $v = isset($v) ? $v : 0;
                         // add event
-                        $this->addEvent($msg[1], $msg, $timebase, 0, $ch, $v);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, 0, $ch, $v);
                         $xml .= "<ChannelKeyPressure Channel=\"$ch\" Pressure=\"$v\"/>\n";
                         break;
 
@@ -501,13 +520,13 @@ class MusicXML extends MusicXMLBase
 
                         $ch = isset($ch) ? $ch : 0;
                         $v = isset($v) ? $v : 0;
-                        $this->addEvent($msg[1], $msg, $timebase, 0, $ch, $v);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, 0, $ch, $v);
                         $xml .= "<PitchBendChange Channel=\"$ch\" Value=\"$v\"/>\n";
                         break;
 
                     case 'Seqnr':
                         $xml .= "<SequenceNumber Value=\"{$msg[2]}\"/>\n";
-                        $this->addEvent($msg[1], $msg, $timebase, $msg[2], 0);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, $msg[2], 0);
                         break;
 
                     case 'Meta':
@@ -538,7 +557,7 @@ class MusicXML extends MusicXMLBase
 
                     case 'Tempo':
                         $xml .= "<SetTempo Value=\"{$msg[2]}\"/>\n";
-                        $this->addEvent($msg[1], $msg, $timebase, $msg[2], 0);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, $msg[2], 0);
                         break;
 
                     case 'SMPTE':
@@ -554,7 +573,7 @@ class MusicXML extends MusicXMLBase
                     case 'KeySig':
                         $mode = ($msg[3] == 'major') ? 0 : 1;
                         $xml .= "<KeySignature Fifths=\"{$msg[2]}\" Mode=\"$mode\"/>\n"; // ???
-                        $this->addEvent($msg[1], $msg, $timebase, intval($msg[2]), 0, $msg[3]);
+                        $this->addEvent($msg[1], $msg, $timebase, $abstime, intval($msg[2]), 0, $msg[3]);
                         break;
 
                     case 'SeqSpec':
@@ -686,7 +705,7 @@ class MusicXML extends MusicXMLBase
 
         $scorePartWise->part = array();
 
-        $this->processDuration();
+        $this->processDuration($timebase);
 
         $factor = 4;
         $maxMeasure = ceil($midi->getDurationRaw()/($factor * $timebase));
@@ -874,7 +893,6 @@ class MusicXML extends MusicXMLBase
                 {
                     $measure->direction = $directions;
                 }
-                echo "TEMPO\r\n";
             } 
             if(!empty($keySignatureList))
             {
@@ -923,22 +941,44 @@ class MusicXML extends MusicXMLBase
             $noteMessages = $this->getNotes($midiEventMessages);
             if(!empty($noteMessages))
             {
-                echo "NOTE\r\n";
                 $measure->noteList = $this->initializeArray($measure->noteList);
-                foreach ($noteMessages as $message) {
+                // get first note
+                $message0x = array_values($noteMessages);
+                $message0 = $message0x[0];
+                
 
+                $note0 = new Note();
+                $note0->rest = new Rest();
+                $duration0 = $message0['abstime'] - ($measureIndex * $timebase);
+                $note0->duration = $duration0 / 120;
+                $note0->voice = $channelId;
+                $note0->staff = $channelId;
+                $measure->noteList[] = $note0;
+
+                foreach ($noteMessages as $message) {
                     $duration = $message['duration'] * $timebase;
                     if($duration == 0)
                     {
                         $duration = 1;
                     }
 
-                    $pitch = $this->getPitch($message['note']);
+                    
                     $note = new Note();
-                    $note->pitch = $pitch;
+                    
                     $note->staff = $channelId;
-                    $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
-                    $note->duration = $duration;
+                    $note->voice = $channelId;
+                    if($message['value'] > 0)
+                    {
+                        $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
+                        $pitch = $this->getPitch($message['note']);
+                        $note->pitch = $pitch;
+                    }
+                    else
+                    {
+                        $rest = new Rest();
+                        $note->rest = $rest;
+                    }
+                    $note->duration = $duration / 120;
                     $measure->noteList[] = $note;
                 }
             }

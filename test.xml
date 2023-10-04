@@ -3,89 +3,81 @@
 <score-partwise version="4.0">
   <identification>
     <encoding>
-      <software>MuseScore 4.1.1</software>
+      <software>Planetbiru</software>
       <encoding-date>2023-10-04</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="no"/>
       <supports element="print" attribute="new-system" type="no"/>
       <supports element="stem" type="yes"/>
-      </encoding>
-    </identification>
+    </encoding>
+  </identification>
   <part-list>
     <score-part id="P1">
-      <part-name>Piano</part-name>
+      <part-name>Cinta Pertama dan Terakhir</part-name>
       <part-abbreviation>Pno.</part-abbreviation>
       <score-instrument id="P1-I1">
         <instrument-name>Piano</instrument-name>
         <instrument-sound>keyboard.piano</instrument-sound>
-        </score-instrument>
+      </score-instrument>
       <midi-device id="P1-I1" port="1"></midi-device>
       <midi-instrument id="P1-I1">
         <midi-channel>1</midi-channel>
         <midi-program>1</midi-program>
         <volume>78.7402</volume>
         <pan>0</pan>
-        </midi-instrument>
-      </score-part>
-    </part-list>
+      </midi-instrument>
+    </score-part>
+  </part-list>
   <part id="P1">
     <measure number="1">
       <attributes>
         <divisions>1</divisions>
-        <key>
-          <fifths>0</fifths>
-          </key>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
-          </time>
-        <clef>
-          <sign>F</sign>
-          <line>4</line>
-          </clef>
-        </attributes>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
             <beat-unit>quarter</beat-unit>
             <per-minute>120</per-minute>
-            </metronome>
-          </direction-type>
+          </metronome>
+        </direction-type>
         <sound tempo="120"/>
-        </direction>
+      </direction>
       <note>
         <rest/>
-        <duration>1</duration>
+        <duration>4</duration>
         <voice>1</voice>
-        <type>quarter</type>
-        </note>
+        <staff>1</staff>
+      </note>
       <note dynamics="141.11">
         <pitch>
           <step>C</step>
           <alter>1</alter>
           <octave>3</octave>
-          </pitch>
+        </pitch>
         <duration>1</duration>
         <voice>1</voice>
-        <type>quarter</type>
-        <accidental>sharp</accidental>
-        <stem>up</stem>
-        <notations>
-          <articulations>
-            <staccato/>
-            </articulations>
-          </notations>
-        </note>
+        <staff>1</staff>
+      </note>
       <note>
         <rest/>
-        <duration>2</duration>
+        <duration>0.5</duration>
         <voice>1</voice>
-        <type>half</type>
-        </note>
-      <barline location="right">
-        <bar-style>light-heavy</bar-style>
-        </barline>
-      </measure>
-    </part>
-  </score-partwise>
+        <staff>1</staff>
+      </note>
+    </measure>
+  </part>
+</score-partwise>

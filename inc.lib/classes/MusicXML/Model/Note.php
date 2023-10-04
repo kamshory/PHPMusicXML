@@ -20,6 +20,12 @@ class Note extends MusicXMLWriter
      * @var float
      */
     public $dynamics;
+
+    /**
+     * @Element
+     * @var Rest
+     */
+    public $rest;
     
     /**
      * Pitch
@@ -76,12 +82,6 @@ class Note extends MusicXMLWriter
      * @var string
      */
     public $chord;
-
-    /**
-     * @PropertyElement
-     * @var string
-     */
-    public $rest;
 
     /**
      * @Element
