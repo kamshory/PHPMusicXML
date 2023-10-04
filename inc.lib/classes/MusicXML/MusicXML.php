@@ -172,7 +172,6 @@ class MusicXML extends MusicXMLBase
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                         $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
                         $lastTime[$index] = $noteValue['time'];
-                        echo "TM INTEGER = $tmInteger; TIMEBASE = $timebase ".$this->measures[$ch][$tmInteger][$note]['event']."\r\n";
                     }
                 }
 
@@ -196,6 +195,7 @@ class MusicXML extends MusicXMLBase
                 foreach ($tmIntegerValue as $note => $noteValue) {
                     if (isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last'])) {
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
+                        //echo "TM INTEGER = $tmInteger; TIMEBASE = $timebase ".$this->measures[$ch][$tmInteger][$note]['event']." DURATION ".$this->measures[$ch][$tmInteger][$note]['duration']."\r\n";
                     }
                 }
             }
@@ -920,7 +920,10 @@ class MusicXML extends MusicXMLBase
             // begin add attribute
             $measure->attributesList = $this->initializeArray($measure->attributesList);
             $attributes = new Attributes();
-            $attributes->divisions = 1;         
+            
+            $divisions = 1;
+            
+            $attributes->divisions = $divisions;         
             $attributes->time = $this->getTime($this->timeSignature);
             $attributes->staves = 2;
             $attributes->clef = array();
@@ -936,7 +939,7 @@ class MusicXML extends MusicXMLBase
             $attributes->clef[] = $clef2;
             $measure->attributesList[] = $attributes ;
             // end add attribute
-                     
+
             // begin add note
             $noteMessages = $this->getNotes($midiEventMessages);
             if(!empty($noteMessages))
@@ -949,12 +952,16 @@ class MusicXML extends MusicXMLBase
 
                 $note0 = new Note();
                 $note0->rest = new Rest();
-                $duration0 = $message0['abstime'] - ($measureIndex * $timebase);
+                $duration0 = $message0['abstime'] - ($measureIndex * 4 * $timebase);
+                echo "ABS = ".$message0['abstime']."\r\n";
+                echo "duration0 = ".$duration0."\r\n";
+                $duration0 = $duration0 * $divisions / ($timebase);
+                
                 $note0->duration = $duration0;
                 echo "DURATION0 = ".$note0->duration."\r\n";
                 $note0->voice = $channelId;
                 $note0->staff = $channelId;
-                $note0->type = $this->getNoteType($note0->duration, $timebase);
+                $note0->type = $this->getNoteType($note0->duration, $divisions);
                 $measure->noteList[] = $note0;
 
                 foreach ($noteMessages as $message) {
@@ -963,6 +970,8 @@ class MusicXML extends MusicXMLBase
                     {
                         $duration = 1;
                     }
+                    
+                    $duration = $duration * $divisions * 4 / ($timebase);
 
                     
                     $note = new Note();
@@ -981,7 +990,7 @@ class MusicXML extends MusicXMLBase
                         $note->rest = $rest;
                     }
                     $note->duration = $duration;
-                    $note->type = $this->getNoteType($note->duration, $timebase);
+                    $note->type = $this->getNoteType($note->duration, $divisions);
                     echo "DURATION = ".$note->duration."\r\n";
                     $measure->noteList[] = $note;
                 }
@@ -999,9 +1008,9 @@ class MusicXML extends MusicXMLBase
         return $measure;
     }
 
-    private function getNoteType($duration, $timebase)
+    private function getNoteType($duration, $divisions)
     {
-        $value = $duration/$timebase;
+        $value = $duration/(4*$divisions);
         foreach($this->type as $type=>$valueType)
         {
             if($value >= $valueType)

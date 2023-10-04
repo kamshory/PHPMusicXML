@@ -58,9 +58,9 @@
       </direction>
       <note>
         <rest/>
-        <duration>480</duration>
+        <duration>1</duration>
         <voice>1</voice>
-        <type>whole</type>
+        <type>quarter</type>
         <staff>1</staff>
       </note>
       <note dynamics="141.11">
@@ -69,14 +69,14 @@
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>120</duration>
+        <duration>1</duration>
         <voice>1</voice>
         <type>quarter</type>
         <staff>1</staff>
       </note>
       <note>
         <rest/>
-        <duration>60</duration>
+        <duration>0.5</duration>
         <voice>1</voice>
         <type>eighth</type>
         <staff>1</staff>
