@@ -5,7 +5,7 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * Sound
+ * Staccato
  * @Xml
  * @Path /path/measure/note/notation/articulations/staccato
  * @Data
