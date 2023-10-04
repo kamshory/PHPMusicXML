@@ -6,15 +6,21 @@ use DateTime;
 use DOMDocument;
 use DOMImplementation;
 use Midi\MidiMeasure;
+use MusicXML\Model\Articulations;
 use MusicXML\Model\Encoding;
 use MusicXML\Model\Identification;
+use MusicXML\Model\Key;
 use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
+use MusicXML\Model\Notations;
 use MusicXML\Model\Pitch;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\Software;
+use MusicXML\Model\Staccato;
 use MusicXML\Model\Supports;
+use MusicXML\Model\Time;
+use MusicXML\Properties\TimeSignature;
 
 class MusicXMLBase
 {
@@ -34,6 +40,100 @@ class MusicXMLBase
         return $midi;
     }
 
+    public function calculateDuration($duration0, $divisions, $timebase)
+    {
+        $duration = $divisions * $duration0 * $timebase / 4;
+        if($duration > $divisions * 16)
+        {
+            $duration = $divisions * 16;
+        }
+        return $duration;
+    }
+    
+    public function getNotation()
+    {
+        $notation = new Notations();
+        $articulation = new Articulations();
+        $articulation->staccato = array();
+        $staccato = new Staccato();
+        $articulation->staccato[] = $staccato;
+        $notation->articulations = $articulation;
+        
+        return $notation;
+    }
+
+    public function getNoteType($duration, $divisions)
+    {
+        $value = $duration/(4*$divisions);
+        foreach($this->type as $type=>$valueType)
+        {
+            if($value >= $valueType)
+            {
+                return $type;
+            }
+        }
+        return 'whole';
+    }
+    protected $type = array(
+        'maxima'=>5,
+        'long'=>4,
+        'breve'=>2,
+        'whole'=>1,
+        'half'=>1/2,
+        'quarter'=>1/4,
+        'eighth'=>1/8,
+        '16th'=>1/16,
+        '32nd'=>1/32,
+        '64th'=>1/64,
+        '128th'=>1/128,
+        '256th'=>1/256,
+        '512th'=>1/512,
+        '1024th'=>1/1024
+    );
+    
+    /**
+     * Initialize array
+     *
+     * @param array|null
+     * @return array
+     */
+    public function initializeArray($initialValue)
+    {
+        if(!isset($initialValue))
+        {
+            return array();
+        }
+        return $initialValue;
+    }
+    
+    /**
+     * Get time
+     *
+     * @param TimeSignature $timeSignature
+     * @return Time
+     */
+    public function getTime($timeSignature)
+    {
+        $time = new Time();
+        $time->beats = $timeSignature->beats;
+        $time->beatType = $timeSignature->beatType;
+        return $time;
+    }
+    
+    /**
+     * Get key
+     *
+     * @param integer $fifths
+     * @param integer $mode
+     * @return Key
+     */
+    public function getKey($fifths, $mode)
+    {
+        $key = new Key();
+        $key->fifths = $fifths;
+        $key->mode = $mode;
+        return $key;
+    }
 
 
     protected $noteList = array(
