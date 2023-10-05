@@ -1,6 +1,7 @@
 <?php
 namespace MusicXML;
 
+use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
 use MusicXML\Model\Metronome;
@@ -96,5 +97,24 @@ class MusicXMLUtil{
         return $directions;
     }
     
-    
+    /**
+     * Get clef from notes
+     *
+     * @param integer $min
+     * @param integer $max
+     * @return Clef[]
+     */
+    public static function getClef($min, $max)
+    {
+        $clefs = array();
+        for($i = $max; $i > $min; $i-=36)
+        {
+            $clef1 = new Clef();
+            $clef1->sign = 'G';
+            $clef1->line = 2;
+            $clefs[] = $clef1;
+        }        
+        
+        return $clefs;
+    }
 }

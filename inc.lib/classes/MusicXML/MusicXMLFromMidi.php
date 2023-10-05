@@ -6,7 +6,6 @@ use DOMDocument;
 use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Model\Attributes;
-use MusicXML\Model\Clef;
 use MusicXML\Model\Measure;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
@@ -76,6 +75,9 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var integer[]
      */
     private $measureDivisions = array();
+    
+    private $noteMin = 127;
+    private $noteMax = 0;
 
     /**
      * Reset properties
@@ -93,6 +95,8 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->timeSignature = null;
         $this->clefs = array();
         $this->measureDivisions = array();
+        $this->noteMin = 127;
+        $this->noteMax = 0;
     }
 
     /**
@@ -306,6 +310,15 @@ class MusicXMLFromMidi extends MusicXMLBase
                 'note' => $n, 
                 'value' => $v
             );
+            
+            if($n < $this->noteMin)
+            {
+                $this->noteMin = $n;
+            }
+            if($n > $this->noteMax)
+            {
+                $this->noteMax = $n;
+            }
         }
     }
 
@@ -623,7 +636,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
             
-            $this->clefs[$channelId] = $this->getClef($channelId);
+            $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
             
             // end add score part
             $partIndex++;
@@ -747,48 +760,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         $midiEvent->tempoList = $tempoList;
         $midiEvent->keySignatureList = $keySignatureList;
         return $midiEvent;
-    }
-    
-    
-    
-    /**
-     * Get clef from notes
-     *
-     * @param integer $ch
-     * @return Clef[]
-     */
-    private function getClef($ch)
-    {
-        $clefs = array();
-        $min = 127;
-        $max = 0;
-        foreach($this->measures[$ch] as $measure)
-        {
-            foreach($measure as $event)
-            {
-                if($event['event'] == 'On')
-                {
-                    if($event['note'] < $min)
-                    {
-                        $min = $event['note'];
-                    }
-                    if($event['note'] > $max)
-                    {
-                        $max = $event['note'];
-                    }
-                }
-            }
-        }
-        
-        for($i = $max; $i > $min; $i-=36)
-        {
-            $clef1 = new Clef();
-            $clef1->sign = 'G';
-            $clef1->line = 2;
-            $clefs[] = $clef1;
-        }        
-        
-        return $clefs;
     }
     
     /**
