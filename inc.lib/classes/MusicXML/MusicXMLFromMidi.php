@@ -997,7 +997,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     }
                     $note->duration = $duration;
                     $note->type = $this->getNoteType($note->duration, $divisions);
-                    $measure->noteList[] = $note;
+                    $measure->note[] = $note;
                 }
                 else
                 {

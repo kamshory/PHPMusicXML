@@ -357,12 +357,12 @@ class MusicXMLBase
 
         $identification->encoding = new Encoding();
         $identification->encoding->encodingDate = new DateTime();
-        $identification->encoding->softwareList = array();
+        $identification->encoding->software = array();
 
         $software = new Software();
         $software->textContent = self::SOFTWARE_NAME;
 
-        $identification->encoding->softwareList[] = $software;
+        $identification->encoding->software[] = $software;
 
         $identification->encoding->supports[] = array();
         $identification->encoding->supports[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));

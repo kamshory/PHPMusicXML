@@ -19,7 +19,7 @@ class Notations extends MusicXMLWriter
      * @Element(name="tied")
      * @var Tied[]
      */
-    public $tiedList;
+    public $tied;
     
     /**
      * Slur list
@@ -27,7 +27,7 @@ class Notations extends MusicXMLWriter
      * @Element(name="slur")
      * @var Slur[]
      */
-    public $slurList;
+    public $slur;
     
     /**
      * Articulations

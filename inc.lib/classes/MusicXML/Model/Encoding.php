@@ -18,7 +18,7 @@ class Encoding extends MusicXMLWriter
      * @Element(name="software")
      * @var Software[]
      */
-    public $softwareList;
+    public $software;
     
     /**
      * Encoding date
