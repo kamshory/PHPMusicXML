@@ -80,7 +80,7 @@ class MusicXML extends MusicXMLBase
         $scorePartWise->version = $version;
         $scorePartWise->setIdentification($this->getIdentification());
         $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroupList = array();
+        $scorePartWise->partList->partGroup = array();
 
         // start add score part
         // this block will be iterated each channel
@@ -102,14 +102,14 @@ class MusicXML extends MusicXMLBase
         $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
         $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
 
-        $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
+        $scorePartWise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
         // end add score part
 
         $scorePartWise->part = array();
 
         $part = new Part();
         $part->id = "P1";
-        $part->measureList = array();
+        $part->measure = array();
 
         $measure = new Measure();
         $measure->number = 1;
@@ -141,7 +141,7 @@ class MusicXML extends MusicXMLBase
 
         $measure->attributes = $attributes;
 
-        $part->measureList[] = $measure;
+        $part->measure[] = $measure;
 
         $scorePartWise->part[] = $part;
 

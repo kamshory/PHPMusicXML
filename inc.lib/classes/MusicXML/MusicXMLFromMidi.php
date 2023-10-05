@@ -591,7 +591,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePartWise->version = $version;
         $scorePartWise->identification = $this->getIdentification();
         $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroupList = array();
+        $scorePartWise->partList->partGroup = array();
 
         $this->buildPartList($midi);
         if (isset($this->copyright)) {
@@ -620,7 +620,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
             if ($channelId == 10) {
                 $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
-                $scorePartWise->partList->scorePartList[] = $scorePart;
+                $scorePartWise->partList->scorePart[] = $scorePart;
             } else {
                 if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
                     $instrumentSound = $this->instrumentList[$programId - 1][2];
@@ -639,7 +639,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
                 $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
                 $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
-                $scorePartWise->partList->scorePartList[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
+                $scorePartWise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
             
             $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
@@ -663,10 +663,10 @@ class MusicXMLFromMidi extends MusicXMLBase
             $channelId = $part['channelId'];
             $parts = new Part();
             $parts->id = $partId;
-            $parts->measureList = array();
+            $parts->measure = array();
             for ($measureIndex = 0; $measureIndex < $maxMeasure; $measureIndex++) {
                 $measure = $this->getMeasure($partId, $channelId, $measureIndex, $timebase);
-                $parts->measureList[] = $measure;
+                $parts->measure[] = $measure;
             }
             $scorePartWise->part[] = $parts;
         }
@@ -880,12 +880,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             // begin add attribute
             
             $divisions = $this->getDivisions($measureIndex);
-            $attributes->divisions = $divisions;       
-            
-            
-            
-            $attributes->time = $this->getTime($this->timeSignature);
-            
+            $attributes->divisions = $divisions;                   
+            $attributes->time = $this->getTime($this->timeSignature);           
             $attributes->clef = $this->clefs[$channelId];
             
             if(count($attributes->clef) > 1)
@@ -900,7 +896,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $noteMessages = $this->getNotes($midiEventMessages);
             if(!empty($noteMessages))
             {
-                $measure->noteList = $this->initializeArray($measure->noteList);
+                $measure->note = $this->initializeArray($measure->note);
                 // get first note
                 $message0x = array_values($noteMessages);
                 $message0 = $message0x[0];
@@ -915,7 +911,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note0->voice = $channelId;
                 $note0->staff = $channelId;
                 $note0->type = $this->getNoteType($note0->duration, $divisions);
-                $measure->noteList[] = $note0;
+                $measure->note[] = $note0;
                 
                 $measure = $this->addMeasureElement($measure, $noteMessages, $channelId, $divisions, $timebase);
             }
@@ -931,6 +927,16 @@ class MusicXMLFromMidi extends MusicXMLBase
         return $measure;
     }
     
+    /**
+     * Add element to measure
+     *
+     * @param Measure $measure
+     * @param array $noteMessages
+     * @param integer $channelId
+     * @param integer $divisions
+     * @param integer $timebase
+     * @return Measure
+     */
     private function addMeasureElement($measure, $noteMessages, $channelId, $divisions, $timebase)
     {
         // TODO: if there are notes overlaped, make backup
@@ -964,7 +970,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
             $note->duration = $duration;
             $note->type = $this->getNoteType($note->duration, $divisions);
-            $measure->noteList[] = $note;
+            $measure->note[] = $note;
         }
         return $measure;
     }

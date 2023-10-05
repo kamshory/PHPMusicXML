@@ -48,10 +48,10 @@ class Measure extends MusicXMLWriter
     /**
      * Note list
      *
-     * @Element(name="note")
+     * @Element
      * @var Note[]
      */
-    public $noteList;
+    public $note;
     
     /**
      * Backup
