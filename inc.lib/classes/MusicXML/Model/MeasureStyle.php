@@ -83,6 +83,31 @@ class MeasureStyle extends MusicXMLWriter
      * @var string
      */
     public $number;
+    
+    /**
+     * Multiple rest
+     *
+     * @PropertyElement(name="multiple-rest")
+     * @var integer
+     */
+    public $multipleRest;
+    
+    /**
+     * Multiple repeat
+     *
+     * @PropertyElement(name="multiple-repeat")
+     * @var string
+     */
+    public $multipleRepeat;
+    
+    
+    /**
+     * Beat repeat
+     *
+     * @Element(name="beat-repeat")
+     * @var BeatRepeat
+     */
+    public $beatRepeat;
 
 }
 
