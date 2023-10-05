@@ -309,8 +309,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 'channel' => $ch, 
                 'note' => $n, 
                 'value' => $v
-            );
-            
+            );           
             if($n < $this->noteMin)
             {
                 $this->noteMin = $n;

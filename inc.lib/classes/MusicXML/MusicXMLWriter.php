@@ -683,4 +683,12 @@ class MusicXMLWriter // NOSONAR
         return $xmlBuilder->toXml($domdoc, $name);
         
     }
+
+    /**
+     * Get the value of objectName
+     */ 
+    public function getObjectName()
+    {
+        return $this->objectName;
+    }
 }
