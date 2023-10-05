@@ -306,7 +306,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 'value' => $v
             );
         }
-        else
+        else if($eventName == 'On' || $eventName == 'Off')
         {
             $this->measures[$ch][$tmInteger][] = array(
                 'event' => $eventName, 
@@ -325,6 +325,17 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $this->noteMax = $n;
             }
+        }
+        else
+        {
+            $this->measures[$ch][$tmInteger][] = array(
+                'event' => $eventName, 
+                'message' => $message, 
+                'time' => $tm, 
+                'abstime' => $abstime, 
+                'channel' => $ch, 
+                'value' => $v
+            );      
         }
     }
 
@@ -941,6 +952,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         foreach ($noteMessages as $message) {
             $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);  
+            // skip if duration is 0
             if($duration > 0)
             {                  
                 $note = new Note();
