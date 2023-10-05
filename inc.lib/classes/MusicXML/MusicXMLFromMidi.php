@@ -7,10 +7,7 @@ use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
-use MusicXML\Model\Direction;
-use MusicXML\Model\DirectionType;
 use MusicXML\Model\Measure;
-use MusicXML\Model\Metronome;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
@@ -19,7 +16,6 @@ use MusicXML\Model\Rest;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
-use MusicXML\Model\Sound;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -753,43 +749,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         return $midiEvent;
     }
     
-    private function getDirections($tempoList)
-    {
-        $lastBpm = 0;
-        $directions = array();
-        if(isset($tempoList))
-        {
-            foreach($tempoList as $value) 
-            {
-                $rawtime = $value['rawtime'];
-                $bpm = $value['bpm'];
-                if(!isset($directions[$rawtime]))
-                {
-                    $directions[$rawtime] = new Direction();
-                }
-                if($bpm != $lastBpm)
-                {
-                    $sound = new Sound();
-                    $sound->tempo = $bpm;
-                    $directions[$rawtime]->sound = $sound;
-                    
-                    $directionType = new DirectionType();
-                    $metronome = new Metronome();
-                    $metronome->parentheses = 'no';
-                    $metronome->perMinute = $bpm;
-                    $metronome->beatUnit = 'quarter';
-                    $directionType->metronome = $metronome;
-                    
-                    $directions[$rawtime]->directionType = $directionType;
-                    $directions[$rawtime]->placement = 'above';
-                    
-                    
-                    $lastBpm = $bpm;
-                }
-            }
-        }
-        return $directions;
-    }
+    
     
     /**
      * Get clef from notes
@@ -913,7 +873,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
             if(!empty($tempoList))
             {
-                $directions = $this->getDirections($tempoList);
+                $directions = MusicXMLUtil::getDirections($tempoList);
                 if(!empty($directions))
                 {
                     $measure->direction = $directions;

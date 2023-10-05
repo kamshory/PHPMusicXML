@@ -1,6 +1,11 @@
 <?php
 namespace MusicXML;
 
+use MusicXML\Model\Direction;
+use MusicXML\Model\DirectionType;
+use MusicXML\Model\Metronome;
+use MusicXML\Model\Sound;
+
 class MusicXMLUtil{
  
     /**
@@ -52,4 +57,44 @@ class MusicXMLUtil{
         }
         return $lt;
     }
+    
+    public static function getDirections($tempoList)
+    {
+        $lastBpm = 0;
+        $directions = array();
+        if(isset($tempoList))
+        {
+            foreach($tempoList as $value) 
+            {
+                $rawtime = $value['rawtime'];
+                $bpm = $value['bpm'];
+                if(!isset($directions[$rawtime]))
+                {
+                    $directions[$rawtime] = new Direction();
+                }
+                if($bpm != $lastBpm)
+                {
+                    $sound = new Sound();
+                    $sound->tempo = $bpm;
+                    $directions[$rawtime]->sound = $sound;
+                    
+                    $directionType = new DirectionType();
+                    $metronome = new Metronome();
+                    $metronome->parentheses = 'no';
+                    $metronome->perMinute = $bpm;
+                    $metronome->beatUnit = 'quarter';
+                    $directionType->metronome = $metronome;
+                    
+                    $directions[$rawtime]->directionType = $directionType;
+                    $directions[$rawtime]->placement = 'above';
+                    
+                    
+                    $lastBpm = $bpm;
+                }
+            }
+        }
+        return $directions;
+    }
+    
+    
 }
