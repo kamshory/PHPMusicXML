@@ -5,16 +5,13 @@ namespace MusicXML;
 use DOMDocument;
 use DOMNode;
 use Midi\MidiMeasure;
-use MusicXML\Model\Articulations;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
-use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
 use MusicXML\Model\Metronome;
 use MusicXML\Model\MidiInstrument;
-use MusicXML\Model\Notations;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
@@ -23,8 +20,6 @@ use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
 use MusicXML\Model\Sound;
-use MusicXML\Model\Staccato;
-use MusicXML\Model\Time;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -79,6 +74,12 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private $copyright = "";
     private $timeSignature = null;
+    /**
+     * Division
+     *
+     * @var integer[]
+     */
+    private $measureDivisions = array();
 
     /**
      * Reset properties
@@ -95,6 +96,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->copyright = "";
         $this->timeSignature = null;
         $this->clefs = array();
+        $this->measureDivisions = array();
     }
 
     /**
@@ -108,7 +110,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->processDuration1($timebase);
         $this->processDuration2($timebase);
         $this->buildTimeDivisions($timebase);
-        print_r($this->measureDivisions);
     }
 
     /**
@@ -128,7 +129,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $chIdx = $noteValue['channel'];
                         $noteIdx = $noteValue['note'];
                         $index = "n" . $chIdx . "_" . $noteIdx;
-                        $lt = $this->getLastTime($lastTime, $index);
+                        $lt = MusicXMLUtil::getLastTime($lastTime, $index);
                         $duration = $noteValue['time'] - $lt;
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                         $this->measures[$ch][$tmInteger][$note]['last'] = $lt;
@@ -155,48 +156,13 @@ class MusicXMLFromMidi extends MusicXMLBase
             foreach ($chValue as $tmInteger => $tmIntegerValue) {
                 foreach ($tmIntegerValue as $note => $noteValue) {
                     if (isset($this->measures[$ch][$tmInteger][$note]['time']) && isset($this->measures[$ch][$tmInteger][$note]['last'])) {
-
                         $duration = $this->measures[$ch][$tmInteger][$note]['time'] - $this->measures[$ch][$tmInteger][$note]['last'];
-                        $duration = $this->fixDuration($duration, $timebase);
-
+                        $duration = MusicXMLUtil::fixDuration($duration, $timebase);
                         $this->measures[$ch][$tmInteger][$note]['duration'] = $duration;
                     }
                 }
             }
         }
-    }
-    
-    /**
-     * Fix duration
-     *
-     * @param float $duration
-     * @param integer $timebase
-     * @return float
-     */
-    private function fixDuration($duration, $timebase)
-    {
-        if($duration > 4/$timebase)
-        {
-            $duration = 4/$timebase;
-        }
-        return $duration;
-    }
-    
-    /**
-     * Get last time
-     *
-     * @param array $lastTime
-     * @param string $index
-     * @return float
-     */
-    private function getLastTime($lastTime, $index)
-    {
-        if (isset($lastTime[$index])) {
-            $lt = $lastTime[$index];
-        } else {
-            $lt = 0;
-        }
-        return $lt;
     }
 
     /**
@@ -210,26 +176,9 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     public function setNoteDuration($ch, $indexOn, $duration)
     {
-        $x = $this->measures[$ch][$indexOn];
-        $lastOn = $this->findLastOn($x);
+        $message = $this->measures[$ch][$indexOn];
+        $lastOn = MusicXMLUtil::findLastOn($message);
         $this->measures[$ch][$indexOn][$lastOn]['duration'] = $duration;
-    }
-
-    /**
-     * Find last On
-     *
-     * @param array $messages
-     * @return integer
-     */
-    public function findLastOn($messages)
-    {
-        $last = 0;
-        foreach ($messages as $idx => $note) {
-            if ($note['event'] == 'On') {
-                $last = $idx;
-            }
-        }
-        return $last;
     }
 
     private function addPartList(
@@ -727,8 +676,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
 
-        
-
         $scorePart->partName = $partName;
         $scorePart->partAbbreviation = $partAbbreviation;
         ksort($this->channel10);
@@ -928,13 +875,6 @@ class MusicXMLFromMidi extends MusicXMLBase
             $this->measureDivisions[$measureIndex] = $divisions;
         }
     }
-    
-    /**
-     * Division
-     *
-     * @var integer[]
-     */
-    private $measureDivisions = array();
     
     /**
      * Get measure division

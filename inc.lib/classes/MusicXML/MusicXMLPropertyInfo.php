@@ -2,7 +2,7 @@
 
 namespace MusicXML;
 
-class XMLPropertyInfo //NOSONAR
+class MusicXMLPropertyInfo //NOSONAR
 {
     /**
      * Name
