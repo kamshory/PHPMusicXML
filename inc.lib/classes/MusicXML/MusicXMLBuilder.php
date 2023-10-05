@@ -84,11 +84,11 @@ class MusicXMLBuilder
     private function getTagName($name)
     {
         $tagName = "";
-        if($this->_notNullAndNotEmpty($this->objectName))
+        if($this->notNullAndNotEmpty($this->objectName))
         {
             $tagName = $this->objectName;
         }
-        else if($this->_notNullAndNotEmpty($name))
+        else if($this->notNullAndNotEmpty($name))
         {
             $tagName = $name;
         }
@@ -146,19 +146,19 @@ class MusicXMLBuilder
     
     
     /**
-     * Create DOMDocument
+     * Create DOMDocument recorsively
      *
      * @param string $name
      * @return DOMDocument
      */
-    public function toXml($domdoc, $name = null)
+    public function toXml($domdoc, $name = null) // NOSONAR
     {
         $tagName = $this->getTagName($name);
         $domnode = $domdoc->createElement($tagName);
         foreach($this->object as $propertyName=>$propertyValue)
         {
             $propertInfo = $this->getPropertyInfo($propertyName);
-            if($this->_notNullAndNotEmpty($propertyValue) || $propertInfo->getTextContent())
+            if($this->notNullAndNotEmpty($propertyValue) || $propertInfo->getTextContent())
             {
                 if(is_array($propertyValue))
                 {
@@ -169,7 +169,7 @@ class MusicXMLBuilder
                         {
                             if($propertInfo->getElement())
                             {
-                                if($this->_notNullAndNotEmpty($propertInfo->getElementName()))
+                                if($this->notNullAndNotEmpty($propertInfo->getElementName()))
                                 {
                                     $tag = $propertInfo->getElementName();
                                 }
@@ -182,7 +182,7 @@ class MusicXMLBuilder
                             }
                             else if($propertInfo->getPropertyElement())
                             {
-                                if($this->_notNullAndNotEmpty($propertInfo->getPropertyElementName()))
+                                if($this->notNullAndNotEmpty($propertInfo->getPropertyElementName()))
                                 {
                                     $tag = $propertInfo->getPropertyElementName();
                                 }
@@ -200,8 +200,7 @@ class MusicXMLBuilder
                 {
                     // process object
                     if($propertyValue instanceof MusicXMLWriter)
-                    {
-                        
+                    {                     
                         if($propertInfo->getElement())
                         {
                             $child = $propertyValue->toXml($domdoc, $propertInfo->getElementName());
@@ -213,8 +212,7 @@ class MusicXMLBuilder
                         
                         // Traditional and PHP data type
                         if($propertInfo->getPropertyElement())
-                        {
-                            
+                        {                          
                             if(is_array($propertyValue))
                             {
                                 
@@ -228,8 +226,7 @@ class MusicXMLBuilder
                                 }
                             }
                             else
-                            {
-                                
+                            {                               
                                 $value = "";
                                 if($propertyValue instanceof DateTime)
                                 {
@@ -245,7 +242,7 @@ class MusicXMLBuilder
                         else if($propertInfo->getAttribute())
                         {
                             
-                            if($this->_notNullAndNotEmpty($propertyValue))
+                            if($this->notNullAndNotEmpty($propertyValue))
                             {
                                 $domnode->setAttribute($propertInfo->getAttributeName(), $propertyValue);
                             }
@@ -268,7 +265,7 @@ class MusicXMLBuilder
      * @param mixed $value
      * @return bool
      */
-    private function _notNullAndNotEmpty($value)
+    private function notNullAndNotEmpty($value)
     {
         return $value !== null && (!is_string($value) || (is_string($value) && !empty($value)));
     }
