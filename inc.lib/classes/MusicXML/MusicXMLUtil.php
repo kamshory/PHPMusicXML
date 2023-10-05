@@ -6,9 +6,42 @@ use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
 use MusicXML\Model\Metronome;
 use MusicXML\Model\Sound;
+use MusicXML\Model\Work;
+use MusicXML\Properties\Coordinate;
 
-class MusicXMLUtil{
- 
+class MusicXMLUtil
+{
+
+    /**
+     * Get note coordinate
+     *
+     * @param integer $measureIndex
+     * @param array $message
+     * @param integer $divisions
+     * @param integer $timebase
+     * @return Coordinate
+     */
+    public static function getNoteCoordinate($measureIndex, $message, $divisions, $timebase)
+    {
+        $coordinate = new Coordinate();       
+        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
+        $coordinate->defaultX = ($timeRelative / $timebase) * $divisions;
+        return $coordinate;
+    }
+    
+    /**
+     * Get work
+     *
+     * @param string $title
+     * @return Work
+     */
+    public static function getWork($title)
+    {
+        $work = new Work();
+        $work->workTitle = $title;
+        return $work;
+    }
+    
     /**
      * Find last On
      *

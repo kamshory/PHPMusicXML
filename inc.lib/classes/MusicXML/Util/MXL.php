@@ -6,9 +6,9 @@ use ZipArchive;
 
 class MXL
 {
-    const MXL = "mxl";
-    const XML = "xml";
-    const MUSICXML = "musicxml";
+    const FORMAT_MXL = "mxl";
+    const FORMAT_XML = "xml";
+    const FORMAT_MUSICXML = "musicxml";
     
     public function xmlToMxl($name, $xml, $mimetype = "application/vnd.recordare.musicxml")
     {

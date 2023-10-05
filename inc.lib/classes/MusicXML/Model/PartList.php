@@ -17,12 +17,12 @@ class PartList extends MusicXMLWriter
      * @Element(name="part-group")
      * @var PartGroup[]
      */
-    public $partGroupList;
+    public $partGroup;
     
     /**
      * Score part
      * @Element(name="score-part")
      * @var ScorePart[]
      */
-    public $scorePartList;
+    public $scorePart;
 }

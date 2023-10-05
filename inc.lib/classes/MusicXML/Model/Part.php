@@ -27,5 +27,5 @@ class Part extends MusicXMLWriter
      * @Element(name="measure")
      * @var Measure[]
      */
-    public $measureList;
+    public $measure;
 }

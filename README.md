@@ -1,13 +1,95 @@
 # PHPMusicXML
 
-PHPMusicXML is PHP library to create MusicXML with PHP. This library can also convert MIDI to MusicXML.
+PHPMUsicXML is a library for creating MusicXML files and converting music from MIDI format to MusicXML format. This library contains logic and models. Each element in MusicXML is represented by one class as its model.
 
 ## Expected Result
 
-Expected result of this library are:
+Expected capabilities of this library are:
 
 1. to comply MusicXML specification according to https://www.w3.org/2021/06/musicxml40/ 
 2. convert music from MIDI format to MusicXML format either compressed or uncompressed
+
+
+## Example
+
+### Convert MIDI to uncompressed MusicXML
+
+Uncompressed MusicXML is XML file according to https://www.w3.org/2021/06/musicxml40/
+
+```php
+<?php
+
+use MusicXML\MusicXML;
+
+require_once "inc.lib/autoload.php";
+
+$musicXML = new MusicXML();
+try
+{
+    $midi = $musicXML->loadMidi("test.mid");
+    $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", "xml");
+    file_put_contents("test.xml", $xml);
+}
+catch(Exception $e)
+{
+    echo $e->getMessage();  
+}
+```
+
+### Convert MIDI to compressed MusicXML
+
+Compressed MusicXML is zipped files containing XML file according to https://www.w3.org/2021/06/musicxml40/, mimetype, and META-INF/container.xml
+
+```php
+<?php
+
+use MusicXML\MusicXML;
+use MusicXML\Util\MXL;
+
+require_once "inc.lib/autoload.php";
+
+$musicXML = new MusicXML();
+try
+{
+    $midi = $musicXML->loadMidi("test.mid");
+    $mxl = new MXL();
+    $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", "xml");
+    file_put_contents("convert.mxl", $mxl->createMxl("Test", $xml));
+}
+catch(Exception $e)
+{
+    echo $e->getMessage();  
+}
+```
+
+Another way
+
+
+```php
+<?php
+
+use MusicXML\MusicXML;
+use MusicXML\Util\MXL;
+
+require_once "inc.lib/autoload.php";
+
+$musicXML = new MusicXML();
+try
+{
+    $midi = $musicXML->loadMidi("test.mid");
+    $mxl = $musicXML->midiToMusicXml($midi, "Test", "4.0", MXL::FORMAT_MXL);
+    file_put_contents("convert.mxl", $mxl);
+}
+catch(Exception $e)
+{
+    echo $e->getMessage();  
+}
+```
+
+## Progress
+
+1. October 5th 2023 - result is playable but duration longer than expected
+
 
 ## Support Is Required
 

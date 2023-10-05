@@ -14,6 +14,22 @@ use MusicXML\MusicXMLWriter;
 class Note extends MusicXMLWriter
 {
     /**
+     * Default X
+     * 
+     * @Attribute(name="default-x") 
+     * @var float
+     */
+    public $defaultX;
+    
+    /**
+     * Default Y
+     * 
+     * @Attribute(name="default-y") 
+     * @var float
+     */
+    public $defaultY;
+    
+    /**
      * Dynamics
      *
      * @Attribute
