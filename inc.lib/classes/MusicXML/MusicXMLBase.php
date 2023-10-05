@@ -400,7 +400,7 @@ class MusicXMLBase
         23 => array('Tango Accordion', ''),
         24 => array('Classical Guitar', 'Guit.', 'pluck.guitar.nylon-string'),
         25 => array('Acoustic Guitar', 'Guit.', 'pluck.guitar.acoustic'),
-        26 => array('Jazz Electric Gtr', ''),
+        26 => array('Jazz Electric Gtr', 'J. El. Guit.', 'pluck.guitar.electric'),
         27 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
         28 => array('Muted Guitar', ''),
         29 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),

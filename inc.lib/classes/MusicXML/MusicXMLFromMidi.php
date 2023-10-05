@@ -654,7 +654,11 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->processDuration($timebase);
 
         $factor = 4;
-        $maxMeasure = ceil($midi->getDurationRaw()/($factor * $timebase));
+        $maxMeasure = floor($midi->getDurationRaw()/($factor * $timebase));
+        if($maxMeasure == 0)
+        {
+            $maxMeasure = 1;
+        }
 
         // begin part
 
@@ -749,7 +753,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $rawtime = $message['rawtime'];
                 $tempo = $message['value'];
-                $bpm = (int)(60000000/$tempo);
+                $bpm = round((60000000/$tempo));
                 $tempoList[$time] = array('rawtime'=>$rawtime, 'tempo'=>$tempo, 'bpm'=>$bpm);
             }
             if($message['event'] == 'KeySig')
@@ -936,35 +940,38 @@ class MusicXMLFromMidi extends MusicXMLBase
         // TODO: if there are notes overlaped, make backup
 
         foreach ($noteMessages as $message) {
-            $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);                    
-            $note = new Note();
-            
-            $note->voice = $channelId;
-            $noteCode = $message['note'];
-            if($message['value'] > 0 && $noteCode > 13)
-            {
-                $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
-                $pitch = $this->getPitch($noteCode);
-                $note->pitch = $pitch;
-                if($pitch->alter > 0)
+            $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);  
+            if($duration > 0)
+            {                  
+                $note = new Note();
+                
+                $note->voice = $channelId;
+                $noteCode = $message['note'];
+                if($message['value'] > 0 && $noteCode > 13)
                 {
-                    $note->accidental = 'sharp';
+                    $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
+                    $pitch = $this->getPitch($noteCode);
+                    $note->pitch = $pitch;
+                    if($pitch->alter > 0)
+                    {
+                        $note->accidental = 'sharp';
+                    }
+                    else if($pitch->alter < 0)
+                    {
+                        $note->accidental = 'flat';
+                    }
+                    $note->stem = 'up';
+                    $note->notations = $this->getNotation();
                 }
-                else if($pitch->alter < 0)
+                else
                 {
-                    $note->accidental = 'flat';
+                    $rest = new Rest();
+                    $note->rest = $rest;
                 }
-                $note->stem = 'up';
-                $note->notations = $this->getNotation();
+                $note->duration = $duration;
+                $note->type = $this->getNoteType($note->duration, $divisions);
+                $measure->noteList[] = $note;
             }
-            else
-            {
-                $rest = new Rest();
-                $note->rest = $rest;
-            }
-            $note->duration = $duration;
-            $note->type = $this->getNoteType($note->duration, $divisions);
-            $measure->noteList[] = $note;
         }
         return $measure;
     }
