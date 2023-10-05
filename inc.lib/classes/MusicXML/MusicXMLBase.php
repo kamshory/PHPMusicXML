@@ -357,12 +357,12 @@ class MusicXMLBase
 
         $identification->encoding = new Encoding();
         $identification->encoding->encodingDate = new DateTime();
-        $identification->encoding->softwareList = array();
+        $identification->encoding->software = array();
 
         $software = new Software();
         $software->textContent = self::SOFTWARE_NAME;
 
-        $identification->encoding->softwareList[] = $software;
+        $identification->encoding->software[] = $software;
 
         $identification->encoding->supports[] = array();
         $identification->encoding->supports[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
@@ -400,8 +400,8 @@ class MusicXMLBase
         23 => array('Tango Accordion', ''),
         24 => array('Classical Guitar', 'Guit.', 'pluck.guitar.nylon-string'),
         25 => array('Acoustic Guitar', 'Guit.', 'pluck.guitar.acoustic'),
-        26 => array('Jazz Electric Gtr', ''),
-        27 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'), //NOSONAR
+        26 => array('Jazz Electric Gtr', 'J. El. Guit.', 'pluck.guitar.electric'),
+        27 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
         28 => array('Muted Guitar', ''),
         29 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
         30 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),

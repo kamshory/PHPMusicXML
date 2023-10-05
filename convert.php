@@ -8,7 +8,7 @@ require_once "inc.lib/autoload.php";
 $musicXML = new MusicXML();
 try
 {
-    $midi = $musicXML->loadMidi("test.mid");
+    $midi = $musicXML->loadMidi("Cinta Su.mid");
     $mxl = new MXL();
     $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", MXL::FORMAT_MXL);
     
