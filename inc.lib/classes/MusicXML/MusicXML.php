@@ -12,14 +12,11 @@ use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
 use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
-use MusicXML\Model\ScorePartWise;
+use MusicXML\Model\ScorePartwise;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
 use MusicXML\Util\MXL;
 
-/**
- * @version 1.0.0
- */
 class MusicXML extends MusicXMLBase
 {
     public function loadXml($path)
@@ -76,11 +73,11 @@ class MusicXML extends MusicXMLBase
      */
     public function getMusicXml($domdoc, $version = "4.0")
     {
-        $scorePartWise = new ScorePartWise();
-        $scorePartWise->version = $version;
-        $scorePartWise->setIdentification($this->getIdentification());
-        $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroup = array();
+        $scorePartwise = new ScorePartwise();
+        $scorePartwise->version = $version;
+        $scorePartwise->setIdentification($this->getIdentification());
+        $scorePartwise->partList = new PartList();
+        $scorePartwise->partList->partGroup = array();
 
         // start add score part
         // this block will be iterated each channel
@@ -102,10 +99,10 @@ class MusicXML extends MusicXMLBase
         $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
         $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
 
-        $scorePartWise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
+        $scorePartwise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
         // end add score part
 
-        $scorePartWise->part = array();
+        $scorePartwise->part = array();
 
         $part = new Part();
         $part->id = "P1";
@@ -143,9 +140,9 @@ class MusicXML extends MusicXMLBase
 
         $part->measure[] = $measure;
 
-        $scorePartWise->part[] = $part;
+        $scorePartwise->part[] = $part;
 
-        return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
+        return $scorePartwise->toXml($domdoc, self::SCORE_PARTWISE);
     }
 
     

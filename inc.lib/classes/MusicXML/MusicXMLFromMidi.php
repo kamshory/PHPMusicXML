@@ -14,7 +14,7 @@ use MusicXML\Model\PartList;
 use MusicXML\Model\Rest;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
-use MusicXML\Model\ScorePartWise;
+use MusicXML\Model\ScorePartwise;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -583,6 +583,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * Convert Midi to MusicXML
      *
      * @param MidiMeasure $midi
+     * @param string $title
      * @param DOMDocument $domdoc
      * @param string $version
      * @return DOMNode
@@ -591,17 +592,20 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         $this->resetProperties();
         $timebase = $midi->getTimebase();
-        $scorePartWise = new ScorePartWise();
-        $scorePartWise->version = $version;
-        $scorePartWise->identification = $this->getIdentification();
-        $scorePartWise->partList = new PartList();
-        $scorePartWise->partList->partGroup = array();
+        $scorePartwise = new ScorePartwise();
+        $scorePartwise->version = $version;
+        $scorePartwise->identification = $this->getIdentification();
+        $scorePartwise->work = MusicXMLUtil::getWork($title);
+        
+        $scorePartwise->partList = new PartList();
+        $scorePartwise->partList->partGroup = array();
 
         $this->buildPartList($midi);
         if (isset($this->copyright)) {
-            $scorePartWise->identification->copyrights = $this->copyright;
+            $scorePartwise->identification->copyrights = $this->copyright;
         }
 
+        // sort part list by channelId and programId
         $channelIdX  = array_column($this->partList, 'channelId');
         $programIdX = array_column($this->partList, 'programId');
         array_multisort($channelIdX, SORT_ASC, $programIdX, SORT_ASC, $this->partList);
@@ -615,16 +619,13 @@ class MusicXMLFromMidi extends MusicXMLBase
             $partId = $part['partId'];
             $channelId = $part['channelId'];
             $partName = $part['instrument'][0];
-            if ($partIndex == 1) {
-                $partName = $title;
-            }
             $partAbbreviation = $this->getPartAbbreviation($part);
             $instrumentName = $part['instrument'][0];
             $programId = $part['programId'];
 
             if ($channelId == 10) {
                 $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
-                $scorePartWise->partList->scorePart[] = $scorePart;
+                $scorePartwise->partList->scorePart[] = $scorePart;
             } else {
                 if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
                     $instrumentSound = $this->instrumentList[$programId - 1][2];
@@ -636,14 +637,16 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $midiProgramId = $part['programId'];
                 $instrumentId = $part['instrumentId'];
                 $volumeRaw = $this->getPartVolume($partId);
-                $volume = $volumeRaw * 100 / 127;
+                $volume = $volumeRaw * 100 / (0.9 * 127);
+                
+                // 4 place decimal
                 $volume = round($volume, 4);
                 $panRaw = $this->getPartPan($partId);
                 $pan = ($panRaw - 64) * 90 / 64;
                 $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
                 $midiInstrument = $this->getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume, $pan);
                 $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
-                $scorePartWise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
+                $scorePartwise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
             
             $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
@@ -653,7 +656,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         // end part list
 
-        $scorePartWise->part = array();
+        $scorePartwise->part = array();
 
         $this->processDuration($timebase);
 
@@ -672,11 +675,11 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $measure = $this->getMeasure($partId, $channelId, $measureIndex, $timebase);
                 $parts->measure[] = $measure;
             }
-            $scorePartWise->part[] = $parts;
+            $scorePartwise->part[] = $parts;
         }
         // end part
 
-        return $scorePartWise->toXml($domdoc, self::SCORE_PARTWISE);
+        return $scorePartwise->toXml($domdoc, self::SCORE_PARTWISE);
     }
 
     /**
