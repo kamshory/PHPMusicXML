@@ -95,4 +95,20 @@ class Attributes extends MusicXMLWriter
      * @var StaffDetail
      */
     public $staffDetail;
+    
+    /**
+     * Directive
+     *
+     * @Element
+     * @var Directive
+     */
+    public $directive;
+    
+    /**
+     * Measure style
+     *
+     * @Element
+     * @var MeasureStyle
+     */
+    public $measureStyle;
 }
