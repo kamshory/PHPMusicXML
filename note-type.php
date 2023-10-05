@@ -7,8 +7,8 @@ require_once "inc.lib/autoload.php";
 $musicXML = new MusicXML();
 try
 {
-    $divisions = 1;
-    $duration = 16;
+    $divisions = 6;
+    $duration = 1;
     $type = $musicXML->getNoteType($duration, $divisions);
     echo "DURATION = $duration; DIVISIONS = $divisions; TYPE = $type\r\n";
 }
