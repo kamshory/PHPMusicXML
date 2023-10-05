@@ -15,7 +15,6 @@ use MusicXML\Model\Rest;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
-use MusicXML\Properties\Coordinate;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -217,6 +216,9 @@ class MusicXMLFromMidi extends MusicXMLBase
         $rawtime = $message[0];
         $tm = $message[0] / (4 * $timebase);
         $tmInteger = floor($tm);
+        
+        $offset = $tm - $tmInteger;
+        
         if (!isset($this->measures[$ch])) {
             $this->measures[$ch] = array();
         }
@@ -314,6 +316,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 'message' => $message, 
                 'time' => $tm, 
                 'abstime' => $abstime, 
+                'offset' => $offset,
                 'channel' => $ch, 
                 'note' => $n, 
                 'value' => $v
@@ -973,7 +976,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $note->duration = $duration;
             $note->type = $this->getNoteType($note->duration, $divisions);
             
-            $coord = $this->getNoteCoordinate($measureIndex, $message, $divisions, $timebase);
+            $coord = MusicXMLUtil::getNoteCoordinate($measureIndex, $message, $divisions, $timebase);
             $note->defaultX = $coord->defaultX;
             
             $measure->note[] = $note;
@@ -981,22 +984,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         return $measure;
     }
     
-    /**
-     * Get note coordinate
-     *
-     * @param integer $measureIndex
-     * @param array $message
-     * @param integer $divisions
-     * @param integer $timebase
-     * @return Coordinate
-     */
-    private function getNoteCoordinate($measureIndex, $message, $divisions, $timebase)
-    {
-        $coordinate = new Coordinate();       
-        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
-        $coordinate->defaultX = ($timeRelative / $timebase) * $divisions;
-        return $coordinate;
-    }
+    
     
     
 }
