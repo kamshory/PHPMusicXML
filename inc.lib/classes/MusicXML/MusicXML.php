@@ -38,7 +38,6 @@ class MusicXML extends MusicXMLBase
         
     }
 
-
     /**
      * Convert MIDI to MusicXML
      *
@@ -46,12 +45,12 @@ class MusicXML extends MusicXMLBase
      * @param string $version Version of MusicXML
      * @return string
      */
-    public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::XML)
+    public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::FORMAT_XML)
     {
         $domdoc = $this->getDOMDocument();
         $midi2mxl = new MusicXMLFromMidi();
         $domdoc->appendChild($midi2mxl->convertMidiToMusicXML($midi, $title, $domdoc, $version));
-        if($format == MXL::MXL)
+        if($format == MXL::FORMAT_MXL)
         {
             $mxl = new MXL();
             return $mxl->xmlToMxl($title, $domdoc->saveXML());
