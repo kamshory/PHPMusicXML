@@ -633,7 +633,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $instrumentId = $part['instrumentId'];
                 $volumeRaw = $this->getPartVolume($partId);
                 $volume = $volumeRaw * 100 / 127;
-                $volume = floatval(sprintf("%.4f", $volume));
+                $volume = round($volume, 4);
                 $panRaw = $this->getPartPan($partId);
                 $pan = ($panRaw - 64) * 90 / 64;
                 $scoreInstrument = $this->getScoreInstrument($instrumentId, $instrumentName, $instrumentSound);
@@ -713,7 +713,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $midiInstrument->midiChannel = $channelId;
             $midiInstrument->midiProgram = $programId;
             $midiInstrument->midiUnpitched = $key;
-            $midiInstrument->volume = isset($value['v']) ? (floatval(sprintf("%.4f", ($value['v'] * 100 / 127)))) : 0;
+            $midiInstrument->volume = isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0;
             $scorePart->scoreInstrument[] = $scoreInstrument;
             $scorePart->midiInstrument[] = $midiInstrument;
         }
@@ -943,7 +943,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $noteCode = $message['note'];
             if($message['value'] > 0 && $noteCode > 13)
             {
-                $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
+                $note->dynamics = round($message['value'] / 0.9, 4);
                 $pitch = $this->getPitch($noteCode);
                 $note->pitch = $pitch;
                 if($pitch->alter > 0)
