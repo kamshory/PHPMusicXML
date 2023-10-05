@@ -33,8 +33,8 @@ class MidiDevice extends MusicXMLWriter
      * Description
      *
      * @TextContent
-     * @var String
+     * @var string
      */
-    public $description = "";
+    public $textContent = "";
     
 }

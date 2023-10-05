@@ -7,22 +7,17 @@ use DOMDocument;
 use DOMText;
 use MusicXML\MusicXMLWriter;
 use MusicXML\Util\PicoAnnotationParser;
-use MusicXML\XMLPropertyInfo;
 
 class MusicXMLBuilder
 {
-    
     const ANNOTATION_VAR = "var"; 
     const ANNOTATION_ELEMENT = "Element";
     const ANNOTATION_PROPERTY_ELEMENT = "PropertyElement"; 
     const ANNOTATION_ATTRIBUTE = "Attribute";
     const ANNOTATION_TEXT_CONTENT = "TextContent";
-    
     const ANNOTATION_XML = "Xml";
-
     const KEY_NAME = "name";
-    const KEY_VALUE = "value";   
-
+    const KEY_VALUE = "value";
     
     /**
      * Class name
@@ -101,54 +96,51 @@ class MusicXMLBuilder
     }
     
     /**
-     * XMLPropertyInfo
+     * MusicXMLPropertyInfo
      *
      * @param string $propertyName
-     * @return XMLPropertyInfo
+     * @return MusicXMLPropertyInfo
      */
     private function getPropertyInfo($propertyName)
     {
         $reflexProp = new PicoAnnotationParser($this->className, $propertyName, 'property');
         $parameters = $reflexProp->getParameters();
-        
-        
-        $xmlPropertyInfo = new XMLPropertyInfo();
-        
-        $xmlPropertyInfo->setName($propertyName);
+        $musicXMLPropertyInfo = new MusicXMLPropertyInfo();
+        $musicXMLPropertyInfo->setName($propertyName);
         
         foreach($parameters as $param=>$paramValue)
         {
             if(strcasecmp($param, self::ANNOTATION_VAR) == 0)
             {
-                $xmlPropertyInfo->setType(trim($paramValue));
+                $musicXMLPropertyInfo->setType(trim($paramValue));
             }
             else if(strcasecmp($param, self::ANNOTATION_ATTRIBUTE) == 0)
             {
-                $xmlPropertyInfo->setAttribute(true);
+                $musicXMLPropertyInfo->setAttribute(true);
                 $values = $reflexProp->parseKeyValue($paramValue);
                 $attributeName = $this->getValueName($values, $propertyName);
-                $xmlPropertyInfo->setAttributeName($attributeName);
+                $musicXMLPropertyInfo->setAttributeName($attributeName);
             }
             else if(strcasecmp($param, self::ANNOTATION_ELEMENT) == 0)
             {
-                $xmlPropertyInfo->setElement(true);
+                $musicXMLPropertyInfo->setElement(true);
                 $values = $reflexProp->parseKeyValue($paramValue);
                 $elementName = $this->getValueName($values, $propertyName);
-                $xmlPropertyInfo->setElementName($elementName);
+                $musicXMLPropertyInfo->setElementName($elementName);
             }
             else if(strcasecmp($param, self::ANNOTATION_PROPERTY_ELEMENT) == 0)
             {
-                $xmlPropertyInfo->setPropertyElement(true);
+                $musicXMLPropertyInfo->setPropertyElement(true);
                 $values = $reflexProp->parseKeyValue($paramValue);
                 $propertyElementName = $this->getValueName($values, $propertyName);
-                $xmlPropertyInfo->setPropertyElementName($propertyElementName);
+                $musicXMLPropertyInfo->setPropertyElementName($propertyElementName);
             }
             else if(strcasecmp($param, self::ANNOTATION_TEXT_CONTENT) == 0)
             {
-                $xmlPropertyInfo->setTextContent(true);
+                $musicXMLPropertyInfo->setTextContent(true);
             }
         }
-        return $xmlPropertyInfo;
+        return $musicXMLPropertyInfo;
     }
     
     

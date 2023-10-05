@@ -19,5 +19,5 @@ class Software extends MusicXMLWriter
      * @TextContent
      * @var string
      */
-    public $string;
+    public $textContent;
 }

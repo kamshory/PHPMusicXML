@@ -79,7 +79,6 @@ class MusicXMLWriter // NOSONAR
     
     private function mapAttribute()
     {
-        echo "PARSE PROP\r\n";
         return ModelParser::parseModel($this->className, $this);
     }
     
@@ -682,5 +681,13 @@ class MusicXMLWriter // NOSONAR
         $xmlBuilder = new MusicXMLBuilder($this);
         return $xmlBuilder->toXml($domdoc, $name);
         
+    }
+
+    /**
+     * Get the value of objectName
+     */ 
+    public function getObjectName()
+    {
+        return $this->objectName;
     }
 }
