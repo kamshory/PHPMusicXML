@@ -15,6 +15,7 @@ use MusicXML\Model\Rest;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartWise;
+use MusicXML\Properties\Coordinate;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -913,7 +914,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note0->type = $this->getNoteType($note0->duration, $divisions);
                 $measure->note[] = $note0;
                 
-                $measure = $this->addMeasureElement($measure, $noteMessages, $channelId, $divisions, $timebase);
+                $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
             }
             // end add note
             
@@ -930,6 +931,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Add element to measure
      *
+     * @param integer $measureIndex
      * @param Measure $measure
      * @param array $noteMessages
      * @param integer $channelId
@@ -937,7 +939,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $timebase
      * @return Measure
      */
-    private function addMeasureElement($measure, $noteMessages, $channelId, $divisions, $timebase)
+    private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase)
     {
         // TODO: if there are notes overlaped, make backup
 
@@ -970,9 +972,30 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
             $note->duration = $duration;
             $note->type = $this->getNoteType($note->duration, $divisions);
+            
+            $coord = $this->getNoteCoordinate($measureIndex, $message, $divisions, $timebase);
+            $note->defaultX = $coord->defaultX;
+            
             $measure->note[] = $note;
         }
         return $measure;
+    }
+    
+    /**
+     * Get note coordinate
+     *
+     * @param integer $measureIndex
+     * @param array $message
+     * @param integer $divisions
+     * @param integer $timebase
+     * @return Coordinate
+     */
+    private function getNoteCoordinate($measureIndex, $message, $divisions, $timebase)
+    {
+        $coordinate = new Coordinate();       
+        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
+        $coordinate->defaultX = ($timeRelative / $timebase) * $divisions;
+        return $coordinate;
     }
     
     
