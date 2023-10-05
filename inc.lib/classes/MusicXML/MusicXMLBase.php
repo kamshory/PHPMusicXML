@@ -360,7 +360,7 @@ class MusicXMLBase
         $identification->encoding->softwareList = array();
 
         $software = new Software();
-        $software->string = self::SOFTWARE_NAME;
+        $software->textContent = self::SOFTWARE_NAME;
 
         $identification->encoding->softwareList[] = $software;
 

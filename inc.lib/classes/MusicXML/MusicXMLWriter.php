@@ -79,7 +79,6 @@ class MusicXMLWriter // NOSONAR
     
     private function mapAttribute()
     {
-        echo "PARSE PROP\r\n";
         return ModelParser::parseModel($this->className, $this);
     }
     

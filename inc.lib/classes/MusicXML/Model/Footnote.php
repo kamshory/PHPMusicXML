@@ -144,7 +144,7 @@ class Footnote extends MusicXMLWriter
      * @Attribute(name="relative-y")
      * @var string
      */
-    public $relativeX;
+    public $relativeY;
     
     /**
      * Rotation
@@ -186,5 +186,13 @@ class Footnote extends MusicXMLWriter
      */
     public $xmlSpace;
     
+    /**
+     * Description
+     *
+     * @TextContent
+     * @var string
+     */
+    public $textContent;
+
 }
 

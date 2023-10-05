@@ -71,4 +71,20 @@ class Attributes extends MusicXMLWriter
      * @var Level
      */
     public $level;
+    
+    /**
+     * Part symbol
+     *
+     * @Element
+     * @var PartSymbol
+     */
+    public $partSymbol;
+    
+    /**
+     * Instrument
+     *
+     * @Element
+     * @var integer
+     */
+    public $instruments;
 }

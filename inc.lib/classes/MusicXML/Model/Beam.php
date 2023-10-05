@@ -24,5 +24,5 @@ class Beam extends MusicXMLWriter
      * @TextContent
      * @var string
      */
-    public $description;
+    public $textContent;
 }
