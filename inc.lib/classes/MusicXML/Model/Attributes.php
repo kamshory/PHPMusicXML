@@ -55,4 +55,20 @@ class Attributes extends MusicXMLWriter
      * @var Transpose
      */
     public $transpose;
+    
+    /**
+     * Footnote
+     * 
+     * @Element
+     * @var Footnote
+     */
+    public $footnote;
+    
+    /**
+     * Level
+     * 
+     * @Element
+     * @var Level
+     */
+    public $level;
 }
