@@ -20,7 +20,6 @@ Uncompressed MusicXML is XML file according to https://www.w3.org/2021/06/musicx
 <?php
 
 use MusicXML\MusicXML;
-use MusicXML\Util\MXL;
 
 require_once "inc.lib/autoload.php";
 
@@ -28,7 +27,6 @@ $musicXML = new MusicXML();
 try
 {
     $midi = $musicXML->loadMidi("test.mid");
-    $mxl = new MXL();
     $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", "xml");
     file_put_contents("test.xml", $xml);
 }
