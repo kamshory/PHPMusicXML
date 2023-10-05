@@ -87,4 +87,12 @@ class Attributes extends MusicXMLWriter
      * @var integer
      */
     public $instruments;
+    
+    /**
+     * Staff detail
+     *
+     * @Element(name="staff-detail")
+     * @var StaffDetail
+     */
+    public $staffDetail;
 }

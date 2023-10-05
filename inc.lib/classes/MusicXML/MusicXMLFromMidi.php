@@ -190,7 +190,14 @@ class MusicXMLFromMidi extends MusicXMLBase
         $port
     )
     {
-        $this->partList[$instrumentId] = array('instrumentId' => $instrumentId, 'channelId' => $channelId, 'partId' => $partId, 'programId' => $programId, 'instrument' => $instrument, 'port' => $port);
+        $this->partList[$instrumentId] = array(
+            'instrumentId' => $instrumentId, 
+            'channelId' => $channelId, 
+            'partId' => $partId, 
+            'programId' => $programId, 
+            'instrument' => $instrument, 
+            'port' => $port
+        );
     }
 
     /**
