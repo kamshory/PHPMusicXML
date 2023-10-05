@@ -769,10 +769,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $keySignatureList[$time] = array('fifths'=>$fifths, 'mode'=>$message['mode']);
             }
         }
-        $midiEvent = new MidiEvent();
-        $midiEvent->tempoList = $tempoList;
-        $midiEvent->keySignatureList = $keySignatureList;
-        return $midiEvent;
+        return new MidiEvent($tempoList, $keySignatureList);
     }
     
     /**
@@ -852,8 +849,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             // events whithout channel information
             $controlEvents0 = $this->getControlEvent($midiEventMessages);
             $midiEvent = $this->getEventList($controlEvents0);
-            $tempoList = $midiEvent->tempoList;
-            $keySignatureList = $midiEvent->keySignatureList;
+            $tempoList = $midiEvent->getTempoList();
+            $keySignatureList = $midiEvent->getKeySignatureList();
 
             if(!empty($tempoList))
             {

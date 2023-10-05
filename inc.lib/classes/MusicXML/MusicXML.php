@@ -62,8 +62,6 @@ class MusicXML extends MusicXMLBase
         }  
     }
 
-    
-
     /**
      * Create Music XML manualy
      *
@@ -110,7 +108,6 @@ class MusicXML extends MusicXMLBase
 
         $measure = new Measure();
         $measure->number = 1;
-
 
         $key = new Key();
         $key->fifths = 1;

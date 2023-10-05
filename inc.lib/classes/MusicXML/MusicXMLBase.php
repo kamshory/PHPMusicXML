@@ -115,8 +115,8 @@ class MusicXMLBase
     public function getTime($timeSignature)
     {
         $time = new Time();
-        $time->beats = $timeSignature->beats;
-        $time->beatType = $timeSignature->beatType;
+        $time->beats = $timeSignature->getBeats();
+        $time->beatType = $timeSignature->getBeatType();
         return $time;
     }
     
