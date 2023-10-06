@@ -802,7 +802,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $minDuration = $timebase;
                 foreach($events as $event)
                 {
-                    if(isset($event['duration']) && $event['duration'] > 0 && $event['duration'] < $minDuration)
+                    if(isset($event['channel']) && $event['channel'] != 10 &&  isset($event['duration']) && $event['duration'] > 0 && $event['duration'] < $minDuration)
                     {
                         $minDuration = $event['duration'];
                     }
@@ -974,27 +974,19 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $note->dynamics = round($message['value'] / 0.9, 4);
                     $pitch = $this->getPitch($noteCode);
                     $note->pitch = $pitch;
+                    $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
+                    $pitch = $this->getPitch($noteCode);
+                    $note->pitch = $pitch;
                     if($pitch->alter > 0)
                     {
-                        $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
-                        $pitch = $this->getPitch($noteCode);
-                        $note->pitch = $pitch;
-                        if($pitch->alter > 0)
-                        {
-                            $note->accidental = 'sharp';
-                        }
-                        else if($pitch->alter < 0)
-                        {
-                            $note->accidental = 'flat';
-                        }
-                        $note->stem = 'up';
-                        $note->notations = $this->getNotation();
+                        $note->accidental = 'sharp';
                     }
-                    else
+                    else if($pitch->alter < 0)
                     {
-                        $rest = new Rest();
-                        $note->rest = $rest;
+                        $note->accidental = 'flat';
                     }
+                    $note->stem = 'up';
+                    $note->notations = $this->getNotation();
                     $note->duration = $duration;
                     $note->type = $this->getNoteType($note->duration, $divisions);
                     $measure->note[] = $note;

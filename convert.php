@@ -10,7 +10,7 @@ try
 {
     $midi = $musicXML->loadMidi("Cinta Su.mid");
     $mxl = new MXL();
-    $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", MXL::FORMAT_MXL);
+    $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", MXL::FORMAT_XML);
     
     //compressed version]
     //file_put_contents("convert.mxl", $mxl->createMxl("Test", $xml));
