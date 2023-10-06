@@ -109,5 +109,13 @@ class MeasureStyle extends MusicXMLWriter
      */
     public $beatRepeat;
 
+    /**
+     * Slash
+     *
+     * @Element
+     * @var Slash
+     */
+    public $slash;
+
 }
 
