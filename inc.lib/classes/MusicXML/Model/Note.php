@@ -125,4 +125,13 @@ class Note extends MusicXMLWriter
      * @var Lyric
      */
     public $lyric;
+
+
+    /**
+     * Grace
+     *
+     * @Element
+     * @var Grace
+     */
+    public $grace;
 }
