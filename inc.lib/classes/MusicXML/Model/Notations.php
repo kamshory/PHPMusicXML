@@ -60,4 +60,12 @@ class Notations extends MusicXMLWriter
      * @var Tuplet[]
      */
     public $tuplet;
+    
+    /**
+     * Glissando
+     *
+     * @Element
+     * @var Glissando
+     */
+    public $glissando;
 }
