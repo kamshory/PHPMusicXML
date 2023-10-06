@@ -68,4 +68,12 @@ class Notations extends MusicXMLWriter
      * @var Glissando
      */
     public $glissando;
+    
+    /**
+     * Slide
+     *
+     * @Element
+     * @var Slide
+     */
+    public $slide;
 }
