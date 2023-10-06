@@ -158,4 +158,12 @@ class Slide extends MusicXMLWriter
      * @var float
      */
     public $spaceLength;
+    
+    /**
+     * Text content
+     *
+     * @TextContent
+     * @var string
+     */
+    public $textContent;
 }
