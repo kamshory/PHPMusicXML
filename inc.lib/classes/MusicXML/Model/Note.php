@@ -88,8 +88,8 @@ class Note extends MusicXMLWriter
     public $notations;
 
     /**
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Unpitched
      */
     public $unpitched;
 
@@ -100,8 +100,8 @@ class Note extends MusicXMLWriter
     public $staff;
 
     /**
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Chord
      */
     public $chord;
 
@@ -134,4 +134,6 @@ class Note extends MusicXMLWriter
      * @var Grace
      */
     public $grace;
+
+    
 }
