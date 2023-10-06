@@ -110,5 +110,19 @@ class Tuplet extends MusicXMLWriter
      */
     public $showType;
     
+    /**
+     * Tuplet actual
+     *
+     * @Element
+     * @var TupletActual
+     */
+    public $tupletActual;
     
+    /**
+     * Tuplet normal
+     *
+     * @Element
+     * @var TupletNormal
+     */
+    public $tupletNormal;
 }
