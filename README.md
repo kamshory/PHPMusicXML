@@ -69,7 +69,6 @@ Another way
 <?php
 
 use MusicXML\MusicXML;
-use MusicXML\Util\MXL;
 
 require_once "inc.lib/autoload.php";
 
@@ -77,7 +76,7 @@ $musicXML = new MusicXML();
 try
 {
     $midi = $musicXML->loadMidi("test.mid");
-    $mxl = $musicXML->midiToMusicXml($midi, "Test", "4.0", MXL::FORMAT_MXL);
+    $mxl = $musicXML->midiToMusicXml($midi, "Test", "4.0", "mxl");
     file_put_contents("convert.mxl", $mxl);
 }
 catch(Exception $e)
