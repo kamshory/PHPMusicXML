@@ -118,7 +118,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $timebase
      * @return void
      */
-    private function processDuration1($timebase)
+    private function processDuration1($timebase) //NOSONAR
     {
         $lastTime = array();
         foreach ($this->measures as $ch => $chValue) {
@@ -211,7 +211,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param mixed $v
      * @return void
      */
-    private function addEvent($eventName, $message, $timebase, $abstime, $n = 0, $ch = 0, $v = 0)
+    private function addEvent($eventName, $message, $timebase, $abstime, $n = 0, $ch = 0, $v = 0) //NOSONAR
     {
         $rawtime = $message[0];
         $tm = $message[0] / (4 * $timebase);
@@ -851,7 +851,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $measureIndex
      * @return Measure
      */
-    private function getMeasure($partId, $channelId, $measureIndex, $timebase)
+    private function getMeasure($partId, $channelId, $measureIndex, $timebase) //NOSONAR
     {
         $measure = new Measure();
         $attributes = new Attributes();
@@ -890,7 +890,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             if (!empty($controlEvents)) 
             {
-                foreach ($controlEvents as $message) 
+                foreach ($controlEvents as $message) //NOSONAR
                 {
                     // do it here
                 }
