@@ -401,7 +401,7 @@ class MusicXMLBase
         24 => array('Classical Guitar', 'Guit.', 'pluck.guitar.nylon-string'),
         25 => array('Acoustic Guitar', 'Guit.', 'pluck.guitar.acoustic'),
         26 => array('Jazz Electric Gtr', 'J. El. Guit.', 'pluck.guitar.electric'),
-        27 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
+        27 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'), //NOSONAR
         28 => array('Muted Guitar', ''),
         29 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
         30 => array('Electric Guitar', 'El. Guit.', 'pluck.guitar.electric'),
