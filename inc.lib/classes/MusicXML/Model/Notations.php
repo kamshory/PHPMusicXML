@@ -36,4 +36,22 @@ class Notations extends MusicXMLWriter
      * @var Articulations
      */
     public $articulations;
+    
+    /**
+     * Footnote
+     *
+     * @Element
+     * @var Footnote
+     */
+    public $footnote;
+    
+    /**
+     * Level
+     *
+     * @Element
+     * @var Level
+     */
+    public $level;
+    
+    
 }

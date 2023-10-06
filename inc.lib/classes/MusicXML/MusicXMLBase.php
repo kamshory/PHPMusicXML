@@ -5,6 +5,7 @@ namespace MusicXML;
 use DateTime;
 use DOMDocument;
 use DOMImplementation;
+use Exceptions\FileNotFoundException;
 use Midi\MidiMeasure;
 use MusicXML\Model\Articulations;
 use MusicXML\Model\Encoding;
@@ -35,9 +36,16 @@ class MusicXMLBase
 
     public function loadMidi($midiPath)
     {
-        $midi = new MidiMeasure();
-        $midi->importMid($midiPath);
-        return $midi;
+        if(file_exists($midiPath))
+        {
+            $midi = new MidiMeasure();
+            $midi->importMid($midiPath);
+            return $midi;
+        }
+        else
+        {
+            throw new FileNotFoundException("Specified file does not exists");
+        }
     }
 
     public function calculateDuration($duration0, $divisions, $timebase)
