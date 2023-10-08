@@ -14,6 +14,22 @@ use MusicXML\MusicXMLWriter;
 class Notations extends MusicXMLWriter
 {
     /**
+     * ID
+     *
+     * @Attribute
+     * @var string
+     */
+    public $id;
+
+    /**
+     * Print object
+     *
+     * @Attribute(name="print-object")
+     * @var string
+     */
+    public $printObject;
+    
+    /**
      * Tied list
      *
      * @Element
