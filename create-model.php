@@ -1,7 +1,4 @@
 <?php
-$url = 'https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-technical/';
-
-libxml_use_internal_errors(true);
 
 
 
@@ -16,6 +13,48 @@ function clean($text)
 {
     return html_entity_decode(trim(str_replace(';', '-', preg_replace('/\s+/S', " ", strip_tags($text))))); // remove everything
 }
+
+
+
+function createAttribute($name, $value)
+{
+    $type = getAttrType($name);
+    $attributeName = lcfirst(str_replace(' ', '', ucwords(str_replace('-', ' ', $name))));
+    $attribute = "\t/**
+\t * ".ucfirst(str_replace('-', ' ', $name))."
+\t *
+\t * @Attribute(name=\"$name\")
+\t * @var $type
+\t */
+\tpublic \$$attributeName;
+";
+    return $attribute;
+}
+
+function getAttrType($name)
+{
+    $types = array(
+        'dash-length'=>'float',
+        'default-x'=>'float',
+        'default-y'=>'float',
+        'relative-x'=>'float',
+        'relative-y'=>'float',
+        'first-beat'=>'float',
+        'space-length'=>'float'
+    );
+    
+    return isset($types[$name])?$types[$name]:'string';
+}
+
+
+
+function getObject($element)
+{
+
+$url = "https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/$element/";
+
+libxml_use_internal_errors(true);
+
 
 $name = basename($url);
 
@@ -87,33 +126,4 @@ else
     echo "FILE EXISTS\r\n";
 }
 
-
-function createAttribute($name, $value)
-{
-    $type = getAttrType($name);
-    $attributeName = lcfirst(str_replace(' ', '', ucwords(str_replace('-', ' ', $name))));
-    $attribute = "\t/**
-\t * ".ucfirst(str_replace('-', ' ', $name))."
-\t *
-\t * @Attribute(name=\"$name\")
-\t * @var $type
-\t */
-\tpublic \$$attributeName;
-";
-    return $attribute;
-}
-
-function getAttrType($name)
-{
-    $types = array(
-        'dash-length'=>'float',
-        'default-x'=>'float',
-        'default-y'=>'float',
-        'relative-x'=>'float',
-        'relative-y'=>'float',
-        'first-beat'=>'float',
-        'space-length'=>'float'
-    );
-    
-    return isset($types[$name])?$types[$name]:'string';
 }
