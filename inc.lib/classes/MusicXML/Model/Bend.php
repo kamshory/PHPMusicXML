@@ -123,5 +123,29 @@ class Bend extends MusicXMLWriter
 	 * @var string
 	 */
 	public $shape;
+	
+	/**
+	 * Bend alter
+	 *
+	 * @Element(name="bend-alter")
+	 * @var BendAlter
+	 */
+	public $bendAlter;
+	
+	/**
+	 * Pre bend
+	 *
+	 * @Element(name="pre-bend")
+	 * @var PreBend[]
+	 */
+	public $preBend;
+	
+	/**
+	 * Release
+	 *
+	 * @Element(name="release")
+	 * @var Release[]
+	 */
+	public $release;
     
 }

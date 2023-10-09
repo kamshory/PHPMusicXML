@@ -936,6 +936,18 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
             // end add note
             
+            
+            if (!empty($controlEvents)) 
+            {
+                foreach ($controlEvents as $message) //NOSONAR
+                {
+                    if($message['event'] == 'Part')
+                    {
+                        
+                    }
+                }
+            }
+            
         } 
         else 
         {
