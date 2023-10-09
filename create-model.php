@@ -1,5 +1,5 @@
 <?php
-$url = 'https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/haydn/';
+$url = 'https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sounding-pitch/';
 
 libxml_use_internal_errors(true);
 
