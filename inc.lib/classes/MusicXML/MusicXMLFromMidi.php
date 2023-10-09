@@ -24,6 +24,8 @@ use MusicXML\Properties\TimeSignature;
 
 class MusicXMLFromMidi extends MusicXMLBase
 {
+    private $widthScale = 30;
+    private $minWidth = 120;
     /**
      * Part list
      *
@@ -79,7 +81,14 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var integer[]
      */
     private $measureDivisions = array();
-    
+
+    /**
+     * Default measure width
+     *
+     * @var array
+     */
+    private $measureWidth = array();
+
     private $noteMin = 127;
     private $noteMax = 0;
 
@@ -681,7 +690,17 @@ class MusicXMLFromMidi extends MusicXMLBase
         {
             $maxMeasure = 1;
         }
+        
+        // begin process pitch bend
+        // TODO: process pitch bend here
+        // end process pitch bend
 
+        
+        // begin process chord
+        // TODO: process chord here
+        // end process chord
+        
+        
         // begin part
 
         foreach ($this->partList as $part) {
@@ -833,6 +852,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         if(!isset($this->measureDivisions[$measureIndex]) || $this->measureDivisions[$measureIndex] < $divisions)
         {
             $this->measureDivisions[$measureIndex] = $divisions;
+            $width = $divisions * $this->widthScale;
+            if($width < $this->minWidth)
+            {
+                $width = $this->minWidth;
+            }
+            $this->measureWidth[$measureIndex] = $width;
         }
     }
     
@@ -846,7 +871,18 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         return isset($this->measureDivisions[$measureIndex]) ? $this->measureDivisions[$measureIndex] : 1;
     }
-    
+
+    /**
+     * Get measure width
+     *
+     * @param integer $measureIndex
+     * @return float
+     */
+    private function getWidth($measureIndex)
+    {
+        return isset($this->measureWidth[$measureIndex]) ? $this->measureWidth[$measureIndex] : $this->minWidth;
+    }
+
     /**
      * Get measure
      *
@@ -903,6 +939,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             // begin add attribute
             
             $divisions = $this->getDivisions($measureIndex);
+            $measureWidth = $this->getWidth($measureIndex);
             $attributes->divisions = $divisions;                   
             $attributes->time = $this->getTime($this->timeSignature);           
             $attributes->clef = $this->clefs[$channelId];
@@ -936,7 +973,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note0->type = $this->getNoteType($note0->duration, $divisions);
                 $measure->note[] = $note0;
                 
-                $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
+                $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase);
             }
             // end add note
             
@@ -1042,10 +1079,8 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $timebase
      * @return Measure
      */
-    private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase)
+    private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase)
     {
-        // TODO: if there are notes overlaped, make backup
-
         foreach ($noteMessages as $message) {
             $duration = $this->calculateDuration($message['duration'], $divisions, $timebase);    
             if($duration > 0)    
@@ -1074,6 +1109,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $note->notations = array($this->getNotation());
                     $note->duration = $duration;
                     $note->type = $this->getNoteType($note->duration, $divisions);
+                    $note->defaultX = $this->getDefaultX($channelId, $divisions, $measureWidth, $timebase, $message);
                     $measure->note[] = $note;
                 }
                 else
@@ -1090,10 +1126,14 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $measure->note[] = $note;
             }
         }
+        $measure->width = $measureWidth;
         return $measure;
     }
     
     
-    
+    protected function getDefaultX($channelId, $divisions, $timebase, $measureWidth, $message)
+    {
+        //TODO: note must have margin left information relative to its measure
+    }
     
 }

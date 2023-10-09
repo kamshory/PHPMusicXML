@@ -25,7 +25,7 @@ class Measure extends MusicXMLWriter
      * Width
      * 
      * @Attribute
-     * @var string
+     * @var float
      */
     public $width;
 
