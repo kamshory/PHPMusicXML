@@ -31,4 +31,9 @@ class Coordinate
      * @var string
      */
     public $relativeY;
+    
+    public function __toString()
+    {
+        return json_encode($this);
+    }
 }

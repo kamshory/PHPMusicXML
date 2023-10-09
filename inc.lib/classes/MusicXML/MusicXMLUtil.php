@@ -24,8 +24,8 @@ class MusicXMLUtil
     public static function getNoteCoordinate($measureIndex, $message, $divisions, $timebase)
     {
         $coordinate = new Coordinate();       
-        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
-        $coordinate->defaultX = ($timeRelative / $timebase) * $divisions;
+        $timeRelative = $message['time'] - $measureIndex;
+        $coordinate->defaultX = $timeRelative * $divisions;
         return $coordinate;
     }
     

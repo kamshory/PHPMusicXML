@@ -24,7 +24,7 @@ use MusicXML\Properties\TimeSignature;
 
 class MusicXMLFromMidi extends MusicXMLBase
 {
-    private $widthScale = 30;
+    private $widthScale = 6;
     private $minWidth = 120;
     /**
      * Part list
@@ -964,7 +964,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
                 $note0 = new Note();
                 $note0->rest = new Rest();
-                $duration0 = $message0['abstime'] - ($measureIndex * 4 * $timebase);
+                $duration0 = $message0['time'] - ($measureIndex * 4 * $timebase);
                 $duration0 = $this->calculateDuration($duration0, $divisions, $timebase);
                 
                 $note0->duration = $duration0;
@@ -1109,7 +1109,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $note->notations = array($this->getNotation());
                     $note->duration = $duration;
                     $note->type = $this->getNoteType($note->duration, $divisions);
-                    $note->defaultX = $this->getDefaultX($channelId, $divisions, $measureWidth, $timebase, $message);
                     $measure->note[] = $note;
                 }
                 else
