@@ -12,5 +12,11 @@ use MusicXML\MusicXMLWriter;
  */
 class BendAlter extends MusicXMLWriter
 {
-    
+    /**
+     * Text content
+     *
+     * @TextContent
+     * @var float
+     */
+    public $textContent;
 }
