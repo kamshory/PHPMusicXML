@@ -9,6 +9,10 @@ use MusicXML\Util\PicoAnnotationParser;
 use ReflectionClass;
 use stdClass;
 
+/**
+ * MusicXMLWrtiter to write MusicXML document using annotation
+ * See https://github.com/kamshory/PHPMusicXML
+ */
 class MusicXMLWriter // NOSONAR
 {
 
