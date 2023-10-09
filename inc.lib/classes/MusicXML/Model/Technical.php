@@ -7,7 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Technical
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/technical/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/fret/
  * @Data
  */
 class Technical extends MusicXMLWriter
@@ -100,4 +100,20 @@ class Technical extends MusicXMLWriter
 	 * @var Stopped[]
 	 */
 	public $stopped;
+
+	/**
+	 * Snap pizzicato
+	 *
+	 * @Element(name="snap-pizzicato")
+	 * @var SnapPizzicato[]
+	 */
+	public $snapPizzicato;
+
+	/**
+	 * Fret
+	 *
+	 * @Element(name="fret")
+	 * @var Fret[]
+	 */
+	public $fret;
 }
