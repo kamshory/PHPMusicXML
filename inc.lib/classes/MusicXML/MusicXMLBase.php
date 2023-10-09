@@ -229,7 +229,7 @@ class MusicXMLBase
         return $scorePart;
     }
     /**
-     * Create new DOMDocument
+     * Create new DOMDocument for MusicXML version 4.0
      *
      * @return DOMDocument
      */

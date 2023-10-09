@@ -5,12 +5,12 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * MusicXMLString
+ * Fingernails
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/string/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/fingernails/
  * @Data
  */
-class MusicXMLString extends MusicXMLWriter
+class Fingernails extends MusicXMLWriter
 {
 	/**
 	 * Color
@@ -91,13 +91,5 @@ class MusicXMLString extends MusicXMLWriter
 	 * @var float
 	 */
 	public $relativeY;
-	
-	/**
-	 * Text content
-	 *
-	 * @TextContent
-	 * @var string
-	 */
-	public $textContent;
     
 }

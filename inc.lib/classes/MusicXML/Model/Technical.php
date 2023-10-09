@@ -7,7 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Technical
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/fret/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/technical/
  * @Data
  */
 class Technical extends MusicXMLWriter
@@ -121,9 +121,9 @@ class Technical extends MusicXMLWriter
 	 * String
 	 *
 	 * @Element(name="string")
-	 * @var MusicXMLString[]
+	 * @var XString[]
 	 */
-	public $musicXMLString;
+	public $string;
 
 	/**
 	 * Hummer on
@@ -148,4 +148,124 @@ class Technical extends MusicXMLWriter
 	 * @var Bend[]
 	 */
 	public $bend;
+	
+	/**
+	 * Tap
+	 *
+	 * @Element(name="tap")
+	 * @var Tap[]
+	 */
+	public $tap;
+	
+	/**
+	 * Heel
+	 *
+	 * @Element(name="heel")
+	 * @var Heel[]
+	 */
+	public $heel;
+	
+	/**
+	 * Toe
+	 *
+	 * @Element(name="toe")
+	 * @var Toe[]
+	 */
+	public $toe;
+	
+	/**
+	 * Fingernails
+	 *
+	 * @Element(name="fingernails")
+	 * @var Fingernails[]
+	 */
+	public $fingernails;
+	
+	/**
+	 * Hole
+	 *
+	 * @Element(name="hole")
+	 * @var Hole[]
+	 */
+	public $hole;
+	
+	/**
+	 * Arrow
+	 *
+	 * @Element(name="arrow")
+	 * @var Arrow[]
+	 */
+	public $arrow;
+	
+	/**
+	 * Handbell
+	 *
+	 * @Element(name="handbell")
+	 * @var Handbell[]
+	 */
+	public $handbell;
+	
+	/**
+	 * Bass bend
+	 *
+	 * @Element(name="brass-bend")
+	 * @var BrassBend[]
+	 */
+	public $brassBend;
+	
+	/**
+	 * Flip
+	 *
+	 * @Element(name="flip")
+	 * @var Flip[]
+	 */
+	public $flip;
+	
+	/**
+	 * Smear
+	 *
+	 * @Element(name="smear")
+	 * @var Smear[]
+	 */
+	public $smear;
+	
+	/**
+	 * Open
+	 *
+	 * @Element(name="open")
+	 * @var Open[]
+	 */
+	public $open;
+	
+	/**
+	 * Half muted
+	 *
+	 * @Element(name="half-muted")
+	 * @var HalfMuted[]
+	 */
+	public $halfMuted;
+	
+	/**
+	 * Harmon muted
+	 *
+	 * @Element(name="harmon-mute")
+	 * @var HarmonMute[]
+	 */
+	public $harmonMute;
+	
+	/**
+	 * Golpe
+	 *
+	 * @Element(name="golpe")
+	 * @var Golpe[]
+	 */
+	public $golpe;
+	
+	/**
+	 * Other technical
+	 *
+	 * @Element(name="other-technical")
+	 * @var OtherTechnical[]
+	 */
+	public $otherTechnical;
 }

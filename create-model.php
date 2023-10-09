@@ -1,5 +1,5 @@
 <?php
-$url = 'https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/arrow/';
+$url = 'https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-technical/';
 
 libxml_use_internal_errors(true);
 
