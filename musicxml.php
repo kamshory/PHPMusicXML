@@ -40,7 +40,9 @@ function getAttrType($name)
         'relative-x'=>'float',
         'relative-y'=>'float',
         'first-beat'=>'float',
-        'space-length'=>'float'
+        'space-length'=>'float',
+        'elevation'=>'float',
+        'tempo'=>'integer'
     );
     
     return isset($types[$name])?$types[$name]:'string';
