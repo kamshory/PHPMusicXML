@@ -116,4 +116,36 @@ class Technical extends MusicXMLWriter
 	 * @var Fret[]
 	 */
 	public $fret;
+
+	/**
+	 * String
+	 *
+	 * @Element(name="string")
+	 * @var MusicXMLString[]
+	 */
+	public $musicXMLString;
+
+	/**
+	 * Hummer on
+	 *
+	 * @Element(name="hammer-on")
+	 * @var HammerOn[]
+	 */
+	public $hummerOn;
+
+	/**
+	 * Pull off
+	 *
+	 * @Element(name="pull-off")
+	 * @var PullOff[]
+	 */
+	public $pullOff;
+
+	/**
+	 * Bend
+	 *
+	 * @Element(name="bend")
+	 * @var Bend[]
+	 */
+	public $bend;
 }

@@ -86,7 +86,7 @@ catch(Exception $e)
 ## Progress
 
 1. October 5th 2023 - result is playable but duration longer than expected
-2. October 9th 2023 - 21 percent element created
+2. October 9th 2023 - 21 percent (95 of 444) elements created
 
 ## Support Is Required
 

@@ -5,12 +5,12 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * String
+ * Toe
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/string/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/toe/
  * @Data
  */
-class MusicXMLString extends MusicXMLWriter
+class Toe extends MusicXMLWriter
 {
 	/**
 	 * Color
@@ -91,13 +91,13 @@ class MusicXMLString extends MusicXMLWriter
 	 * @var float
 	 */
 	public $relativeY;
-	
+
 	/**
-	 * Text content
+	 * Substitution
 	 *
-	 * @TextContent
+	 * @Attribute(name="substitution")
 	 * @var string
 	 */
-	public $textContent;
+	public $substitution;
     
 }
