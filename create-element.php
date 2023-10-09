@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . "/create-model.php";
+require_once __DIR__ . "/musicxml.php";
 
 function getDescription($name)
 {
@@ -16,23 +16,33 @@ function getPropertyName($name)
 }
 
 $elementList = '
-<accent>
-<strong-accent>
-<staccato>
-<tenuto>
-<detached-legato>
-<staccatissimo>
-<spiccato>
-<scoop>
-<plop>
-<doit>
-<falloff>
-<breath-mark>
-<caesura>
-<stress>
-<unstress>
-<soft-accent>
-<other-articulation>
+<p>
+<pp>
+<ppp>
+<pppp>
+<ppppp>
+<pppppp>
+<f>
+<ff>
+<fff>
+<ffff>
+<fffff>
+<ffffff>
+<mp>
+<mf>
+<sf>
+<sfp>
+<sfpp>
+<fp>
+<rf>
+<rfz>
+<sfz>
+<sffz>
+<fz>
+<n>
+<pf>
+<sfzp>
+<other-dynamics>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 
