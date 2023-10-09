@@ -17,13 +17,10 @@ function getPropertyName($name)
 
 $elementList = '
 
-<instrument-change>
-<midi-device>
-<midi-instrument>
-<play>
+<assess>
+<wait>
+<other-listen>
 
-<swing>
-<offset>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 
