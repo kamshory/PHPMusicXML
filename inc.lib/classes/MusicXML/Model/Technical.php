@@ -43,5 +43,61 @@ class Technical extends MusicXMLWriter
 	 * @var Harmonic[]
 	 */
 	public $harmonic;
+
+	/**
+	 * Open string
+	 *
+	 * @Element(name="open-string")
+	 * @var OpenString[]
+	 */
+	public $openString;
+
+	/**
+	 * Thumb position
+	 *
+	 * @Element(name="thumb-position")
+	 * @var ThumbPosition[]
+	 */
+	public $thumbPosition;
+
+	/**
+	 * Fingering
+	 *
+	 * @Element(name="fingering")
+	 * @var Fingering[]
+	 */
+	public $fingering;
+
+	/**
+	 * Pluck
+	 *
+	 * @Element(name="pluck")
+	 * @var Pluck[]
+	 */
+	public $pluck;
+
+	/**
+	 * Double tongue
+	 *
+	 * @Element(name="double-tongue")
+	 * @var DoubleTongue[]
+	 */
+	public $doubleTongue;
     
+	/**
+	 * Triple tongue
+	 *
+	 * @Element(name="triple-tongue")
+	 * @var TripleTongue[]
+	 */
+	public $tripleTongue;
+
+
+	/**
+	 * Stopped
+	 *
+	 * @Element(name="stopped")
+	 * @var Stopped[]
+	 */
+	public $stopped;
 }
