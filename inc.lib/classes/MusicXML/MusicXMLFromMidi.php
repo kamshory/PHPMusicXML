@@ -6,15 +6,19 @@ use DOMDocument;
 use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Model\Attributes;
+use MusicXML\Model\Bend;
 use MusicXML\Model\Measure;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
 use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
+use MusicXML\Model\PreBend;
+use MusicXML\Model\Release;
 use MusicXML\Model\Rest;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
+use MusicXML\Model\Technical;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -851,7 +855,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $measureIndex
      * @return Measure
      */
-    private function getMeasure($partId, $channelId, $measureIndex, $timebase) //NOSONAR
+    private function getMeasure($partId, $channelId, $measureIndex, $timebase)
     {
         $measure = new Measure();
         $attributes = new Attributes();
@@ -939,11 +943,35 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             if (!empty($controlEvents)) 
             {
+                $pbIndexes = array();
                 foreach ($controlEvents as $message) //NOSONAR
                 {
-                    if($message['event'] == 'Part')
+                    if($message['event'] == 'Pb')
                     {
-                        
+                        $idx = $this->getNoteIndex($noteMessages, $message['time'], $timebase);
+                        if($idx !== false)
+                        {
+                            $pbIndexes[] = array($idx, $message['value']);
+                        }
+                    }                
+                }
+                
+                // pre bend
+                foreach($pbIndexes as $pitchBend)
+                {
+                    if(isset($measure->note[$idx]->notations) && is_array(isset($measure->note[$idx]->notations)) && !empty(isset($measure->note[$idx]->notations)))
+                    {
+                        $bend = $this->getBend($pitchBend[0]);
+                        $technical = new Technical();
+                        $technical->bend = array($bend);
+                        if(!isset($measure->note[$idx]->notations[0]->technical))
+                        {
+                            $measure->note[$idx]->notations[0]->technical = array($technical);
+                        }
+                        else
+                        {
+                            $measure->note[$idx]->notations[0]->technical[0] = $technical;
+                        }
                     }
                 }
             }
@@ -956,6 +984,51 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         $measure->attributes = $attributes;
         return $measure;
+    }
+    
+    /**
+     * Get bend
+     *
+     * @param integer $value
+     * @return Bend
+     */
+    protected function getBend($value, $preBend = false, $release = false)
+    {
+        $bend = new Bend();
+        $bend->bendAlter = round(($value-8192)*2/16383, 4);
+        if($preBend)
+        {
+            $bend->preBend = new PreBend();
+        }
+        if($release)
+        {
+            $bend->release = new Release();
+        }
+        return $bend;
+    }
+    
+    /**
+     * Get index of note of channel
+     *
+     * @param array $noteMessages
+     * @param integer $time
+     * @param integer $timebase
+     * @return integer | false
+     */
+    protected function getNoteIndex($noteMessages, $time, $timebase)
+    {
+        // reverse
+        $keys = array_keys($noteMessages);
+        $reversed = array_reverse($keys);
+        foreach($reversed as $key)
+        {
+            $duration = $noteMessages[$key]['duration'] * $timebase;
+            if($noteMessages[$key]['time'] < $time && ($noteMessages[$key]['time'] + $duration) > $time)
+            {
+                return $key;
+            }
+        }
+        return false;
     }
     
     /**
@@ -998,7 +1071,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $note->accidental = 'flat';
                     }
                     $note->stem = 'up';
-                    $note->notations = $this->getNotation();
+                    $note->notations = array($this->getNotation());
                     $note->duration = $duration;
                     $note->type = $this->getNoteType($note->duration, $divisions);
                     $measure->note[] = $note;

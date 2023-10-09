@@ -16,33 +16,11 @@ function getPropertyName($name)
 }
 
 $elementList = '
-<p>
-<pp>
-<ppp>
-<pppp>
-<ppppp>
-<pppppp>
-<f>
-<ff>
-<fff>
-<ffff>
-<fffff>
-<ffffff>
-<mp>
-<mf>
-<sf>
-<sfp>
-<sfpp>
-<fp>
-<rf>
-<rfz>
-<sfz>
-<sffz>
-<fz>
-<n>
-<pf>
-<sfzp>
-<other-dynamics>
+
+<ipa>
+<mute>
+<semi-pitched>
+<other-play>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 

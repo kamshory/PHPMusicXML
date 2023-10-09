@@ -83,7 +83,7 @@ class Note extends MusicXMLWriter
     
     /**
      * @Element
-     * @var Notations
+     * @var Notations[]
      */
     public $notations;
 
