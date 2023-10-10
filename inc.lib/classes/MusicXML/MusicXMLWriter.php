@@ -69,9 +69,9 @@ class MusicXMLWriter // NOSONAR
             {
                 $this->objectName = $vals['name'];
             }
-        }
-        if($data != null)
-        {
+            }
+            if($data != null)
+            {
             if($data instanceof DOMNode)
             {
                 $this->loadXml($data);
@@ -289,7 +289,7 @@ class MusicXMLWriter // NOSONAR
             $index = 0;
             foreach($filter as $val)
             {
-                $tmp[$index] = trim($this->camelize($val));               
+                $tmp[$index] = trim($this->camelize($val));   
                 $index++;
             }
             $filter = $tmp;
