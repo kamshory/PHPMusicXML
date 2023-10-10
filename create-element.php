@@ -17,9 +17,10 @@ function getPropertyName($name)
 
 $elementList = '
 
-<tuning-step>
-<tuning-alter>
-<tuning-octave>
+
+<accordion-high>
+<accordion-middle>
+<accordion-low>
 
 
 ';

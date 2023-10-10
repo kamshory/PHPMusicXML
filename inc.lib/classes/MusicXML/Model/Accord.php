@@ -24,7 +24,7 @@ class Accord extends MusicXMLWriter
      * Tuning step
      *
      * @Element(name="tuning-step")
-     * @var TuningStep[]
+     * @var TuningStep
      */
     public $tuningStep;
 
@@ -32,7 +32,7 @@ class Accord extends MusicXMLWriter
      * Tuning alter
      *
      * @Element(name="tuning-alter")
-     * @var TuningAlter[]
+     * @var TuningAlter
      */
     public $tuningAlter;
 
@@ -40,7 +40,7 @@ class Accord extends MusicXMLWriter
      * Tuning octave
      *
      * @Element(name="tuning-octave")
-     * @var TuningOctave[]
+     * @var TuningOctave
      */
     public $tuningOctave;
 
