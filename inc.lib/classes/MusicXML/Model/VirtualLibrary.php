@@ -13,10 +13,10 @@ use MusicXML\MusicXMLWriter;
 class VirtualLibrary extends MusicXMLWriter
 {
     /**
-	 * Text content
-	 *
-	 * @TextContent
-	 * @var integer
-	 */
-	public $textContent;
+     * Text content
+     *
+     * @TextContent
+     * @var integer
+     */
+    public $textContent;
 }
