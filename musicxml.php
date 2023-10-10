@@ -19,7 +19,7 @@ function clean($text)
 function createAttribute($name, $value)
 {
     $type = getAttrType($name);
-    $attributeName = lcfirst(str_replace(' ', '', ucwords(str_replace('-', ' ', $name))));
+    $attributeName = lcfirst(str_replace(' ', '', ucwords(str_replace(array('-', ':'), ' ', $name))));
     $attribute = "\t/**
 \t * ".ucfirst(str_replace('-', ' ', $name))."
 \t *

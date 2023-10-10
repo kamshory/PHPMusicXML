@@ -23,8 +23,8 @@ class Pitch extends MusicXMLWriter
     /**
      * Alter
      *
-     * @PropertyElement
-     * @var integer
+     * @Element
+     * @var Alter
      */
     public $alter;
     

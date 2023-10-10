@@ -17,9 +17,12 @@ function getPropertyName($name)
 
 $elementList = '
 
-<assess>
-<wait>
-<other-listen>
+<line-width>
+<note-size>
+<distance>
+<glyph>
+<other-appearance>
+
 
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
