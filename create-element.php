@@ -17,11 +17,9 @@ function getPropertyName($name)
 
 $elementList = '
 
-<line-width>
-<note-size>
-<distance>
-<glyph>
-<other-appearance>
+<tuning-step>
+<tuning-alter>
+<tuning-octave>
 
 
 ';
