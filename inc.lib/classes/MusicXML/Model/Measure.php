@@ -22,6 +22,38 @@ class Measure extends MusicXMLWriter
     public $number;
     
     /**
+     * ID
+     *
+     * @Attribute
+     * @var string
+     */
+    public $id;
+    
+    /**
+     * Implicit
+     *
+     * @Attribute
+     * @var string
+     */
+    public $implicit;
+    
+    /**
+     * Non controlling
+     *
+     * @Attribute(name="non-controlling")
+     * @var string
+     */
+    public $nonControlling;
+    
+    /**
+     * Text
+     * 
+     * @Attribute
+     * @var string
+     */
+    public $text;
+    
+    /**
      * Width
      * 
      * @Attribute
@@ -61,5 +93,28 @@ class Measure extends MusicXMLWriter
      */
     public $backup;
     
+    /**
+     * Grouping
+     *
+     * @Element(name="grouping")
+     * @var Grouping[]
+     */
+    public $grouping;
+    
+    /**
+     * Link
+     *
+     * @Element(name="link")
+     * @var Link[]
+     */
+    public $link;
+    
+    /**
+     * Bookmark
+     *
+     * @Element
+     * @var Bookmark[]
+     */
+    public $bookmark;
     
 }

@@ -28,10 +28,16 @@ $elementList = str_replace(array('<', '>'), '', $elementList);
 
 $elements = explode("\r\n", $elementList);
 $props = array();
-foreach($elements as $element)
+foreach($elements as $elementFull)
 {
+    $element = str_replace(array('[', ']'), '', $elementFull);
+    
     if(!empty($element))
     {
+        
+        $isArray = stripos($elementFull, '[') !== false;
+        $mark = $isArray ? '[]' : '';
+        
         getObject($element);
         $className = getClassName($element);
         $description = getDescription($element);
@@ -40,7 +46,7 @@ foreach($elements as $element)
         ."\t * ".$description."\r\n"
         ."\t *\r\n"
         ."\t * @Element(name=\"".$element."\")\r\n"
-        ."\t * @var $className"."["."]\r\n"
+        ."\t * @var $className"."$mark\r\n"
         ."\t */\r\n"
         ."\tpublic \$".$propertyName.";\r\n\r\n";
         $props[] = $prop;

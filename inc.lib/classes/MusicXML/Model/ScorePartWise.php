@@ -49,7 +49,7 @@ class ScorePartWise extends MusicXMLWriter
      * Part. Part of the music. One part represent one instrument or group instrument
      *
      * @Element
-     * @var Part[]
+     * @var PartPartwise[]
      */
     public $part;
 }

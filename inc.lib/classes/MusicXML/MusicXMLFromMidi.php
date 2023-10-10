@@ -11,8 +11,8 @@ use MusicXML\Model\Bend;
 use MusicXML\Model\Measure;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Note;
-use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
+use MusicXML\Model\PartPartwise;
 use MusicXML\Model\PreBend;
 use MusicXML\Model\Release;
 use MusicXML\Model\Rest;
@@ -707,14 +707,14 @@ class MusicXMLFromMidi extends MusicXMLBase
         foreach ($this->partList as $part) {
             $partId = $part['partId'];
             $channelId = $part['channelId'];
-            $parts = new Part();
-            $parts->id = $partId;
-            $parts->measure = array();
+            $part = new PartPartwise();
+            $part->id = $partId;
+            $part->measure = array();
             for ($measureIndex = 0; $measureIndex < $maxMeasure; $measureIndex++) {
                 $measure = $this->getMeasure($partId, $channelId, $measureIndex, $timebase);
-                $parts->measure[] = $measure;
+                $part->measure[] = $measure;
             }
-            $scorePartwise->part[] = $parts;
+            $scorePartwise->part[] = $part;
         }
         // end part
 

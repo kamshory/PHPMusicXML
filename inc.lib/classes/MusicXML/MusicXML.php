@@ -10,8 +10,8 @@ use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
-use MusicXML\Model\Part;
 use MusicXML\Model\PartList;
+use MusicXML\Model\PartPartwise;
 use MusicXML\Model\ScorePartwise;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
@@ -101,7 +101,7 @@ class MusicXML extends MusicXMLBase
 
         $scorePartwise->part = array();
 
-        $part = new Part();
+        $part = new PartPartwise();
         $part->id = "P1";
         $part->measure = array();
 
