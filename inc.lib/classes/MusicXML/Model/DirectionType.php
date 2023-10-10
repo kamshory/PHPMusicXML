@@ -14,6 +14,14 @@ use MusicXML\MusicXMLWriter;
 class DirectionType extends MusicXMLWriter
 {
     /**
+     * ID
+     *
+     * @Attribute(name="id")
+     * @var string
+     */
+    public $id;
+    
+    /**
      * Metronome
      *
      * @Element
