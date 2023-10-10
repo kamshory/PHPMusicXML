@@ -15,8 +15,8 @@ class Pitch extends MusicXMLWriter
     /**
      * Step
      *
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Step
      */
     public $step;
     

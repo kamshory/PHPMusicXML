@@ -5,6 +5,7 @@ namespace MusicXML;
 use DOMDocument;
 use DOMNode;
 use Midi\MidiMeasure;
+use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Bend;
 use MusicXML\Model\Measure;
@@ -1097,13 +1098,20 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $note->dynamics = floatval(sprintf("%.2f", $message['value'] / 0.9));
                     $pitch = $this->getPitch($noteCode);
                     $note->pitch = $pitch;
-                    if($pitch->alter > 0)
+                    if(isset($pitch->alter))
                     {
-                        $note->accidental = 'sharp';
-                    }
-                    else if($pitch->alter < 0)
-                    {
-                        $note->accidental = 'flat';
+                        if($pitch->alter->textContent > 0)
+                        {
+                            $accidental = new Accidental();
+                            $accidental->textContent = 'sharp';
+                            $note->accidental = $accidental;
+                        }
+                        else if($pitch->alter < 0)
+                        {
+                            $accidental = new Accidental();
+                            $accidental->textContent = 'flat';
+                            $note->accidental = $accidental;
+                        }
                     }
                     $note->stem = 'up';
                     $note->notations = array($this->getNotation());

@@ -7,6 +7,7 @@ use DOMDocument;
 use DOMImplementation;
 use Exceptions\FileNotFoundException;
 use Midi\MidiMeasure;
+use MusicXML\Model\Alter;
 use MusicXML\Model\Articulations;
 use MusicXML\Model\Encoding;
 use MusicXML\Model\Identification;
@@ -19,6 +20,7 @@ use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\Software;
 use MusicXML\Model\Staccato;
+use MusicXML\Model\Step;
 use MusicXML\Model\Supports;
 use MusicXML\Model\Time;
 use MusicXML\Properties\TimeSignature;
@@ -282,7 +284,10 @@ class MusicXMLBase
     {
         $pitchStr = $this->noteList[$note];
         $pitch = new Pitch();
-        $pitch->step = preg_replace("/[^A-G]/", "", $pitchStr);
+        $step = new Step();
+        $step->textContent = preg_replace("/[^A-G]/", "", $pitchStr);
+        $pitch->step = $step;
+        
         $octaveStr = (preg_replace("/[^\-\d]/", "", $pitchStr));
         if(empty($octaveStr))
         {
@@ -290,7 +295,9 @@ class MusicXMLBase
         }
         $pitch->octave = intval($octaveStr);
         if (strpos($pitchStr, 's') !== false) {
-            $pitch->alter = 1;
+            $alter = new Alter();
+            $alter->textContent = 1;
+            $pitch->alter = $alter;
         }
         if($pitch->step == 'B' && $pitch->octave == -1)
         {
