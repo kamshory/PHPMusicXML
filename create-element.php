@@ -16,16 +16,10 @@ function getPropertyName($name)
 }
 
 $elementList = '
-<credit-type>[]
-<link>[]
-<bookmark>[]
-<credit-image>
-<credit-words>
-<credit-symbol>
-<link>[]
-<bookmark>[]
-<credit-words>
-<credit-symbol>
+
+<virtual-library>
+<virtual-name>
+
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 

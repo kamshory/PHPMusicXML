@@ -19,5 +19,29 @@ class InstrumentChange extends MusicXMLWriter
 	 * @var string
 	 */
 	public $id;
+	
+	/**
+	 * Instrument sound
+	 *
+	 * @Element(name="instrument-sound")
+	 * @var InstrumentSound
+	 */
+	public $instrumentSound;
+	
+	/**
+	 * Solo
+	 *
+	 * @Element(name="solo")
+	 * @var Solo
+	 */
+	public $solo;
+	
+	/**
+	 * Ensemble
+	 *
+	 * @Element(name="ensemble")
+	 * @var Ensemble
+	 */
+	public $ensemble;
     
 }
