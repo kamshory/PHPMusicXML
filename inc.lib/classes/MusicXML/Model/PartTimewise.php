@@ -57,7 +57,7 @@ class PartTimewise extends MusicXMLWriter
      * Attribute list
      *
      * @Element(name="attributes")
-     * @var Attributes
+     * @var Attributes[]
      */
     public $attributes;
 
@@ -66,7 +66,7 @@ class PartTimewise extends MusicXMLWriter
      * Hamony
      *
      * @Element(name="hamony")
-     * @var Hamony
+     * @var Hamony[]
      */
     public $hamony;
     
@@ -74,7 +74,7 @@ class PartTimewise extends MusicXMLWriter
      * FiguredBass
      *
      * @Element(name="figuredBass")
-     * @var FiguredBass
+     * @var FiguredBass[]
      */
     public $figuredBass;
 
@@ -98,7 +98,7 @@ class PartTimewise extends MusicXMLWriter
      * Listening
      *
      * @Element
-     * @var Listening
+     * @var Listening[]
      */
     public $listening;
     
@@ -107,7 +107,7 @@ class PartTimewise extends MusicXMLWriter
      * Baseline
      *
      * @Element
-     * @var Baseline
+     * @var Baseline[]
      */
     public $baseline;
     
