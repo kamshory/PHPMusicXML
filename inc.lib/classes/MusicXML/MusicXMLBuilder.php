@@ -18,6 +18,7 @@ class MusicXMLBuilder
     const ANNOTATION_XML = "Xml";
     const KEY_NAME = "name";
     const KEY_VALUE = "value";
+    const DATE_FORMAT = "Y-m-d";
     
     /**
      * Class name
@@ -230,7 +231,7 @@ class MusicXMLBuilder
                                 $value = "";
                                 if($propertyValue instanceof DateTime)
                                 {
-                                    $value = $propertyValue->format('Y-m-d');
+                                    $value = $propertyValue->format(self::DATE_FORMAT);
                                 }
                                 else
                                 {
@@ -249,7 +250,7 @@ class MusicXMLBuilder
                         }
                         else if($propertInfo->getTextContent())
                         {
-                            $newText = new DOMText($propertyValue);
+                            $newText = new DOMText($this->getStringValue($propertyValue));
                             $domnode->appendChild($newText);
                         }
                     }
@@ -257,6 +258,25 @@ class MusicXMLBuilder
             }
         }
         return $domnode;
+    }
+    
+    /**
+     * Convert object to string
+     *
+     * @param [type] $propertyValue
+     * @return string
+     */
+    private function getStringValue($propertyValue)
+    {
+        if($propertyValue instanceof DateTime)
+        {
+            $value = $propertyValue->format(self::DATE_FORMAT);
+        }
+        else
+        {
+            $value = $propertyValue;
+        }
+        return $value;
     }
     
     /**

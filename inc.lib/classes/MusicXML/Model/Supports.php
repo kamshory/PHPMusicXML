@@ -25,7 +25,7 @@ class Supports extends MusicXMLWriter
      * Attribute
      *
      * @Attribute
-     * @var attribute
+     * @var string
      */
     public $attribute;
     

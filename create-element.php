@@ -16,13 +16,16 @@ function getPropertyName($name)
 }
 
 $elementList = '
-
-
-<accordion-high>
-<accordion-middle>
-<accordion-low>
-
-
+<credit-type>[]
+<link>[]
+<bookmark>[]
+<credit-image>
+<credit-words>
+<credit-symbol>
+<link>[]
+<bookmark>[]
+<credit-words>
+<credit-symbol>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 

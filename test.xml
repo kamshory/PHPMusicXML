@@ -14,6 +14,8 @@
       <supports element="print" attribute="new-page" type="no"/>
       <supports element="print" attribute="new-system" type="no"/>
       <supports element="stem" type="yes"/>
+      <encoding-description>This software is not ready for production yet</encoding-description>
+      <encoder>music</encoder>
     </encoding>
   </identification>
   <part-list>

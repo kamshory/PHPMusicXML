@@ -9,13 +9,17 @@ use Exceptions\FileNotFoundException;
 use Midi\MidiMeasure;
 use MusicXML\Model\Alter;
 use MusicXML\Model\Articulations;
+use MusicXML\Model\Encoder;
 use MusicXML\Model\Encoding;
+use MusicXML\Model\EncodingDate;
+use MusicXML\Model\EncodingDescription;
 use MusicXML\Model\Identification;
 use MusicXML\Model\Key;
 use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\Notations;
 use MusicXML\Model\Pitch;
+use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\Software;
@@ -34,6 +38,7 @@ class MusicXMLBase
     const SYSTEM_ID = "http://www.musicxml.org/dtds/partwise.dtd";
     const SCORE_PARTWISE = "score-partwise";
     const SOFTWARE_NAME = "Planetbiru";
+    const ENCODING_DESCRIPTION = "This software is not ready for production yet";
 
 
     public function loadMidi($midiPath)
@@ -368,23 +373,27 @@ class MusicXMLBase
     {
         $identification = new Identification();
 
-        $identification->copyrights = $copyright;
+        $rights = new Rights();
+        $rights->textContent = $copyright;
+        $rights->type = 'music';
+        
+        $identification->rights = array($rights);
 
-        $identification->encoding = new Encoding();
-        $identification->encoding->encodingDate = new DateTime();
-        $identification->encoding->software = array();
+        $encoding = new Encoding();
+        $encoding->encodingDate = array(new EncodingDate(new DateTime()));
+        $encoding->software = array(new Software(self::SOFTWARE_NAME));
+        $encoding->encoder = array(new Encoder('music'));
+        $encoding->encodingDescription = array(new EncodingDescription(self::ENCODING_DESCRIPTION));
 
-        $software = new Software();
-        $software->textContent = self::SOFTWARE_NAME;
+        $support = array();
+        $support[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
+        $support[] = new Supports(array('element' => 'beam', 'type' => 'yes'));
+        $support[] = new Supports(array('element' => 'print', 'attribute' => 'new-page', 'type' => 'no'));
+        $support[] = new Supports(array('element' => 'print', 'attribute' => 'new-system', 'type' => 'no'));
+        $support[] = new Supports(array('element' => 'stem', 'type' => 'yes'));
 
-        $identification->encoding->software[] = $software;
-
-        $identification->encoding->supports[] = array();
-        $identification->encoding->supports[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'beam', 'type' => 'yes'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-page', 'type' => 'no'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'print', 'attribute' => 'new-system', 'type' => 'no'));
-        $identification->encoding->supports[] = new Supports(array('element' => 'stem', 'type' => 'yes'));
+        $encoding->supports = $support;
+        $identification->encoding = $encoding;
 
         return $identification;
     }

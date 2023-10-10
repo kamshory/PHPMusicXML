@@ -22,15 +22,29 @@ class Encoding extends MusicXMLWriter
     
     /**
      * Encoding date
-     * @PropertyElement(name="encoding-date")
-     * @var string
+     * @Element(name="encoding-date")
+     * @var EncodingDate[]
      */
     public $encodingDate;
     
     /**
      * Supports
-     * @PropertyElement
-     * @var Supports
+     * @Element
+     * @var Supports[]
      */
     public $supports;
+    
+    /**
+     * Encoding description
+     * @Element(name="encoding-description")
+     * @var EncodingDescription[]
+     */
+    public $encodingDescription;
+    
+    /**
+     * Encoder
+     * @Element(name="encoder")
+     * @var Encoder[]
+     */
+    public $encoder;
 }

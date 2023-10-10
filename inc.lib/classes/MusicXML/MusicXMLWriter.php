@@ -2,6 +2,7 @@
 
 namespace MusicXML;
 
+use DateTime;
 use DOMNode;
 use MusicXML\Map\ModelParser;
 use MusicXML\Map\NodeType;
@@ -52,9 +53,10 @@ class MusicXMLWriter // NOSONAR
     /**
      * Constructor
      *
-     * @param self|array|object $data
+     * @param self|array|object|mixed $data
+     * @param mixed $option
      */
-    public function __construct($data = null)
+    public function __construct($data = null, $option = null)
     {
         $this->className = get_class($this);
         $jsonAnnot = new PicoAnnotationParser($this->className);
@@ -74,7 +76,11 @@ class MusicXMLWriter // NOSONAR
             {
                 $this->loadXml($data);
             }
-            else
+            else if(($data instanceof DateTime || is_string($data) || is_numeric($data)) && property_exists($this->className, 'textContent'))
+            {
+                $this->setTextContent($data);
+            }
+            else if(is_array($data) || is_object($data))
             {
                 $this->loadData($data);
             }

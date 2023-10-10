@@ -16,10 +16,10 @@ class Identification extends MusicXMLWriter
     /**
      * Copyright
      * 
-     * @PropertyElement(name="rights")
-     * @var string
+     * @Element(name="rights")
+     * @var Rights[]
      */
-    public $copyrights;
+    public $rights;
     
     /**
      * Description
@@ -32,16 +32,32 @@ class Identification extends MusicXMLWriter
     /**
      * Creator
      * 
-     * @PropertyElement(name="creator")
-     * @var string
+     * @Element(name="creator")
+     * @var Creator[]
      */
     public $creator;
     
     /**
-     * Creator type
+     * Source
      *
-     * @Attribute(name="type")
-     * @var string
+     * @Attribute(name="source")
+     * @var Source
      */
-    public $creatorType;
+    public $source;
+    
+    /**
+     * Relation
+     *
+     * @Attribute(name="relation")
+     * @var Relation[]
+     */
+    public $relation;
+    
+    /**
+     * Miscellaneous
+     *
+     * @Attribute(name="miscellaneous")
+     * @var Miscellaneous[]
+     */
+    public $miscellaneous;
 }

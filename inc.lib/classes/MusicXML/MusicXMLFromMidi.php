@@ -16,6 +16,7 @@ use MusicXML\Model\PartPartwise;
 use MusicXML\Model\PreBend;
 use MusicXML\Model\Release;
 use MusicXML\Model\Rest;
+use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
@@ -619,7 +620,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $timebase = $midi->getTimebase();
         $scorePartwise = new ScorePartwise();
         $scorePartwise->version = $version;
-        $scorePartwise->identification = $this->getIdentification();
+        $scorePartwise->identification = $this->getIdentification($this->copyright);
         $scorePartwise->work = MusicXMLUtil::getWork($title);
         
         $scorePartwise->partList = new PartList();
@@ -627,7 +628,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         $this->buildPartList($midi);
         if (isset($this->copyright)) {
-            $scorePartwise->identification->copyrights = $this->copyright;
+            $scorePartwise->identification->rights = array(new Rights($this->copyright));
         }
 
         // sort part list by channelId and programId
