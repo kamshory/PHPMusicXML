@@ -44,4 +44,20 @@ class Lyric extends MusicXMLWriter
      * @var string
      */
     public $textContent;
+    
+    /**
+     * End line
+     *
+     * @Element(name="end-line")
+     * @var EndLine
+     */
+    public $endLine;
+    
+    /**
+     * End paragraph
+     *
+     * @Element(name="end-line")
+     * @var EndParagraph
+     */
+    public $endParagraph;
 }
