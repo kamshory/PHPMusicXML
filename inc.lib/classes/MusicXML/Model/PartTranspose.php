@@ -14,8 +14,8 @@ class PartTranspose extends MusicXMLWriter
 {
     /**
      * Diatonic
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Diatonic
      */
     public $diatonic;
     

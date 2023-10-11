@@ -15,9 +15,9 @@ class Attributes extends MusicXMLWriter
 {
     
     /**
-     * Division
-     * @PropertyElement
-     * @var string
+     * Divisions
+     * @Element
+     * @var Divisions
      */
     public $divisions;
     

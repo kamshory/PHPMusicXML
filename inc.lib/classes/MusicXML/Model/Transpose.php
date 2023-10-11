@@ -16,7 +16,7 @@ class Transpose extends MusicXMLWriter
     /**
      * Diatonic
      * @PropertyElement
-     * @var string
+     * @var Diatonic
      */
     public $diatonic;
     

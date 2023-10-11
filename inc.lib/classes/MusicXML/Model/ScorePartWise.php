@@ -38,6 +38,30 @@ class ScorePartWise extends MusicXMLWriter
     public $identification;
     
     /**
+     * Movement number
+     *
+     * @Element(name="movement-number")
+     * @var MovementNumber
+     */
+    public $movementNumber;
+    
+    /**
+     * Movement title
+     *
+     * @Element(name="movement-title")
+     * @var MovementTitle
+     */
+    public $movementTitle;
+    
+    /**
+     * Defaults
+     *
+     * @Element(name="defaults")
+     * @var Defaults
+     */
+    public $defaults;
+    
+    /**
      * Part list. Contains all instrument used on the music
      *
      * @Element
