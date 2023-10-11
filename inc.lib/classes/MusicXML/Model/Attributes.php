@@ -75,18 +75,10 @@ class Attributes extends MusicXMLWriter
     /**
      * Part symbol
      *
-     * @Element
+     * @Element(name="part-symbol")
      * @var PartSymbol
      */
     public $partSymbol;
-    
-    /**
-     * Instrument
-     *
-     * @Element
-     * @var integer
-     */
-    public $instruments;
     
     /**
      * Staff detail
@@ -107,8 +99,16 @@ class Attributes extends MusicXMLWriter
     /**
      * Measure style
      *
-     * @Element
+     * @Element(name="measure-style")
      * @var MeasureStyle
      */
     public $measureStyle;
+    
+    /**
+     * Instruments
+     *
+     * @Element
+     * @var Instruments
+     */
+    public $instruments;
 }

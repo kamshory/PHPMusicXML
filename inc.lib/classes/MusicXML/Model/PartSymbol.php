@@ -59,4 +59,12 @@ class PartSymbol extends MusicXMLWriter
      * @var string
      */
     public $topStaff;
+    
+    /**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }
