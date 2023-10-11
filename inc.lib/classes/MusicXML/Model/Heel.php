@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Heel
  * @Xml
+ * @MusicXML
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/heel/
  * @Data
  */

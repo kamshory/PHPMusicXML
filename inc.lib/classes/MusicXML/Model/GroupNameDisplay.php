@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * GroupNameDisplay
  * @Xml
+ * @MusicXML
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/group-name-display/
  * @Data
  */

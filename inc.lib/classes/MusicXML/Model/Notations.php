@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Notation
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/notations
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/notations/
  * @Data

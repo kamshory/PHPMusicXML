@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Pitch
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/pitch
  * @Data
  */

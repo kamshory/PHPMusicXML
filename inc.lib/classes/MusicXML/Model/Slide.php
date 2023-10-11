@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Slide
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/notation/slide
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/slide/
  * @Data

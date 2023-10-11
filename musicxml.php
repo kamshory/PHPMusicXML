@@ -113,6 +113,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * '.$className.'
  * @Xml
+ * @MusicXML
  * @Reference '.$url.'
  * @Data
  */

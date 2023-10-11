@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Identification
  * @Xml
+ * @MusicXML
  * @Path /identification
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/identification/
  * @Data

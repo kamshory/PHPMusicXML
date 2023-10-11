@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * MeasurePartwise
  * @Xml
+ * @MusicXML
  * @Path /path/measure
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-partwise/
  * @Data

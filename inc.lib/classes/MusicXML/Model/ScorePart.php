@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * ScorePart
  * @Xml
+ * @MusicXML
  * @Path /path-list/score-part
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/score-part/
  * @Data

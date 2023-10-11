@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * PartTimewise
  * @Xml
+ * @MusicXML
  * @Path /part
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-timewise/
  * @Data

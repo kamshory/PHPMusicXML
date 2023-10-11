@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * StaffType
  * @Xml
+ * @MusicXML
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staff-type/
  * @Data
  */

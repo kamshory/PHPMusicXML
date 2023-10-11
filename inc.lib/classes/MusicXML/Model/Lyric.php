@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Lyric
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/lyric
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/lyric/
  * @Data

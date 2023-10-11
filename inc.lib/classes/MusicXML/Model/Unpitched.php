@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Unpitched
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/Unpitched
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/unpitched/
  * @Data

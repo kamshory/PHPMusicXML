@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Beam
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/beam
  * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/beam/
  * @Data

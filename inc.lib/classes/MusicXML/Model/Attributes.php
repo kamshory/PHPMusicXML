@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Attributes
  * @Xml
+ * @MusicXML
  * @Path /path/measure/attributes
  * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/attributes/
  * @Data

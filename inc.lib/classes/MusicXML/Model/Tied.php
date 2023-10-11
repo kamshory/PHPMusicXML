@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Tied
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/notation/tied
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/tied/
  * @Data

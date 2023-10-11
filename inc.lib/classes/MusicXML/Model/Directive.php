@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Directive
  * @Xml
+ * @MusicXML
  * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/directive/
  * @Data
  */

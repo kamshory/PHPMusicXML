@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Backup
  * @Xml
+ * @MusicXML
  * @Path /path/measure/backup
  * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/backup/
  * @Data

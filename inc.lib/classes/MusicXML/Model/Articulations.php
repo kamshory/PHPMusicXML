@@ -7,6 +7,7 @@ use MusicXML\MusicXMLWriter;
 /**
  * Articulations
  * @Xml
+ * @MusicXML
  * @Path /path/measure/note/notation/articulations
  * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/articulations/
  * @Data
