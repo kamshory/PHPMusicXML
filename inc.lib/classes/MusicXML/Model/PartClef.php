@@ -23,8 +23,8 @@ class PartClef extends MusicXMLWriter
     /**
      * Line
      *
-     * @PropertyElement
-     * @var integer
+     * @Element
+     * @var Line
      */
     public $line;
     

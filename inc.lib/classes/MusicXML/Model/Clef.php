@@ -29,8 +29,8 @@ class Clef extends MusicXMLWriter
     
     /**
      * Line
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Line
      */
     public $line;
 }
