@@ -15,15 +15,15 @@ class Work extends MusicXMLWriter
 {
     /**
      * Work number
-     * @PropertyElement(name="work-number")
-     * @var string
+     * @Element(name="work-number")
+     * @var WorkNumber
      */
     public $workNumber;
     
     /**
      * Work title
-     * @PropertyElement(name="work-title")
-     * @var string
+     * @Element(name="work-title")
+     * @var WorkTitle
      */
     public $workTitle;
     

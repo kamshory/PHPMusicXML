@@ -25,7 +25,7 @@ class Rest extends MusicXMLWriter
      * Display step
      *
      * @PropertyElement(name="display-step")
-     * @var string
+     * @var DisplayStep
      */
     public $displayStep;
 
