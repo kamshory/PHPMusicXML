@@ -4,7 +4,9 @@ namespace MusicXML;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
+use MusicXML\Model\Line;
 use MusicXML\Model\Metronome;
+use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
 use MusicXML\Properties\Coordinate;
@@ -143,8 +145,8 @@ class MusicXMLUtil
         for($i = $max; $i > $min; $i-=36)
         {
             $clef1 = new Clef();
-            $clef1->sign = 'G';
-            $clef1->line = 2;
+            $clef1->sign = new Sign('G');
+            $clef1->line = new Line(2);
             $clefs[] = $clef1;
         }        
         

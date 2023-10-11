@@ -7,13 +7,21 @@ use Midi\MidiMeasure;
 use MusicXML\Map\ModelMap;
 use MusicXML\Map\NodeType;
 use MusicXML\Model\Attributes;
+use MusicXML\Model\Beats;
+use MusicXML\Model\BeatType;
+use MusicXML\Model\Chromatic;
 use MusicXML\Model\Clef;
+use MusicXML\Model\Diatonic;
 use MusicXML\Model\Divisions;
+use MusicXML\Model\Fifths;
 use MusicXML\Model\Key;
+use MusicXML\Model\Line;
 use MusicXML\Model\Measure;
+use MusicXML\Model\OctaveChange;
 use MusicXML\Model\PartList;
 use MusicXML\Model\PartPartwise;
 use MusicXML\Model\ScorePartwise;
+use MusicXML\Model\Sign;
 use MusicXML\Model\Staves;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
@@ -111,20 +119,20 @@ class MusicXML extends MusicXMLBase
         $measure->number = 1;
 
         $key = new Key();
-        $key->fifths = 1;
+        $key->fifths = new Fifths(1);
 
         $time = new Time();
-        $time->beats = 3;
-        $time->beatType = 4;
+        $time->beats = new Beats(3);
+        $time->beatType = new BeatType(4);
 
         $clef = new Clef();
-        $clef->sign = "F";
-        $clef->line = 4;
+        $clef->sign = new Sign("F");
+        $clef->line = new Line(4);
 
         $transpose = new Transpose();
-        $transpose->diatonic = 0;
-        $transpose->chromatic = 0;
-        $transpose->octaveChange = 0;
+        $transpose->diatonic = new Diatonic(0);
+        $transpose->chromatic = new Chromatic(0);
+        $transpose->octaveChange = new OctaveChange(0);
 
         $attributes = new Attributes();
         $attributes->divisions = new Divisions(1);

@@ -31,8 +31,8 @@ class Pitch extends MusicXMLWriter
     /**
      * Octave
      *
-     * @PropertyElement
-     * @var integer
+     * @Element
+     * @var Octave
      */
     public $octave;
 }

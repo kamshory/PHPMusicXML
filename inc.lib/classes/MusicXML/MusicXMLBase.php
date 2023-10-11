@@ -24,6 +24,7 @@ use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\MidiProgram;
 use MusicXML\Model\Notations;
+use MusicXML\Model\Octave;
 use MusicXML\Model\Pan;
 use MusicXML\Model\PartAbbreviation;
 use MusicXML\Model\PartName;
@@ -321,13 +322,13 @@ class MusicXMLBase
         {
             $octaveStr = "0";
         }
-        $pitch->octave = intval($octaveStr);
+        $pitch->octave = new Octave(intval($octaveStr));
         if (strpos($pitchStr, 's') !== false) {
             $alter = new Alter();
             $alter->textContent = 1;
             $pitch->alter = $alter;
         }
-        if($pitch->step == 'B' && $pitch->octave == -1)
+        if($pitch->step == 'B' && $pitch->octave->textContent == -1)
         {
             echo "NOTE = $note; PITH = ".$pitch."\r\n";
         }
