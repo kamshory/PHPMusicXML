@@ -16,10 +16,18 @@ class Lyric extends MusicXMLWriter
     /**
      * Syllabic
      *
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Syllabic
      */
     public $syllabic;
+    
+    /**
+     * Elision
+     *
+     * @Element
+     * @var Elision
+     */
+    public $elision;
     
     /**
      * Text
