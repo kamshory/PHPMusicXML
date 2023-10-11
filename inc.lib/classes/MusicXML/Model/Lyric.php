@@ -60,4 +60,12 @@ class Lyric extends MusicXMLWriter
      * @var Humming
      */
     public $humming;
+    
+    /**
+     * Laughing
+     *
+     * @Element
+     * @var Laughing
+     */
+    public $laughing;
 }
