@@ -17,11 +17,15 @@ function getPropertyName($name)
 
 $elementList = '
 
-
-
-
-<display-text>[]
-<accidental-text>[]
+<bar-style>
+<footnote>
+<level>
+<wavy-line>
+<segno>
+<coda>
+<fermata>[]
+<ending>
+<repeat>
 
 
 ';

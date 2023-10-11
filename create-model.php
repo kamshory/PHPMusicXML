@@ -2,4 +2,4 @@
 
 require_once __DIR__ . "/musicxml.php";
 
-getObject("circular-arrow");
+getObject("barline");
