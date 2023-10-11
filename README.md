@@ -6,10 +6,9 @@ PHPMUsicXML is a library for creating MusicXML files and converting music from M
 
 Expected capabilities of this library are:
 
-1. to comply MusicXML specification according to https://www.w3.org/2021/06/musicxml40/
-2. read MusicXML file, modify and write modified MusicXML file
-3. convert music from MIDI format to MusicXML format either compressed or uncompressed
-4. convert music from MusicXML format to MIDI format either compressed or uncompressed
+1. read MusicXML file, modify and write modified MusicXML file
+2. convert music from MIDI format to MusicXML format either compressed or uncompressed
+3. convert music from MusicXML format to MIDI format either compressed or uncompressed
 
 ## Example
 
