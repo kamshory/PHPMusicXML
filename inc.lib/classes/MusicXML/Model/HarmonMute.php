@@ -91,5 +91,13 @@ class HarmonMute extends MusicXMLWriter
 	 * @var float
 	 */
 	public $relativeY;
+	
+	/**
+	 * Harmon closed
+	 *
+	 * @Element(name="harmon-closed")
+	 * @var HarmonClosed
+	 */
+	public $harmonClosed;
     
 }
