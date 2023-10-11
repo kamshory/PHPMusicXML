@@ -18,9 +18,9 @@ function getPropertyName($name)
 $elementList = '
 
 
-<solo>[]
-<ensemble>[]
-<virtual-instrument>
+<display-text>
+<accidental-text>
+
 
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);

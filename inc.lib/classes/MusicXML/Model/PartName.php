@@ -5,12 +5,12 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * Time
+ * PartName
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/time/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-name/
  * @Data
  */
-class Time extends MusicXMLWriter
+class PartName extends MusicXMLWriter
 {
 	/**
 	 * Color
@@ -69,28 +69,12 @@ class Time extends MusicXMLWriter
 	public $fontWeight;
 
 	/**
-	 * Halign
+	 * Justify
 	 *
-	 * @Attribute(name="halign")
+	 * @Attribute(name="justify")
 	 * @var string
 	 */
-	public $halign;
-
-	/**
-	 * Id
-	 *
-	 * @Attribute(name="id")
-	 * @var string
-	 */
-	public $id;
-
-	/**
-	 * Number
-	 *
-	 * @Attribute(name="number")
-	 * @var string
-	 */
-	public $number;
+	public $justify;
 
 	/**
 	 * Print object
@@ -115,61 +99,12 @@ class Time extends MusicXMLWriter
 	 * @var float
 	 */
 	public $relativeY;
-
-	/**
-	 * Separator
-	 *
-	 * @Attribute(name="separator")
-	 * @var string
-	 */
-	public $separator;
-
-	/**
-	 * Symbol
-	 *
-	 * @Attribute(name="symbol")
-	 * @var string
-	 */
-	public $symbol;
-
-	/**
-	 * Valign
-	 *
-	 * @Attribute(name="valign")
-	 * @var string
-	 */
-	public $valign;
     
 	/**
-     * Beats
-     *
-     * @Element(name="beats")
-     * @var Beats[]
-     */
-    public $beats;
-    
-    /**
-     * BeatType
-     *
-     * @PropertyElement(name="beat-type")
-     * @var BeatType[]
-     */
-    public $beatType;
-	
-	/*
-     * Interchangeable
-     *
-     * @Element(name="interchangeable")
-     * @var Interchangeable
-     */
-    public $interchangeable;
-
-    /*
-     * Senza misura
-     *
-     * @Element(name="senza-misura ")
-     * @var SenzaMisura
-     */
-    public $senzaMisura;
-
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }

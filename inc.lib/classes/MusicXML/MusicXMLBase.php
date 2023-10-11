@@ -15,9 +15,12 @@ use MusicXML\Model\EncodingDate;
 use MusicXML\Model\EncodingDescription;
 use MusicXML\Model\Identification;
 use MusicXML\Model\Key;
+use MusicXML\Model\MidiChannel;
 use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
+use MusicXML\Model\MidiProgram;
 use MusicXML\Model\Notations;
+use MusicXML\Model\Pan;
 use MusicXML\Model\Pitch;
 use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
@@ -27,6 +30,7 @@ use MusicXML\Model\Staccato;
 use MusicXML\Model\Step;
 use MusicXML\Model\Supports;
 use MusicXML\Model\Time;
+use MusicXML\Model\Volume;
 use MusicXML\Properties\TimeSignature;
 
 class MusicXMLBase
@@ -205,10 +209,10 @@ class MusicXMLBase
     {
         $midiInstrument = new MidiInstrument();
         $midiInstrument->id = $instrumentId;
-        $midiInstrument->midiChannel = $midiChannel;
-        $midiInstrument->midiProgram = $midiProgramId;
-        $midiInstrument->volume = $volume;
-        $midiInstrument->pan = $pan;
+        $midiInstrument->midiChannel = new MidiChannel($midiChannel);
+        $midiInstrument->midiProgram = new MidiProgram($midiProgramId);
+        $midiInstrument->volume = new Volume($volume);
+        $midiInstrument->pan = new Pan($pan);
         return $midiInstrument;
     }
 

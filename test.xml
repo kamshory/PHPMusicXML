@@ -8,7 +8,7 @@
     <rights>Namira Jl.KH.Wahid Hasyim II No.44 Kediri Jawa Timur</rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-10</encoding-date>
+      <encoding-date>2023-10-11</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="no"/>
@@ -23,292 +23,124 @@
       <part-name>Piano</part-name>
       <part-abbreviation>Pno.</part-abbreviation>
       <score-instrument id="P1-I1">
-        <instrument-name>Piano</instrument-name>
         <instrument-sound>keyboard.piano</instrument-sound>
       </score-instrument>
       <midi-device id="P1-I1" port="1"></midi-device>
-      <midi-instrument id="P1-I1">
-        <midi-channel>1</midi-channel>
-        <midi-program>1</midi-program>
-        <volume>111.1111</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P1-I1"/>
     </score-part>
     <score-part id="P2">
       <part-name>Bass Guitar</part-name>
       <part-abbreviation>B. Guit.</part-abbreviation>
       <score-instrument id="P2-I1">
-        <instrument-name>Bass Guitar</instrument-name>
         <instrument-sound>pluck.bass</instrument-sound>
       </score-instrument>
       <midi-device id="P2-I1" port="2"></midi-device>
-      <midi-instrument id="P2-I1">
-        <midi-channel>2</midi-channel>
-        <midi-program>35</midi-program>
-        <volume>108.4864</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P2-I1"/>
     </score-part>
     <score-part id="P3">
       <part-name>Violins (section)</part-name>
       <part-abbreviation>Vlns.</part-abbreviation>
       <score-instrument id="P3-I1">
-        <instrument-name>Violins (section)</instrument-name>
         <instrument-sound>strings.group</instrument-sound>
       </score-instrument>
       <midi-device id="P3-I1" port="3"></midi-device>
-      <midi-instrument id="P3-I1">
-        <midi-channel>3</midi-channel>
-        <midi-program>49</midi-program>
-        <volume>0</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P3-I1"/>
     </score-part>
     <score-part id="P4">
       <part-name>Effect Synthesizer</part-name>
       <part-abbreviation>Synth.</part-abbreviation>
       <score-instrument id="P4-I1">
-        <instrument-name>Effect Synthesizer</instrument-name>
         <instrument-sound>synth.effects</instrument-sound>
       </score-instrument>
       <midi-device id="P4-I1" port="4"></midi-device>
-      <midi-instrument id="P4-I1">
-        <midi-channel>4</midi-channel>
-        <midi-program>83</midi-program>
-        <volume>108.4864</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P4-I1"/>
     </score-part>
     <score-part id="P5">
       <part-name>Classical Guitar</part-name>
       <part-abbreviation>Guit.</part-abbreviation>
       <score-instrument id="P5-I1">
-        <instrument-name>Classical Guitar</instrument-name>
         <instrument-sound>pluck.guitar.nylon-string</instrument-sound>
       </score-instrument>
       <midi-device id="P5-I1" port="5"></midi-device>
-      <midi-instrument id="P5-I1">
-        <midi-channel>5</midi-channel>
-        <midi-program>25</midi-program>
-        <volume>87.4891</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P5-I1"/>
     </score-part>
     <score-part id="P6">
       <part-name>Violins (section)</part-name>
       <part-abbreviation>Vlns.</part-abbreviation>
       <score-instrument id="P6-I1">
-        <instrument-name>Violins (section)</instrument-name>
         <instrument-sound>strings.group</instrument-sound>
       </score-instrument>
       <midi-device id="P6-I1" port="6"></midi-device>
-      <midi-instrument id="P6-I1">
-        <midi-channel>6</midi-channel>
-        <midi-program>49</midi-program>
-        <volume>55.1181</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P6-I1"/>
     </score-part>
     <score-part id="P7">
       <part-name>Electric Guitar</part-name>
       <part-abbreviation>El. Guit.</part-abbreviation>
       <score-instrument id="P7-I1">
-        <instrument-name>Electric Guitar</instrument-name>
         <instrument-sound>pluck.guitar.electric</instrument-sound>
       </score-instrument>
       <midi-device id="P7-I1" port="7"></midi-device>
-      <midi-instrument id="P7-I1">
-        <midi-channel>7</midi-channel>
-        <midi-program>28</midi-program>
-        <volume>104.112</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P7-I1"/>
     </score-part>
     <score-part id="P8">
       <part-name>Boy Soprano</part-name>
       <part-abbreviation>B. S.</part-abbreviation>
       <score-instrument id="P8-I1">
-        <instrument-name>Boy Soprano</instrument-name>
         <instrument-sound>voice.child</instrument-sound>
       </score-instrument>
       <midi-device id="P8-I1" port="8"></midi-device>
-      <midi-instrument id="P8-I1">
-        <midi-channel>8</midi-channel>
-        <midi-program>54</midi-program>
-        <volume>87.4891</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P8-I1"/>
     </score-part>
     <score-part id="P9">
       <part-name>Brass Synthesizer</part-name>
       <part-abbreviation>Synth.</part-abbreviation>
       <score-instrument id="P9-I1">
-        <instrument-name>Brass Synthesizer</instrument-name>
         <instrument-sound>brass.group.synth</instrument-sound>
       </score-instrument>
       <midi-device id="P9-I1" port="9"></midi-device>
-      <midi-instrument id="P9-I1">
-        <midi-channel>9</midi-channel>
-        <midi-program>56</midi-program>
-        <volume>87.4891</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <midi-instrument id="P9-I1"/>
     </score-part>
     <score-part id="P10">
       <part-name>Automobile Brake Drums</part-name>
       <part-abbreviation>Aut. Brk. Dr.</part-abbreviation>
-      <score-instrument id="P10-I36">
-        <instrument-name>Acoustic Bass Drum</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I37">
-        <instrument-name>Bass Drum 1</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I38">
-        <instrument-name>Side Stick</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I40">
-        <instrument-name>Hand Clap</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I41">
-        <instrument-name>Electric Snare</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I45">
-        <instrument-name>Pedal Hi-Hat</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I47">
-        <instrument-name>Open Hi-Hat</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I70">
-        <instrument-name>Cabase</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I71">
-        <instrument-name>Maracas</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I76">
-        <instrument-name>Claves</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I78">
-        <instrument-name>Low Wood Block</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I82">
-        <instrument-name>Open Triangle</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I85">
-        <instrument-name>Instrument 85</instrument-name>
-      </score-instrument>
-      <score-instrument id="P10-I86">
-        <instrument-name>Instrument 86</instrument-name>
-      </score-instrument>
-      <midi-instrument id="P10-I36">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>36</midi-unpitched>
-        <volume>75.59</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I37">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>37</midi-unpitched>
-        <volume>93.7</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I38">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>38</midi-unpitched>
-        <volume>100</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I40">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>40</midi-unpitched>
-        <volume>28.35</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I41">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>41</midi-unpitched>
-        <volume>56.69</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I45">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>45</midi-unpitched>
-        <volume>100</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I47">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>47</midi-unpitched>
-        <volume>100</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I70">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>70</midi-unpitched>
-        <volume>75.59</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I71">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>71</midi-unpitched>
-        <volume>28.35</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I76">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>76</midi-unpitched>
-        <volume>93.7</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I78">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>78</midi-unpitched>
-        <volume>100</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I82">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>82</midi-unpitched>
-        <volume>93.7</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I85">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>85</midi-unpitched>
-        <volume>100</volume>
-        <pan>0</pan>
-      </midi-instrument>
-      <midi-instrument id="P10-I86">
-        <midi-channel>10</midi-channel>
-        <midi-program>26</midi-program>
-        <midi-unpitched>86</midi-unpitched>
-        <volume>93.7</volume>
-        <pan>0</pan>
-      </midi-instrument>
+      <score-instrument id="P10-I36"/>
+      <score-instrument id="P10-I37"/>
+      <score-instrument id="P10-I38"/>
+      <score-instrument id="P10-I40"/>
+      <score-instrument id="P10-I41"/>
+      <score-instrument id="P10-I45"/>
+      <score-instrument id="P10-I47"/>
+      <score-instrument id="P10-I70"/>
+      <score-instrument id="P10-I71"/>
+      <score-instrument id="P10-I76"/>
+      <score-instrument id="P10-I78"/>
+      <score-instrument id="P10-I82"/>
+      <score-instrument id="P10-I85"/>
+      <score-instrument id="P10-I86"/>
+      <midi-instrument id="P10-I36"/>
+      <midi-instrument id="P10-I37"/>
+      <midi-instrument id="P10-I38"/>
+      <midi-instrument id="P10-I40"/>
+      <midi-instrument id="P10-I41"/>
+      <midi-instrument id="P10-I45"/>
+      <midi-instrument id="P10-I47"/>
+      <midi-instrument id="P10-I70"/>
+      <midi-instrument id="P10-I71"/>
+      <midi-instrument id="P10-I76"/>
+      <midi-instrument id="P10-I78"/>
+      <midi-instrument id="P10-I82"/>
+      <midi-instrument id="P10-I85"/>
+      <midi-instrument id="P10-I86"/>
     </score-part>
   </part-list>
   <part id="P1">
     <measure number="1" width="216">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -694,9 +526,7 @@
     </measure>
     <measure number="2" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -1095,9 +925,7 @@
     </measure>
     <measure number="3" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -1460,9 +1288,7 @@
     </measure>
     <measure number="4" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -1820,9 +1646,7 @@
     </measure>
     <measure number="5" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -2122,9 +1946,7 @@
     </measure>
     <measure number="6" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -2293,9 +2115,7 @@
     </measure>
     <measure number="7" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -2728,9 +2548,7 @@
     </measure>
     <measure number="8" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -2875,9 +2693,7 @@
     </measure>
     <measure number="9" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -3360,9 +3176,7 @@
     </measure>
     <measure number="10" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -3613,9 +3427,7 @@
     </measure>
     <measure number="11" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -4098,9 +3910,7 @@
     </measure>
     <measure number="12" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -4451,9 +4261,7 @@
     </measure>
     <measure number="13" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -4942,9 +4750,7 @@
     </measure>
     <measure number="14" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -5083,9 +4889,7 @@
     </measure>
     <measure number="15" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -5418,9 +5222,7 @@
     </measure>
     <measure number="16" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -5635,9 +5437,7 @@
     </measure>
     <measure number="17" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -5834,9 +5634,7 @@
     </measure>
     <measure number="18" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -6379,9 +6177,7 @@
     </measure>
     <measure number="19" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -6534,9 +6330,7 @@
     </measure>
     <measure number="20" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -6751,9 +6545,7 @@
     </measure>
     <measure number="21" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -6964,9 +6756,7 @@
     </measure>
     <measure number="22" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -7189,9 +6979,7 @@
     </measure>
     <measure number="23" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -7522,9 +7310,7 @@
     </measure>
     <measure number="24" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -7815,9 +7601,7 @@
     </measure>
     <measure number="25" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -8152,9 +7936,7 @@
     </measure>
     <measure number="26" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -8657,9 +8439,7 @@
     </measure>
     <measure number="27" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -8868,9 +8648,7 @@
     </measure>
     <measure number="28" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -9415,9 +9193,7 @@
     </measure>
     <measure number="29" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -10364,9 +10140,7 @@
     </measure>
     <measure number="30" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -10799,9 +10573,7 @@
     </measure>
     <measure number="31" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -11212,9 +10984,7 @@
     </measure>
     <measure number="32" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -11425,9 +11195,7 @@
     </measure>
     <measure number="33" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -11838,9 +11606,7 @@
     </measure>
     <measure number="34" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -12163,9 +11929,7 @@
     </measure>
     <measure number="35" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -12676,9 +12440,7 @@
     </measure>
     <measure number="36" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -13007,9 +12769,7 @@
     </measure>
     <measure number="37" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -13424,9 +13184,7 @@
     </measure>
     <measure number="38" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -13747,9 +13505,7 @@
     </measure>
     <measure number="39" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -14016,9 +13772,7 @@
     </measure>
     <measure number="40" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -14287,9 +14041,7 @@
     </measure>
     <measure number="41" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -14590,9 +14342,7 @@
     </measure>
     <measure number="42" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -14981,9 +14731,7 @@
     </measure>
     <measure number="43" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -15204,9 +14952,7 @@
     </measure>
     <measure number="44" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -15417,9 +15163,7 @@
     </measure>
     <measure number="45" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -15642,9 +15386,7 @@
     </measure>
     <measure number="46" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -15975,9 +15717,7 @@
     </measure>
     <measure number="47" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -16268,9 +16008,7 @@
     </measure>
     <measure number="48" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -16605,9 +16343,7 @@
     </measure>
     <measure number="49" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -17110,9 +16846,7 @@
     </measure>
     <measure number="50" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -17291,9 +17025,7 @@
     </measure>
     <measure number="51" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -17856,9 +17588,7 @@
     </measure>
     <measure number="52" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -18273,9 +18003,7 @@
     </measure>
     <measure number="53" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -18714,9 +18442,7 @@
     </measure>
     <measure number="54" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -19279,9 +19005,7 @@
     </measure>
     <measure number="55" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -19528,9 +19252,7 @@
     </measure>
     <measure number="56" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -19945,9 +19667,7 @@
     </measure>
     <measure number="57" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -20376,9 +20096,7 @@
     </measure>
     <measure number="58" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -20938,20 +20656,14 @@
       </note>
     </measure>
     <measure number="59">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="60">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="61" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -21074,9 +20786,7 @@
     </measure>
     <measure number="62" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -21563,9 +21273,7 @@
     </measure>
     <measure number="63" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -22056,9 +21764,7 @@
     </measure>
     <measure number="64" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -22345,9 +22051,7 @@
     </measure>
     <measure number="65" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -22726,9 +22430,7 @@
     </measure>
     <measure number="66" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -23259,9 +22961,7 @@
     </measure>
     <measure number="67" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -23914,9 +23614,7 @@
     </measure>
     <measure number="68" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -24393,9 +24091,7 @@
     </measure>
     <measure number="69" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -24574,9 +24270,7 @@
     </measure>
     <measure number="70" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -25123,9 +24817,7 @@
     </measure>
     <measure number="71" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -25612,9 +25304,7 @@
     </measure>
     <measure number="72" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -26105,9 +25795,7 @@
     </measure>
     <measure number="73" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -26394,9 +26082,7 @@
     </measure>
     <measure number="74" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -26775,9 +26461,7 @@
     </measure>
     <measure number="75" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -27308,9 +26992,7 @@
     </measure>
     <measure number="76" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -27963,9 +27645,7 @@
     </measure>
     <measure number="77" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -28442,9 +28122,7 @@
     </measure>
     <measure number="78" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -28623,9 +28301,7 @@
     </measure>
     <measure number="79" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -29203,9 +28879,7 @@
     </measure>
     <measure number="80" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -29986,9 +29660,7 @@
     </measure>
     <measure number="81" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -30781,9 +30453,7 @@
     </measure>
     <measure number="82" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -31564,9 +31234,7 @@
     </measure>
     <measure number="83" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -31808,9 +31476,7 @@
     </measure>
     <measure number="84" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -31992,15 +31658,11 @@
       </note>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -32044,21 +31706,17 @@
       </note>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P2">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -32086,19 +31744,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -32110,9 +31762,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -32124,235 +31774,143 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="20">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="21">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="22">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="23">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="24">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="25">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="26">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="27">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="31">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="32">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="33">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="34">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="35">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="36">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="37">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="38">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="39">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="40">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="41">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="42">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="43">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="44">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="45">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="46">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="47">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="48">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="49">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="50">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="51" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -32459,9 +32017,7 @@
     </measure>
     <measure number="52" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -32640,9 +32196,7 @@
     </measure>
     <measure number="53" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -32893,9 +32447,7 @@
     </measure>
     <measure number="54" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -33282,9 +32834,7 @@
     </measure>
     <measure number="55" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -33595,9 +33145,7 @@
     </measure>
     <measure number="56" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -33776,9 +33324,7 @@
     </measure>
     <measure number="57" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -33925,9 +33471,7 @@
     </measure>
     <measure number="58" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34122,9 +33666,7 @@
     </measure>
     <measure number="59" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34231,9 +33773,7 @@
     </measure>
     <measure number="60" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34272,9 +33812,7 @@
     </measure>
     <measure number="61" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34361,9 +33899,7 @@
     </measure>
     <measure number="62" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34470,9 +34006,7 @@
     </measure>
     <measure number="63" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34551,9 +34085,7 @@
     </measure>
     <measure number="64" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34660,9 +34192,7 @@
     </measure>
     <measure number="65" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34761,9 +34291,7 @@
     </measure>
     <measure number="66" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34870,9 +34398,7 @@
     </measure>
     <measure number="67" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -34979,9 +34505,7 @@
     </measure>
     <measure number="68" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35160,9 +34684,7 @@
     </measure>
     <measure number="69" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35241,9 +34763,7 @@
     </measure>
     <measure number="70" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35422,9 +34942,7 @@
     </measure>
     <measure number="71" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35531,9 +35049,7 @@
     </measure>
     <measure number="72" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35612,9 +35128,7 @@
     </measure>
     <measure number="73" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35721,9 +35235,7 @@
     </measure>
     <measure number="74" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35822,9 +35334,7 @@
     </measure>
     <measure number="75" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -35931,9 +35441,7 @@
     </measure>
     <measure number="76" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36040,9 +35548,7 @@
     </measure>
     <measure number="77" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36221,9 +35727,7 @@
     </measure>
     <measure number="78" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36302,9 +35806,7 @@
     </measure>
     <measure number="79" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36431,24 +35933,16 @@
       </note>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -36461,9 +35955,7 @@
     </measure>
     <measure number="84" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36550,9 +36042,7 @@
     </measure>
     <measure number="85">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36572,9 +36062,7 @@
     </measure>
     <measure number="86" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36613,9 +36101,7 @@
     </measure>
     <measure number="87">
       <attributes>
-        <divisions>4</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36637,13 +36123,11 @@
   <part id="P3">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36671,20 +36155,14 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36713,9 +36191,7 @@
     </measure>
     <measure number="5" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36781,9 +36257,7 @@
     </measure>
     <measure number="6" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36850,9 +36324,7 @@
     </measure>
     <measure number="7" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -36884,364 +36356,220 @@
       </note>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="20">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="21">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="22">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="23">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="24">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="25">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="26">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="27">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="31">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="32">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="33">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="34">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="35">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="36">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="37">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="38">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="39">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="40">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="41">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="42">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="43">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="44">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="45">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="46">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="47">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="48">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="49">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="50">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="51">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="52">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="53">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="54">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="55">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="56">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="57">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="58">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="59">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="60">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="61">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="62">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="63">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="64">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="65">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="66">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="67">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="68">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="69">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="70">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="71">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="72">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="73">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="74">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="75">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="76">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="77">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="78">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="79">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -37253,24 +36581,16 @@
       </direction>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -37282,36 +36602,26 @@
       </direction>
     </measure>
     <measure number="84">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P4">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -37339,19 +36649,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -37363,9 +36667,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -37377,15 +36679,11 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -37746,9 +37044,7 @@
     </measure>
     <measure number="8" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -37817,9 +37113,7 @@
     </measure>
     <measure number="9" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -38148,9 +37442,7 @@
     </measure>
     <measure number="10" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -38403,9 +37695,7 @@
     </measure>
     <measure number="11" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -38766,9 +38056,7 @@
     </measure>
     <measure number="12" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -38837,9 +38125,7 @@
     </measure>
     <measure number="13" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -39196,9 +38482,7 @@
     </measure>
     <measure number="14" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -39267,9 +38551,7 @@
     </measure>
     <measure number="15" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -39516,9 +38798,7 @@
     </measure>
     <measure number="16" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -39725,9 +39005,7 @@
     </measure>
     <measure number="17" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -40084,9 +39362,7 @@
     </measure>
     <measure number="18" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -40191,9 +39467,7 @@
     </measure>
     <measure number="19" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -40474,9 +39748,7 @@
     </measure>
     <measure number="20" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -40799,9 +40071,7 @@
     </measure>
     <measure number="21" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -41052,9 +40322,7 @@
     </measure>
     <measure number="22" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -41337,9 +40605,7 @@
     </measure>
     <measure number="23" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -41666,9 +40932,7 @@
     </measure>
     <measure number="24" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -41919,9 +41183,7 @@
     </measure>
     <measure number="25" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -42178,9 +41440,7 @@
     </measure>
     <measure number="26" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -42393,9 +41653,7 @@
     </measure>
     <measure number="27" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -42646,9 +41904,7 @@
     </measure>
     <measure number="28" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -42859,9 +42115,7 @@
     </measure>
     <measure number="29" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -42964,9 +42218,7 @@
     </measure>
     <measure number="30" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -43181,9 +42433,7 @@
     </measure>
     <measure number="31" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -43404,9 +42654,7 @@
     </measure>
     <measure number="32" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -43579,9 +42827,7 @@
     </measure>
     <measure number="33" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -43912,9 +43158,7 @@
     </measure>
     <measure number="34" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -44201,9 +43445,7 @@
     </measure>
     <measure number="35" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -44424,9 +43666,7 @@
     </measure>
     <measure number="36" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -44681,9 +43921,7 @@
     </measure>
     <measure number="37" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -44924,9 +44162,7 @@
     </measure>
     <measure number="38" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -45173,9 +44409,7 @@
     </measure>
     <measure number="39" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -45386,9 +44620,7 @@
     </measure>
     <measure number="40" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -45635,9 +44867,7 @@
     </measure>
     <measure number="41" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -45932,9 +45162,7 @@
     </measure>
     <measure number="42" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -46221,9 +45449,7 @@
     </measure>
     <measure number="43" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -46546,9 +45772,7 @@
     </measure>
     <measure number="44" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -46799,9 +46023,7 @@
     </measure>
     <measure number="45" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -47084,9 +46306,7 @@
     </measure>
     <measure number="46" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -47413,9 +46633,7 @@
     </measure>
     <measure number="47" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -47666,9 +46884,7 @@
     </measure>
     <measure number="48" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -47925,9 +47141,7 @@
     </measure>
     <measure number="49" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -48140,9 +47354,7 @@
     </measure>
     <measure number="50" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -48393,9 +47605,7 @@
     </measure>
     <measure number="51" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -48612,9 +47822,7 @@
     </measure>
     <measure number="52" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -49011,9 +48219,7 @@
     </measure>
     <measure number="53" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -49264,9 +48470,7 @@
     </measure>
     <measure number="54" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -49597,9 +48801,7 @@
     </measure>
     <measure number="55" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -49668,9 +48870,7 @@
     </measure>
     <measure number="56" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -50027,9 +49227,7 @@
     </measure>
     <measure number="57" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -50388,9 +49586,7 @@
     </measure>
     <measure number="58" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -50605,9 +49801,7 @@
     </measure>
     <measure number="59" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -50750,9 +49944,7 @@
     </measure>
     <measure number="60" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -50859,9 +50051,7 @@
     </measure>
     <measure number="61" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -51240,9 +50430,7 @@
     </measure>
     <measure number="62" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -51585,9 +50773,7 @@
     </measure>
     <measure number="63" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -51850,9 +51036,7 @@
     </measure>
     <measure number="64" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -52155,9 +51339,7 @@
     </measure>
     <measure number="65" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -52540,9 +51722,7 @@
     </measure>
     <measure number="66" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -52805,9 +51985,7 @@
     </measure>
     <measure number="67" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -53068,9 +52246,7 @@
     </measure>
     <measure number="68" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -53287,9 +52463,7 @@
     </measure>
     <measure number="69" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -53540,9 +52714,7 @@
     </measure>
     <measure number="70" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -53762,15 +52934,11 @@
       </note>
     </measure>
     <measure number="71">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="72" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -53987,9 +53155,7 @@
     </measure>
     <measure number="73" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -54292,9 +53458,7 @@
     </measure>
     <measure number="74" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -54677,9 +53841,7 @@
     </measure>
     <measure number="75" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -54942,9 +54104,7 @@
     </measure>
     <measure number="76" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -55205,9 +54365,7 @@
     </measure>
     <measure number="77" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -55424,9 +54582,7 @@
     </measure>
     <measure number="78" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -55677,9 +54833,7 @@
     </measure>
     <measure number="79" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -55899,9 +55053,7 @@
     </measure>
     <measure number="80" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -55934,9 +55086,7 @@
     </measure>
     <measure number="81" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56037,9 +55187,7 @@
     </measure>
     <measure number="82" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56072,9 +55220,7 @@
     </measure>
     <measure number="83" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56296,9 +55442,7 @@
     </measure>
     <measure number="84">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56318,9 +55462,7 @@
     </measure>
     <measure number="85" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56352,26 +55494,20 @@
       </note>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P5">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56399,19 +55535,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -56423,9 +55553,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -56437,75 +55565,47 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -56850,9 +55950,7 @@
     </measure>
     <measure number="20" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -57327,9 +56425,7 @@
     </measure>
     <measure number="21" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -57804,9 +56900,7 @@
     </measure>
     <measure number="22" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -58293,9 +57387,7 @@
     </measure>
     <measure number="23" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -58774,9 +57866,7 @@
     </measure>
     <measure number="24" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -59251,9 +58341,7 @@
     </measure>
     <measure number="25" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -59624,9 +58712,7 @@
     </measure>
     <measure number="26" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -60023,9 +59109,7 @@
     </measure>
     <measure number="27" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -60075,80 +59159,50 @@
       </note>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="31">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="32">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="33">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="34">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="35">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="36">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="37">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="38">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="39">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="40">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="41">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="42" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -60493,9 +59547,7 @@
     </measure>
     <measure number="43" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -60970,9 +60022,7 @@
     </measure>
     <measure number="44" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -61447,9 +60497,7 @@
     </measure>
     <measure number="45" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -61936,9 +60984,7 @@
     </measure>
     <measure number="46" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -62417,9 +61463,7 @@
     </measure>
     <measure number="47" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -62894,9 +61938,7 @@
     </measure>
     <measure number="48" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -63267,9 +62309,7 @@
     </measure>
     <measure number="49" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -63666,9 +62706,7 @@
     </measure>
     <measure number="50" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -63718,149 +62756,91 @@
       </note>
     </measure>
     <measure number="51">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="52">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="53">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="54">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="55">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="56">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="57">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="58">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="59">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="60">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="61">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="62">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="63">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="64">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="65">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="66">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="67">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="68">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="69">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="70">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="71">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="72">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="73">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="74">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="75">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="76">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="77">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="78">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="79">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -63872,24 +62852,16 @@
       </direction>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -63901,36 +62873,26 @@
       </direction>
     </measure>
     <measure number="84">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P6">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -63959,9 +62921,7 @@
     </measure>
     <measure number="2">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -63981,9 +62941,7 @@
     </measure>
     <measure number="3" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64228,9 +63186,7 @@
     </measure>
     <measure number="4" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64332,9 +63288,7 @@
     </measure>
     <measure number="5" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64442,9 +63396,7 @@
     </measure>
     <measure number="6" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64547,9 +63499,7 @@
     </measure>
     <measure number="7" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64587,45 +63537,29 @@
       </note>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64746,9 +63680,7 @@
     </measure>
     <measure number="16" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -64891,9 +63823,7 @@
     </measure>
     <measure number="17" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65066,9 +63996,7 @@
     </measure>
     <measure number="18" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65247,9 +64175,7 @@
     </measure>
     <measure number="19" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65394,9 +64320,7 @@
     </measure>
     <measure number="20" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65535,9 +64459,7 @@
     </measure>
     <measure number="21" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65676,9 +64598,7 @@
     </measure>
     <measure number="22" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65821,9 +64741,7 @@
     </measure>
     <measure number="23" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -65992,9 +64910,7 @@
     </measure>
     <measure number="24" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -66213,9 +65129,7 @@
     </measure>
     <measure number="25" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -66394,9 +65308,7 @@
     </measure>
     <measure number="26" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -66935,9 +65847,7 @@
     </measure>
     <measure number="27">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -66957,9 +65867,7 @@
     </measure>
     <measure number="28" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -67086,9 +65994,7 @@
     </measure>
     <measure number="29" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -67325,9 +66231,7 @@
     </measure>
     <measure number="30" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -67443,45 +66347,29 @@
       </note>
     </measure>
     <measure number="31">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="32">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="33">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="34">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="35">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="36">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="37">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="38" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -67602,9 +66490,7 @@
     </measure>
     <measure number="39" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -67747,9 +66633,7 @@
     </measure>
     <measure number="40" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -67922,9 +66806,7 @@
     </measure>
     <measure number="41" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -68103,9 +66985,7 @@
     </measure>
     <measure number="42" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -68250,9 +67130,7 @@
     </measure>
     <measure number="43" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -68391,9 +67269,7 @@
     </measure>
     <measure number="44" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -68532,9 +67408,7 @@
     </measure>
     <measure number="45" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -68677,9 +67551,7 @@
     </measure>
     <measure number="46" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -68848,9 +67720,7 @@
     </measure>
     <measure number="47" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -69069,9 +67939,7 @@
     </measure>
     <measure number="48" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -69250,9 +68118,7 @@
     </measure>
     <measure number="49" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -69791,9 +68657,7 @@
     </measure>
     <measure number="50">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -69813,9 +68677,7 @@
     </measure>
     <measure number="51">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -69835,9 +68697,7 @@
     </measure>
     <measure number="52">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -69857,9 +68717,7 @@
     </measure>
     <measure number="53" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -70042,9 +68900,7 @@
     </measure>
     <measure number="54" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -70107,9 +68963,7 @@
     </measure>
     <measure number="55" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -70252,9 +69106,7 @@
     </measure>
     <measure number="56" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -70741,9 +69593,7 @@
     </measure>
     <measure number="57" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -71030,9 +69880,7 @@
     </measure>
     <measure number="58" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -71231,9 +70079,7 @@
     </measure>
     <measure number="59" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -71332,9 +70178,7 @@
     </measure>
     <measure number="60" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -71601,9 +70445,7 @@
     </measure>
     <measure number="61" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -71736,9 +70578,7 @@
     </measure>
     <measure number="62" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -71881,9 +70721,7 @@
     </measure>
     <measure number="63" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -72026,9 +70864,7 @@
     </measure>
     <measure number="64" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -72171,9 +71007,7 @@
     </measure>
     <measure number="65" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -72346,9 +71180,7 @@
     </measure>
     <measure number="66" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -72571,9 +71403,7 @@
     </measure>
     <measure number="67" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -72788,9 +71618,7 @@
     </measure>
     <measure number="68" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -73341,9 +72169,7 @@
     </measure>
     <measure number="69" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -73382,9 +72208,7 @@
     </measure>
     <measure number="70" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -73505,9 +72329,7 @@
     </measure>
     <measure number="71" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -73650,9 +72472,7 @@
     </measure>
     <measure number="72" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -73795,9 +72615,7 @@
     </measure>
     <measure number="73" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -73940,9 +72758,7 @@
     </measure>
     <measure number="74" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -74115,9 +72931,7 @@
     </measure>
     <measure number="75" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -74340,9 +73154,7 @@
     </measure>
     <measure number="76" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -74557,9 +73369,7 @@
     </measure>
     <measure number="77" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75110,9 +73920,7 @@
     </measure>
     <measure number="78" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75151,9 +73959,7 @@
     </measure>
     <measure number="79" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75219,9 +74025,7 @@
     </measure>
     <measure number="80" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75324,9 +74128,7 @@
     </measure>
     <measure number="81" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75463,9 +74265,7 @@
     </measure>
     <measure number="82" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75602,9 +74402,7 @@
     </measure>
     <measure number="83" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75794,9 +74592,7 @@
     </measure>
     <measure number="84">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75816,9 +74612,7 @@
     </measure>
     <measure number="85">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75838,9 +74632,7 @@
     </measure>
     <measure number="86" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75879,9 +74671,7 @@
     </measure>
     <measure number="87">
       <attributes>
-        <divisions>4</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75903,13 +74693,11 @@
   <part id="P7">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -75937,19 +74725,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -75961,9 +74743,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -75975,130 +74755,80 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="20">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="21">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="22">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="23">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="24">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="25">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="26">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="27">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -76223,9 +74953,7 @@
     </measure>
     <measure number="31" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -76546,9 +75274,7 @@
     </measure>
     <measure number="32" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -76929,9 +75655,7 @@
     </measure>
     <measure number="33" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -77106,9 +75830,7 @@
     </measure>
     <measure number="34" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -77239,9 +75961,7 @@
     </measure>
     <measure number="35" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -77562,9 +76282,7 @@
     </measure>
     <measure number="36" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -77945,9 +76663,7 @@
     </measure>
     <measure number="37" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -78127,214 +76843,130 @@
       </note>
     </measure>
     <measure number="38">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="39">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="40">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="41">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="42">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="43">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="44">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="45">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="46">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="47">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="48">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="49">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="50">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="51">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="52">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="53">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="54">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="55">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="56">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="57">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="58">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="59">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="60">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="61">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="62">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="63">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="64">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="65">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="66">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="67">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="68">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="69">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="70">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="71">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="72">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="73">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="74">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="75">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="76">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="77">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="78">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="79">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -78346,25 +76978,17 @@
       </direction>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -78532,9 +77156,7 @@
     </measure>
     <measure number="84" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -78620,31 +77242,23 @@
       </note>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P8">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -78672,19 +77286,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -78696,9 +77304,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -78710,145 +77316,89 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="20">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="21">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="22">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="23">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="24">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="25">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="26">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="27">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="31">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="32">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="33" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -79087,9 +77637,7 @@
     </measure>
     <measure number="34" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -79272,9 +77820,7 @@
     </measure>
     <measure number="35" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -79367,9 +77913,7 @@
     </measure>
     <measure number="36" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -79576,9 +78120,7 @@
     </measure>
     <measure number="37" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -79833,9 +78375,7 @@
     </measure>
     <measure number="38" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -79991,15 +78531,11 @@
       </note>
     </measure>
     <measure number="39">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="40" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -80120,9 +78656,7 @@
     </measure>
     <measure number="41" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -80261,9 +78795,7 @@
     </measure>
     <measure number="42" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -80307,50 +78839,32 @@
       </note>
     </measure>
     <measure number="43">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="44">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="45">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="46">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="47">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="48">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="49">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="50">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="51" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -80492,25 +79006,17 @@
       </note>
     </measure>
     <measure number="52">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="53">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="54">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="55" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -80669,9 +79175,7 @@
     </measure>
     <measure number="56" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -80846,9 +79350,7 @@
     </measure>
     <measure number="57" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -81023,9 +79525,7 @@
     </measure>
     <measure number="58" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -81496,9 +79996,7 @@
     </measure>
     <measure number="59" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -81617,9 +80115,7 @@
     </measure>
     <measure number="60" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -81710,9 +80206,7 @@
     </measure>
     <measure number="61" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -81897,9 +80391,7 @@
     </measure>
     <measure number="62" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -82042,9 +80534,7 @@
     </measure>
     <measure number="63" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -82187,9 +80677,7 @@
     </measure>
     <measure number="64" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -82430,9 +80918,7 @@
     </measure>
     <measure number="65" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -82653,9 +81139,7 @@
     </measure>
     <measure number="66" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -82798,9 +81282,7 @@
     </measure>
     <measure number="67" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -83251,9 +81733,7 @@
     </measure>
     <measure number="68" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -83860,9 +82340,7 @@
     </measure>
     <measure number="69" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -84263,9 +82741,7 @@
     </measure>
     <measure number="70" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -85176,9 +83652,7 @@
     </measure>
     <measure number="71" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -85821,9 +84295,7 @@
     </measure>
     <measure number="72" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -86036,9 +84508,7 @@
     </measure>
     <measure number="73" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -86279,9 +84749,7 @@
     </measure>
     <measure number="74" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -86502,9 +84970,7 @@
     </measure>
     <measure number="75" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -86647,9 +85113,7 @@
     </measure>
     <measure number="76" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -87100,9 +85564,7 @@
     </measure>
     <measure number="77" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -87709,9 +86171,7 @@
     </measure>
     <measure number="78" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -87755,9 +86215,7 @@
       </note>
     </measure>
     <measure number="79">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -87769,24 +86227,16 @@
       </direction>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -87798,36 +86248,26 @@
       </direction>
     </measure>
     <measure number="84">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P9">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -87855,19 +86295,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -87879,9 +86313,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -87893,235 +86325,143 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="20">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="21">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="22">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="23">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="24">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="25">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="26">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="27">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="31">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="32">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="33">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="34">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="35">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="36">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="37">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="38">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="39">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="40">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="41">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="42">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="43">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="44">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="45">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="46">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="47">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="48">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="49">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="50">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="51" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -88216,9 +86556,7 @@
     </measure>
     <measure number="52" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -88256,139 +86594,85 @@
       </note>
     </measure>
     <measure number="53">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="54">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="55">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="56">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="57">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="58">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="59">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="60">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="61">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="62">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="63">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="64">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="65">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="66">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="67">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="68">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="69">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="70">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="71">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="72">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="73">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="74">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="75">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="76">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="77">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="78">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="79">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -88400,24 +86684,16 @@
       </direction>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -88429,36 +86705,26 @@
       </direction>
     </measure>
     <measure number="84">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
   <part id="P10">
     <measure number="1">
       <attributes>
-        <divisions>36</divisions>
         <key>
           <fifths>3</fifths>
           <mode>major</mode>
         </key>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -88486,19 +86752,13 @@
       </direction>
     </measure>
     <measure number="2">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="3">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="4">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -88510,9 +86770,7 @@
       </direction>
     </measure>
     <measure number="5">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -88524,130 +86782,80 @@
       </direction>
     </measure>
     <measure number="6">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="7">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="8">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="9">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="10">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="11">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="12">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="13">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="14">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="15">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="16">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="17">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="18">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="19">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="20">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="21">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="22">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="23">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="24">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="25">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="26">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="27">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="28">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="29">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="30" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -89010,9 +87218,7 @@
     </measure>
     <measure number="31" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -89893,9 +88099,7 @@
     </measure>
     <measure number="32" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -90860,9 +89064,7 @@
     </measure>
     <measure number="33" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -91673,9 +89875,7 @@
     </measure>
     <measure number="34" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -92594,9 +90794,7 @@
     </measure>
     <measure number="35" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -93477,9 +91675,7 @@
     </measure>
     <measure number="36" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -94444,9 +92640,7 @@
     </measure>
     <measure number="37" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -95257,9 +93451,7 @@
     </measure>
     <measure number="38" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -96178,9 +94370,7 @@
     </measure>
     <measure number="39" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -97061,9 +95251,7 @@
     </measure>
     <measure number="40" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -98028,9 +96216,7 @@
     </measure>
     <measure number="41" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -98841,9 +97027,7 @@
     </measure>
     <measure number="42" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -99444,9 +97628,7 @@
     </measure>
     <measure number="43" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -100561,9 +98743,7 @@
     </measure>
     <measure number="44" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -101714,9 +99894,7 @@
     </measure>
     <measure number="45" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -102831,9 +101009,7 @@
     </measure>
     <measure number="46" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -103984,9 +102160,7 @@
     </measure>
     <measure number="47" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -105101,9 +103275,7 @@
     </measure>
     <measure number="48" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -106254,9 +104426,7 @@
     </measure>
     <measure number="49" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -107371,9 +105541,7 @@
     </measure>
     <measure number="50" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -108220,9 +106388,7 @@
     </measure>
     <measure number="51" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -108537,9 +106703,7 @@
     </measure>
     <measure number="52" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -109102,9 +107266,7 @@
     </measure>
     <measure number="53" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -109823,9 +107985,7 @@
     </measure>
     <measure number="54" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -110454,9 +108614,7 @@
     </measure>
     <measure number="55" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -111257,9 +109415,7 @@
     </measure>
     <measure number="56" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -111822,9 +109978,7 @@
     </measure>
     <measure number="57" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -112385,9 +110539,7 @@
     </measure>
     <measure number="58" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -113008,9 +111160,7 @@
     </measure>
     <measure number="59" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -113741,9 +111891,7 @@
     </measure>
     <measure number="60" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -113914,9 +112062,7 @@
     </measure>
     <measure number="61" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -114457,9 +112603,7 @@
     </measure>
     <measure number="62" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -115646,9 +113790,7 @@
     </measure>
     <measure number="63" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -116871,9 +115013,7 @@
     </measure>
     <measure number="64" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -118060,9 +116200,7 @@
     </measure>
     <measure number="65" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -119285,9 +117423,7 @@
     </measure>
     <measure number="66" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -120474,9 +118610,7 @@
     </measure>
     <measure number="67" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -121699,9 +119833,7 @@
     </measure>
     <measure number="68" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -122888,9 +121020,7 @@
     </measure>
     <measure number="69" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -124013,9 +122143,7 @@
     </measure>
     <measure number="70" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -125038,9 +123166,7 @@
     </measure>
     <measure number="71" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -126263,9 +124389,7 @@
     </measure>
     <measure number="72" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -127452,9 +125576,7 @@
     </measure>
     <measure number="73" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -128677,9 +126799,7 @@
     </measure>
     <measure number="74" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -129866,9 +127986,7 @@
     </measure>
     <measure number="75" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -131091,9 +129209,7 @@
     </measure>
     <measure number="76" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -132280,9 +130396,7 @@
     </measure>
     <measure number="77" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -133505,9 +131619,7 @@
     </measure>
     <measure number="78" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -134329,9 +132441,7 @@
       </note>
     </measure>
     <measure number="79">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
       <direction placement="above">
         <direction-type>
           <metronome parentheses="no">
@@ -134343,25 +132453,17 @@
       </direction>
     </measure>
     <measure number="80">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="81">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="82">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="83" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -134427,9 +132529,7 @@
     </measure>
     <measure number="84" width="216">
       <attributes>
-        <divisions>36</divisions>
         <time>
-          <beats>4</beats>
           <beat-type>4</beat-type>
         </time>
         <staves>3</staves>
@@ -134461,19 +132561,13 @@
       </note>
     </measure>
     <measure number="85">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="86">
-      <attributes>
-        <divisions>36</divisions>
-      </attributes>
+      <attributes/>
     </measure>
     <measure number="87">
-      <attributes>
-        <divisions>4</divisions>
-      </attributes>
+      <attributes/>
     </measure>
   </part>
 </score-partwise>

@@ -5,12 +5,12 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * Time
+ * DisplayText
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/time/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/display-text/
  * @Data
  */
-class Time extends MusicXMLWriter
+class DisplayText extends MusicXMLWriter
 {
 	/**
 	 * Color
@@ -35,6 +35,22 @@ class Time extends MusicXMLWriter
 	 * @var float
 	 */
 	public $defaultY;
+
+	/**
+	 * Dir
+	 *
+	 * @Attribute(name="dir")
+	 * @var string
+	 */
+	public $dir;
+
+	/**
+	 * Enclosure
+	 *
+	 * @Attribute(name="enclosure")
+	 * @var string
+	 */
+	public $enclosure;
 
 	/**
 	 * Font family
@@ -77,28 +93,44 @@ class Time extends MusicXMLWriter
 	public $halign;
 
 	/**
-	 * Id
+	 * Justify
 	 *
-	 * @Attribute(name="id")
+	 * @Attribute(name="justify")
 	 * @var string
 	 */
-	public $id;
+	public $justify;
 
 	/**
-	 * Number
+	 * Letter spacing
 	 *
-	 * @Attribute(name="number")
+	 * @Attribute(name="letter-spacing")
 	 * @var string
 	 */
-	public $number;
+	public $letterSpacing;
 
 	/**
-	 * Print object
+	 * Line height
 	 *
-	 * @Attribute(name="print-object")
+	 * @Attribute(name="line-height")
 	 * @var string
 	 */
-	public $printObject;
+	public $lineHeight;
+
+	/**
+	 * Line through
+	 *
+	 * @Attribute(name="line-through")
+	 * @var string
+	 */
+	public $lineThrough;
+
+	/**
+	 * Overline
+	 *
+	 * @Attribute(name="overline")
+	 * @var string
+	 */
+	public $overline;
 
 	/**
 	 * Relative x
@@ -117,20 +149,20 @@ class Time extends MusicXMLWriter
 	public $relativeY;
 
 	/**
-	 * Separator
+	 * Rotation
 	 *
-	 * @Attribute(name="separator")
+	 * @Attribute(name="rotation")
 	 * @var string
 	 */
-	public $separator;
+	public $rotation;
 
 	/**
-	 * Symbol
+	 * Underline
 	 *
-	 * @Attribute(name="symbol")
+	 * @Attribute(name="underline")
 	 * @var string
 	 */
-	public $symbol;
+	public $underline;
 
 	/**
 	 * Valign
@@ -139,37 +171,28 @@ class Time extends MusicXMLWriter
 	 * @var string
 	 */
 	public $valign;
+
+	/**
+	 * Xml:lang
+	 *
+	 * @Attribute(name="xml:lang")
+	 * @var string
+	 */
+	public $xmlLang;
+
+	/**
+	 * Xml:space
+	 *
+	 * @Attribute(name="xml:space")
+	 * @var string
+	 */
+	public $xmlSpace;
     
 	/**
-     * Beats
-     *
-     * @Element(name="beats")
-     * @var Beats[]
-     */
-    public $beats;
-    
-    /**
-     * BeatType
-     *
-     * @PropertyElement(name="beat-type")
-     * @var BeatType[]
-     */
-    public $beatType;
-	
-	/*
-     * Interchangeable
-     *
-     * @Element(name="interchangeable")
-     * @var Interchangeable
-     */
-    public $interchangeable;
-
-    /*
-     * Senza misura
-     *
-     * @Element(name="senza-misura ")
-     * @var SenzaMisura
-     */
-    public $senzaMisura;
-
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }
