@@ -2,4 +2,4 @@
 
 require_once __DIR__ . "/musicxml.php";
 
-getObject("pedal-tuning");
+getObject("slash-type");

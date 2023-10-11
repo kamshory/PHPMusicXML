@@ -48,7 +48,7 @@ class BeatRepeat extends MusicXMLWriter
      * Slash dot
      * 
      * @Element
-     * @var SlashDot
+     * @var SlashDot[]
      */
     public $slashDot;
     
@@ -56,7 +56,7 @@ class BeatRepeat extends MusicXMLWriter
      * Excpet voice
      * 
      * @Element
-     * @var ExceptVoice
+     * @var ExceptVoice[]
      */
     public $exceptVoice;
     

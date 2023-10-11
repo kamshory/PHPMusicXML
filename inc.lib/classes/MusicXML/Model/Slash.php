@@ -40,8 +40,8 @@ class Slash extends MusicXMLWriter
     /**
      * Slash type
      * 
-     * @PropertyElement
-     * @var string
+     * @Element(name="slash-type")
+     * @var SlashType
      */
     public $slashType;
     
@@ -49,7 +49,7 @@ class Slash extends MusicXMLWriter
      * Slash dot
      * 
      * @Element
-     * @var SlashDot
+     * @var SlashDot[]
      */
     public $slashDot;
     
@@ -57,7 +57,7 @@ class Slash extends MusicXMLWriter
      * Excpet voice
      * 
      * @Element
-     * @var ExceptVoice
+     * @var ExceptVoice[]
      */
     public $exceptVoice;
 }

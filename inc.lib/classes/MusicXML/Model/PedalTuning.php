@@ -16,7 +16,7 @@ class PedalTuning extends MusicXMLWriter
      * Pedal step
      *
      * @PropertyElement(name="pedal-step")
-     * @var string
+     * @var PedalStep
      */
     public $pedalStep;
     
@@ -24,7 +24,7 @@ class PedalTuning extends MusicXMLWriter
      * Pedal tuning
      *
      * @PropertyElement(name="pedal-alter")
-     * @var float
+     * @var PedalAlter
      */
     public $pedalAlter;
 }

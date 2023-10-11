@@ -45,27 +45,53 @@ class StaffDetail extends MusicXMLWriter
      */
     public $showFrets;
     
-    /**
+    /*
      * Staff type
      *
-     * @PropertyElement(name="staff-type")
-     * @var string
+     * @Element(name="staff-type")
+     * @var StaffType
      */
     public $staffType;
-    
-    /**
+
+    /*
      * Staff lines
      *
-     * @PropertyElement(name="staff-lines")
-     * @var integer
+     * @Element(name="staff-lines")
+     * @var StaffLines
      */
     public $staffLines;
-    
-    /**
+
+    /*
+     * Line detail
+     *
+     * @Element(name="line-detail")
+     * @var LineDetail[]
+     */
+    public $lineDetail;
+
+    /*
+     * Staff tuning
+     *
+     * @Element(name="staff-tuning")
+     * @var StaffTuning[]
+     */
+    public $staffTuning;
+
+    /*
+     * Capo
+     *
+     * @Element(name="capo")
+     * @var Capo
+     */
+    public $capo;
+
+    /*
      * Staff size
      *
-     * @PropertyElement(name="staff-size")
-     * @var float
+     * @Element(name="staff-size")
+     * @var StaffSize
      */
     public $staffSize;
+
+
 }
