@@ -2,6 +2,10 @@
 
 PHPMUsicXML is a library for creating MusicXML files and converting music from MIDI format to MusicXML format. This library contains logic and models. Each element in MusicXML is represented by one class as its model.
 
+# Elements
+
+PHPMusicXML refer to https://github.com/w3c/musicxml/tree/gh-pages/docs/musicxml-reference/elements to create models.
+
 ## Expected Result
 
 Expected capabilities of this library are:
