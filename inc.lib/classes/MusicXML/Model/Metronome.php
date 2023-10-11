@@ -32,16 +32,57 @@ class Metronome extends MusicXMLWriter
     /**
      * Beat unit
      *
-     * @PropertyElement(name="beat-unit")
-     * @var string
+     * @Element(name="beat-unit")
+     * @var BeatUnit
      */
     public $beatUnit;
-    
+
+    /**
+     * Beat unit dot
+     *
+     * @Element(name="beat-unit-dot")
+     * @var BeatUnitDot[]
+     */
+    public $beatUnitDot;
+
+    /**
+     * Beat unit tied
+     *
+     * @Element(name="beat-unit-tied")
+     * @var BeatUnitTied[]
+     */
+    public $beatUnitTied;
+
     /**
      * Per minute
      *
-     * @PropertyElement(name="per-minute")
-     * @var integer
+     * @Element(name="per-minute")
+     * @var PerMinute
      */
     public $perMinute;
+
+    /**
+     * Metronome arrows
+     *
+     * @Element(name="metronome-arrows")
+     * @var MetronomeArrows
+     */
+    public $metronomeArrows;
+
+    /**
+     * Metronome note
+     *
+     * @Element(name="metronome-note")
+     * @var MetronomeNote[]
+     */
+    public $metronomeNote;
+
+    /**
+     * Metronome relation
+     *
+     * @Element(name="metronome-relation")
+     * @var MetronomeRelation
+     */
+    public $metronomeRelation;
+
 }
