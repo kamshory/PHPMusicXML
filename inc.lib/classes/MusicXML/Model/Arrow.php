@@ -99,5 +99,36 @@ class Arrow extends MusicXMLWriter
 	 * @var string
 	 */
 	public $smufl;
+	
+	/**
+	 * ArrowDirection
+	 *
+	 * @Element(name="arrow-direction")
+	 * @var ArrowDirection
+	 */
+	public $arrowDirection;
+	
+	/**
+	 * ArrowStyle
+	 *
+	 * @Element(name="arrow-style")
+	 * @var ArrowStyle
+	 */
+	public $arrowStyle;
+	
+	/**
+	 * Arrowhead
+	 *
+	 * @Element(name="arrowhead")
+	 * @var Arrowhead
+	 */
+	public $arrowhead;
     
+	/**
+	 * Circular arrow
+	 *
+	 * @Element(name="circular-arrow")
+	 * @var CircularArrow
+	 */
+	public $circularArrow;
 }
