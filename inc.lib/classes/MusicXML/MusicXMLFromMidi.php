@@ -8,6 +8,7 @@ use Midi\MidiMeasure;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Bend;
+use MusicXML\Model\Divisions;
 use MusicXML\Model\Duration;
 use MusicXML\Model\InstrumentName;
 use MusicXML\Model\Measure;
@@ -27,6 +28,7 @@ use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
+use MusicXML\Model\Staves;
 use MusicXML\Model\Technical;
 use MusicXML\Model\Volume;
 use MusicXML\Properties\MidiEvent;
@@ -952,13 +954,13 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             $divisions = $this->getDivisions($measureIndex);
             $measureWidth = $this->getWidth($measureIndex);
-            $attributes->divisions = $divisions;                   
+            $attributes->divisions = new Divisions($divisions);                   
             $attributes->time = $this->getTime($this->timeSignature);           
             $attributes->clef = $this->clefs[$channelId];
             
             if(count($attributes->clef) > 1)
             {
-                $attributes->staves = count($attributes->clef);
+                $attributes->staves = new Staves(count($attributes->clef));
             }     
             
             
@@ -970,20 +972,21 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $measure->note = $this->initializeArray($measure->note);
                 // get first note
+                
+                /*
                 $message0x = array_values($noteMessages);
                 $message0 = $message0x[0];
-                
-
                 $note0 = new Note();
                 $note0->rest = new Rest();
                 $duration0 = $message0['time'] - ($measureIndex * 4 * $timebase);
                 $duration0 = $this->calculateDuration($duration0, $divisions, $timebase);
-                
+                $duration0 = $this->fixDuration($duration0);
                 $note0->duration = new Duration($duration0);
                 $note0->voice = $channelId;
                 $note0->staff = $channelId;
                 $note0->type = $this->getNoteType($duration0, $divisions);
                 $measure->note[] = $note0;
+                */
                 
                 $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase);
             }
@@ -1126,6 +1129,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     }
                     $note->stem = 'up';
                     $note->notations = array($this->getNotation());
+                    $duration = $this->fixDuration($duration);
                     $note->duration = new Duration($duration);
                     $note->type = $this->getNoteType($duration, $divisions);
                     $measure->note[] = $note;
@@ -1135,6 +1139,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $rest = new Rest();
                     $note->rest = $rest;
                 }
+                $duration = $this->fixDuration($duration);
                 $note->duration = new Duration($duration);
                 $note->type = $this->getNoteType($duration, $divisions);
                 

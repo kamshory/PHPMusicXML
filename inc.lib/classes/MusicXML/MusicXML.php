@@ -8,11 +8,13 @@ use MusicXML\Map\ModelMap;
 use MusicXML\Map\NodeType;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Clef;
+use MusicXML\Model\Divisions;
 use MusicXML\Model\Key;
 use MusicXML\Model\Measure;
 use MusicXML\Model\PartList;
 use MusicXML\Model\PartPartwise;
 use MusicXML\Model\ScorePartwise;
+use MusicXML\Model\Staves;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
 use MusicXML\Util\MXL;
@@ -125,8 +127,8 @@ class MusicXML extends MusicXMLBase
         $transpose->octaveChange = 0;
 
         $attributes = new Attributes();
-        $attributes->divisions = 1;
-        $attributes->staves = 1;
+        $attributes->divisions = new Divisions(1);
+        $attributes->staves = new Staves(1);
         $attributes->key = $key;
         $attributes->time = $time;
         $attributes->clef = $clef;

@@ -37,8 +37,8 @@ class Attributes extends MusicXMLWriter
 
     /**
      * Staves
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Staves
      */
     public $staves;
 

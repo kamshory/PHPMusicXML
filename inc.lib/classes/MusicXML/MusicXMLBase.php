@@ -9,6 +9,8 @@ use Exceptions\FileNotFoundException;
 use Midi\MidiMeasure;
 use MusicXML\Model\Alter;
 use MusicXML\Model\Articulations;
+use MusicXML\Model\Beats;
+use MusicXML\Model\BeatType;
 use MusicXML\Model\Encoder;
 use MusicXML\Model\Encoding;
 use MusicXML\Model\EncodingDate;
@@ -48,6 +50,10 @@ class MusicXMLBase
     const SOFTWARE_NAME = "Planetbiru";
     const ENCODING_DESCRIPTION = "This software is not ready for production yet";
 
+    public function fixDuration($duration)
+    {
+        return $duration / 4;
+    }
 
     public function loadMidi($midiPath)
     {
@@ -148,8 +154,8 @@ class MusicXMLBase
     public function getTime($timeSignature)
     {
         $time = new Time();
-        $time->beats = $timeSignature->getBeats();
-        $time->beatType = $timeSignature->getBeatType();
+        $time->beats = array(new Beats($timeSignature->getBeats()));
+        $time->beatType = array(new BeatType($timeSignature->getBeatType()));
         return $time;
     }
     
