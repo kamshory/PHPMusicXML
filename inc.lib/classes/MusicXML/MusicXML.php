@@ -16,7 +16,7 @@ use MusicXML\Model\Divisions;
 use MusicXML\Model\Fifths;
 use MusicXML\Model\Key;
 use MusicXML\Model\Line;
-use MusicXML\Model\Measure;
+use MusicXML\Model\MeasurePartwise;
 use MusicXML\Model\OctaveChange;
 use MusicXML\Model\PartList;
 use MusicXML\Model\PartPartwise;
@@ -115,7 +115,7 @@ class MusicXML extends MusicXMLBase
         $part->id = "P1";
         $part->measure = array();
 
-        $measure = new Measure();
+        $measure = new MeasurePartwise();
         $measure->number = 1;
 
         $key = new Key();

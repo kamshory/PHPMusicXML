@@ -19,15 +19,14 @@ $elementList = '
 
 
 
-<group-name>
-<group-name-display>
-<group-abbreviation>
-<group-abbreviation-display>
-<group-symbol>
-<group-barline>
-<group-time>
-<footnote>
-<level>
+<work>
+<movement-number>
+<movement-title>
+<identification>
+<defaults>
+<credit>[]
+<part-list>
+<measure>[]
 
 
 ';

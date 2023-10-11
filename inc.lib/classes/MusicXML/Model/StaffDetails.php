@@ -5,12 +5,12 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * StaffDetail
+ * StaffDetails
  * @Xml
  * https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staff-details/
  * @Data
  */
-class StaffDetail extends MusicXMLWriter
+class StaffDetails extends MusicXMLWriter
 {
     /**
      * Number

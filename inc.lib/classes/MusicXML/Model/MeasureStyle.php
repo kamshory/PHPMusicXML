@@ -87,8 +87,8 @@ class MeasureStyle extends MusicXMLWriter
     /**
      * Multiple rest
      *
-     * @PropertyElement(name="multiple-rest")
-     * @var integer
+     * @Element(name="multiple-rest")
+     * @var MultipleRest
      */
     public $multipleRest;
     
@@ -117,5 +117,12 @@ class MeasureStyle extends MusicXMLWriter
      */
     public $slash;
 
+    /**
+     * Measure repeat
+     *
+     * @Element(name="measure-repeat")
+     * @var MeasureRepeat
+     */
+    public $measureRepeat;
 }
 

@@ -171,4 +171,12 @@ class Note extends MusicXMLWriter
      * @var Stem
      */
     public $stem;
+    
+    /**
+     * Notehead text
+     *
+     * @Element(name="notehead-text")
+     * @var NoteheadText
+     */
+    public $noteheadText;
 }

@@ -14,8 +14,8 @@ class TupletActual extends MusicXMLWriter
 {
     /**
      * Tuplet number
-     * @PropertyElement(name="tuplet-number")
-     * @var string
+     * @Element(name="tuplet-number")
+     * @var TupletNumber
      */
     public $tupletNumber;
     

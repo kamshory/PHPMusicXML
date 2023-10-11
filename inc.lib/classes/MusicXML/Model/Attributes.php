@@ -81,12 +81,12 @@ class Attributes extends MusicXMLWriter
     public $partSymbol;
     
     /**
-     * Staff detail
+     * Staff details
      *
      * @Element(name="staff-detail")
-     * @var StaffDetail
+     * @var StaffDetails
      */
-    public $staffDetail;
+    public $staffDetails;
     
     /**
      * Directive

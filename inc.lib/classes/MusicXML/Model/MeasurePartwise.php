@@ -5,13 +5,13 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * Measure
+ * MeasurePartwise
  * @Xml
  * @Path /path/measure
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-partwise/
  * @Data
  */
-class Measure extends MusicXMLWriter
+class MeasurePartwise extends MusicXMLWriter
 {
     /**
      * Number

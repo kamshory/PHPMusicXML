@@ -11,7 +11,7 @@ use MusicXML\Model\Bend;
 use MusicXML\Model\Divisions;
 use MusicXML\Model\Duration;
 use MusicXML\Model\InstrumentName;
-use MusicXML\Model\Measure;
+use MusicXML\Model\MeasurePartwise;
 use MusicXML\Model\MidiChannel;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\MidiProgram;
@@ -903,11 +903,11 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param string $partId
      * @param integer $channelId
      * @param integer $measureIndex
-     * @return Measure
+     * @return MeasurePartwise
      */
     private function getMeasure($partId, $channelId, $measureIndex, $timebase)
     {
-        $measure = new Measure();
+        $measure = new MeasurePartwise();
         $attributes = new Attributes();
         $measure->number = $measureIndex+1;
         
@@ -1087,12 +1087,12 @@ class MusicXMLFromMidi extends MusicXMLBase
      * Add element to measure
      *
      * @param integer $measureIndex
-     * @param Measure $measure
+     * @param MeasurePartwise $measure
      * @param array $noteMessages
      * @param integer $channelId
      * @param integer $divisions
      * @param integer $timebase
-     * @return Measure
+     * @return MeasurePartwise
      */
     private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase)
     {

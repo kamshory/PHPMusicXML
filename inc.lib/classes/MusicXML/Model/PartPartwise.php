@@ -22,10 +22,10 @@ class PartPartwise extends MusicXMLWriter
     public $id;
     
     /**
-     * Measure list
+     * MeasurePartwise list
      *
      * @Element(name="measure")
-     * @var Measure[]
+     * @var MeasurePartwise[]
      */
     public $measure;
 }
