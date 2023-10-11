@@ -7,7 +7,6 @@ use DOMNode;
 use Midi\MidiMeasure;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
-use MusicXML\Model\Bend;
 use MusicXML\Model\Divisions;
 use MusicXML\Model\Duration;
 use MusicXML\Model\InstrumentName;
@@ -21,8 +20,6 @@ use MusicXML\Model\PartAbbreviation;
 use MusicXML\Model\PartList;
 use MusicXML\Model\PartName;
 use MusicXML\Model\PartPartwise;
-use MusicXML\Model\PreBend;
-use MusicXML\Model\Release;
 use MusicXML\Model\Rest;
 use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
@@ -1039,27 +1036,6 @@ class MusicXMLFromMidi extends MusicXMLBase
     }
     
     /**
-     * Get bend
-     *
-     * @param integer $value
-     * @return Bend
-     */
-    protected function getBend($value, $preBend = false, $release = false)
-    {
-        $bend = new Bend();
-        $bend->bendAlter = round(($value-8192)*2/16383, 4);
-        if($preBend)
-        {
-            $bend->preBend = new PreBend();
-        }
-        if($release)
-        {
-            $bend->release = new Release();
-        }
-        return $bend;
-    }
-    
-    /**
      * Get index of note of channel
      *
      * @param array $noteMessages
@@ -1151,12 +1127,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         $measure->width = $measureWidth;
         return $measure;
-    }
-    
-    
-    protected function getDefaultX($channelId, $divisions, $timebase, $measureWidth, $message)
-    {
-        //TODO: note must have margin left information relative to its measure
     }
     
 }

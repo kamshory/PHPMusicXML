@@ -11,6 +11,7 @@ use MusicXML\Model\Alter;
 use MusicXML\Model\Articulations;
 use MusicXML\Model\Beats;
 use MusicXML\Model\BeatType;
+use MusicXML\Model\Bend;
 use MusicXML\Model\Encoder;
 use MusicXML\Model\Encoding;
 use MusicXML\Model\EncodingDate;
@@ -29,6 +30,8 @@ use MusicXML\Model\Pan;
 use MusicXML\Model\PartAbbreviation;
 use MusicXML\Model\PartName;
 use MusicXML\Model\Pitch;
+use MusicXML\Model\PreBend;
+use MusicXML\Model\Release;
 use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
@@ -1562,6 +1565,27 @@ class MusicXMLBase
             return $keys[0];
         }
         return null;
+    }
+    
+    /**
+     * Get bend
+     *
+     * @param integer $value
+     * @return Bend
+     */
+    protected function getBend($value, $preBend = false, $release = false)
+    {
+        $bend = new Bend();
+        $bend->bendAlter = round(($value-8192)*2/16383, 4);
+        if($preBend)
+        {
+            $bend->preBend = new PreBend();
+        }
+        if($release)
+        {
+            $bend->release = new Release();
+        }
+        return $bend;
     }
     
 }
