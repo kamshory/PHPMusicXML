@@ -58,16 +58,11 @@ class Note extends MusicXMLWriter
     public $duration;
 
     /**
-     * @PropertyElement
-     * @var string
+     * Voice
+     * @Element(name="voice")
+     * @var Voice
      */
     public $voice;
-
-    /**
-     * @PropertyElement
-     * @var string
-     */
-    public $type;
 
     /**
      * @Element
@@ -142,4 +137,28 @@ class Note extends MusicXMLWriter
      * @var TimeModification
      */
     public $timeModification;
+    
+    /**
+     * Instrument
+     *
+     * @Element(name="instrument")
+     * @var Instrument
+     */
+    public $instrument;
+    
+    /**
+     * Type
+     *
+     * @Element(name="type")
+     * @var Type
+     */
+    public $type;
+    
+    /**
+     * Dot
+     *
+     * @Element(name="dot")
+     * @var Dot
+     */
+    public $dot;
 }
