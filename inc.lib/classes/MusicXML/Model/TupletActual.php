@@ -21,15 +21,15 @@ class TupletActual extends MusicXMLWriter
     
     /**
      * Tuplet type
-     * @PropertyElement(name="tuplet-type")
-     * @var string
+     * @Element(name="tuplet-type")
+     * @var TupletType
      */
     public $tupletType;
     
     /**
      * Tuplet dot
-     * @PropertyElement(name="tuplet-dot")
-     * @var string
+     * @Element(name="tuplet-dot")
+     * @var TupletDot
      */
     public $tupletDot;
 }

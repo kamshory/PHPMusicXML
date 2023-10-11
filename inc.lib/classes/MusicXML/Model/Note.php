@@ -69,13 +69,7 @@ class Note extends MusicXMLWriter
      * @var Accidental
      */
     public $accidental;
-    
-    /**
-     * @PropertyElement
-     * @var string
-     */
-    public $stem;
-    
+
     /**
      * @Element
      * @var Notations[]
@@ -169,4 +163,12 @@ class Note extends MusicXMLWriter
      * @var Cue
      */
     public $cue;
+    
+    /**
+     * Stem
+     *
+     * @Element(name="stem")
+     * @var Stem
+     */
+    public $stem;
 }
