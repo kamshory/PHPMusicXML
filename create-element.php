@@ -18,12 +18,11 @@ function getPropertyName($name)
 $elementList = '
 
 
-
-<figure>[]
-<duration>
-<footnote> 
-<level>
-
+<straight>
+<first>
+<second>
+<swing-type>
+<swing-style>
 
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
