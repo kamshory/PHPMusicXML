@@ -64,7 +64,7 @@ class ScorePartWise extends MusicXMLWriter
     /**
      * Part list. Contains all instrument used on the music
      *
-     * @Element
+     * @Element(name="part-list")
      * @var PartList
      */
     public $partList;

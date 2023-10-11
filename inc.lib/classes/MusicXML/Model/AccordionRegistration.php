@@ -108,7 +108,7 @@ class AccordionRegistration extends MusicXMLWriter
 	 */
 	public $valign;
 
-    /*
+    /**
      * Accordion high
      *
      * @Element(name="accordion-high")
@@ -116,7 +116,7 @@ class AccordionRegistration extends MusicXMLWriter
      */
     public $accordionHigh;
 
-    /*
+    /**
      * Accordion middle
      *
      * @Element(name="accordion-middle")
@@ -124,7 +124,7 @@ class AccordionRegistration extends MusicXMLWriter
      */
     public $accordionMiddle;
 
-    /*
+    /**
      * Accordion low
      *
      * @Element(name="accordion-low")

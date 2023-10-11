@@ -100,7 +100,7 @@ class Frame extends MusicXMLWriter
 	 */
 	public $width;
     
-    /*
+    /**
      * Frame strings
      *
      * @Element(name="frame-strings")
@@ -108,7 +108,7 @@ class Frame extends MusicXMLWriter
      */
     public $frameStrings;
 
-    /*
+    /**
      * Frame frets
      *
      * @Element(name="frame-frets")
@@ -116,7 +116,7 @@ class Frame extends MusicXMLWriter
      */
     public $frameFrets;
 
-    /*
+    /**
      * First fret
      *
      * @Element(name="first-fret")
@@ -124,7 +124,7 @@ class Frame extends MusicXMLWriter
      */
     public $firstFret;
 
-    /*
+    /**
      * Frame note
      *
      * @Element(name="frame-note")

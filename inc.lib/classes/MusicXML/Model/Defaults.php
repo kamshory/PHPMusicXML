@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class Defaults extends MusicXMLWriter
 {
-    /*
+    /**
      * Scaling
      *
      * @Element(name="scaling")      
@@ -20,7 +20,7 @@ class Defaults extends MusicXMLWriter
      */
     public $scaling;
 
-    /*
+    /**
      * Concert score
      *
      * @Element(name="concert-score")
@@ -28,7 +28,7 @@ class Defaults extends MusicXMLWriter
      */
     public $concertScore;
 
-    /*
+    /**
      * Page layout
      *
      * @Element(name="page-layout")  
@@ -36,7 +36,7 @@ class Defaults extends MusicXMLWriter
      */
     public $pageLayout;
 
-    /*
+    /**
      * System layout
      *
      * @Element(name="system-layout")
@@ -44,7 +44,7 @@ class Defaults extends MusicXMLWriter
      */
     public $systemLayout;
 
-    /*
+    /**
      * Staff layout
      *
      * @Element(name="staff-layout")
@@ -52,7 +52,7 @@ class Defaults extends MusicXMLWriter
      */
     public $staffLayout;
 
-    /*
+    /**
      * Appearance
      *
      * @Element(name="appearance")
@@ -60,7 +60,7 @@ class Defaults extends MusicXMLWriter
      */
     public $appearance;
 
-    /*
+    /**
      * Music font
      *
      * @Element(name="music-font")
@@ -68,7 +68,7 @@ class Defaults extends MusicXMLWriter
      */
     public $musicFont;
 
-    /*
+    /**
      * Word font
      *
      * @Element(name="word-font")
@@ -76,7 +76,7 @@ class Defaults extends MusicXMLWriter
      */
     public $wordFont;
 
-    /*
+    /**
      * Lyric font
      *
      * @Element(name="lyric-font")
@@ -84,7 +84,7 @@ class Defaults extends MusicXMLWriter
      */
     public $lyricFont;
 
-    /*
+    /**
      * Lyric language
      *
      * @Element(name="lyric-language")

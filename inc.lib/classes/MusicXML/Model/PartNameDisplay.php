@@ -28,7 +28,7 @@ class PartNameDisplay extends MusicXMLWriter
      */
     public $displayText;
 
-    /*
+    /**
      * Accidental text
      *
      * @Element(name="accidental-text")

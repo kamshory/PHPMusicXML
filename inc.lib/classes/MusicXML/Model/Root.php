@@ -13,7 +13,7 @@ use MusicXML\MusicXMLWriter;
 class Root extends MusicXMLWriter
 {
 
-    /*
+    /**
      * Root step
      *
      * @Element(name="root-step")
@@ -21,7 +21,7 @@ class Root extends MusicXMLWriter
      */
     public $rootStep;
     
-    /*
+    /**
      * Root alter
      *
      * @Element(name="root-alter")

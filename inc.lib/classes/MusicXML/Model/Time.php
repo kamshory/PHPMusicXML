@@ -164,7 +164,7 @@ class Time extends MusicXMLWriter
      */
     public $interchangeable;
 
-    /*
+    /**
      * Senza misura
      *
      * @Element(name="senza-misura ")

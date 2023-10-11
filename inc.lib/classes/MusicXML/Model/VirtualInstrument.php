@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class VirtualInstrument extends MusicXMLWriter
 {
-    /*
+    /**
      * Virtual library
      *
      * @Element(name="virtual-library")
@@ -20,7 +20,7 @@ class VirtualInstrument extends MusicXMLWriter
      */
     public $virtualLibrary;
 
-    /*
+    /**
      * Virtual name
      *
      * @Element(name="virtual-name")

@@ -52,8 +52,8 @@ class Note extends MusicXMLWriter
     public $pitch;
 
     /**
-     * @PropertyElement
-     * @var float
+     * @Element
+     * @var Duration
      */
     public $duration;
 

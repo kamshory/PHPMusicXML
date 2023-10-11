@@ -14,6 +14,8 @@ use MusicXML\Model\Encoding;
 use MusicXML\Model\EncodingDate;
 use MusicXML\Model\EncodingDescription;
 use MusicXML\Model\Identification;
+use MusicXML\Model\InstrumentName;
+use MusicXML\Model\InstrumentSound;
 use MusicXML\Model\Key;
 use MusicXML\Model\MidiChannel;
 use MusicXML\Model\MidiDevice;
@@ -21,6 +23,8 @@ use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\MidiProgram;
 use MusicXML\Model\Notations;
 use MusicXML\Model\Pan;
+use MusicXML\Model\PartAbbreviation;
+use MusicXML\Model\PartName;
 use MusicXML\Model\Pitch;
 use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
@@ -69,18 +73,28 @@ class MusicXMLBase
         return $duration;
     }
     
+    /**
+     * Get notation
+     *
+     * @return Notations
+     */
     public function getNotation()
     {
-        $notation = new Notations();
+        $notations = new Notations();
         $articulation = new Articulations();
-        $articulation->staccato = array();
-        $staccato = new Staccato();
-        $articulation->staccato[] = $staccato;
-        $notation->articulations = $articulation;
+        $articulation->staccato = array(new Staccato());
+        $notations->articulations = $articulation;
         
-        return $notation;
+        return $notations;
     }
 
+    /**
+     * Dget note type
+     *
+     * @param integer $duration
+     * @param integer $divisions
+     * @return string
+     */
     public function getNoteType($duration, $divisions)
     {
         $value = $duration/(4*$divisions);
@@ -195,8 +209,8 @@ class MusicXMLBase
     {
         $scoreInstrument = new ScoreInstrument();
         $scoreInstrument->id = $instrumentId;
-        $scoreInstrument->instrumentName = $instrumentName;
-        $scoreInstrument->instrumentSound = $instrumentSound;
+        $scoreInstrument->instrumentName = new InstrumentName($instrumentName);
+        $scoreInstrument->instrumentSound = new InstrumentSound($instrumentSound);
         return $scoreInstrument;
     }
 
@@ -224,19 +238,18 @@ class MusicXMLBase
      * @param string $partAbbreviation
      * @param ScoreInstrument $scoreInstrument
      * @param MidiInstrument $midiInstrument
+     * @param MidiDevice $midiDevice
      * @return ScorePart
      */
     public function getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice)
     {
         $scorePart = new ScorePart();
         $scorePart->id = $partId;
-        $scorePart->partName = $partName;
-        $scorePart->partAbbreviation = $partAbbreviation;
-        $scorePart->scoreInstrument = array();
-        $scorePart->scoreInstrument[] = $scoreInstrument;
-        $scorePart->midiInstrument = array();
-        $scorePart->midiInstrument[] = $midiInstrument;
-        $scorePart->midiDevice = $midiDevice;
+        $scorePart->partName = new PartName($partName);
+        $scorePart->partAbbreviation = new PartAbbreviation($partAbbreviation);
+        $scorePart->scoreInstrument = array($scoreInstrument);
+        $scorePart->midiInstrument = array($midiInstrument);
+        $scorePart->midiDevice = array($midiDevice);
         return $scorePart;
     }
     /**

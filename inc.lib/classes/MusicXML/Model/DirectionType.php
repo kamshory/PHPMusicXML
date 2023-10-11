@@ -29,7 +29,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $metronome;
     
-    /*
+    /**
      * Rehearsal
      *
      * @Element(name="rehearsal")
@@ -37,7 +37,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $rehearsal;
 
-    /*
+    /**
      * Segno
      *
      * @Element(name="segno")    
@@ -45,7 +45,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $segno;
 
-    /*
+    /**
      * Coda
      *
      * @Element(name="coda")
@@ -53,7 +53,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $coda;
 
-    /*
+    /**
      * Words
      *
      * @Element(name="words")
@@ -61,7 +61,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $words;
 
-    /*
+    /**
      * Symbol
      *
      * @Element(name="symbol")
@@ -69,7 +69,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $symbol;
 
-    /*
+    /**
      * Wedge
      *
      * @Element(name="wedge")
@@ -77,7 +77,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $wedge;
 
-    /*
+    /**
      * Dynamics
      *
      * @Element(name="dynamics")
@@ -85,7 +85,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $dynamics;
 
-    /*
+    /**
      * Dashes
      *
      * @Element(name="dashes")
@@ -93,7 +93,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $dashes;
 
-    /*
+    /**
      * Bracket
      *
      * @Element(name="bracket")
@@ -101,7 +101,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $bracket;
 
-    /*
+    /**
      * Pedal
      *
      * @Element(name="pedal")
@@ -109,7 +109,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $pedal;
 
-    /*
+    /**
      * Octave shift
      *
      * @Element(name="octave-shift")
@@ -117,7 +117,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $octaveShift;
 
-    /*
+    /**
      * Harp pedals
      *
      * @Element(name="harp-pedals")
@@ -125,7 +125,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $harpPedals;
 
-    /*
+    /**
      * Damp
      *
      * @Element(name="damp")
@@ -133,7 +133,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $damp;
 
-    /*
+    /**
      * Damp all
      *
      * @Element(name="damp-all")
@@ -141,7 +141,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $dampAll;
 
-    /*
+    /**
      * Eyeglasses
      *
      * @Element(name="eyeglasses")
@@ -149,7 +149,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $eyeglasses;
 
-    /*
+    /**
      * String mute
      *
      * @Element(name="string-mute")
@@ -157,7 +157,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $stringMute;
 
-    /*
+    /**
      * Scordatura
      *
      * @Element(name="scordatura")
@@ -165,7 +165,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $scordatura;
 
-    /*
+    /**
      * Image
      *
      * @Element(name="image")
@@ -173,7 +173,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $image;
 
-    /*
+    /**
      * Principal voice
      *
      * @Element(name="principal-voice")
@@ -181,7 +181,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $principalVoice;
 
-    /*
+    /**
      * Percussion
      *
      * @Element(name="percussion")
@@ -189,7 +189,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $percussion;
 
-    /*
+    /**
      * Accordion registration
      *
      * @Element(name="accordion-registration")
@@ -197,7 +197,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $accordionRegistration;
 
-    /*
+    /**
      * Staff divide
      *
      * @Element(name="staff-divide")
@@ -205,7 +205,7 @@ class DirectionType extends MusicXMLWriter
      */
     public $staffDivide;
 
-    /*
+    /**
      * Other direction
      *
      * @Element(name="other-direction")

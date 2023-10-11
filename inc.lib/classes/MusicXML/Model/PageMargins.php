@@ -20,7 +20,7 @@ class PageMargins extends MusicXMLWriter
 	 */
 	public $type;
     
-    /*
+    /**
      * Left margin
      *
      * @Element(name="left-margin") 
@@ -28,7 +28,7 @@ class PageMargins extends MusicXMLWriter
      */
     public $leftMargin;
 
-    /*
+    /**
      * Right margin
      *
      * @Element(name="right-margin")
@@ -36,7 +36,7 @@ class PageMargins extends MusicXMLWriter
      */
     public $rightMargin;
 
-    /*
+    /**
      * Top margin
      *
      * @Element(name="top-margin")
@@ -44,7 +44,7 @@ class PageMargins extends MusicXMLWriter
      */
     public $topMargin;
 
-    /*
+    /**
      * Bottom margin
      *
      * @Element(name="bottom-margin")

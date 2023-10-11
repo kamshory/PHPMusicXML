@@ -12,5 +12,11 @@ use MusicXML\MusicXMLWriter;
  */
 class InstrumentName extends MusicXMLWriter
 {
-    
+    /**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }

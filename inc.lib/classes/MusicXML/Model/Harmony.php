@@ -140,7 +140,7 @@ class Harmony extends MusicXMLWriter
 	 */
 	public $type;
 
-    /*
+    /**
      * Root
      *
      * @Element(name="root")
@@ -148,7 +148,7 @@ class Harmony extends MusicXMLWriter
      */
     public $root;
 
-    /*
+    /**
      * Numeral
      *
      * @Element(name="numeral")
@@ -156,7 +156,7 @@ class Harmony extends MusicXMLWriter
      */
     public $numeral;
 
-    /*
+    /**
      * Function
      *
      * @Element(name="function")
@@ -164,7 +164,7 @@ class Harmony extends MusicXMLWriter
      */
     public $function;
 
-    /*
+    /**
      * Kind
      *
      * @Element(name="kind")
@@ -172,7 +172,7 @@ class Harmony extends MusicXMLWriter
      */
     public $kind;
 
-    /*
+    /**
      * Inversion
      *
      * @Element(name="inversion")
@@ -180,7 +180,7 @@ class Harmony extends MusicXMLWriter
      */
     public $inversion;
 
-    /*
+    /**
      * Bass
      *
      * @Element(name="bass")
@@ -188,7 +188,7 @@ class Harmony extends MusicXMLWriter
      */
     public $bass;
 
-    /*
+    /**
      * Degree
      *
      * @Element(name="degree")
@@ -196,7 +196,7 @@ class Harmony extends MusicXMLWriter
      */
     public $degree;
 
-    /*
+    /**
      * Frame
      *
      * @Element(name="frame")
@@ -204,7 +204,7 @@ class Harmony extends MusicXMLWriter
      */
     public $frame;
 
-    /*
+    /**
      * Offset
      *
      * @Element(name="offset")
@@ -212,7 +212,7 @@ class Harmony extends MusicXMLWriter
      */
     public $offset;
 
-    /*
+    /**
      * Footnote
      *
      * @Element(name="footnote")
@@ -220,7 +220,7 @@ class Harmony extends MusicXMLWriter
      */
     public $footnote;
 
-    /*
+    /**
      * Level
      *
      * @Element(name="level")
@@ -228,7 +228,7 @@ class Harmony extends MusicXMLWriter
      */
     public $level;
 
-    /*
+    /**
      * Staff
      *
      * @Element(name="staff")

@@ -45,7 +45,7 @@ class StaffDetail extends MusicXMLWriter
      */
     public $showFrets;
     
-    /*
+    /**
      * Staff type
      *
      * @Element(name="staff-type")
@@ -53,7 +53,7 @@ class StaffDetail extends MusicXMLWriter
      */
     public $staffType;
 
-    /*
+    /**
      * Staff lines
      *
      * @Element(name="staff-lines")
@@ -61,7 +61,7 @@ class StaffDetail extends MusicXMLWriter
      */
     public $staffLines;
 
-    /*
+    /**
      * Line detail
      *
      * @Element(name="line-detail")
@@ -69,7 +69,7 @@ class StaffDetail extends MusicXMLWriter
      */
     public $lineDetail;
 
-    /*
+    /**
      * Staff tuning
      *
      * @Element(name="staff-tuning")
@@ -77,7 +77,7 @@ class StaffDetail extends MusicXMLWriter
      */
     public $staffTuning;
 
-    /*
+    /**
      * Capo
      *
      * @Element(name="capo")
@@ -85,7 +85,7 @@ class StaffDetail extends MusicXMLWriter
      */
     public $capo;
 
-    /*
+    /**
      * Staff size
      *
      * @Element(name="staff-size")

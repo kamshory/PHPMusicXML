@@ -125,7 +125,7 @@ class Percussion extends MusicXMLWriter
      */
     public $glass;
 
-    /*
+    /**
      * Metal
      *
      * @Element(name="metal")
@@ -133,7 +133,7 @@ class Percussion extends MusicXMLWriter
      */
     public $metal;
 
-    /*
+    /**
      * Wood
      *
      * @Element(name="wood")
@@ -141,7 +141,7 @@ class Percussion extends MusicXMLWriter
      */
     public $wood;
 
-    /*
+    /**
      * Pitched
      *
      * @Element(name="pitched")
@@ -149,7 +149,7 @@ class Percussion extends MusicXMLWriter
      */
     public $pitched;
 
-    /*
+    /**
      * Membrane
      *
      * @Element(name="membrane")
@@ -157,7 +157,7 @@ class Percussion extends MusicXMLWriter
      */
     public $membrane;
 
-    /*
+    /**
      * Effect
      *
      * @Element(name="effect")
@@ -165,7 +165,7 @@ class Percussion extends MusicXMLWriter
      */
     public $effect;
 
-    /*
+    /**
      * Timpani
      *
      * @Element(name="timpani")
@@ -173,7 +173,7 @@ class Percussion extends MusicXMLWriter
      */
     public $timpani;
 
-    /*
+    /**
      * Beater
      *
      * @Element(name="beater")
@@ -181,7 +181,7 @@ class Percussion extends MusicXMLWriter
      */
     public $beater;
 
-    /*
+    /**
      * Stick
      *
      * @Element(name="stick")
@@ -189,7 +189,7 @@ class Percussion extends MusicXMLWriter
      */
     public $stick;
 
-    /*
+    /**
      * Stick location
      *
      * @Element(name="stick-location")
@@ -197,7 +197,7 @@ class Percussion extends MusicXMLWriter
      */
     public $stickLocation;
 
-    /*
+    /**
      * Other percussion
      *
      * @Element(name="other-percussion")

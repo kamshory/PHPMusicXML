@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class Numeral extends MusicXMLWriter
 {
-    /*
+    /**
      * Numeral root
      *
      * @Element(name="numeral-root")
@@ -20,7 +20,7 @@ class Numeral extends MusicXMLWriter
      */
     public $numeralRoot;
 
-    /*
+    /**
      * Numeral alter
      *
      * @Element(name="numeral-alter")
@@ -28,7 +28,7 @@ class Numeral extends MusicXMLWriter
      */
     public $numeralAlter;
 
-    /*
+    /**
      * Numeral key
      *
      * @Element(name="numeral-key")

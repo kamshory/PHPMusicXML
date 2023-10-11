@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class Listen extends MusicXMLWriter
 {
-    /*
+    /**
      * Assess
      *
      * @Element(name="assess")
@@ -20,7 +20,7 @@ class Listen extends MusicXMLWriter
      */
     public $assess;
 
-    /*
+    /**
      * Wait
      *
      * @Element(name="wait")
@@ -28,7 +28,7 @@ class Listen extends MusicXMLWriter
      */
     public $wait;
 
-    /*
+    /**
      * Other listen
      *
      * @Element(name="other-listen")

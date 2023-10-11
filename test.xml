@@ -23,7 +23,7 @@
       <part-name>Piano</part-name>
       <part-abbreviation>Pno.</part-abbreviation>
       <score-instrument id="P1-I1">
-        <instrument-sound>keyboard.piano</instrument-sound>
+        <instrument-name>Piano</instrument-name>
       </score-instrument>
       <midi-device id="P1-I1" port="1"></midi-device>
       <midi-instrument id="P1-I1"/>
@@ -32,7 +32,7 @@
       <part-name>Bass Guitar</part-name>
       <part-abbreviation>B. Guit.</part-abbreviation>
       <score-instrument id="P2-I1">
-        <instrument-sound>pluck.bass</instrument-sound>
+        <instrument-name>Bass Guitar</instrument-name>
       </score-instrument>
       <midi-device id="P2-I1" port="2"></midi-device>
       <midi-instrument id="P2-I1"/>
@@ -41,7 +41,7 @@
       <part-name>Violins (section)</part-name>
       <part-abbreviation>Vlns.</part-abbreviation>
       <score-instrument id="P3-I1">
-        <instrument-sound>strings.group</instrument-sound>
+        <instrument-name>Violins (section)</instrument-name>
       </score-instrument>
       <midi-device id="P3-I1" port="3"></midi-device>
       <midi-instrument id="P3-I1"/>
@@ -50,7 +50,7 @@
       <part-name>Effect Synthesizer</part-name>
       <part-abbreviation>Synth.</part-abbreviation>
       <score-instrument id="P4-I1">
-        <instrument-sound>synth.effects</instrument-sound>
+        <instrument-name>Effect Synthesizer</instrument-name>
       </score-instrument>
       <midi-device id="P4-I1" port="4"></midi-device>
       <midi-instrument id="P4-I1"/>
@@ -59,7 +59,7 @@
       <part-name>Classical Guitar</part-name>
       <part-abbreviation>Guit.</part-abbreviation>
       <score-instrument id="P5-I1">
-        <instrument-sound>pluck.guitar.nylon-string</instrument-sound>
+        <instrument-name>Classical Guitar</instrument-name>
       </score-instrument>
       <midi-device id="P5-I1" port="5"></midi-device>
       <midi-instrument id="P5-I1"/>
@@ -68,7 +68,7 @@
       <part-name>Violins (section)</part-name>
       <part-abbreviation>Vlns.</part-abbreviation>
       <score-instrument id="P6-I1">
-        <instrument-sound>strings.group</instrument-sound>
+        <instrument-name>Violins (section)</instrument-name>
       </score-instrument>
       <midi-device id="P6-I1" port="6"></midi-device>
       <midi-instrument id="P6-I1"/>
@@ -77,7 +77,7 @@
       <part-name>Electric Guitar</part-name>
       <part-abbreviation>El. Guit.</part-abbreviation>
       <score-instrument id="P7-I1">
-        <instrument-sound>pluck.guitar.electric</instrument-sound>
+        <instrument-name>Electric Guitar</instrument-name>
       </score-instrument>
       <midi-device id="P7-I1" port="7"></midi-device>
       <midi-instrument id="P7-I1"/>
@@ -86,7 +86,7 @@
       <part-name>Boy Soprano</part-name>
       <part-abbreviation>B. S.</part-abbreviation>
       <score-instrument id="P8-I1">
-        <instrument-sound>voice.child</instrument-sound>
+        <instrument-name>Boy Soprano</instrument-name>
       </score-instrument>
       <midi-device id="P8-I1" port="8"></midi-device>
       <midi-instrument id="P8-I1"/>
@@ -95,7 +95,7 @@
       <part-name>Brass Synthesizer</part-name>
       <part-abbreviation>Synth.</part-abbreviation>
       <score-instrument id="P9-I1">
-        <instrument-sound>brass.group.synth</instrument-sound>
+        <instrument-name>Brass Synthesizer</instrument-name>
       </score-instrument>
       <midi-device id="P9-I1" port="9"></midi-device>
       <midi-instrument id="P9-I1"/>
@@ -103,20 +103,48 @@
     <score-part id="P10">
       <part-name>Automobile Brake Drums</part-name>
       <part-abbreviation>Aut. Brk. Dr.</part-abbreviation>
-      <score-instrument id="P10-I36"/>
-      <score-instrument id="P10-I37"/>
-      <score-instrument id="P10-I38"/>
-      <score-instrument id="P10-I40"/>
-      <score-instrument id="P10-I41"/>
-      <score-instrument id="P10-I45"/>
-      <score-instrument id="P10-I47"/>
-      <score-instrument id="P10-I70"/>
-      <score-instrument id="P10-I71"/>
-      <score-instrument id="P10-I76"/>
-      <score-instrument id="P10-I78"/>
-      <score-instrument id="P10-I82"/>
-      <score-instrument id="P10-I85"/>
-      <score-instrument id="P10-I86"/>
+      <score-instrument id="P10-I36">
+        <instrument-name>Acoustic Bass Drum</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I37">
+        <instrument-name>Bass Drum 1</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I38">
+        <instrument-name>Side Stick</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I40">
+        <instrument-name>Hand Clap</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I41">
+        <instrument-name>Electric Snare</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I45">
+        <instrument-name>Pedal Hi-Hat</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I47">
+        <instrument-name>Open Hi-Hat</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I70">
+        <instrument-name>Cabase</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I71">
+        <instrument-name>Maracas</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I76">
+        <instrument-name>Claves</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I78">
+        <instrument-name>Low Wood Block</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I82">
+        <instrument-name>Open Triangle</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I85">
+        <instrument-name>Instrument 85</instrument-name>
+      </score-instrument>
+      <score-instrument id="P10-I86">
+        <instrument-name>Instrument 86</instrument-name>
+      </score-instrument>
       <midi-instrument id="P10-I36"/>
       <midi-instrument id="P10-I37"/>
       <midi-instrument id="P10-I38"/>

@@ -20,7 +20,7 @@ class NumeralKey extends MusicXMLWriter
 	 */
 	public $printObject;
     
-    /*
+    /**
      * Numeral fifths
      *
      * @Element(name="numeral-fifths")
@@ -28,7 +28,7 @@ class NumeralKey extends MusicXMLWriter
      */
     public $numeralFifths;
 
-    /*
+    /**
      * Numeral mode
      *
      * @Element(name="numeral-mode")

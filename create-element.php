@@ -41,7 +41,7 @@ foreach($elements as $elementFull)
         $className = getClassName($element);
         $description = getDescription($element);
         $propertyName = getPropertyName($element);
-        $prop = "\t/*\r\n"
+        $prop = "\t/**\r\n"
         ."\t * ".$description."\r\n"
         ."\t *\r\n"
         ."\t * @Element(name=\"".$element."\")\r\n"

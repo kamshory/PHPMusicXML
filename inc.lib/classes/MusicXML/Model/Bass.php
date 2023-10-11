@@ -20,7 +20,7 @@ class Bass extends MusicXMLWriter
 	 */
 	public $arrangement;
     
-    /*
+    /**
      * Bass separator
      *
      * @Element(name="bass-separator")
@@ -28,7 +28,7 @@ class Bass extends MusicXMLWriter
      */
     public $bassSeparator;
 
-    /*
+    /**
      * Bass step
      *
      * @Element(name="bass-step")
@@ -36,7 +36,7 @@ class Bass extends MusicXMLWriter
      */
     public $bassStep;
 
-    /*
+    /**
      * Bass alter
      *
      * @Element(name="bass-alter")

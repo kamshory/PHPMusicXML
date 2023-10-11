@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class Appearance extends MusicXMLWriter
 {
-    /*
+    /**
      * Line width
      *
      * @Element(name="line-width")
@@ -20,7 +20,7 @@ class Appearance extends MusicXMLWriter
      */
     public $lineWidth;
 
-    /*
+    /**
      * Note size
      *
      * @Element(name="note-size")
@@ -28,7 +28,7 @@ class Appearance extends MusicXMLWriter
      */
     public $noteSize;
 
-    /*
+    /**
      * Distance
      *
      * @Element(name="distance")
@@ -36,7 +36,7 @@ class Appearance extends MusicXMLWriter
      */
     public $distance;
 
-    /*
+    /**
      * Glyph
      *
      * @Element(name="glyph")
@@ -44,7 +44,7 @@ class Appearance extends MusicXMLWriter
      */
     public $glyph;
 
-    /*
+    /**
      * Other appearance
      *
      * @Element(name="other-appearance")

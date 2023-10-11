@@ -8,10 +8,17 @@ use Midi\MidiMeasure;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Bend;
+use MusicXML\Model\Duration;
+use MusicXML\Model\InstrumentName;
 use MusicXML\Model\Measure;
+use MusicXML\Model\MidiChannel;
 use MusicXML\Model\MidiInstrument;
+use MusicXML\Model\MidiProgram;
+use MusicXML\Model\MidiUnpitched;
 use MusicXML\Model\Note;
+use MusicXML\Model\PartAbbreviation;
 use MusicXML\Model\PartList;
+use MusicXML\Model\PartName;
 use MusicXML\Model\PartPartwise;
 use MusicXML\Model\PreBend;
 use MusicXML\Model\Release;
@@ -21,6 +28,7 @@ use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
 use MusicXML\Model\Technical;
+use MusicXML\Model\Volume;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
@@ -638,6 +646,9 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         // begin part list
         $partIndex = 1;
+        
+        $scorePartwise->partList->scorePart = array();
+        
         foreach ($this->partList as $part) {
             // start add score part
             // this block will be iterated each channel
@@ -650,8 +661,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $programId = $part['programId'];
 
             if ($channelId == 10) {
-                $scorePart = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
-                $scorePartwise->partList->scorePart[] = $scorePart;
+                $scorePartwise->partList->scorePart[] = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
             } else {
                 if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
                     $instrumentSound = $this->instrumentList[$programId - 1][2];
@@ -738,8 +748,8 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
 
-        $scorePart->partName = $partName;
-        $scorePart->partAbbreviation = $partAbbreviation;
+        $scorePart->partName = new PartName($partName);
+        $scorePart->partAbbreviation = new PartAbbreviation($partAbbreviation);
         ksort($this->channel10);
         foreach ($this->channel10 as $key => $value) 
         {
@@ -750,19 +760,19 @@ class MusicXMLFromMidi extends MusicXMLBase
             $midiCode = $value['note'] - 1;
             if(isset($this->drumSet[$midiCode]) && isset($this->drumSet[$midiCode][0]))
             {
-                $scoreInstrument->instrumentName = $this->drumSet[$midiCode][0];
+                $scoreInstrument->instrumentName = new InstrumentName($this->drumSet[$midiCode][0]);
             }
             else
             {
-                $scoreInstrument->instrumentName = 'Instrument ' . $key;
+                $scoreInstrument->instrumentName = new InstrumentName('Instrument ' . $key);
             }
             $midiInstrument->id = $id;
-            $midiInstrument->midiChannel = $channelId;
-            $midiInstrument->midiProgram = $programId;
-            $midiInstrument->midiUnpitched = $key;
-            $midiInstrument->volume = isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0;
+            $midiInstrument->midiChannel = new MidiChannel($channelId);
+            $midiInstrument->midiProgram = new MidiProgram($programId);
+            $midiInstrument->midiUnpitched = new MidiUnpitched($key);
+            $midiInstrument->volume = new Volume(isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0);
             $scorePart->scoreInstrument[] = $scoreInstrument;
-            $scorePart->midiInstrument[] = $midiInstrument;
+            $scorePart->midiInstrument[] = new MidiInstrument($midiInstrument);
         }
         return $scorePart;
     }
@@ -969,10 +979,10 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $duration0 = $message0['time'] - ($measureIndex * 4 * $timebase);
                 $duration0 = $this->calculateDuration($duration0, $divisions, $timebase);
                 
-                $note0->duration = $duration0;
+                $note0->duration = new Duration($duration0);
                 $note0->voice = $channelId;
                 $note0->staff = $channelId;
-                $note0->type = $this->getNoteType($note0->duration, $divisions);
+                $note0->type = $this->getNoteType($duration0, $divisions);
                 $measure->note[] = $note0;
                 
                 $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase);
@@ -1116,8 +1126,8 @@ class MusicXMLFromMidi extends MusicXMLBase
                     }
                     $note->stem = 'up';
                     $note->notations = array($this->getNotation());
-                    $note->duration = $duration;
-                    $note->type = $this->getNoteType($note->duration, $divisions);
+                    $note->duration = new Duration($duration);
+                    $note->type = $this->getNoteType($duration, $divisions);
                     $measure->note[] = $note;
                 }
                 else
@@ -1125,8 +1135,8 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $rest = new Rest();
                     $note->rest = $rest;
                 }
-                $note->duration = $duration;
-                $note->type = $this->getNoteType($note->duration, $divisions);
+                $note->duration = new Duration($duration);
+                $note->type = $this->getNoteType($duration, $divisions);
                 
                 $coord = MusicXMLUtil::getNoteCoordinate($measureIndex, $message, $divisions, $timebase);
                 $note->defaultX = $coord->defaultX;

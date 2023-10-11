@@ -21,7 +21,7 @@ class ScoreInstrument extends MusicXMLWriter
      */
     public $id;
     
-    /*
+    /**
      * Instrument name
      *
      * @Element(name="instrument-name")    
@@ -29,7 +29,7 @@ class ScoreInstrument extends MusicXMLWriter
      */
     public $instrumentName;
 
-    /*
+    /**
      * Instrument abbreviation
      *
      * @Element(name="instrument-abbreviation")
@@ -45,7 +45,7 @@ class ScoreInstrument extends MusicXMLWriter
      */
     public $instrumentSound;
     
-    /*
+    /**
      * Solo
      *
      * @Element(name="solo")
@@ -53,7 +53,7 @@ class ScoreInstrument extends MusicXMLWriter
      */
     public $solo;
 
-    /*
+    /**
      * Ensemble
      *
      * @Element(name="ensemble")
@@ -61,7 +61,7 @@ class ScoreInstrument extends MusicXMLWriter
      */
     public $ensemble;
 
-    /*
+    /**
      * Virtual instrument
      *
      * @Element(name="virtual-instrument")

@@ -16,7 +16,7 @@ class InstrumentSound extends MusicXMLWriter
 	 * Text content
 	 *
 	 * @TextContent
-	 * @var integer
+	 * @var string
 	 */
 	public $textContent;
 }

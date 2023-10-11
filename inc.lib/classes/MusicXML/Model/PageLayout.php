@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class PageLayout extends MusicXMLWriter
 {
-    /*
+    /**
      * Page height
      *
      * @Element(name="page-height")
@@ -20,7 +20,7 @@ class PageLayout extends MusicXMLWriter
      */
     public $pageHeight;
 
-    /*
+    /**
      * Page width
      *
      * @Element(name="page-width")
@@ -28,7 +28,7 @@ class PageLayout extends MusicXMLWriter
      */
     public $pageWidth;
 
-    /*
+    /**
      * Page margins
      *
      * @Element(name="page-margins")

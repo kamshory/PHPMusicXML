@@ -12,7 +12,7 @@ use MusicXML\MusicXMLWriter;
  */
 class FrameNote extends MusicXMLWriter
 {
-    /*
+    /**
      * XString
      *
      * @Element(name="string")
@@ -20,7 +20,7 @@ class FrameNote extends MusicXMLWriter
      */
     public $string;
 
-    /*
+    /**
      * Fret
      *
      * @Element(name="fret")
@@ -28,7 +28,7 @@ class FrameNote extends MusicXMLWriter
      */
     public $fret;
 
-    /*
+    /**
      * Fingering
      *
      * @Element(name="fingering")
@@ -36,7 +36,7 @@ class FrameNote extends MusicXMLWriter
      */
     public $fingering;
 
-    /*
+    /**
      * Barre
      *
      * @Element(name="barre")

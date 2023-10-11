@@ -20,7 +20,7 @@ class Degree extends MusicXMLWriter
 	 */
 	public $printObject;
     
-    /*
+    /**
      * Degree value
      *
      * @Element(name="degree-value")
@@ -28,7 +28,7 @@ class Degree extends MusicXMLWriter
      */
     public $degreeValue;
 
-    /*
+    /**
      * Degree alter
      *
      * @Element(name="degree-alter")
@@ -36,7 +36,7 @@ class Degree extends MusicXMLWriter
      */
     public $degreeAlter;
 
-    /*
+    /**
      * Degree type
      *
      * @Element(name="degree-type")

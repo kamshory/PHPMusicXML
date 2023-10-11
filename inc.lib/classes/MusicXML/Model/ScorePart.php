@@ -21,7 +21,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $id;
     
-    /*
+    /**
      * Identification
      *
      * @Element(name="identification")
@@ -29,7 +29,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $identification;
 
-    /*
+    /**
      * Part link
      *
      * @Element(name="part-link")     
@@ -37,7 +37,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $partLink;
 
-    /*
+    /**
      * Part name
      *
      * @Element(name="part-name")
@@ -45,7 +45,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $partName;
 
-    /*
+    /**
      * Part name display
      *
      * @Element(name="part-name-display")
@@ -53,7 +53,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $partNameDisplay;
 
-    /*
+    /**
      * Part abbreviation
      *
      * @Element(name="part-abbreviation")
@@ -61,7 +61,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $partAbbreviation;
 
-    /*
+    /**
      * Part abbreviation display
      *
      * @Element(name="part-abbreviation-display")
@@ -69,7 +69,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $partAbbreviationDisplay;
 
-    /*
+    /**
      * Group
      *
      * @Element(name="group")
@@ -77,7 +77,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $group;
 
-    /*
+    /**
      * Score instrument
      *
      * @Element(name="score-instrument")
@@ -85,7 +85,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $scoreInstrument;
 
-    /*
+    /**
      * Player
      *
      * @Element(name="player")
@@ -93,7 +93,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $player;
 
-    /*
+    /**
      * Midi device
      *
      * @Element(name="midi-device")
@@ -101,7 +101,7 @@ class ScorePart extends MusicXMLWriter
      */
     public $midiDevice;
 
-    /*
+    /**
      * Midi instrument
      *
      * @Element(name="midi-instrument")
