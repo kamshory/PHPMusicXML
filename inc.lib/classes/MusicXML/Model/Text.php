@@ -108,4 +108,11 @@ class Text extends MusicXMLWriter
 	 */
 	public $xmlLang;
     
+	/**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }

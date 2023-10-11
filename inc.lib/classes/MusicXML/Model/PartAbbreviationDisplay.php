@@ -20,4 +20,19 @@ class PartAbbreviationDisplay extends MusicXMLWriter
 	 */
 	public $printObject;
     
+	/*
+     * Display text
+     *
+     * @Element(name="display-text")
+     * @var DisplayText
+     */
+    public $displayText;
+
+    /**
+     * Accidental text
+     *
+     * @Element(name="accidental-text")
+     * @var AccidentalText
+     */
+    public $accidentalText;
 }

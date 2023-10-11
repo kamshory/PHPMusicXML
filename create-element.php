@@ -16,10 +16,12 @@ function getPropertyName($name)
 }
 
 $elementList = '
-<diatonic>
-<chromatic>
-<octave-change>
-<double>
+
+
+
+<staff-distance>
+
+
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 

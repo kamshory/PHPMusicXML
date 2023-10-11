@@ -20,4 +20,12 @@ class StaffLayout extends MusicXMLWriter
 	 */
 	public $number;
     
+	/**
+     * Staff distance
+     *
+     * @Element(name="staff-distance")
+     * @var StaffDistance
+     */
+    public $staffDistance;
+
 }
