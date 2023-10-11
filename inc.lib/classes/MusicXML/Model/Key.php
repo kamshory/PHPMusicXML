@@ -130,7 +130,7 @@ class Key extends MusicXMLWriter
      * Cancel
      *
      * @PropertyElement
-     * @var string
+     * @var Cancel
      */
     public $cancel;
     
