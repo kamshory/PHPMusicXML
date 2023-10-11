@@ -16,14 +16,14 @@ function getPropertyName($name)
 }
 
 $elementList = '
-
-
-<string>
-<fret>
-<fingering>
-<barre>
-
-
+<midi-channel>
+<midi-name>
+<midi-bank>
+<midi-program>
+<midi-unpitched>
+<volume>
+<pan>
+<elevation>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 

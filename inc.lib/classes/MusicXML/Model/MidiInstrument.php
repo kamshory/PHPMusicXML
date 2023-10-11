@@ -7,61 +7,82 @@ use MusicXML\MusicXMLWriter;
 /**
  * MidiInstrument
  * @Xml
- * @Path /path-list/score-part/midi-instrument
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-instrument/
  * @Data
  */
 class MidiInstrument extends MusicXMLWriter
 {
-    /**
-     * ID
-     *
-     * @Attribute
-     * @var string
-     */
-    public $id;
+	/**
+	 * Id
+	 *
+	 * @Attribute(name="id")
+	 * @var string
+	 */
+	public $id;
     
-    /**
-     * MIDI hannel
-     *
-     * @PropertyElement(name="midi-channel")
-     * @var string
-     */
-    public $midiChannel;
-    
-    /**
-     * MIDI program
-     *
-     * @PropertyElement(name="midi-program")
-     * @var string
-     */
-    public $midiProgram;
+	/*
+	 * Midi channel
+	 *
+	 * @Element(name="midi-channel")
+	 * @var MidiChannel
+	 */
+	public $midiChannel;
 
-    /**
-     * MIDI unpitched
-     *
-     * @PropertyElement(name="midi-unpitched")
-     * @var integer
-     */
-    public $midiUnpitched;
-    
-    /**
-     * Volume
-     *
-     * @PropertyElement
-     * @var float
-     */
-    public $volume = 0;
-    
-    /**
-     * Pan
-     *
-     * @PropertyElement
-     * @var float
-     */
-    public $pan = 0;
-    
-    
-    
-    
+	/*
+	 * Midi name
+	 *
+	 * @Element(name="midi-name")
+	 * @var MidiName
+	 */
+	public $midiName;
+
+	/*
+	 * Midi bank
+	 *
+	 * @Element(name="midi-bank")
+	 * @var MidiBank
+	 */
+	public $midiBank;
+
+	/*
+	 * Midi program
+	 *
+	 * @Element(name="midi-program")
+	 * @var MidiProgram
+	 */
+	public $midiProgram;
+
+	/*
+	 * Midi unpitched
+	 *
+	 * @Element(name="midi-unpitched")
+	 * @var MidiUnpitched
+	 */
+	public $midiUnpitched;
+
+	/*
+	 * Volume
+	 *
+	 * @Element(name="volume")
+	 * @var Volume
+	 */
+	public $volume;
+
+	/*
+	 * Pan
+	 *
+	 * @Element(name="pan")
+	 * @var Pan
+	 */
+	public $pan;
+
+	/*
+	 * Elevation
+	 *
+	 * @Element(name="elevation")
+	 * @var Elevation
+	 */
+	public $elevation;
+
+
 }
