@@ -13,5 +13,27 @@ use MusicXML\MusicXMLWriter;
  */
 class Rest extends MusicXMLWriter
 {
+    /**
+     * Measure
+     *
+     * @Attribute(name="measure")
+     * @var string
+     */
+    public $measure;
+    
+    /**
+     * Display step
+     *
+     * @PropertyElement(name="display-step")
+     * @var string
+     */
+    public $displayStep;
 
+    /**
+     * Display octave
+     *
+     * @Element(name="display-octave")
+     * @var DisplayOctave
+     */
+    public $displayOctave;
 }

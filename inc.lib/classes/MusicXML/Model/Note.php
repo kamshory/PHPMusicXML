@@ -161,4 +161,12 @@ class Note extends MusicXMLWriter
      * @var Dot
      */
     public $dot;
+    
+    /**
+     * Cue
+     *
+     * @Element(name="cue")
+     * @var Cue
+     */
+    public $cue;
 }

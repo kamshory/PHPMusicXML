@@ -24,8 +24,8 @@ class Unpitched extends MusicXMLWriter
     /**
      * Display octave
      *
-     * @PropertyElement(name="display-octave")
-     * @var integer
+     * @Element(name="display-octave")
+     * @var DisplayOctave
      */
     public $displayOctave;
 }
