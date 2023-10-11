@@ -21,21 +21,52 @@ class ScoreInstrument extends MusicXMLWriter
      */
     public $id;
     
-    /**
+    /*
      * Instrument name
      *
-     * @PropertyElement(name="instrument-name")
-     * @var string
+     * @Element(name="instrument-name")    
+     * @var InstrumentName
      */
     public $instrumentName;
+
+    /*
+     * Instrument abbreviation
+     *
+     * @Element(name="instrument-abbreviation")
+     * @var InstrumentAbbreviation
+     */
+    public $instrumentAbbreviation;
     
     /**
-     * Instrument name
+     * InstrumentSound
      *
      * @PropertyElement(name="instrument-sound")
-     * @var string
+     * @var InstrumentSound
      */
     public $instrumentSound;
     
-    
+    /*
+     * Solo
+     *
+     * @Element(name="solo")
+     * @var Solo[]
+     */
+    public $solo;
+
+    /*
+     * Ensemble
+     *
+     * @Element(name="ensemble")
+     * @var Ensemble[]
+     */
+    public $ensemble;
+
+    /*
+     * Virtual instrument
+     *
+     * @Element(name="virtual-instrument")
+     * @var VirtualInstrument
+     */
+    public $virtualInstrument;
+
 }
