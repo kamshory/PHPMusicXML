@@ -20,4 +20,11 @@ class Offset extends MusicXMLWriter
 	 */
 	public $sound;
     
+	/**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }

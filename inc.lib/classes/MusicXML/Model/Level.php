@@ -51,4 +51,12 @@ class Level extends MusicXMLWriter
      * @var string
      */
     public $type;
+    
+    /**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 }

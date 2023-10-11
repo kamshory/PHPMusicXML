@@ -18,8 +18,11 @@ function getPropertyName($name)
 $elementList = '
 
 
-<pedal-step>
-<pedal-alter>
+<string>
+<fret>
+<fingering>
+<barre>
+
 
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
