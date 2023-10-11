@@ -17,9 +17,11 @@ function getPropertyName($name)
 
 $elementList = '
 
-<hole-type>
-<hole-closed>
-<hole-shape>
+
+<actual-notes>
+<normal-notes>
+<normal-type>
+<normal-dot>[]
 
 
 ';

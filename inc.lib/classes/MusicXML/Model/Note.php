@@ -135,5 +135,11 @@ class Note extends MusicXMLWriter
      */
     public $grace;
 
-    
+    /**
+     * Time modification
+     *
+     * @Element(name="time-modification")
+     * @var TimeModification
+     */
+    public $timeModification;
 }
