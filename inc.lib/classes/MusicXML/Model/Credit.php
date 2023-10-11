@@ -27,8 +27,7 @@ class Credit extends MusicXMLWriter
 	 * @var integer
 	 */
 	public $page;
-    
-	
+
     /*
      * Credit type
      *
@@ -36,6 +35,14 @@ class Credit extends MusicXMLWriter
      * @var CreditType[]
      */
     public $creditType;
+
+    /*
+     * Credit image
+     *
+     * @Element(name="credit-image")
+     * @var CreditImage
+     */
+    public $creditImage;
 
     /*
      * Link
@@ -54,14 +61,6 @@ class Credit extends MusicXMLWriter
     public $bookmark;
 
     /*
-     * Credit image
-     *
-     * @Element(name="credit-image")
-     * @var CreditImage
-     */
-    public $creditImage;
-
-    /*
      * Credit words
      *
      * @Element(name="credit-words")
@@ -76,5 +75,6 @@ class Credit extends MusicXMLWriter
      * @var CreditSymbol
      */
     public $creditSymbol;
+
 
 }

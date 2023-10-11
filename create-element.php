@@ -16,8 +16,18 @@ function getPropertyName($name)
 }
 
 $elementList = '
-<millimeters>
-<tenths>
+
+<credit-type>[]
+<link>[]
+<bookmark>[]
+<credit-image>
+<credit-words>
+<credit-symbol>
+<link>[]
+<bookmark>[]
+<credit-words>
+<credit-symbol>
+
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 
