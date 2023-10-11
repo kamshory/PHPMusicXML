@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 function url_check($url)
 {
     $headers = @get_headers($url);
