@@ -18,8 +18,12 @@ function getPropertyName($name)
 $elementList = '
 
 
-<display-text>
-<accidental-text>
+<prefix>
+<figure-number>
+<suffix>
+<extend>
+<footnote>
+<level>
 
 
 ';
