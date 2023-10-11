@@ -32,6 +32,14 @@ class Lyric extends MusicXMLWriter
     /**
      * Text
      *
+     * @Element
+     * @var Text
+     */
+    public $text;
+    
+    /**
+     * Text
+     *
      * @PropertyElement
      * @var string
      */
