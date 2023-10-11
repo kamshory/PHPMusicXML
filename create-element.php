@@ -17,13 +17,9 @@ function getPropertyName($name)
 
 $elementList = '
 
-
-<prefix>
-<figure-number>
-<suffix>
-<extend>
-<footnote>
-<level>
+<hole-type>
+<hole-closed>
+<hole-shape>
 
 
 ';
