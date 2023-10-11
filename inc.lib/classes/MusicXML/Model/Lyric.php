@@ -36,15 +36,7 @@ class Lyric extends MusicXMLWriter
      * @var Text
      */
     public $text;
-    
-    /**
-     * Text
-     *
-     * @PropertyElement
-     * @var string
-     */
-    public $textContent;
-    
+
     /**
      * End line
      *
@@ -60,4 +52,12 @@ class Lyric extends MusicXMLWriter
      * @var EndParagraph
      */
     public $endParagraph;
+    
+    /**
+     * Humming
+     *
+     * @Element
+     * @var Humming
+     */
+    public $humming;
 }
