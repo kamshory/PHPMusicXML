@@ -19,7 +19,10 @@ $elementList = '
 
 
 
-<staff-distance>
+<figure>[]
+<duration>
+<footnote> 
+<level>
 
 
 ';

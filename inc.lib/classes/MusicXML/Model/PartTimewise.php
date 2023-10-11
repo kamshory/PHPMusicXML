@@ -79,10 +79,10 @@ class PartTimewise extends MusicXMLWriter
     public $figuredBass;
 
     /**
-     * Print
+     * XPrint
      *
      * @Element(name="print")
-     * @var Print[]
+     * @var XPrint[]
      */
     public $print;
     

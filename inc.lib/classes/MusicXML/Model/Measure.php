@@ -116,5 +116,62 @@ class Measure extends MusicXMLWriter
      * @var Bookmark[]
      */
     public $bookmark;
+
+    /**
+     * Forward
+     *
+     * @Element(name="forward")
+     * @var Forward
+     */
+    public $forward;
+
+    /**
+     * Harmony
+     *
+     * @Element(name="harmony")
+     * @var Harmony
+     */
+    public $harmony;
+
+    /**
+     * Figured bass
+     *
+     * @Element(name="figured-bass")
+     * @var FiguredBass
+     */
+    public $figuredBass;
+
+    /**
+     * XPrint
+     *
+     * @Element(name="print")
+     * @var XPrint
+     */
+    public $print;
+
+    /**
+     * Sound
+     *
+     * @Element(name="sound")
+     * @var Sound
+     */
+    public $sound;
+
+    /**
+     * Listening
+     *
+     * @Element(name="listening")
+     * @var Listening
+     */
+    public $listening;
+
+    /**
+     * Barline
+     *
+     * @Element(name="barline")
+     * @var Barline
+     */
+    public $barline;
+
     
 }
