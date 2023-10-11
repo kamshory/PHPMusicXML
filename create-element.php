@@ -16,10 +16,30 @@ function getPropertyName($name)
 }
 
 $elementList = '
-
-<virtual-library>
-<virtual-name>
-
+<rehearsal>[]
+<segno>[]
+<coda>[]
+<words>[]
+<symbol>[]
+<wedge>
+<dynamics>[]
+<dashes>
+<bracket>
+<pedal>
+<metronome>
+<octave-shift>
+<harp-pedals>
+<damp>
+<damp-all>
+<eyeglasses>
+<string-mute>
+<scordatura>
+<image>
+<principal-voice>
+<percussion>[]
+<accordion-registration>
+<staff-divide>
+<other-direction>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 
