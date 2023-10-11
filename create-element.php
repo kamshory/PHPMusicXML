@@ -17,16 +17,11 @@ function getPropertyName($name)
 
 $elementList = '
 
-<bar-style>
-<footnote>
-<level>
-<wavy-line>
-<segno>
-<coda>
-<fermata>[]
-<ending>
-<repeat>
 
+<key-step>
+<key-alter>
+<key-accidental>
+<key-octave>[]
 
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);

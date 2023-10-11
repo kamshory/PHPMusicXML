@@ -113,16 +113,16 @@ class Key extends MusicXMLWriter
     /**
      * Fifths
      *
-     * @PropertyElement
-     * @var integer
+     * @Element
+     * @var Fifths
      */
     public $fifths;
 
     /**
      * Mode
      *
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Mode
      */
     public $mode;
     
@@ -134,35 +134,35 @@ class Key extends MusicXMLWriter
      */
     public $cancel;
     
-    /**
+    /**    
      * Key step
      *
-     * @PropertyElement(name="key-step")
-     * @var string[]
+     * @Element(name="key-step")
+     * @var KeyStep
      */
     public $keyStep;
-    
+
     /**
      * Key alter
      *
-     * @PropertyElement(name="key-alter")
-     * @var string[]
+     * @Element(name="key-alter")
+     * @var KeyAlter
      */
     public $keyAlter;
-    
+
     /**
      * Key accidental
      *
-     * @PropertyElement(name="key-accidental")
-     * @var string[]
+     * @Element(name="key-accidental")
+     * @var KeyAccidental
      */
     public $keyAccidental;
-    
+
     /**
      * Key octave
      *
-     * @PropertyElement(name="key-octave")
-     * @var string[]
+     * @Element(name="key-octave")
+     * @var KeyOctave[]
      */
     public $keyOctave;
 }

@@ -20,4 +20,11 @@ class Cancel extends MusicXMLWriter
 	 */
 	public $location;
     
+	/**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var integer
+	 */
+	public $textContent;
 }
