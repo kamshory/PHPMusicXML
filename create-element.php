@@ -18,11 +18,17 @@ function getPropertyName($name)
 $elementList = '
 
 
-<straight>
-<first>
-<second>
-<swing-type>
-<swing-style>
+
+<group-name>
+<group-name-display>
+<group-abbreviation>
+<group-abbreviation-display>
+<group-symbol>
+<group-barline>
+<group-time>
+<footnote>
+<level>
+
 
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
