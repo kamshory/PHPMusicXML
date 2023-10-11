@@ -22,14 +22,14 @@ class PartTranspose extends MusicXMLWriter
     /**
      * Chromatic
      * @PropertyElement
-     * @var string
+     * @var Chromatic
      */
     public $chromatic;
     
     /**
      * Octave change
-     * @PropertyElement(name="octave-change")
-     * @var string
+     * @Element(name="octave-change")
+     * @var OctaveChange
      */
     public $octaveChange;
     

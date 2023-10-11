@@ -16,13 +16,10 @@ function getPropertyName($name)
 }
 
 $elementList = '
-
-
-<key-step>
-<key-alter>
-<key-accidental>
-<key-octave>[]
-
+<diatonic>
+<chromatic>
+<octave-change>
+<double>
 ';
 $elementList = str_replace(array('<', '>'), '', $elementList);
 

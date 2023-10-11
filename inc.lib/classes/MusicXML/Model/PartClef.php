@@ -15,8 +15,8 @@ class PartClef extends MusicXMLWriter
     /**
      * Sign
      *
-     * @PropertyElement
-     * @var string
+     * @Element
+     * @var Sign(name="sign")
      */
     public $sign;
     
@@ -31,8 +31,8 @@ class PartClef extends MusicXMLWriter
     /**
      * Clef octave change
      *
-     * @PropertyElement(name="clef-octave-change")
-     * @var string
+     * @Element(name="clef-octave-change")
+     * @var ClefOctaveChange
      */
     public $clefOctaveChange;
 }

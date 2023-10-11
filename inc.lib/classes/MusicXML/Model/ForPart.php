@@ -31,15 +31,15 @@ class ForPart extends MusicXMLWriter
     /**
      * Part clef
      *
-     * @PropertyElement
-     * @var PartClef
+     * @Element
+     * @var PartClef(name="part-clef")
      */
     public $partClef;
     
     /**
      * Part transpose
      *
-     * @PropertyElement(name="part-transpose")
+     * @Element(name="part-transpose")
      * @var PartTranspose
      */
     public $partTranspose;

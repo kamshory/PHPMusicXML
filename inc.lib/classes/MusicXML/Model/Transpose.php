@@ -7,30 +7,56 @@ use MusicXML\MusicXMLWriter;
 /**
  * Transpose
  * @Xml
- * @Path /path/measure/attribute/transpose
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/transpose/
  * @Data
  */
 class Transpose extends MusicXMLWriter
 {
-    /**
+	/**
+	 * Id
+	 *
+	 * @Attribute(name="id")
+	 * @var string
+	 */
+	public $id;
+
+	/**
+	 * Number
+	 *
+	 * @Attribute(name="number")
+	 * @var string
+	 */
+	public $number;
+    
+	/**
      * Diatonic
-     * @PropertyElement
+     *
+     * @Element(name="diatonic")
      * @var Diatonic
      */
     public $diatonic;
-    
+
     /**
      * Chromatic
-     * @PropertyElement
-     * @var string
+     *
+     * @Element(name="chromatic")
+     * @var Chromatic
      */
     public $chromatic;
-    
+
     /**
      * Octave change
-     * @PropertyElement(name="octave-change")
-     * @var string
+     *
+     * @Element(name="octave-change")
+     * @var OctaveChange
      */
     public $octaveChange;
+
+    /**
+     * Double
+     *
+     * @Element(name="double")
+     * @var Double
+     */
+    public $double;
 }
