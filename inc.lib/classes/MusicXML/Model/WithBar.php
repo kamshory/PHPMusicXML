@@ -5,29 +5,13 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * Bend
+ * WithBar
  * @Xml
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bend/
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/with-bar/
  * @Data
  */
-class Bend extends MusicXMLWriter
+class WithBar extends MusicXMLWriter
 {
-	/**
-	 * Accelerate
-	 *
-	 * @Attribute(name="accelerate")
-	 * @var string
-	 */
-	public $accelerate;
-
-	/**
-	 * Beats
-	 *
-	 * @Attribute(name="beats")
-	 * @var string
-	 */
-	public $beats;
-
 	/**
 	 * Color
 	 *
@@ -51,14 +35,6 @@ class Bend extends MusicXMLWriter
 	 * @var float
 	 */
 	public $defaultY;
-
-	/**
-	 * First beat
-	 *
-	 * @Attribute(name="first-beat")
-	 * @var float
-	 */
-	public $firstBeat;
 
 	/**
 	 * Font family
@@ -93,12 +69,12 @@ class Bend extends MusicXMLWriter
 	public $fontWeight;
 
 	/**
-	 * Last beat
+	 * Placement
 	 *
-	 * @Attribute(name="last-beat")
+	 * @Attribute(name="placement")
 	 * @var string
 	 */
-	public $lastBeat;
+	public $placement;
 
 	/**
 	 * Relative x
@@ -115,44 +91,12 @@ class Bend extends MusicXMLWriter
 	 * @var float
 	 */
 	public $relativeY;
-
-	/**
-	 * Shape
-	 *
-	 * @Attribute(name="shape")
-	 * @var string
-	 */
-	public $shape;
-	
-	/**
-	 * Bend alter
-	 *
-	 * @Element(name="bend-alter")
-	 * @var BendAlter
-	 */
-	public $bendAlter;
-	
-	/**
-	 * Pre bend
-	 *
-	 * @Element(name="pre-bend")
-	 * @var PreBend[]
-	 */
-	public $preBend;
-	
-	/**
-	 * Release
-	 *
-	 * @Element(name="release")
-	 * @var Release[]
-	 */
-	public $release;
     
 	/**
-	 * With bar
+	 * Text content
 	 *
-	 * @Element(name="with-bar")
-	 * @var WithBar
+	 * @TextContent
+	 * @var string
 	 */
-	public $withBar;
+	public $textContent;
 }
