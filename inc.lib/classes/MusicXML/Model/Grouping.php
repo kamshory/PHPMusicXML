@@ -43,5 +43,13 @@ class Grouping extends MusicXMLWriter
 	 * @var string
 	 */
 	public $number;
+	
+	/**
+	 * Feature
+	 *
+	 * @element(name="feature")
+	 * @var Feature
+	 */
+	public $feature;
     
 }
