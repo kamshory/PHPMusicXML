@@ -156,7 +156,7 @@ class Sound extends MusicXMLWriter
 	 */
 	public $tocoda;
 
-	/*
+	/**
 	 * Instrument change
 	 *
 	 * @Element(name="instrument-change")
@@ -164,7 +164,7 @@ class Sound extends MusicXMLWriter
 	 */
 	public $instrumentChange;
 
-	/*
+	/**
 	 * Midi device
 	 *
 	 * @Element(name="midi-device")
@@ -172,7 +172,7 @@ class Sound extends MusicXMLWriter
 	 */
 	public $midiDevice;
 
-	/*
+	/**
 	 * Midi instrument
 	 *
 	 * @Element(name="midi-instrument")
@@ -180,7 +180,7 @@ class Sound extends MusicXMLWriter
 	 */
 	public $midiInstrument;
 
-	/*
+	/**
 	 * Play
 	 *
 	 * @Element(name="play")
@@ -188,7 +188,7 @@ class Sound extends MusicXMLWriter
 	 */
 	public $play;
 
-	/*
+	/**
 	 * Swing
 	 *
 	 * @Element(name="swing")
@@ -196,7 +196,7 @@ class Sound extends MusicXMLWriter
 	 */
 	public $swing;
 
-	/*
+	/**
 	 * Offset
 	 *
 	 * @Element(name="offset")

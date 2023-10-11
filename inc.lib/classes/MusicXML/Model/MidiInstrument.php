@@ -20,7 +20,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $id;
     
-	/*
+	/**
 	 * Midi channel
 	 *
 	 * @Element(name="midi-channel")
@@ -28,7 +28,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $midiChannel;
 
-	/*
+	/**
 	 * Midi name
 	 *
 	 * @Element(name="midi-name")
@@ -36,7 +36,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $midiName;
 
-	/*
+	/**
 	 * Midi bank
 	 *
 	 * @Element(name="midi-bank")
@@ -44,7 +44,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $midiBank;
 
-	/*
+	/**
 	 * Midi program
 	 *
 	 * @Element(name="midi-program")
@@ -52,7 +52,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $midiProgram;
 
-	/*
+	/**
 	 * Midi unpitched
 	 *
 	 * @Element(name="midi-unpitched")
@@ -60,7 +60,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $midiUnpitched;
 
-	/*
+	/**
 	 * Volume
 	 *
 	 * @Element(name="volume")
@@ -68,7 +68,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $volume;
 
-	/*
+	/**
 	 * Pan
 	 *
 	 * @Element(name="pan")
@@ -76,7 +76,7 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $pan;
 
-	/*
+	/**
 	 * Elevation
 	 *
 	 * @Element(name="elevation")
@@ -84,5 +84,6 @@ class MidiInstrument extends MusicXMLWriter
 	 */
 	public $elevation;
 
+	
 
 }
