@@ -40,7 +40,7 @@ class DataType
         "ending-number" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/ending-number/
         "fan" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/fan/
         "fermata-shape" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/fermata-shape/
-        "fifths" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/fifths/ base=integer
+        "fifths" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/fifths/ base=integer
         "font-family" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/font-family/
         "font-size" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/font-size/
         "font-style" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/font-style/
@@ -103,8 +103,7 @@ class DataType
         "right-left-middle" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/right-left-middle/
         "rotation-degrees" => array("traditional_type" => "float", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/rotation-degrees/ base=decimal (-180, 180)
         "semi-pitched" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/semi-pitched/
-        "semitones" => array("traditional_type" => "float", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/semitones/ base=decimal (-1, 1)
-        
+        "semitones" => array("traditional_type" => "float", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/semitones/ base=decimal (-1, 1)     
         "show-frets" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/show-frets/
         "show-tuplet" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/show-tuplet/
         "smufl-accidental-glyph-name" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/smufl-accidental-glyph-name/
@@ -115,9 +114,9 @@ class DataType
         "smufl-segno-glyph-name" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/smufl-segno-glyph-name/  
         "smufl-wavy-line-glyph-name" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/smufl-wavy-line-glyph-name/
         "staff-divide-symbol" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-divide-symbol/        
-        "staff-line" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-line/
-        "staff-line-position" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-line-position/       
-        "staff-number" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-number/
+        "staff-line" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-line/ base=positiveInteger
+        "staff-line-position" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-line-position/ base=integer       
+        "staff-number" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-number/ base=positiveInteger 
         "staff-type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/staff-type/
         "start-note" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/start-note/
         "start-stop" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/start-stop/
@@ -129,8 +128,8 @@ class DataType
         "stick-location" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/stick-location/
         "stick-material" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/stick-material/
         "stick-type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/stick-type/
-        "string" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/string/
-        "string-number" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/string-number/
+        "string" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xsd-string/
+        "string-number" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/string-number/ base=positiveInteger
         "swing-type-value" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/swing-type-value/
         "syllabic" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/syllabic/
         "symbol-size" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/symbol-size/
@@ -146,11 +145,11 @@ class DataType
         "time-separator" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/time-separator/
         "time-symbol" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/time-symbol/
         "tip-direction" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/tip-direction/
-        "token" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/token/
+        "token" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xsd-token/
         "top-bottom" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/top-bottom/
         "tremolo-marks" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/tremolo-marks/
         "tremolo-type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/tremolo-type/
-        "trill-beats" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/trill-beats/
+        "trill-beats" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/trill-beats/ base=integer (2, infinite)
         "trill-step" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/trill-step/
         "two-note-turn" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/two-note-turn/
         "up-down" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/up-down/
