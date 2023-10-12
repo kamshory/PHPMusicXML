@@ -31,6 +31,10 @@ use MusicXML\Model\Volume;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
 
+/**
+ * Convert MIDI to MusicXML
+ * @Reference https://www.w3.org/2021/06/musicxml40/tutorial/midi-compatible-part/
+ */
 class MusicXMLFromMidi extends MusicXMLBase
 {
     private $widthScale = 6;
