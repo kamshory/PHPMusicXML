@@ -34,7 +34,7 @@ class DataType
         "degree-symbol-value" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/degree-symbol-value/        
         "degree-type-value" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/degree-type-value/
         "distance-type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/distance-type/
-        "divisions" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/divisions/
+        "divisions" => array("traditional_type" => "float", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/divisions/
         "effect-value" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/effect-value/
         "enclosure-shape" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/enclosure-shape/
         "ending-number" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/ending-number/
@@ -158,11 +158,11 @@ class DataType
         "wedge-type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/wedge-type/
         "winged" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/winged/
         "wood-value" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/wood-value/
-        "xlink:actuate" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink:actuate/
-        "xlink:show" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink:show/
-        "xlink:type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink:type/
-        "xml:lang" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xml:lang/
-        "xml:space" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xml:space/
+        "xlink:actuate" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink-actuate/
+        "xlink:show" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink-show/
+        "xlink:type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink-type/
+        "xml:lang" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xml-lang/
+        "xml:space" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xml-space/
         "yes-no" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yes-no/
         "yes-no-number" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yes-no-number/
         "yyyy-mm-dd" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yyyy-mm-dd/
