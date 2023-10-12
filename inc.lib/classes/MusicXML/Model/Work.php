@@ -8,7 +8,7 @@ use MusicXML\MusicXMLWriter;
  * Work
  * @Xml
  * @MusicXML
- * @Path /work
+ * @Parent(element="score-partwise, score-timewise" class="ScorePartwise, ScoreTimewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/work/
  * @Data
  */

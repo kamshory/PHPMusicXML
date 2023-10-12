@@ -13,7 +13,7 @@ use MusicXML\MusicXMLWriter;
  */
 class NoteheadText extends MusicXMLWriter
 {    
-	/*
+	/**
      * Display text
      *
      * @Element(name="display-text")

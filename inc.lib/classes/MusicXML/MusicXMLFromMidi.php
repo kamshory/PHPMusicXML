@@ -1066,7 +1066,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $measure->note = $this->initializeArray($measure->note);
                 // get first note
                 
-                /*
+                /**
                 $message0x = array_values($noteMessages);
                 $message0 = $message0x[0];
                 $note0 = new Note();

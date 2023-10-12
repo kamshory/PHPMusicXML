@@ -61,7 +61,7 @@ class PartLink extends MusicXMLWriter
 	 */
 	public $xlinkType;
     
-	/*
+	/**
      * Instrument link
      *
      * @Element(name="instrument-link")

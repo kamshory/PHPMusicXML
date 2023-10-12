@@ -21,7 +21,7 @@ class Play extends MusicXMLWriter
 	 */
 	public $id;
 	
-	/*
+	/**
 	* Ipa
 	*
 	* @Element(name="ipa")
@@ -29,7 +29,7 @@ class Play extends MusicXMLWriter
 	*/
 	public $ipa;
 
-	/*
+	/**
 	* Mute
 	*
 	* @Element(name="mute")
@@ -37,7 +37,7 @@ class Play extends MusicXMLWriter
 	*/
 	public $mute;
 
-	/*
+	/**
 	* Semi pitched
 	*
 	* @Element(name="semi-pitched")
@@ -45,7 +45,7 @@ class Play extends MusicXMLWriter
 	*/
 	public $semiPitched;
 
-	/*
+	/**
 	* Other play
 	*
 	* @Element(name="other-play")

@@ -344,7 +344,7 @@ public function getScore($ttype=0) //NOSONAR
 	$ks = 0;
 	$ts = 0;
 
-	/*
+	/**
 	 *Currently only support midi file which contain 1 or 2 tracks.
 	 *If there are more than 2 tracks, only the first track will be handled.
 	 *tc

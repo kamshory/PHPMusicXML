@@ -20,7 +20,7 @@ class Articulations extends MusicXMLWriter
      */
     public $staccato;
     
-            /*
+            /**
          * Accent
          *
          * @Element(name="accent")
@@ -28,7 +28,7 @@ class Articulations extends MusicXMLWriter
          */
         public $accent;
 
-        /*
+        /**
          * Strong accent
          *
          * @Element(name="strong-accent")  
@@ -36,7 +36,7 @@ class Articulations extends MusicXMLWriter
          */
         public $strongAccent;
 
-        /*
+        /**
          * Tenuto
          *
          * @Element(name="tenuto")
@@ -44,7 +44,7 @@ class Articulations extends MusicXMLWriter
          */
         public $tenuto;
 
-        /*
+        /**
          * Detached legato
          *
          * @Element(name="detached-legato")
@@ -52,7 +52,7 @@ class Articulations extends MusicXMLWriter
          */
         public $detachedLegato;
 
-        /*
+        /**
          * Staccatissimo
          *
          * @Element(name="staccatissimo")
@@ -60,7 +60,7 @@ class Articulations extends MusicXMLWriter
          */
         public $staccatissimo;
 
-        /*
+        /**
          * Spiccato
          *
          * @Element(name="spiccato")
@@ -68,7 +68,7 @@ class Articulations extends MusicXMLWriter
          */
         public $spiccato;
 
-        /*
+        /**
          * Scoop
          *
          * @Element(name="scoop")
@@ -76,7 +76,7 @@ class Articulations extends MusicXMLWriter
          */
         public $scoop;
 
-        /*
+        /**
          * Plop
          *
          * @Element(name="plop")
@@ -84,7 +84,7 @@ class Articulations extends MusicXMLWriter
          */
         public $plop;
 
-        /*
+        /**
          * Doit
          *
          * @Element(name="doit")
@@ -92,7 +92,7 @@ class Articulations extends MusicXMLWriter
          */
         public $doit;
 
-        /*
+        /**
          * Falloff
          *
          * @Element(name="falloff")
@@ -100,7 +100,7 @@ class Articulations extends MusicXMLWriter
          */
         public $falloff;
 
-        /*
+        /**
          * Breath mark
          *
          * @Element(name="breath-mark")
@@ -108,7 +108,7 @@ class Articulations extends MusicXMLWriter
          */
         public $breathMark;
 
-        /*
+        /**
          * Caesura
          *
          * @Element(name="caesura")
@@ -116,7 +116,7 @@ class Articulations extends MusicXMLWriter
          */
         public $caesura;
 
-        /*
+        /**
          * Stress
          *
          * @Element(name="stress")
@@ -124,7 +124,7 @@ class Articulations extends MusicXMLWriter
          */
         public $stress;
 
-        /*
+        /**
          * Unstress
          *
          * @Element(name="unstress")
@@ -132,7 +132,7 @@ class Articulations extends MusicXMLWriter
          */
         public $unstress;
 
-        /*
+        /**
          * Soft accent
          *
          * @Element(name="soft-accent")
@@ -140,7 +140,7 @@ class Articulations extends MusicXMLWriter
          */
         public $softAccent;
 
-        /*
+        /**
          * Other articulation
          *
          * @Element(name="other-articulation")

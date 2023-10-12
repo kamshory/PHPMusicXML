@@ -149,7 +149,7 @@ class Dynamics extends MusicXMLWriter
 	 */
 	public $valign;
 	
-	        /*
+	/**
          * P
          *
          * @Element(name="p")
@@ -157,7 +157,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $p;
 
-        /*
+        /**
          * Pp
          *
          * @Element(name="pp")
@@ -165,7 +165,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $pp;
 
-        /*
+        /**
          * Ppp
          *
          * @Element(name="ppp")
@@ -173,7 +173,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $ppp;
 
-        /*
+        /**
          * Pppp
          *
          * @Element(name="pppp")
@@ -181,7 +181,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $pppp;
 
-        /*
+        /**
          * Ppppp
          *
          * @Element(name="ppppp")
@@ -189,7 +189,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $ppppp;
 
-        /*
+        /**
          * Pppppp
          *
          * @Element(name="pppppp")
@@ -197,7 +197,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $pppppp;
 
-        /*
+        /**
          * F
          *
          * @Element(name="f")
@@ -205,7 +205,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $f;
 
-        /*
+        /**
          * Ff
          *
          * @Element(name="ff")
@@ -213,7 +213,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $ff;
 
-        /*
+        /**
          * Fff
          *
          * @Element(name="fff")
@@ -221,7 +221,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $fff;
 
-        /*
+        /**
          * Ffff
          *
          * @Element(name="ffff")
@@ -229,7 +229,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $ffff;
 
-        /*
+        /**
          * Fffff
          *
          * @Element(name="fffff")
@@ -237,7 +237,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $fffff;
 
-        /*
+        /**
          * Ffffff
          *
          * @Element(name="ffffff")
@@ -245,7 +245,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $ffffff;
 
-        /*
+        /**
          * Mp
          *
          * @Element(name="mp")
@@ -253,7 +253,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $mp;
 
-        /*
+        /**
          * Mf
          *
          * @Element(name="mf")
@@ -261,7 +261,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $mf;
 
-        /*
+        /**
          * Sf
          *
          * @Element(name="sf")
@@ -269,7 +269,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $sf;
 
-        /*
+        /**
          * Sfp
          *
          * @Element(name="sfp")
@@ -277,7 +277,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $sfp;
 
-        /*
+        /**
          * Sfpp
          *
          * @Element(name="sfpp")
@@ -285,7 +285,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $sfpp;
 
-        /*
+        /**
          * Fp
          *
          * @Element(name="fp")
@@ -293,7 +293,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $fp;
 
-        /*
+        /**
          * Rf
          *
          * @Element(name="rf")
@@ -301,7 +301,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $rf;
 
-        /*
+        /**
          * Rfz
          *
          * @Element(name="rfz")
@@ -309,7 +309,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $rfz;
 
-        /*
+        /**
          * Sfz
          *
          * @Element(name="sfz")
@@ -317,7 +317,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $sfz;
 
-        /*
+        /**
          * Sffz
          *
          * @Element(name="sffz")
@@ -325,7 +325,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $sffz;
 
-        /*
+        /**
          * Fz
          *
          * @Element(name="fz")
@@ -333,7 +333,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $fz;
 
-        /*
+        /**
          * N
          *
          * @Element(name="n")
@@ -341,7 +341,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $n;
 
-        /*
+        /**
          * Pf
          *
          * @Element(name="pf")
@@ -349,7 +349,7 @@ class Dynamics extends MusicXMLWriter
          */
         public $pf;
 
-        /*
+        /**
          * Sfzp
          *
          * @Element(name="sfzp")
@@ -357,12 +357,11 @@ class Dynamics extends MusicXMLWriter
          */
         public $sfzp;
 
-        /*
+        /**
          * Other dynamics
          *
          * @Element(name="other-dynamics")
          * @var OtherDynamics[]
          */
         public $otherDynamics;
-    
 }

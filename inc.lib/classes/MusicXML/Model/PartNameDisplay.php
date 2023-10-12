@@ -21,7 +21,7 @@ class PartNameDisplay extends MusicXMLWriter
 	 */
 	public $printObject;
     
-	/*
+	/**
      * Display text
      *
      * @Element(name="display-text")

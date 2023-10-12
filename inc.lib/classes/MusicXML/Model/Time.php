@@ -157,7 +157,7 @@ class Time extends MusicXMLWriter
      */
     public $beatType;
 	
-	/*
+	/**
      * Interchangeable
      *
      * @Element(name="interchangeable")
