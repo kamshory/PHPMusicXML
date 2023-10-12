@@ -14,6 +14,12 @@ class MXL
     const FORMAT_MXL = "mxl";
     const FORMAT_XML = "xml";
     const FORMAT_MUSICXML = "musicxml";
+    const MIME_TYPE = "application/vnd.recordare.musicxml";
+    const EXT_MUSICXML = '.musicxml';
+    const CONTAINER_PATH = 'META-INF/container.xml';
+    const CONTAINER_DIR = 'META-INF';
+    const XML_VERSION = '1.0';
+    const XML_ENCODING = 'UTF-8';
     
     /**
      * Convert musicxml to mxl
@@ -21,43 +27,59 @@ class MXL
      * @notice This method required access to create temporary file
      * @param string $name File name without extension
      * @param string $xml XML document of MusicXML
-     * @param string $mimetype MIME type
+     * @param string $mimeType MIME type
      * @return string Compressed file
      * @throws FilePermissionExcetion when failed to create temporary file
      */
-    public function xmlToMxl($name, $xml, $mimetype = "application/vnd.recordare.musicxml")
+    public function xmlToMxl($name, $xml, $mimeType = self::MIME_TYPE)
     {
-        $mediatype = $mimetype.'+xml';     
+        $mediatype = $this->getMediaType($mimeType);  
         $fname = $name;
-        if(stripos($fname, '.musicxml') === false)
+        if(stripos($fname, self::EXT_MUSICXML) === false)
         {
-            $fname = $fname.'.musicxml';
+            $fname = $fname.self::EXT_MUSICXML;
         }
         $tmp_dir = sys_get_temp_dir();
         $tmp_location = tempnam($tmp_dir, "__tmp");
-        register_shutdown_function('unlink', $tmp_location);
+        register_shutdown_function(array($this, 'unlink'), $tmp_location);
         $zip = new ZipArchive();
         if ($zip->open($tmp_location, ZipArchive::CREATE)!==true) {
             throw new FilePermissionExcetion("Filed to create temporary file");
         }
         $zip->addFromString($fname, $xml);
-        $zip->addFromString('mimetype', $mimetype);
-        $zip->addEmptyDir('META-INF');
+        $zip->addFromString('mimetype', $mimeType);
+        $zip->addEmptyDir(self::CONTAINER_DIR);
         
-        /*
-        Native code
-        $container = '<?xml version="1.0" encoding="UTF-8"?><container>
-    <rootfiles>
-        <rootfile full-path="'.$fname.'" media-type="'.$mediatype.'"/>
-    </rootfiles>
-</container>
-';
-        */
-        $container = $this->getContainer($fname, $mediatype, "1.0", "UTF-8");
-        $zip->addFromString('META-INF/container.xml', $container->saveXML());     
+        $container = $this->getContainer($fname, $mediatype, self::XML_VERSION, self::XML_ENCODING);
+        $zip->addFromString(self::CONTAINER_PATH, $container->saveXML());     
         $zip->close();       
         return file_get_contents($tmp_location);
     }  
+    
+    /**
+     * Get media type
+     *
+     * @param string $mimeType
+     * @return string
+     */
+    private function getMediaType($mimeType)
+    {
+        return $mimeType.'+xml'; 
+    }
+    
+    /**
+     * Delete file
+     *
+     * @param string $filename
+     * @return void
+     */
+    private function unlink($filename)
+    {
+        if(file_exists($filename))
+        {
+            unlink($filename);
+        }
+    }
     
     /**
      * Get container
@@ -68,7 +90,7 @@ class MXL
      * @param string $encoding Charset encoding
      * @return DOMDocument 
      */
-    public function getContainer($fullPath, $mediaType, $xmlVersion = "1.0", $encoding = "UTF-8")
+    public function getContainer($fullPath, $mediaType, $xmlVersion = self::XML_VERSION, $encoding = self::XML_ENCODING)
     {
         $domdoc = new DOMDocument();
         $domdoc->xmlVersion = $xmlVersion;

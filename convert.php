@@ -1,11 +1,11 @@
 <?php
 
-use MusicXML\MusicXML;
+use MusicXML\MusicXMLFromMidi;
 use MusicXML\Util\MXL;
 
 require_once "inc.lib/autoload.php";
 
-$musicXML = new MusicXML();
+$musicXML = new MusicXMLFromMidi();
 try
 {
     $midi = $musicXML->loadMidi("test.mid");

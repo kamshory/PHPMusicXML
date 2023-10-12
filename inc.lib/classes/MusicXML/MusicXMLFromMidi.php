@@ -4,6 +4,7 @@ namespace MusicXML;
 
 use DOMDocument;
 use DOMNode;
+use Exceptions\FileNotFoundException;
 use Midi\MidiMeasure;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
@@ -30,6 +31,7 @@ use MusicXML\Model\Technical;
 use MusicXML\Model\Volume;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TimeSignature;
+use MusicXML\Util\MXL;
 
 /**
  * Convert MIDI to MusicXML
@@ -368,6 +370,96 @@ class MusicXMLFromMidi extends MusicXMLBase
             );      
         }
     }
+    
+    public function loadMidi($midiPath)
+    {
+        if(file_exists($midiPath))
+        {
+            $midi = new MidiMeasure();
+            $midi->importMid($midiPath);
+            return $midi;
+        }
+        else
+        {
+            throw new FileNotFoundException("Specified file does not exists");
+        }
+    }
+    
+    /**
+     * Convert MIDI to MusicXML
+     *
+     * @param MidiMeasure $midi
+     * @param string $version Version of MusicXML
+     * @return string
+     */
+    public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::FORMAT_XML)
+    {
+        $domdoc = $this->getDOMDocument();
+        $midi2mxl = new MusicXMLFromMidi();
+        $domdoc->appendChild($midi2mxl->convertMidiToMusicXML($midi, $title, $domdoc, $version));
+        if($format == MXL::FORMAT_MXL)
+        {
+            // compress MusicXML
+            $mxl = new MXL();
+            return $mxl->xmlToMxl($title, $domdoc->saveXML());
+        }
+        else
+        {
+            return $domdoc->saveXML();
+        }  
+    }
+    
+    /**
+     * Get programs
+     *
+     * @param array $midiEventMessages
+     * @return array
+     */
+    protected function getControlEvent($midiEventMessages)
+    {
+        $messages = array();
+        foreach ($midiEventMessages as $message) {
+            if ($message['event'] != 'On' && $message['event'] != 'Off') {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
+    }
+    
+    /**
+     * Get minimum duration
+     *
+     * @param array $midiEventMessages
+     * @param integer $timebase
+     * @return float
+     */
+    protected function getMinimumDuration($midiEventMessages, $timebase)
+    {
+        $min = $timebase;
+        foreach ($midiEventMessages as $message) {
+            if (isset($message['duration']) && $message['duration'] > 0 && $message['duration'] < $min) {
+                $min = $message['duration'];
+            }
+        }
+        return $min;
+    }
+
+    /**
+     * Get notes
+     *
+     * @param array $midiEventMessages
+     * @return array
+     */
+    protected function getNotes($midiEventMessages)
+    {
+        $messages = array();
+        foreach ($midiEventMessages as $message) {
+            if ($message['event'] == 'On' || $message['event'] == 'Off') {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
+    }
 
     /**
      * Build part list
@@ -666,8 +758,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             if ($channelId == 10) {
                 $scorePartwise->partList->scorePart[] = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
             } else {
-                if (isset($this->instrumentList[$programId - 1]) && isset($this->instrumentList[$programId - 1][2])) {
-                    $instrumentSound = $this->instrumentList[$programId - 1][2];
+                if (isset(MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1]) && isset(MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2])) {
+                    $instrumentSound = MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2];
                 } else {
                     $this->getIsntrumentSound($channelId, $programId, $instrumentName);
                     $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
@@ -761,9 +853,9 @@ class MusicXMLFromMidi extends MusicXMLBase
             $id = $partId . '-I' . $key;
             $scoreInstrument->id = $id; 
             $midiCode = $value['note'] - 1;
-            if(isset($this->drumSet[$midiCode]) && isset($this->drumSet[$midiCode][0]))
+            if(isset(MusicXMLInstrument::DRUM_SET[$midiCode]) && isset(MusicXMLInstrument::DRUM_SET[$midiCode][0]))
             {
-                $scoreInstrument->instrumentName = new InstrumentName($this->drumSet[$midiCode][0]);
+                $scoreInstrument->instrumentName = new InstrumentName(MusicXMLInstrument::DRUM_SET[$midiCode][0]);
             }
             else
             {

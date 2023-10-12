@@ -3,7 +3,6 @@
 namespace MusicXML;
 
 use DOMDocument;
-use Midi\MidiMeasure;
 use MusicXML\Map\ModelMap;
 use MusicXML\Map\NodeType;
 use MusicXML\Model\Attributes;
@@ -25,7 +24,6 @@ use MusicXML\Model\Sign;
 use MusicXML\Model\Staves;
 use MusicXML\Model\Time;
 use MusicXML\Model\Transpose;
-use MusicXML\Util\MXL;
 
 class MusicXML extends MusicXMLBase
 {
@@ -46,29 +44,6 @@ class MusicXML extends MusicXMLBase
         }
         echo $object;  
         
-    }
-
-    /**
-     * Convert MIDI to MusicXML
-     *
-     * @param MidiMeasure $midi
-     * @param string $version Version of MusicXML
-     * @return string
-     */
-    public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::FORMAT_XML)
-    {
-        $domdoc = $this->getDOMDocument();
-        $midi2mxl = new MusicXMLFromMidi();
-        $domdoc->appendChild($midi2mxl->convertMidiToMusicXML($midi, $title, $domdoc, $version));
-        if($format == MXL::FORMAT_MXL)
-        {
-            $mxl = new MXL();
-            return $mxl->xmlToMxl($title, $domdoc->saveXML());
-        }
-        else
-        {
-            return $domdoc->saveXML();
-        }  
     }
 
     /**
