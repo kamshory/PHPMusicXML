@@ -76,7 +76,8 @@ class MusicXMLWriter // NOSONAR
             {
                 $this->loadXml($data);
             }
-            else if(($data instanceof DateTime || is_string($data) || is_numeric($data)) && property_exists($this->className, 'textContent'))
+            else if(($data instanceof DateTime || is_string($data) || is_numeric($data)) 
+            && property_exists($this->className, 'textContent'))
             {
                 $this->setTextContent($data);
             }

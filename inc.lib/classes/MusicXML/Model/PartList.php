@@ -7,7 +7,6 @@ use MusicXML\MusicXMLWriter;
 /**
  * PartList
  * @Xml(name="part-list")
- * @Path /path-list
  * @Data
  */
 class PartList extends MusicXMLWriter
