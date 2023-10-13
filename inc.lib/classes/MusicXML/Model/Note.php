@@ -14,182 +14,288 @@ use MusicXML\MusicXMLWriter;
 class Note extends MusicXMLWriter
 {
 	/**
-	 * Attack
+	 * Attack 
+	 * -
+	 * Alters the starting time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A <note> that stops a tie should not have an attack attribute. The attack and release attributes are independent of each other. The attack attribute only changes the starting time of a note.
 	 *
 	 * @Attribute(name="attack")
-	 * @var string
+	 * @Value(type="divisions" required="false", min="infinite", max="infinite")
+	 * @var float
 	 */
 	public $attack;
 
 	/**
-	 * Color
+	 * Color 
+	 * -
+	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
+	 * @Value(type="color" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $color;
 
 	/**
-	 * Default x
+	 * Default x 
+	 * -
+	 * Changes the computation of the default horizontal position. The origin is changed relative to the start of the entire current measure, at either the left barline or the start of the system. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
+	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
 	 * @var float
 	 */
 	public $defaultX;
 
 	/**
-	 * Default y
+	 * Default y 
+	 * -
+	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
+	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
 	 * @var float
 	 */
 	public $defaultY;
 
 	/**
-	 * Dynamics
+	 * Dynamics 
+	 * -
+	 * Corresponds to MIDI 1.0's Note On velocity, expressed in terms of percentage of the default forte value (90 for MIDI 1.0).
 	 *
 	 * @Attribute(name="dynamics")
-	 * @var string
+	 * @Value(type="non-negative-decimal" required="false", min="infinite", max="infinite")
+	 * @var float
 	 */
 	public $dynamics;
 
 	/**
-	 * End dynamics
+	 * End dynamics 
+	 * -
+	 * Corresponds to MIDI 1.0's Note Off velocity, expressed in terms of percentage of the default forte value (90 for MIDI 1.0).
 	 *
 	 * @Attribute(name="end-dynamics")
-	 * @var string
+	 * @Value(type="non-negative-decimal" required="false", min="infinite", max="infinite")
+	 * @var float
 	 */
 	public $endDynamics;
 
 	/**
-	 * Font family
+	 * Font family 
+	 * -
+	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
+	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $fontFamily;
 
 	/**
-	 * Font size
+	 * Font size 
+	 * -
+	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
+	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $fontSize;
 
 	/**
-	 * Font style
+	 * Font style 
+	 * -
+	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
+	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $fontStyle;
 
 	/**
-	 * Font weight
+	 * Font weight 
+	 * -
+	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
+	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $fontWeight;
 
 	/**
-	 * Id
+	 * Id 
+	 * -
+	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $id;
 
 	/**
-	 * Pizzicato
+	 * Pizzicato 
+	 * -
+	 * Used when just this note is sounded pizzicato, vs. the <pizzicato> element which changes overall playback between pizzicato and arco.
 	 *
 	 * @Attribute(name="pizzicato")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $pizzicato;
 
 	/**
-	 * Print dot
+	 * Print dot 
+	 * -
+	 * Controls the printing of an augmentation dot separately from the rest of the note or rest. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody. If print-object is set to no, this attribute is also interpreted as being set to no if not present.
 	 *
 	 * @Attribute(name="print-dot")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $printDot;
 
 	/**
-	 * Print leger
+	 * Print leger 
+	 * -
+	 * Indicates whether leger lines are printed. Notes without leger lines are used to indicate indeterminate high and low notes. It is yes if not present unless print-object is set to no. This attribute is ignored for rests.
 	 *
 	 * @Attribute(name="print-leger")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $printLeger;
 
 	/**
-	 * Print lyric
+	 * Print lyric 
+	 * -
+	 * Controls the printing of a lyric separately from the rest of the note or rest. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody. If print-object is set to no, this attribute is also interpreted as being set to no if not present.
 	 *
 	 * @Attribute(name="print-lyric")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $printLyric;
 
 	/**
-	 * Print object
+	 * Print object 
+	 * -
+	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $printObject;
 
 	/**
-	 * Print spacing
+	 * Print spacing 
+	 * -
+	 * Controls whether or not spacing is left for an invisible note or object. It is used only if no note, dot, or lyric is being printed. The value is yes (leave spacing) if not specified.
 	 *
 	 * @Attribute(name="print-spacing")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $printSpacing;
 
 	/**
-	 * Relative x
+	 * Relative x 
+	 * -
+	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the <offset> element or directive attribute if those are present.
 	 *
 	 * @Attribute(name="relative-x")
+	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
 	 * @var float
 	 */
 	public $relativeX;
 
 	/**
-	 * Relative y
+	 * Relative y 
+	 * -
+	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down. It should be interpreted in the context of the placement attribute if that is present.
 	 *
 	 * @Attribute(name="relative-y")
+	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
 	 * @var float
 	 */
 	public $relativeY;
 
 	/**
-	 * Release
+	 * Release 
+	 * -
+	 * Alters the stopping time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A <note> that starts a tie should not have a release attribute. The attack and release attributes are independent of each other. The release attribute only changes the stopping time of a note.
 	 *
 	 * @Attribute(name="release")
-	 * @var string
+	 * @Value(type="divisions" required="false", min="infinite", max="infinite")
+	 * @var float
 	 */
 	public $release;
 
 	/**
-	 * Time only
+	 * Time only 
+	 * -
+	 * Shows which times to play the note during a repeated section.
 	 *
 	 * @Attribute(name="time-only")
+	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $timeOnly;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * @Element
      * @var Rest
      */
     public $rest;
-    
+
     /**
      * Pitch
-     * 
+     *
      * @Element
      * @var Pitch
      */
@@ -243,14 +349,14 @@ class Note extends MusicXMLWriter
      * @var Beam
      */
     public $beam;
-    
+
     /**
      * Tie
      * @PropertyElement
      * @var Tie
      */
     public $tie;
-    
+
     /**
      * Lyric
      *
@@ -275,7 +381,7 @@ class Note extends MusicXMLWriter
      * @var TimeModification
      */
     public $timeModification;
-    
+
     /**
      * Instrument
      *
@@ -283,7 +389,7 @@ class Note extends MusicXMLWriter
      * @var Instrument
      */
     public $instrument;
-    
+
     /**
      * Type
      *
@@ -291,7 +397,7 @@ class Note extends MusicXMLWriter
      * @var Type
      */
     public $type;
-    
+
     /**
      * Dot
      *
@@ -299,7 +405,7 @@ class Note extends MusicXMLWriter
      * @var Dot
      */
     public $dot;
-    
+
     /**
      * Cue
      *
@@ -307,7 +413,7 @@ class Note extends MusicXMLWriter
      * @var Cue
      */
     public $cue;
-    
+
     /**
      * Stem
      *
@@ -315,7 +421,7 @@ class Note extends MusicXMLWriter
      * @var Stem
      */
     public $stem;
-    
+
     /**
      * Notehead text
      *
@@ -323,5 +429,5 @@ class Note extends MusicXMLWriter
      * @var NoteheadText
      */
     public $noteheadText;
-    
+
 }
