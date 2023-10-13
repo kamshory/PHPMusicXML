@@ -47,7 +47,7 @@ class MusicXMLUtil
      * @param integer $duration
      * @return AttackRelease
      */
-    public static function getAttackRelease($measureIndex, $message, $divisions, $timebase, $timeSignature, $duration)
+    public static function getAttackRelease($measureIndex, $message, $timebase, $timeSignature, $duration)
     {
         $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
         $attack = $timeRelative * $timeSignature->getBeats() / ($timebase);

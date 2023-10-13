@@ -1089,46 +1089,43 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             $note->voice = $channelId;
             $noteCode = $message['note'];
-            if($message['event'] == 'On' && $message['value'] > 0 && $noteCode > 13 && $duration > 0)
+            if($duration > 0)
             {
-                $note->dynamics = round($message['value'] / 0.9, 2);
-                $pitch = $this->getPitch($noteCode);
-                $note->pitch = $pitch;
-                if(isset($pitch->alter))
+                if($message['event'] == 'On' && $message['value'] > 0 && $noteCode > 13)
                 {
-                    if($pitch->alter->textContent > 0)
+                    $note->dynamics = round($message['value'] / 0.9, 2);
+                    $pitch = $this->getPitch($noteCode);
+                    $note->pitch = $pitch;
+                    if(isset($pitch->alter))
                     {
-                        $accidental = new Accidental();
-                        $accidental->textContent = 'sharp';
-                        $note->accidental = $accidental;
+                        if($pitch->alter->textContent > 0)
+                        {
+                            $accidental = new Accidental();
+                            $accidental->textContent = 'sharp';
+                            $note->accidental = $accidental;
+                        }
+                        else if($pitch->alter < 0)
+                        {
+                            $accidental = new Accidental();
+                            $accidental->textContent = 'flat';
+                            $note->accidental = $accidental;
+                        }
                     }
-                    else if($pitch->alter < 0)
-                    {
-                        $accidental = new Accidental();
-                        $accidental->textContent = 'flat';
-                        $note->accidental = $accidental;
-                    }
-                }
-                $note->stem = 'up';
-                $note->notations = array($this->getNotation());
-                $duration = $this->fixDuration($duration, $divisions, $timebase);
-                $note->duration = new Duration($duration);                    
-                
-                $note->type = new Type($this->getNoteType($duration, $divisions));                
-                
-                //$coords = MusicXMLUtil::getNoteCoordinate($measureIndex, $message, $divisions, $timebase, $this->timeSignature, $measureWidth);
-                //$note->defaultX = $coords->defaultX;
-                
-                $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $divisions, $timebase, $this->timeSignature, $duration);
-                $note->attack = $attackRelease->getAttack();
-                $note->release = $attackRelease->getRelease();
-                
-                $measure->note[] = $note;
+                    $note->stem = 'up';
+                    $note->notations = array($this->getNotation());
+                    $duration = $this->fixDuration($duration, $divisions, $timebase);
+                    $note->duration = new Duration($duration);                    
+                    
+                    $note->type = new Type($this->getNoteType($duration, $divisions));                
+                    
+                    $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
+                    $note->attack = $attackRelease->getAttack();
+                    $note->release = $attackRelease->getRelease();
+                    
+                    $measure->note[] = $note;
 
-            }
-            else if($message['event'] == 'Off')
-            {
-                if($duration > 0)
+                }
+                else if($message['event'] == 'Off')
                 {
                     $rest = new Rest();
                     $note->rest = $rest;
