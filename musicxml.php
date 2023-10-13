@@ -122,6 +122,7 @@ if (file_exists($path))
 }
 
 $attributes = array();
+$parents = array();
 if (url_check($url)) {
     $doc = new DomDocument;
     $doc->validateOnParse = true;
@@ -149,6 +150,18 @@ if (url_check($url)) {
                 $rowIndex++;
             }
         }
+        foreach ($container2->getElementsByTagName('p') as $par)
+        {
+            $ptext = trim($par->nodeValue);
+            if(stripos($ptext, 'Parent elements:') !== false || stripos($ptext, 'Parent element:') !== false)
+            {
+                foreach($par->getElementsByTagName('a') as $a)
+                {
+                    $text = $a->nodeValue;
+                    $parents[] = trim($text);
+                }
+            }
+        }
         $tableIndex++;
     }
 } else {
@@ -167,6 +180,30 @@ foreach ($attributes as $attribute) {
     
     $attrs[] = $attr;
 }
+if(count($parents) > 1)
+{
+    $parentElement = 'Parent elements: '.implode(', ', $parents);
+}
+else if(count($parents) == 1)
+{
+    $parentElement = 'Parent element: '.implode(', ', $parents);
+
+}
+else
+{
+    $parentElement = 'Parent element: none';
+}
+
+$pel = implode(',', $parents);
+
+if(strpos($pel, '<') !== false)
+{
+    $parentElementAnnotation = "\r\n".' * @ParentEelement="'.str_replace(array('<', '>'), '', $pel).'")';
+}
+else
+{
+    $parentElementAnnotation = "";
+}
 
 if(!file_exists($path))
 {
@@ -180,11 +217,12 @@ use MusicXML\MusicXMLWriter;
 /**
  * '.$className.'
  * -
- * '.$className.' is class of element &lt;'.$element.'&gt; Open link at &#64;Referece to read full documentation
+ * '.$className.' is class of element &lt;'.$element.'&gt; Open link at &#64;Referece to read full documentation.
+ * '.htmlspecialchars($parentElement).'
  * 
  * @Xml
  * @MusicXML
- * @Reference '.$url.'
+ * '.$parentElementAnnotation.'@Reference '.$url.'
  * @Data
  */
 class '.$className.' extends MusicXMLWriter
@@ -208,10 +246,11 @@ use MusicXML\MusicXMLWriter;
 /**
  * '.$className.'
  * -
- * '.$className.' is class of element &lt;'.$element.'&gt; Open link at &#64;Referece to read full documentation
+ * '.$className.' is class of element &lt;'.$element.'&gt; Open link at &#64;Referece to read full documentation.
+ * '.htmlspecialchars($parentElement).'
  * 
  * @Xml
- * @MusicXML
+ * @MusicXML'.$parentElementAnnotation.'
  * @Reference '.$url.'
  * @Data
  */
@@ -227,7 +266,6 @@ class '.$className.' extends MusicXMLWriter
 
     $content = $template.substr($fromFile, $offset)."";
 
-    $path2 = str_replace(".php", "2.php", $path);
 
     file_put_contents($path, $content);
 }
