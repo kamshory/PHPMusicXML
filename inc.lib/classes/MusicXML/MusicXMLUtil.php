@@ -48,10 +48,8 @@ class MusicXMLUtil
     {
         $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
         $attack = $timeRelative * $timeSignature->getBeats() / ($timebase);
-        echo "ATTACK = $attack\r\n";
         $release = $attack + $duration;
-        return new AttackRelease($attack, $release);
-        
+        return new AttackRelease($attack, $release);     
     }
     
     /**
