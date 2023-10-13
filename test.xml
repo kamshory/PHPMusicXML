@@ -53,7 +53,7 @@
         </direction-type>
         <sound tempo="120"/>
       </direction>
-      <note dynamics="141.11" attack="0" release="24">
+      <note attack="0" dynamics="141.11" release="24">
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -68,7 +68,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="4" release="400">
+      <note attack="4" dynamics="141.11" release="400">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -83,7 +83,7 @@
         </notations>
         <type>maxima</type>
       </note>
-      <note dynamics="141.11" attack="6" release="54">
+      <note attack="6" dynamics="141.11" release="54">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -96,7 +96,7 @@
         </notations>
         <type>breve</type>
       </note>
-      <note dynamics="141.11" attack="8" release="20">
+      <note attack="8" dynamics="141.11" release="20">
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -111,7 +111,7 @@
         </notations>
         <type>half</type>
       </note>
-      <note dynamics="141.11" attack="10" release="34">
+      <note attack="10" dynamics="141.11" release="34">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -124,7 +124,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="14" release="38">
+      <note attack="14" dynamics="141.11" release="38">
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -150,7 +150,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note dynamics="141.11" attack="12" release="12">
+      <note attack="12" dynamics="141.11" release="12">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -163,7 +163,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="16" release="232">
+      <note attack="16" dynamics="141.11" release="232">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -176,7 +176,7 @@
         </notations>
         <type>maxima</type>
       </note>
-      <note dynamics="141.11" attack="22" release="34">
+      <note attack="22" dynamics="141.11" release="34">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -189,7 +189,7 @@
         </notations>
         <type>half</type>
       </note>
-      <note dynamics="141.11" attack="24" release="24">
+      <note attack="24" dynamics="141.11" release="24">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -215,7 +215,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note dynamics="141.11" attack="24" release="48">
+      <note attack="24" dynamics="141.11" release="48">
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -228,7 +228,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="30" release="54">
+      <note attack="30" dynamics="141.11" release="54">
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -243,7 +243,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="36" release="36">
+      <note attack="36" dynamics="141.11" release="36">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -269,7 +269,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note dynamics="141.11" attack="38" release="38">
+      <note attack="38" dynamics="141.11" release="38">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -282,7 +282,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="38" release="62">
+      <note attack="38" dynamics="141.11" release="62">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -302,7 +302,7 @@
         <duration>480</duration>
         <type>maxima</type>
       </note>
-      <note dynamics="141.11" attack="48" release="48">
+      <note attack="48" dynamics="141.11" release="48">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -328,7 +328,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note dynamics="141.11" attack="50" release="146">
+      <note attack="50" dynamics="141.11" release="146">
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -343,7 +343,7 @@
         </notations>
         <type>long</type>
       </note>
-      <note dynamics="141.11" attack="56" release="56">
+      <note attack="56" dynamics="141.11" release="56">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -358,7 +358,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="62" release="86">
+      <note attack="62" dynamics="141.11" release="86">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -384,7 +384,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note dynamics="141.11" attack="66" release="90">
+      <note attack="66" dynamics="141.11" release="90">
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -399,7 +399,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note dynamics="141.11" attack="74" release="74">
+      <note attack="74" dynamics="141.11" release="74">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -425,7 +425,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note dynamics="141.11" attack="82" release="106">
+      <note attack="82" dynamics="141.11" release="106">
         <pitch>
           <step>A</step>
           <alter>1</alter>
