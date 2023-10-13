@@ -286,15 +286,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         else if($eventName == 'On' || $eventName == 'Off')
         {
-            //echo "EVENT NAME $eventName\r\n";
             if(!isset($this->lastNote[$ch]))
             {
-                //echo "CONSTRUCT 1\r\n";
                 $this->lastNote[$ch] = array();
             }
             if(!isset($this->lastNote[$ch][$n]))
             {
-                //echo "CONSTRUCT 2\r\n";
                 $this->lastNote[$ch][$n] = array();
             }
             $note = array(
@@ -312,8 +309,6 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             if(isset($this->lastNote[$ch][$n]) && isset($this->lastNote[$ch][$n]['index']))
             {
-                //echo "LAST TIME = ".$this->lastNote[$ch][$n]['time']."\r\n";
-                //echo "ABS TIME = ".$abstime."\r\n";
                 $duration = $abstime - $this->lastNote[$ch][$n]['time'];
                 $index = $this->lastNote[$ch][$n]['index'];
                 $ti = $this->lastNote[$ch][$n]['tminteger'];
@@ -670,7 +665,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         
         $scorePartwise->partList->scorePart = array();
         
-        $this->buildTimeDivisions($timebase, $this->timeSignature);
+        $this->buildTimeDivisions($timebase);
         
         foreach ($this->partList as $part) {
             // start add score part
@@ -857,7 +852,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param [type] $timebase
      * @return void
      */
-    private function buildTimeDivisions($timebase, $timeSignature)
+    private function buildTimeDivisions($timebase)
     {
         foreach($this->measures as $measure)
         {
@@ -871,9 +866,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $minDuration = $event['duration'];
                     }
                 }
-                //echo "MIN DURATION = $minDuration\r\n";
                 $divisions = ceil($timebase * 24 / $minDuration);
-                //echo "MIN DURATION = $minDuration; DIVISIONS = $divisions\r\n";
                 if($divisions > self::DEFAULT_DIVISONS)
                 {
                     $divisions = self::DEFAULT_DIVISONS;
@@ -969,7 +962,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
-            //print_r($this->measures[$channelId][$measureIndex]);
             $controlEvents = MusicXMLUtil::getControlEvent($midiEventMessages);
             
             if (!empty($controlEvents)) 
@@ -983,16 +975,17 @@ class MusicXMLFromMidi extends MusicXMLBase
             // begin add attribute
             
             $divisions = $this->getDivisions($measureIndex);
-            $measureWidth = $this->getWidth($measureIndex);
-            $attributes->divisions = new Divisions($divisions);                   
-            $attributes->time = $this->getTime($this->timeSignature);           
-            $attributes->clef = $this->clefs[$channelId];
-            
-            if(count($attributes->clef) > 1)
-            {
-                $attributes->staves = new Staves(count($attributes->clef));
-            }     
-            
+            $attributes->divisions = new Divisions($divisions);
+            if($measureIndex == 0)
+            {                   
+                // only add clef on first
+                $attributes->time = $this->getTime($this->timeSignature);           
+                $attributes->clef = $this->clefs[$channelId];                
+                if(count($attributes->clef) > 1)
+                {
+                    $attributes->staves = new Staves(count($attributes->clef));
+                }     
+            }
             
             // end add attribute
 
@@ -1002,25 +995,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             if(!empty($noteMessages))
             {
                 $measure->note = $this->initializeArray($measure->note);
-                // get first note
-                
-                /*
-                
-                $message0x = array_values($noteMessages);
-                $message0 = $message0x[0];
-                $note0 = new Note();
-                $note0->rest = new Rest();
-                $duration0 = $message0['time'] - ($measureIndex * 4 * $timebase);
-                $duration0 = $this->calculateDuration($duration0, $divisions, $timebase);
-                $duration0 = $this->fixDuration($duration0);
-                $note0->duration = new Duration($duration0);
-                $note0->voice = $channelId;
-                $note0->staff = $channelId;
-                $note0->type = $this->getNoteType($duration0, $divisions);
-                $measure->note[] = $note0;
-                */
-                //echo "INDEX = $measureIndex\r\n";
-                $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase);
+                $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
             }
             // end add note
             
@@ -1058,8 +1033,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         }
                     }
                 }
-            }
-            
+            }           
         } 
         else 
         {
@@ -1081,7 +1055,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $timebase
      * @return MeasurePartwise
      */
-    private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $measureWidth, $timebase)
+    private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase)
     {
         foreach ($noteMessages as $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
@@ -1135,7 +1109,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
             }
         }
-        $measure->width = $measureWidth;
         return $measure;
     }
     
