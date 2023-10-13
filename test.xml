@@ -53,7 +53,7 @@
         </direction-type>
         <sound tempo="120"/>
       </direction>
-      <note default-x="0" dynamics="141.11">
+      <note dynamics="141.11" attack="0" release="24">
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -68,22 +68,22 @@
         </notations>
         <type>whole</type>
       </note>
-      <note default-x="24" dynamics="141.11">
+      <note dynamics="141.11" attack="4" release="400">
         <pitch>
           <step>G</step>
           <alter>1</alter>
           <octave>4</octave>
         </pitch>
-        <duration>12</duration>
+        <duration>396</duration>
         <accidental>sharp</accidental>
         <notations>
           <articulations>
             <staccato/>
           </articulations>
         </notations>
-        <type>half</type>
+        <type>maxima</type>
       </note>
-      <note default-x="36" dynamics="141.11">
+      <note dynamics="141.11" attack="6" release="54">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -96,7 +96,7 @@
         </notations>
         <type>breve</type>
       </note>
-      <note default-x="48" dynamics="141.11">
+      <note dynamics="141.11" attack="8" release="20">
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -111,7 +111,7 @@
         </notations>
         <type>half</type>
       </note>
-      <note default-x="60" dynamics="141.11">
+      <note dynamics="141.11" attack="10" release="34">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -124,7 +124,7 @@
         </notations>
         <type>whole</type>
       </note>
-      <note default-x="84" dynamics="141.11">
+      <note dynamics="141.11" attack="14" release="38">
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -150,7 +150,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <note default-x="72" dynamics="141.11">
+      <note dynamics="141.11" attack="12" release="12">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -163,12 +163,276 @@
         </notations>
         <type>whole</type>
       </note>
-      <note default-x="96" dynamics="141.11">
+      <note dynamics="141.11" attack="16" release="232">
         <pitch>
           <step>G</step>
           <octave>4</octave>
         </pitch>
+        <duration>216</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>maxima</type>
+      </note>
+      <note dynamics="141.11" attack="22" release="34">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>half</type>
+      </note>
+      <note dynamics="141.11" attack="24" release="24">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+    <measure number="3" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <note dynamics="141.11" attack="24" release="48">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
         <duration>24</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note dynamics="141.11" attack="30" release="54">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note dynamics="141.11" attack="36" release="36">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+    <measure number="4" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <note dynamics="141.11" attack="38" release="38">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note dynamics="141.11" attack="38" release="62">
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note>
+        <rest/>
+        <duration>480</duration>
+        <type>maxima</type>
+      </note>
+      <note dynamics="141.11" attack="48" release="48">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+    <measure number="5" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <note dynamics="141.11" attack="50" release="146">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>96</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>long</type>
+      </note>
+      <note dynamics="141.11" attack="56" release="56">
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note dynamics="141.11" attack="62" release="86">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+    <measure number="6" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <note dynamics="141.11" attack="66" release="90">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note dynamics="141.11" attack="74" release="74">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+    <measure number="7" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <note dynamics="141.11" attack="82" release="106">
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <accidental>sharp</accidental>
         <notations>
           <articulations>
             <staccato/>

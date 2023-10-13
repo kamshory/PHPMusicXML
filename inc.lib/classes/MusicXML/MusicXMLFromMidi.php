@@ -1110,8 +1110,14 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note->duration = new Duration($duration);                    
                 
                 $note->type = new Type($this->getNoteType($duration, $divisions));                
-                $coords = MusicXMLUtil::getNoteCoordinate($measureIndex, $message, $divisions, $timebase, $this->timeSignature, $measureWidth);
-                $note->defaultX = $coords->defaultX;
+                
+                //$coords = MusicXMLUtil::getNoteCoordinate($measureIndex, $message, $divisions, $timebase, $this->timeSignature, $measureWidth);
+                //$note->defaultX = $coords->defaultX;
+                
+                $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $divisions, $timebase, $this->timeSignature, $duration);
+                $note->attack = $attackRelease->getAttack();
+                $note->release = $attackRelease->getRelease();
+                
                 $measure->note[] = $note;
 
             }

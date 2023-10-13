@@ -180,4 +180,22 @@ class Note extends MusicXMLWriter
      * @var NoteheadText
      */
     public $noteheadText;
+    
+    /**
+     * Attack
+     *
+     * @Attribute
+     * @var integer
+     */
+    public $attack;
+
+    /**
+     * Release
+     *
+     * @Attribute
+     * @var integer
+     */
+    public $release;
+    
+    
 }

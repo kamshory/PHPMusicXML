@@ -10,6 +10,7 @@ use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
 use MusicXML\Model\WorkTitle;
+use MusicXML\Properties\AttackRelease;
 use MusicXML\Properties\Coordinate;
 
 class MusicXMLUtil
@@ -31,6 +32,26 @@ class MusicXMLUtil
         $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
         $coordinate->defaultX = $timeRelative * $width * $timeSignature->getBeats() / ($divisions*$timebase);
         return $coordinate;
+    }
+    
+    /**
+     * Get note coordinate
+     *
+     * @param integer $measureIndex
+     * @param array $message
+     * @param integer $divisions
+     * @param integer $timebase
+     * @param integer $duration
+     * @return AttackRelease
+     */
+    public static function getAttackRelease($measureIndex, $message, $divisions, $timebase, $timeSignature, $duration)
+    {
+        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
+        $attack = $timeRelative * $timeSignature->getBeats() / ($timebase);
+        echo "ATTACK = $attack\r\n";
+        $release = $attack + $duration;
+        return new AttackRelease($attack, $release);
+        
     }
     
     /**
