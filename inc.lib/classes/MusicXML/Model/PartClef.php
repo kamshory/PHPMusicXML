@@ -6,13 +6,19 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * PartClef
+ * -
+ * PartClef is class of element &lt;part-clef&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;for-part&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @ParentEelement="for-part")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-clef/
  * @Data
  */
 class PartClef extends MusicXMLWriter
 {
+
     /**
      * Sign
      *
@@ -20,7 +26,7 @@ class PartClef extends MusicXMLWriter
      * @var Sign(name="sign")
      */
     public $sign;
-    
+
     /**
      * Line
      *
@@ -28,7 +34,7 @@ class PartClef extends MusicXMLWriter
      * @var Line
      */
     public $line;
-    
+
     /**
      * Clef octave change
      *

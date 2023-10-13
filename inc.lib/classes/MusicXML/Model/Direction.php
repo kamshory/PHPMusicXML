@@ -6,22 +6,62 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Direction
+ * -
+ * Direction is class of element &lt;direction&gt; Open link at &#64;Referece to read full documentation.
+ * Parent elements: &lt;measure&gt; (partwise), &lt;part&gt; (timewise)
+ * 
  * @Xml
  * @MusicXML
- * @Path /path/measure/direction
+ * @ParentEelement="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/direction/
  * @Data
  */
 class Direction extends MusicXMLWriter
 {
-    /**
-     * Placement
-     *
-     * @Attribute
-     * @var string
-     */
-    public $placement;
-    
+	/**
+	 * Directive
+	 * -
+	 * Changes the default-x position of a direction. It indicates that the left-hand side of the direction is aligned with the left-hand side of the time signature. If no time signature is present, the direction is aligned with the left-hand side of the first music notational element in the measure. If a default-x, justify, or halign attribute is present, it overrides this attribute.
+	 *
+	 * @Attribute(name="directive")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $directive;
+
+	/**
+	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
+
+	/**
+	 * Placement
+	 * -
+	 * Indicates whether something is above or below another element, such as a note or a notation.
+	 *
+	 * @Attribute(name="placement")
+	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $placement;
+
+	/**
+	 * System
+	 * -
+	 * Distinguishes elements that are associated with a system rather than the particular part where the element appears.
+	 *
+	 * @Attribute(name="system")
+	 * @Value(type="system-relation" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $system;
+
     /**
      * Direction type
      *
@@ -29,7 +69,7 @@ class Direction extends MusicXMLWriter
      * @var DirectionType
      */
     public $directionType;
-    
+
     /**
      * Staff
      *
@@ -37,7 +77,7 @@ class Direction extends MusicXMLWriter
      * @var integer
      */
     public $staff;
-    
+
     /**
      * Sound
      *

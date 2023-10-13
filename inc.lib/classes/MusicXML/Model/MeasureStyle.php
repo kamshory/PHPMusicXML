@@ -6,85 +6,111 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * MeasureStyle
+ * -
+ * MeasureStyle is class of element &lt;measure-style&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;attributes&gt;
+ * 
  * @Xml
  * @MusicXML
- * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-style/
+ * @ParentEelement="attributes")
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-style/
  * @Data
  */
 class MeasureStyle extends MusicXMLWriter
 {
-    /**
-     * Color
-     * 
-     * @Attribute 
-     * @var string
-     */
-    public $color;
-    
+	/**
+	 * Color
+	 * -
+	 * Indicates the color of an element.
+	 *
+	 * @Attribute(name="color")
+	 * @Value(type="color" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $color;
+
+	/**
+	 * Font family
+	 * -
+	 * A comma-separated list of font names.
+	 *
+	 * @Attribute(name="font-family")
+	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $fontFamily;
+
+	/**
+	 * Font size
+	 * -
+	 * One of the CSS sizes or a numeric point size.
+	 *
+	 * @Attribute(name="font-size")
+	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $fontSize;
+
+	/**
+	 * Font style
+	 * -
+	 * Normal or italic style.
+	 *
+	 * @Attribute(name="font-style")
+	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $fontStyle;
+
+	/**
+	 * Font weight
+	 * -
+	 * Normal or bold weight.
+	 *
+	 * @Attribute(name="font-weight")
+	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $fontWeight;
+
+	/**
+	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
+
+	/**
+	 * Number
+	 * -
+	 * Allows a measure style to apply to only the specified staff in the part. If absent, the measure style applies to all staves in the part.
+	 *
+	 * @Attribute(name="number")
+	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @var integer
+	 */
+	public $number;
+
     /**
      * Default X
-     * 
-     * @Attribute(name="default-x") 
+     *
+     * @Attribute(name="default-x")
      * @var float
      */
     public $defaultX;
-    
+
     /**
      * Default Y
-     * 
-     * @Attribute(name="default-y") 
+     *
+     * @Attribute(name="default-y")
      * @var float
      */
     public $defaultY;
-    
-    /**
-     * Font family
-     * 
-     * @Attribute(name="font-family")
-     * @var string
-     */
-    public $fontFamily;
-    
-    /**
-     * Font size
-     * 
-     * @Attribute(name="font-size")
-     * @var string
-     */
-    public $fontSize;
-    
-    /**
-     * Font style
-     * 
-     * @Attribute(name="font-style")
-     * @var string
-     */
-    public $fontStyle;
-    
-    /**
-     * Font weight
-     * 
-     * @Attribute(name="font-weight")
-     * @var string
-     */
-    public $fontWeight;
-    
-    /**
-     * ID
-     * 
-     * @Attribute
-     * @var string
-     */
-    public $id;
-    
-    /**
-     * Number
-     * 
-     * @Attribute
-     * @var string
-     */
-    public $number;
-    
+
     /**
      * Multiple rest
      *
@@ -92,7 +118,7 @@ class MeasureStyle extends MusicXMLWriter
      * @var MultipleRest
      */
     public $multipleRest;
-    
+
     /**
      * Multiple repeat
      *
@@ -100,8 +126,7 @@ class MeasureStyle extends MusicXMLWriter
      * @var string
      */
     public $multipleRepeat;
-    
-    
+
     /**
      * Beat repeat
      *
@@ -126,4 +151,3 @@ class MeasureStyle extends MusicXMLWriter
      */
     public $measureRepeat;
 }
-

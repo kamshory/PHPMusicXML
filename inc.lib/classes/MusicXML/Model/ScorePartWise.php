@@ -5,22 +5,29 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * ScorePartWise
+ * ScorePartwise
+ * -
+ * ScorePartwise is class of element &lt;score-partwise&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: none
+ * 
  * @Xml
  * @MusicXML
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/score-partwise/
  * @Data
  */
-class ScorePartWise extends MusicXMLWriter
+class ScorePartwise extends MusicXMLWriter
 {
-    /**
-     * MusicXML version. Current version is 4.0
-     *
-     * @Attribute
-     * @var string
-     */
-    public $version;
-    
+	/**
+	 * Version
+	 * -
+	 * The version attribute was added in Version 1.1 for the score-partwise and score-timewise documents. It provides an easier way to get version information than through the MusicXML public ID. The default value is 1.0 to make it possible for programs that handle later versions to distinguish earlier version files reliably. Programs that write MusicXML 1.1 or later files should set this attribute.
+	 *
+	 * @Attribute(name="version")
+	 * @Value(type="token" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $version;
+
     /**
      * Work
      *
@@ -28,7 +35,7 @@ class ScorePartWise extends MusicXMLWriter
      * @var Work
      */
     public $work;
-    
+
     /**
      * Identification. Contains music identification
      *
@@ -36,7 +43,7 @@ class ScorePartWise extends MusicXMLWriter
      * @var Identification
      */
     public $identification;
-    
+
     /**
      * Movement number
      *
@@ -44,7 +51,7 @@ class ScorePartWise extends MusicXMLWriter
      * @var MovementNumber
      */
     public $movementNumber;
-    
+
     /**
      * Movement title
      *
@@ -52,7 +59,7 @@ class ScorePartWise extends MusicXMLWriter
      * @var MovementTitle
      */
     public $movementTitle;
-    
+
     /**
      * Defaults
      *
@@ -60,7 +67,7 @@ class ScorePartWise extends MusicXMLWriter
      * @var Defaults
      */
     public $defaults;
-    
+
     /**
      * Part list. Contains all instrument used on the music
      *
@@ -68,7 +75,7 @@ class ScorePartWise extends MusicXMLWriter
      * @var PartList
      */
     public $partList;
-    
+
     /**
      * Part. Part of the music. One part represent one instrument or group instrument
      *

@@ -6,8 +6,13 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Accord
+ * -
+ * Accord is class of element &lt;accord&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;scordatura&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @ParentEelement="scordatura")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/accord/
  * @Data
  */
@@ -15,9 +20,12 @@ class Accord extends MusicXMLWriter
 {
 	/**
 	 * String
+	 * -
+	 * Strings are numbered from high to low.
 	 *
 	 * @Attribute(name="string")
-	 * @var string
+	 * @Value(type="string-number" required="false", min="-infinite", max="infinite")
+	 * @var integer
 	 */
 	public $string;
 
@@ -45,5 +53,4 @@ class Accord extends MusicXMLWriter
      */
     public $tuningOctave;
 
-	
 }

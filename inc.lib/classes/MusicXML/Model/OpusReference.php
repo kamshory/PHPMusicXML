@@ -5,18 +5,18 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * PartLink
+ * OpusReference
  * -
- * PartLink is class of element &lt;part-link&gt; Open link at &#64;Referece to read full documentation.
- * Parent element: &lt;score-part&gt;
+ * OpusReference is class of element &lt;opus-reference&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;work&gt;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="score-part")
- * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-link/
+ * @ParentEelement="work")
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/opus-reference/
  * @Data
  */
-class PartLink extends MusicXMLWriter
+class OpusReference extends MusicXMLWriter
 {
 	/**
 	 * Xlink:href
@@ -83,21 +83,5 @@ class PartLink extends MusicXMLWriter
 	 * @var string
 	 */
 	public $xlinkType;
-
-	/**
-     * Instrument link
-     *
-     * @Element(name="instrument-link")
-     * @var InstrumentLink[]
-     */
-    public $instrumentLink;
-
-    /**
-     * Group link
-     *
-     * @Element(name="group-link")
-     * @var GroupLink[]
-     */
-    public $groupLink;
 
 }

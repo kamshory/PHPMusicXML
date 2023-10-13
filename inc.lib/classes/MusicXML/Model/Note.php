@@ -7,17 +7,19 @@ use MusicXML\MusicXMLWriter;
 /**
  * Note
  * -
- * Note is class of element &lt;note&gt; Open link at &#64;Referece to read full documentation
+ * Note is class of element &lt;note&gt; Open link at &#64;Referece to read full documentation.
+ * Parent elements: &lt;measure&gt; (partwise), &lt;part&gt; (timewise)
  * 
  * @Xml
  * @MusicXML
+ * @ParentEelement="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
  * @Data
  */
 class Note extends MusicXMLWriter
 {
 	/**
-	 * Attack 
+	 * Attack
 	 * -
 	 * Alters the starting time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A &lt;note&gt; that stops a tie should not have an attack attribute. The attack and release attributes are independent of each other. The attack attribute only changes the starting time of a note.
 	 *
@@ -28,7 +30,7 @@ class Note extends MusicXMLWriter
 	public $attack;
 
 	/**
-	 * Color 
+	 * Color
 	 * -
 	 * Indicates the color of an element.
 	 *
@@ -39,7 +41,7 @@ class Note extends MusicXMLWriter
 	public $color;
 
 	/**
-	 * Default x 
+	 * Default x
 	 * -
 	 * Changes the computation of the default horizontal position. The origin is changed relative to the start of the entire current measure, at either the left barline or the start of the system. Positive x is right and negative x is left.
 	 *
@@ -50,7 +52,7 @@ class Note extends MusicXMLWriter
 	public $defaultX;
 
 	/**
-	 * Default y 
+	 * Default y
 	 * -
 	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
@@ -61,7 +63,7 @@ class Note extends MusicXMLWriter
 	public $defaultY;
 
 	/**
-	 * Dynamics 
+	 * Dynamics
 	 * -
 	 * Corresponds to MIDI 1.0's Note On velocity, expressed in terms of percentage of the default forte value (90 for MIDI 1.0).
 	 *
@@ -72,7 +74,7 @@ class Note extends MusicXMLWriter
 	public $dynamics;
 
 	/**
-	 * End dynamics 
+	 * End dynamics
 	 * -
 	 * Corresponds to MIDI 1.0's Note Off velocity, expressed in terms of percentage of the default forte value (90 for MIDI 1.0).
 	 *
@@ -83,7 +85,7 @@ class Note extends MusicXMLWriter
 	public $endDynamics;
 
 	/**
-	 * Font family 
+	 * Font family
 	 * -
 	 * A comma-separated list of font names.
 	 *
@@ -94,7 +96,7 @@ class Note extends MusicXMLWriter
 	public $fontFamily;
 
 	/**
-	 * Font size 
+	 * Font size
 	 * -
 	 * One of the CSS sizes or a numeric point size.
 	 *
@@ -105,7 +107,7 @@ class Note extends MusicXMLWriter
 	public $fontSize;
 
 	/**
-	 * Font style 
+	 * Font style
 	 * -
 	 * Normal or italic style.
 	 *
@@ -116,7 +118,7 @@ class Note extends MusicXMLWriter
 	public $fontStyle;
 
 	/**
-	 * Font weight 
+	 * Font weight
 	 * -
 	 * Normal or bold weight.
 	 *
@@ -127,7 +129,7 @@ class Note extends MusicXMLWriter
 	public $fontWeight;
 
 	/**
-	 * Id 
+	 * Id
 	 * -
 	 * Specifies an ID that is unique to the entire document.
 	 *
@@ -138,7 +140,7 @@ class Note extends MusicXMLWriter
 	public $id;
 
 	/**
-	 * Pizzicato 
+	 * Pizzicato
 	 * -
 	 * Used when just this note is sounded pizzicato, vs. the &lt;pizzicato&gt; element which changes overall playback between pizzicato and arco.
 	 *
@@ -149,7 +151,7 @@ class Note extends MusicXMLWriter
 	public $pizzicato;
 
 	/**
-	 * Print dot 
+	 * Print dot
 	 * -
 	 * Controls the printing of an augmentation dot separately from the rest of the note or rest. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody. If print-object is set to no, this attribute is also interpreted as being set to no if not present.
 	 *
@@ -160,7 +162,7 @@ class Note extends MusicXMLWriter
 	public $printDot;
 
 	/**
-	 * Print leger 
+	 * Print leger
 	 * -
 	 * Indicates whether leger lines are printed. Notes without leger lines are used to indicate indeterminate high and low notes. It is yes if not present unless print-object is set to no. This attribute is ignored for rests.
 	 *
@@ -171,7 +173,7 @@ class Note extends MusicXMLWriter
 	public $printLeger;
 
 	/**
-	 * Print lyric 
+	 * Print lyric
 	 * -
 	 * Controls the printing of a lyric separately from the rest of the note or rest. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody. If print-object is set to no, this attribute is also interpreted as being set to no if not present.
 	 *
@@ -182,7 +184,7 @@ class Note extends MusicXMLWriter
 	public $printLyric;
 
 	/**
-	 * Print object 
+	 * Print object
 	 * -
 	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
@@ -193,7 +195,7 @@ class Note extends MusicXMLWriter
 	public $printObject;
 
 	/**
-	 * Print spacing 
+	 * Print spacing
 	 * -
 	 * Controls whether or not spacing is left for an invisible note or object. It is used only if no note, dot, or lyric is being printed. The value is yes (leave spacing) if not specified.
 	 *
@@ -204,7 +206,7 @@ class Note extends MusicXMLWriter
 	public $printSpacing;
 
 	/**
-	 * Relative x 
+	 * Relative x
 	 * -
 	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the &lt;offset&gt; element or directive attribute if those are present.
 	 *
@@ -215,7 +217,7 @@ class Note extends MusicXMLWriter
 	public $relativeX;
 
 	/**
-	 * Relative y 
+	 * Relative y
 	 * -
 	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down. It should be interpreted in the context of the placement attribute if that is present.
 	 *
@@ -226,7 +228,7 @@ class Note extends MusicXMLWriter
 	public $relativeY;
 
 	/**
-	 * Release 
+	 * Release
 	 * -
 	 * Alters the stopping time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A &lt;note&gt; that starts a tie should not have a release attribute. The attack and release attributes are independent of each other. The release attribute only changes the stopping time of a note.
 	 *
@@ -237,7 +239,7 @@ class Note extends MusicXMLWriter
 	public $release;
 
 	/**
-	 * Time only 
+	 * Time only
 	 * -
 	 * Shows which times to play the note during a repeated section.
 	 *

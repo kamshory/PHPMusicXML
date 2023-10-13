@@ -6,8 +6,13 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * StaffTuning
+ * -
+ * StaffTuning is class of element &lt;staff-tuning&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;staff-details&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @ParentEelement="staff-details")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staff-tuning/
  * @Data
  */
@@ -15,12 +20,15 @@ class StaffTuning extends MusicXMLWriter
 {
 	/**
 	 * Line
+	 * -
+	 * Indicates the staff line for this tuning, numbered from bottom to top.
 	 *
 	 * @Attribute(name="line")
-	 * @var string
+	 * @Value(type="staff-line" required="true", min="-infinite", max="infinite")
+	 * @var integer
 	 */
 	public $line;
-    
+
     /**
      * Tuning step
      *

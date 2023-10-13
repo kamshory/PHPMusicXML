@@ -229,8 +229,13 @@ class '.$className.' extends MusicXMLWriter
 {
 '.implode("\r\n", $attrs).'    
 }';
-//echo $template;
-//file_put_contents($path, $template);
+$content = $template;
+$content = trim($content, " \t\r\n ");
+if(substr($content, strlen($content) - 1) != '}')
+{
+    $content .= "\r\n}";
+}
+file_put_contents($path, $content);
 
 }
 else
@@ -265,6 +270,11 @@ class '.$className.' extends MusicXMLWriter
 
 
     $content = $template.substr($fromFile, $offset)."";
+    $content = trim($content, " \t\r\n ");
+    if(substr($content, strlen($content) - 1) != '}')
+    {
+        $content .= "\r\n}";
+    }
 
 
     file_put_contents($path, $content);

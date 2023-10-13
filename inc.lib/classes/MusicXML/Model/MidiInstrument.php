@@ -6,8 +6,13 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * MidiInstrument
+ * -
+ * MidiInstrument is class of element &lt;midi-instrument&gt; Open link at &#64;Referece to read full documentation.
+ * Parent elements: &lt;score-part&gt;, &lt;sound&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @ParentEelement="score-part,sound")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-instrument/
  * @Data
  */
@@ -15,12 +20,15 @@ class MidiInstrument extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Refers to the &lt;score-instrument&gt; element affected by the change.
 	 *
 	 * @Attribute(name="id")
+	 * @Value(type="IDREF" required="true", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $id;
-    
+
 	/**
 	 * Midi channel
 	 *
@@ -84,7 +92,5 @@ class MidiInstrument extends MusicXMLWriter
 	 * @var Elevation
 	 */
 	public $elevation;
-
-	
 
 }

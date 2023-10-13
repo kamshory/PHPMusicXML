@@ -6,22 +6,29 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * DirectionType
+ * -
+ * DirectionType is class of element &lt;direction-type&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;direction&gt;
+ * 
  * @Xml
  * @MusicXML
- * @Path /path/measure/direction/direction-type
+ * @ParentEelement="direction")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/direction-type/
  * @Data
  */
 class DirectionType extends MusicXMLWriter
 {
-    /**
-     * ID
-     *
-     * @Attribute(name="id")
-     * @var string
-     */
-    public $id;
-    
+	/**
+	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
+
     /**
      * Metronome
      *
@@ -29,7 +36,7 @@ class DirectionType extends MusicXMLWriter
      * @var Metronome
      */
     public $metronome;
-    
+
     /**
      * Rehearsal
      *
@@ -41,7 +48,7 @@ class DirectionType extends MusicXMLWriter
     /**
      * Segno
      *
-     * @Element(name="segno")    
+     * @Element(name="segno")
      * @var Segno[]
      */
     public $segno;

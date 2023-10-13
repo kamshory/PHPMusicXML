@@ -6,13 +6,19 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * SystemDividers
+ * -
+ * SystemDividers is class of element &lt;system-dividers&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;system-layout&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @ParentEelement="system-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/system-dividers/
  * @Data
  */
 class SystemDividers extends MusicXMLWriter
 {
+
     /**
      * Left divider
      *

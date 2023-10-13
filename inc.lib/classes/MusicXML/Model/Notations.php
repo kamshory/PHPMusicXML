@@ -5,31 +5,41 @@ namespace MusicXML\Model;
 use MusicXML\MusicXMLWriter;
 
 /**
- * Notation
+ * Notations
+ * -
+ * Notations is class of element &lt;notations&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;note&gt;
+ * 
  * @Xml
  * @MusicXML
- * @Path /path/measure/note/notations
+ * @ParentEelement="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/notations/
  * @Data
  */
 class Notations extends MusicXMLWriter
 {
-    /**
-     * ID
-     *
-     * @Attribute
-     * @var string
-     */
-    public $id;
+	/**
+	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
 
-    /**
-     * Print object
-     *
-     * @Attribute(name="print-object")
-     * @var string
-     */
-    public $printObject;
-    
+	/**
+	 * Print object
+	 * -
+	 * Specifies whether or not to print an object. It is yes if not specified.
+	 *
+	 * @Attribute(name="print-object")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $printObject;
+
     /**
      * Tied list
      *
@@ -37,7 +47,7 @@ class Notations extends MusicXMLWriter
      * @var Tied[]
      */
     public $tied;
-    
+
     /**
      * Slur list
      *
@@ -45,7 +55,7 @@ class Notations extends MusicXMLWriter
      * @var Slur[]
      */
     public $slur;
-    
+
     /**
      * Articulations
      *
@@ -53,7 +63,7 @@ class Notations extends MusicXMLWriter
      * @var Articulations
      */
     public $articulations;
-    
+
     /**
      * Footnote
      *
@@ -61,7 +71,7 @@ class Notations extends MusicXMLWriter
      * @var Footnote
      */
     public $footnote;
-    
+
     /**
      * Level
      *
@@ -69,7 +79,7 @@ class Notations extends MusicXMLWriter
      * @var Level
      */
     public $level;
-    
+
     /**
      * Tuplet list
      *
@@ -77,7 +87,7 @@ class Notations extends MusicXMLWriter
      * @var Tuplet[]
      */
     public $tuplet;
-    
+
     /**
      * Glissando
      *
@@ -85,7 +95,7 @@ class Notations extends MusicXMLWriter
      * @var Glissando
      */
     public $glissando;
-    
+
     /**
      * Slide
      *
@@ -93,7 +103,7 @@ class Notations extends MusicXMLWriter
      * @var Slide
      */
     public $slide;
-    
+
     /**
      * Ornament
      *
@@ -101,7 +111,7 @@ class Notations extends MusicXMLWriter
      * @var Ornaments[]
      */
     public $ornaments;
-    
+
     /**
      * Technical
      *
