@@ -86,10 +86,10 @@ class MeasureTimewise extends MusicXMLWriter
 	public $width;
 
 	/**
-	 * Part
+	 * Part timewise
 	 *
 	 * @Element(name="part")
-	 * @var Part[]
+	 * @var PartTimewise[]
 	 */
 	public $part;
 
