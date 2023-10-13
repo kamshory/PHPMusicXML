@@ -25,7 +25,7 @@ class Slash extends MusicXMLWriter
 	 * Indicates the starting or stopping point of the section displaying slash notation.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;

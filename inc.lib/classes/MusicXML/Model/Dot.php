@@ -102,7 +102,7 @@ class Dot extends MusicXMLWriter
 	 * Specifies whether the dot should appear above or below the staff line. It is ignored for notes that appear on a staff space.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;

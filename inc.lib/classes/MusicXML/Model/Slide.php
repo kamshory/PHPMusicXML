@@ -25,7 +25,7 @@ class Slide extends MusicXMLWriter
 	 * Indicates if this is the start or stop of the slide.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
@@ -102,7 +102,7 @@ class Slide extends MusicXMLWriter
 	 * The percentage of the duration for starting a bend. Default is 25.
 	 *
 	 * @Attribute(name="first-beat")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $firstBeat;
@@ -168,7 +168,7 @@ class Slide extends MusicXMLWriter
 	 * The percentage of the duration for ending a bend. Default is 75.
 	 *
 	 * @Attribute(name="last-beat")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $lastBeat;
@@ -179,7 +179,7 @@ class Slide extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;

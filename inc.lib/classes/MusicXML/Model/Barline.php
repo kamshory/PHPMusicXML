@@ -58,7 +58,7 @@ class Barline extends MusicXMLWriter
 	 * Barlines have a location attribute to make it easier to process barlines independently of the other musical data in a score. It is often easier to set up measures separately from entering notes. The location attribute must match where the &lt;barline&gt; element occurs within the rest of the musical data in the score. If location is left, it should be the first element in the measure, aside from the &lt;print&gt;, &lt;bookmark&gt;, and &lt;link&gt; elements. If location is right, it should be the last element, again with the possible exception of the &lt;print&gt;, &lt;bookmark&gt;, and &lt;link&gt; elements. The default value is right.
 	 *
 	 * @Attribute(name="location")
-	 * @Value(type="right-left-middle" required="false", allowed="ANY_VALUE")
+	 * @Value(type="right-left-middle" required="false", allowed="right,left,middle")
 	 * @var string
 	 */
 	public $location;

@@ -25,7 +25,7 @@ class NoteSize extends MusicXMLWriter
 	 * The type of note size being defined.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="note-size-type" required="true", allowed="ANY_VALUE")
+	 * @Value(type="note-size-type" required="true", allowed="cue,grace,grace-cue,large")
 	 * @var string
 	 */
 	public $type;

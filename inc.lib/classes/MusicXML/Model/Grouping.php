@@ -25,7 +25,7 @@ class Grouping extends MusicXMLWriter
 	 * Indicates if this is a single-note grouping, or the start or stop of a multi-note grouping.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-single" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-single" required="true", allowed="start,stop,single")
 	 * @var string
 	 */
 	public $type;

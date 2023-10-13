@@ -168,7 +168,7 @@ class Accidental extends MusicXMLWriter
 	 * Specifies the symbol size to use for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="size")
-	 * @Value(type="symbol-size" required="false", allowed="ANY_VALUE")
+	 * @Value(type="symbol-size" required="false", allowed="cue,full,grace-cue,large")
 	 * @var string
 	 */
 	public $size;

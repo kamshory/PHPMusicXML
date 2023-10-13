@@ -47,7 +47,7 @@ class Grace extends MusicXMLWriter
 	 * Indicates the percentage of time to steal from the following note for the grace note playback, as for appoggiaturas.
 	 *
 	 * @Attribute(name="steal-time-following")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $stealTimeFollowing;
@@ -58,7 +58,7 @@ class Grace extends MusicXMLWriter
 	 * The steal-time-previous attribute indicates the percentage of time to steal from the previous note for the grace note playback.
 	 *
 	 * @Attribute(name="steal-time-previous")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $stealTimePrevious;

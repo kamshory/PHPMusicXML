@@ -25,7 +25,7 @@ class LineDetail extends MusicXMLWriter
 	 * Indicates the staff line affected, numbered from bottom to top.
 	 *
 	 * @Attribute(name="line")
-	 * @Value(type="staff-line" required="true", min="-infinite", max="infinite")
+	 * @Value(type="staff-line" required="true", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $line;
@@ -47,7 +47,7 @@ class LineDetail extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;

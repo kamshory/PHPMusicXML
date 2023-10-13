@@ -25,7 +25,7 @@ class StaffDetails extends MusicXMLWriter
 	 * Specifies the staff number from top to bottom within the part. The value is 1 if not present.
 	 *
 	 * @Attribute(name="number")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $number;
@@ -58,7 +58,7 @@ class StaffDetails extends MusicXMLWriter
 	 * Indicates whether to show tablature frets as numbers (0, 1, 2) or letters (a, b, c). It is numbers if not specified.
 	 *
 	 * @Attribute(name="show-frets")
-	 * @Value(type="show-frets" required="false", allowed="ANY_VALUE")
+	 * @Value(type="show-frets" required="false", allowed="letters,numbers")
 	 * @var string
 	 */
 	public $showFrets;

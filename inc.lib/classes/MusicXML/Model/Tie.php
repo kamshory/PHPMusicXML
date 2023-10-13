@@ -25,7 +25,7 @@ class Tie extends MusicXMLWriter
 	 * Indicates if this is the start or stop of the tie.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;

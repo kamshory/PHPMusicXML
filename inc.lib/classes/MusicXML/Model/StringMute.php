@@ -25,7 +25,7 @@ class StringMute extends MusicXMLWriter
 	 * Specifies if the string mute is going on or off.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="on-off" required="true", allowed="ANY_VALUE")
+	 * @Value(type="on-off" required="true", allowed="on,off")
 	 * @var string
 	 */
 	public $type;

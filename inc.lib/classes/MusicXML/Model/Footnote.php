@@ -212,7 +212,7 @@ class Footnote extends MusicXMLWriter
 	 * Used to rotate text around the alignment point specified by the halign and valign attributes. Positive values are clockwise rotations, while negative values are counter-clockwise rotations.
 	 *
 	 * @Attribute(name="rotation")
-	 * @Value(type="rotation-degrees" required="false", min="-infinite", max="infinite")
+	 * @Value(type="rotation-degrees" required="false", min="-180", max="180")
 	 * @var float
 	 */
 	public $rotation;

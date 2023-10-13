@@ -91,7 +91,7 @@ class Wedge extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;

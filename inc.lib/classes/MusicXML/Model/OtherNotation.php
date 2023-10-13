@@ -25,7 +25,7 @@ class OtherNotation extends MusicXMLWriter
 	 * Indicates if this is a single-note notation, or the start or stop of a multi-note notation.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-single" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-single" required="true", allowed="start,stop,single")
 	 * @var string
 	 */
 	public $type;
@@ -135,7 +135,7 @@ class OtherNotation extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;

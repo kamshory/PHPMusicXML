@@ -25,7 +25,7 @@ class HammerOn extends MusicXMLWriter
 	 * Indicates if this is the start or stop of the hammer-on.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
@@ -124,7 +124,7 @@ class HammerOn extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;

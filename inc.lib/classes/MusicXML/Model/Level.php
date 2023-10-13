@@ -58,7 +58,7 @@ class Level extends MusicXMLWriter
 	 * Specifies the symbol size to use for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="size")
-	 * @Value(type="symbol-size" required="false", allowed="ANY_VALUE")
+	 * @Value(type="symbol-size" required="false", allowed="cue,full,grace-cue,large")
 	 * @var string
 	 */
 	public $size;
@@ -69,7 +69,7 @@ class Level extends MusicXMLWriter
 	 * Indicates whether the editorial information applies to the start of a series of symbols, the end of a series of symbols, or a single symbol. It is single if not specified for compatibility with earlier MusicXML versions.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-single" required="false", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-single" required="false", allowed="start,stop,single")
 	 * @var string
 	 */
 	public $type;

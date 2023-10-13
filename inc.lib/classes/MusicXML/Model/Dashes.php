@@ -25,7 +25,7 @@ class Dashes extends MusicXMLWriter
 	 * Indicates if this is the start, stop, or continuation of the dashes.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-continue" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-continue" required="true", allowed="start,stop,continue")
 	 * @var string
 	 */
 	public $type;

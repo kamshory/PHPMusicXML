@@ -113,7 +113,7 @@ class Key extends MusicXMLWriter
 	 * Allows a key signature to apply to only the specified staff in the part. If absent, the key signature applies to all staves in the part.
 	 *
 	 * @Attribute(name="number")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $number;

@@ -25,7 +25,7 @@ class MetronomeTuplet extends MusicXMLWriter
 	 * 
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
@@ -47,7 +47,7 @@ class MetronomeTuplet extends MusicXMLWriter
 	 * 
 	 *
 	 * @Attribute(name="show-number")
-	 * @Value(type="show-tuplet" required="false", allowed="ANY_VALUE")
+	 * @Value(type="show-tuplet" required="false", allowed="actual,both,none")
 	 * @var string
 	 */
 	public $showNumber;

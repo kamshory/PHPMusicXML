@@ -91,7 +91,7 @@ class Sound extends MusicXMLWriter
 	 * Allows placing of sound in a 3-D space relative to the listener, expressed in degrees ranging from -180 to 180. 0 is level with the listener, 90 is directly above, and -90 is directly below.
 	 *
 	 * @Attribute(name="elevation")
-	 * @Value(type="rotation-degrees" required="false", min="-infinite", max="infinite")
+	 * @Value(type="rotation-degrees" required="false", min="-180", max="180")
 	 * @var float
 	 */
 	public $elevation;
@@ -135,7 +135,7 @@ class Sound extends MusicXMLWriter
 	 * Allows placing of sound in a 3-D space relative to the listener, expressed in degrees ranging from -180 to 180. 0 is straight ahead, -90 is hard left, 90 is hard right, and -180 and 180 are directly behind the listener.
 	 *
 	 * @Attribute(name="pan")
-	 * @Value(type="rotation-degrees" required="false", min="-infinite", max="infinite")
+	 * @Value(type="rotation-degrees" required="false", min="-180", max="180")
 	 * @var float
 	 */
 	public $pan;

@@ -135,7 +135,7 @@ class AccidentalMark extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;
@@ -168,7 +168,7 @@ class AccidentalMark extends MusicXMLWriter
 	 * Specifies the symbol size to use for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="size")
-	 * @Value(type="symbol-size" required="false", allowed="ANY_VALUE")
+	 * @Value(type="symbol-size" required="false", allowed="cue,full,grace-cue,large")
 	 * @var string
 	 */
 	public $size;

@@ -157,7 +157,7 @@ class Tied extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;
@@ -179,7 +179,7 @@ class Tied extends MusicXMLWriter
 	 * Indicates whether slurs and ties are overhand (tips down) or underhand (tips up). This is distinct from the placement attribute used by any notation type.
 	 *
 	 * @Attribute(name="orientation")
-	 * @Value(type="over-under" required="false", allowed="ANY_VALUE")
+	 * @Value(type="over-under" required="false", allowed="over,under")
 	 * @var string
 	 */
 	public $orientation;
@@ -190,7 +190,7 @@ class Tied extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;

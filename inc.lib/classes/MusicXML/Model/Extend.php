@@ -80,7 +80,7 @@ class Extend extends MusicXMLWriter
 	 * Indicates if this is the start, stop, or continuation of the extension. Before Version 3.0 this attribute was not available, and an &lt;extend&gt; element was always treated as the start of the extension.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-continue" required="false", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-continue" required="false", allowed="start,stop,continue")
 	 * @var string
 	 */
 	public $type;

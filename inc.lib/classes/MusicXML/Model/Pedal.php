@@ -25,7 +25,7 @@ class Pedal extends MusicXMLWriter
 	 * Distinguishes different types of pedal directions.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="pedal-type" required="true", allowed="ANY_VALUE")
+	 * @Value(type="pedal-type" required="true", allowed="start,stop,sostenuto,change,continue,discontinue,resume")
 	 * @var string
 	 */
 	public $type;

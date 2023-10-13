@@ -25,7 +25,7 @@ class StaffDivide extends MusicXMLWriter
 	 * Specifies the type of staff division symbol.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="staff-divide-symbol" required="true", allowed="ANY_VALUE")
+	 * @Value(type="staff-divide-symbol" required="true", allowed="down,up,up-down")
 	 * @var string
 	 */
 	public $type;

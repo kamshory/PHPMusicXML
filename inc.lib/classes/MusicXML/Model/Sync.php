@@ -25,7 +25,7 @@ class Sync extends MusicXMLWriter
 	 * Specifies the style that a score following application should use to synchronize an accompaniment with a performer.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="sync-type" required="true", allowed="ANY_VALUE")
+	 * @Value(type="sync-type" required="true", allowed="none,tempo,mostly-tempo,mostly-event,event,always-event")
 	 * @var string
 	 */
 	public $type;

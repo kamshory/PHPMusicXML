@@ -36,7 +36,7 @@ class Ending extends MusicXMLWriter
 	 * Typically, the start type is associated with the left barline of the first measure in an ending. The stop and discontinue types are associated with the right barline of the last measure in an ending. Stop is used when the ending mark concludes with a downward jog, as is typical for first endings. Discontinue is used when there is no downward jog, as is typical for second endings that do not conclude a piece.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-discontinue" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-discontinue" required="true", allowed="start,stop,discontinue")
 	 * @var string
 	 */
 	public $type;
@@ -168,7 +168,7 @@ class Ending extends MusicXMLWriter
 	 * Distinguishes elements that are associated with a system rather than the particular part where the element appears.
 	 *
 	 * @Attribute(name="system")
-	 * @Value(type="system-relation" required="false", allowed="ANY_VALUE")
+	 * @Value(type="system-relation" required="false", allowed="only-top,also-top,none")
 	 * @var string
 	 */
 	public $system;

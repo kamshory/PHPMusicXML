@@ -25,7 +25,7 @@ class Barre extends MusicXMLWriter
 	 * The start value indicates the lowest pitched string (e.g., the string with the highest MusicXML number). The stop value indicates the highest pitched string.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;

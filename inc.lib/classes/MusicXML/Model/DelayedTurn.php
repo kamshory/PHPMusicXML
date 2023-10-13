@@ -124,7 +124,7 @@ class DelayedTurn extends MusicXMLWriter
 	 * The percentage of the way through the duration for landing on the last beat. It is 75 if not specified.
 	 *
 	 * @Attribute(name="last-beat")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $lastBeat;
@@ -135,7 +135,7 @@ class DelayedTurn extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;
@@ -168,7 +168,7 @@ class DelayedTurn extends MusicXMLWriter
 	 * The percentage of the way through the duration for landing on the second beat. It is 25 if not specified.
 	 *
 	 * @Attribute(name="second-beat")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $secondBeat;
@@ -190,7 +190,7 @@ class DelayedTurn extends MusicXMLWriter
 	 * The starting note for playback, relative to the current note. It is upper if not specified.
 	 *
 	 * @Attribute(name="start-note")
-	 * @Value(type="start-note" required="false", allowed="ANY_VALUE")
+	 * @Value(type="start-note" required="false", allowed="below,main,upper")
 	 * @var string
 	 */
 	public $startNote;

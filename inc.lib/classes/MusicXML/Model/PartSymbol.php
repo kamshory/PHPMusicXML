@@ -25,7 +25,7 @@ class PartSymbol extends MusicXMLWriter
 	 * Specifies the bottom staff of the symbol when it does not extend across the entire part.
 	 *
 	 * @Attribute(name="bottom-staff")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $bottomStaff;
@@ -91,7 +91,7 @@ class PartSymbol extends MusicXMLWriter
 	 * Specifies the top staff of the symbol when it does not extend across the entire part.
 	 *
 	 * @Attribute(name="top-staff")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $topStaff;

@@ -26,12 +26,14 @@ function createAttribute($attribute)
     $description = htmlspecialchars($attribute['description']);
     $required = strtolower(trim($attribute['required'])) == 'yes' ? 'true':'false';
     
-    $traditionalType = getAttrType($type);
+    $map = DataType::DATA_TYPE[$type];
+    $traditionalType = $map['traditional_type'];
     $attributeName = getAttributeName($name);
+
     
-    $allowed = isset($attribute['allowed_value']) && is_array($attribute['allowed_value']) && !empty($attribute['allowed_value']) ? $attribute['allowed_value'] : "ANY_VALUE";
-    $min = isset($attribute['min']) ? $attribute['min'] : "-infinite";
-    $max = isset($attribute['max']) ? $attribute['max'] : "infinite";
+    $allowed = isset($map['allowed_value']) && !empty($map['allowed_value']) ? $map['allowed_value'] : "ANY_VALUE";
+    $min = isset($map['min']) ? $map['min'] : "-infinite";
+    $max = isset($map['max']) ? $map['max'] : "infinite";
     
     if($traditionalType == 'float' || $traditionalType == 'integer')
     {

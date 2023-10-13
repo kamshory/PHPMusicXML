@@ -36,7 +36,7 @@ class MidiDevice extends MusicXMLWriter
 	 * A number from 1 to 16 that can be used with the unofficial MIDI 1.0 port (or cable) meta event.
 	 *
 	 * @Attribute(name="port")
-	 * @Value(type="midi-16" required="false", min="-infinite", max="infinite")
+	 * @Value(type="midi-16" required="false", min="1", max="16")
 	 * @var integer
 	 */
 	public $port;

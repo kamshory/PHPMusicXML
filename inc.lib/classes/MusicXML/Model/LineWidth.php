@@ -25,7 +25,7 @@ class LineWidth extends MusicXMLWriter
 	 * The type of line whose width is being defined.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="line-width-type" required="true", allowed="ANY_VALUE")
+	 * @Value(type="line-width-type" required="true", allowed="beam,bracket,dashes,enclosure,ending,extend,heavy barline,leger,light barline,octave shift,pedal,slur middle,slur tip,staff,stem,tie middle,tie tip,tuplet bracket,wedge")
 	 * @var string
 	 */
 	public $type;

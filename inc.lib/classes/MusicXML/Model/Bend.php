@@ -80,7 +80,7 @@ class Bend extends MusicXMLWriter
 	 * The percentage of the duration for starting a bend. Default is 25.
 	 *
 	 * @Attribute(name="first-beat")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $firstBeat;
@@ -135,7 +135,7 @@ class Bend extends MusicXMLWriter
 	 * The percentage of the duration for ending a bend. Default is 75.
 	 *
 	 * @Attribute(name="last-beat")
-	 * @Value(type="percent" required="false", min="-infinite", max="infinite")
+	 * @Value(type="percent" required="false", min="0", max="100")
 	 * @var float
 	 */
 	public $lastBeat;

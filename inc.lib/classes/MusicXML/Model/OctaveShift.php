@@ -168,7 +168,7 @@ class OctaveShift extends MusicXMLWriter
 	 * 8 indicates one octave; 15 indicates two octaves; 22 indicates 3 octaves. The default value is 8.
 	 *
 	 * @Attribute(name="size")
-	 * @Value(type="positiveInteger" required="false", min="-infinite", max="infinite")
+	 * @Value(type="positiveInteger" required="false", min="0", max="infinite")
 	 * @var integer
 	 */
 	public $size;

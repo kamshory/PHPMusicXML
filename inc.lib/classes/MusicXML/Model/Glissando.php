@@ -25,7 +25,7 @@ class Glissando extends MusicXMLWriter
 	 * Indicates if this is the start or stop of the glissando.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
@@ -135,7 +135,7 @@ class Glissando extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;

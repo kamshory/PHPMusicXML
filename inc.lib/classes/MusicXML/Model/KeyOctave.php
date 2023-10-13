@@ -25,7 +25,7 @@ class KeyOctave extends MusicXMLWriter
 	 * A positive integer that refers to the key signature element in left-to-right order.
 	 *
 	 * @Attribute(name="number")
-	 * @Value(type="positiveInteger" required="true", min="-infinite", max="infinite")
+	 * @Value(type="positiveInteger" required="true", min="0", max="infinite")
 	 * @var integer
 	 */
 	public $number;

@@ -135,7 +135,7 @@ class Clef extends MusicXMLWriter
 	 * Specifies the staff number from top to bottom within the part. The value is 1 if not present.
 	 *
 	 * @Attribute(name="number")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $number;
@@ -179,7 +179,7 @@ class Clef extends MusicXMLWriter
 	 * The size attribute is used for clefs where the additional attribute is &quot;yes&quot;. It is typically used to indicate cue clefs.
 	 *
 	 * @Attribute(name="size")
-	 * @Value(type="symbol-size" required="false", allowed="ANY_VALUE")
+	 * @Value(type="symbol-size" required="false", allowed="cue,full,grace-cue,large")
 	 * @var string
 	 */
 	public $size;

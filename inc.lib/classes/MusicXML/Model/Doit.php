@@ -124,7 +124,7 @@ class Doit extends MusicXMLWriter
 	 * Is the line straight or curved?
 	 *
 	 * @Attribute(name="line-shape")
-	 * @Value(type="line-shape" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-shape" required="false", allowed="straight,curved")
 	 * @var string
 	 */
 	public $lineShape;
@@ -135,7 +135,7 @@ class Doit extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;
@@ -146,7 +146,7 @@ class Doit extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;

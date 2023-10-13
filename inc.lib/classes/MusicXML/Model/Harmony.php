@@ -124,7 +124,7 @@ class Harmony extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;
@@ -179,7 +179,7 @@ class Harmony extends MusicXMLWriter
 	 * Distinguishes elements that are associated with a system rather than the particular part where the element appears.
 	 *
 	 * @Attribute(name="system")
-	 * @Value(type="system-relation" required="false", allowed="ANY_VALUE")
+	 * @Value(type="system-relation" required="false", allowed="only-top,also-top,none")
 	 * @var string
 	 */
 	public $system;

@@ -25,7 +25,7 @@ class PageMargins extends MusicXMLWriter
 	 * Specifies whether the margins apply to even pages, odd pages, or both. This attribute is not needed when used as part of a &lt;print&gt; element. The value is both if omitted when used in the &lt;defaults&gt; element.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="margin-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="margin-type" required="false", allowed="both,even,odd")
 	 * @var string
 	 */
 	public $type;

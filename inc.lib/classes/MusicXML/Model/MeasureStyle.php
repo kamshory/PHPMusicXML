@@ -91,7 +91,7 @@ class MeasureStyle extends MusicXMLWriter
 	 * Allows a measure style to apply to only the specified staff in the part. If absent, the measure style applies to all staves in the part.
 	 *
 	 * @Attribute(name="number")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $number;

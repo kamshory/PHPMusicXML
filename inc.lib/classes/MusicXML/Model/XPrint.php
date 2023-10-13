@@ -25,7 +25,7 @@ class XPrint extends MusicXMLWriter
 	 * The number of blank pages to insert before the current measure. It is ignored if new-page is not &quot;yes&quot;. These blank pages have no music, but may have text or images specified by the credit element. This is used to allow a combination of pages that are all text, or all text and images, together with pages of music.
 	 *
 	 * @Attribute(name="blank-page")
-	 * @Value(type="positiveInteger" required="false", min="-infinite", max="infinite")
+	 * @Value(type="positiveInteger" required="false", min="0", max="infinite")
 	 * @var integer
 	 */
 	public $blankPage;

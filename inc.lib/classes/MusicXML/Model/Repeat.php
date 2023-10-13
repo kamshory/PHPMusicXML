@@ -25,7 +25,7 @@ class Repeat extends MusicXMLWriter
 	 * The start of the repeat has a forward direction while the end of the repeat has a backward direction.
 	 *
 	 * @Attribute(name="direction")
-	 * @Value(type="backward-forward" required="true", allowed="ANY_VALUE")
+	 * @Value(type="backward-forward" required="true", allowed="backward,forward")
 	 * @var string
 	 */
 	public $direction;
@@ -47,7 +47,7 @@ class Repeat extends MusicXMLWriter
 	 * Indicates the number of times the repeated section is played. It is only used with backward repeats that are not part of an ending.
 	 *
 	 * @Attribute(name="times")
-	 * @Value(type="nonNegativeInteger" required="false", min="-infinite", max="infinite")
+	 * @Value(type="nonNegativeInteger" required="false", min="0", max="infinity")
 	 * @var integer
 	 */
 	public $times;

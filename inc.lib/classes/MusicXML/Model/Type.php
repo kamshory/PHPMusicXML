@@ -25,7 +25,7 @@ class Type extends MusicXMLWriter
 	 * Indicates full, cue, grace-cue, or large size. If not specified, the value is full for regular notes, grace-cue for notes that contain both &lt;grace&gt; and &lt;cue&gt; elements, and cue for notes that contain either a &lt;cue&gt; or a &lt;grace&gt; element, but not both.
 	 *
 	 * @Attribute(name="size")
-	 * @Value(type="symbol-size" required="false", allowed="ANY_VALUE")
+	 * @Value(type="symbol-size" required="false", allowed="cue,full,grace-cue,large")
 	 * @var string
 	 */
 	public $size;

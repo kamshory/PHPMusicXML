@@ -25,7 +25,7 @@ class PartGroup extends MusicXMLWriter
 	 * Indicates the start or stop of the &lt;part-group&gt;.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;

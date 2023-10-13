@@ -58,7 +58,7 @@ class Bookmark extends MusicXMLWriter
 	 * The position attribute specifies the position of the descendant element specified by the element attribute, where the first position is 1. The position attribute is ignored if the element attribute is not present.
 	 *
 	 * @Attribute(name="position")
-	 * @Value(type="positiveInteger" required="false", min="-infinite", max="infinite")
+	 * @Value(type="positiveInteger" required="false", min="0", max="infinite")
 	 * @var integer
 	 */
 	public $position;

@@ -157,7 +157,7 @@ class MeasureNumbering extends MusicXMLWriter
 	 * Refers to staff numbers within the part, from top to bottom on the system. It indicates which staff is used as the reference point for vertical positioning. A value of 1 is assumed if not present.
 	 *
 	 * @Attribute(name="staff")
-	 * @Value(type="staff-number" required="false", min="-infinite", max="infinite")
+	 * @Value(type="staff-number" required="false", min="1", max="infinite")
 	 * @var integer
 	 */
 	public $staff;
@@ -168,7 +168,7 @@ class MeasureNumbering extends MusicXMLWriter
 	 * Specifies if measure numbers are associated with a system rather than the particular part where the &lt;measure-numbering&gt; element appears.
 	 *
 	 * @Attribute(name="system")
-	 * @Value(type="system-relation-number" required="false", allowed="ANY_VALUE")
+	 * @Value(type="system-relation-number" required="false", allowed="only-top,only-bottom,also-top,also-bottom,none")
 	 * @var string
 	 */
 	public $system;

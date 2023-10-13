@@ -36,7 +36,7 @@ class Bracket extends MusicXMLWriter
 	 * Indicates if this is the start, stop, or continuation of the bracket.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop-continue" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop-continue" required="true", allowed="start,stop,continue")
 	 * @var string
 	 */
 	public $type;
@@ -113,7 +113,7 @@ class Bracket extends MusicXMLWriter
 	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
-	 * @Value(type="line-type" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
 	 * @var string
 	 */
 	public $lineType;

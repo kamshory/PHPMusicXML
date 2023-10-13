@@ -25,7 +25,7 @@ class Tuplet extends MusicXMLWriter
 	 * Indicates if this is the start or stop of the tuplet.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
@@ -80,7 +80,7 @@ class Tuplet extends MusicXMLWriter
 	 * Used to specify whether the bracket is straight or in the older curved or slurred style. It is straight if not specified.
 	 *
 	 * @Attribute(name="line-shape")
-	 * @Value(type="line-shape" required="false", allowed="ANY_VALUE")
+	 * @Value(type="line-shape" required="false", allowed="straight,curved")
 	 * @var string
 	 */
 	public $lineShape;
@@ -102,7 +102,7 @@ class Tuplet extends MusicXMLWriter
 	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
-	 * @Value(type="above-below" required="false", allowed="ANY_VALUE")
+	 * @Value(type="above-below" required="false", allowed="ubove,below")
 	 * @var string
 	 */
 	public $placement;
@@ -135,7 +135,7 @@ class Tuplet extends MusicXMLWriter
 	 * Used to display either the number of actual notes, the number of both actual and normal notes, or neither. It is actual if not specified.
 	 *
 	 * @Attribute(name="show-number")
-	 * @Value(type="show-tuplet" required="false", allowed="ANY_VALUE")
+	 * @Value(type="show-tuplet" required="false", allowed="actual,both,none")
 	 * @var string
 	 */
 	public $showNumber;
@@ -146,7 +146,7 @@ class Tuplet extends MusicXMLWriter
 	 * Used to display either the actual type, both the actual and normal types, or neither. It is none if not specified.
 	 *
 	 * @Attribute(name="show-type")
-	 * @Value(type="show-tuplet" required="false", allowed="ANY_VALUE")
+	 * @Value(type="show-tuplet" required="false", allowed="actual,both,none")
 	 * @var string
 	 */
 	public $showType;

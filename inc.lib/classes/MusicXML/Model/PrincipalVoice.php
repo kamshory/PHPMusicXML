@@ -25,7 +25,7 @@ class PrincipalVoice extends MusicXMLWriter
 	 * Indicates the type of symbol used. When used for analysis separate from any printed score markings, it should be set to none. Otherwise if the type is stop it should be set to plain.
 	 *
 	 * @Attribute(name="symbol")
-	 * @Value(type="principal-voice-symbol" required="true", allowed="ANY_VALUE")
+	 * @Value(type="principal-voice-symbol" required="true", allowed="Hauptstimme,Nebenstimme,plain,none")
 	 * @var string
 	 */
 	public $symbol;
@@ -36,7 +36,7 @@ class PrincipalVoice extends MusicXMLWriter
 	 * Indicates if this is the start or stop of the principal voice.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="start-stop" required="true", allowed="ANY_VALUE")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
