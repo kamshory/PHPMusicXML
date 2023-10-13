@@ -52,9 +52,18 @@ abstract class MusicXMLBase
     const SOFTWARE_NAME = "Planetbiru";
     const ENCODING_DESCRIPTION = "This software is not ready for production yet";
 
-    public function fixDuration($duration)
+    /**
+     * Fix duration
+     *
+     * @param integer $duration
+     * @param integer $divisions
+     * @param integer $timebase
+     * @param TimeSignature $timeSignature
+     * @return integer
+     */
+    public function fixDuration($duration, $divisions, $timebase)
     {
-        return $duration / 4;
+        return round($duration * $divisions / $timebase);
     }
     
     public function calculateDuration($duration0, $divisions, $timebase)
@@ -91,7 +100,7 @@ abstract class MusicXMLBase
      */
     public function getNoteType($duration, $divisions)
     {
-        $value = $duration/(4*$divisions);
+        $value = $duration/$divisions;
         foreach($this->type as $type=>$valueType)
         {
             if($value >= $valueType)
@@ -245,33 +254,6 @@ abstract class MusicXMLBase
         $domdoc->preserveWhiteSpace = false;
         $domdoc->formatOutput = true;
         return $domdoc;
-    }
-
-
-
-    /**
-     * Get instrument  name
-     *
-     * @param integer $instrumentId
-     * @param integer $channelId
-     * @return array
-     */
-    public function getInstrumentName($instrumentId, $channelId)
-    {
-        if ($channelId == 10) {
-            $id = $instrumentId + 1;
-            if(isset(MusicXMLInstrument::DRUM_SET[$instrumentId]))
-            {
-                return MusicXMLInstrument::DRUM_SET[$instrumentId];
-            }
-            else
-            {
-                return array('Instrument ' . $id, 'Instrument ' . $id);
-            }
-            
-        } else {
-            return MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId];
-        }
     }
 
     /**

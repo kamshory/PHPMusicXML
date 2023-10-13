@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="4.0">
+  <work>
+    <work-title>Test</work-title>
+  </work>
+  <identification>
+    <rights type="music"></rights>
+    <encoding>
+      <software>Planetbiru</software>
+      <encoding-date>2023-10-13</encoding-date>
+      <supports element="accidental" type="yes"/>
+      <supports element="beam" type="yes"/>
+      <supports element="print" attribute="new-page" type="no"/>
+      <supports element="print" attribute="new-system" type="no"/>
+      <supports element="stem" type="yes"/>
+      <encoding-description>This software is not ready for production yet</encoding-description>
+      <encoder>music</encoder>
+    </encoding>
+  </identification>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Acoustic Grand Piano</part-name>
+      <part-abbreviation>Pno.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Acoustic Grand Piano</instrument-name>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>87.4891</volume>
+        <pan></pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="1" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no"/>
+        </direction-type>
+        <sound tempo="120"/>
+      </direction>
+      <note default-x="0" dynamics="141.11">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note default-x="24" dynamics="141.11">
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>half</type>
+      </note>
+      <note default-x="36" dynamics="141.11">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>48</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>breve</type>
+      </note>
+      <note default-x="48" dynamics="141.11">
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>half</type>
+      </note>
+      <note default-x="60" dynamics="141.11">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note default-x="84" dynamics="141.11">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+    <measure number="2" width="144">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <note default-x="72" dynamics="141.11">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration></duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+      <note default-x="96" dynamics="141.11">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+        <type>whole</type>
+      </note>
+    </measure>
+  </part>
+</score-partwise>

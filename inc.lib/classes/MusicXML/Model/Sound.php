@@ -49,7 +49,7 @@ class Sound extends MusicXMLWriter
 	 * Divisions
 	 *
 	 * @Attribute(name="divisions")
-	 * @var string
+	 * @var float
 	 */
 	public $divisions;
 
@@ -57,7 +57,7 @@ class Sound extends MusicXMLWriter
 	 * Dynamics
 	 *
 	 * @Attribute(name="dynamics")
-	 * @var string
+	 * @var float
 	 */
 	public $dynamics;
 

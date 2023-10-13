@@ -9,6 +9,7 @@ use MusicXML\Model\Metronome;
 use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
+use MusicXML\Model\WorkTitle;
 use MusicXML\Properties\Coordinate;
 
 class MusicXMLUtil
@@ -21,13 +22,14 @@ class MusicXMLUtil
      * @param array $message
      * @param integer $divisions
      * @param integer $timebase
+     * @param float $width
      * @return Coordinate
      */
-    public static function getNoteCoordinate($measureIndex, $message, $divisions, $timebase)
+    public static function getNoteCoordinate($measureIndex, $message, $divisions, $timebase, $timeSignature, $width)
     {
         $coordinate = new Coordinate();       
-        $timeRelative = $message['time'] - $measureIndex;
-        $coordinate->defaultX = $timeRelative * $divisions;
+        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
+        $coordinate->defaultX = $timeRelative * $width * $timeSignature->getBeats() / ($divisions*$timebase);
         return $coordinate;
     }
     
@@ -40,7 +42,7 @@ class MusicXMLUtil
     public static function getWork($title)
     {
         $work = new Work();
-        $work->workTitle = $title;
+        $work->workTitle = new WorkTitle($title);
         return $work;
     }
     
@@ -152,4 +154,106 @@ class MusicXMLUtil
         
         return $clefs;
     }
+    
+    /**
+     * Get programs
+     *
+     * @param array $midiEventMessages
+     * @return array
+     */
+    public static function getControlEvent($midiEventMessages)
+    {
+        $messages = array();
+        foreach ($midiEventMessages as $message) {
+            if (isset($message['event']) && $message['event'] != 'On' && $message['event'] != 'Off') {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
+    }
+    
+    /**
+     * Get minimum duration
+     *
+     * @param array $midiEventMessages
+     * @param integer $timebase
+     * @return float
+     */
+    public static function getMinimumDuration($midiEventMessages, $timebase)
+    {
+        $min = $timebase;
+        foreach ($midiEventMessages as $message) {
+            if (isset($message['duration']) && $message['duration'] > 0 && $message['duration'] < $min) {
+                $min = $message['duration'];
+            }
+        }
+        return $min;
+    }
+
+    /**
+     * Get notes
+     *
+     * @param array $midiEventMessages
+     * @return array
+     */
+    public static function getNotes($midiEventMessages)
+    {
+        $messages = array();
+        foreach ($midiEventMessages as $message) {
+            if (isset($message['event']) && ($message['event'] == 'On' || $message['event'] == 'Off')) {
+                $messages[] = $message;
+            }
+        }
+        return $messages;
+    }
+    
+    /**
+     * Get index of note of channel
+     *
+     * @param array $noteMessages
+     * @param integer $time
+     * @param integer $timebase
+     * @return integer | false
+     */
+    public static function getNoteIndex($noteMessages, $time, $timebase)
+    {
+        // reverse
+        $keys = array_keys($noteMessages);
+        $reversed = array_reverse($keys);
+        foreach($reversed as $key)
+        {
+            $duration = isset($noteMessages[$key]['duration']) ? $noteMessages[$key]['duration'] * $timebase : 0;
+            if($noteMessages[$key]['time'] < $time && ($noteMessages[$key]['time'] + $duration) > $time)
+            {
+                return $key;
+            }
+        }
+        return false;
+    }
+    
+    /**
+     * Get instrument  name
+     *
+     * @param integer $instrumentId
+     * @param integer $channelId
+     * @return array
+     */
+    public static function getInstrumentName($instrumentId, $channelId)
+    {
+        if ($channelId == 10) {
+            $id = $instrumentId + 1;
+            if(isset(MusicXMLInstrument::DRUM_SET[$instrumentId]))
+            {
+                return MusicXMLInstrument::DRUM_SET[$instrumentId];
+            }
+            else
+            {
+                return array('Instrument ' . $id, 'Instrument ' . $id);
+            }
+            
+        } else {
+            return MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId];
+        }
+    }
+
 }
