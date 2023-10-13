@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="credit")
+ * @Element(name="credit-type")
+ * @ParentElement(name="credit")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/credit-type/
  * @Data
  */

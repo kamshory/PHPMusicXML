@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="accordion-registration")
+ * @Element(name="accordion-middle")
+ * @ParentElement(name="accordion-registration")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/accordion-middle/
  * @Data
  */

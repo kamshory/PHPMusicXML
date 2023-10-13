@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="part-list")
+ * @Element(name="part-group")
+ * @ParentElement(name="part-list")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-group/
  * @Data
  */

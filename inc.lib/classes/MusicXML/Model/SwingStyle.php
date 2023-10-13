@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="swing")
+ * @Element(name="swing-style")
+ * @ParentElement(name="swing")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/swing-style/
  * @Data
  */

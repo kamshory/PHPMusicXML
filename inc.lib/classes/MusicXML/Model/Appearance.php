@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="defaults")
+ * @Element(name="appearance")
+ * @ParentElement(name="defaults")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/appearance/
  * @Data
  */

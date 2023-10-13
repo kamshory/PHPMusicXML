@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="metronome")
+ * @Element(name="per-minute")
+ * @ParentElement(name="metronome")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/per-minute/
  * @Data
  */

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="play")
+ * @Element(name="ipa")
+ * @ParentElement(name="play")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/ipa/
  * @Data
  */

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="barline,ornaments")
+ * @Element(name="wavy-line")
+ * @ParentElement(name="barline,ornaments")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/wavy-line/
  * @Data
  */

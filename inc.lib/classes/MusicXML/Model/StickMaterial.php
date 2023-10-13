@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="stick")
+ * @Element(name="stick-material")
+ * @ParentElement(name="stick")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/stick-material/
  * @Data
  */

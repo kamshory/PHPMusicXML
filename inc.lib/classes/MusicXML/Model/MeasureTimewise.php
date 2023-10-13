@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="score-timewise")
+ * @Element(name="measure-timewise")
+ * @ParentElement(name="score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-timewise/
  * @Data
  */

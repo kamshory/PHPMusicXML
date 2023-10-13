@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="direction-type")
+ * @Element(name="metronome")
+ * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome/
  * @Data
  */
@@ -186,7 +187,7 @@ class Metronome extends MusicXMLWriter
     /**
      * Direction type
      *
-     * @PropertyElement(name="direction-type")
+     * @Element(name="direction-type")
      * @var DirectionType
      */
     public $directionType;

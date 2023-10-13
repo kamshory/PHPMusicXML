@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="measure-layout")
+ * @Element(name="measure-distance")
+ * @ParentElement(name="measure-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-distance/
  * @Data
  */

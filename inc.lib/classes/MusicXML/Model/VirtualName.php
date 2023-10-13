@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="virtual-instrument")
+ * @Element(name="virtual-name")
+ * @ParentElement(name="virtual-instrument")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/virtual-name/
  * @Data
  */

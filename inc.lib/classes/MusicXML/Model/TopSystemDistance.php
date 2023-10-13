@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="system-layout")
+ * @Element(name="top-system-distance")
+ * @ParentElement(name="system-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/top-system-distance/
  * @Data
  */

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="barline,direction-type")
+ * @Element(name="segno")
+ * @ParentElement(name="barline,direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/segno/
  * @Data
  */

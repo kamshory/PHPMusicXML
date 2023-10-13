@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="harp-pedals")
+ * @Element(name="pedal-tuning")
+ * @ParentElement(name="harp-pedals")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pedal-tuning/
  * @Data
  */
@@ -22,7 +23,7 @@ class PedalTuning extends MusicXMLWriter
     /**
      * Pedal step
      *
-     * @PropertyElement(name="pedal-step")
+     * @Element(name="pedal-step")
      * @var PedalStep
      */
     public $pedalStep;
@@ -30,7 +31,7 @@ class PedalTuning extends MusicXMLWriter
     /**
      * Pedal tuning
      *
-     * @PropertyElement(name="pedal-alter")
+     * @Element(name="pedal-alter")
      * @var PedalAlter
      */
     public $pedalAlter;

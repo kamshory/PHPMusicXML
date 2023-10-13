@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="score-part")
+ * @Element(name="score-instrument")
+ * @ParentElement(name="score-part")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/score-instrument/
  * @Data
  */
@@ -48,7 +49,7 @@ class ScoreInstrument extends MusicXMLWriter
     /**
      * InstrumentSound
      *
-     * @PropertyElement(name="instrument-sound")
+     * @Element(name="instrument-sound")
      * @var InstrumentSound
      */
     public $instrumentSound;

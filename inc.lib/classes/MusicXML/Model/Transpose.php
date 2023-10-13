@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="attributes")
+ * @Element(name="transpose")
+ * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/transpose/
  * @Data
  */
@@ -65,10 +66,10 @@ class Transpose extends MusicXMLWriter
     public $octaveChange;
 
     /**
-     * Double
+     * XDouble
      *
      * @Element(name="double")
-     * @var Double
+     * @var XDouble
      */
     public $double;
 }

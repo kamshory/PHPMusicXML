@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="measure (partwise),part (timewise)")
+ * @Element(name="direction")
+ * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/direction/
  * @Data
  */
@@ -73,8 +74,8 @@ class Direction extends MusicXMLWriter
     /**
      * Staff
      *
-     * @PropertyElement
-     * @var integer
+     * @Element
+     * @var Staff
      */
     public $staff;
 

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="time")
+ * @Element(name="interchangeable")
+ * @ParentElement(name="time")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/interchangeable/
  * @Data
  */
@@ -59,7 +60,7 @@ class Interchangeable extends MusicXMLWriter
     /**
      * BeatType
      *
-     * @PropertyElement(name="beat-type")
+     * @Element(name="beat-type")
      * @var BeatType[]
      */
     public $beatType;

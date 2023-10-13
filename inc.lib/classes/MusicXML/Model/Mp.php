@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="dynamics")
+ * @Element(name="mp")
+ * @ParentElement(name="dynamics")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/mp/
  * @Data
  */

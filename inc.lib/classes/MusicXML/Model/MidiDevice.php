@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="score-part,sound")
+ * @Element(name="midi-device")
+ * @ParentElement(name="score-part,sound")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-device/
  * @Data
  */
@@ -41,7 +42,7 @@ class MidiDevice extends MusicXMLWriter
 	public $port;
 
     /**
-     * Description
+     * Text content
      *
      * @TextContent
      * @var string

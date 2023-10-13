@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="pitch")
+ * @Element(name="octave")
+ * @ParentElement(name="pitch")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/octave/
  * @Data
  */

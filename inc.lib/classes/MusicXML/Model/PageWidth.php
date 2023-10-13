@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="page-layout")
+ * @Element(name="page-width")
+ * @ParentElement(name="page-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/page-width/
  * @Data
  */

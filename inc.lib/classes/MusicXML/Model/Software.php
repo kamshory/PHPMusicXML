@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="encoding")
+ * @Element(name="software")
+ * @ParentElement(name="encoding")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/software/
  * @Data
  */
@@ -20,7 +21,7 @@ class Software extends MusicXMLWriter
 {
 
     /**
-     * Description
+     * Text content
      *
      * @TextContent
      * @var string

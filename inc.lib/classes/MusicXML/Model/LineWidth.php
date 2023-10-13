@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="appearance")
+ * @Element(name="line-width")
+ * @ParentElement(name="appearance")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/line-width/
  * @Data
  */

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="accord,staff-tuning")
+ * @Element(name="tuning-alter")
+ * @ParentElement(name="accord,staff-tuning")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/tuning-alter/
  * @Data
  */

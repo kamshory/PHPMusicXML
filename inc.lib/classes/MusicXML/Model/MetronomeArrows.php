@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="metronome")
+ * @Element(name="metronome-arrows")
+ * @ParentElement(name="metronome")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome-arrows/
  * @Data
  */

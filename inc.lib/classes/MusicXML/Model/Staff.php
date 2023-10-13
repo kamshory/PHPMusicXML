@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="direction,forward,harmony,note")
+ * @Element(name="staff")
+ * @ParentElement(name="direction,forward,harmony,note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staff/
  * @Data
  */

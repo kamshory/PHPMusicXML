@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="root")
+ * @Element(name="root-step")
+ * @ParentElement(name="root")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/root-step/
  * @Data
  */

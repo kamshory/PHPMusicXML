@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="part-group")
+ * @Element(name="group-time")
+ * @ParentElement(name="part-group")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/group-time/
  * @Data
  */

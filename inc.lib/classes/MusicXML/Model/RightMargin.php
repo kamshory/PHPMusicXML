@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="page-margins,system-margins")
+ * @Element(name="right-margin")
+ * @ParentElement(name="page-margins,system-margins")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/right-margin/
  * @Data
  */

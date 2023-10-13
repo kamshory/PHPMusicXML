@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="note")
+ * @Element(name="rest")
+ * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/rest/
  * @Data
  */
@@ -32,7 +33,7 @@ class Rest extends MusicXMLWriter
     /**
      * Display step
      *
-     * @PropertyElement(name="display-step")
+     * @Element(name="display-step")
      * @var DisplayStep
      */
     public $displayStep;

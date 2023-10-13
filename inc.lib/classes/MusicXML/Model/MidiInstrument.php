@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="score-part,sound")
+ * @Element(name="midi-instrument")
+ * @ParentElement(name="score-part,sound")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-instrument/
  * @Data
  */

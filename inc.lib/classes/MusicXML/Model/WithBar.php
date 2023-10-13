@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="bend")
+ * @Element(name="with-bar")
+ * @ParentElement(name="bend")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/with-bar/
  * @Data
  */

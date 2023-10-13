@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="metronome-note")
+ * @Element(name="metronome-tuplet")
+ * @ParentElement(name="metronome-note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome-tuplet/
  * @Data
  */

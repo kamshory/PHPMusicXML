@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="figured-bass")
+ * @Element(name="figure")
+ * @ParentElement(name="figured-bass")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/figure/
  * @Data
  */

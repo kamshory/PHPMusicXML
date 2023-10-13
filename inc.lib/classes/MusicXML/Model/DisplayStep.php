@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="rest,unpitched")
+ * @Element(name="display-step")
+ * @ParentElement(name="rest,unpitched")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/display-step/
  * @Data
  */

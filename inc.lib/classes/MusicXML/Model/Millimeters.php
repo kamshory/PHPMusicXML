@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="scaling")
+ * @Element(name="millimeters")
+ * @ParentElement(name="scaling")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/millimeters/
  * @Data
  */

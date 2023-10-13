@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="direction,harmony,listening,sound")
+ * @Element(name="offset")
+ * @ParentElement(name="direction,harmony,listening,sound")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/offset/
  * @Data
  */

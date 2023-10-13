@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="staff-layout")
+ * @Element(name="staff-distance")
+ * @ParentElement(name="staff-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staff-distance/
  * @Data
  */

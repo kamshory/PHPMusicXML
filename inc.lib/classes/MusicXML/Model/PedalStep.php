@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="pedal-tuning")
+ * @Element(name="pedal-step")
+ * @ParentElement(name="pedal-tuning")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pedal-step/
  * @Data
  */

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="time-modification")
+ * @Element(name="normal-dot")
+ * @ParentElement(name="time-modification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/normal-dot/
  * @Data
  */

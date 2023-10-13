@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="key")
+ * @Element(name="key-accidental")
+ * @ParentElement(name="key")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/key-accidental/
  * @Data
  */

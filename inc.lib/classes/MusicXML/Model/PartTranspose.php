@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="for-part")
+ * @Element(name="part-transpose")
+ * @ParentElement(name="for-part")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-transpose/
  * @Data
  */
@@ -28,7 +29,7 @@ class PartTranspose extends MusicXMLWriter
 
     /**
      * Chromatic
-     * @PropertyElement
+     * @Element
      * @var Chromatic
      */
     public $chromatic;
@@ -41,9 +42,9 @@ class PartTranspose extends MusicXMLWriter
     public $octaveChange;
 
     /**
-     * Double
-     * @PropertyElement(name="double")
-     * @var string
+     * XDouble
+     * @Element(name="double")
+     * @var XDouble
      */
     public $double;
 }

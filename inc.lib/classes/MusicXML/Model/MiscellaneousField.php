@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="miscellaneous")
+ * @Element(name="miscellaneous-field")
+ * @ParentElement(name="miscellaneous")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/miscellaneous-field/
  * @Data
  */

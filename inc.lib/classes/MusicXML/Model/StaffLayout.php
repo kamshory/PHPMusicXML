@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="defaults,print")
+ * @Element(name="staff-layout")
+ * @ParentElement(name="defaults,print")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staff-layout/
  * @Data
  */

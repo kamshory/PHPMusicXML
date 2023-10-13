@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="attributes,backup,barline,direction,figure,figured-bass,forward,harmony,lyric,notations,note,part-group")
+ * @Element(name="footnote")
+ * @ParentElement(name="attributes,backup,barline,direction,figure,figured-bass,forward,harmony,lyric,notations,note,part-group")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/footnote/
  * @Data
  */
@@ -267,7 +268,7 @@ class Footnote extends MusicXMLWriter
     public $staccato;
 
     /**
-     * Description
+     * Text content
      *
      * @TextContent
      * @var string

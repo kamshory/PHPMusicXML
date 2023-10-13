@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="beat-repeat,slash")
+ * @Element(name="slash-type")
+ * @ParentElement(name="beat-repeat,slash")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/slash-type/
  * @Data
  */

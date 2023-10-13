@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="attributes")
+ * @Element(name="time")
+ * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/time/
  * @Data
  */
@@ -205,7 +206,7 @@ class Time extends MusicXMLWriter
     /**
      * BeatType
      *
-     * @PropertyElement(name="beat-type")
+     * @Element(name="beat-type")
      * @var BeatType[]
      */
     public $beatType;

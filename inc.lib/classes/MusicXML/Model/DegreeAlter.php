@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="degree")
+ * @Element(name="degree-alter")
+ * @ParentElement(name="degree")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/degree-alter/
  * @Data
  */

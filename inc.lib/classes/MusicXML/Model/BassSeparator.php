@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="bass")
+ * @Element(name="bass-separator")
+ * @ParentElement(name="bass")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bass-separator/
  * @Data
  */

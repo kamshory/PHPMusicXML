@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="instrument-change,score-instrument")
+ * @Element(name="virtual-instrument")
+ * @ParentElement(name="instrument-change,score-instrument")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/virtual-instrument/
  * @Data
  */

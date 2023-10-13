@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="attributes")
+ * @Element(name="key")
+ * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/key/
  * @Data
  */
@@ -169,7 +170,7 @@ class Key extends MusicXMLWriter
     /**
      * Cancel
      *
-     * @PropertyElement
+     * @Element
      * @var Cancel
      */
     public $cancel;

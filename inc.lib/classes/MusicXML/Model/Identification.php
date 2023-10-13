@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="score-part,score-partwise,score-timewise")
+ * @Element(name="identification")
+ * @ParentElement(name="score-part,score-partwise,score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/identification/
  * @Data
  */
@@ -28,7 +29,7 @@ class Identification extends MusicXMLWriter
     public $rights;
 
     /**
-     * Description
+     * Text content
      *
      * @Element
      * @var Encoding

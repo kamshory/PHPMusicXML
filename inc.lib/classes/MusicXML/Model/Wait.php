@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="listen")
+ * @Element(name="wait")
+ * @ParentElement(name="listen")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/wait/
  * @Data
  */

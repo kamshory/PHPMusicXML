@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="credit,measure (partwise),part (timewise)")
+ * @Element(name="link")
+ * @ParentElement(name="credit,measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/link/
  * @Data
  */

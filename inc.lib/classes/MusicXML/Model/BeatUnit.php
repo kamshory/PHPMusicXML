@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="beat-unit-tied,metronome")
+ * @Element(name="beat-unit")
+ * @ParentElement(name="beat-unit-tied,metronome")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/beat-unit/
  * @Data
  */

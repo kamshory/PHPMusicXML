@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="player")
+ * @Element(name="player-name")
+ * @ParentElement(name="player")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/player-name/
  * @Data
  */

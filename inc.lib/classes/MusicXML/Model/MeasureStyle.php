@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="attributes")
+ * @Element(name="measure-style")
+ * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-style/
  * @Data
  */
@@ -120,12 +121,12 @@ class MeasureStyle extends MusicXMLWriter
     public $multipleRest;
 
     /**
-     * Multiple repeat
+     * Measure repeat
      *
-     * @PropertyElement(name="multiple-repeat")
-     * @var string
+     * @Element(name="measure-repeat")
+     * @var MeasureRepeat
      */
-    public $multipleRepeat;
+    public $measureRepeat;
 
     /**
      * Beat repeat
@@ -143,11 +144,4 @@ class MeasureStyle extends MusicXMLWriter
      */
     public $slash;
 
-    /**
-     * Measure repeat
-     *
-     * @Element(name="measure-repeat")
-     * @var MeasureRepeat
-     */
-    public $measureRepeat;
 }

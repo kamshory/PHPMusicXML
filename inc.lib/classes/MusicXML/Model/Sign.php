@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="clef,part-clef")
+ * @Element(name="sign")
+ * @ParentElement(name="clef,part-clef")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sign/
  * @Data
  */

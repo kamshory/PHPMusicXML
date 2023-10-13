@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="print,score-part")
+ * @Element(name="part-name-display")
+ * @ParentElement(name="print,score-part")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-name-display/
  * @Data
  */

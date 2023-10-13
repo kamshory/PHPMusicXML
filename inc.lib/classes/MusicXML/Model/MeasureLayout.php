@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="print")
+ * @Element(name="measure-layout")
+ * @ParentElement(name="print")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-layout/
  * @Data
  */

@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="figure,lyric")
+ * @Element(name="extend")
+ * @ParentElement(name="figure,lyric")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/extend/
  * @Data
  */

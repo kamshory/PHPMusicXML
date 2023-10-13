@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="measure (partwise),part (timewise)")
+ * @Element(name="note")
+ * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
  * @Data
  */
@@ -283,20 +284,26 @@ class Note extends MusicXMLWriter
     public $accidental;
 
     /**
+	 * Notations
+	 *
      * @Element
      * @var Notations[]
      */
     public $notations;
 
     /**
+	 * Unpitched
+	 *
      * @Element
      * @var Unpitched
      */
     public $unpitched;
 
     /**
-     * @PropertyElement
-     * @var integer
+	 * Staff
+	 *
+     * @Element
+     * @var Staff
      */
     public $staff;
 
@@ -314,7 +321,7 @@ class Note extends MusicXMLWriter
 
     /**
      * Tie
-     * @PropertyElement
+     * @Element
      * @var Tie
      */
     public $tie;
@@ -322,7 +329,7 @@ class Note extends MusicXMLWriter
     /**
      * Lyric
      *
-     * @PropertyElement
+     * @Element
      * @var Lyric
      */
     public $lyric;

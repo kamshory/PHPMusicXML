@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="interchangeable,time")
+ * @Element(name="beat-type")
+ * @ParentElement(name="interchangeable,time")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/beat-type/
  * @Data
  */

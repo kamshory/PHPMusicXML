@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement="listen")
+ * @Element(name="assess")
+ * @ParentElement(name="listen")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/assess/
  * @Data
  */
