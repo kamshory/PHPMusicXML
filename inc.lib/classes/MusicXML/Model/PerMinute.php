@@ -63,4 +63,11 @@ class PerMinute extends MusicXMLWriter
 	 */
 	public $fontWeight;
 
+	/**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var integer
+	 */
+	public $textContent;
 }

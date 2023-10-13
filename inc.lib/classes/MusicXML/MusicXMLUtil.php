@@ -143,15 +143,9 @@ class MusicXMLUtil
                     $metronome->parentheses = 'no';
                     $metronome->perMinute = new PerMinute($bpm);
                     $metronome->beatUnit = new BeatUnit('quarter');
-                    //$metronome->metronomeRelation = new MetronomeRelation('equals');
-
-
-                    $directionType->metronome = $metronome;
-                    
+                    $directionType->metronome = $metronome;                    
                     $directions[$rawtime]->directionType = $directionType;
-                    $directions[$rawtime]->placement = 'above';
-                    
-                    
+                    $directions[$rawtime]->placement = 'above';               
                     $lastBpm = $bpm;
                 }
             }

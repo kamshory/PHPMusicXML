@@ -216,6 +216,14 @@ class Metronome extends MusicXMLWriter
      */
     public $beatUnitTied;
 
+	/**
+     * Metronome relation
+     *
+     * @Element(name="metronome-relation")
+     * @var MetronomeRelation
+     */
+    public $metronomeRelation;
+
     /**
      * Per minute
      *
@@ -240,12 +248,6 @@ class Metronome extends MusicXMLWriter
      */
     public $metronomeNote;
 
-    /**
-     * Metronome relation
-     *
-     * @Element(name="metronome-relation")
-     * @var MetronomeRelation
-     */
-    public $metronomeRelation;
+    
 
 }

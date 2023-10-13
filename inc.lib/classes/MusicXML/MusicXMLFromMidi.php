@@ -1089,7 +1089,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             $note->voice = $channelId;
             $noteCode = $message['note'];
-            if($message['event'] == 'On' && $message['value'] > 0 && $noteCode > 13)
+            if($message['event'] == 'On' && $message['value'] > 0 && $noteCode > 13 && $duration > 0)
             {
                 $note->dynamics = round($message['value'] / 0.9, 2);
                 $pitch = $this->getPitch($noteCode);

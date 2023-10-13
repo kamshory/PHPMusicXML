@@ -277,6 +277,14 @@ class Note extends MusicXMLWriter
      */
     public $voice;
 
+	/**
+     * Type
+     *
+     * @Element(name="type")
+     * @var Type
+     */
+    public $type;
+
     /**
      * @Element
      * @var Accidental
@@ -357,14 +365,6 @@ class Note extends MusicXMLWriter
      * @var Instrument
      */
     public $instrument;
-
-    /**
-     * Type
-     *
-     * @Element(name="type")
-     * @var Type
-     */
-    public $type;
 
     /**
      * Dot
