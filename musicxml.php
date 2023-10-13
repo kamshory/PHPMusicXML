@@ -43,7 +43,7 @@ function createAttribute($attribute)
     }
     
     $attributes = "\t/**
-\t * ".ucfirst(str_replace('-', ' ', $name))." 
+\t * ".ucfirst(str_replace('-', ' ', $name))."
 \t * -
 \t * $description
 \t *
