@@ -29,7 +29,6 @@ function createAttribute($attribute)
     $map = DataType::DATA_TYPE[$type];
     $traditionalType = $map['traditional_type'];
     $attributeName = getAttributeName($name);
-
     
     $allowed = isset($map['allowed_value']) && !empty($map['allowed_value']) ? $map['allowed_value'] : "ANY_VALUE";
     $min = isset($map['min']) ? $map['min'] : "-infinite";
@@ -101,7 +100,6 @@ function removeIfAny($parsed, $key)
     }
     return $parsed;
 }
-
 
 function getObject($element)
 {

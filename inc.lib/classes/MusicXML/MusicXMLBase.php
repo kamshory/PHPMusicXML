@@ -100,7 +100,7 @@ abstract class MusicXMLBase
      */
     public function getNoteType($duration, $divisions)
     {
-        $value = $duration/$divisions;
+        $value = $duration/(4*$divisions);
         foreach($this->type as $type=>$valueType)
         {
             if($value >= $valueType)
@@ -212,6 +212,10 @@ abstract class MusicXMLBase
         $midiInstrument->id = $instrumentId;
         $midiInstrument->midiChannel = new MidiChannel($midiChannel);
         $midiInstrument->midiProgram = new MidiProgram($midiProgramId);
+        if($volume > 100)
+        {
+            $volume = 100;
+        }
         $midiInstrument->volume = new Volume($volume);
         $midiInstrument->pan = new Pan($pan);
         return $midiInstrument;

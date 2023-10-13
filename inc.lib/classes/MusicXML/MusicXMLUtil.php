@@ -1,11 +1,14 @@
 <?php
 namespace MusicXML;
 
+use MusicXML\Model\BeatUnit;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
 use MusicXML\Model\Line;
 use MusicXML\Model\Metronome;
+use MusicXML\Model\MetronomeRelation;
+use MusicXML\Model\PerMinute;
 use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
@@ -138,8 +141,11 @@ class MusicXMLUtil
                     $directionType = new DirectionType();
                     $metronome = new Metronome();
                     $metronome->parentheses = 'no';
-                    $metronome->perMinute = $bpm;
-                    $metronome->beatUnit = 'quarter';
+                    $metronome->perMinute = new PerMinute($bpm);
+                    $metronome->beatUnit = new BeatUnit('quarter');
+                    //$metronome->metronomeRelation = new MetronomeRelation('equals');
+
+
                     $directionType->metronome = $metronome;
                     
                     $directions[$rawtime]->directionType = $directionType;

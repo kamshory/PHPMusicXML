@@ -794,7 +794,12 @@ class MusicXMLFromMidi extends MusicXMLBase
             $midiInstrument->midiChannel = new MidiChannel($channelId);
             $midiInstrument->midiProgram = new MidiProgram($programId);
             $midiInstrument->midiUnpitched = new MidiUnpitched($key);
-            $midiInstrument->volume = new Volume(isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0);
+            $volume = isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0;
+            if($volume > 100)
+            {
+                $volume = 100;
+            }
+            $midiInstrument->volume = new Volume($volume);
             $scorePart->scoreInstrument[] = $scoreInstrument;
             $scorePart->midiInstrument[] = $midiInstrument;
         }
