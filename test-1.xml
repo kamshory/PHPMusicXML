@@ -57,6 +57,19 @@
         </direction-type>
         <sound tempo="120"/>
       </direction>
+      <note attack="0" dynamics="141.11" release="36">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
       <note attack="6" dynamics="141.11" release="30">
         <pitch>
           <step>G</step>

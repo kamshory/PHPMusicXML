@@ -1064,85 +1064,138 @@ class MusicXMLFromMidi extends MusicXMLBase
         $cnt = 0;
         foreach ($noteMessages as $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
-            $note = new Note();
-            
-            $note->voice = $channelId;
-            $noteCode = $message['note'];
-            if($duration > 0)
+            if($this->adible($message, $duration))
             {
-                if($message['event'] == 'On' && $message['value'] > 0 && $noteCode > 13)
+                $offset = $message['abstime'];
+                if($this->isFirstNote($measureIndex, $offset, $cnt))
                 {
-                    $cnt++;
-                    $offset = $message['abstime'];
-                    $length = isset($message['duration']) ? $message['duration'] : 0;
-                    $end = $offset + $length;
-                    if($lastEnd <= $end)
-                    {
-                        $lastEnd = $end;
-                    }
-
-                    $note->dynamics = round($message['value'] / 0.9, 2);
-                    $pitch = $this->getPitch($noteCode);
-                    $note->pitch = $pitch;
-                    if(isset($pitch->alter))
-                    {
-                        if($pitch->alter->textContent > 0)
-                        {
-                            $accidental = new Accidental();
-                            $accidental->textContent = 'sharp';
-                            $note->accidental = $accidental;
-                        }
-                        else if($pitch->alter < 0)
-                        {
-                            $accidental = new Accidental();
-                            $accidental->textContent = 'flat';
-                            $note->accidental = $accidental;
-                        }
-                    }
-                    $note->stem = 'up';
-                    $note->notations = array($this->getNotation());
-                    $duration = $this->fixDuration($duration, $divisions, $timebase);
-                    $note->duration = new Duration($duration);                    
-                    
-                    $note->type = new Type($this->getNoteType($duration, $divisions));                
-                    
-                    $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
-                    $note->attack = $attackRelease->getAttack();
-                    $note->release = $attackRelease->getRelease();
-                    
-                    $measure->note[] = $note;
-
+                    $mod = $offset % ($this->timeSignature->getBeats() * $timebase);
+                    $noteRest = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
+                    $measure->note[] = $noteRest;
                 }
+                $length = isset($message['duration']) ? $message['duration'] : 0;
+                $end = $offset + $length;
+                if($lastEnd <= $end)
+                {
+                    $lastEnd = $end;
+                }
+
+                $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);               
+                $measure->note[] = $note;
+                $cnt++;
             }
         }
 
         $modEnd = $lastEnd % ($this->timeSignature->getBeats() * $timebase);
 
         $max = $timebase * $this->timeSignature->getBeats();
-        if($max > $modEnd && $cnt > 0)
+        if($this->needRest($modEnd, $cnt, $max))
         {
-
-
             $duration = $modEnd / $this->timeSignature->getBeats();
-            if($duration > 0)
-            {
-                $note = new Note();
-                $rest = new Rest();
-                $note->rest = $rest;
-                $duration = $this->fixDuration($duration, $divisions, $timebase);
-                $note->duration = new Duration($duration);
-                $note->type = new Type($this->getNoteType($duration, $divisions));     
-                $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
-                $note->attack = $attackRelease->getAttack();
-                $note->release = $attackRelease->getRelease();
-
-                $measure->note[] = $note;
-            }
-            
+            $note = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $duration);
+            $measure->note[] = $note;
         }
 
-
         return $measure;
+    }
+
+    private function needRest($modEnd, $cnt, $max)
+    {
+        return $max > $modEnd && $modEnd > 0 && $cnt > 0;
+    }
+
+    private function isFirstNote($measureIndex, $offset, $cnt)
+    {
+        return $offset > 0 && $cnt == 0 && $measureIndex == 0;
+    }
+
+    private function adible($message, $duration)
+    {
+        return $duration > 0 && $message['event'] == 'On' && $message['value'] > 0 && $message['note'] > 13;
+    }
+
+    /**
+     * Create rest note
+     *
+     * @param integer $measureIndex
+     * @param array $message
+     * @param integer $divisions
+     * @param integer $timebase
+     * @param integer $duration
+     * @param boolean $begining
+     * @return Note
+     */
+    private function createRestNote($measureIndex, $message, $divisions, $timebase, $duration, $begining = false)
+    {
+        $note = new Note();
+        $rest = new Rest();
+        $note->rest = $rest;
+        $duration = $this->fixDuration($duration, $divisions, $timebase);
+        $note->duration = new Duration($duration);
+        $note->type = new Type($this->getNoteType($duration, $divisions));     
+        if($begining)
+        {
+            $note->attack = 0;
+            $note->release = $duration;
+        }
+        else
+        {
+            $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
+            $note->attack = $attackRelease->getAttack();
+            $note->release = $attackRelease->getRelease();    
+        }
+        return $note;
+    }
+
+
+    /**
+     * Create sound note
+     *
+     * @param integer $measureIndex
+     * @param integer $channelId
+     * @param array $message
+     * @param integer $divisions
+     * @param integer $timebase
+     * @param integer $duration
+     * @return Note
+     */
+    private function createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration)
+    {
+        $noteCode = $message['note'];
+        $note = new Note();
+            
+        $note->voice = $channelId;
+
+        $note->dynamics = round($message['value'] / 0.9, 2);
+        $pitch = $this->getPitch($noteCode);
+        $note->pitch = $pitch;
+        if(isset($pitch->alter))
+        {
+            if($pitch->alter->textContent > 0)
+            {
+                $accidental = new Accidental();
+                $accidental->textContent = 'sharp';
+                $note->accidental = $accidental;
+            }
+            else if($pitch->alter < 0)
+            {
+                $accidental = new Accidental();
+                $accidental->textContent = 'flat';
+                $note->accidental = $accidental;
+            }
+        }
+        $note->stem = 'up';
+        $note->notations = array($this->getNotation());
+        $duration = $this->fixDuration($duration, $divisions, $timebase);
+        $note->duration = new Duration($duration);                    
+        
+        $note->type = new Type($this->getNoteType($duration, $divisions));                
+        
+        $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
+        $note->attack = $attackRelease->getAttack();
+        $note->release = $attackRelease->getRelease();
+
+        return $note;
     }
     
 }
