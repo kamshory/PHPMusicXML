@@ -103,7 +103,7 @@ abstract class MusicXMLBase
         $value = $duration/(4*$divisions);
         foreach($this->type as $type=>$valueType)
         {
-            if($value >= $valueType)
+            if($value > $valueType)
             {
                 return $type;
             }

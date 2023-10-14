@@ -305,6 +305,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 'value' => $v
             );
             $index = count($this->measures[$ch][$tmInteger]);
+            $lastIndex = $index;
             $this->measures[$ch][$tmInteger][$index] = $note;
             
             if(isset($this->lastNote[$ch][$n]) && isset($this->lastNote[$ch][$n]['index']))
@@ -317,7 +318,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             
             
             
-            $this->lastNote[$ch][$n] = array('time'=>$abstime, 'index'=>$index, 'tminteger'=>$tmInteger);
+            $this->lastNote[$ch][$n] = array('time'=>$abstime, 'index'=>$lastIndex, 'tminteger'=>$tmInteger);
+
             if($ch != 10)
             {           
                 if($n < $this->noteMin)
@@ -995,6 +997,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             if(!empty($noteMessages))
             {
                 $measure->note = $this->initializeArray($measure->note);
+
                 $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
             }
             // end add note
@@ -1057,6 +1060,8 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase)
     {
+        $lastEnd = 0;
+        $cnt = 0;
         foreach ($noteMessages as $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
             $note = new Note();
@@ -1067,6 +1072,15 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 if($message['event'] == 'On' && $message['value'] > 0 && $noteCode > 13)
                 {
+                    $cnt++;
+                    $offset = $message['abstime'];
+                    $length = isset($message['duration']) ? $message['duration'] : 0;
+                    $end = $offset + $length;
+                    if($lastEnd <= $end)
+                    {
+                        $lastEnd = $end;
+                    }
+
                     $note->dynamics = round($message['value'] / 0.9, 2);
                     $pitch = $this->getPitch($noteCode);
                     $note->pitch = $pitch;
@@ -1099,16 +1113,35 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $measure->note[] = $note;
 
                 }
-                else if($message['event'] == 'Off')
-                {
-                    $rest = new Rest();
-                    $note->rest = $rest;
-                    $note->duration = new Duration($duration);
-                    $note->type = new Type($this->getNoteType($duration, $divisions));                
-                    $measure->note[] = $note;
-                }
             }
         }
+
+        $modEnd = $lastEnd % ($this->timeSignature->getBeats() * $timebase);
+
+        $max = $timebase * $this->timeSignature->getBeats();
+        if($max > $modEnd && $cnt > 0)
+        {
+
+
+            $duration = $modEnd / $this->timeSignature->getBeats();
+            if($duration > 0)
+            {
+                $note = new Note();
+                $rest = new Rest();
+                $note->rest = $rest;
+                $duration = $this->fixDuration($duration, $divisions, $timebase);
+                $note->duration = new Duration($duration);
+                $note->type = new Type($this->getNoteType($duration, $divisions));     
+                $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
+                $note->attack = $attackRelease->getAttack();
+                $note->release = $attackRelease->getRelease();
+
+                $measure->note[] = $note;
+            }
+            
+        }
+
+
         return $measure;
     }
     

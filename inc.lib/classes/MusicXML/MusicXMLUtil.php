@@ -162,12 +162,22 @@ class MusicXMLUtil
      */
     public static function getClef($min, $max)
     {
+        $mod = $min % 12;
+
         $clefs = array();
         for($i = $max; $i > $min; $i-=36)
         {
             $clef1 = new Clef();
-            $clef1->sign = new Sign('G');
-            $clef1->line = new Line(2);
+            if($mod >= 5)
+            {
+                $clef1->sign = new Sign('F');
+                $clef1->line = new Line(4);
+            }
+            else
+            {
+                $clef1->sign = new Sign('G');
+                $clef1->line = new Line('2');
+            }
             $clefs[] = $clef1;
         }        
         

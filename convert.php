@@ -8,15 +8,15 @@ require_once "inc.lib/autoload.php";
 $musicXML = new MusicXMLFromMidi();
 try
 {
-    $midi = $musicXML->loadMidi("test.mid");
+    $midi = $musicXML->loadMidi("Cinta Pe.mid");
     $mxl = new MXL();
-    $xml = $musicXML->midiToMusicXml($midi, "Test", "4.0", MXL::FORMAT_XML);
+    $xml = $musicXML->midiToMusicXml($midi, "Online", "4.0", MXL::FORMAT_XML);
     
     //compressed version]
     //file_put_contents("convert.mxl", $mxl->createMxl("Test", $xml));
     
     //uncompressed version
-    file_put_contents("test.xml", $xml);
+    file_put_contents("online.xml", $xml);
 }
 catch(Exception $e)
 {
