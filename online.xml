@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="4.0">
+  <work>
+    <work-title>Online</work-title>
+  </work>
+  <identification>
+    <rights type="music"></rights>
+    <encoding>
+      <software>Planetbiru</software>
+      <encoding-date>2023-10-14</encoding-date>
+      <supports element="accidental" type="yes"/>
+      <supports element="beam" type="yes"/>
+      <supports element="print" type="no" attribute="new-page"/>
+      <supports element="print" type="no" attribute="new-system"/>
+      <supports element="stem" type="yes"/>
+      <encoding-description>This software is not ready for production yet</encoding-description>
+      <encoder>music</encoder>
+    </encoding>
+  </identification>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Acoustic Grand Piano</part-name>
+      <part-abbreviation>Pno.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Acoustic Grand Piano</instrument-name>
+        <instrument-sound>keyboard.piano</instrument-sound>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>87.4891</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="1">
+      <attributes>
+        <divisions>24</divisions>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <clef>
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>120</per-minute>
+          </metronome>
+        </direction-type>
+        <sound tempo="120"/>
+      </direction>
+      <note attack="0" dynamics="141.11" release="36">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="6" dynamics="141.11" release="30">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="10" dynamics="141.11" release="46">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="2">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="12" dynamics="141.11" release="84">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="24" release="42">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="3">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="24" dynamics="141.11" release="60">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="30" dynamics="141.11" release="54">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="34" dynamics="141.11" release="70">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="4">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="36" dynamics="141.11" release="108">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="48" release="66">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="5">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="48" dynamics="141.11" release="84">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="54" dynamics="141.11" release="78">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="58" dynamics="141.11" release="94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="6">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="60" dynamics="141.11" release="132">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="72" release="90">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="7">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="72" dynamics="141.11" release="108">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="78" dynamics="141.11" release="102">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="82" dynamics="141.11" release="118">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="8">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="84" dynamics="141.11" release="156">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="96" release="114">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="9">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="96" dynamics="141.11" release="132">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="102" dynamics="141.11" release="126">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="106" dynamics="141.11" release="142">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="10">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="108" dynamics="141.11" release="180">
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="120" release="138">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="11">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="120" dynamics="141.11" release="156">
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="126" dynamics="141.11" release="150">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="130" dynamics="141.11" release="166">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="12">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="132" dynamics="141.11" release="204">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="144" release="162">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="13">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="144" dynamics="141.11" release="180">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="150" dynamics="141.11" release="174">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="154" dynamics="141.11" release="190">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="14">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="156" dynamics="141.11" release="228">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="168" release="186">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <measure number="15">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="168" dynamics="141.11" release="204">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="174" dynamics="141.11" release="198">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <type>eighth</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="178" dynamics="141.11" release="214">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>36</duration>
+        <type>quarter</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+    </measure>
+    <measure number="16">
+      <attributes>
+        <divisions>24</divisions>
+      </attributes>
+      <note attack="180" dynamics="141.11" release="252">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>72</duration>
+        <type>half</type>
+        <notations>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
+      <note attack="192" release="210">
+        <rest/>
+        <duration>18</duration>
+        <type>eighth</type>
+      </note>
+    </measure>
+  </part>
+</score-partwise>
