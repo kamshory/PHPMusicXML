@@ -1,5 +1,5 @@
 <?php
-namespace Exceptions;
+namespace MusicXML\Exceptions;
 
 use Exception;
 use Throwable;

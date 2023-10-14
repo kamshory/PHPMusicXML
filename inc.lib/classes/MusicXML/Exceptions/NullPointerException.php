@@ -1,5 +1,5 @@
 <?php
-namespace Exceptions;
+namespace MusicXML\Exceptions;
 
 class NullPointerException extends \Exception
 {

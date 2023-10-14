@@ -4,8 +4,8 @@ namespace MusicXML;
 
 use DOMDocument;
 use DOMNode;
-use Exceptions\FileNotFoundException;
 use Midi\MidiMeasure;
+use MusicXML\Exceptions\FileNotFoundException;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Divisions;
@@ -355,7 +355,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         else
         {
-            throw new FileNotFoundException("Specified file does not exists");
+            throw new FileNotFoundException("Specified file does not exists: ".$midiPath);
         }
     }
     

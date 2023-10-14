@@ -1,5 +1,5 @@
 <?php
-namespace Exceptions;
+namespace MusicXML\Exceptions;
 
 class NoPrimaryKeyDefinedException extends \Exception
 {
