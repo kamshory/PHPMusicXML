@@ -8,7 +8,7 @@
     <rights type="music"></rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-14</encoding-date>
+      <encoding-date>2023-10-15</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" type="no" attribute="new-page"/>
@@ -70,14 +70,16 @@
           </articulations>
         </notations>
       </note>
-      <note attack="12" dynamics="141.11" release="84">
+      <note attack="12" dynamics="141.11" release="36">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
-        <type>half</type>
+        <duration>24</duration>
+        <tie type="start"/>
+        <type>quarter</type>
         <notations>
+          <tied type="start"/>
           <articulations>
             <staccato/>
           </articulations>
@@ -93,6 +95,17 @@
       <attributes>
         <divisions>24</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>48</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="0" release="48">
         <rest/>
         <duration>48</duration>
@@ -124,14 +137,16 @@
           </articulations>
         </notations>
       </note>
-      <note attack="26" dynamics="141.11" release="50">
+      <note attack="26" dynamics="141.11" release="38">
         <pitch>
           <step>C</step>
           <octave>4</octave>
         </pitch>
-        <duration>24</duration>
-        <type>eighth</type>
+        <duration>12</duration>
+        <tie type="start"/>
+        <type>16th</type>
         <notations>
+          <tied type="start"/>
           <articulations>
             <staccato/>
           </articulations>
@@ -147,6 +162,17 @@
       <attributes>
         <divisions>24</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="0" release="12">
         <rest/>
         <duration>12</duration>
