@@ -70,9 +70,9 @@ class MusicXMLWriter // NOSONAR
             {
                 $this->objectName = $vals['name'];
             }
-            }
-            if($data !== null)
-            {
+        }
+        if($data !== null)
+        {
             if($data instanceof DOMNode)
             {
                 $this->loadXml($data);

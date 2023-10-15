@@ -91,41 +91,6 @@ abstract class MusicXMLBase
         return $notations;
     }
 
-    /**
-     * Dget note type
-     *
-     * @param integer $duration
-     * @param integer $divisions
-     * @return string
-     */
-    public function getNoteType($duration, $divisions)
-    {
-        $value = $duration/(4*$divisions);
-        foreach($this->type as $type=>$valueType)
-        {
-            if($value > $valueType)
-            {
-                return $type;
-            }
-        }
-        return 'whole';
-    }
-    protected $type = array(
-        'maxima'=>5,
-        'long'=>4,
-        'breve'=>2,
-        'whole'=>1,
-        'half'=>1/2,
-        'quarter'=>1/4,
-        'eighth'=>1/8,
-        '16th'=>1/16,
-        '32nd'=>1/32,
-        '64th'=>1/64,
-        '128th'=>1/128,
-        '256th'=>1/256,
-        '512th'=>1/512,
-        '1024th'=>1/1024
-    );
     
     /**
      * Initialize array

@@ -28,9 +28,12 @@ use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
 use MusicXML\Model\Staves;
 use MusicXML\Model\Technical;
+use MusicXML\Model\Tie;
+use MusicXML\Model\Tied;
 use MusicXML\Model\Type;
 use MusicXML\Model\Volume;
 use MusicXML\Properties\MidiEvent;
+use MusicXML\Properties\TieStop;
 use MusicXML\Properties\TimeSignature;
 use MusicXML\Util\MXL;
 
@@ -1047,6 +1050,8 @@ class MusicXMLFromMidi extends MusicXMLBase
         return $measure;
     }
 
+    private $tieStop = array();
+
     /**
      * Add element to measure
      *
@@ -1064,6 +1069,17 @@ class MusicXMLFromMidi extends MusicXMLBase
         $cnt = 0;
         $offset = 0;
         $end = 0;
+        $max = $timebase * $this->timeSignature->getBeats();
+
+        // before add current note, if this measure has tie stop, create it first
+        if(isset($this->tieStop[$measureIndex]))
+        {
+            foreach($this->tieStop[$measureIndex] as $tieStop)
+            {
+                $measure->note[] = $tieStop->getNote();
+            }
+        }
+
         foreach ($noteMessages as $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
             if ($this->adible($message, $duration)) {
@@ -1097,6 +1113,33 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
 
                 $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);
+
+
+                $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());
+                
+                $tend = $toffset + $duration;
+                if($tend > $max)
+                {
+                    $originalDuration = $note->duration->textContent;
+                    $note = $this->trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max);
+                    $remaining = $originalDuration - $note->duration->textContent;
+                    $tieRange = $remaining / $this->timeSignature->getBeats();
+                    $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions);
+                    if(!isset($this->tieStop[$nextMeasureIndex]))
+                    {
+                        $this->tieStop[$nextMeasureIndex] = array();
+                    }
+                    $timeRemaining = $message['duration'] - ($duration * $divisions / $timebase);
+                    
+
+                    $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
+                    
+
+                    $this->tieStop[$nextMeasureIndex][] = $this->createTieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions);
+                }
+
+                
+
                 $measure->note[] = $note;
                 $cnt++;
             }
@@ -1104,15 +1147,73 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         $modEnd = $lastEnd % ($this->timeSignature->getBeats() * $timebase);
 
-        $max = $timebase * $this->timeSignature->getBeats();
         if ($this->needRestEnd($modEnd, $cnt, $max)) {
             // add rest at the end
             $duration = $modEnd / $this->timeSignature->getBeats();
             $note = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $duration);
             $measure->note[] = $note;
         }
+        file_put_contents('test.txt', print_r($this->tieStop, true));
 
         return $measure;
+    }
+
+    private function createTieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions)
+    {
+        return new TieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions);
+    }
+
+    /**
+     * Check if note is trimmed or note
+     *
+     * @param Note $note
+     * @return boolean
+     */
+    private function isTrimmed($note)
+    {
+        echo "IS TRIMMED ".$note->tie."\r\n";
+        return isset($note->tie) && isset($note->tie->type);
+    }
+
+    /**
+     * Trim note duration
+     *
+     * @param Note $note
+     * @param integer $toffset Offset of note
+     * @param integer $divisions
+     * @param integer $timebase
+     * @param integer $duration Original duration
+     * @param integer $tend Actual time end of note
+     * @param integer $max Maximum time of measure
+     * @return Note
+     */
+    private function trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max)
+    {
+        $newDuration = $max - $toffset;
+        //echo "MAX = $max\r\n";
+        //echo "toffset = $toffset\r\n";
+        //echo "NEW DURATION = $newDuration\r\n";
+        
+        while($newDuration < 0)
+        {
+            $newDuration += $timebase;
+        }
+        //echo "NEW DURATION = $newDuration\r\n";
+        if($duration > 0)
+        {
+            $newDuration = $this->fixDuration($newDuration, $divisions, $timebase);
+            //echo "NEW DURATION = $newDuration\r\n";
+            $note->duration = new Duration($newDuration);                                
+            $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
+            $note->release = $note->attack + $newDuration;
+            $tie = new Tie();
+            $tie->type = 'start';
+            $tied = new Tied();
+            $tied->type = 'start';
+            $note->tie = $tie;
+            $note->notations[0]->tied = $tied;
+        }
+        return $note;
     }
 
     private function needRestMiddle($offset, $lastEnd)
@@ -1153,7 +1254,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $note->rest = $rest;
         $duration = $this->fixDuration($duration, $divisions, $timebase);
         $note->duration = new Duration($duration);
-        $note->type = new Type($this->getNoteType($duration, $divisions));     
+        $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));    
         if($begining)
         {
             $note->attack = 0;
@@ -1209,7 +1310,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $duration = $this->fixDuration($duration, $divisions, $timebase);
         $note->duration = new Duration($duration);                    
         
-        $note->type = new Type($this->getNoteType($duration, $divisions));                
+        $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));            
         
         $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
         $note->attack = $attackRelease->getAttack();

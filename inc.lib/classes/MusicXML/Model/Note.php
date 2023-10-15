@@ -270,6 +270,13 @@ class Note extends MusicXMLWriter
      */
     public $duration;
 
+	/**
+     * Tie
+     * @Element
+     * @var Tie
+     */
+    public $tie;
+
     /**
      * Voice
      * @Element(name="voice")
@@ -326,13 +333,6 @@ class Note extends MusicXMLWriter
      * @var Beam
      */
     public $beam;
-
-    /**
-     * Tie
-     * @Element
-     * @var Tie
-     */
-    public $tie;
 
     /**
      * Lyric
