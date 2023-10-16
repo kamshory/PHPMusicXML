@@ -248,6 +248,4 @@ class Metronome extends MusicXMLWriter
      */
     public $metronomeNote;
 
-    
-
 }

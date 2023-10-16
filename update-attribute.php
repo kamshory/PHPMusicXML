@@ -16,7 +16,6 @@ $containers = $doc->getElementsByTagName('table');
 $tableIndex = 0;
 $rowIndex = 0;
 foreach ($containers as $container2) {
-   
     foreach ($container2->getElementsByTagName('tbody') as $container3) {
         foreach ($container3->getElementsByTagName('tr') as $tr) {
 

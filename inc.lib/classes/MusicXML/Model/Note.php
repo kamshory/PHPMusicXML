@@ -26,7 +26,7 @@ class Note extends MusicXMLWriter
 	 *
 	 * @Attribute(name="attack")
 	 * @Value(type="divisions" required="false", min="-infinite", max="infinite")
-	 * @var integer
+	 * @var float
 	 */
 	public $attack;
 
@@ -235,7 +235,7 @@ class Note extends MusicXMLWriter
 	 *
 	 * @Attribute(name="release")
 	 * @Value(type="divisions" required="false", min="-infinite", max="infinite")
-	 * @var integer
+	 * @var float
 	 */
 	public $release;
 

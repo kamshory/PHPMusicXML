@@ -12,7 +12,8 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * @ParentEelement(name="note")
+ * @Element(name="notehead")
+ * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/notehead/
  * @Data
  */
