@@ -32,19 +32,157 @@ Array
                             [rest] => 
                             [pitch] => MusicXML\Model\Pitch Object
                                 (
-                                    [step] => stdClass Object
+                                    [step] => MusicXML\Model\Step Object
                                         (
                                             [textContent] => G
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => step
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [step] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => step
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Step
                                         )
 
-                                    [alter] => stdClass Object
+                                    [alter] => MusicXML\Model\Alter Object
                                         (
                                             [textContent] => 1
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => alter
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [alter] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => alter
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Alter
                                         )
 
-                                    [octave] => stdClass Object
+                                    [octave] => MusicXML\Model\Octave Object
                                         (
                                             [textContent] => 2
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => octave
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [octave] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => octave
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Octave
                                         )
 
                                     [classParams:MusicXML\MusicXMLWriter:private] => Array
@@ -207,7 +345,7 @@ Array
                                 (
                                     [id] => 
                                     [printObject] => 
-                                    [tied] => stdClass Object
+                                    [tied] => MusicXML\Model\Tied Object
                                         (
                                             [type] => stop
                                             [bezierOffset] => 
@@ -228,6 +366,52 @@ Array
                                             [relativeX] => 
                                             [relativeY] => 
                                             [spaceLength] => 
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => tied
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => notations
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [tied] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => tied
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Tied
                                         )
 
                                     [slur] => 
@@ -931,19 +1115,157 @@ Array
                             [rest] => 
                             [pitch] => MusicXML\Model\Pitch Object
                                 (
-                                    [step] => stdClass Object
+                                    [step] => MusicXML\Model\Step Object
                                         (
                                             [textContent] => F
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => step
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [step] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => step
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Step
                                         )
 
-                                    [alter] => stdClass Object
+                                    [alter] => MusicXML\Model\Alter Object
                                         (
                                             [textContent] => 1
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => alter
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [alter] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => alter
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Alter
                                         )
 
-                                    [octave] => stdClass Object
+                                    [octave] => MusicXML\Model\Octave Object
                                         (
                                             [textContent] => 3
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => octave
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [octave] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => octave
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Octave
                                         )
 
                                     [classParams:MusicXML\MusicXMLWriter:private] => Array
@@ -1330,15 +1652,107 @@ Array
                             [rest] => 
                             [pitch] => MusicXML\Model\Pitch Object
                                 (
-                                    [step] => stdClass Object
+                                    [step] => MusicXML\Model\Step Object
                                         (
                                             [textContent] => A
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => step
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [step] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => step
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Step
                                         )
 
                                     [alter] => 
-                                    [octave] => stdClass Object
+                                    [octave] => MusicXML\Model\Octave Object
                                         (
                                             [textContent] => 3
+                                            [classParams:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                    [Xml] => Array
+                                                        (
+                                                        )
+
+                                                    [MusicXML] => Array
+                                                        (
+                                                        )
+
+                                                    [Element] => Array
+                                                        (
+                                                            [name] => octave
+                                                        )
+
+                                                    [ParentElement] => Array
+                                                        (
+                                                            [name] => pitch
+                                                        )
+
+                                                    [Reference] => Array
+                                                        (
+                                                            [https] => 1
+                                                            [www] => 1
+                                                            [w3] => 1
+                                                            [org] => 1
+                                                            [_2021] => 1
+                                                            [_06] => 1
+                                                            [musicxml40] => 1
+                                                            [musicxml-reference] => 1
+                                                            [elements] => 1
+                                                            [octave] => 1
+                                                        )
+
+                                                    [Data] => Array
+                                                        (
+                                                        )
+
+                                                )
+
+                                            [nullProperties:MusicXML\MusicXMLWriter:private] => Array
+                                                (
+                                                )
+
+                                            [_objectName:MusicXML\MusicXMLWriter:private] => octave
+                                            [_className:MusicXML\MusicXMLWriter:private] => MusicXML\Model\Octave
                                         )
 
                                     [classParams:MusicXML\MusicXMLWriter:private] => Array

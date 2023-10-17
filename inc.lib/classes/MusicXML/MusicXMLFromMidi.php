@@ -297,6 +297,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $this->lastNote[$ch][$n] = array();
             }
+            $mod = $tm % ($timebase * $this->timeSignature->getBeats());           
+            $startAt = floor($mod / $timebase);           
             $note = array(
                 'event' => $eventName, 
                 'message' => $message, 
@@ -305,7 +307,8 @@ class MusicXMLFromMidi extends MusicXMLBase
                 'offset' => $offset,
                 'channel' => $ch, 
                 'note' => $n, 
-                'value' => $v
+                'value' => $v,
+                'startAt' => $startAt
             );
             $index = count($this->measures[$ch][$tmInteger]);
             $lastIndex = $index;
