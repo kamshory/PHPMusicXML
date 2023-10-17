@@ -73,5 +73,13 @@ class Beam extends MusicXMLWriter
 	 * @var string
 	 */
 	public $repeater;
+	
+	/**
+	 * Text content
+	 *
+	 * @TextContent
+	 * @var string
+	 */
+	public $textContent;
 
 }

@@ -15,7 +15,9 @@ use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
 use MusicXML\Model\WorkTitle;
 use MusicXML\Properties\AttackRelease;
+use MusicXML\Properties\BeamNote;
 use MusicXML\Properties\Coordinate;
+use MusicXML\Properties\TimeSignature;
 
 class MusicXMLUtil
 {
@@ -319,6 +321,46 @@ class MusicXMLUtil
             }
         }
         return false;
+    }
+    
+    /**
+     * Get beams
+     *
+     * @param MeasurePartwise
+     * @param array $noteMessages
+     * @param integer $timebase
+     * @param TimeSignature $timeSignature
+     * @return BeamNote[] | false
+     */
+    public static function getBeams($measure, $noteMessages, $timebase, $timeSignature)
+    {
+        $beamNotes = array(); 
+        for($i = 0; $i < $timeSignature->getBeats(); $i++)
+        {
+            $time1 = $timebase * $i;
+            $time2 = $timebase * ($i + 1);
+            $j = 0;
+            foreach($noteMessages as $key=>$message)
+            {
+                if($noteMessages[$key]['event'] == 'On')
+                {
+                    $rtime = $noteMessages[$key]['time'] % $timebase;
+                    $duration = $noteMessages[$key]['duration'];
+                    if($rtime <= $time1 && ($rtime + $duration) <= $time2)
+                    {
+                        $k = self::getElementIndexFromNoteIndex($measure, $key);
+                        $beamNotes[] = new BeamNote($i, $j, $k);
+                        $j++;   
+                    }
+                }
+            }
+        }
+        if(empty($beamNotes))
+        {
+            return false;
+        }
+        $beamNotes = BeamNote::closeBeams($beamNotes);
+        return $beamNotes;
     }
     
     /**

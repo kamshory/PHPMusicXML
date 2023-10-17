@@ -963,9 +963,6 @@ class MusicXMLFromMidi extends MusicXMLBase
             }       
         }
         
-        
-        
-        
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $controlEvents = MusicXMLUtil::getControlEvent($midiEventMessages);
@@ -1012,10 +1009,8 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
 
         
-        if ($this->hasMessage($channelId, $measureIndex)) {
-            
-            // end add attribute
-
+        if ($this->hasMessage($channelId, $measureIndex)) 
+        {
             // begin add note
             
             $noteMessages = MusicXMLUtil::getNotes($midiEventMessages);
@@ -1066,8 +1061,20 @@ class MusicXMLFromMidi extends MusicXMLBase
                     }
                 }
                 
-            }           
-        } 
+            }
+            
+            // set beam if any
+            $beams = MusicXMLUtil::getBeams($measure, $noteMessages, $timebase, $this->timeSignature);
+            if($beams !== false)
+            {
+                foreach($beams as $beamNote)
+                {
+                    $measure->elements[$beamNote->index]->beam = $beamNote->beam;
+                }
+            }
+        }  
+        
+        
         return $measure;
     }
 
