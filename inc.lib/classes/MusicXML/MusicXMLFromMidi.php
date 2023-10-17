@@ -27,6 +27,7 @@ use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
 use MusicXML\Model\Staves;
+use MusicXML\Model\Technical;
 use MusicXML\Model\Tie;
 use MusicXML\Model\Tied;
 use MusicXML\Model\Type;
@@ -1041,25 +1042,26 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
                 
                 // pre bend
-                /*
-                foreach($pbIndexes as $pitchBend)
+                
+                foreach($pbIndexes as $idx=>$pitchBend)
                 {
-                    if(isset($measure->note[$idx]->notations) && is_array(isset($measure->note[$idx]->notations)) && !empty(isset($measure->note[$idx]->notations)))
+                    $elementIndex = MusicXMLUtil::getElementIndexFromNoteIndex($measure, $idx);
+                    if($elementIndex !== false && isset($measure->elements[$elementIndex]->notations) && is_array(isset($measure->elements[$elementIndex]->notations)) && !empty(isset($measure->elements[$elementIndex]->notations)))
                     {
                         $bend = $this->getBend($pitchBend[0]);
                         $technical = new Technical();
                         $technical->bend = array($bend);
-                        if(!isset($measure->note[$idx]->notations[0]->technical))
+                        if(!isset($measure->elements[$elementIndex]->notations[0]->technical))
                         {
-                            $measure->note[$idx]->notations[0]->technical = array($technical);
+                            $measure->elements[$elementIndex]->notations[0]->technical = array($technical);
                         }
                         else
                         {
-                            $measure->note[$idx]->notations[0]->technical[0] = $technical;
+                            $measure->elements[$elementIndex]->notations[0]->technical[0] = $technical;
                         }
                     }
                 }
-                */
+                
             }           
         } 
         return $measure;

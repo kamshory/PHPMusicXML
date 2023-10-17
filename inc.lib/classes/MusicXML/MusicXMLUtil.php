@@ -6,8 +6,9 @@ use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
 use MusicXML\Model\Line;
+use MusicXML\Model\MeasurePartwise;
 use MusicXML\Model\Metronome;
-use MusicXML\Model\MetronomeRelation;
+use MusicXML\Model\Note;
 use MusicXML\Model\PerMinute;
 use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
@@ -291,6 +292,30 @@ class MusicXMLUtil
             if($noteMessages[$key]['time'] < $time && ($noteMessages[$key]['time'] + $duration) > $time)
             {
                 return $key;
+            }
+        }
+        return false;
+    }
+    
+    /**
+     * Get element index from note index
+     *
+     * @param MeasurePartwise $measure
+     * @param integer $idx
+     * @return integer|boolean
+     */
+    public static function getElementIndexFromNoteIndex($measure, $idx)
+    {
+        $cnt = 0;
+        foreach($measure->elements as $elementIndex=>$element)
+        {
+            if($element instanceof Note)
+            {
+                if($cnt == $idx)
+                {
+                    return $elementIndex;
+                }
+                $cnt++;
             }
         }
         return false;
