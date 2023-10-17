@@ -6,7 +6,6 @@ use DateTime;
 use DOMNode;
 use MusicXML\Map\ModelParser;
 use MusicXML\Map\NodeType;
-use MusicXML\Model\Pan;
 use MusicXML\Util\PicoAnnotationParser;
 use ReflectionClass;
 use stdClass;
@@ -37,9 +36,9 @@ class MusicXMLWriter // NOSONAR
      */
     private $nullProperties = array();
     
-    private $objectName = '';
+    private $_objectName = '';
     
-    private $className = '';
+    private $_className = '';
 
     /**
      * Get null properties
@@ -50,6 +49,11 @@ class MusicXMLWriter // NOSONAR
     {
         return $this->nullProperties;
     }
+    
+    public function objectName()
+    {
+        return $this->_objectName;
+    }
 
     /**
      * Constructor
@@ -59,16 +63,16 @@ class MusicXMLWriter // NOSONAR
      */
     public function __construct($data = null, $option = null)
     {
-        $this->className = get_class($this);
-        $jsonAnnot = new PicoAnnotationParser($this->className);
+        $this->_className = get_class($this);
+        $jsonAnnot = new PicoAnnotationParser($this->_className);
         $params = $jsonAnnot->getParameters();
         foreach($params as $paramName=>$paramValue)
         {
             $vals = $jsonAnnot->parseKeyValue($paramValue);
             $this->classParams[$paramName] = $vals;
-            if($paramName == 'Xml' && isset($vals['name']))
+            if($paramName == 'Element' && isset($vals['name']))
             {
-                $this->objectName = $vals['name'];
+                $this->_objectName = $vals['name'];
             }
         }
         if($data !== null)
@@ -78,7 +82,7 @@ class MusicXMLWriter // NOSONAR
                 $this->loadXml($data);
             }
             else if(($data instanceof DateTime || is_string($data) || is_numeric($data) || is_float($data) || is_integer($data)) 
-            && property_exists($this->className, 'textContent'))
+            && property_exists($this->_className, 'textContent'))
             {
                 $this->setTextContent($data);
             }
@@ -91,7 +95,7 @@ class MusicXMLWriter // NOSONAR
     
     private function mapAttribute()
     {
-        return ModelParser::parseModel($this->className, $this);
+        return ModelParser::parseModel($this->_className, $this);
     }
     
     private function loadXml($data)
@@ -696,10 +700,10 @@ class MusicXMLWriter // NOSONAR
     }
 
     /**
-     * Get the value of objectName
+     * Get the value of _objectName
      */ 
     public function getObjectName()
     {
-        return $this->objectName;
+        return $this->_objectName;
     }
 }

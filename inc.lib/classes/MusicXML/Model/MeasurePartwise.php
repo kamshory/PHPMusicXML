@@ -86,115 +86,11 @@ class MeasurePartwise extends MusicXMLWriter
 	public $width;
 
     /**
-     * Attribute list
+     * Elements of measure
      *
-     * @Element(name="attributes")
-     * @var Attributes
+     * @Element(identification="element")
+     * @var MusicXMLWriter[]
      */
-    public $attributes;
-
-    /**
-     * Direction
-     *
-     * @Element
-     * @var Direction[]
-     */
-    public $direction;
-
-    /**
-     * Note list
-     *
-     * @Element
-     * @var Note[]
-     */
-    public $note;
-
-    /**
-     * Backup
-     *
-     * @Element
-     * @var Backup[]
-     */
-    public $backup;
-
-    /**
-     * Grouping
-     *
-     * @Element(name="grouping")
-     * @var Grouping[]
-     */
-    public $grouping;
-
-    /**
-     * Link
-     *
-     * @Element(name="link")
-     * @var Link[]
-     */
-    public $link;
-
-    /**
-     * Bookmark
-     *
-     * @Element
-     * @var Bookmark[]
-     */
-    public $bookmark;
-
-    /**
-     * Forward
-     *
-     * @Element(name="forward")
-     * @var Forward
-     */
-    public $forward;
-
-    /**
-     * Harmony
-     *
-     * @Element(name="harmony")
-     * @var Harmony
-     */
-    public $harmony;
-
-    /**
-     * Figured bass
-     *
-     * @Element(name="figured-bass")
-     * @var FiguredBass
-     */
-    public $figuredBass;
-
-    /**
-     * XPrint
-     *
-     * @Element(name="print")
-     * @var XPrint
-     */
-    public $print;
-
-    /**
-     * Sound
-     *
-     * @Element(name="sound")
-     * @var Sound
-     */
-    public $sound;
-
-    /**
-     * Listening
-     *
-     * @Element(name="listening")
-     * @var Listening
-     */
-    public $listening;
-
-    /**
-     * Barline
-     *
-     * @Element(name="barline")
-     * @var Barline
-     */
-    public $barline;
+    public $elements;
 
 }

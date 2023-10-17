@@ -18,6 +18,8 @@ class MusicXMLBuilder
     const ANNOTATION_XML = "Xml";
     const KEY_NAME = "name";
     const KEY_VALUE = "value";
+    const KEY_IDENTIFICATION = "identification";
+    const ELEMENT = "element";
     const DATE_FORMAT = "Y-m-d";
     
     /**
@@ -77,6 +79,17 @@ class MusicXMLBuilder
     }
     
     /**
+     * Get value identification
+     *
+     * @param array $values
+     * @return string
+     */
+    private function getValueIdentification($values)
+    {
+        return !empty($values) && isset($values[self::KEY_IDENTIFICATION]) ? trim($values[self::KEY_IDENTIFICATION]) : null;
+    }
+    
+    /**
      * Get tag name
      *
      * @param string $name
@@ -128,6 +141,8 @@ class MusicXMLBuilder
                 $values = $reflexProp->parseKeyValue($paramValue);
                 $elementName = $this->getValueName($values, $propertyName);
                 $musicXMLPropertyInfo->setElementName($elementName);
+                $identification = $this->getValueIdentification($values);
+                $musicXMLPropertyInfo->setIdentification($identification);
             }
             else if(strcasecmp($param, self::ANNOTATION_PROPERTY_ELEMENT) == 0)
             {
@@ -170,11 +185,15 @@ class MusicXMLBuilder
                         {
                             if($propertInfo->getElement())
                             {
-                                if($this->notNullAndNotEmpty($propertInfo->getElementName()))
+                                if($propertInfo->getIdentification() != null)
+                                {
+                                    $tag = $value->objectName();
+                                }
+                                else if($this->notNullAndNotEmpty($propertInfo->getElementName()))
                                 {
                                     $tag = $propertInfo->getElementName();
                                 }
-                                else
+                                else 
                                 {
                                     $tag = $propertInfo->getName();
                                 }
@@ -183,7 +202,11 @@ class MusicXMLBuilder
                             }
                             else if($propertInfo->getPropertyElement())
                             {
-                                if($this->notNullAndNotEmpty($propertInfo->getPropertyElementName()))
+                                if($propertInfo->getIdentification() != null)
+                                {
+                                    $tag = $value->objectName();
+                                }
+                                else if($this->notNullAndNotEmpty($propertInfo->getPropertyElementName()))
                                 {
                                     $tag = $propertInfo->getPropertyElementName();
                                 }
@@ -288,5 +311,15 @@ class MusicXMLBuilder
     private function notNullAndNotEmpty($value)
     {
         return $value !== null && (!is_string($value) || (is_string($value) && !empty($value)));
+    }
+
+    /**
+     * Get class name
+     *
+     * @return  string
+     */ 
+    public function getObjectName()
+    {
+        return $this->objectName;
     }
 }

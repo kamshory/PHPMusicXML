@@ -94,6 +94,13 @@ class MusicXMLPropertyInfo //NOSONAR
      */
     private $textContentValue = "";
     
+    /**
+     * Identification
+     *
+     * @var string
+     */
+    private $identification = null;
+    
     
 
     /**
@@ -404,6 +411,30 @@ class MusicXMLPropertyInfo //NOSONAR
     public function setName(string $name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get identification
+     *
+     * @return  string
+     */ 
+    public function getIdentification()
+    {
+        return $this->identification;
+    }
+
+    /**
+     * Set identification
+     *
+     * @param  string|null  $identification  Identification
+     *
+     * @return  self
+     */ 
+    public function setIdentification($identification)
+    {
+        $this->identification = $identification;
 
         return $this;
     }
