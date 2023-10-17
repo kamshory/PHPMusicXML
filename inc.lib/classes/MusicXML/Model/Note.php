@@ -6,6 +6,9 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Note
+ * -
+ * Note is class of element &lt;note&gt; Open link at &#64;Referece to read full documentation
+ * 
  * @Xml
  * @MusicXML
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
@@ -16,10 +19,10 @@ class Note extends MusicXMLWriter
 	/**
 	 * Attack 
 	 * -
-	 * Alters the starting time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A <note> that stops a tie should not have an attack attribute. The attack and release attributes are independent of each other. The attack attribute only changes the starting time of a note.
+	 * Alters the starting time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A &lt;note&gt; that stops a tie should not have an attack attribute. The attack and release attributes are independent of each other. The attack attribute only changes the starting time of a note.
 	 *
 	 * @Attribute(name="attack")
-	 * @Value(type="divisions" required="false", min="infinite", max="infinite")
+	 * @Value(type="divisions" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $attack;
@@ -41,7 +44,7 @@ class Note extends MusicXMLWriter
 	 * Changes the computation of the default horizontal position. The origin is changed relative to the start of the entire current measure, at either the left barline or the start of the system. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
-	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
+	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $defaultX;
@@ -52,7 +55,7 @@ class Note extends MusicXMLWriter
 	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
-	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
+	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $defaultY;
@@ -63,7 +66,7 @@ class Note extends MusicXMLWriter
 	 * Corresponds to MIDI 1.0's Note On velocity, expressed in terms of percentage of the default forte value (90 for MIDI 1.0).
 	 *
 	 * @Attribute(name="dynamics")
-	 * @Value(type="non-negative-decimal" required="false", min="infinite", max="infinite")
+	 * @Value(type="non-negative-decimal" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $dynamics;
@@ -74,7 +77,7 @@ class Note extends MusicXMLWriter
 	 * Corresponds to MIDI 1.0's Note Off velocity, expressed in terms of percentage of the default forte value (90 for MIDI 1.0).
 	 *
 	 * @Attribute(name="end-dynamics")
-	 * @Value(type="non-negative-decimal" required="false", min="infinite", max="infinite")
+	 * @Value(type="non-negative-decimal" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $endDynamics;
@@ -137,7 +140,7 @@ class Note extends MusicXMLWriter
 	/**
 	 * Pizzicato 
 	 * -
-	 * Used when just this note is sounded pizzicato, vs. the <pizzicato> element which changes overall playback between pizzicato and arco.
+	 * Used when just this note is sounded pizzicato, vs. the &lt;pizzicato&gt; element which changes overall playback between pizzicato and arco.
 	 *
 	 * @Attribute(name="pizzicato")
 	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
@@ -203,10 +206,10 @@ class Note extends MusicXMLWriter
 	/**
 	 * Relative x 
 	 * -
-	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the <offset> element or directive attribute if those are present.
+	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the &lt;offset&gt; element or directive attribute if those are present.
 	 *
 	 * @Attribute(name="relative-x")
-	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
+	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $relativeX;
@@ -217,7 +220,7 @@ class Note extends MusicXMLWriter
 	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down. It should be interpreted in the context of the placement attribute if that is present.
 	 *
 	 * @Attribute(name="relative-y")
-	 * @Value(type="tenths" required="false", min="infinite", max="infinite")
+	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $relativeY;
@@ -225,10 +228,10 @@ class Note extends MusicXMLWriter
 	/**
 	 * Release 
 	 * -
-	 * Alters the stopping time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A <note> that starts a tie should not have a release attribute. The attack and release attributes are independent of each other. The release attribute only changes the stopping time of a note.
+	 * Alters the stopping time of the note from when it would otherwise occur based on the flow of durations - information that is specific to a performance. It is expressed in terms of divisions, either positive or negative. A &lt;note&gt; that starts a tie should not have a release attribute. The attack and release attributes are independent of each other. The release attribute only changes the stopping time of a note.
 	 *
 	 * @Attribute(name="release")
-	 * @Value(type="divisions" required="false", min="infinite", max="infinite")
+	 * @Value(type="divisions" required="false", min="-infinite", max="infinite")
 	 * @var float
 	 */
 	public $release;
@@ -243,49 +246,6 @@ class Note extends MusicXMLWriter
 	 * @var string
 	 */
 	public $timeOnly;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /**
      * @Element
@@ -364,7 +324,6 @@ class Note extends MusicXMLWriter
      * @var Lyric
      */
     public $lyric;
-
 
     /**
      * Grace

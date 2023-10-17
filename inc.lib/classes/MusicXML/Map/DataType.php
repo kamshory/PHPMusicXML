@@ -9,7 +9,7 @@ namespace MusicXML\Map;
 class DataType
 {
     const DATA_TYPE = array(
-        "above-below" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/above-below/
+        "above-below" => array("traditional_type" => "string", "filter" => null, "allowed_value" => "ubove,below"), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/above-below/
         "accidental-value" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/accidental-value/
         "accordion-middle" => array("traditional_type" => "integer", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/accordion-middle/ base=positiveInteger
         "anyURI" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xsd-anyURI/

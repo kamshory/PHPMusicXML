@@ -23,14 +23,14 @@ function createAttribute($attribute)
 {
     $name = $attribute['name'];
     $type = $attribute['type'];
-    $description = $attribute['description'];
+    $description = htmlspecialchars($attribute['description']);
     $required = strtolower(trim($attribute['required'])) == 'yes' ? 'true':'false';
     
     $traditionalType = getAttrType($type);
     $attributeName = getAttributeName($name);
     
-    $allowed = isset($attribute['allowed_value']) && is_array($attribute['allowed_value']) && !empty($attribute['allowed_value']) ? implode(",", $attribute['allowed_value']) : "ANY_VALUE";
-    $min = isset($attribute['mim']) ? $attribute['min'] : "infinite";
+    $allowed = isset($attribute['allowed_value']) && is_array($attribute['allowed_value']) && !empty($attribute['allowed_value']) ? $attribute['allowed_value'] : "ANY_VALUE";
+    $min = isset($attribute['mim']) ? $attribute['min'] : "-infinite";
     $max = isset($attribute['max']) ? $attribute['max'] : "infinite";
     
     if($traditionalType == 'float' || $traditionalType == 'integer')
@@ -43,7 +43,7 @@ function createAttribute($attribute)
     }
     
     $attributes = "\t/**
-\t * ".ucfirst(str_replace('-', ' ', $name))." 
+\t * ".ucfirst(str_replace('-', ' ', $name))."
 \t * -
 \t * $description
 \t *
@@ -122,6 +122,7 @@ if (file_exists($path))
 }
 
 $attributes = array();
+$parents = array();
 if (url_check($url)) {
     $doc = new DomDocument;
     $doc->validateOnParse = true;
@@ -149,6 +150,18 @@ if (url_check($url)) {
                 $rowIndex++;
             }
         }
+        foreach ($container2->getElementsByTagName('p') as $par)
+        {
+            $ptext = trim($par->nodeValue);
+            if(stripos($ptext, 'Parent elements:') !== false || stripos($ptext, 'Parent element:') !== false)
+            {
+                foreach($par->getElementsByTagName('a') as $a)
+                {
+                    $text = $a->nodeValue;
+                    $parents[] = trim($text);
+                }
+            }
+        }
         $tableIndex++;
     }
 } else {
@@ -167,6 +180,30 @@ foreach ($attributes as $attribute) {
     
     $attrs[] = $attr;
 }
+if(count($parents) > 1)
+{
+    $parentElement = 'Parent elements: '.implode(', ', $parents);
+}
+else if(count($parents) == 1)
+{
+    $parentElement = 'Parent element: '.implode(', ', $parents);
+
+}
+else
+{
+    $parentElement = 'Parent element: none';
+}
+
+$pel = implode(',', $parents);
+
+if(strpos($pel, '<') !== false)
+{
+    $parentElementAnnotation = "\r\n".' * @ParentEelement="'.str_replace(array('<', '>'), '', $pel).'")';
+}
+else
+{
+    $parentElementAnnotation = "";
+}
 
 if(!file_exists($path))
 {
@@ -179,9 +216,13 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * '.$className.'
+ * -
+ * '.$className.' is class of element &lt;'.$element.'&gt; Open link at &#64;Referece to read full documentation.
+ * '.htmlspecialchars($parentElement).'
+ * 
  * @Xml
  * @MusicXML
- * @Reference '.$url.'
+ * '.$parentElementAnnotation.'@Reference '.$url.'
  * @Data
  */
 class '.$className.' extends MusicXMLWriter
@@ -194,12 +235,39 @@ class '.$className.' extends MusicXMLWriter
 }
 else
 {
-    echo "FILE EXISTS\r\n";
     $fromFile = implode("\r\n\r\n", $parsed);
     $fromFile = str_replace_first("{", "{\r\n".implode("\r\n", $attrs), $fromFile);
-    $path2 = str_replace(".php", "2.php", $path);
-    echo "$path2";
-    file_put_contents($path2, $fromFile);
+    $template = '<?php
+
+namespace MusicXML\Model;
+
+use MusicXML\MusicXMLWriter;
+
+/**
+ * '.$className.'
+ * -
+ * '.$className.' is class of element &lt;'.$element.'&gt; Open link at &#64;Referece to read full documentation.
+ * '.htmlspecialchars($parentElement).'
+ * 
+ * @Xml
+ * @MusicXML'.$parentElementAnnotation.'
+ * @Reference '.$url.'
+ * @Data
+ */
+class '.$className.' extends MusicXMLWriter
+';
+
+    $offset = strpos($fromFile, "{", 0);
+    while(stripos($fromFile, "\r\n\r\n\r\n") !== false)
+    {
+        $fromFile = str_replace("\r\n\r\n\r\n", "\r\n\r\n", $fromFile);
+    }
+
+
+    $content = $template.substr($fromFile, $offset)."";
+
+
+    file_put_contents($path, $content);
 }
 
 
