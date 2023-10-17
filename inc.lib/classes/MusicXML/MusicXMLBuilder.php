@@ -110,6 +110,28 @@ class MusicXMLBuilder
     }
     
     /**
+     * Get data type
+     *
+     * @param string $paramValue
+     * @return string
+     */
+    private function getType($paramValue)
+    {
+        $paramValue = trim($paramValue);
+        // search ] if any
+        if(strpos($paramValue, ']') !== false)
+        {
+            $arr = explode('[', $paramValue, 2);
+            while(strpos($arr[0], ' ['))
+            {
+                $arr[0] = str_replace(' [', '[', $arr[0]);
+            }
+            return $arr[0];
+        }
+        return $paramValue;
+    }
+    
+    /**
      * MusicXMLPropertyInfo
      *
      * @param string $propertyName
@@ -125,8 +147,8 @@ class MusicXMLBuilder
         foreach($parameters as $param=>$paramValue)
         {
             if(strcasecmp($param, self::ANNOTATION_VAR) == 0)
-            {
-                $musicXMLPropertyInfo->setType(trim($paramValue));
+            {            
+                $musicXMLPropertyInfo->setType($this->getType($paramValue));
             }
             else if(strcasecmp($param, self::ANNOTATION_ATTRIBUTE) == 0)
             {

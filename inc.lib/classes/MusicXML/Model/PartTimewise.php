@@ -33,7 +33,7 @@ class PartTimewise extends MusicXMLWriter
     /** 
      * Elements of part
      * -
-     * Element of part-timewise consists of
+     * This element tag will exactly match the element name. See annotations of class of each elements. Element of part-timewise consists of
      * - &lt;note&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
      * - &lt;backup&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/backup/
      * - &lt;forward&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/forward/
@@ -50,7 +50,7 @@ class PartTimewise extends MusicXMLWriter
      * - &lt;bookmark&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bookmark/
      *
      * @Element(identification="element")
-     * @var MusicXMLWriter[] Element of part-timewise
+     * @var MusicXMLWriter[]
      */
     public $elements;
 }
