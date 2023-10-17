@@ -33,7 +33,7 @@ class PartTimewise extends MusicXMLWriter
     /** 
      * Elements of part
      * -
-     * This element tag will exactly match the element name. See annotations of class of each elements. Element of part-timewise consists of
+     * This element tag will exactly match the element name. See annotations of class of each elements. Element of part-timewise consists of:
      * - &lt;note&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
      * - &lt;backup&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/backup/
      * - &lt;forward&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/forward/

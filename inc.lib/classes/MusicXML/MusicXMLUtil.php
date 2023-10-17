@@ -298,7 +298,7 @@ class MusicXMLUtil
     }
     
     /**
-     * Get element index from note index
+     * Get element index from note index or false if not found
      *
      * @param MeasurePartwise $measure
      * @param integer $idx

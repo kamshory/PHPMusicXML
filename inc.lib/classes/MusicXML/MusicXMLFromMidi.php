@@ -1046,7 +1046,11 @@ class MusicXMLFromMidi extends MusicXMLBase
                 foreach($pbIndexes as $idx=>$pitchBend)
                 {
                     $elementIndex = MusicXMLUtil::getElementIndexFromNoteIndex($measure, $idx);
-                    if($elementIndex !== false && isset($measure->elements[$elementIndex]->notations) && is_array(isset($measure->elements[$elementIndex]->notations)) && !empty(isset($measure->elements[$elementIndex]->notations)))
+                    if($elementIndex !== false 
+                        && $measure->elements[$elementIndex] instanceof Note 
+                        && isset($measure->elements[$elementIndex]->notations) 
+                        && is_array(isset($measure->elements[$elementIndex]->notations)) 
+                        && !empty(isset($measure->elements[$elementIndex]->notations)))
                     {
                         $bend = $this->getBend($pitchBend[0]);
                         $technical = new Technical();
