@@ -6,8 +6,14 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * PartGroup
+ * -
+ * PartGroup is class of element &lt;part-group&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;part-list&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @Element(name="part-group")
+ * @ParentElement(name="part-list")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-group/
  * @Data
  */
@@ -15,20 +21,26 @@ class PartGroup extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Indicates the start or stop of the &lt;part-group&gt;.
 	 *
 	 * @Attribute(name="type")
+	 * @Value(type="start-stop" required="true", allowed="start,stop")
 	 * @var string
 	 */
 	public $type;
 
 	/**
 	 * Number
+	 * -
+	 * Distinguishes overlapping and nested &lt;part-group&gt; elements, not a sequence of &lt;part-group&gt; elements. The default value is 1.
 	 *
 	 * @Attribute(name="number")
+	 * @Value(type="token" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $number;
-    
+
 	/**
      * Group name
      *
@@ -40,7 +52,7 @@ class PartGroup extends MusicXMLWriter
     /**
      * Group name display
      *
-     * @Element(name="group-name-display")    
+     * @Element(name="group-name-display")
      * @var GroupNameDisplay
      */
     public $groupNameDisplay;
@@ -48,7 +60,7 @@ class PartGroup extends MusicXMLWriter
     /**
      * Group abbreviation
      *
-     * @Element(name="group-abbreviation")    
+     * @Element(name="group-abbreviation")
      * @var GroupAbbreviation
      */
     public $groupAbbreviation;

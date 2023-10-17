@@ -6,6 +6,7 @@ use DateTime;
 use DOMNode;
 use MusicXML\Map\ModelParser;
 use MusicXML\Map\NodeType;
+use MusicXML\Model\Pan;
 use MusicXML\Util\PicoAnnotationParser;
 use ReflectionClass;
 use stdClass;
@@ -69,14 +70,14 @@ class MusicXMLWriter // NOSONAR
             {
                 $this->objectName = $vals['name'];
             }
-            }
-            if($data != null)
-            {
+        }
+        if($data !== null)
+        {
             if($data instanceof DOMNode)
             {
                 $this->loadXml($data);
             }
-            else if(($data instanceof DateTime || is_string($data) || is_numeric($data)) 
+            else if(($data instanceof DateTime || is_string($data) || is_numeric($data) || is_float($data) || is_integer($data)) 
             && property_exists($this->className, 'textContent'))
             {
                 $this->setTextContent($data);

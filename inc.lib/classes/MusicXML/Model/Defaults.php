@@ -6,17 +6,24 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Defaults
+ * -
+ * Defaults is class of element &lt;defaults&gt; Open link at &#64;Referece to read full documentation.
+ * Parent elements: &lt;score-partwise&gt;, &lt;score-timewise&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @Element(name="defaults")
+ * @ParentElement(name="score-partwise,score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/defaults/
  * @Data
  */
 class Defaults extends MusicXMLWriter
 {
+
     /**
      * Scaling
      *
-     * @Element(name="scaling")      
+     * @Element(name="scaling")
      * @var Scaling
      */
     public $scaling;
@@ -32,7 +39,7 @@ class Defaults extends MusicXMLWriter
     /**
      * Page layout
      *
-     * @Element(name="page-layout")  
+     * @Element(name="page-layout")
      * @var PageLayout
      */
     public $pageLayout;
@@ -92,5 +99,5 @@ class Defaults extends MusicXMLWriter
      * @var LyricLanguage[]
      */
     public $lyricLanguage;
-    
+
 }

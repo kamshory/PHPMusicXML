@@ -26,12 +26,13 @@ function createAttribute($attribute)
     $description = htmlspecialchars($attribute['description']);
     $required = strtolower(trim($attribute['required'])) == 'yes' ? 'true':'false';
     
-    $traditionalType = getAttrType($type);
+    $map = DataType::DATA_TYPE[$type];
+    $traditionalType = $map['traditional_type'];
     $attributeName = getAttributeName($name);
     
-    $allowed = isset($attribute['allowed_value']) && is_array($attribute['allowed_value']) && !empty($attribute['allowed_value']) ? $attribute['allowed_value'] : "ANY_VALUE";
-    $min = isset($attribute['mim']) ? $attribute['min'] : "-infinite";
-    $max = isset($attribute['max']) ? $attribute['max'] : "infinite";
+    $allowed = isset($map['allowed_value']) && !empty($map['allowed_value']) ? $map['allowed_value'] : "ANY_VALUE";
+    $min = isset($map['min']) ? $map['min'] : "-infinite";
+    $max = isset($map['max']) ? $map['max'] : "infinite";
     
     if($traditionalType == 'float' || $traditionalType == 'integer')
     {
@@ -64,7 +65,7 @@ function getAttrType($type)
 function getClassName($name)
 {
     $className = str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
-    if($className == 'String' || $className == 'Function' || $className == 'Print')
+    if($className == 'Double' || $className == 'String' || $className == 'Function' || $className == 'Print')
     {
         return 'X'.$className;
     }
@@ -100,7 +101,6 @@ function removeIfAny($parsed, $key)
     return $parsed;
 }
 
-
 function getObject($element)
 {
 
@@ -123,7 +123,9 @@ if (file_exists($path))
 
 $attributes = array();
 $parents = array();
+$ok = false;
 if (url_check($url)) {
+    $ok = true;
     $doc = new DomDocument;
     $doc->validateOnParse = true;
     $doc->loadHtml(file_get_contents($url));
@@ -168,6 +170,9 @@ if (url_check($url)) {
     echo 'URL not reachable!'; // Throw message when URL not be called
 }
 
+if($ok)
+{
+
 $attrs = array();
 
 
@@ -198,7 +203,7 @@ $pel = implode(',', $parents);
 
 if(strpos($pel, '<') !== false)
 {
-    $parentElementAnnotation = "\r\n".' * @ParentEelement="'.str_replace(array('<', '>'), '', $pel).'")';
+    $parentElementAnnotation = "\r\n".' * @ParentElement(name="'.str_replace(array('<', '>'), '', $pel).'")';
 }
 else
 {
@@ -222,15 +227,21 @@ use MusicXML\MusicXMLWriter;
  * 
  * @Xml
  * @MusicXML
- * '.$parentElementAnnotation.'@Reference '.$url.'
+ * @Element(name="'.$element.'")'.$parentElementAnnotation.'
+ * @Reference '.$url.'
  * @Data
  */
 class '.$className.' extends MusicXMLWriter
 {
 '.implode("\r\n", $attrs).'    
 }';
-//echo $template;
-//file_put_contents($path, $template);
+$content = $template;
+$content = trim($content, " \t\r\n ");
+if(substr($content, strlen($content) - 1) != '}')
+{
+    $content .= "\r\n}";
+}
+file_put_contents($path, $content);
 
 }
 else
@@ -250,7 +261,8 @@ use MusicXML\MusicXMLWriter;
  * '.htmlspecialchars($parentElement).'
  * 
  * @Xml
- * @MusicXML'.$parentElementAnnotation.'
+ * @MusicXML
+ * @Element(name="'.$element.'")'.$parentElementAnnotation.'
  * @Reference '.$url.'
  * @Data
  */
@@ -263,12 +275,17 @@ class '.$className.' extends MusicXMLWriter
         $fromFile = str_replace("\r\n\r\n\r\n", "\r\n\r\n", $fromFile);
     }
 
-
     $content = $template.substr($fromFile, $offset)."";
+    $content = trim($content, " \t\r\n ");
+    if(substr($content, strlen($content) - 1) != '}')
+    {
+        $content .= "\r\n}";
+    }
 
 
     file_put_contents($path, $content);
 }
 
 
+}
 }

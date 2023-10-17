@@ -6,21 +6,30 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Ornaments
+ * -
+ * Ornaments is class of element &lt;ornaments&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;notations&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @Element(name="ornaments")
+ * @ParentElement(name="notations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/ornaments/
  * @Data
  */
 class Ornaments extends MusicXMLWriter
 {
-    /**
-     * ID
-     *
-     * @Attribute
-     * @var string
-     */
-    public $id;
-    
+	/**
+	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
+
     /**
      * Trill marks
      *
@@ -86,12 +95,12 @@ class Ornaments extends MusicXMLWriter
     public $shake;
 
     /**
-     * Navy line
+     * Wavy line
      *
      * @Element(name="navy-line")
-     * @var NavyLine
+     * @var WavyLine
      */
-    public $navyLine;
+    public $wavyLine;
 
     /**
      * Mordent

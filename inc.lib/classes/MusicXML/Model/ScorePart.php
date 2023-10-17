@@ -6,22 +6,30 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * ScorePart
+ * -
+ * ScorePart is class of element &lt;score-part&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;part-list&gt;
+ * 
  * @Xml
  * @MusicXML
- * @Path /path-list/score-part
+ * @Element(name="score-part")
+ * @ParentElement(name="part-list")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/score-part/
  * @Data
  */
 class ScorePart extends MusicXMLWriter
 {
-    /**
-     * ID
-     *
-     * @Attribute
-     * @var string
-     */
-    public $id;
-    
+	/**
+	 * Id
+	 * -
+	 * 
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="true", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
+
     /**
      * Identification
      *
@@ -33,7 +41,7 @@ class ScorePart extends MusicXMLWriter
     /**
      * Part link
      *
-     * @Element(name="part-link")     
+     * @Element(name="part-link")
      * @var PartLink[]
      */
     public $partLink;

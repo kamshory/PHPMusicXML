@@ -20,8 +20,8 @@ class AttackRelease
     
     public function __construct($attack, $release)
     {
-        $this->attack = $attack;
-        $this->release = $release;
+        $this->attack = round($attack);
+        $this->release = round($release);
     }
 
     

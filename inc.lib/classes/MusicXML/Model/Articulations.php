@@ -6,20 +6,36 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Articulations
+ * -
+ * Articulations is class of element &lt;articulations&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;notations&gt;
+ * 
  * @Xml
  * @MusicXML
- * @Path /path/measure/note/notation/articulations
- * @Referece https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/articulations/
+ * @Element(name="articulations")
+ * @ParentElement(name="notations")
+ * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/articulations/
  * @Data
  */
 class Articulations extends MusicXMLWriter
 {
+	/**
+	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
+	 *
+	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
+	 * @var string
+	 */
+	public $id;
+
     /**
-     * @Element 
+     * @Element
      * @var Staccato[]
      */
     public $staccato;
-    
+
             /**
          * Accent
          *
@@ -31,7 +47,7 @@ class Articulations extends MusicXMLWriter
         /**
          * Strong accent
          *
-         * @Element(name="strong-accent")  
+         * @Element(name="strong-accent")
          * @var StrongAccent[]
          */
         public $strongAccent;

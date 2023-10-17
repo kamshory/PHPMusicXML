@@ -6,38 +6,44 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Identification
+ * -
+ * Identification is class of element &lt;identification&gt; Open link at &#64;Referece to read full documentation.
+ * Parent elements: &lt;score-part&gt;, &lt;score-partwise&gt;, &lt;score-timewise&gt;
+ * 
  * @Xml
  * @MusicXML
- * @Path /identification
+ * @Element(name="identification")
+ * @ParentElement(name="score-part,score-partwise,score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/identification/
  * @Data
  */
 class Identification extends MusicXMLWriter
 {
+
     /**
      * Copyright
-     * 
+     *
      * @Element(name="rights")
      * @var Rights[]
      */
     public $rights;
-    
+
     /**
-     * Description
+     * Text content
      *
      * @Element
      * @var Encoding
      */
     public $encoding;
-    
+
     /**
      * Creator
-     * 
+     *
      * @Element(name="creator")
      * @var Creator[]
      */
     public $creator;
-    
+
     /**
      * Source
      *
@@ -45,7 +51,7 @@ class Identification extends MusicXMLWriter
      * @var Source
      */
     public $source;
-    
+
     /**
      * Relation
      *
@@ -53,7 +59,7 @@ class Identification extends MusicXMLWriter
      * @var Relation[]
      */
     public $relation;
-    
+
     /**
      * Miscellaneous
      *

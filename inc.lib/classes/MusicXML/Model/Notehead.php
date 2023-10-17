@@ -7,10 +7,13 @@ use MusicXML\MusicXMLWriter;
 /**
  * Notehead
  * -
- * Notehead is class of element &lt;notehead&gt; Open link at &#64;Referece to read full documentation
+ * Notehead is class of element &lt;notehead&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;note&gt;
  * 
  * @Xml
  * @MusicXML
+ * @Element(name="notehead")
+ * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/notehead/
  * @Data
  */

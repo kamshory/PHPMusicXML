@@ -6,8 +6,14 @@ use MusicXML\MusicXMLWriter;
 
 /**
  * Technical
+ * -
+ * Technical is class of element &lt;technical&gt; Open link at &#64;Referece to read full documentation.
+ * Parent element: &lt;notations&gt;
+ * 
  * @Xml
  * @MusicXML
+ * @Element(name="technical")
+ * @ParentElement(name="notations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/technical/
  * @Data
  */
@@ -15,8 +21,11 @@ class Technical extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
+	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $id;
@@ -84,7 +93,7 @@ class Technical extends MusicXMLWriter
 	 * @var DoubleTongue[]
 	 */
 	public $doubleTongue;
-    
+
 	/**
 	 * Triple tongue
 	 *
@@ -92,7 +101,6 @@ class Technical extends MusicXMLWriter
 	 * @var TripleTongue[]
 	 */
 	public $tripleTongue;
-
 
 	/**
 	 * Stopped
@@ -149,7 +157,7 @@ class Technical extends MusicXMLWriter
 	 * @var Bend[]
 	 */
 	public $bend;
-	
+
 	/**
 	 * Tap
 	 *
@@ -157,7 +165,7 @@ class Technical extends MusicXMLWriter
 	 * @var Tap[]
 	 */
 	public $tap;
-	
+
 	/**
 	 * Heel
 	 *
@@ -165,7 +173,7 @@ class Technical extends MusicXMLWriter
 	 * @var Heel[]
 	 */
 	public $heel;
-	
+
 	/**
 	 * Toe
 	 *
@@ -173,7 +181,7 @@ class Technical extends MusicXMLWriter
 	 * @var Toe[]
 	 */
 	public $toe;
-	
+
 	/**
 	 * Fingernails
 	 *
@@ -181,7 +189,7 @@ class Technical extends MusicXMLWriter
 	 * @var Fingernails[]
 	 */
 	public $fingernails;
-	
+
 	/**
 	 * Hole
 	 *
@@ -189,7 +197,7 @@ class Technical extends MusicXMLWriter
 	 * @var Hole[]
 	 */
 	public $hole;
-	
+
 	/**
 	 * Arrow
 	 *
@@ -197,7 +205,7 @@ class Technical extends MusicXMLWriter
 	 * @var Arrow[]
 	 */
 	public $arrow;
-	
+
 	/**
 	 * Handbell
 	 *
@@ -205,7 +213,7 @@ class Technical extends MusicXMLWriter
 	 * @var Handbell[]
 	 */
 	public $handbell;
-	
+
 	/**
 	 * Bass bend
 	 *
@@ -213,7 +221,7 @@ class Technical extends MusicXMLWriter
 	 * @var BrassBend[]
 	 */
 	public $brassBend;
-	
+
 	/**
 	 * Flip
 	 *
@@ -221,7 +229,7 @@ class Technical extends MusicXMLWriter
 	 * @var Flip[]
 	 */
 	public $flip;
-	
+
 	/**
 	 * Smear
 	 *
@@ -229,7 +237,7 @@ class Technical extends MusicXMLWriter
 	 * @var Smear[]
 	 */
 	public $smear;
-	
+
 	/**
 	 * Open
 	 *
@@ -237,7 +245,7 @@ class Technical extends MusicXMLWriter
 	 * @var Open[]
 	 */
 	public $open;
-	
+
 	/**
 	 * Half muted
 	 *
@@ -245,7 +253,7 @@ class Technical extends MusicXMLWriter
 	 * @var HalfMuted[]
 	 */
 	public $halfMuted;
-	
+
 	/**
 	 * Harmon muted
 	 *
@@ -253,7 +261,7 @@ class Technical extends MusicXMLWriter
 	 * @var HarmonMute[]
 	 */
 	public $harmonMute;
-	
+
 	/**
 	 * Golpe
 	 *
@@ -261,7 +269,7 @@ class Technical extends MusicXMLWriter
 	 * @var Golpe[]
 	 */
 	public $golpe;
-	
+
 	/**
 	 * Other technical
 	 *

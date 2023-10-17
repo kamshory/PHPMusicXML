@@ -1,11 +1,14 @@
 <?php
 namespace MusicXML;
 
+use MusicXML\Model\BeatUnit;
 use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
 use MusicXML\Model\Line;
 use MusicXML\Model\Metronome;
+use MusicXML\Model\MetronomeRelation;
+use MusicXML\Model\PerMinute;
 use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
@@ -15,6 +18,42 @@ use MusicXML\Properties\Coordinate;
 
 class MusicXMLUtil
 {
+    /**
+     * Dget note type
+     *
+     * @param integer $duration
+     * @param integer $divisions
+     * @return string
+     */
+    public static function getNoteType($duration, $divisions)
+    {
+        $value = $duration/(4*$divisions);
+        foreach(self::$type as $type=>$valueType)
+        {
+            if($value > $valueType)
+            {
+                return $type;
+            }
+        }
+        return 'whole';
+    }
+    protected static $type = array(
+        'maxima'=>5,
+        'long'=>4,
+        'breve'=>2,
+        'whole'=>1,
+        'half'=>1/2,
+        'quarter'=>1/4,
+        'eighth'=>1/8,
+        '16th'=>1/16,
+        '32nd'=>1/32,
+        '64th'=>1/64,
+        '128th'=>1/128,
+        '256th'=>1/256,
+        '512th'=>1/512,
+        '1024th'=>1/1024
+    );
+    
 
     /**
      * Get note coordinate
@@ -44,7 +83,7 @@ class MusicXMLUtil
      * @param integer $duration
      * @return AttackRelease
      */
-    public static function getAttackRelease($measureIndex, $message, $divisions, $timebase, $timeSignature, $duration)
+    public static function getAttackRelease($measureIndex, $message, $timebase, $timeSignature, $duration)
     {
         $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
         $attack = $timeRelative * $timeSignature->getBeats() / ($timebase);
@@ -138,14 +177,11 @@ class MusicXMLUtil
                     $directionType = new DirectionType();
                     $metronome = new Metronome();
                     $metronome->parentheses = 'no';
-                    $metronome->perMinute = $bpm;
-                    $metronome->beatUnit = 'quarter';
-                    $directionType->metronome = $metronome;
-                    
+                    $metronome->perMinute = new PerMinute($bpm);
+                    $metronome->beatUnit = new BeatUnit('quarter');
+                    $directionType->metronome = $metronome;                    
                     $directions[$rawtime]->directionType = $directionType;
-                    $directions[$rawtime]->placement = 'above';
-                    
-                    
+                    $directions[$rawtime]->placement = 'above';               
                     $lastBpm = $bpm;
                 }
             }
@@ -162,12 +198,22 @@ class MusicXMLUtil
      */
     public static function getClef($min, $max)
     {
+        $mod = $min % 12;
+
         $clefs = array();
         for($i = $max; $i > $min; $i-=36)
         {
             $clef1 = new Clef();
-            $clef1->sign = new Sign('G');
-            $clef1->line = new Line(2);
+            if($mod >= 5)
+            {
+                $clef1->sign = new Sign('F');
+                $clef1->line = new Line(4);
+            }
+            else
+            {
+                $clef1->sign = new Sign('G');
+                $clef1->line = new Line('2');
+            }
             $clefs[] = $clef1;
         }        
         
