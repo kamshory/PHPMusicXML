@@ -8,7 +8,7 @@
     <rights type="music"></rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-17</encoding-date>
+      <encoding-date>2023-10-19</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" type="no" attribute="new-page"/>

@@ -306,7 +306,7 @@ class MusicXMLUtil
      * @param integer $idx
      * @return integer|boolean
      */
-    public static function getElementIndexFromNoteIndex($measure, $idx)
+    public static function getElementIndexFromNoteIndexX($measure, $idx)
     {
         $cnt = 0;
         foreach($measure->elements as $elementIndex=>$element)
@@ -322,33 +322,47 @@ class MusicXMLUtil
         }
         return false;
     }
+
+    /**
+     * Get element index
+     *
+     * @param array $noteMessages
+     * @return integer|boolean
+     */
+    public static function getElementIndexFromNoteIndex($noteMessages)
+    {
+        if(isset($noteMessages['elementIndex']))
+        {
+            return $noteMessages['elementIndex'];
+        }
+        return false;
+    }
     
     /**
      * Get beams
      *
-     * @param MeasurePartwise
      * @param array $noteMessages
      * @param integer $timebase
      * @param TimeSignature $timeSignature
      * @return BeamNote[] | false
      */
-    public static function getBeams($measure, $noteMessages, $timebase, $timeSignature)
+    public static function getBeams($noteMessages, $timebase, $timeSignature)
     {
-        $beamNotes = array(); 
+        $beamNotes = array();      
         for($i = 0; $i < $timeSignature->getBeats(); $i++)
         {
             $time1 = $timebase * $i;
             $time2 = $timebase * ($i + 1);
             $j = 0;
-            foreach($noteMessages as $key=>$message)
+            foreach($noteMessages as $message)
             {
-                if($noteMessages[$key]['event'] == 'On')
+                $rtime = $message['abstime'] % ($timebase * $timeSignature->getBeats());
+                if($message['event'] == 'On' && $rtime >= $time1 && $rtime <= $time2)
                 {
-                    $rtime = $noteMessages[$key]['time'] % $timebase;
-                    $duration = $noteMessages[$key]['duration'];
-                    if($rtime <= $time1 && ($rtime + $duration) <= $time2)
+                    $duration = $message['duration'];
+                    if(($rtime + $duration) <= $time2)
                     {
-                        $k = self::getElementIndexFromNoteIndex($measure, $key);
+                        $k = self::getElementIndexFromNoteIndex($message);
                         $beamNotes[] = new BeamNote($i, $j, $k);
                         $j++;   
                     }

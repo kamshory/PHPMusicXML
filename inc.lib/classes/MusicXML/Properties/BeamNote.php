@@ -34,7 +34,7 @@ class BeamNote
     public function __construct($number, $beamIndex, $elementIndex)
     {
         $this->beam = new Beam($beamIndex == 0 ? self::TYPE_BEGIN : self::TYPE_CONTINUE);
-        $this->beam->number = $number;
+        $this->beam->number = $number + 1;
         $this->index = $elementIndex;
     }
     
@@ -55,11 +55,11 @@ class BeamNote
             }
         }
         $length = count($beamNotes);
-        for($number = $numbers - 1; $number >= 0; $number--)
+        for($number = $numbers; $number >= 1; $number--)
         {
             for($i = $length -1; $i >= 0; $i--)
             {
-                if(isset($beamNotes[$number]) && $beamNotes[$number]->index == $number)
+                if(isset($beamNotes[$i]) && $beamNotes[$i]->beam->number == $number)
                 {
                     $beamNotes[$number]->beam->textContent = self::TYPE_END;
                     break;

@@ -298,6 +298,12 @@ class Note extends MusicXMLWriter
      */
     public $accidental;
 
+	/**
+     * @Element
+     * @var Beam
+     */
+    public $beam;
+
     /**
 	 * Notations
 	 *
@@ -327,12 +333,6 @@ class Note extends MusicXMLWriter
      * @var Chord
      */
     public $chord;
-
-    /**
-     * @Element
-     * @var Beam
-     */
-    public $beam;
 
     /**
      * Lyric

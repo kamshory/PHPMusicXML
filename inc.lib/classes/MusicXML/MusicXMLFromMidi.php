@@ -32,6 +32,7 @@ use MusicXML\Model\Tie;
 use MusicXML\Model\Tied;
 use MusicXML\Model\Type;
 use MusicXML\Model\Volume;
+use MusicXML\Properties\MeasurePartwiseContainer;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TieStop;
 use MusicXML\Properties\TimeSignature;
@@ -1019,7 +1020,11 @@ class MusicXMLFromMidi extends MusicXMLBase
             $noteMessages = MusicXMLUtil::getNotes($midiEventMessages);
             if(!empty($noteMessages))
             {
-                $measure = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
+                $measureContainer = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
+
+                // add element index to $noteMessages
+                $measure = $measureContainer->getMeasurePartwise();
+                $noteMessages = $measureContainer->getNoteMessages();
             }
             // end add note
             
@@ -1043,7 +1048,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 
                 foreach($pbIndexes as $idx=>$pitchBend)
                 {
-                    $elementIndex = MusicXMLUtil::getElementIndexFromNoteIndex($measure, $idx);
+                    $elementIndex = MusicXMLUtil::getElementIndexFromNoteIndex($noteMessages);
                     if($elementIndex !== false 
                         && $measure->elements[$elementIndex] instanceof Note 
                         && isset($measure->elements[$elementIndex]->notations) 
@@ -1067,12 +1072,15 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
             
             // set beam if any
-            $beams = MusicXMLUtil::getBeams($measure, $noteMessages, $timebase, $this->timeSignature);
+            $beams = MusicXMLUtil::getBeams($noteMessages, $timebase, $this->timeSignature);
             if($beams !== false)
             {
                 foreach($beams as $beamNote)
                 {
-                    $measure->elements[$beamNote->index]->beam = $beamNote->beam;
+                    if($measure->elements[$beamNote->index] instanceof Note)
+                    {
+                        $measure->elements[$beamNote->index]->beam = $beamNote->beam;
+                    }
                 }
             }
         }  
@@ -1092,7 +1100,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $channelId
      * @param integer $divisions
      * @param integer $timebase
-     * @return MeasurePartwise
+     * @return MeasurePartwiseContainer
      */
     private function addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase)
     {
@@ -1112,7 +1120,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
         }
 
-        foreach ($noteMessages as $message) {
+        foreach ($noteMessages as $idx => $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
             if ($this->adible($message, $duration)) {
                 $offset = $message['abstime'];
@@ -1176,6 +1184,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
                 // add note
                 $measure->elements[] = $note;
+                $noteMessages[$idx]['elementIndex'] = count($measure->elements) - 1;
                 $cnt++;
             }
         }
@@ -1188,9 +1197,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             $note = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $duration);
             $measure->elements[] = $note;
         }
-        file_put_contents('test.txt', print_r($this->tieStop, true));
 
-        return $measure;
+        return new MeasurePartwiseContainer($measure, $noteMessages);
     }
 
     private function createTieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions)
