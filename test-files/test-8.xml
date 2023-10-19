@@ -64,6 +64,7 @@
         </pitch>
         <duration>12</duration>
         <type>16th</type>
+        <beam number="1">end</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -84,6 +85,7 @@
         <duration>12</duration>
         <type>16th</type>
         <accidental>sharp</accidental>
+        <beam number="2">end</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -141,6 +143,7 @@
         <duration>12</duration>
         <type>16th</type>
         <accidental>sharp</accidental>
+        <beam number="1">begin</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -154,6 +157,7 @@
         </pitch>
         <duration>12</duration>
         <type>16th</type>
+        <beam number="1">end</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -169,6 +173,7 @@
         <duration>12</duration>
         <type>16th</type>
         <accidental>sharp</accidental>
+        <beam number="2">begin</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -182,6 +187,7 @@
         </pitch>
         <duration>12</duration>
         <type>16th</type>
+        <beam number="2">end</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -195,6 +201,7 @@
         </pitch>
         <duration>12</duration>
         <type>16th</type>
+        <beam number="3">begin</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -208,6 +215,7 @@
         </pitch>
         <duration>12</duration>
         <type>16th</type>
+        <beam number="3">end</beam>
         <notations>
           <articulations>
             <staccato/>
@@ -223,6 +231,7 @@
         <duration>12</duration>
         <type>16th</type>
         <accidental>sharp</accidental>
+        <beam number="4">end</beam>
         <notations>
           <articulations>
             <staccato/>

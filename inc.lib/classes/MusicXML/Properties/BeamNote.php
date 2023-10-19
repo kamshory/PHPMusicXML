@@ -61,7 +61,7 @@ class BeamNote
             {
                 if(isset($beamNotes[$i]) && $beamNotes[$i]->beam->number == $number)
                 {
-                    $beamNotes[$number]->beam->textContent = self::TYPE_END;
+                    $beamNotes[$i]->beam->textContent = self::TYPE_END;
                     break;
                 }
             }

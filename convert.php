@@ -23,7 +23,7 @@ foreach ($items as $item) {
     }
 }
 
-$fileList = array(__DIR__."/test-files/beam.mid");
+//$fileList = array(__DIR__."/test-files/text-5.mid");
 
 // Iterate over directories
 foreach ($fileList as $file) {
@@ -33,6 +33,7 @@ foreach ($fileList as $file) {
         try {
             $source = $file;
             $result = str_replace(".mid", ".xml", $source);
+            echo "Convert file $source\r\n";
             $midi = $musicXML->loadMidi($source);
             $mxl = new MXL();
             $xml = $musicXML->midiToMusicXml($midi, "Online", "4.0", MXL::FORMAT_XML);
