@@ -36,7 +36,7 @@ class Tuplet extends MusicXMLWriter
 	 * Indicates the presence of a bracket. If unspecified, the result is implementation-dependent.
 	 *
 	 * @Attribute(name="bracket")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $bracket;

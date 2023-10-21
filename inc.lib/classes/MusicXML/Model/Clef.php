@@ -25,7 +25,7 @@ class Clef extends MusicXMLWriter
 	 * Sometimes clefs are added to the staff in non-standard line positions, either to indicate cue passages, or when there are multiple clefs present simultaneously on one staff. In this situation, the additional attribute is set to &quot;yes&quot; and the line value is ignored.
 	 *
 	 * @Attribute(name="additional")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $additional;
@@ -36,7 +36,7 @@ class Clef extends MusicXMLWriter
 	 * Sometimes clefs at the start of a measure need to appear after the barline rather than before, as for cues or for use after a repeated section. The after-barline attribute is set to &quot;yes&quot; in this situation. This attribute is ignored for mid-measure clefs.
 	 *
 	 * @Attribute(name="after-barline")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $afterBarline;
@@ -146,7 +146,7 @@ class Clef extends MusicXMLWriter
 	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printObject;

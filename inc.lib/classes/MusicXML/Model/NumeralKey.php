@@ -25,7 +25,7 @@ class NumeralKey extends MusicXMLWriter
 	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printObject;

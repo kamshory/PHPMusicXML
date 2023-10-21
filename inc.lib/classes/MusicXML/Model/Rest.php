@@ -25,7 +25,7 @@ class Rest extends MusicXMLWriter
 	 * If yes, this indicates this is a complete measure rest.
 	 *
 	 * @Attribute(name="measure")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $measure;

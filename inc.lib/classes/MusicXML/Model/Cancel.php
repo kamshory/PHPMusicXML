@@ -25,7 +25,7 @@ class Cancel extends MusicXMLWriter
 	 * Indicates where the cancellation appears relative to the new key signature. It is left if not specified.
 	 *
 	 * @Attribute(name="location")
-	 * @Value(type="cancel-location" required="false", allowed="ANY_VALUE")
+	 * @Value(type="cancel-location" required="false", allowed="left,right,before-barline")
 	 * @var string
 	 */
 	public $location;

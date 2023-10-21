@@ -36,7 +36,7 @@ class Slash extends MusicXMLWriter
 	 * Indicates whether or not to use dots as well (for instance, with mixed rhythm patterns). The value is no if not specified. This attribute only has effect if use-stems is no.
 	 *
 	 * @Attribute(name="use-dots")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $useDots;
@@ -47,7 +47,7 @@ class Slash extends MusicXMLWriter
 	 * If the slash is on every beat, use-stems is no (the default). To indicate rhythms but not pitches, use-stems is set to yes.
 	 *
 	 * @Attribute(name="use-stems")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $useStems;

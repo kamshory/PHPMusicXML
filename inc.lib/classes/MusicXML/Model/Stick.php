@@ -25,7 +25,7 @@ class Stick extends MusicXMLWriter
 	 * Indicates the presence of a dashed circle around the round beater part of a pictogram. The value is no if not specified.
 	 *
 	 * @Attribute(name="dashed-circle")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $dashedCircle;
@@ -36,7 +36,7 @@ class Stick extends MusicXMLWriter
 	 * Indicates the presence of parentheses around the round beater part of a pictogram. The value is no if not specified.
 	 *
 	 * @Attribute(name="parentheses")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $parentheses;

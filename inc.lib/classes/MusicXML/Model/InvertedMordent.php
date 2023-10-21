@@ -25,7 +25,7 @@ class InvertedMordent extends MusicXMLWriter
 	 * If yes, the trill accelerates during playback. It is no if not specified.
 	 *
 	 * @Attribute(name="accelerate")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $accelerate;
@@ -157,7 +157,7 @@ class InvertedMordent extends MusicXMLWriter
 	 * Specifies if the ornament is longer than usual. The value is no if not specified.
 	 *
 	 * @Attribute(name="long")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $long;

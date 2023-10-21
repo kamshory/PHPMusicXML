@@ -47,7 +47,7 @@ class XPrint extends MusicXMLWriter
 	 * Indicates whether to force a page break, or to force the current music onto the same page as the preceding music. Normally this is the first music data within a measure. If used in multi-part music, the attributes should be placed in the same positions within each part, or the results are undefined.
 	 *
 	 * @Attribute(name="new-page")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $newPage;
@@ -58,7 +58,7 @@ class XPrint extends MusicXMLWriter
 	 * Indicates whether to force a system break, or to force the current music onto the same system as the preceding music. Normally this is the first music data within a measure. If used in multi-part music, the attributes should be placed in the same positions within each part, or the results are undefined.
 	 *
 	 * @Attribute(name="new-system")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $newSystem;

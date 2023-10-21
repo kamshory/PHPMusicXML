@@ -47,7 +47,7 @@ class MeasurePartwise extends MusicXMLWriter
 	 * Set to &quot;yes&quot; for measures where the measure number should never appear, such as pickup measures and the last half of mid-measure repeats. The value is &quot;no&quot; if not specified.
 	 *
 	 * @Attribute(name="implicit")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $implicit;
@@ -58,7 +58,7 @@ class MeasurePartwise extends MusicXMLWriter
 	 * Intended for use in multimetric music like the Don Giovanni minuet. If set to &quot;yes&quot;, the left barline in this measure does not coincide with the left barline of measures in other parts. The value is &quot;no&quot; if not specified.
 	 *
 	 * @Attribute(name="non-controlling")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $nonControlling;

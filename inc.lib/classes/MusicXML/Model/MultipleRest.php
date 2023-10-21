@@ -25,7 +25,7 @@ class MultipleRest extends MusicXMLWriter
 	 * Specifies whether the multiple rests uses the 1-bar / 2-bar / 4-bar rest symbols, or a single shape. It is no if not specified.
 	 *
 	 * @Attribute(name="use-symbols")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $useSymbols;

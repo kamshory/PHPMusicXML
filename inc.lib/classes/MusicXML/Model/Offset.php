@@ -25,7 +25,7 @@ class Offset extends MusicXMLWriter
 	 * The offset affects the visual appearance of the direction. If the sound attribute is yes, then the offset affects playback and listening too. If it is no, then any &lt;sound&gt; or &lt;listening&gt; associated with the &lt;direction&gt; takes effect at the current location. It is no if not specified for compatibility with earlier MusicXML versions.
 	 *
 	 * @Attribute(name="sound")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $sound;

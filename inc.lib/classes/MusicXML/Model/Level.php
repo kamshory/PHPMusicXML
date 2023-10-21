@@ -25,7 +25,7 @@ class Level extends MusicXMLWriter
 	 * Specifies whether or not brackets are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="bracket")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $bracket;
@@ -36,7 +36,7 @@ class Level extends MusicXMLWriter
 	 * Specifies whether or not parentheses are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="parentheses")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $parentheses;
@@ -47,7 +47,7 @@ class Level extends MusicXMLWriter
 	 * If the reference attribute is yes, this indicates editorial information that is for display only and should not affect playback. For instance, a modern edition of older music may set reference=&quot;yes&quot; on the attributes containing the music's original clef, key, and time signature. It is no if not specified.
 	 *
 	 * @Attribute(name="reference")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $reference;

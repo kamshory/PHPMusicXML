@@ -135,7 +135,7 @@ class Metronome extends MusicXMLWriter
 	 * Indicates whether or not to put the metronome mark in parentheses. It is no if not specified.
 	 *
 	 * @Attribute(name="parentheses")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $parentheses;
@@ -146,7 +146,7 @@ class Metronome extends MusicXMLWriter
 	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printObject;

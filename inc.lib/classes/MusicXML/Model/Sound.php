@@ -36,7 +36,7 @@ class Sound extends MusicXMLWriter
 	 * Indicates to go back to the beginning of the movement. When used it always has the value &quot;yes&quot;.
 	 *
 	 * @Attribute(name="dacapo")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $dacapo;
@@ -113,7 +113,7 @@ class Sound extends MusicXMLWriter
 	 * Indicates that a forward repeat sign is implied but not displayed. It is used for example in two-part forms with repeats, such as a minuet and trio where no repeat is displayed at the start of the trio. This usually occurs after a barline. When used it always has the value of &quot;yes&quot;.
 	 *
 	 * @Attribute(name="forward-repeat")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $forwardRepeat;
@@ -146,7 +146,7 @@ class Sound extends MusicXMLWriter
 	 * Affects all following notes. Yes indicates pizzicato, no indicates arco.
 	 *
 	 * @Attribute(name="pizzicato")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $pizzicato;

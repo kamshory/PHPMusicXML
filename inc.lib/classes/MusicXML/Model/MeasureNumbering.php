@@ -113,7 +113,7 @@ class MeasureNumbering extends MusicXMLWriter
 	 * The multiple-rest-always and multiple-rest-range attributes describe how measure numbers are shown on multiple rests when the &lt;measure-numbering&gt; value is not set to none. The multiple-rest-always attribute is set to yes when the measure number should always be shown, even if the multiple rest starts midway through a system when measure numbering is set to system level.
 	 *
 	 * @Attribute(name="multiple-rest-always")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $multipleRestAlways;
@@ -124,7 +124,7 @@ class MeasureNumbering extends MusicXMLWriter
 	 * The multiple-rest-always and multiple-rest-range attributes describe how measure numbers are shown on multiple rests when the &lt;measure-numbering&gt; value is not set to none. The multiple-rest-range attribute is set to yes when measure numbers on multiple rests display the range of numbers for the first and last measure, rather than just the number of the first measure.
 	 *
 	 * @Attribute(name="multiple-rest-range")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $multipleRestRange;

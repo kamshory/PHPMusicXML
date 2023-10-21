@@ -25,7 +25,7 @@ class Assess extends MusicXMLWriter
 	 * If yes, the note should be assessed; if no, it should not be assessed. If not specified, it is no for notes with a &lt;cue&gt; child element and yes otherwise.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="yes-no" required="true", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="true", allowed="yes,no")
 	 * @var string
 	 */
 	public $type;

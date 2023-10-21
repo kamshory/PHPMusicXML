@@ -47,7 +47,7 @@ class BeatRepeat extends MusicXMLWriter
 	 * Indicates whether or not to use dots as well (for instance, with mixed rhythm patterns). The value is no if not specified.
 	 *
 	 * @Attribute(name="use-dots")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $useDots;

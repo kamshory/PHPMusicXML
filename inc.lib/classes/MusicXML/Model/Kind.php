@@ -25,7 +25,7 @@ class Kind extends MusicXMLWriter
 	 * The bracket-degrees attribute is yes if all the degrees should be in a bracket. The default is implementation-dependent.
 	 *
 	 * @Attribute(name="bracket-degrees")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $bracketDegrees;
@@ -124,7 +124,7 @@ class Kind extends MusicXMLWriter
 	 * The parentheses-degrees attribute is yes if all the degrees should be in parentheses. The default is implementation-dependent.
 	 *
 	 * @Attribute(name="parentheses-degrees")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $parenthesesDegrees;
@@ -157,7 +157,7 @@ class Kind extends MusicXMLWriter
 	 * If yes, the &lt;degree&gt; elements should be stacked above each other. The default is implementation-dependent.
 	 *
 	 * @Attribute(name="stack-degrees")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $stackDegrees;
@@ -179,7 +179,7 @@ class Kind extends MusicXMLWriter
 	 * The use-symbols attribute is yes if the &lt;kind&gt; should be represented when possible with harmony symbols rather than letters and numbers. These symbols include:
 	 *
 	 * @Attribute(name="use-symbols")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $useSymbols;

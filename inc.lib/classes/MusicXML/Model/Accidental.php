@@ -25,7 +25,7 @@ class Accidental extends MusicXMLWriter
 	 * Specifies whether or not brackets are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="bracket")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $bracket;
@@ -36,7 +36,7 @@ class Accidental extends MusicXMLWriter
 	 * If yes, indicates that this is a cautionary accidental. The value is no if not present.
 	 *
 	 * @Attribute(name="cautionary")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $cautionary;
@@ -80,7 +80,7 @@ class Accidental extends MusicXMLWriter
 	 * If yes, indicates that this is an editorial accidental. The value is no if not present.
 	 *
 	 * @Attribute(name="editorial")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $editorial;
@@ -135,7 +135,7 @@ class Accidental extends MusicXMLWriter
 	 * Specifies whether or not parentheses are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="parentheses")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $parentheses;

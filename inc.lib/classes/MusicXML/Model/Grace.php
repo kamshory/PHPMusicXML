@@ -36,7 +36,7 @@ class Grace extends MusicXMLWriter
 	 * The value is yes for slashed grace notes and no if no slash is present.
 	 *
 	 * @Attribute(name="slash")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $slash;

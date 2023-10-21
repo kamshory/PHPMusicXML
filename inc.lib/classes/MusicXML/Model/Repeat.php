@@ -36,7 +36,7 @@ class Repeat extends MusicXMLWriter
 	 * Indicates if the repeats are played after a jump due to a da capo or dal segno. It is only used with backward repeats that are not part of an ending.
 	 *
 	 * @Attribute(name="after-jump")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $afterJump;

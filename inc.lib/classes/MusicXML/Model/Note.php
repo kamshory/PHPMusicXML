@@ -146,7 +146,7 @@ class Note extends MusicXMLWriter
 	 * Used when just this note is sounded pizzicato, vs. the &lt;pizzicato&gt; element which changes overall playback between pizzicato and arco.
 	 *
 	 * @Attribute(name="pizzicato")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $pizzicato;
@@ -157,7 +157,7 @@ class Note extends MusicXMLWriter
 	 * Controls the printing of an augmentation dot separately from the rest of the note or rest. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody. If print-object is set to no, this attribute is also interpreted as being set to no if not present.
 	 *
 	 * @Attribute(name="print-dot")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printDot;
@@ -168,7 +168,7 @@ class Note extends MusicXMLWriter
 	 * Indicates whether leger lines are printed. Notes without leger lines are used to indicate indeterminate high and low notes. It is yes if not present unless print-object is set to no. This attribute is ignored for rests.
 	 *
 	 * @Attribute(name="print-leger")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printLeger;
@@ -179,7 +179,7 @@ class Note extends MusicXMLWriter
 	 * Controls the printing of a lyric separately from the rest of the note or rest. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody. If print-object is set to no, this attribute is also interpreted as being set to no if not present.
 	 *
 	 * @Attribute(name="print-lyric")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printLyric;
@@ -190,7 +190,7 @@ class Note extends MusicXMLWriter
 	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printObject;
@@ -201,7 +201,7 @@ class Note extends MusicXMLWriter
 	 * Controls whether or not spacing is left for an invisible note or object. It is used only if no note, dot, or lyric is being printed. The value is yes (leave spacing) if not specified.
 	 *
 	 * @Attribute(name="print-spacing")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printSpacing;

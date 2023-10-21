@@ -113,7 +113,7 @@ class NumeralAlter extends MusicXMLWriter
 	 * Specifies whether or not to print an object. It is yes if not specified. It can be used to hide an alteration in cases such as when the MusicXML encoding of a 6 or 7 &lt;numeral-root&gt; in a minor key requires an alteration that is not displayed.
 	 *
 	 * @Attribute(name="print-object")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printObject;

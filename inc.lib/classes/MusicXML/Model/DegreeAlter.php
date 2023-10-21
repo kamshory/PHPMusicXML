@@ -102,7 +102,7 @@ class DegreeAlter extends MusicXMLWriter
 	 * Indicates if plus and minus symbols should be used instead of sharp and flat symbols to display the degree alteration. It is no if not specified.
 	 *
 	 * @Attribute(name="plus-minus")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $plusMinus;

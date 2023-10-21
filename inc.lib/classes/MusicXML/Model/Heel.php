@@ -135,7 +135,7 @@ class Heel extends MusicXMLWriter
 	 * Indicates that this is a substitution in the middle of a note. It is no if not present.
 	 *
 	 * @Attribute(name="substitution")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $substitution;

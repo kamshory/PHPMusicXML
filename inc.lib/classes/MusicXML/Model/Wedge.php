@@ -102,7 +102,7 @@ class Wedge extends MusicXMLWriter
 	 * A value is yes indicates that a circle appears at the point of the wedge, indicating a crescendo from nothing or diminuendo to nothing. It is no if not specified, and used only when the type is crescendo, or the type is stop for a wedge that began with a diminuendo type.
 	 *
 	 * @Attribute(name="niente")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $niente;

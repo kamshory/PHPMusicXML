@@ -25,7 +25,7 @@ class AccidentalMark extends MusicXMLWriter
 	 * Specifies whether or not brackets are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="bracket")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $bracket;
@@ -124,7 +124,7 @@ class AccidentalMark extends MusicXMLWriter
 	 * Specifies whether or not parentheses are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="parentheses")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $parentheses;

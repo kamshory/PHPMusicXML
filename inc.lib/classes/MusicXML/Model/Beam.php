@@ -69,11 +69,11 @@ class Beam extends MusicXMLWriter
 	 * Deprecated as of Version 3.0. Formerly used for tremolos, it needs to be specified with a &quot;yes&quot; value for each &lt;beam&gt; using it.
 	 *
 	 * @Attribute(name="repeater")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $repeater;
-	
+
 	/**
 	 * Text content
 	 *

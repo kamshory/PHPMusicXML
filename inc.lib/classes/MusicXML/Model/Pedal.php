@@ -36,7 +36,7 @@ class Pedal extends MusicXMLWriter
 	 * Used only when the sign attribute is yes and the type is start or sostenuto; otherwise it is ignored. If yes, the short P and S signs are used. If no, the full Ped and Sost signs are used. It is no if not specified.
 	 *
 	 * @Attribute(name="abbreviated")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $abbreviated;
@@ -135,7 +135,7 @@ class Pedal extends MusicXMLWriter
 	 * If yes, then pedal lines are used.
 	 *
 	 * @Attribute(name="line")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $line;
@@ -179,7 +179,7 @@ class Pedal extends MusicXMLWriter
 	 * If yes, then Ped, Sost, and * signs are used. For compatibility with older versions, it is yes if not specified if the line attribute is no, and is no if not specified if the line attribute is yes. If no, the alignment attributes are ignored.
 	 *
 	 * @Attribute(name="sign")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $sign;

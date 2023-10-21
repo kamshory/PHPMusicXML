@@ -30,7 +30,7 @@ class PartTimewise extends MusicXMLWriter
 	 */
 	public $id;
 
-    /** 
+    /**
      * Elements of part
      * -
      * This element tag will exactly match the element name. See annotations of class of each elements. Element of part-timewise consists of:

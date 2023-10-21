@@ -25,7 +25,7 @@ class Bend extends MusicXMLWriter
 	 * Does the bend accelerate during playback? Default is &quot;no&quot;.
 	 *
 	 * @Attribute(name="accelerate")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $accelerate;
@@ -168,7 +168,7 @@ class Bend extends MusicXMLWriter
 	 * Distinguishes between the angled bend symbols commonly used in standard notation and the curved bend symbols commonly used in both tablature and standard notation.
 	 *
 	 * @Attribute(name="shape")
-	 * @Value(type="bend-shape" required="false", allowed="ANY_VALUE")
+	 * @Value(type="bend-shape" required="false", allowed="angled,curved")
 	 * @var string
 	 */
 	public $shape;

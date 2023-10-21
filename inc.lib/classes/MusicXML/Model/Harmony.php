@@ -135,7 +135,7 @@ class Harmony extends MusicXMLWriter
 	 * Specifies the printing of a frame or fretboard diagram.
 	 *
 	 * @Attribute(name="print-frame")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printFrame;
@@ -146,7 +146,7 @@ class Harmony extends MusicXMLWriter
 	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $printObject;

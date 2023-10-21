@@ -124,7 +124,7 @@ class Arpeggiate extends MusicXMLWriter
 	 * If yes, indicates that the arpeggio continues onto another staff within the part. This serves as a hint to applications and is not required for cross-staff arpeggios.
 	 *
 	 * @Attribute(name="unbroken")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $unbroken;

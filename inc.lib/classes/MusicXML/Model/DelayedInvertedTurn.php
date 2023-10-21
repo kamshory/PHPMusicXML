@@ -25,7 +25,7 @@ class DelayedInvertedTurn extends MusicXMLWriter
 	 * If yes, the trill accelerates during playback. It is no if not specified.
 	 *
 	 * @Attribute(name="accelerate")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $accelerate;
@@ -179,7 +179,7 @@ class DelayedInvertedTurn extends MusicXMLWriter
 	 * If yes, then a vertical line is used to slash the turn. It is no if not specified.
 	 *
 	 * @Attribute(name="slash")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $slash;

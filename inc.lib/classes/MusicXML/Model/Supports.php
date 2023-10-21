@@ -36,7 +36,7 @@ class Supports extends MusicXMLWriter
 	 * If yes, the absence of a particular element with a specified attribute or value is meaningful. It indicates that this information is not present in the score. If no, the absence is not meaningful because the encoding does not include this type of information.
 	 *
 	 * @Attribute(name="type")
-	 * @Value(type="yes-no" required="true", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="true", allowed="yes,no")
 	 * @var string
 	 */
 	public $type;
