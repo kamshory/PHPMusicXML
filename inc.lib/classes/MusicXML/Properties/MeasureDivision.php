@@ -20,7 +20,10 @@ class MeasureDivision
         foreach($notes as $note)
         {
             $arr[] = $note['abstime'] % $timebase;
-            $arr[] = $note['duration'];
+            if(isset($note['duration']))
+            {
+                $arr[] = $note['duration'];
+            }
         }
         $this->minimum = $arr[0];
         $this->maximum = $arr[count($arr) -1];

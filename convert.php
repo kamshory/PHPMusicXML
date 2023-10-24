@@ -23,7 +23,7 @@ foreach ($items as $item) {
     }
 }
 
-//$fileList = array(__DIR__."/test-files/text-5.mid");
+$fileList = array(__DIR__."/test-files/1001 Car.mid");
 
 // Iterate over directories
 foreach ($fileList as $file) {

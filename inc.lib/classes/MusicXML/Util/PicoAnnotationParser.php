@@ -2,7 +2,7 @@
 
 namespace MusicXML\Util;
 
-use Exceptions\ZeroArgumentException;
+use MusicXML\Exceptions\ZeroArgumentException;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
