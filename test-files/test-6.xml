@@ -8,7 +8,7 @@
     <rights type="music"></rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-19</encoding-date>
+      <encoding-date>2023-10-24</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" type="no" attribute="new-page"/>
@@ -38,7 +38,7 @@
   <part id="P1">
     <measure number="1">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -57,12 +57,12 @@
         </direction-type>
         <sound tempo="120"/>
       </direction>
-      <note attack="0" dynamics="141.11" release="12">
+      <note attack="0" dynamics="141.11" release="1">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
+        <duration>1</duration>
         <type>16th</type>
         <beam number="1">end</beam>
         <notations>
@@ -71,18 +71,18 @@
           </articulations>
         </notations>
       </note>
-      <note attack="0" release="12">
+      <note attack="0" release="1">
         <rest/>
-        <duration>12</duration>
+        <duration>1</duration>
         <type>16th</type>
       </note>
-      <note attack="4" dynamics="141.11" release="16">
+      <note attack="4" dynamics="141.11" release="5">
         <pitch>
           <step>F</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
+        <duration>1</duration>
         <type>16th</type>
         <accidental>sharp</accidental>
         <beam number="2">end</beam>
@@ -92,13 +92,13 @@
           </articulations>
         </notations>
       </note>
-      <note attack="6" dynamics="141.11" release="30">
+      <note attack="6" dynamics="141.11" release="8">
         <pitch>
           <step>G</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <accidental>sharp</accidental>
         <notations>
@@ -107,13 +107,13 @@
           </articulations>
         </notations>
       </note>
-      <note attack="10" dynamics="141.11" release="46">
+      <note attack="10" dynamics="141.11" release="13">
         <pitch>
           <step>F</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <tie type="start"/>
         <type>half</type>
         <accidental>sharp</accidental>
@@ -124,15 +124,15 @@
           </articulations>
         </notations>
       </note>
-      <note attack="10" release="28">
+      <note attack="10" release="12">
         <rest/>
-        <duration>18</duration>
+        <duration>2</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="2">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
       <note>
         <pitch>
@@ -140,20 +140,20 @@
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>6</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
         </notations>
       </note>
-      <note attack="12" dynamics="141.11" release="24">
+      <note attack="12" dynamics="141.11" release="13">
         <pitch>
           <step>D</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <accidental>sharp</accidental>
         <beam number="1">begin</beam>
         <notations>
@@ -162,13 +162,13 @@
           </articulations>
         </notations>
       </note>
-      <note attack="14" dynamics="141.11" release="26">
+      <note attack="14" dynamics="141.11" release="15">
         <pitch>
           <step>E</step>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <beam number="1">end</beam>
         <notations>
           <articulations>
@@ -176,14 +176,14 @@
           </articulations>
         </notations>
       </note>
-      <note attack="16" dynamics="141.11" release="28">
+      <note attack="16" dynamics="141.11" release="17">
         <pitch>
           <step>D</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <accidental>sharp</accidental>
         <beam number="2">begin</beam>
         <notations>
@@ -192,13 +192,13 @@
           </articulations>
         </notations>
       </note>
-      <note attack="18" dynamics="141.11" release="30">
+      <note attack="18" dynamics="141.11" release="19">
         <pitch>
           <step>D</step>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <beam number="2">end</beam>
         <notations>
           <articulations>
@@ -206,13 +206,13 @@
           </articulations>
         </notations>
       </note>
-      <note attack="20" dynamics="141.11" release="32">
+      <note attack="20" dynamics="141.11" release="21">
         <pitch>
           <step>D</step>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <beam number="3">begin</beam>
         <notations>
           <articulations>
@@ -220,13 +220,13 @@
           </articulations>
         </notations>
       </note>
-      <note attack="22" dynamics="141.11" release="34">
+      <note attack="22" dynamics="141.11" release="23">
         <pitch>
           <step>D</step>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <beam number="3">end</beam>
         <notations>
           <articulations>
@@ -234,14 +234,14 @@
           </articulations>
         </notations>
       </note>
-      <note attack="24" dynamics="141.11" release="36">
+      <note attack="24" dynamics="141.11" release="25">
         <pitch>
           <step>C</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
         <accidental>sharp</accidental>
         <beam number="4">end</beam>
         <notations>
@@ -250,12 +250,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="26" dynamics="141.11" release="38">
+      <note attack="26" dynamics="141.11" release="27">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>12</duration>
+        <duration>1</duration>
         <tie type="start"/>
         <type>quarter</type>
         <notations>
@@ -265,22 +265,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="26" release="38">
+      <note attack="26" release="27">
         <rest/>
-        <duration>12</duration>
-        <type>16th</type>
+        <duration>1</duration>
+        <type>eighth</type>
       </note>
     </measure>
     <measure number="3">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
       <note>
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>48</duration>
+        <duration>2</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>

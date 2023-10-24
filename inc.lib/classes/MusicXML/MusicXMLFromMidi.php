@@ -32,6 +32,7 @@ use MusicXML\Model\Tie;
 use MusicXML\Model\Tied;
 use MusicXML\Model\Type;
 use MusicXML\Model\Volume;
+use MusicXML\Properties\MeasureDivision;
 use MusicXML\Properties\MeasurePartwiseContainer;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TieStop;
@@ -863,6 +864,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function buildTimeDivisions($timebase)
     {
+        /*
         foreach($this->measures as $measure)
         {
             foreach($measure as $measureIndex => $events)
@@ -881,6 +883,44 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $divisions = self::DEFAULT_DIVISONS;
                 }
                 $this->setMeasureDivisions($measureIndex, $divisions);
+            }
+        }
+        */
+        $maxMeasure = 0;
+        $notes = array();
+        foreach($this->partList as $part)
+        {
+            $ch = $part['channelId'];
+            foreach($this->measures[$ch] as $measureIndex => $events)
+            {
+                foreach($events as $event)
+                {
+                    if($event['event'] == 'On')
+                    {
+                        if(!isset($notes[$measureIndex]))
+                        {
+                            $notes[$measureIndex] = array();
+                        }
+                        if($maxMeasure < $measureIndex)
+                        {
+                            $maxMeasure = $measureIndex;
+                        }
+                        $notes[$measureIndex][] = $event; 
+                    }
+                }
+            }
+        }
+        for($i = 0; $i < $maxMeasure; $i++)
+        {
+            if(isset($notes[$i]))
+            {
+                $measureDivison = new MeasureDivision($timebase, $notes[$i]);
+                $divisions = $measureDivison->getDivision();
+                $this->setMeasureDivisions($i, $divisions);
+            }
+            else
+            {
+                $this->setMeasureDivisions($i, $timebase);
             }
         }
     }
