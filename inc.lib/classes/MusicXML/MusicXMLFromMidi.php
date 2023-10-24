@@ -864,28 +864,6 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function buildTimeDivisions($timebase)
     {
-        /*
-        foreach($this->measures as $measure)
-        {
-            foreach($measure as $measureIndex => $events)
-            {
-                $minDuration = $timebase;
-                foreach($events as $event)
-                {
-                    if(isset($event['channel']) && $event['channel'] != 10 &&  isset($event['duration']) && $event['duration'] > 0 && $event['duration'] < $minDuration)
-                    {
-                        $minDuration = $event['duration'];
-                    }
-                }
-                $divisions = ceil($timebase * 24 / $minDuration);
-                if($divisions > self::DEFAULT_DIVISONS)
-                {
-                    $divisions = self::DEFAULT_DIVISONS;
-                }
-                $this->setMeasureDivisions($measureIndex, $divisions);
-            }
-        }
-        */
         $maxMeasure = 0;
         $notes = array();
         foreach($this->partList as $part)
@@ -1254,7 +1232,6 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function isTrimmed($note)
     {
-        echo "IS TRIMMED ".$note->tie."\r\n";
         return isset($note->tie) && isset($note->tie->type);
     }
 
@@ -1273,19 +1250,14 @@ class MusicXMLFromMidi extends MusicXMLBase
     private function trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max)
     {
         $newDuration = $max - $toffset;
-        //echo "MAX = $max\r\n";
-        //echo "toffset = $toffset\r\n";
-        //echo "NEW DURATION = $newDuration\r\n";
         
         while($newDuration < 0)
         {
             $newDuration += $timebase;
         }
-        //echo "NEW DURATION = $newDuration\r\n";
         if($duration > 0)
         {
             $newDuration = $this->fixDuration($newDuration, $divisions, $timebase);
-            //echo "NEW DURATION = $newDuration\r\n";
             $note->duration = new Duration($newDuration);                                
             $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
             $note->release = $note->attack + $newDuration;

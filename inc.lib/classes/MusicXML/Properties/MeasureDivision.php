@@ -93,4 +93,20 @@ class MeasureDivision
     {
         return $this->division;
     }
+
+    /**
+     * Get the value of minimum
+     */ 
+    public function getMinimum()
+    {
+        return $this->minimum;
+    }
+
+    /**
+     * Get the value of maximum
+     */ 
+    public function getMaximum()
+    {
+        return $this->maximum;
+    }
 }
