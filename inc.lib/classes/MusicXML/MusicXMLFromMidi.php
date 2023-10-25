@@ -1164,8 +1164,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
 
                 $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);
-
-
                 $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());
                 
                 $tend = $toffset + $duration;
