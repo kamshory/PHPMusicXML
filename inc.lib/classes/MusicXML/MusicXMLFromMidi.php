@@ -1175,7 +1175,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $note = $this->trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max);
                     $remaining = $originalDuration - $note->duration->textContent;
                     $tieRange = $remaining / $this->timeSignature->getBeats();
-
                     $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
                     if($durationRemaining == 0)
                     {
@@ -1191,11 +1190,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $this->tieStop[$nextMeasureIndex] = array();
                     }
                     $timeRemaining = $message['duration'] - ($duration * $divisions / $timebase);
-                    
-
-                    
-                    
-
                     $this->tieStop[$nextMeasureIndex][] = $this->createTieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions);
                 }             
 
