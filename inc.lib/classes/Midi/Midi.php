@@ -109,12 +109,14 @@ public function setTimebase($tb){
 	## echo "".$this->timebase." ".__LINE__."\r\n";
 }
 
-//---------------------------------------------------------------
-// returns timebase
-//---------------------------------------------------------------
+
+/**
+ * Get timebase
+ *
+ * @return integer
+ */
 public function getTimebase(){
 	return $this->timebase;
-	## echo "".$this->timebase." ".__LINE__."\r\n";
 }
 //---------------------------------------------------------------
 // adds new track, returns new track count
