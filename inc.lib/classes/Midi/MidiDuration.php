@@ -11,7 +11,6 @@ namespace Midi;
  * @author Valentin Schmidt
  * @version 0.2
  */
- 
 class MidiDuration extends Midi{
 	
 /**
@@ -67,9 +66,6 @@ public function getAbsoluteTime($relativeTime)
 	$duration = 0;
 	$currentTempo = 0;
 	$t = 0;
-	
-	$track = $this->tracks[0];
-	
 	
 	$f = 1 / $this->getTimebase() / 1000000;
 	

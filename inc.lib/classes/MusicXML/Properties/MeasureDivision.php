@@ -7,6 +7,7 @@ class MeasureDivision
     private $minimum = 0;
     private $maximum = 0;
     private $division = 0;
+    private static $divisors = array();
     
     /**
      * Constructor
@@ -19,12 +20,17 @@ class MeasureDivision
         $arr = array();
         foreach($notes as $note)
         {
-            $arr[] = $note['abstime'] % $timebase;
-            if(isset($note['duration']))
+            $mod = $note['abstime'] % $timebase;
+            if($mod != 0)
+            {
+                $arr[] = $mod;
+            }
+            if(isset($note['duration']) && $note['duration'] != 0)
             {
                 $arr[] = $note['duration'];
             }
         }
+        sort($arr);
         $this->minimum = $arr[0];
         $this->maximum = $arr[count($arr) -1];
         $this->division = $this->calculate($timebase, $arr);
@@ -36,7 +42,7 @@ class MeasureDivision
      * @param integer $n
      * @return integer[]
      */
-    private function getDivisor($n) {
+    private static function getDivisor($n) {
         $arr = array();
         for($i = 1; $i <= $n; $i++) 
         {
@@ -50,7 +56,11 @@ class MeasureDivision
     
     private function calculate($timebase, $array)
     {
-        $divs = $this->getDivisor($timebase);
+        if(!isset(self::$divisors[$timebase]))
+        {
+            self::$divisors[$timebase] = self::getDivisor($timebase);
+        }
+        $divs = self::$divisors[$timebase];
 
         $i = 0;
         $factor = $timebase / $divs[$i];

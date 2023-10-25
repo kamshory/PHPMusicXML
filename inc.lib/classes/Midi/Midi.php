@@ -117,6 +117,7 @@ public function setTimebase($tb){
  */
 public function getTimebase(){
 	return $this->timebase;
+	## echo "".$this->timebase." ".__LINE__."\r\n";
 }
 //---------------------------------------------------------------
 // adds new track, returns new track count
@@ -796,16 +797,14 @@ public function importXml($xmlStr){
 	xml_parser_free($this->xml_parser);
 }
 
-
-
-//---------------------------------------------------------------
-// imports Standard MIDI File (typ 0 or 1) (and RMID)
-// (if optional parameter $tn set, only track $tn is imported)
-//---------------------------------------------------------------
-public function importMid($smf_path){
-	$SMF = fopen($smf_path, "rb"); // Standard MIDI File, typ 0 or 1
-	$song = fread($SMF,filesize($smf_path));
-	fclose($SMF);
+/**
+ * Parse song
+ *
+ * @param string $song
+ * @return void
+ */
+public function parseMid($song)
+{
 	if (strpos($song,'MThd')>0) 
 	{
 		$song = substr($song, strpos($song, 'MThd'));//get rid of RMID header
@@ -846,6 +845,18 @@ public function importMid($smf_path){
 		}
 	}
 	$this->tracks = $tracks;
+}
+
+
+//---------------------------------------------------------------
+// imports Standard MIDI File (typ 0 or 1) (and RMID)
+// (if optional parameter $tn set, only track $tn is imported)
+//---------------------------------------------------------------
+public function importMid($smf_path){
+	$SMF = fopen($smf_path, "rb"); // Standard MIDI File, typ 0 or 1
+	$song = fread($SMF,filesize($smf_path));
+	fclose($SMF);
+	$this->parseMid($song);
 }
 
 //---------------------------------------------------------------
