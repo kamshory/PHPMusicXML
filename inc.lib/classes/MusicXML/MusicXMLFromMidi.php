@@ -32,6 +32,7 @@ use MusicXML\Model\Tie;
 use MusicXML\Model\Tied;
 use MusicXML\Model\Type;
 use MusicXML\Model\Volume;
+use MusicXML\Properties\MeasureDivision;
 use MusicXML\Properties\MeasurePartwiseContainer;
 use MusicXML\Properties\MidiEvent;
 use MusicXML\Properties\TieStop;
@@ -863,24 +864,41 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function buildTimeDivisions($timebase)
     {
-        foreach($this->measures as $measure)
+        $maxMeasure = 0;
+        $notes = array();
+        foreach($this->partList as $part)
         {
-            foreach($measure as $measureIndex => $events)
+            $ch = $part['channelId'];
+            foreach($this->measures[$ch] as $measureIndex => $events)
             {
-                $minDuration = $timebase;
                 foreach($events as $event)
                 {
-                    if(isset($event['channel']) && $event['channel'] != 10 &&  isset($event['duration']) && $event['duration'] > 0 && $event['duration'] < $minDuration)
+                    if($event['event'] == 'On')
                     {
-                        $minDuration = $event['duration'];
+                        if(!isset($notes[$measureIndex]))
+                        {
+                            $notes[$measureIndex] = array();
+                        }
+                        if($maxMeasure < $measureIndex)
+                        {
+                            $maxMeasure = $measureIndex;
+                        }
+                        $notes[$measureIndex][] = $event; 
                     }
                 }
-                $divisions = ceil($timebase * 24 / $minDuration);
-                if($divisions > self::DEFAULT_DIVISONS)
-                {
-                    $divisions = self::DEFAULT_DIVISONS;
-                }
-                $this->setMeasureDivisions($measureIndex, $divisions);
+            }
+        }
+        for($i = 0; $i < $maxMeasure; $i++)
+        {
+            if(isset($notes[$i]))
+            {
+                $measureDivison = new MeasureDivision($timebase, $notes[$i]);
+                $divisions = $measureDivison->getDivision();
+                $this->setMeasureDivisions($i, $divisions);
+            }
+            else
+            {
+                $this->setMeasureDivisions($i, $timebase);
             }
         }
     }
@@ -1214,7 +1232,6 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function isTrimmed($note)
     {
-        echo "IS TRIMMED ".$note->tie."\r\n";
         return isset($note->tie) && isset($note->tie->type);
     }
 
@@ -1233,19 +1250,14 @@ class MusicXMLFromMidi extends MusicXMLBase
     private function trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max)
     {
         $newDuration = $max - $toffset;
-        //echo "MAX = $max\r\n";
-        //echo "toffset = $toffset\r\n";
-        //echo "NEW DURATION = $newDuration\r\n";
         
         while($newDuration < 0)
         {
             $newDuration += $timebase;
         }
-        //echo "NEW DURATION = $newDuration\r\n";
         if($duration > 0)
         {
             $newDuration = $this->fixDuration($newDuration, $divisions, $timebase);
-            //echo "NEW DURATION = $newDuration\r\n";
             $note->duration = new Duration($newDuration);                                
             $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
             $note->release = $note->attack + $newDuration;

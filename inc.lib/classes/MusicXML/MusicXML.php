@@ -117,7 +117,7 @@ class MusicXML extends MusicXMLBase
         $attributes->clef = $clef;
         $attributes->transpose = $transpose;
 
-        $measure->attributes = $attributes;
+        $measure->elements[] = $attributes;
 
         $part->measure[] = $measure;
 

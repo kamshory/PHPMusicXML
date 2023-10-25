@@ -315,7 +315,7 @@ abstract class MusicXMLBase
         {
             foreach(MusicXMLInstrument::INSTRUMENT_LIST as $index=>$chk)
             {
-                $chkArr = explode('.', $chk);
+                $chkArr = explode('.', $chk[0]);
                 if(in_array($search, $chkArr))
                 {
                     echo "NAME = $instrumentName; SERACH = '$search', CHANNEL ID = $channelId, PROGRAM ID = $programId; $index; $chk \r\n";

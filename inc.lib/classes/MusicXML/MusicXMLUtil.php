@@ -357,7 +357,7 @@ class MusicXMLUtil
             foreach($noteMessages as $message)
             {
                 $rtime = $message['abstime'] % ($timebase * $timeSignature->getBeats());
-                if($message['event'] == 'On' && $rtime >= $time1 && $rtime <= $time2)
+                if($message['event'] == 'On' && isset($message['duration']) && $rtime >= $time1 && $rtime <= $time2)
                 {
                     $duration = $message['duration'];
                     if(($rtime + $duration) <= $time2)

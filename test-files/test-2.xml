@@ -8,7 +8,7 @@
     <rights type="music"></rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-19</encoding-date>
+      <encoding-date>2023-10-24</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" type="no" attribute="new-page"/>
@@ -38,7 +38,7 @@
   <part id="P1">
     <measure number="1">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
         <time>
           <beats>4</beats>
           <beat-type>4</beat-type>
@@ -57,17 +57,17 @@
         </direction-type>
         <sound tempo="120"/>
       </direction>
-      <note attack="0" release="36">
+      <note attack="0" release="3">
         <rest/>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
       </note>
-      <note attack="6" dynamics="141.11" release="30">
+      <note attack="6" dynamics="141.11" release="8">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -75,12 +75,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="10" dynamics="141.11" release="46">
+      <note attack="10" dynamics="141.11" release="13">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -91,14 +91,14 @@
     </measure>
     <measure number="2">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="12" dynamics="141.11" release="84">
+      <note attack="12" dynamics="141.11" release="15">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -106,22 +106,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="24" release="42">
+      <note attack="24" release="25">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="3">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="24" dynamics="141.11" release="60">
+      <note attack="24" dynamics="141.11" release="27">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -129,12 +129,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="30" dynamics="141.11" release="54">
+      <note attack="30" dynamics="141.11" release="32">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -142,12 +142,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="34" dynamics="141.11" release="70">
+      <note attack="34" dynamics="141.11" release="37">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -158,14 +158,14 @@
     </measure>
     <measure number="4">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="36" dynamics="141.11" release="108">
+      <note attack="36" dynamics="141.11" release="39">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -173,22 +173,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="48" release="66">
+      <note attack="48" release="49">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="5">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="48" dynamics="141.11" release="84">
+      <note attack="48" dynamics="141.11" release="51">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -196,12 +196,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="54" dynamics="141.11" release="78">
+      <note attack="54" dynamics="141.11" release="56">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -209,12 +209,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="58" dynamics="141.11" release="94">
+      <note attack="58" dynamics="141.11" release="61">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -225,14 +225,14 @@
     </measure>
     <measure number="6">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="60" dynamics="141.11" release="132">
+      <note attack="60" dynamics="141.11" release="63">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -240,22 +240,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="72" release="90">
+      <note attack="72" release="73">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="7">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="72" dynamics="141.11" release="108">
+      <note attack="72" dynamics="141.11" release="75">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -263,12 +263,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="78" dynamics="141.11" release="102">
+      <note attack="78" dynamics="141.11" release="80">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -276,12 +276,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="82" dynamics="141.11" release="118">
+      <note attack="82" dynamics="141.11" release="85">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -292,14 +292,14 @@
     </measure>
     <measure number="8">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="84" dynamics="141.11" release="156">
+      <note attack="84" dynamics="141.11" release="87">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -307,22 +307,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="96" release="114">
+      <note attack="96" release="97">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="9">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="96" dynamics="141.11" release="132">
+      <note attack="96" dynamics="141.11" release="99">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -330,12 +330,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="102" dynamics="141.11" release="126">
+      <note attack="102" dynamics="141.11" release="104">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -343,12 +343,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="106" dynamics="141.11" release="142">
+      <note attack="106" dynamics="141.11" release="109">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -359,15 +359,15 @@
     </measure>
     <measure number="10">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="108" dynamics="141.11" release="180">
+      <note attack="108" dynamics="141.11" release="111">
         <pitch>
           <step>A</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <accidental>sharp</accidental>
         <notations>
@@ -376,23 +376,23 @@
           </articulations>
         </notations>
       </note>
-      <note attack="120" release="138">
+      <note attack="120" release="121">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="11">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="120" dynamics="141.11" release="156">
+      <note attack="120" dynamics="141.11" release="123">
         <pitch>
           <step>A</step>
           <alter>1</alter>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <accidental>sharp</accidental>
         <notations>
@@ -401,12 +401,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="126" dynamics="141.11" release="150">
+      <note attack="126" dynamics="141.11" release="128">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -414,12 +414,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="130" dynamics="141.11" release="166">
+      <note attack="130" dynamics="141.11" release="133">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -430,14 +430,14 @@
     </measure>
     <measure number="12">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="132" dynamics="141.11" release="204">
+      <note attack="132" dynamics="141.11" release="135">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -445,22 +445,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="144" release="162">
+      <note attack="144" release="145">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="13">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="144" dynamics="141.11" release="180">
+      <note attack="144" dynamics="141.11" release="147">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -468,12 +468,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="150" dynamics="141.11" release="174">
+      <note attack="150" dynamics="141.11" release="152">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -481,12 +481,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="154" dynamics="141.11" release="190">
+      <note attack="154" dynamics="141.11" release="157">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -497,14 +497,14 @@
     </measure>
     <measure number="14">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="156" dynamics="141.11" release="228">
+      <note attack="156" dynamics="141.11" release="159">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -512,22 +512,22 @@
           </articulations>
         </notations>
       </note>
-      <note attack="168" release="186">
+      <note attack="168" release="169">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
     <measure number="15">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>2</divisions>
       </attributes>
-      <note attack="168" dynamics="141.11" release="204">
+      <note attack="168" dynamics="141.11" release="171">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -535,12 +535,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="174" dynamics="141.11" release="198">
+      <note attack="174" dynamics="141.11" release="176">
         <pitch>
           <step>G</step>
           <octave>3</octave>
         </pitch>
-        <duration>24</duration>
+        <duration>2</duration>
         <type>eighth</type>
         <notations>
           <articulations>
@@ -548,12 +548,12 @@
           </articulations>
         </notations>
       </note>
-      <note attack="178" dynamics="141.11" release="214">
+      <note attack="178" dynamics="141.11" release="181">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>36</duration>
+        <duration>3</duration>
         <type>quarter</type>
         <notations>
           <articulations>
@@ -564,14 +564,14 @@
     </measure>
     <measure number="16">
       <attributes>
-        <divisions>24</divisions>
+        <divisions>1</divisions>
       </attributes>
-      <note attack="180" dynamics="141.11" release="252">
+      <note attack="180" dynamics="141.11" release="183">
         <pitch>
           <step>F</step>
           <octave>3</octave>
         </pitch>
-        <duration>72</duration>
+        <duration>3</duration>
         <type>half</type>
         <notations>
           <articulations>
@@ -579,9 +579,9 @@
           </articulations>
         </notations>
       </note>
-      <note attack="192" release="210">
+      <note attack="192" release="193">
         <rest/>
-        <duration>18</duration>
+        <duration>1</duration>
         <type>eighth</type>
       </note>
     </measure>
