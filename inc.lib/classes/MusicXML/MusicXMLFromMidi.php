@@ -1229,11 +1229,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $this->tieStop[$nextMeasureIndex] = array();
                     }
                     $timeRemaining = $message['duration'] - ($duration * $divisions / $timebase);
-                    
-
                     $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
-                    
-
                     $this->tieStop[$nextMeasureIndex][] = new TieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions);
                 }             
 
