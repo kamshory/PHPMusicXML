@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="string-mute")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/string-mute/
+ * @Update(date-time="2023-10-26 11:26:49")
  * @Data
  */
 class StringMute extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="identification")
  * @ParentElement(name="score-part,score-partwise,score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/identification/
+ * @Update(date-time="2023-10-26 11:23:27")
  * @Data
  */
 class Identification extends MusicXMLWriter

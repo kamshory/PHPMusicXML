@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="feature")
  * @ParentElement(name="grouping")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/feature/
+ * @Update(date-time="2023-10-26 11:22:37")
  * @Data
  */
 class Feature extends MusicXMLWriter

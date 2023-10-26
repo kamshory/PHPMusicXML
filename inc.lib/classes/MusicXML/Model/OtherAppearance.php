@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="other-appearance")
  * @ParentElement(name="appearance")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-appearance/
+ * @Update(date-time="2023-10-26 11:24:55")
  * @Data
  */
 class OtherAppearance extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="harp-pedals")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/harp-pedals/
+ * @Update(date-time="2023-10-26 11:23:20")
  * @Data
  */
 class HarpPedals extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="duration")
  * @ParentElement(name="backup,figured-bass,forward,note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/duration/
+ * @Update(date-time="2023-10-26 11:22:20")
  * @Data
  */
 class Duration extends MusicXMLWriter

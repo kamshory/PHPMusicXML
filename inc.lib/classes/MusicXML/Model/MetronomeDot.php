@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="metronome-dot")
  * @ParentElement(name="metronome-note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome-dot/
+ * @Update(date-time="2023-10-26 11:24:07")
  * @Data
  */
 class MetronomeDot extends MusicXMLWriter

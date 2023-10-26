@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="numeral-fifths")
  * @ParentElement(name="numeral-key")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/numeral-fifths/
+ * @Update(date-time="2023-10-26 11:24:44")
  * @Data
  */
 class NumeralFifths extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="frame")
  * @ParentElement(name="harmony")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/frame/
+ * @Update(date-time="2023-10-26 11:22:57")
  * @Data
  */
 class Frame extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="tuning-octave")
  * @ParentElement(name="accord,staff-tuning")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/tuning-octave/
+ * @Update(date-time="2023-10-26 11:27:22")
  * @Data
  */
 class TuningOctave extends MusicXMLWriter

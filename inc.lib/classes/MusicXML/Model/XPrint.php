@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="print")
  * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/print/
+ * @Update(date-time="2023-10-26 11:25:41")
  * @Data
  */
 class XPrint extends MusicXMLWriter

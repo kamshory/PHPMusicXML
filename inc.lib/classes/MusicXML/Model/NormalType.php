@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="normal-type")
  * @ParentElement(name="time-modification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/normal-type/
+ * @Update(date-time="2023-10-26 11:24:38")
  * @Data
  */
 class NormalType extends MusicXMLWriter

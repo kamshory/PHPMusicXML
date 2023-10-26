@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="frame-strings")
  * @ParentElement(name="frame")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/frame-strings/
+ * @Update(date-time="2023-10-26 11:22:56")
  * @Data
  */
 class FrameStrings extends MusicXMLWriter

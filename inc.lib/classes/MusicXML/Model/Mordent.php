@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="mordent")
  * @ParentElement(name="ornaments")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/mordent/
+ * @Update(date-time="2023-10-26 11:24:25")
  * @Data
  */
 class Mordent extends MusicXMLWriter

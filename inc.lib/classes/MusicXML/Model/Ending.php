@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="ending")
  * @ParentElement(name="barline")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/ending/
+ * @Update(date-time="2023-10-26 11:22:31")
  * @Data
  */
 class Ending extends MusicXMLWriter

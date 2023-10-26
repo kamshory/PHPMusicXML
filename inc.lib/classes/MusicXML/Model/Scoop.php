@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="scoop")
  * @ParentElement(name="articulations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/scoop/
+ * @Update(date-time="2023-10-26 11:25:55")
  * @Data
  */
 class Scoop extends MusicXMLWriter

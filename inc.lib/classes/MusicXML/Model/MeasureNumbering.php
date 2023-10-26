@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="measure-numbering")
  * @ParentElement(name="print")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-numbering/
+ * @Update(date-time="2023-10-26 11:23:59")
  * @Data
  */
 class MeasureNumbering extends MusicXMLWriter

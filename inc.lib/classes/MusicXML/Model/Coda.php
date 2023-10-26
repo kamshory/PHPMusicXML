@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="coda")
  * @ParentElement(name="barline,direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/coda/
+ * @Update(date-time="2023-10-26 11:21:49")
  * @Data
  */
 class Coda extends MusicXMLWriter

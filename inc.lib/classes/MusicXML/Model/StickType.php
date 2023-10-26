@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="stick-type")
  * @ParentElement(name="stick")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/stick-type/
+ * @Update(date-time="2023-10-26 11:26:43")
  * @Data
  */
 class StickType extends MusicXMLWriter

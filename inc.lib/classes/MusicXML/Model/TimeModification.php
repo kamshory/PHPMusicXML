@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="time-modification")
  * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/time-modification/
+ * @Update(date-time="2023-10-26 11:27:10")
  * @Data
  */
 class TimeModification extends MusicXMLWriter

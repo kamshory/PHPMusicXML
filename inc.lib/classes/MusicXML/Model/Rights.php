@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="rights")
  * @ParentElement(name="identification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/rights/
+ * @Update(date-time="2023-10-26 11:25:50")
  * @Data
  */
 class Rights extends MusicXMLWriter

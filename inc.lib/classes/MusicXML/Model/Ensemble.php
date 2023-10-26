@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="ensemble")
  * @ParentElement(name="instrument-change,score-instrument")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/ensemble/
+ * @Update(date-time="2023-10-26 11:22:32")
  * @Data
  */
 class Ensemble extends MusicXMLWriter

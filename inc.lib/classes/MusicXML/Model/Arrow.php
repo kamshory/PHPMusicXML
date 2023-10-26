@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="arrow")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/arrow/
+ * @Update(date-time="2023-10-26 11:21:13")
  * @Data
  */
 class Arrow extends MusicXMLWriter

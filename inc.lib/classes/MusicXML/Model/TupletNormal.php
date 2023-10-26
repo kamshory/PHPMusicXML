@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="tuplet-normal")
  * @ParentElement(name="tuplet")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/tuplet-normal/
+ * @Update(date-time="2023-10-26 11:27:25")
  * @Data
  */
 class TupletNormal extends MusicXMLWriter

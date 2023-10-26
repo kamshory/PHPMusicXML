@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="first")
  * @ParentElement(name="swing")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/first/
+ * @Update(date-time="2023-10-26 11:22:49")
  * @Data
  */
 class First extends MusicXMLWriter

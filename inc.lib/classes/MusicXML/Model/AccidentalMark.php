@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="accidental-mark")
  * @ParentElement(name="notations,ornaments")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/accidental-mark/
+ * @Update(date-time="2023-10-26 11:21:01")
  * @Data
  */
 class AccidentalMark extends MusicXMLWriter

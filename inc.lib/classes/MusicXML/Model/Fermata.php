@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="fermata")
  * @ParentElement(name="barline,notations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/fermata/
+ * @Update(date-time="2023-10-26 11:22:38")
  * @Data
  */
 class Fermata extends MusicXMLWriter

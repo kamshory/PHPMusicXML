@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="degree-type")
  * @ParentElement(name="degree")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/degree-type/
+ * @Update(date-time="2023-10-26 11:22:02")
  * @Data
  */
 class DegreeType extends MusicXMLWriter

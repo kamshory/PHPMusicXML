@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="arrow-direction")
  * @ParentElement(name="arrow")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/arrow-direction/
+ * @Update(date-time="2023-10-26 11:21:12")
  * @Data
  */
 class ArrowDirection extends MusicXMLWriter

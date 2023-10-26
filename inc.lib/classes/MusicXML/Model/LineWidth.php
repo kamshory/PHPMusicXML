@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="line-width")
  * @ParentElement(name="appearance")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/line-width/
+ * @Update(date-time="2023-10-26 11:23:50")
  * @Data
  */
 class LineWidth extends MusicXMLWriter

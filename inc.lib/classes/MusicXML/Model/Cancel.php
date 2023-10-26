@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="cancel")
  * @ParentElement(name="key")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/cancel/
+ * @Update(date-time="2023-10-26 11:21:43")
  * @Data
  */
 class Cancel extends MusicXMLWriter

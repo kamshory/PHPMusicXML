@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="group-name")
  * @ParentElement(name="part-group")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/group-name/
+ * @Update(date-time="2023-10-26 11:23:09")
  * @Data
  */
 class GroupName extends MusicXMLWriter

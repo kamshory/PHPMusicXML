@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="smear")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/smear/
+ * @Update(date-time="2023-10-26 11:26:18")
  * @Data
  */
 class Smear extends MusicXMLWriter

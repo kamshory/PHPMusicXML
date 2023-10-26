@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="pre-bend")
  * @ParentElement(name="bend")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pre-bend/
+ * @Update(date-time="2023-10-26 11:25:38")
  * @Data
  */
 class PreBend extends MusicXMLWriter

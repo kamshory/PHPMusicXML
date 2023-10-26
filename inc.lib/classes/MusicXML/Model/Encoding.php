@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="encoding")
  * @ParentElement(name="identification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/encoding/
+ * @Update(date-time="2023-10-26 11:22:27")
  * @Data
  */
 class Encoding extends MusicXMLWriter

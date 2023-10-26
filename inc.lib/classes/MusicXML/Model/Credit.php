@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="credit")
  * @ParentElement(name="score-partwise,score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/credit/
+ * @Update(date-time="2023-10-26 11:21:55")
  * @Data
  */
 class Credit extends MusicXMLWriter

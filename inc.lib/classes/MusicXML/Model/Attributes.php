@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="attributes")
  * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/attributes/
+ * @Update(date-time="2023-10-26 11:21:18")
  * @Data
  */
 class Attributes extends MusicXMLWriter

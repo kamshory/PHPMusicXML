@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="prefix")
  * @ParentElement(name="figure")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/prefix/
+ * @Update(date-time="2023-10-26 11:25:39")
  * @Data
  */
 class Prefix extends MusicXMLWriter

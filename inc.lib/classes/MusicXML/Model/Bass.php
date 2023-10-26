@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="bass")
  * @ParentElement(name="harmony")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bass/
+ * @Update(date-time="2023-10-26 11:21:26")
  * @Data
  */
 class Bass extends MusicXMLWriter

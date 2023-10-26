@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="staccato")
  * @ParentElement(name="articulations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staccato/
+ * @Update(date-time="2023-10-26 11:26:28")
  * @Data
  */
 class Staccato extends MusicXMLWriter

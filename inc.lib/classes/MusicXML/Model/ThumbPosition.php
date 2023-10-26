@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="thumb-position")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/thumb-position/
+ * @Update(date-time="2023-10-26 11:27:07")
  * @Data
  */
 class ThumbPosition extends MusicXMLWriter

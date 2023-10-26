@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="handbell")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/handbell/
+ * @Update(date-time="2023-10-26 11:23:16")
  * @Data
  */
 class Handbell extends MusicXMLWriter

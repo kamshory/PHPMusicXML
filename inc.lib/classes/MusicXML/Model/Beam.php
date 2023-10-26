@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="beam")
  * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/beam/
+ * @Update(date-time="2023-10-26 11:21:27")
  * @Data
  */
 class Beam extends MusicXMLWriter

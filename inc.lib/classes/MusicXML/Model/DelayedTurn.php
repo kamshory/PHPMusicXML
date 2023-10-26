@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="delayed-turn")
  * @ParentElement(name="ornaments")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/delayed-turn/
+ * @Update(date-time="2023-10-26 11:22:06")
  * @Data
  */
 class DelayedTurn extends MusicXMLWriter

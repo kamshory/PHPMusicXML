@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="footnote")
  * @ParentElement(name="attributes,backup,barline,direction,figure,figured-bass,forward,harmony,lyric,notations,note,part-group")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/footnote/
+ * @Update(date-time="2023-10-26 11:22:51")
  * @Data
  */
 class Footnote extends MusicXMLWriter

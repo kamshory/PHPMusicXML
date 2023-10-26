@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="transpose")
  * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/transpose/
+ * @Update(date-time="2023-10-26 11:27:17")
  * @Data
  */
 class Transpose extends MusicXMLWriter

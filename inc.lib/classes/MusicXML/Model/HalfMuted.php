@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="half-muted")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/half-muted/
+ * @Update(date-time="2023-10-26 11:23:13")
  * @Data
  */
 class HalfMuted extends MusicXMLWriter

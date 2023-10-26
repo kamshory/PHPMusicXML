@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="tie")
  * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/tie/
+ * @Update(date-time="2023-10-26 11:27:08")
  * @Data
  */
 class Tie extends MusicXMLWriter

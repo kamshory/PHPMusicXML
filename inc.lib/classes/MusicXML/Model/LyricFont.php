@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="lyric-font")
  * @ParentElement(name="defaults")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/lyric-font/
+ * @Update(date-time="2023-10-26 11:23:55")
  * @Data
  */
 class LyricFont extends MusicXMLWriter

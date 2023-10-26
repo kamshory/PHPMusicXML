@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="hole-type")
  * @ParentElement(name="hole")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/hole-type/
+ * @Update(date-time="2023-10-26 11:23:24")
  * @Data
  */
 class HoleType extends MusicXMLWriter

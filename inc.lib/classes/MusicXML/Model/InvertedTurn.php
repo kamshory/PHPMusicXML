@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="inverted-turn")
  * @ParentElement(name="ornaments")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/inverted-turn/
+ * @Update(date-time="2023-10-26 11:23:37")
  * @Data
  */
 class InvertedTurn extends MusicXMLWriter

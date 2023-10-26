@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="creator")
  * @ParentElement(name="identification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/creator/
+ * @Update(date-time="2023-10-26 11:21:50")
  * @Data
  */
 class Creator extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="link")
  * @ParentElement(name="credit,measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/link/
+ * @Update(date-time="2023-10-26 11:23:52")
  * @Data
  */
 class Link extends MusicXMLWriter

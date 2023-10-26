@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="other-direction")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-direction/
+ * @Update(date-time="2023-10-26 11:24:57")
  * @Data
  */
 class OtherDirection extends MusicXMLWriter

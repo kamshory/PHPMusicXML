@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="work-number")
  * @ParentElement(name="work")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/work-number/
+ * @Update(date-time="2023-10-26 11:27:46")
  * @Data
  */
 class WorkNumber extends MusicXMLWriter

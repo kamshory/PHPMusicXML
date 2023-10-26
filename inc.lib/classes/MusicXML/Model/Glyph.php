@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="glyph")
  * @ParentElement(name="appearance")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/glyph/
+ * @Update(date-time="2023-10-26 11:23:02")
  * @Data
  */
 class Glyph extends MusicXMLWriter

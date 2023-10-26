@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="word-font")
  * @ParentElement(name="defaults")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/word-font/
+ * @Update(date-time="2023-10-26 11:27:44")
  * @Data
  */
 class WordFont extends MusicXMLWriter

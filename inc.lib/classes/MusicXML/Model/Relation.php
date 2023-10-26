@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="relation")
  * @ParentElement(name="identification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/relation/
+ * @Update(date-time="2023-10-26 11:25:43")
  * @Data
  */
 class Relation extends MusicXMLWriter

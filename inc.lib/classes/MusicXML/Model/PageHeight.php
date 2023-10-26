@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="page-height")
  * @ParentElement(name="page-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/page-height/
+ * @Update(date-time="2023-10-26 11:25:06")
  * @Data
  */
 class PageHeight extends MusicXMLWriter

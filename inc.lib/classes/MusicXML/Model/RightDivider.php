@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="right-divider")
  * @ParentElement(name="system-dividers")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/right-divider/
+ * @Update(date-time="2023-10-26 11:25:48")
  * @Data
  */
 class RightDivider extends MusicXMLWriter

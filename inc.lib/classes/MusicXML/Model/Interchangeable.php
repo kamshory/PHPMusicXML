@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="interchangeable")
  * @ParentElement(name="time")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/interchangeable/
+ * @Update(date-time="2023-10-26 11:23:35")
  * @Data
  */
 class Interchangeable extends MusicXMLWriter

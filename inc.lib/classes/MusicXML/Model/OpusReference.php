@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="opus-reference")
  * @ParentElement(name="work")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/opus-reference/
+ * @Update(date-time="2023-10-26 11:24:53")
  * @Data
  */
 class OpusReference extends MusicXMLWriter

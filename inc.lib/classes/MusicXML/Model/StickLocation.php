@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="stick-location")
  * @ParentElement(name="percussion")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/stick-location/
+ * @Update(date-time="2023-10-26 11:26:40")
  * @Data
  */
 class StickLocation extends MusicXMLWriter

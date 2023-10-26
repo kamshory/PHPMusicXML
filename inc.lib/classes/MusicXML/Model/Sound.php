@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="sound")
  * @ParentElement(name="direction,measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sound/
+ * @Update(date-time="2023-10-26 11:26:24")
  * @Data
  */
 class Sound extends MusicXMLWriter

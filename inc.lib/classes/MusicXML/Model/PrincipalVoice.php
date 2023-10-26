@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="principal-voice")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/principal-voice/
+ * @Update(date-time="2023-10-26 11:25:40")
  * @Data
  */
 class PrincipalVoice extends MusicXMLWriter

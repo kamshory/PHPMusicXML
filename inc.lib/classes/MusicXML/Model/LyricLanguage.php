@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="lyric-language")
  * @ParentElement(name="defaults")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/lyric-language/
+ * @Update(date-time="2023-10-26 11:23:56")
  * @Data
  */
 class LyricLanguage extends MusicXMLWriter

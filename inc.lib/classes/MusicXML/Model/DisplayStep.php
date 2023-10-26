@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="display-step")
  * @ParentElement(name="rest,unpitched")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/display-step/
+ * @Update(date-time="2023-10-26 11:22:12")
  * @Data
  */
 class DisplayStep extends MusicXMLWriter

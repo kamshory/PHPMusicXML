@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="time-relation")
  * @ParentElement(name="interchangeable")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/time-relation/
+ * @Update(date-time="2023-10-26 11:27:11")
  * @Data
  */
 class TimeRelation extends MusicXMLWriter
