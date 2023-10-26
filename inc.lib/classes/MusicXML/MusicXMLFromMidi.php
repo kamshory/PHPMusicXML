@@ -1000,7 +1000,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         $measure = new MeasurePartwise();
         $attributes = new Attributes();
-        $measure->number = $measureIndex+1;
+        $measure->number = $measureIndex + 1;
         $directions = array();
         
         if ($this->hasMessage(0, $measureIndex))
@@ -1039,8 +1039,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
             }
 
-            // begin add attribute
-            
             $divisions = $this->getDivisions($measureIndex);
             $attributes->divisions = new Divisions($divisions);
             if($measureIndex == 0)
@@ -1127,8 +1125,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                             $measure->elements[$elementIndex]->notations[0]->technical[0] = $technical;
                         }
                     }
-                }
-                
+                }                
             }
             
             // set beam if any
@@ -1204,10 +1201,10 @@ class MusicXMLFromMidi extends MusicXMLBase
                 if ($this->isNeedRestMiddle($offset, $lastEnd)) {
                     // add rest at the middle
                     $mod = $offset - $lastEnd;
-                    $noteRest2 = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
+                    $noteRest = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
                     
                     // add rest note
-                    $measure->elements[] = $noteRest2;
+                    $measure->elements[] = $noteRest;
                 }
 
                 if ($lastEnd <= $end) {
