@@ -229,6 +229,7 @@ use MusicXML\MusicXMLWriter;
  * @MusicXML
  * @Element(name="'.$element.'")'.$parentElementAnnotation.'
  * @Reference '.$url.'
+ * @Update(date-time="'.gmdate('Y-m-d H:i:s').'")
  * @Data
  */
 class '.$className.' extends MusicXMLWriter
@@ -264,6 +265,7 @@ use MusicXML\MusicXMLWriter;
  * @MusicXML
  * @Element(name="'.$element.'")'.$parentElementAnnotation.'
  * @Reference '.$url.'
+ * @Update(date-time="'.gmdate('Y-m-d H:i:s').'")
  * @Data
  */
 class '.$className.' extends MusicXMLWriter
