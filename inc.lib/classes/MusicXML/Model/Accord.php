@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="accord")
  * @ParentElement(name="scordatura")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/accord/
+ * @Update(date-time="2023-10-26 11:21:04")
  * @Data
  */
 class Accord extends MusicXMLWriter

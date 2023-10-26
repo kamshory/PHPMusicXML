@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="sfz")
  * @ParentElement(name="dynamics")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sfz/
+ * @Update(date-time="2023-10-26 11:26:09")
  * @Data
  */
 class Sfz extends MusicXMLWriter

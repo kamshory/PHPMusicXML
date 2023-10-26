@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="membrane")
  * @ParentElement(name="percussion")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/membrane/
+ * @Update(date-time="2023-10-26 11:24:04")
  * @Data
  */
 class Membrane extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="pull-off")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pull-off/
+ * @Update(date-time="2023-10-26 11:25:42")
  * @Data
  */
 class PullOff extends MusicXMLWriter

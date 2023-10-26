@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="midi-unpitched")
  * @ParentElement(name="midi-instrument")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-unpitched/
+ * @Update(date-time="2023-10-26 11:24:20")
  * @Data
  */
 class MidiUnpitched extends MusicXMLWriter

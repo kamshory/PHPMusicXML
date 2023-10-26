@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="articulations")
  * @ParentElement(name="notations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/articulations/
+ * @Update(date-time="2023-10-26 11:21:15")
  * @Data
  */
 class Articulations extends MusicXMLWriter

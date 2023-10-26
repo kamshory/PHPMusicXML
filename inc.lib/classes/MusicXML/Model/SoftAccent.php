@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="soft-accent")
  * @ParentElement(name="articulations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/soft-accent/
+ * @Update(date-time="2023-10-26 11:26:20")
  * @Data
  */
 class SoftAccent extends MusicXMLWriter

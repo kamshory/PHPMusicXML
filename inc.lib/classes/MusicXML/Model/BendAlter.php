@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="bend-alter")
  * @ParentElement(name="bend")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bend-alter/
+ * @Update(date-time="2023-10-26 11:21:35")
  * @Data
  */
 class BendAlter extends MusicXMLWriter

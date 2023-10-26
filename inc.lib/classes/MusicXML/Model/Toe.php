@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="toe")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/toe/
+ * @Update(date-time="2023-10-26 11:27:13")
  * @Data
  */
 class Toe extends MusicXMLWriter

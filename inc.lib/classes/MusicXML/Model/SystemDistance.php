@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="system-distance")
  * @ParentElement(name="system-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/system-distance/
+ * @Update(date-time="2023-10-26 11:26:58")
  * @Data
  */
 class SystemDistance extends MusicXMLWriter

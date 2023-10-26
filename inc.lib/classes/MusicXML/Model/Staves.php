@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="staves")
  * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/staves/
+ * @Update(date-time="2023-10-26 11:26:37")
  * @Data
  */
 class Staves extends MusicXMLWriter

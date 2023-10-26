@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="left-margin")
  * @ParentElement(name="page-margins,system-margins")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/left-margin/
+ * @Update(date-time="2023-10-26 11:23:48")
  * @Data
  */
 class LeftMargin extends MusicXMLWriter

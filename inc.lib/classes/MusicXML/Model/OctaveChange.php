@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="octave-change")
  * @ParentElement(name="part-transpose,transpose")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/octave-change/
+ * @Update(date-time="2023-10-26 11:24:48")
  * @Data
  */
 class OctaveChange extends MusicXMLWriter

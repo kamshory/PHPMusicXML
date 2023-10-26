@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="mute")
  * @ParentElement(name="play")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/mute/
+ * @Update(date-time="2023-10-26 11:24:31")
  * @Data
  */
 class Mute extends MusicXMLWriter

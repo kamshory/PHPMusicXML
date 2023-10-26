@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="player")
  * @ParentElement(name="score-part")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/player/
+ * @Update(date-time="2023-10-26 11:25:31")
  * @Data
  */
 class Player extends MusicXMLWriter

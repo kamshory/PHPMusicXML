@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="key-step")
  * @ParentElement(name="key")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/key-step/
+ * @Update(date-time="2023-10-26 11:23:42")
  * @Data
  */
 class KeyStep extends MusicXMLWriter

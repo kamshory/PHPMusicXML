@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="rehearsal")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/rehearsal/
+ * @Update(date-time="2023-10-26 11:25:42")
  * @Data
  */
 class Rehearsal extends MusicXMLWriter

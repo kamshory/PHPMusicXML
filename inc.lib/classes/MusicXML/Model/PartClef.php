@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="part-clef")
  * @ParentElement(name="for-part")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-clef/
+ * @Update(date-time="2023-10-26 11:25:12")
  * @Data
  */
 class PartClef extends MusicXMLWriter

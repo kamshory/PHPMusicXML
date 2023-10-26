@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="slash")
  * @ParentElement(name="measure-style")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/slash/
+ * @Update(date-time="2023-10-26 11:26:16")
  * @Data
  */
 class Slash extends MusicXMLWriter

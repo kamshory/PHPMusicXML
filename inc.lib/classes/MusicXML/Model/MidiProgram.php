@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="midi-program")
  * @ParentElement(name="midi-instrument")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-program/
+ * @Update(date-time="2023-10-26 11:24:19")
  * @Data
  */
 class MidiProgram extends MusicXMLWriter

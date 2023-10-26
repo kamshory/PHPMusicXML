@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="first-fret")
  * @ParentElement(name="frame")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/first-fret/
+ * @Update(date-time="2023-10-26 11:22:48")
  * @Data
  */
 class FirstFret extends MusicXMLWriter

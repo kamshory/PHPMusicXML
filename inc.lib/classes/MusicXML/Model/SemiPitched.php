@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="semi-pitched")
  * @ParentElement(name="play")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/semi-pitched/
+ * @Update(date-time="2023-10-26 11:26:04")
  * @Data
  */
 class SemiPitched extends MusicXMLWriter

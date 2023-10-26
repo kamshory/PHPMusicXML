@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="page-margins")
  * @ParentElement(name="page-layout")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/page-margins/
+ * @Update(date-time="2023-10-26 11:25:08")
  * @Data
  */
 class PageMargins extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="frame-frets")
  * @ParentElement(name="frame")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/frame-frets/
+ * @Update(date-time="2023-10-26 11:22:54")
  * @Data
  */
 class FrameFrets extends MusicXMLWriter

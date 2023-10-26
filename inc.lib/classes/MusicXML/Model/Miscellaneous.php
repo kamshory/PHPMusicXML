@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="miscellaneous")
  * @ParentElement(name="identification")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/miscellaneous/
+ * @Update(date-time="2023-10-26 11:24:23")
  * @Data
  */
 class Miscellaneous extends MusicXMLWriter

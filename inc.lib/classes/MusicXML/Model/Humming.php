@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="humming")
  * @ParentElement(name="lyric")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/humming/
+ * @Update(date-time="2023-10-26 11:23:26")
  * @Data
  */
 class Humming extends MusicXMLWriter

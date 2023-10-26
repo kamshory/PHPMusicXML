@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="eyeglasses")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/eyeglasses/
+ * @Update(date-time="2023-10-26 11:22:34")
  * @Data
  */
 class Eyeglasses extends MusicXMLWriter

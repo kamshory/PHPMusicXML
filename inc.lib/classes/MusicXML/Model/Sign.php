@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="sign")
  * @ParentElement(name="clef,part-clef")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sign/
+ * @Update(date-time="2023-10-26 11:26:12")
  * @Data
  */
 class Sign extends MusicXMLWriter

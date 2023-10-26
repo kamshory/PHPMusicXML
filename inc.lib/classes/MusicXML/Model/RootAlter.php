@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="root-alter")
  * @ParentElement(name="root")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/root-alter/
+ * @Update(date-time="2023-10-26 11:25:51")
  * @Data
  */
 class RootAlter extends MusicXMLWriter

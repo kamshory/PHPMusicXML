@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="barline")
  * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/barline/
+ * @Update(date-time="2023-10-26 11:21:20")
  * @Data
  */
 class Barline extends MusicXMLWriter

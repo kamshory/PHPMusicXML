@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="level")
  * @ParentElement(name="attributes,backup,barline,direction,figure,figured-bass,forward,harmony,lyric,notations,note,part-group")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/level/
+ * @Update(date-time="2023-10-26 11:23:49")
  * @Data
  */
 class Level extends MusicXMLWriter

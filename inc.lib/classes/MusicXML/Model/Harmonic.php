@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="harmonic")
  * @ParentElement(name="technical")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/harmonic/
+ * @Update(date-time="2023-10-26 11:23:18")
  * @Data
  */
 class Harmonic extends MusicXMLWriter

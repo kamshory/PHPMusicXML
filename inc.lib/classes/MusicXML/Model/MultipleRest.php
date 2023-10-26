@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="multiple-rest")
  * @ParentElement(name="measure-style")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/multiple-rest/
+ * @Update(date-time="2023-10-26 11:24:30")
  * @Data
  */
 class MultipleRest extends MusicXMLWriter

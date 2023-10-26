@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="other-listen")
  * @ParentElement(name="listen")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-listen/
+ * @Update(date-time="2023-10-26 11:24:59")
  * @Data
  */
 class OtherListen extends MusicXMLWriter

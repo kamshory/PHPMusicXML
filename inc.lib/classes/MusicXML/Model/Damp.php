@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="damp")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/damp/
+ * @Update(date-time="2023-10-26 11:21:58")
  * @Data
  */
 class Damp extends MusicXMLWriter

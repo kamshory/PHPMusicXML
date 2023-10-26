@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="part-symbol")
  * @ParentElement(name="attributes")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/part-symbol/
+ * @Update(date-time="2023-10-26 11:25:19")
  * @Data
  */
 class PartSymbol extends MusicXMLWriter

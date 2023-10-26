@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="measure-partwise")
  * @ParentElement(name="part (partwise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/measure-partwise/
+ * @Update(date-time="2023-10-26 11:24:00")
  * @Data
  */
 class MeasurePartwise extends MusicXMLWriter

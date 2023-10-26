@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="group-link")
  * @ParentElement(name="part-link")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/group-link/
+ * @Update(date-time="2023-10-26 11:23:07")
  * @Data
  */
 class GroupLink extends MusicXMLWriter

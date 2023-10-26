@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="instrument-link")
  * @ParentElement(name="part-link")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/instrument-link/
+ * @Update(date-time="2023-10-26 11:23:30")
  * @Data
  */
 class InstrumentLink extends MusicXMLWriter

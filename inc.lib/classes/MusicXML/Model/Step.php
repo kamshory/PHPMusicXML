@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="step")
  * @ParentElement(name="pitch")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/step/
+ * @Update(date-time="2023-10-26 11:26:39")
  * @Data
  */
 class Step extends MusicXMLWriter

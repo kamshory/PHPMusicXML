@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="midi-device")
  * @ParentElement(name="score-part,sound")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/midi-device/
+ * @Update(date-time="2023-10-26 11:24:16")
  * @Data
  */
 class MidiDevice extends MusicXMLWriter

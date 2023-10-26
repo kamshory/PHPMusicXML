@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="wedge")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/wedge/
+ * @Update(date-time="2023-10-26 11:27:42")
  * @Data
  */
 class Wedge extends MusicXMLWriter

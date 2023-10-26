@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="clef-octave-change")
  * @ParentElement(name="clef,part-clef")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/clef-octave-change/
+ * @Update(date-time="2023-10-26 11:21:47")
  * @Data
  */
 class ClefOctaveChange extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="slash-dot")
  * @ParentElement(name="beat-repeat,slash")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/slash-dot/
+ * @Update(date-time="2023-10-26 11:26:13")
  * @Data
  */
 class SlashDot extends MusicXMLWriter

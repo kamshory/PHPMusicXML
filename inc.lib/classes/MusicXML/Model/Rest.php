@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="rest")
  * @ParentElement(name="note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/rest/
+ * @Update(date-time="2023-10-26 11:25:46")
  * @Data
  */
 class Rest extends MusicXMLWriter

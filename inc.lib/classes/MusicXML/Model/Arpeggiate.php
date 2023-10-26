@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="arpeggiate")
  * @ParentElement(name="notations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/arpeggiate/
+ * @Update(date-time="2023-10-26 11:21:11")
  * @Data
  */
 class Arpeggiate extends MusicXMLWriter

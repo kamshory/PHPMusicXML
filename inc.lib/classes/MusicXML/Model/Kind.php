@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="kind")
  * @ParentElement(name="harmony")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/kind/
+ * @Update(date-time="2023-10-26 11:23:44")
  * @Data
  */
 class Kind extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="words")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/words/
+ * @Update(date-time="2023-10-26 11:27:45")
  * @Data
  */
 class Words extends MusicXMLWriter

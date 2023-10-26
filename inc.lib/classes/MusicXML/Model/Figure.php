@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="figure")
  * @ParentElement(name="figured-bass")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/figure/
+ * @Update(date-time="2023-10-26 11:22:45")
  * @Data
  */
 class Figure extends MusicXMLWriter

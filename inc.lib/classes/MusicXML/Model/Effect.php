@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="effect")
  * @ParentElement(name="percussion")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/effect/
+ * @Update(date-time="2023-10-26 11:22:22")
  * @Data
  */
 class Effect extends MusicXMLWriter

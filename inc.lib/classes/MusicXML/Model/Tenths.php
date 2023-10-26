@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="tenths")
  * @ParentElement(name="scaling")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/tenths/
+ * @Update(date-time="2023-10-26 11:27:04")
  * @Data
  */
 class Tenths extends MusicXMLWriter

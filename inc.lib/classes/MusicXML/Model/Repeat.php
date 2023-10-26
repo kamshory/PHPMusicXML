@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="repeat")
  * @ParentElement(name="barline")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/repeat/
+ * @Update(date-time="2023-10-26 11:25:45")
  * @Data
  */
 class Repeat extends MusicXMLWriter

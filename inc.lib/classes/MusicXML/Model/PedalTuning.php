@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="pedal-tuning")
  * @ParentElement(name="harp-pedals")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pedal-tuning/
+ * @Update(date-time="2023-10-26 11:25:23")
  * @Data
  */
 class PedalTuning extends MusicXMLWriter

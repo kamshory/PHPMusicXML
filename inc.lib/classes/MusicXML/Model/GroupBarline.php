@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="group-barline")
  * @ParentElement(name="part-group")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/group-barline/
+ * @Update(date-time="2023-10-26 11:23:06")
  * @Data
  */
 class GroupBarline extends MusicXMLWriter

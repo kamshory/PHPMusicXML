@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="senza-misura")
  * @ParentElement(name="time")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/senza-misura/
+ * @Update(date-time="2023-10-26 11:26:04")
  * @Data
  */
 class SenzaMisura extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="glissando")
  * @ParentElement(name="notations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/glissando/
+ * @Update(date-time="2023-10-26 11:23:01")
  * @Data
  */
 class Glissando extends MusicXMLWriter

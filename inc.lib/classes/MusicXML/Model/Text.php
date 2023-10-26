@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="text")
  * @ParentElement(name="lyric")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/text/
+ * @Update(date-time="2023-10-26 11:27:06")
  * @Data
  */
 class Text extends MusicXMLWriter

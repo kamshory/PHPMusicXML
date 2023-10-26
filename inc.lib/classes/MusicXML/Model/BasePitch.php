@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="base-pitch")
  * @ParentElement(name="harmonic")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/base-pitch/
+ * @Update(date-time="2023-10-26 11:21:23")
  * @Data
  */
 class BasePitch extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="page-layout")
  * @ParentElement(name="defaults,print")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/page-layout/
+ * @Update(date-time="2023-10-26 11:25:07")
  * @Data
  */
 class PageLayout extends MusicXMLWriter

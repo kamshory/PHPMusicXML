@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="detached-legato")
  * @ParentElement(name="articulations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/detached-legato/
+ * @Update(date-time="2023-10-26 11:22:07")
  * @Data
  */
 class DetachedLegato extends MusicXMLWriter

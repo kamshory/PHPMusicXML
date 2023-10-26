@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="swing-type")
  * @ParentElement(name="swing")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/swing-type/
+ * @Update(date-time="2023-10-26 11:26:54")
  * @Data
  */
 class SwingType extends MusicXMLWriter

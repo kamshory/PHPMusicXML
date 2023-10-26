@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="metronome-tied")
  * @ParentElement(name="metronome-note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/metronome-tied/
+ * @Update(date-time="2023-10-26 11:24:10")
  * @Data
  */
 class MetronomeTied extends MusicXMLWriter

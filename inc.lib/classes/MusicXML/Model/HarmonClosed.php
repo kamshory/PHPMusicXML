@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="harmon-closed")
  * @ParentElement(name="harmon-mute")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/harmon-closed/
+ * @Update(date-time="2023-10-26 11:23:17")
  * @Data
  */
 class HarmonClosed extends MusicXMLWriter

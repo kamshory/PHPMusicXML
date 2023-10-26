@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="inversion")
  * @ParentElement(name="harmony")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/inversion/
+ * @Update(date-time="2023-10-26 11:23:35")
  * @Data
  */
 class Inversion extends MusicXMLWriter

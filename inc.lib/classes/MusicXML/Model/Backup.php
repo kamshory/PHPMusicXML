@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="backup")
  * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/backup/
+ * @Update(date-time="2023-10-26 11:21:19")
  * @Data
  */
 class Backup extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="symbol")
  * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/symbol/
+ * @Update(date-time="2023-10-26 11:26:57")
  * @Data
  */
 class Symbol extends MusicXMLWriter

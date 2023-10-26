@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="movement-number")
  * @ParentElement(name="score-partwise,score-timewise")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/movement-number/
+ * @Update(date-time="2023-10-26 11:24:27")
  * @Data
  */
 class MovementNumber extends MusicXMLWriter

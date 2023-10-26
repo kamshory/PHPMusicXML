@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="other-ornament")
  * @ParentElement(name="ornaments")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-ornament/
+ * @Update(date-time="2023-10-26 11:25:01")
  * @Data
  */
 class OtherOrnament extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="voice")
  * @ParentElement(name="direction,forward,note")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/voice/
+ * @Update(date-time="2023-10-26 11:27:38")
  * @Data
  */
 class Voice extends MusicXMLWriter

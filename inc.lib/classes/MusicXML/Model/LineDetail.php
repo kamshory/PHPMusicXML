@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="line-detail")
  * @ParentElement(name="staff-details")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/line-detail/
+ * @Update(date-time="2023-10-26 11:23:50")
  * @Data
  */
 class LineDetail extends MusicXMLWriter

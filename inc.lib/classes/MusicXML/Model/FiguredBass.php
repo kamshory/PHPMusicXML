@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="figured-bass")
  * @ParentElement(name="measure (partwise),part (timewise)")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/figured-bass/
+ * @Update(date-time="2023-10-26 11:22:46")
  * @Data
  */
 class FiguredBass extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="pitched")
  * @ParentElement(name="percussion")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pitched/
+ * @Update(date-time="2023-10-26 11:25:28")
  * @Data
  */
 class Pitched extends MusicXMLWriter

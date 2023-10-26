@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="credit-words")
  * @ParentElement(name="credit")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/credit-words/
+ * @Update(date-time="2023-10-26 11:21:54")
  * @Data
  */
 class CreditWords extends MusicXMLWriter

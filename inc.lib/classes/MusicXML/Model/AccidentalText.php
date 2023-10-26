@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="accidental-text")
  * @ParentElement(name="group-abbreviation-display,group-name-display,notehead-text,part-abbreviation-display,part-name-display")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/accidental-text/
+ * @Update(date-time="2023-10-26 11:21:02")
  * @Data
  */
 class AccidentalText extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="end-line")
  * @ParentElement(name="lyric")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/end-line/
+ * @Update(date-time="2023-10-26 11:22:29")
  * @Data
  */
 class EndLine extends MusicXMLWriter

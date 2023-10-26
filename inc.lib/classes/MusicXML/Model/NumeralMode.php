@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="numeral-mode")
  * @ParentElement(name="numeral-key")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/numeral-mode/
+ * @Update(date-time="2023-10-26 11:24:45")
  * @Data
  */
 class NumeralMode extends MusicXMLWriter

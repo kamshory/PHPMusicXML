@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="other-dynamics")
  * @ParentElement(name="dynamics")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/other-dynamics/
+ * @Update(date-time="2023-10-26 11:24:58")
  * @Data
  */
 class OtherDynamics extends MusicXMLWriter

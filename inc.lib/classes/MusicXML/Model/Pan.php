@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="pan")
  * @ParentElement(name="midi-instrument")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/pan/
+ * @Update(date-time="2023-10-26 11:25:09")
  * @Data
  */
 class Pan extends MusicXMLWriter

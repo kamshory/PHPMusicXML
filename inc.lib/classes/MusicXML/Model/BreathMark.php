@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="breath-mark")
  * @ParentElement(name="articulations")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/breath-mark/
+ * @Update(date-time="2023-10-26 11:21:41")
  * @Data
  */
 class BreathMark extends MusicXMLWriter

@@ -15,6 +15,7 @@ use MusicXML\MusicXMLWriter;
  * @Element(name="circular-arrow")
  * @ParentElement(name="arrow")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/circular-arrow/
+ * @Update(date-time="2023-10-26 11:21:46")
  * @Data
  */
 class CircularArrow extends MusicXMLWriter
