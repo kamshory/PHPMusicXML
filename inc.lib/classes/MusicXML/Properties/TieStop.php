@@ -81,7 +81,7 @@ class TieStop
 
         $newNote->tie = $tie;
         $newNote->notations = $notations;
-        $newNote->duration = new Duration($durationRemaining); 
+        $newNote->duration = new Duration($durationRemaining);
         
         $this->note = $newNote;
         $this->tieRange = $tieRange; 

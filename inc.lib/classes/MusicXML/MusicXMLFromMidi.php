@@ -1222,14 +1222,29 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $originalDuration = $note->duration->textContent;
                     $note = $this->trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max);
                     $remaining = $originalDuration - $note->duration->textContent;
+                    
+
+
                     $tieRange = $remaining / $this->timeSignature->getBeats();
-                    $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions);
+
+                    $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
+                    if($durationRemaining != 0)
+                    {
+                        $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions);
+                    }
+                    else
+                    {
+                        $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions) - 1;
+                        $durationRemaining = ($remaining % ($divisions * $this->timeSignature->getBeats())) + ($divisions * $this->timeSignature->getBeats());
+                    }
+
+                    
                     if(!isset($this->tieStop[$nextMeasureIndex]))
                     {
                         $this->tieStop[$nextMeasureIndex] = array();
                     }
                     $timeRemaining = $message['duration'] - ($duration * $divisions / $timebase);
-                    $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
+                    
                     $this->tieStop[$nextMeasureIndex][] = new TieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions);
                 }             
 

@@ -25176,7 +25176,7 @@
         </pitch>
         <duration>240</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -25232,17 +25232,6 @@
       <attributes>
         <divisions>40</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>C</step>
@@ -30853,7 +30842,7 @@
         </pitch>
         <duration>60</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -38221,7 +38210,7 @@
         </pitch>
         <duration>480</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -38255,17 +38244,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -38726,7 +38704,7 @@
         </pitch>
         <duration>480</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -38773,17 +38751,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -39193,7 +39160,7 @@
         </pitch>
         <duration>480</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -39221,17 +39188,6 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>D</step>
@@ -42011,6 +41967,17 @@
       </note>
       <note>
         <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
@@ -42241,17 +42208,6 @@
           <octave>4</octave>
         </pitch>
         <duration>24</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -45824,6 +45780,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="1020" dynamics="111.11" release="1075">
         <pitch>
           <step>C</step>
@@ -45962,17 +45929,6 @@
       <attributes>
         <divisions>40</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>C</step>
@@ -46439,7 +46395,7 @@
         </pitch>
         <duration>160</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -46457,6 +46413,17 @@
       <attributes>
         <divisions>40</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>160</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="288" dynamics="111.11" release="448">
         <pitch>
           <step>F</step>
@@ -46464,7 +46431,7 @@
         </pitch>
         <duration>160</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -47653,6 +47620,28 @@
       <attributes>
         <divisions>40</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>160</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>160</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="288" dynamics="97.78" release="293">
         <pitch>
           <step>F</step>
@@ -47952,28 +47941,6 @@
         </direction-type>
         <sound tempo="74"/>
       </direction>
-      <note>
-        <pitch>
-          <step>F</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>F</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note attack="300" dynamics="66.67" release="315">
         <pitch>
           <step>F</step>
@@ -49546,6 +49513,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="1020" dynamics="75.56" release="1035">
         <pitch>
           <step>F</step>
@@ -49836,17 +49814,6 @@
       <attributes>
         <divisions>40</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>C</step>
@@ -50561,6 +50528,17 @@
           <tied type="stop"/>
         </notations>
       </note>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="408" dynamics="111.11" release="888">
         <pitch>
           <step>G</step>
@@ -50585,17 +50563,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -50867,6 +50834,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="492" dynamics="111.11" release="972">
         <pitch>
           <step>E</step>
@@ -50891,17 +50869,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -51137,6 +51104,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="564" dynamics="111.11" release="1044">
         <pitch>
           <step>D</step>
@@ -51155,17 +51133,6 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>D</step>
@@ -51715,6 +51682,17 @@
       </note>
       <note>
         <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
@@ -51761,17 +51739,6 @@
           <octave>4</octave>
         </pitch>
         <duration>24</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -52697,7 +52664,7 @@
         </pitch>
         <duration>480</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>half</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -52720,6 +52687,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
     </measure>
     <measure number="87">
       <attributes>
@@ -52921,28 +52899,6 @@
         </direction-type>
         <sound tempo="74"/>
       </direction>
-      <note>
-        <pitch>
-          <step>F</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>F</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note attack="0" release="360">
         <rest/>
         <duration>360</duration>
@@ -54524,6 +54480,17 @@
           <tied type="stop"/>
         </notations>
       </note>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="408" dynamics="95.56" release="438">
         <pitch>
           <step>G</step>
@@ -54803,17 +54770,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -56571,6 +56527,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="492" dynamics="95.56" release="522">
         <pitch>
           <step>G</step>
@@ -56850,17 +56817,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -58357,6 +58313,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="564" dynamics="108.89" release="579">
         <pitch>
           <step>C</step>
@@ -58642,17 +58609,6 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>D</step>
@@ -63386,6 +63342,17 @@
       </note>
       <note>
         <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
@@ -63737,17 +63704,6 @@
           <octave>4</octave>
         </pitch>
         <duration>24</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -70285,6 +70241,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="996" dynamics="95.56" release="1026">
         <pitch>
           <step>C</step>
@@ -70588,17 +70555,6 @@
           <tied type="stop"/>
         </notations>
       </note>
-      <note>
-        <pitch>
-          <step>F</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note attack="1008" dynamics="108.89" release="1023">
         <pitch>
           <step>C</step>
@@ -70807,6 +70763,17 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>C</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
       <note attack="1020" dynamics="95.56" release="1050">
         <pitch>
           <step>C</step>
@@ -71407,6 +71374,17 @@
       </note>
       <note>
         <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
           <step>F</step>
           <alter>1</alter>
           <octave>3</octave>
@@ -71678,6 +71656,17 @@
       </attributes>
       <note>
         <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
           <step>F</step>
           <alter>1</alter>
           <octave>3</octave>
@@ -71699,17 +71688,6 @@
           <octave>4</octave>
         </pitch>
         <duration>20</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
-      <note>
-        <pitch>
-          <step>C</step>
-          <octave>3</octave>
-        </pitch>
-        <duration>0</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
@@ -71886,6 +71864,17 @@
       </attributes>
       <note>
         <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>480</duration>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+        </notations>
+      </note>
+      <note>
+        <pitch>
           <step>F</step>
           <alter>1</alter>
           <octave>3</octave>
@@ -71928,17 +71917,6 @@
       <attributes>
         <divisions>120</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>G</step>
-          <octave>2</octave>
-        </pitch>
-        <duration>0</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note>
         <pitch>
           <step>D</step>
