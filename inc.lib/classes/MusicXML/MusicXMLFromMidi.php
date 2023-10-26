@@ -1015,11 +1015,11 @@ class MusicXMLFromMidi extends MusicXMLBase
         else
         {
             $attributes = new Attributes();
-            $attributes->divisions = $this->getDivisions($measureIndex);            
+            $attributes->divisions = new Divisions($this->getDivisions($measureIndex));            
         }
+        $measure->elements[] = $attributes;
         
         // add attribute
-        $measure->elements[] = $attributes;
         
         // add directions
         if(!empty($directions))
