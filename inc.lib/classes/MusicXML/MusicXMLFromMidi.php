@@ -48,6 +48,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 {
     
     const DEFAULT_DIVISONS = 24;
+    private $minChord = 10;
     private $widthScale = 6;
     private $minWidth = 120;
     /**
@@ -1098,16 +1099,20 @@ class MusicXMLFromMidi extends MusicXMLBase
                             && $message2['event'] == 'On'
                             )
                             {
-                                $noteMessages[$idx1]['chord'] = true;
-                                if($measureIndex == 82)
+                                if(!isset($noteMessages[$idx1]['chords']))
                                 {
-                                    print_r($message1);
+                                    $noteMessages[$idx1]['chords'] = 1;
                                 }
+                                $noteMessages[$idx1]['chords']++;
+                                if($noteMessages[$idx1]['chords'] > $this->minChord)
+                                {
+                                    $noteMessages[$idx1]['chord'] = true;
+                                }
+                                
                             }
                         }
                     }
                 }
-                
                 
                 $measureContainer = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
 

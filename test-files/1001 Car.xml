@@ -7058,7 +7058,6 @@
         </notations>
       </note>
       <note attack="998" dynamics="111.11" release="1028">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>2</octave>
@@ -7423,7 +7422,6 @@
         </notations>
       </note>
       <note attack="12" dynamics="111.11" release="108">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7438,7 +7436,6 @@
         </notations>
       </note>
       <note attack="12" dynamics="111.11" release="108">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -7466,7 +7463,6 @@
         </notations>
       </note>
       <note attack="16" dynamics="111.11" release="112">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -7481,7 +7477,6 @@
         </notations>
       </note>
       <note attack="16" dynamics="111.11" release="112">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7509,7 +7504,6 @@
         </notations>
       </note>
       <note attack="20" dynamics="111.11" release="116">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -7538,7 +7532,6 @@
         </notations>
       </note>
       <note attack="20" dynamics="111.11" release="116">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7568,7 +7561,6 @@
         </notations>
       </note>
       <note attack="24" dynamics="111.11" release="120">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -7597,7 +7589,6 @@
         </notations>
       </note>
       <note attack="24" dynamics="111.11" release="120">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -7705,7 +7696,6 @@
         </notations>
       </note>
       <note attack="28" dynamics="111.11" release="124">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7720,7 +7710,6 @@
         </notations>
       </note>
       <note attack="28" dynamics="111.11" release="124">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -7761,7 +7750,6 @@
         </notations>
       </note>
       <note attack="32" dynamics="111.11" release="128">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -7776,7 +7764,6 @@
         </notations>
       </note>
       <note attack="32" dynamics="111.11" release="128">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7804,7 +7791,6 @@
         </notations>
       </note>
       <note attack="36" dynamics="111.11" release="132">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -7819,7 +7805,6 @@
         </notations>
       </note>
       <note attack="36" dynamics="111.11" release="132">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7883,7 +7868,6 @@
         </notations>
       </note>
       <note attack="36" dynamics="111.11" release="132">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -7900,7 +7884,6 @@
         </notations>
       </note>
       <note attack="36" dynamics="111.11" release="132">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7928,7 +7911,6 @@
         </notations>
       </note>
       <note attack="40" dynamics="111.11" release="136">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -7945,7 +7927,6 @@
         </notations>
       </note>
       <note attack="40" dynamics="111.11" release="136">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7973,7 +7954,6 @@
         </notations>
       </note>
       <note attack="44" dynamics="111.11" release="140">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7988,7 +7968,6 @@
         </notations>
       </note>
       <note attack="44" dynamics="111.11" release="140">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -8018,7 +7997,6 @@
         </notations>
       </note>
       <note attack="48" dynamics="111.11" release="144">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -8035,7 +8013,6 @@
         </notations>
       </note>
       <note attack="48" dynamics="111.11" release="144">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8099,7 +8076,6 @@
         </notations>
       </note>
       <note attack="48" dynamics="111.11" release="144">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8114,7 +8090,6 @@
         </notations>
       </note>
       <note attack="48" dynamics="111.11" release="144">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -8144,7 +8119,6 @@
         </notations>
       </note>
       <note attack="52" dynamics="111.11" release="148">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8159,7 +8133,6 @@
         </notations>
       </note>
       <note attack="52" dynamics="111.11" release="148">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -8230,7 +8203,6 @@
         </notations>
       </note>
       <note attack="56" dynamics="111.11" release="152">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8245,7 +8217,6 @@
         </notations>
       </note>
       <note attack="56" dynamics="111.11" release="152">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8273,7 +8244,6 @@
         </notations>
       </note>
       <note attack="60" dynamics="111.11" release="156">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8288,7 +8258,6 @@
         </notations>
       </note>
       <note attack="60" dynamics="111.11" release="156">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8352,7 +8321,6 @@
         </notations>
       </note>
       <note attack="60" dynamics="111.11" release="156">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -8367,7 +8335,6 @@
         </notations>
       </note>
       <note attack="60" dynamics="111.11" release="156">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -8395,7 +8362,6 @@
         </notations>
       </note>
       <note attack="64" dynamics="111.11" release="160">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -8410,7 +8376,6 @@
         </notations>
       </note>
       <note attack="64" dynamics="111.11" release="160">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -8438,7 +8403,6 @@
         </notations>
       </note>
       <note attack="68" dynamics="111.11" release="164">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8453,7 +8417,6 @@
         </notations>
       </note>
       <note attack="68" dynamics="111.11" release="164">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8511,7 +8474,6 @@
         </notations>
       </note>
       <note attack="72" dynamics="111.11" release="168">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8526,7 +8488,6 @@
         </notations>
       </note>
       <note attack="72" dynamics="111.11" release="168">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -8634,7 +8595,6 @@
         </notations>
       </note>
       <note attack="76" dynamics="111.11" release="172">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -8649,7 +8609,6 @@
         </notations>
       </note>
       <note attack="76" dynamics="111.11" release="172">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -8690,7 +8649,6 @@
         </notations>
       </note>
       <note attack="80" dynamics="111.11" release="176">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8705,7 +8663,6 @@
         </notations>
       </note>
       <note attack="80" dynamics="111.11" release="176">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8733,7 +8690,6 @@
         </notations>
       </note>
       <note attack="84" dynamics="111.11" release="180">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -8748,7 +8704,6 @@
         </notations>
       </note>
       <note attack="84" dynamics="111.11" release="180">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8821,7 +8776,6 @@
         </notations>
       </note>
       <note attack="84" dynamics="111.11" release="180">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8836,7 +8790,6 @@
         </notations>
       </note>
       <note attack="84" dynamics="111.11" release="180">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -8866,7 +8819,6 @@
         </notations>
       </note>
       <note attack="88" dynamics="111.11" release="184">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8881,7 +8833,6 @@
         </notations>
       </note>
       <note attack="88" dynamics="111.11" release="184">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -8911,7 +8862,6 @@
         </notations>
       </note>
       <note attack="92" dynamics="111.11" release="188">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8926,7 +8876,6 @@
         </notations>
       </note>
       <note attack="92" dynamics="111.11" release="188">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -8956,7 +8905,6 @@
         </notations>
       </note>
       <note attack="96" dynamics="111.11" release="192">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -8971,7 +8919,6 @@
         </notations>
       </note>
       <note attack="96" dynamics="111.11" release="192">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -9037,7 +8984,6 @@
         </notations>
       </note>
       <note attack="96" dynamics="111.11" release="192">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -9052,7 +8998,6 @@
         </notations>
       </note>
       <note attack="96" dynamics="111.11" release="192">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -9080,7 +9025,6 @@
         </notations>
       </note>
       <note attack="100" dynamics="111.11" release="196">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -9095,7 +9039,6 @@
         </notations>
       </note>
       <note attack="100" dynamics="111.11" release="196">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -9150,7 +9093,6 @@
         </notations>
       </note>
       <note attack="104" dynamics="111.11" release="200">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -9165,7 +9107,6 @@
         </notations>
       </note>
       <note attack="104" dynamics="111.11" release="200">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -9193,7 +9134,6 @@
         </notations>
       </note>
       <note attack="106" dynamics="88.89" release="166">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>1</octave>
@@ -9222,7 +9162,6 @@
         </notations>
       </note>
       <note attack="108" dynamics="111.11" release="204">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -9237,7 +9176,6 @@
         </notations>
       </note>
       <note attack="108" dynamics="111.11" release="204">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -9303,7 +9241,6 @@
         </notations>
       </note>
       <note attack="112" dynamics="111.11" release="184">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -9320,7 +9257,6 @@
         </notations>
       </note>
       <note attack="112" dynamics="111.11" release="184">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -9335,7 +9271,6 @@
         </notations>
       </note>
       <note attack="114" dynamics="111.11" release="222">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -9349,7 +9284,6 @@
         </notations>
       </note>
       <note attack="114" dynamics="111.11" release="222">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -9655,7 +9589,6 @@
         </notations>
       </note>
       <note attack="136" dynamics="111.11" release="172">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -9672,7 +9605,6 @@
         </notations>
       </note>
       <note attack="136" dynamics="111.11" release="172">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -9687,7 +9619,6 @@
         </notations>
       </note>
       <note attack="138" dynamics="111.11" release="192">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -9701,7 +9632,6 @@
         </notations>
       </note>
       <note attack="138" dynamics="111.11" release="192">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -10114,7 +10044,6 @@
         </notations>
       </note>
       <note attack="171" dynamics="111.11" release="201">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -10142,7 +10071,6 @@
         </notations>
       </note>
       <note attack="173" dynamics="111.11" release="203">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -10171,7 +10099,6 @@
         </notations>
       </note>
       <note attack="175" dynamics="111.11" release="205">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -10375,7 +10302,6 @@
         </notations>
       </note>
       <note attack="181" dynamics="111.11" release="211">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -10406,7 +10332,6 @@
         </notations>
       </note>
       <note attack="183" dynamics="111.11" release="213">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -10434,7 +10359,6 @@
         </notations>
       </note>
       <note attack="185" dynamics="111.11" release="215">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -10465,7 +10389,6 @@
         </notations>
       </note>
       <note attack="187" dynamics="111.11" release="217">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -10508,7 +10431,6 @@
         </notations>
       </note>
       <note attack="189" dynamics="66.67" release="219">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -10539,7 +10461,6 @@
         </notations>
       </note>
       <note attack="191" dynamics="111.11" release="221">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -10567,7 +10488,6 @@
         </notations>
       </note>
       <note attack="193" dynamics="66.67" release="223">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -10693,7 +10613,6 @@
         </notations>
       </note>
       <note attack="195" dynamics="111.11" release="225">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -10723,7 +10642,6 @@
         </notations>
       </note>
       <note attack="197" dynamics="111.11" release="227">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -10754,7 +10672,6 @@
         </notations>
       </note>
       <note attack="199" dynamics="111.11" release="229">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -10784,7 +10701,6 @@
         </notations>
       </note>
       <note attack="201" dynamics="66.67" release="231">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -10815,7 +10731,6 @@
         </notations>
       </note>
       <note attack="203" dynamics="111.11" release="233">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -10845,7 +10760,6 @@
         </notations>
       </note>
       <note attack="205" dynamics="66.67" release="235">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -10973,7 +10887,6 @@
         </notations>
       </note>
       <note attack="207" dynamics="111.11" release="237">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -11005,7 +10918,6 @@
         </notations>
       </note>
       <note attack="209" dynamics="111.11" release="239">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -11036,7 +10948,6 @@
         </notations>
       </note>
       <note attack="211" dynamics="111.11" release="231">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -11053,7 +10964,6 @@
         </notations>
       </note>
       <note attack="212" dynamics="111.11" release="242">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -11086,7 +10996,6 @@
         </notations>
       </note>
       <note attack="212" dynamics="111.11" release="242">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -11132,7 +11041,6 @@
         </notations>
       </note>
       <note attack="215" dynamics="111.11" release="245">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -11146,7 +11054,6 @@
         </notations>
       </note>
       <note attack="215" dynamics="66.67" release="245">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -11289,7 +11196,6 @@
         </notations>
       </note>
       <note attack="216" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -11304,7 +11210,6 @@
         </notations>
       </note>
       <note attack="216" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -11319,7 +11224,6 @@
         </notations>
       </note>
       <note attack="216" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -11334,7 +11238,6 @@
         </notations>
       </note>
       <note attack="220" dynamics="111.11" release="292">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -11349,7 +11252,6 @@
         </notations>
       </note>
       <note attack="220" dynamics="111.11" release="292">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -11649,7 +11551,6 @@
         <divisions>60</divisions>
       </attributes>
       <note attack="240" dynamics="106.67" release="288">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -11666,7 +11567,6 @@
         </notations>
       </note>
       <note attack="240" dynamics="106.67" release="288">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -11694,7 +11594,6 @@
         </notations>
       </note>
       <note attack="240" dynamics="106.67" release="288">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -11737,7 +11636,6 @@
         </notations>
       </note>
       <note attack="244" dynamics="106.67" release="292">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -11754,7 +11652,6 @@
         </notations>
       </note>
       <note attack="244" dynamics="106.67" release="292">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -11769,7 +11666,6 @@
         </notations>
       </note>
       <note attack="244" dynamics="106.67" release="292">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -11799,7 +11695,6 @@
         </notations>
       </note>
       <note attack="248" dynamics="106.67" release="296">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -11816,7 +11711,6 @@
         </notations>
       </note>
       <note attack="248" dynamics="106.67" release="296">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -11845,7 +11739,6 @@
         </notations>
       </note>
       <note attack="248" dynamics="106.67" release="296">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -11860,7 +11753,6 @@
         </notations>
       </note>
       <note attack="252" dynamics="106.67" release="300">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -11891,7 +11783,6 @@
         </notations>
       </note>
       <note attack="252" dynamics="106.67" release="300">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -11906,7 +11797,6 @@
         </notations>
       </note>
       <note attack="252" dynamics="106.67" release="300">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -11926,7 +11816,6 @@
         <divisions>10</divisions>
       </attributes>
       <note attack="252" dynamics="111.11" release="272">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -11940,7 +11829,6 @@
         </notations>
       </note>
       <note attack="252" dynamics="111.11" release="272">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>2</octave>
@@ -12007,7 +11895,6 @@
         </notations>
       </note>
       <note attack="260" dynamics="111.11" release="270">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>2</octave>
@@ -12050,7 +11937,6 @@
         <sound tempo="78"/>
       </direction>
       <note attack="264" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -12064,7 +11950,6 @@
         </notations>
       </note>
       <note attack="264" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12078,7 +11963,6 @@
         </notations>
       </note>
       <note attack="264" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12092,7 +11976,6 @@
         </notations>
       </note>
       <note attack="264" dynamics="111.11" release="312">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12119,7 +12002,6 @@
         </notations>
       </note>
       <note attack="270" dynamics="111.11" release="370">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12133,7 +12015,6 @@
         </notations>
       </note>
       <note attack="270" dynamics="111.11" release="322">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -12147,7 +12028,6 @@
         </notations>
       </note>
       <note attack="270" dynamics="111.11" release="322">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12161,7 +12041,6 @@
         </notations>
       </note>
       <note attack="270" dynamics="111.11" release="322">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -12177,7 +12056,6 @@
         </notations>
       </note>
       <note attack="270" dynamics="111.11" release="370">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12191,7 +12069,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="314">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12206,7 +12083,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="314">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -12223,7 +12099,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="314">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -12243,7 +12118,6 @@
         <divisions>40</divisions>
       </attributes>
       <note attack="276" dynamics="111.11" release="314">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12258,7 +12132,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="314">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -12273,7 +12146,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="324">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12287,7 +12159,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="324">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12301,7 +12172,6 @@
         </notations>
       </note>
       <note attack="276" dynamics="111.11" release="314">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -12343,7 +12213,6 @@
         </notations>
       </note>
       <note attack="282" dynamics="111.11" release="382">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12357,7 +12226,6 @@
         </notations>
       </note>
       <note attack="282" dynamics="111.11" release="366">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -12373,7 +12241,6 @@
         </notations>
       </note>
       <note attack="282" dynamics="111.11" release="366">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12387,7 +12254,6 @@
         </notations>
       </note>
       <note attack="282" dynamics="111.11" release="382">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12401,7 +12267,6 @@
         </notations>
       </note>
       <note attack="282" dynamics="111.11" release="366">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -12420,7 +12285,6 @@
         <divisions>40</divisions>
       </attributes>
       <note attack="288" dynamics="111.11" release="336">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12434,7 +12298,6 @@
         </notations>
       </note>
       <note attack="288" dynamics="111.11" release="336">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -12448,7 +12311,6 @@
         </notations>
       </note>
       <note attack="288" dynamics="111.11" release="336">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12462,7 +12324,6 @@
         </notations>
       </note>
       <note attack="288" dynamics="111.11" release="336">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12489,7 +12350,6 @@
         </notations>
       </note>
       <note attack="294" dynamics="111.11" release="394">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12503,7 +12363,6 @@
         </notations>
       </note>
       <note attack="294" dynamics="111.11" release="346">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12517,7 +12376,6 @@
         </notations>
       </note>
       <note attack="294" dynamics="111.11" release="346">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -12531,7 +12389,6 @@
         </notations>
       </note>
       <note attack="294" dynamics="111.11" release="346">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -12547,7 +12404,6 @@
         </notations>
       </note>
       <note attack="294" dynamics="108.89" release="394">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12561,7 +12417,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="338">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -12576,7 +12431,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="338">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12591,7 +12445,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="338">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -12622,7 +12475,6 @@
         <sound tempo="74"/>
       </direction>
       <note attack="300" dynamics="111.11" release="444">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12636,7 +12488,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="444">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12650,7 +12501,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="414">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12665,7 +12515,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="414">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -12680,7 +12529,6 @@
         </notations>
       </note>
       <note attack="300" dynamics="111.11" release="414">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -12722,7 +12570,6 @@
         </notations>
       </note>
       <note attack="306" dynamics="111.11" release="606">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -12736,7 +12583,6 @@
         </notations>
       </note>
       <note attack="306" dynamics="111.11" release="558">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -12752,7 +12598,6 @@
         </notations>
       </note>
       <note attack="306" dynamics="111.11" release="558">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12766,7 +12611,6 @@
         </notations>
       </note>
       <note attack="306" dynamics="111.11" release="558">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -12780,7 +12624,6 @@
         </notations>
       </note>
       <note attack="306" dynamics="111.11" release="606">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -12833,7 +12676,6 @@
         </notations>
       </note>
       <note attack="312" dynamics="111.11" release="408">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12848,7 +12690,6 @@
         </notations>
       </note>
       <note attack="312" dynamics="111.11" release="408">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -12889,7 +12730,6 @@
         </notations>
       </note>
       <note attack="316" dynamics="111.11" release="412">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -12904,7 +12744,6 @@
         </notations>
       </note>
       <note attack="316" dynamics="111.11" release="412">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -12946,7 +12785,6 @@
         </notations>
       </note>
       <note attack="320" dynamics="111.11" release="416">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -12961,7 +12799,6 @@
         </notations>
       </note>
       <note attack="320" dynamics="111.11" release="416">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13005,7 +12842,6 @@
         </notations>
       </note>
       <note attack="324" dynamics="111.11" release="420">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13020,7 +12856,6 @@
         </notations>
       </note>
       <note attack="324" dynamics="111.11" release="420">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13128,7 +12963,6 @@
         </notations>
       </note>
       <note attack="328" dynamics="111.11" release="424">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -13143,7 +12977,6 @@
         </notations>
       </note>
       <note attack="328" dynamics="111.11" release="424">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13184,7 +13017,6 @@
         </notations>
       </note>
       <note attack="332" dynamics="111.11" release="428">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13199,7 +13031,6 @@
         </notations>
       </note>
       <note attack="332" dynamics="111.11" release="428">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13227,7 +13058,6 @@
         </notations>
       </note>
       <note attack="336" dynamics="111.11" release="432">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13242,7 +13072,6 @@
         </notations>
       </note>
       <note attack="336" dynamics="111.11" release="432">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13306,7 +13135,6 @@
         </notations>
       </note>
       <note attack="336" dynamics="111.11" release="432">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -13323,7 +13151,6 @@
         </notations>
       </note>
       <note attack="336" dynamics="111.11" release="432">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13351,7 +13178,6 @@
         </notations>
       </note>
       <note attack="340" dynamics="111.11" release="436">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -13368,7 +13194,6 @@
         </notations>
       </note>
       <note attack="340" dynamics="111.11" release="436">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13396,7 +13221,6 @@
         </notations>
       </note>
       <note attack="344" dynamics="111.11" release="440">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -13413,7 +13237,6 @@
         </notations>
       </note>
       <note attack="344" dynamics="111.11" release="440">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13441,7 +13264,6 @@
         </notations>
       </note>
       <note attack="348" dynamics="111.11" release="444">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -13458,7 +13280,6 @@
         </notations>
       </note>
       <note attack="348" dynamics="111.11" release="444">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13522,7 +13343,6 @@
         </notations>
       </note>
       <note attack="348" dynamics="111.11" release="444">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13537,7 +13357,6 @@
         </notations>
       </note>
       <note attack="348" dynamics="111.11" release="444">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13567,7 +13386,6 @@
         </notations>
       </note>
       <note attack="352" dynamics="111.11" release="448">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13582,7 +13400,6 @@
         </notations>
       </note>
       <note attack="352" dynamics="111.11" release="448">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13653,7 +13470,6 @@
         </notations>
       </note>
       <note attack="356" dynamics="111.11" release="452">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13668,7 +13484,6 @@
         </notations>
       </note>
       <note attack="356" dynamics="111.11" release="452">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13696,7 +13511,6 @@
         </notations>
       </note>
       <note attack="360" dynamics="111.11" release="456">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13711,7 +13525,6 @@
         </notations>
       </note>
       <note attack="360" dynamics="111.11" release="456">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13771,7 +13584,6 @@
         </notations>
       </note>
       <note attack="360" dynamics="111.11" release="456">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13786,7 +13598,6 @@
         </notations>
       </note>
       <note attack="360" dynamics="111.11" release="456">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -13827,7 +13638,6 @@
         </notations>
       </note>
       <note attack="364" dynamics="111.11" release="460">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13842,7 +13652,6 @@
         </notations>
       </note>
       <note attack="364" dynamics="111.11" release="460">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -13870,7 +13679,6 @@
         </notations>
       </note>
       <note attack="368" dynamics="111.11" release="464">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -13885,7 +13693,6 @@
         </notations>
       </note>
       <note attack="368" dynamics="111.11" release="464">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -13943,7 +13750,6 @@
         </notations>
       </note>
       <note attack="372" dynamics="111.11" release="468">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -13958,7 +13764,6 @@
         </notations>
       </note>
       <note attack="372" dynamics="111.11" release="468">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -14075,7 +13880,6 @@
         </notations>
       </note>
       <note attack="376" dynamics="111.11" release="472">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -14090,7 +13894,6 @@
         </notations>
       </note>
       <note attack="376" dynamics="111.11" release="472">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -14131,7 +13934,6 @@
         </notations>
       </note>
       <note attack="380" dynamics="111.11" release="476">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14146,7 +13948,6 @@
         </notations>
       </note>
       <note attack="380" dynamics="111.11" release="476">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -14174,7 +13975,6 @@
         </notations>
       </note>
       <note attack="384" dynamics="111.11" release="480">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -14189,7 +13989,6 @@
         </notations>
       </note>
       <note attack="384" dynamics="111.11" release="480">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14253,7 +14052,6 @@
         </notations>
       </note>
       <note attack="384" dynamics="111.11" release="480">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -14270,7 +14068,6 @@
         </notations>
       </note>
       <note attack="384" dynamics="111.11" release="480">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14298,7 +14095,6 @@
         </notations>
       </note>
       <note attack="388" dynamics="111.11" release="484">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14313,7 +14109,6 @@
         </notations>
       </note>
       <note attack="388" dynamics="111.11" release="484">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -14343,7 +14138,6 @@
         </notations>
       </note>
       <note attack="392" dynamics="111.11" release="488">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -14360,7 +14154,6 @@
         </notations>
       </note>
       <note attack="392" dynamics="111.11" release="488">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14388,7 +14181,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="492">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -14405,7 +14197,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="492">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14469,7 +14260,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="492">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -14484,7 +14274,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="492">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -14512,7 +14301,6 @@
         </notations>
       </note>
       <note attack="400" dynamics="111.11" release="496">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -14527,7 +14315,6 @@
         </notations>
       </note>
       <note attack="400" dynamics="111.11" release="496">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -14582,7 +14369,6 @@
         </notations>
       </note>
       <note attack="404" dynamics="111.11" release="500">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14597,7 +14383,6 @@
         </notations>
       </note>
       <note attack="404" dynamics="111.11" release="500">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -14625,7 +14410,6 @@
         </notations>
       </note>
       <note attack="406" dynamics="88.89" release="466">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>1</octave>
@@ -14640,7 +14424,6 @@
         </notations>
       </note>
       <note attack="408" dynamics="111.11" release="504">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -14655,7 +14438,6 @@
         </notations>
       </note>
       <note attack="408" dynamics="111.11" release="504">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14784,7 +14566,6 @@
         </notations>
       </note>
       <note attack="411" dynamics="111.11" release="471">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -14812,7 +14593,6 @@
         </notations>
       </note>
       <note attack="413" dynamics="111.11" release="473">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -14841,7 +14621,6 @@
         </notations>
       </note>
       <note attack="415" dynamics="111.11" release="475">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -15045,7 +14824,6 @@
         </notations>
       </note>
       <note attack="421" dynamics="111.11" release="481">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -15076,7 +14854,6 @@
         </notations>
       </note>
       <note attack="423" dynamics="111.11" release="483">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -15104,7 +14881,6 @@
         </notations>
       </note>
       <note attack="425" dynamics="111.11" release="485">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -15135,7 +14911,6 @@
         </notations>
       </note>
       <note attack="427" dynamics="111.11" release="487">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -15178,7 +14953,6 @@
         </notations>
       </note>
       <note attack="429" dynamics="66.67" release="489">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -15209,7 +14983,6 @@
         </notations>
       </note>
       <note attack="431" dynamics="111.11" release="491">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -15237,7 +15010,6 @@
         </notations>
       </note>
       <note attack="433" dynamics="66.67" release="493">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -15363,7 +15135,6 @@
         </notations>
       </note>
       <note attack="435" dynamics="111.11" release="495">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -15393,7 +15164,6 @@
         </notations>
       </note>
       <note attack="437" dynamics="111.11" release="497">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -15424,7 +15194,6 @@
         </notations>
       </note>
       <note attack="439" dynamics="111.11" release="499">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -15454,7 +15223,6 @@
         </notations>
       </note>
       <note attack="441" dynamics="66.67" release="501">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -15485,7 +15253,6 @@
         </notations>
       </note>
       <note attack="443" dynamics="111.11" release="503">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -15515,7 +15282,6 @@
         </notations>
       </note>
       <note attack="445" dynamics="66.67" release="505">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -15643,7 +15409,6 @@
         </notations>
       </note>
       <note attack="447" dynamics="111.11" release="507">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -15675,7 +15440,6 @@
         </notations>
       </note>
       <note attack="449" dynamics="111.11" release="509">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -15706,7 +15470,6 @@
         </notations>
       </note>
       <note attack="451" dynamics="111.11" release="511">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -15754,7 +15517,6 @@
         </notations>
       </note>
       <note attack="453" dynamics="66.67" release="513">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -15785,7 +15547,6 @@
         </notations>
       </note>
       <note attack="455" dynamics="111.11" release="515">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -15833,7 +15594,6 @@
         </notations>
       </note>
       <note attack="457" dynamics="66.67" release="517">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -15912,7 +15672,6 @@
         </notations>
       </note>
       <note attack="456" dynamics="111.11" release="552">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -15940,7 +15699,6 @@
         </notations>
       </note>
       <note attack="456" dynamics="111.11" release="552">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -15955,7 +15713,6 @@
         </notations>
       </note>
       <note attack="456" dynamics="111.11" release="552">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -15970,7 +15727,6 @@
         </notations>
       </note>
       <note attack="460" dynamics="111.11" release="532">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -15985,7 +15741,6 @@
         </notations>
       </note>
       <note attack="460" dynamics="111.11" release="532">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -16014,7 +15769,6 @@
         </notations>
       </note>
       <note attack="464" dynamics="111.11" release="524">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -16029,7 +15783,6 @@
         </notations>
       </note>
       <note attack="464" dynamics="111.11" release="524">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -16297,7 +16050,6 @@
         <sound tempo="75"/>
       </direction>
       <note attack="480" dynamics="106.67" release="576">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -16327,7 +16079,6 @@
         </notations>
       </note>
       <note attack="480" dynamics="106.67" release="576">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -16356,7 +16107,6 @@
         </notations>
       </note>
       <note attack="480" dynamics="106.67" release="576">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -16371,7 +16121,6 @@
         </notations>
       </note>
       <note attack="484" dynamics="106.67" release="580">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -16388,7 +16137,6 @@
         </notations>
       </note>
       <note attack="484" dynamics="106.67" release="580">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -16417,7 +16165,6 @@
         </notations>
       </note>
       <note attack="484" dynamics="106.67" release="580">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -16432,7 +16179,6 @@
         </notations>
       </note>
       <note attack="488" dynamics="106.67" release="584">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -16447,7 +16193,6 @@
         </notations>
       </note>
       <note attack="488" dynamics="106.67" release="584">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -16462,7 +16207,6 @@
         </notations>
       </note>
       <note attack="488" dynamics="106.67" release="584">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -16508,7 +16252,6 @@
         </notations>
       </note>
       <note attack="492" dynamics="106.67" release="588">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -16525,7 +16268,6 @@
         </notations>
       </note>
       <note attack="492" dynamics="106.67" release="588">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -16554,7 +16296,6 @@
         </notations>
       </note>
       <note attack="492" dynamics="106.67" release="588">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -16629,7 +16370,6 @@
         </notations>
       </note>
       <note attack="495" dynamics="111.11" release="555">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -16657,7 +16397,6 @@
         </notations>
       </note>
       <note attack="497" dynamics="111.11" release="557">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -16686,7 +16425,6 @@
         </notations>
       </note>
       <note attack="499" dynamics="111.11" release="559">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -16890,7 +16628,6 @@
         </notations>
       </note>
       <note attack="505" dynamics="111.11" release="565">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -16921,7 +16658,6 @@
         </notations>
       </note>
       <note attack="507" dynamics="111.11" release="567">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -16949,7 +16685,6 @@
         </notations>
       </note>
       <note attack="509" dynamics="111.11" release="569">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -16980,7 +16715,6 @@
         </notations>
       </note>
       <note attack="511" dynamics="111.11" release="571">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -17023,7 +16757,6 @@
         </notations>
       </note>
       <note attack="513" dynamics="66.67" release="573">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -17054,7 +16787,6 @@
         </notations>
       </note>
       <note attack="515" dynamics="111.11" release="575">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -17082,7 +16814,6 @@
         </notations>
       </note>
       <note attack="517" dynamics="66.67" release="577">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -17208,7 +16939,6 @@
         </notations>
       </note>
       <note attack="519" dynamics="111.11" release="579">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -17238,7 +16968,6 @@
         </notations>
       </note>
       <note attack="521" dynamics="111.11" release="581">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -17269,7 +16998,6 @@
         </notations>
       </note>
       <note attack="523" dynamics="111.11" release="583">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -17299,7 +17027,6 @@
         </notations>
       </note>
       <note attack="525" dynamics="66.67" release="585">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -17330,7 +17057,6 @@
         </notations>
       </note>
       <note attack="527" dynamics="111.11" release="587">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -17360,7 +17086,6 @@
         </notations>
       </note>
       <note attack="529" dynamics="66.67" release="589">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -17488,7 +17213,6 @@
         </notations>
       </note>
       <note attack="531" dynamics="111.11" release="591">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -17520,7 +17244,6 @@
         </notations>
       </note>
       <note attack="533" dynamics="111.11" release="593">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -17551,7 +17274,6 @@
         </notations>
       </note>
       <note attack="535" dynamics="111.11" release="595">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -17599,7 +17321,6 @@
         </notations>
       </note>
       <note attack="537" dynamics="66.67" release="597">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -17630,7 +17351,6 @@
         </notations>
       </note>
       <note attack="539" dynamics="111.11" release="599">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -17678,7 +17398,6 @@
         </notations>
       </note>
       <note attack="541" dynamics="66.67" release="601">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -17748,7 +17467,6 @@
         </notations>
       </note>
       <note attack="540" dynamics="111.11" release="636">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -17763,7 +17481,6 @@
         </notations>
       </note>
       <note attack="540" dynamics="111.11" release="636">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -17778,7 +17495,6 @@
         </notations>
       </note>
       <note attack="540" dynamics="111.11" release="636">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -17806,7 +17522,6 @@
         </notations>
       </note>
       <note attack="544" dynamics="111.11" release="616">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -17835,7 +17550,6 @@
         </notations>
       </note>
       <note attack="544" dynamics="111.11" release="616">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -17864,7 +17578,6 @@
         </notations>
       </note>
       <note attack="548" dynamics="111.11" release="608">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -17892,7 +17605,6 @@
         </notations>
       </note>
       <note attack="548" dynamics="111.11" release="608">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -18124,7 +17836,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="564" dynamics="106.67" release="660">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18139,7 +17850,6 @@
         </notations>
       </note>
       <note attack="564" dynamics="106.67" release="660">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18156,7 +17866,6 @@
         </notations>
       </note>
       <note attack="564" dynamics="106.67" release="660">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -18198,7 +17907,6 @@
         </notations>
       </note>
       <note attack="568" dynamics="106.67" release="664">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18215,7 +17923,6 @@
         </notations>
       </note>
       <note attack="568" dynamics="106.67" release="664">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -18230,7 +17937,6 @@
         </notations>
       </note>
       <note attack="568" dynamics="106.67" release="664">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18259,7 +17965,6 @@
         </notations>
       </note>
       <note attack="572" dynamics="106.67" release="668">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18276,7 +17981,6 @@
         </notations>
       </note>
       <note attack="572" dynamics="106.67" release="668">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -18320,7 +18024,6 @@
         </notations>
       </note>
       <note attack="572" dynamics="106.67" release="668">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18335,7 +18038,6 @@
         </notations>
       </note>
       <note attack="576" dynamics="106.67" release="672">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18352,7 +18054,6 @@
         </notations>
       </note>
       <note attack="576" dynamics="106.67" release="672">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -18367,7 +18068,6 @@
         </notations>
       </note>
       <note attack="576" dynamics="106.67" release="672">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18401,7 +18101,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="576" dynamics="111.11" release="816">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -18441,7 +18140,6 @@
         </notations>
       </note>
       <note attack="576" dynamics="111.11" release="816">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>2</octave>
@@ -18482,7 +18180,6 @@
         </notations>
       </note>
       <note attack="584" dynamics="111.11" release="704">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>2</octave>
@@ -18529,7 +18226,6 @@
         </notations>
       </note>
       <note attack="588" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -18543,7 +18239,6 @@
         </notations>
       </note>
       <note attack="588" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -18557,7 +18252,6 @@
         </notations>
       </note>
       <note attack="588" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -18571,7 +18265,6 @@
         </notations>
       </note>
       <note attack="588" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -18585,7 +18278,6 @@
         </notations>
       </note>
       <note attack="594" dynamics="111.11" release="894">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -18599,7 +18291,6 @@
         </notations>
       </note>
       <note attack="594" dynamics="111.11" release="750">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18613,7 +18304,6 @@
         </notations>
       </note>
       <note attack="594" dynamics="111.11" release="750">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -18627,7 +18317,6 @@
         </notations>
       </note>
       <note attack="594" dynamics="111.11" release="750">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18643,7 +18332,6 @@
         </notations>
       </note>
       <note attack="594" dynamics="111.11" release="894">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -18657,7 +18345,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="714">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18672,7 +18359,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="714">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18689,7 +18375,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="714">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -18709,7 +18394,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="600" dynamics="111.11" release="660">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -18724,7 +18408,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="660">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18739,7 +18422,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -18753,7 +18435,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -18767,7 +18448,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="660">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -18795,7 +18475,6 @@
         </notations>
       </note>
       <note attack="602" dynamics="111.11" release="782">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -18809,7 +18488,6 @@
         </notations>
       </note>
       <note attack="602" dynamics="111.11" release="782">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -18836,7 +18514,6 @@
         </notations>
       </note>
       <note attack="606" dynamics="111.11" release="906">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>1</octave>
@@ -18863,7 +18540,6 @@
         </notations>
       </note>
       <note attack="606" dynamics="111.11" release="906">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -18877,7 +18553,6 @@
         </notations>
       </note>
       <note attack="608" dynamics="111.11" release="848">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -18893,7 +18568,6 @@
         </notations>
       </note>
       <note attack="608" dynamics="111.11" release="848">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -18953,7 +18627,6 @@
         </notations>
       </note>
       <note attack="612" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -18968,7 +18641,6 @@
         </notations>
       </note>
       <note attack="612" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -18983,7 +18655,6 @@
         </notations>
       </note>
       <note attack="612" dynamics="111.11" release="732">
-        <chord/>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -19000,7 +18671,6 @@
         </notations>
       </note>
       <note attack="616" dynamics="111.11" release="736">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19015,7 +18685,6 @@
         </notations>
       </note>
       <note attack="616" dynamics="111.11" release="736">
-        <chord/>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -19032,7 +18701,6 @@
         </notations>
       </note>
       <note attack="616" dynamics="111.11" release="736">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19047,7 +18715,6 @@
         </notations>
       </note>
       <note attack="620" dynamics="111.11" release="740">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19062,7 +18729,6 @@
         </notations>
       </note>
       <note attack="620" dynamics="111.11" release="740">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19077,7 +18743,6 @@
         </notations>
       </note>
       <note attack="620" dynamics="111.11" release="740">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19092,7 +18757,6 @@
         </notations>
       </note>
       <note attack="624" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19107,7 +18771,6 @@
         </notations>
       </note>
       <note attack="624" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19122,7 +18785,6 @@
         </notations>
       </note>
       <note attack="624" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19142,7 +18804,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="624" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19157,7 +18818,6 @@
         </notations>
       </note>
       <note attack="624" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -19172,7 +18832,6 @@
         </notations>
       </note>
       <note attack="624" dynamics="111.11" release="744">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -19187,7 +18846,6 @@
         </notations>
       </note>
       <note attack="628" dynamics="111.11" release="748">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -19202,7 +18860,6 @@
         </notations>
       </note>
       <note attack="628" dynamics="111.11" release="748">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19217,7 +18874,6 @@
         </notations>
       </note>
       <note attack="628" dynamics="111.11" release="748">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -19232,7 +18888,6 @@
         </notations>
       </note>
       <note attack="632" dynamics="111.11" release="752">
-        <chord/>
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -19249,7 +18904,6 @@
         </notations>
       </note>
       <note attack="632" dynamics="111.11" release="752">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -19264,7 +18918,6 @@
         </notations>
       </note>
       <note attack="632" dynamics="111.11" release="752">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -19279,7 +18932,6 @@
         </notations>
       </note>
       <note attack="636" dynamics="111.11" release="756">
-        <chord/>
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -19296,7 +18948,6 @@
         </notations>
       </note>
       <note attack="636" dynamics="111.11" release="756">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -19311,7 +18962,6 @@
         </notations>
       </note>
       <note attack="636" dynamics="111.11" release="756">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -19331,7 +18981,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="636" dynamics="111.11" release="756">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -19348,7 +18997,6 @@
         </notations>
       </note>
       <note attack="636" dynamics="111.11" release="756">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -19363,7 +19011,6 @@
         </notations>
       </note>
       <note attack="636" dynamics="111.11" release="756">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19378,7 +19025,6 @@
         </notations>
       </note>
       <note attack="640" dynamics="111.11" release="760">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19393,7 +19039,6 @@
         </notations>
       </note>
       <note attack="640" dynamics="111.11" release="760">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -19410,7 +19055,6 @@
         </notations>
       </note>
       <note attack="640" dynamics="111.11" release="760">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -19425,7 +19069,6 @@
         </notations>
       </note>
       <note attack="644" dynamics="111.11" release="764">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19440,7 +19083,6 @@
         </notations>
       </note>
       <note attack="644" dynamics="111.11" release="764">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -19455,7 +19097,6 @@
         </notations>
       </note>
       <note attack="644" dynamics="111.11" release="764">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -19470,7 +19111,6 @@
         </notations>
       </note>
       <note attack="648" dynamics="111.11" release="768">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -19485,7 +19125,6 @@
         </notations>
       </note>
       <note attack="648" dynamics="111.11" release="768">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19500,7 +19139,6 @@
         </notations>
       </note>
       <note attack="648" dynamics="111.11" release="768">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -19520,7 +19158,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="648" dynamics="111.11" release="768">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19535,7 +19172,6 @@
         </notations>
       </note>
       <note attack="648" dynamics="111.11" release="768">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19550,7 +19186,6 @@
         </notations>
       </note>
       <note attack="648" dynamics="111.11" release="768">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19565,7 +19200,6 @@
         </notations>
       </note>
       <note attack="652" dynamics="111.11" release="772">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19580,7 +19214,6 @@
         </notations>
       </note>
       <note attack="652" dynamics="111.11" release="772">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19595,7 +19228,6 @@
         </notations>
       </note>
       <note attack="652" dynamics="111.11" release="772">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19610,7 +19242,6 @@
         </notations>
       </note>
       <note attack="656" dynamics="111.11" release="736">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19625,7 +19256,6 @@
         </notations>
       </note>
       <note attack="656" dynamics="111.11" release="736">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19640,7 +19270,6 @@
         </notations>
       </note>
       <note attack="656" dynamics="111.11" release="736">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19655,7 +19284,6 @@
         </notations>
       </note>
       <note attack="656" dynamics="123.33" release="736">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19675,7 +19303,6 @@
         <type>64th</type>
       </note>
       <note attack="659" dynamics="111.11" release="719">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19689,7 +19316,6 @@
         </notations>
       </note>
       <note attack="659" dynamics="111.11" release="719">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19703,7 +19329,6 @@
         </notations>
       </note>
       <note attack="659" dynamics="123.33" release="719">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19717,7 +19342,6 @@
         </notations>
       </note>
       <note attack="659" dynamics="111.11" release="719">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19736,7 +19360,6 @@
         <type>32nd</type>
       </note>
       <note attack="662" dynamics="123.33" release="722">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -19751,7 +19374,6 @@
         </notations>
       </note>
       <note attack="662" dynamics="111.11" release="722">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -19766,7 +19388,6 @@
         </notations>
       </note>
       <note attack="662" dynamics="111.11" release="722">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -19801,7 +19422,6 @@
         </notations>
       </note>
       <note attack="660" dynamics="111.11" release="780">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19816,7 +19436,6 @@
         </notations>
       </note>
       <note attack="660" dynamics="111.11" release="780">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19831,7 +19450,6 @@
         </notations>
       </note>
       <note attack="660" dynamics="111.11" release="780">
-        <chord/>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -19848,7 +19466,6 @@
         </notations>
       </note>
       <note attack="664" dynamics="111.11" release="784">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19863,7 +19480,6 @@
         </notations>
       </note>
       <note attack="664" dynamics="111.11" release="784">
-        <chord/>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -19880,7 +19496,6 @@
         </notations>
       </note>
       <note attack="664" dynamics="111.11" release="784">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19895,7 +19510,6 @@
         </notations>
       </note>
       <note attack="668" dynamics="111.11" release="788">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19910,7 +19524,6 @@
         </notations>
       </note>
       <note attack="668" dynamics="111.11" release="788">
-        <chord/>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -19927,7 +19540,6 @@
         </notations>
       </note>
       <note attack="668" dynamics="111.11" release="788">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19942,7 +19554,6 @@
         </notations>
       </note>
       <note attack="672" dynamics="111.11" release="792">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -19957,7 +19568,6 @@
         </notations>
       </note>
       <note attack="672" dynamics="111.11" release="792">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -19972,7 +19582,6 @@
         </notations>
       </note>
       <note attack="672" dynamics="111.11" release="792">
-        <chord/>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -19994,7 +19603,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="672" dynamics="111.11" release="792">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -20009,7 +19617,6 @@
         </notations>
       </note>
       <note attack="672" dynamics="111.11" release="792">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20024,7 +19631,6 @@
         </notations>
       </note>
       <note attack="672" dynamics="111.11" release="792">
-        <chord/>
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -20041,7 +19647,6 @@
         </notations>
       </note>
       <note attack="676" dynamics="111.11" release="796">
-        <chord/>
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -20058,7 +19663,6 @@
         </notations>
       </note>
       <note attack="676" dynamics="111.11" release="796">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20073,7 +19677,6 @@
         </notations>
       </note>
       <note attack="676" dynamics="111.11" release="796">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -20102,7 +19705,6 @@
         </notations>
       </note>
       <note attack="680" dynamics="111.11" release="776">
-        <chord/>
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -20119,7 +19721,6 @@
         </notations>
       </note>
       <note attack="680" dynamics="111.11" release="776">
-        <chord/>
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -20136,7 +19737,6 @@
         </notations>
       </note>
       <note attack="683" dynamics="111.11" release="785">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -20150,7 +19750,6 @@
         </notations>
       </note>
       <note attack="683" dynamics="111.11" release="785">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -20178,7 +19777,6 @@
         </notations>
       </note>
       <note attack="686" dynamics="111.11" release="746">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20193,7 +19791,6 @@
         </notations>
       </note>
       <note attack="686" dynamics="111.11" release="746">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>2</octave>
@@ -20222,7 +19819,6 @@
         <sound tempo="75"/>
       </direction>
       <note attack="684" dynamics="111.11" release="804">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20237,7 +19833,6 @@
         </notations>
       </note>
       <note attack="684" dynamics="111.11" release="804">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -20254,7 +19849,6 @@
         </notations>
       </note>
       <note attack="684" dynamics="111.11" release="804">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -20286,7 +19880,6 @@
         </notations>
       </note>
       <note attack="688" dynamics="111.11" release="808">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -20303,7 +19896,6 @@
         </notations>
       </note>
       <note attack="688" dynamics="111.11" release="808">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20318,7 +19910,6 @@
         </notations>
       </note>
       <note attack="688" dynamics="111.11" release="808">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -20335,7 +19926,6 @@
         </notations>
       </note>
       <note attack="692" dynamics="111.11" release="782">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -20352,7 +19942,6 @@
         </notations>
       </note>
       <note attack="692" dynamics="111.11" release="782">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -20369,7 +19958,6 @@
         </notations>
       </note>
       <note attack="692" dynamics="111.11" release="782">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20384,7 +19972,6 @@
         </notations>
       </note>
       <note attack="695" dynamics="111.11" release="785">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -20400,7 +19987,6 @@
         </notations>
       </note>
       <note attack="695" dynamics="111.11" release="785">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -20416,7 +20002,6 @@
         </notations>
       </note>
       <note attack="695" dynamics="111.11" release="785">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20430,7 +20015,6 @@
         </notations>
       </note>
       <note attack="698" dynamics="111.11" release="758">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20445,7 +20029,6 @@
         </notations>
       </note>
       <note attack="698" dynamics="111.11" release="758">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -20462,7 +20045,6 @@
         </notations>
       </note>
       <note attack="698" dynamics="111.11" release="758">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -20484,7 +20066,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="696" dynamics="111.11" release="816">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20499,7 +20080,6 @@
         </notations>
       </note>
       <note attack="696" dynamics="111.11" release="816">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20514,7 +20094,6 @@
         </notations>
       </note>
       <note attack="696" dynamics="111.11" release="816">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20529,7 +20108,6 @@
         </notations>
       </note>
       <note attack="700" dynamics="111.11" release="820">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20544,7 +20122,6 @@
         </notations>
       </note>
       <note attack="700" dynamics="111.11" release="820">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20559,7 +20136,6 @@
         </notations>
       </note>
       <note attack="700" dynamics="111.11" release="820">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20574,7 +20150,6 @@
         </notations>
       </note>
       <note attack="704" dynamics="111.11" release="824">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20589,7 +20164,6 @@
         </notations>
       </note>
       <note attack="704" dynamics="111.11" release="824">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20604,7 +20178,6 @@
         </notations>
       </note>
       <note attack="704" dynamics="111.11" release="824">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20619,7 +20192,6 @@
         </notations>
       </note>
       <note attack="708" dynamics="111.11" release="828">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -20634,7 +20206,6 @@
         </notations>
       </note>
       <note attack="708" dynamics="111.11" release="828">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -20649,7 +20220,6 @@
         </notations>
       </note>
       <note attack="708" dynamics="111.11" release="828">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20669,7 +20239,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="708" dynamics="111.11" release="828">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -20684,7 +20253,6 @@
         </notations>
       </note>
       <note attack="708" dynamics="111.11" release="828">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20699,7 +20267,6 @@
         </notations>
       </note>
       <note attack="708" dynamics="111.11" release="828">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -20714,7 +20281,6 @@
         </notations>
       </note>
       <note attack="712" dynamics="111.11" release="832">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20729,7 +20295,6 @@
         </notations>
       </note>
       <note attack="712" dynamics="111.11" release="832">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -20744,7 +20309,6 @@
         </notations>
       </note>
       <note attack="712" dynamics="111.11" release="832">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -20759,7 +20323,6 @@
         </notations>
       </note>
       <note attack="716" dynamics="111.11" release="836">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -20774,7 +20337,6 @@
         </notations>
       </note>
       <note attack="716" dynamics="111.11" release="836">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -20789,7 +20351,6 @@
         </notations>
       </note>
       <note attack="716" dynamics="111.11" release="836">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20804,7 +20365,6 @@
         </notations>
       </note>
       <note attack="720" dynamics="111.11" release="840">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -20819,7 +20379,6 @@
         </notations>
       </note>
       <note attack="720" dynamics="111.11" release="840">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -20834,7 +20393,6 @@
         </notations>
       </note>
       <note attack="720" dynamics="111.11" release="840">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -20869,7 +20427,6 @@
         </notations>
       </note>
       <note attack="724" dynamics="111.11" release="796">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -20884,7 +20441,6 @@
         </notations>
       </note>
       <note attack="724" dynamics="111.11" release="796">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -20901,7 +20457,6 @@
         </notations>
       </note>
       <note attack="726" dynamics="111.11" release="834">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -20915,7 +20470,6 @@
         </notations>
       </note>
       <note attack="726" dynamics="111.11" release="834">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -21221,7 +20775,6 @@
         </notations>
       </note>
       <note attack="748" dynamics="111.11" release="820">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -21238,7 +20791,6 @@
         </notations>
       </note>
       <note attack="748" dynamics="111.11" release="820">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -21253,7 +20805,6 @@
         </notations>
       </note>
       <note attack="750" dynamics="111.11" release="858">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -21267,7 +20818,6 @@
         </notations>
       </note>
       <note attack="750" dynamics="111.11" release="858">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -21664,7 +21214,6 @@
         </notations>
       </note>
       <note attack="807" dynamics="111.11" release="867">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -21692,7 +21241,6 @@
         </notations>
       </note>
       <note attack="809" dynamics="111.11" release="869">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -21721,7 +21269,6 @@
         </notations>
       </note>
       <note attack="811" dynamics="111.11" release="871">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -21919,7 +21466,6 @@
         </notations>
       </note>
       <note attack="817" dynamics="111.11" release="877">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -21950,7 +21496,6 @@
         </notations>
       </note>
       <note attack="819" dynamics="111.11" release="879">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -21978,7 +21523,6 @@
         </notations>
       </note>
       <note attack="821" dynamics="111.11" release="881">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -22009,7 +21553,6 @@
         </notations>
       </note>
       <note attack="823" dynamics="111.11" release="883">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -22052,7 +21595,6 @@
         </notations>
       </note>
       <note attack="825" dynamics="66.67" release="885">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -22083,7 +21625,6 @@
         </notations>
       </note>
       <note attack="827" dynamics="111.11" release="887">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -22111,7 +21652,6 @@
         </notations>
       </note>
       <note attack="829" dynamics="66.67" release="889">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -22224,7 +21764,6 @@
         </notations>
       </note>
       <note attack="831" dynamics="111.11" release="891">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -22254,7 +21793,6 @@
         </notations>
       </note>
       <note attack="833" dynamics="111.11" release="893">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -22285,7 +21823,6 @@
         </notations>
       </note>
       <note attack="835" dynamics="111.11" release="895">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -22315,7 +21852,6 @@
         </notations>
       </note>
       <note attack="837" dynamics="66.67" release="897">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -22346,7 +21882,6 @@
         </notations>
       </note>
       <note attack="839" dynamics="111.11" release="899">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -22376,7 +21911,6 @@
         </notations>
       </note>
       <note attack="841" dynamics="66.67" release="901">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -22489,7 +22023,6 @@
         </notations>
       </note>
       <note attack="843" dynamics="111.11" release="903">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -22521,7 +22054,6 @@
         </notations>
       </note>
       <note attack="845" dynamics="111.11" release="905">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -22552,7 +22084,6 @@
         </notations>
       </note>
       <note attack="847" dynamics="111.11" release="907">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -22584,7 +22115,6 @@
         </notations>
       </note>
       <note attack="849" dynamics="66.67" release="909">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -22615,7 +22145,6 @@
         </notations>
       </note>
       <note attack="851" dynamics="111.11" release="911">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -22647,7 +22176,6 @@
         </notations>
       </note>
       <note attack="853" dynamics="66.67" release="913">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -22717,7 +22245,6 @@
         </notations>
       </note>
       <note attack="852" dynamics="111.11" release="948">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -22732,7 +22259,6 @@
         </notations>
       </note>
       <note attack="852" dynamics="111.11" release="948">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -22747,7 +22273,6 @@
         </notations>
       </note>
       <note attack="852" dynamics="111.11" release="948">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -22767,7 +22292,6 @@
         <type>32nd</type>
       </note>
       <note attack="856" dynamics="111.11" release="928">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -22782,7 +22306,6 @@
         </notations>
       </note>
       <note attack="856" dynamics="111.11" release="928">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -22830,7 +22353,6 @@
         </notations>
       </note>
       <note attack="860" dynamics="111.11" release="920">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -22858,7 +22380,6 @@
         </notations>
       </note>
       <note attack="860" dynamics="111.11" release="920">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -23077,7 +22598,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="876" dynamics="106.67" release="972">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -23105,7 +22625,6 @@
         </notations>
       </note>
       <note attack="876" dynamics="106.67" release="972">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -23120,7 +22639,6 @@
         </notations>
       </note>
       <note attack="876" dynamics="106.67" release="972">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -23137,7 +22655,6 @@
         </notations>
       </note>
       <note attack="880" dynamics="106.67" release="976">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -23154,7 +22671,6 @@
         </notations>
       </note>
       <note attack="880" dynamics="106.67" release="976">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -23169,7 +22685,6 @@
         </notations>
       </note>
       <note attack="880" dynamics="106.67" release="976">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -23184,7 +22699,6 @@
         </notations>
       </note>
       <note attack="884" dynamics="106.67" release="980">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -23201,7 +22715,6 @@
         </notations>
       </note>
       <note attack="884" dynamics="106.67" release="980">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -23231,7 +22744,6 @@
         </notations>
       </note>
       <note attack="884" dynamics="106.67" release="980">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -23246,7 +22758,6 @@
         </notations>
       </note>
       <note attack="888" dynamics="106.67" release="984">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -23263,7 +22774,6 @@
         </notations>
       </note>
       <note attack="888" dynamics="106.67" release="984">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -23278,7 +22788,6 @@
         </notations>
       </note>
       <note attack="888" dynamics="106.67" release="984">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -23349,7 +22858,6 @@
         </notations>
       </note>
       <note attack="891" dynamics="111.11" release="951">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -23377,7 +22885,6 @@
         </notations>
       </note>
       <note attack="893" dynamics="111.11" release="953">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -23406,7 +22913,6 @@
         </notations>
       </note>
       <note attack="895" dynamics="111.11" release="955">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -23595,7 +23101,6 @@
         </notations>
       </note>
       <note attack="901" dynamics="111.11" release="961">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -23626,7 +23131,6 @@
         </notations>
       </note>
       <note attack="903" dynamics="111.11" release="963">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -23654,7 +23158,6 @@
         </notations>
       </note>
       <note attack="905" dynamics="111.11" release="965">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -23685,7 +23188,6 @@
         </notations>
       </note>
       <note attack="907" dynamics="111.11" release="967">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -23728,7 +23230,6 @@
         </notations>
       </note>
       <note attack="909" dynamics="66.67" release="969">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -23759,7 +23260,6 @@
         </notations>
       </note>
       <note attack="911" dynamics="111.11" release="971">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -23787,7 +23287,6 @@
         </notations>
       </note>
       <note attack="913" dynamics="66.67" release="973">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -23900,7 +23399,6 @@
         </notations>
       </note>
       <note attack="915" dynamics="111.11" release="975">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -23930,7 +23428,6 @@
         </notations>
       </note>
       <note attack="917" dynamics="111.11" release="977">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -23961,7 +23458,6 @@
         </notations>
       </note>
       <note attack="919" dynamics="111.11" release="979">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -23991,7 +23487,6 @@
         </notations>
       </note>
       <note attack="921" dynamics="66.67" release="981">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -24022,7 +23517,6 @@
         </notations>
       </note>
       <note attack="923" dynamics="111.11" release="983">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -24052,7 +23546,6 @@
         </notations>
       </note>
       <note attack="925" dynamics="66.67" release="985">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -24165,7 +23658,6 @@
         </notations>
       </note>
       <note attack="927" dynamics="111.11" release="987">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -24197,7 +23689,6 @@
         </notations>
       </note>
       <note attack="929" dynamics="111.11" release="989">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -24228,7 +23719,6 @@
         </notations>
       </note>
       <note attack="931" dynamics="111.11" release="991">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -24260,7 +23750,6 @@
         </notations>
       </note>
       <note attack="933" dynamics="66.67" release="993">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -24291,7 +23780,6 @@
         </notations>
       </note>
       <note attack="935" dynamics="111.11" release="995">
-        <chord/>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -24323,7 +23811,6 @@
         </notations>
       </note>
       <note attack="937" dynamics="66.67" release="997">
-        <chord/>
         <pitch>
           <step>E</step>
           <octave>3</octave>
@@ -24393,7 +23880,6 @@
         </notations>
       </note>
       <note attack="936" dynamics="111.11" release="1032">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -24408,7 +23894,6 @@
         </notations>
       </note>
       <note attack="936" dynamics="111.11" release="1032">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -24423,7 +23908,6 @@
         </notations>
       </note>
       <note attack="936" dynamics="111.11" release="1032">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -24443,7 +23927,6 @@
         <type>32nd</type>
       </note>
       <note attack="940" dynamics="111.11" release="1012">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -24458,7 +23941,6 @@
         </notations>
       </note>
       <note attack="940" dynamics="111.11" release="1012">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -24492,7 +23974,6 @@
         <type>16th</type>
       </note>
       <note attack="944" dynamics="111.11" release="1004">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -24507,7 +23988,6 @@
         </notations>
       </note>
       <note attack="944" dynamics="111.11" release="1004">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -24753,7 +24233,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="960" dynamics="106.67" release="1056">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -24781,7 +24260,6 @@
         </notations>
       </note>
       <note attack="960" dynamics="106.67" release="1056">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -24796,7 +24274,6 @@
         </notations>
       </note>
       <note attack="960" dynamics="106.67" release="1056">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -24813,7 +24290,6 @@
         </notations>
       </note>
       <note attack="964" dynamics="106.67" release="1060">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -24828,7 +24304,6 @@
         </notations>
       </note>
       <note attack="964" dynamics="106.67" release="1060">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -24843,7 +24318,6 @@
         </notations>
       </note>
       <note attack="964" dynamics="106.67" release="1060">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -24860,7 +24334,6 @@
         </notations>
       </note>
       <note attack="968" dynamics="106.67" release="1064">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -24877,7 +24350,6 @@
         </notations>
       </note>
       <note attack="968" dynamics="106.67" release="1064">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -24907,7 +24379,6 @@
         </notations>
       </note>
       <note attack="968" dynamics="106.67" release="1064">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -24922,7 +24393,6 @@
         </notations>
       </note>
       <note attack="972" dynamics="106.67" release="1068">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -24937,7 +24407,6 @@
         </notations>
       </note>
       <note attack="972" dynamics="106.67" release="1068">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -24954,7 +24423,6 @@
         </notations>
       </note>
       <note attack="972" dynamics="106.67" release="1068">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25068,7 +24536,6 @@
         <sound tempo="76"/>
       </direction>
       <note attack="984" dynamics="111.11" release="1128">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -25095,7 +24562,6 @@
         </notations>
       </note>
       <note attack="984" dynamics="111.11" release="1128">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25109,7 +24575,6 @@
         </notations>
       </note>
       <note attack="990" dynamics="111.11" release="1146">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25123,7 +24588,6 @@
         </notations>
       </note>
       <note attack="990" dynamics="111.11" release="1146">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25139,7 +24603,6 @@
         </notations>
       </note>
       <note attack="990" dynamics="111.11" release="1146">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25158,7 +24621,6 @@
         <type>32nd</type>
       </note>
       <note attack="996" dynamics="111.11" release="1110">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25173,7 +24635,6 @@
         </notations>
       </note>
       <note attack="996" dynamics="111.11" release="1110">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25190,7 +24651,6 @@
         </notations>
       </note>
       <note attack="996" dynamics="111.11" release="1110">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25215,7 +24675,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="996" dynamics="111.11" release="1056">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25230,7 +24689,6 @@
         </notations>
       </note>
       <note attack="996" dynamics="111.11" release="1056">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -25245,7 +24703,6 @@
         </notations>
       </note>
       <note attack="996" dynamics="111.11" release="1056">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25260,7 +24717,6 @@
         </notations>
       </note>
       <note attack="998" dynamics="111.11" release="1058">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -25275,7 +24731,6 @@
         </notations>
       </note>
       <note attack="998" dynamics="111.11" release="1058">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25290,7 +24745,6 @@
         </notations>
       </note>
       <note attack="998" dynamics="111.11" release="1058">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25332,7 +24786,6 @@
         </notations>
       </note>
       <note attack="1002" dynamics="111.11" release="1062">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25349,7 +24802,6 @@
         </notations>
       </note>
       <note attack="1002" dynamics="111.11" release="1062">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -25364,7 +24816,6 @@
         </notations>
       </note>
       <note attack="1002" dynamics="111.11" release="1062">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25392,7 +24843,6 @@
         </notations>
       </note>
       <note attack="1004" dynamics="111.11" release="1196">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25406,7 +24856,6 @@
         </notations>
       </note>
       <note attack="1004" dynamics="111.11" release="1196">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25427,7 +24876,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="1008" dynamics="111.11" release="1152">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25454,7 +24902,6 @@
         </notations>
       </note>
       <note attack="1008" dynamics="111.11" release="1152">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -25468,7 +24915,6 @@
         </notations>
       </note>
       <note attack="1014" dynamics="111.11" release="1170">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25482,7 +24928,6 @@
         </notations>
       </note>
       <note attack="1014" dynamics="111.11" release="1170">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25496,7 +24941,6 @@
         </notations>
       </note>
       <note attack="1014" dynamics="111.11" release="1170">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25517,7 +24961,6 @@
         <type>32nd</type>
       </note>
       <note attack="1020" dynamics="111.11" release="1134">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25532,7 +24975,6 @@
         </notations>
       </note>
       <note attack="1020" dynamics="111.11" release="1134">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25547,7 +24989,6 @@
         </notations>
       </note>
       <note attack="1020" dynamics="111.11" release="1134">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25574,7 +25015,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="1020" dynamics="111.11" release="1080">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25589,7 +25029,6 @@
         </notations>
       </note>
       <note attack="1020" dynamics="111.11" release="1080">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25604,7 +25043,6 @@
         </notations>
       </note>
       <note attack="1020" dynamics="111.11" release="1080">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -25619,7 +25057,6 @@
         </notations>
       </note>
       <note attack="1022" dynamics="111.11" release="1082">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -25634,7 +25071,6 @@
         </notations>
       </note>
       <note attack="1022" dynamics="111.11" release="1082">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -25649,7 +25085,6 @@
         </notations>
       </note>
       <note attack="1022" dynamics="111.11" release="1082">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25691,7 +25126,6 @@
         </notations>
       </note>
       <note attack="1026" dynamics="111.11" release="1086">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -25706,7 +25140,6 @@
         </notations>
       </note>
       <note attack="1026" dynamics="111.11" release="1086">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25723,7 +25156,6 @@
         </notations>
       </note>
       <note attack="1026" dynamics="111.11" release="1086">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -25768,7 +25200,6 @@
         </notations>
       </note>
       <note attack="1028" dynamics="111.11" release="1268">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -25784,7 +25215,6 @@
         </notations>
       </note>
       <note attack="1028" dynamics="111.11" release="1268">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -26083,7 +25513,6 @@
         </notations>
       </note>
       <note attack="22" dynamics="111.11" release="82">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -26253,7 +25682,6 @@
         </notations>
       </note>
       <note attack="46" dynamics="111.11" release="106">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -26268,7 +25696,6 @@
         </notations>
       </note>
       <note attack="48" dynamics="111.11" release="108">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -26438,7 +25865,6 @@
         </notations>
       </note>
       <note attack="72" dynamics="111.11" release="132">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -27569,7 +26995,6 @@
         </notations>
       </note>
       <note attack="202" dynamics="111.11" release="232">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -28157,7 +27582,6 @@
         </notations>
       </note>
       <note attack="322" dynamics="111.11" release="382">
-        <chord/>
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -28327,7 +27751,6 @@
         </notations>
       </note>
       <note attack="346" dynamics="111.11" release="406">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -28342,7 +27765,6 @@
         </notations>
       </note>
       <note attack="348" dynamics="111.11" release="408">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -28521,7 +27943,6 @@
         </notations>
       </note>
       <note attack="372" dynamics="111.11" release="432">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -29047,7 +28468,6 @@
         </notations>
       </note>
       <note attack="442" dynamics="111.11" release="502">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -29771,7 +29191,6 @@
         </notations>
       </note>
       <note attack="526" dynamics="111.11" release="586">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -30472,7 +29891,6 @@
         </notations>
       </note>
       <note attack="638" dynamics="111.11" release="698">
-        <chord/>
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -31772,7 +31190,6 @@
         </notations>
       </note>
       <note attack="838" dynamics="111.11" release="898">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -32478,7 +31895,6 @@
         </notations>
       </note>
       <note attack="922" dynamics="111.11" release="982">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -33269,7 +32685,6 @@
         </notations>
       </note>
       <note attack="360" dynamics="111.11" release="375">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -33284,7 +32699,6 @@
         </notations>
       </note>
       <note attack="360" dynamics="111.11" release="375">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -33304,7 +32718,6 @@
         <type>16th</type>
       </note>
       <note attack="362" dynamics="111.11" release="377">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -33319,7 +32732,6 @@
         </notations>
       </note>
       <note attack="362" dynamics="111.11" release="377">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -33339,7 +32751,6 @@
         <type>16th</type>
       </note>
       <note attack="364" dynamics="111.11" release="379">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -33354,7 +32765,6 @@
         </notations>
       </note>
       <note attack="364" dynamics="111.11" release="379">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -33374,7 +32784,6 @@
         <type>16th</type>
       </note>
       <note attack="366" dynamics="111.11" release="381">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -33389,7 +32798,6 @@
         </notations>
       </note>
       <note attack="366" dynamics="111.11" release="381">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -33858,7 +33266,6 @@
         </notations>
       </note>
       <note attack="384" dynamics="111.11" release="399">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -33873,7 +33280,6 @@
         </notations>
       </note>
       <note attack="384" dynamics="111.11" release="399">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -33893,7 +33299,6 @@
         <type>16th</type>
       </note>
       <note attack="386" dynamics="111.11" release="401">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -33908,7 +33313,6 @@
         </notations>
       </note>
       <note attack="386" dynamics="111.11" release="401">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -33928,7 +33332,6 @@
         <type>16th</type>
       </note>
       <note attack="388" dynamics="111.11" release="403">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -33943,7 +33346,6 @@
         </notations>
       </note>
       <note attack="388" dynamics="111.11" release="403">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -33963,7 +33365,6 @@
         <type>16th</type>
       </note>
       <note attack="390" dynamics="111.11" release="405">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -33978,7 +33379,6 @@
         </notations>
       </note>
       <note attack="390" dynamics="111.11" release="405">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -33998,7 +33398,6 @@
         <type>16th</type>
       </note>
       <note attack="392" dynamics="111.11" release="407">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -34013,7 +33412,6 @@
         </notations>
       </note>
       <note attack="392" dynamics="111.11" release="407">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -34033,7 +33431,6 @@
         <type>16th</type>
       </note>
       <note attack="394" dynamics="111.11" release="409">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -34048,7 +33445,6 @@
         </notations>
       </note>
       <note attack="394" dynamics="111.11" release="409">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -34068,7 +33464,6 @@
         <type>16th</type>
       </note>
       <note attack="396" dynamics="111.11" release="411">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -34083,7 +33478,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="411">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -34103,7 +33497,6 @@
         <type>16th</type>
       </note>
       <note attack="398" dynamics="111.11" release="413">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>2</octave>
@@ -34118,7 +33511,6 @@
         </notations>
       </note>
       <note attack="398" dynamics="111.11" release="413">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -34165,7 +33557,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="411">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -34180,7 +33571,6 @@
         </notations>
       </note>
       <note attack="396" dynamics="111.11" release="411">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -34200,7 +33590,6 @@
         <type>16th</type>
       </note>
       <note attack="398" dynamics="111.11" release="413">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -34215,7 +33604,6 @@
         </notations>
       </note>
       <note attack="398" dynamics="111.11" release="413">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -34235,7 +33623,6 @@
         <type>16th</type>
       </note>
       <note attack="400" dynamics="111.11" release="415">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -34250,7 +33637,6 @@
         </notations>
       </note>
       <note attack="400" dynamics="111.11" release="415">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -34270,7 +33656,6 @@
         <type>16th</type>
       </note>
       <note attack="402" dynamics="111.11" release="417">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -34285,7 +33670,6 @@
         </notations>
       </note>
       <note attack="402" dynamics="111.11" release="417">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -34581,7 +33965,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="792" dynamics="61.11" release="807">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -34596,7 +33979,6 @@
         </notations>
       </note>
       <note attack="792" dynamics="61.11" release="807">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -34616,7 +33998,6 @@
         <type>64th</type>
       </note>
       <note attack="793" dynamics="61.11" release="808">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -34631,7 +34012,6 @@
         </notations>
       </note>
       <note attack="793" dynamics="61.11" release="808">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -34651,7 +34031,6 @@
         <type>64th</type>
       </note>
       <note attack="794" dynamics="61.11" release="809">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -34666,7 +34045,6 @@
         </notations>
       </note>
       <note attack="794" dynamics="61.11" release="809">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -34686,7 +34064,6 @@
         <type>16th</type>
       </note>
       <note attack="796" dynamics="61.11" release="811">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -34701,7 +34078,6 @@
         </notations>
       </note>
       <note attack="796" dynamics="61.11" release="811">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -34721,7 +34097,6 @@
         <type>16th</type>
       </note>
       <note attack="798" dynamics="61.11" release="813">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -34736,7 +34111,6 @@
         </notations>
       </note>
       <note attack="798" dynamics="61.11" release="813">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -34756,7 +34130,6 @@
         <type>64th</type>
       </note>
       <note attack="799" dynamics="61.11" release="814">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -34771,7 +34144,6 @@
         </notations>
       </note>
       <note attack="799" dynamics="61.11" release="814">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -39908,7 +39280,6 @@
         <type>128th</type>
       </note>
       <note attack="594" dynamics="111.11" release="889">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -39922,7 +39293,6 @@
         </notations>
       </note>
       <note attack="594" dynamics="111.11" release="889">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -39957,7 +39327,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="655">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -39972,7 +39341,6 @@
         </notations>
       </note>
       <note attack="600" dynamics="111.11" release="655">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -40033,7 +39401,6 @@
         </notations>
       </note>
       <note attack="606" dynamics="111.11" release="661">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -40048,7 +39415,6 @@
         </notations>
       </note>
       <note attack="606" dynamics="111.11" release="661">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -40795,7 +40161,6 @@
         </notations>
       </note>
       <note attack="656" dynamics="111.11" release="746">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -40810,7 +40175,6 @@
         </notations>
       </note>
       <note attack="656" dynamics="111.11" release="746">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -40825,7 +40189,6 @@
         </notations>
       </note>
       <note attack="659" dynamics="111.11" release="749">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -40839,7 +40202,6 @@
         </notations>
       </note>
       <note attack="659" dynamics="111.11" release="749">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -40853,7 +40215,6 @@
         </notations>
       </note>
       <note attack="662" dynamics="111.11" release="722">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>3</octave>
@@ -40868,7 +40229,6 @@
         </notations>
       </note>
       <note attack="662" dynamics="111.11" release="722">
-        <chord/>
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -46134,7 +45494,6 @@
         <type>128th</type>
       </note>
       <note attack="990" dynamics="111.11" release="1285">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -46148,7 +45507,6 @@
         </notations>
       </note>
       <note attack="990" dynamics="111.11" release="1285">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -46172,7 +45530,6 @@
         <divisions>120</divisions>
       </attributes>
       <note attack="996" dynamics="111.11" release="1051">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -46187,7 +45544,6 @@
         </notations>
       </note>
       <note attack="996" dynamics="111.11" release="1051">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -46248,7 +45604,6 @@
         </notations>
       </note>
       <note attack="1002" dynamics="111.11" release="1057">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -46263,7 +45618,6 @@
         </notations>
       </note>
       <note attack="1002" dynamics="111.11" release="1057">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -46360,7 +45714,6 @@
         </notations>
       </note>
       <note attack="1008" dynamics="111.11" release="1183">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -46374,7 +45727,6 @@
         </notations>
       </note>
       <note attack="1008" dynamics="111.11" release="1183">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -46393,7 +45745,6 @@
         <type>128th</type>
       </note>
       <note attack="1014" dynamics="111.11" release="1309">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -46407,7 +45758,6 @@
         </notations>
       </note>
       <note attack="1014" dynamics="111.11" release="1309">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -46442,7 +45792,6 @@
         </notations>
       </note>
       <note attack="1020" dynamics="111.11" release="1075">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -46457,7 +45806,6 @@
         </notations>
       </note>
       <note attack="1020" dynamics="111.11" release="1075">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -46518,7 +45866,6 @@
         </notations>
       </note>
       <note attack="1026" dynamics="111.11" release="1081">
-        <chord/>
         <pitch>
           <step>C</step>
           <octave>3</octave>
@@ -46533,7 +45880,6 @@
         </notations>
       </note>
       <note attack="1026" dynamics="111.11" release="1081">
-        <chord/>
         <pitch>
           <step>F</step>
           <octave>2</octave>
@@ -51433,7 +50779,6 @@
         </notations>
       </note>
       <note attack="468" dynamics="111.11" release="948">
-        <chord/>
         <pitch>
           <step>G</step>
           <octave>3</octave>
