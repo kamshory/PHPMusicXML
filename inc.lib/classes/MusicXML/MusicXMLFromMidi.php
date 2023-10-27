@@ -1180,7 +1180,14 @@ class MusicXMLFromMidi extends MusicXMLBase
         {
             foreach ($noteMessages as $idx2 => $message2)
             {
-                if($idx1 != $idx2 && $message1['abstime'] == $message2['abstime'])
+                if($idx1 != $idx2 
+                && $message1['abstime'] == $message2['abstime'] 
+                && isset($message1['duration']) 
+                && isset($message2['duration']) 
+                && $message1['duration'] == $message2['duration'] 
+                && $message1['event'] == 'On' 
+                && $message2['event'] == 'On'
+                )
                 {
                     $noteMessages[$idx1]['chord'] = true;
                 }
@@ -1229,7 +1236,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                 {
                     $note->chord = new Chord();
                 }
-
 
                 $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());
                 
