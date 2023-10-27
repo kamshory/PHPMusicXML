@@ -1090,7 +1090,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                             {
                                 continue;
                             }
-                            if($message1['time'] == $message2['time'] 
+                            if($message1['abstime'] == $message2['abstime'] 
                             && isset($message1['duration']) 
                             && isset($message2['duration']) 
                             && $message1['duration'] == $message2['duration'] 
@@ -1099,6 +1099,10 @@ class MusicXMLFromMidi extends MusicXMLBase
                             )
                             {
                                 $noteMessages[$idx1]['chord'] = true;
+                                if($measureIndex == 82)
+                                {
+                                    print_r($message1);
+                                }
                             }
                         }
                     }
@@ -1240,6 +1244,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
 
                 $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);
+                
                 if(isset($message['chord']) && $message['chord'] === true)
                 {
                     $note->chord = new Chord();
