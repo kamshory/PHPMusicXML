@@ -256,6 +256,12 @@ class Note extends MusicXMLWriter
      * @var Rest
      */
     public $rest;
+	
+	/**
+     * @Element
+     * @var Chord
+     */
+    public $chord;
 
     /**
      * Pitch
@@ -328,12 +334,6 @@ class Note extends MusicXMLWriter
      * @var Staff
      */
     public $staff;
-
-    /**
-     * @Element
-     * @var Chord
-     */
-    public $chord;
 
     /**
      * Lyric

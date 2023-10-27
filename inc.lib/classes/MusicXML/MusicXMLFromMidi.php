@@ -8,6 +8,7 @@ use Midi\MidiMeasure;
 use MusicXML\Exceptions\FileNotFoundException;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
+use MusicXML\Model\Chord;
 use MusicXML\Model\Divisions;
 use MusicXML\Model\Duration;
 use MusicXML\Model\InstrumentName;
@@ -1174,6 +1175,18 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $measure->elements[] = $tieStop->getNote();
             }
         }
+        
+        foreach ($noteMessages as $idx1 => $message1)
+        {
+            foreach ($noteMessages as $idx2 => $message2)
+            {
+                if($idx1 != $idx2 && $message1['abstime'] == $message2['abstime'])
+                {
+                    $noteMessages[$idx1]['chord'] = true;
+                }
+            }
+        }
+        
 
         foreach ($noteMessages as $idx => $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
@@ -1212,6 +1225,10 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
 
                 $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);
+                if(isset($message['chord']) && $message['chord'] === true)
+                {
+                    $note->chord = new Chord();
+                }
 
 
                 $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());
