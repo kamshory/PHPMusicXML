@@ -9,14 +9,14 @@ class AttackRelease
      *
      * @var integer
      */
-    private $attack = 0;
+    private $attack;
     
     /**
      * Release
      *
      * @var integer
      */
-    private $release = 0;
+    private $release;
     
     public function __construct($attack, $release)
     {
