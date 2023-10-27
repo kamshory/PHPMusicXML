@@ -1315,7 +1315,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         {
             $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
             $note->attack = $attackRelease->getAttack();
-            $note->release = $attackRelease->getRelease();    
+            $note->release = $attackRelease->getRelease();
         }
         return $note;
     }
@@ -1331,7 +1331,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $duration
      * @return Note
      */
-    private function createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration)
+    private function createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $originalDuration)
     {
         $noteCode = $message['note'];
         $note = new Note();
@@ -1358,9 +1358,8 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         $note->stem = 'up';
         $note->notations = array($this->getNotation());
-        $duration = $this->fixDuration($duration, $divisions, $timebase);
-        $note->duration = new Duration($duration);                    
-        
+        $duration = $this->fixDuration($originalDuration, $divisions, $timebase);
+        $note->duration = new Duration($duration);                          
         $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));            
         
         $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);

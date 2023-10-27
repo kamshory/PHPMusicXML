@@ -70,11 +70,12 @@ class TieStop
         $this->originMeasureIndex = $originMeasureIndex;
         $newNote = new Note();
         $newNote->pitch = $note->pitch;
+        
         $tie = new Tie();
         $tie->type = 'stop';
         $tied = new Tied();
         $tied->type = 'stop';
-        $note->type = new Type(MusicXMLUtil::getNoteType($durationRemaining, $divisions));   
+        $note->type = new Type(MusicXMLUtil::getNoteType($durationRemaining, $divisions));
 
         $notations = new Notations();
         $notations->tied = $tied;
