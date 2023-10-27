@@ -358,6 +358,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
     }
     
+    /**
+     * Load midi from file
+     *
+     * @param string $midiPath
+     * @return MidiMeasure
+     */
     public function loadMidi($midiPath)
     {
         if(file_exists($midiPath))
@@ -721,8 +727,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePartwise = new ScorePartwise();
         $scorePartwise->version = $version;
         $scorePartwise->identification = $this->getIdentification($this->copyright);
-        $scorePartwise->work = MusicXMLUtil::getWork($title);
-        
+        $scorePartwise->work = MusicXMLUtil::getWork($title);        
         $scorePartwise->partList = new PartList();
         $scorePartwise->partList->partGroup = array();
 
@@ -1005,8 +1010,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $measure->number = $measureIndex + 1;
         $directions = array();
         
-        if ($this->hasMessage(0, $measureIndex))
-        {
+        if ($this->hasMessage(0, $measureIndex)) {
             $midiEventMessages = $this->measures[0][$measureIndex];
             
             // events whithout channel information
@@ -1015,12 +1019,10 @@ class MusicXMLFromMidi extends MusicXMLBase
             $tempoList = $midiEvent->getTempoList();
             $keySignatureList = $midiEvent->getKeySignatureList();
 
-            if(!empty($tempoList))
-            {
+            if(!empty($tempoList)) {
                 $directions = MusicXMLUtil::getDirections($tempoList);
             } 
-            if(!empty($keySignatureList))
-            {
+            if(!empty($keySignatureList)) {
                 $attributes->key = array();
                 foreach($keySignatureList as $keySignature)
                 {
@@ -1033,8 +1035,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $controlEvents = MusicXMLUtil::getControlEvent($midiEventMessages);
             
-            if (!empty($controlEvents)) 
-            {
+            if (!empty($controlEvents)) {
                 foreach ($controlEvents as $message) //NOSONAR
                 {
                     // do it here
@@ -1043,19 +1044,16 @@ class MusicXMLFromMidi extends MusicXMLBase
 
             $divisions = $this->getDivisions($measureIndex);
             $attributes->divisions = new Divisions($divisions);
-            if($measureIndex == 0)
-            {                   
+            if($measureIndex == 0) {                   
                 // only add clef on first
                 $attributes->time = $this->getTime($this->timeSignature);           
                 $attributes->clef = $this->clefs[$channelId];                
-                if(count($attributes->clef) > 1)
-                {
+                if(count($attributes->clef) > 1) {
                     $attributes->staves = new Staves(count($attributes->clef));
                 }     
             }
         }
-        else
-        {
+        else {
             $attributes = new Attributes();
             $attributes->divisions = new Divisions($this->getDivisions($measureIndex));            
         }
@@ -1064,8 +1062,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         // add attribute
         
         // add directions
-        if(!empty($directions))
-        {
+        if(!empty($directions)) {
             foreach($directions as $direction)
             {
                 $measure->elements[] = $direction;
@@ -1078,9 +1075,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             // begin add note
             
             $noteMessages = MusicXMLUtil::getNotes($midiEventMessages);
-            if(!empty($noteMessages))
-            {
-                
+            if(!empty($noteMessages)) {
                 if($channelId != 10)
                 {
                     foreach ($noteMessages as $idx1 => $message1)
@@ -1092,11 +1087,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                                 continue;
                             }
                             if($message1['abstime'] == $message2['abstime'] 
-                            && isset($message1['duration']) 
-                            && isset($message2['duration']) 
+                            && isset($message1['duration']) && isset($message2['duration']) 
                             && $message1['duration'] == $message2['duration'] 
-                            && $message1['event'] == 'On' 
-                            && $message2['event'] == 'On'
+                            && $message1['event'] == 'On' && $message2['event'] == 'On'
                             )
                             {
                                 if(!isset($noteMessages[$idx1]['chords']))
@@ -1264,8 +1257,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                     $note = $this->trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max);
                     $remaining = $originalDuration - $note->duration->textContent;
                     
-
-
                     $tieRange = $remaining / $this->timeSignature->getBeats();
 
                     $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
