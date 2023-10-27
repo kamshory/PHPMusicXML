@@ -1079,6 +1079,32 @@ class MusicXMLFromMidi extends MusicXMLBase
             $noteMessages = MusicXMLUtil::getNotes($midiEventMessages);
             if(!empty($noteMessages))
             {
+                
+                if($channelId != 10)
+                {
+                    foreach ($noteMessages as $idx1 => $message1)
+                    {
+                        foreach ($noteMessages as $idx2 => $message2)
+                        {
+                            if($idx1 == $idx2)
+                            {
+                                continue;
+                            }
+                            if($message1['time'] == $message2['time'] 
+                            && isset($message1['duration']) 
+                            && isset($message2['duration']) 
+                            && $message1['duration'] == $message2['duration'] 
+                            && $message1['event'] == 'On' 
+                            && $message2['event'] == 'On'
+                            )
+                            {
+                                $noteMessages[$idx1]['chord'] = true;
+                            }
+                        }
+                    }
+                }
+                
+                
                 $measureContainer = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
 
                 // add element index to $noteMessages
@@ -1173,27 +1199,6 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 // add tie note
                 $measure->elements[] = $tieStop->getNote();
-            }
-        }
-        
-        if($channelId != 10)
-        {
-            foreach ($noteMessages as $idx1 => $message1)
-            {
-                foreach ($noteMessages as $idx2 => $message2)
-                {
-                    if($idx1 != $idx2 
-                    && $message1['time'] == $message2['time'] 
-                    && isset($message1['duration']) 
-                    && isset($message2['duration']) 
-                    && $message1['duration'] == $message2['duration'] 
-                    && $message1['event'] == 'On' 
-                    && $message2['event'] == 'On'
-                    )
-                    {
-                        $noteMessages[$idx1]['chord'] = true;
-                    }
-                }
             }
         }
         
