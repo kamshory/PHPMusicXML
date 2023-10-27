@@ -1176,20 +1176,23 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
         }
         
-        foreach ($noteMessages as $idx1 => $message1)
+        if($channelId != 10)
         {
-            foreach ($noteMessages as $idx2 => $message2)
+            foreach ($noteMessages as $idx1 => $message1)
             {
-                if($idx1 != $idx2 
-                && $message1['time'] == $message2['time'] 
-                && isset($message1['duration']) 
-                && isset($message2['duration']) 
-                && $message1['duration'] == $message2['duration'] 
-                && $message1['event'] == 'On' 
-                && $message2['event'] == 'On'
-                )
+                foreach ($noteMessages as $idx2 => $message2)
                 {
-                    $noteMessages[$idx1]['chord'] = true;
+                    if($idx1 != $idx2 
+                    && $message1['time'] == $message2['time'] 
+                    && isset($message1['duration']) 
+                    && isset($message2['duration']) 
+                    && $message1['duration'] == $message2['duration'] 
+                    && $message1['event'] == 'On' 
+                    && $message2['event'] == 'On'
+                    )
+                    {
+                        $noteMessages[$idx1]['chord'] = true;
+                    }
                 }
             }
         }
