@@ -1181,7 +1181,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             foreach ($noteMessages as $idx2 => $message2)
             {
                 if($idx1 != $idx2 
-                && $message1['abstime'] == $message2['abstime'] 
+                && $message1['time'] == $message2['time'] 
                 && isset($message1['duration']) 
                 && isset($message2['duration']) 
                 && $message1['duration'] == $message2['duration'] 
