@@ -308,7 +308,7 @@ class MusicXMLBuilder
     /**
      * Convert object to string
      *
-     * @param [type] $propertyValue
+     * @param mixed $propertyValue
      * @return string
      */
     private function getStringValue($propertyValue)

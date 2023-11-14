@@ -57,7 +57,6 @@ class MusicXMLUtil
         '1024th'=>1/1024
     );
     
-
     /**
      * Get note coordinate
      *
@@ -175,8 +174,7 @@ class MusicXMLUtil
                 {
                     $sound = new Sound();
                     $sound->tempo = $bpm;
-                    $directions[$rawtime]->sound = $sound;
-                    
+                    $directions[$rawtime]->sound = $sound;                    
                     $directionType = new DirectionType();
                     $metronome = new Metronome();
                     $metronome->parentheses = 'no';

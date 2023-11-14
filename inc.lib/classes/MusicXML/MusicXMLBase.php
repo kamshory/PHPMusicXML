@@ -87,7 +87,6 @@ abstract class MusicXMLBase
         $articulation = new Articulations();
         $articulation->staccato = array(new Staccato());
         $notations->articulations = $articulation;
-        
         return $notations;
     }
 
@@ -135,7 +134,6 @@ abstract class MusicXMLBase
         $key->mode = $mode;
         return $key;
     }
-
 
     /**
      * Get MIDI device
@@ -208,6 +206,7 @@ abstract class MusicXMLBase
         $scorePart->midiDevice = array($midiDevice);
         return $scorePart;
     }
+    
     /**
      * Create new DOMDocument for MusicXML version 4.0
      *

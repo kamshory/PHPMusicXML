@@ -48,9 +48,28 @@ class MusicXMLFromMidi extends MusicXMLBase
 {
     
     const DEFAULT_DIVISONS = 24;
+    
+    /**
+     * Minimum chord
+     *
+     * @var integer
+     */
     private $minChord = 10;
+    
+    /**
+     * Witdh scale
+     *
+     * @var integer
+     */
     private $widthScale = 6;
+    
+    /**
+     * Minimum width
+     *
+     * @var integer
+     */
     private $minWidth = 120;
+    
     /**
      * Part list
      *
@@ -99,6 +118,12 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var string
      */
     private $copyright = "";
+    
+    /**
+     * Time signature
+     *
+     * @var TimeSignature
+     */
     private $timeSignature = null;
     /**
      * Division
@@ -114,10 +139,39 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private $measureWidth = array();
 
+    /**
+     * Minimum note
+     *
+     * @var integer
+     */
     private $noteMin = 127;
+    
+    /**
+     * Maximum note
+     *
+     * @var integer
+     */
     private $noteMax = 0;
+    
+    /**
+     * Maximum measure
+     *
+     * @var integer
+     */
     private $maxMeasure = 0;
+    
+    /**
+     * Last note
+     *
+     * @var array
+     */
     private $lastNote = array(); 
+    
+    /**
+     * Tie stop
+     *
+     * @var array
+     */
     private $tieStop = array();
 
 
@@ -162,6 +216,17 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->measures[$ch][$indexOn][$lastOn]['duration'] = $duration;
     }
 
+    /**
+     * Add part list
+     *
+     * @param integer $channelId
+     * @param integer $partId
+     * @param integer $programId
+     * @param integer $instrumentId
+     * @param array $instrument
+     * @param integer $port
+     * @return void
+     */
     private function addPartList(
         $channelId, 
         $partId,
@@ -328,9 +393,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $ti = $this->lastNote[$ch][$n]['tminteger'];
                 $this->measures[$ch][$ti][$index]['duration'] = $duration;                
             }
-            
-            
-            
+                    
             $this->lastNote[$ch][$n] = array('time'=>$abstime, 'index'=>$lastIndex, 'tminteger'=>$tmInteger);
 
             if($ch != 10)
@@ -812,8 +875,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         
         
         // begin part
-        
-        
 
         foreach ($this->partList as $part) {
             $partId = $part['partId'];
@@ -1068,7 +1129,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $measure->elements[] = $direction;
             }
         }
-
         
         if ($this->hasMessage($channelId, $measureIndex)) 
         {
@@ -1087,9 +1147,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                                 continue;
                             }
                             if($message1['abstime'] == $message2['abstime'] 
-                            && isset($message1['duration']) && isset($message2['duration']) 
-                            && $message1['duration'] == $message2['duration'] 
-                            && $message1['event'] == 'On' && $message2['event'] == 'On'
+                                && isset($message1['duration']) && isset($message2['duration']) 
+                                && $message1['duration'] == $message2['duration'] 
+                                && $message1['event'] == 'On' && $message2['event'] == 'On'
                             )
                             {
                                 if(!isset($noteMessages[$idx1]['chords']))
@@ -1202,8 +1262,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 // add tie note
                 $measure->elements[] = $tieStop->getNote();
             }
-        }
-        
+        }      
 
         foreach ($noteMessages as $idx => $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
@@ -1269,7 +1328,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions) - 1;
                         $durationRemaining = ($remaining % ($divisions * $this->timeSignature->getBeats())) + ($divisions * $this->timeSignature->getBeats());
                     }
-
                     
                     if(!isset($this->tieStop[$nextMeasureIndex]))
                     {
