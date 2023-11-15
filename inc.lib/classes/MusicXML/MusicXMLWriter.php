@@ -14,7 +14,7 @@ use stdClass;
  * MusicXMLWrtiter to write MusicXML document using annotation
  * See https://github.com/kamshory/PHPMusicXML
  */
-class MusicXMLWriter // NOSONAR
+class MusicXMLWriter extends stdClass // NOSONAR
 {
 
     const KEY_PROPERTY_TYPE = "propertyType";
