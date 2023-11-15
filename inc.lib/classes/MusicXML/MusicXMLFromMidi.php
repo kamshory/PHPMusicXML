@@ -991,7 +991,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Build measure divisions
      *
-     * @param [type] $timebase
+     * @param integer $timebase
      * @return void
      */
     private function buildTimeDivisions($timebase)
