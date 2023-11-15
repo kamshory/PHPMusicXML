@@ -1,9 +1,10 @@
 <?php
 namespace MusicXML\Exceptions;
 
+use Exception;
 use Throwable;
 
-class NoDatabaseConnectionException extends \Exception
+class NoDatabaseConnectionException extends Exception
 {
     /**
      * Previous exception

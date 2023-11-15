@@ -1,9 +1,10 @@
 <?php
 namespace MusicXML\Exceptions;
 
+use Exception;
 use Throwable;
 
-class NoRecordFoundException extends \Exception
+class NoRecordFoundException extends Exception
 {
     /**
      * Previous exception

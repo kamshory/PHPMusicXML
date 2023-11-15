@@ -1,9 +1,10 @@
 <?php
 namespace MusicXML\Exceptions;
 
+use Exception;
 use Throwable;
 
-class NoPrimaryKeyDefinedException extends \Exception
+class NoPrimaryKeyDefinedException extends Exception
 {
     /**
      * Previous exception

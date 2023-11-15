@@ -1,9 +1,10 @@
 <?php
 namespace MusicXML\Exceptions;
 
+use Exception;
 use Throwable;
 
-class NoInsertableColumnException extends \Exception
+class NoInsertableColumnException extends Exception
 {
     /**
      * Previous exception

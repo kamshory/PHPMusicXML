@@ -1,9 +1,10 @@
 <?php
 namespace MusicXML\Exceptions;
 
+use Exception;
 use Throwable;
 
-class NullPointerException extends \Exception
+class NullPointerException extends Exception
 {
     /**
      * Previous exception

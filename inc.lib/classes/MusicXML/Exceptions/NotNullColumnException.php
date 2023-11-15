@@ -1,9 +1,10 @@
 <?php
 namespace MusicXML\Exceptions;
 
+use Exception;
 use Throwable;
 
-class NotNullColumnException extends \Exception
+class NotNullColumnException extends Exception
 {
     /**
      * Previous exception
