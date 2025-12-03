@@ -267,6 +267,10 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function addEvent($eventName, $message, $timebase, $abstime, $n = 0, $ch = 0, $v = 0) //NOSONAR
     {
+        if(!isset($this->timeSignature))
+        {
+            $this->timeSignature = new TimeSignature(array(0, 'TimeSig', '4/4', 24, 8));
+        }
         $rawtime = $message[0];
         $tm = $message[0] / ($this->timeSignature->getBeats() * $timebase);
         $tmInteger = floor($tm);
