@@ -23,25 +23,28 @@ foreach ($items as $item) {
     }
 }
 
-$fileList = array(__DIR__."/test-files/1001 Car.mid");
+$fileList = array(__DIR__."/test-files/test-4.mid");
 
-// Iterate over directories
+// Create a single instance of the converter
+$musicXMLConverter = new MusicXMLFromMidi();
+
+// Iterate over the file list
 foreach ($fileList as $file) {
 
     if (strtolower(fileExtension($file)) == 'mid') {
-        $musicXML = new MusicXMLFromMidi();
         try {
             $source = $file;
             $result = str_replace(".mid", ".xml", $source);
             echo "Convert file $source\r\n";
-            $midi = $musicXML->loadMidi($source);
-            $mxl = new MXL();
-            $xml = $musicXML->midiToMusicXml($midi, "Online", "4.0", MXL::FORMAT_XML);
+            $midi = $musicXMLConverter->loadMidi($source); // This returns a MidiMeasure object
+            $xml = $musicXMLConverter->midiToMusicXml($midi, "Online", "4.0", MXL::FORMAT_XML);
 
-            //compressed version]
-            //file_put_contents("convert.mxl", $mxl->createMxl("Test", $xml));
+            // To create a compressed .mxl file, you can use:
+            // $mxl = new MXL();
+            // file_put_contents(str_replace(".mid", ".mxl", $source), $mxl->xmlToMxl("Online", $xml));
 
             //uncompressed version
+            echo $result."\r\n";
             file_put_contents($result, $xml);
         } catch (Exception $e) {
             echo $e->getMessage();

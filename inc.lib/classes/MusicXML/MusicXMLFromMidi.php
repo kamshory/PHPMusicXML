@@ -46,30 +46,30 @@ use MusicXML\Util\MXL;
  */
 class MusicXMLFromMidi extends MusicXMLBase
 {
-    
+
     const DEFAULT_DIVISONS = 24;
-    
+
     /**
      * Minimum chord
      *
      * @var integer
      */
     private $minChord = 10;
-    
+
     /**
      * Witdh scale
      *
      * @var integer
      */
     private $widthScale = 6;
-    
+
     /**
      * Minimum width
      *
      * @var integer
      */
     private $minWidth = 120;
-    
+
     /**
      * Part list
      *
@@ -104,7 +104,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var array
      */
     private $channel10 = array();
-    
+
     /**
      * Clef
      *
@@ -118,7 +118,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var string
      */
     private $copyright = "";
-    
+
     /**
      * Time signature
      *
@@ -145,34 +145,41 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var integer
      */
     private $noteMin = 127;
-    
+
     /**
      * Maximum note
      *
      * @var integer
      */
     private $noteMax = 0;
-    
+
     /**
      * Maximum measure
      *
      * @var integer
      */
     private $maxMeasure = 0;
-    
+
     /**
      * Last note
      *
      * @var array
      */
-    private $lastNote = array(); 
-    
+    private $lastNote = array();
+
     /**
      * Tie stop
      *
      * @var array
      */
     private $tieStop = array();
+
+    /**
+     * Stores information about a note that needs to be continued with a tie in the next measure.
+     *
+     * @var array
+     */
+    private $tieContinue = array();
 
 
     /**
@@ -194,11 +201,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->noteMin = 127;
         $this->noteMax = 0;
         $this->maxMeasure = 0;
-        $this->lastNote = array(); 
-        $this->tieStop = array(); 
+        $this->lastNote = array();
+        $this->tieStop = array();
+        $this->tieContinue = array();
     }
 
-    
+
 
     /**
      * Set note duration
@@ -228,7 +236,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @return void
      */
     private function addPartList(
-        $channelId, 
+        $channelId,
         $partId,
         $programId,
         $instrumentId,
@@ -237,11 +245,11 @@ class MusicXMLFromMidi extends MusicXMLBase
     )
     {
         $this->partList[$instrumentId] = array(
-            'instrumentId' => $instrumentId, 
-            'channelId' => $channelId, 
-            'partId' => $partId, 
-            'programId' => $programId, 
-            'instrument' => $instrument, 
+            'instrumentId' => $instrumentId,
+            'channelId' => $channelId,
+            'partId' => $partId,
+            'programId' => $programId,
+            'instrument' => $instrument,
             'port' => $port
         );
     }
@@ -266,9 +274,9 @@ class MusicXMLFromMidi extends MusicXMLBase
         {
             $this->maxMeasure = $tmInteger;
         }
-        
+
         $offset = $tm - $tmInteger;
-        
+
         if (!isset($this->measures[$ch])) {
             $this->measures[$ch] = array();
         }
@@ -278,84 +286,84 @@ class MusicXMLFromMidi extends MusicXMLBase
         if($eventName == 'Par')
         {
             $this->measures[$ch][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'rawtime' => $rawtime, 
-                'channel' => $ch, 
-                'control' => $n, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'rawtime' => $rawtime,
+                'channel' => $ch,
+                'control' => $n,
                 'value' => $v
             );
-        }        
+        }
         else if($eventName == 'PrCh')
         {
             $this->measures[$ch][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'rawtime' => $rawtime, 
-                'channel' => $ch, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'rawtime' => $rawtime,
+                'channel' => $ch,
                 'number' => $n
             );
         }
         else if($eventName == 'PoPr')
         {
             $this->measures[$ch][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'rawtime' => $rawtime, 
-                'channel' => $ch, 
-                'note' => $n, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'rawtime' => $rawtime,
+                'channel' => $ch,
+                'note' => $n,
                 'pressure' => $v
             );
         }
         else if($eventName == 'Seqnr' || $eventName == 'Tempo')
         {
             $this->measures[0][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'rawtime' => $rawtime, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'rawtime' => $rawtime,
                 'value' => $n
             );
         }
         else if($eventName == 'KeySig')
         {
             $this->measures[0][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'fifths' => $n, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'fifths' => $n,
                 'mode' => $v
             );
         }
         else if($eventName == 'ChPr')
         {
             $this->measures[$ch][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'rawtime' => $rawtime, 
-                'channel' => $ch, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'rawtime' => $rawtime,
+                'channel' => $ch,
                 'pressure' => $v
             );
         }
         else if($eventName == 'Pb')
         {
             $this->measures[$ch][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'rawtime' => $rawtime, 
-                'channel' => $ch, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'rawtime' => $rawtime,
+                'channel' => $ch,
                 'value' => $v
             );
         }
@@ -369,35 +377,35 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $this->lastNote[$ch][$n] = array();
             }
-            $mod = $tm % ($timebase * $this->timeSignature->getBeats());           
-            $startAt = floor($mod / $timebase);           
+            $mod = $tm % ($timebase * $this->timeSignature->getBeats());
+            $startAt = floor($mod / $timebase);
             $note = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
                 'offset' => $offset,
-                'channel' => $ch, 
-                'note' => $n, 
+                'channel' => $ch,
+                'note' => $n,
                 'value' => $v,
                 'startAt' => $startAt
             );
             $index = count($this->measures[$ch][$tmInteger]);
             $lastIndex = $index;
             $this->measures[$ch][$tmInteger][$index] = $note;
-            
+
             if(isset($this->lastNote[$ch][$n]) && isset($this->lastNote[$ch][$n]['index']))
             {
                 $duration = $abstime - $this->lastNote[$ch][$n]['time'];
                 $index = $this->lastNote[$ch][$n]['index'];
                 $ti = $this->lastNote[$ch][$n]['tminteger'];
-                $this->measures[$ch][$ti][$index]['duration'] = $duration;                
+                $this->measures[$ch][$ti][$index]['duration'] = $duration;
             }
-                    
+
             $this->lastNote[$ch][$n] = array('time'=>$abstime, 'index'=>$lastIndex, 'tminteger'=>$tmInteger);
 
             if($ch != 10)
-            {           
+            {
                 if($n < $this->noteMin)
                 {
                     $this->noteMin = $n;
@@ -411,16 +419,16 @@ class MusicXMLFromMidi extends MusicXMLBase
         else
         {
             $this->measures[$ch][$tmInteger][] = array(
-                'event' => $eventName, 
-                'message' => $message, 
-                'time' => $tm, 
-                'abstime' => $abstime, 
-                'channel' => $ch, 
+                'event' => $eventName,
+                'message' => $message,
+                'time' => $tm,
+                'abstime' => $abstime,
+                'channel' => $ch,
                 'value' => $v
-            );      
+            );
         }
     }
-    
+
     /**
      * Load midi from file
      *
@@ -440,19 +448,20 @@ class MusicXMLFromMidi extends MusicXMLBase
             throw new FileNotFoundException("Specified file does not exists: ".$midiPath);
         }
     }
-    
+
     /**
      * Convert MIDI to MusicXML
      *
      * @param MidiMeasure $midi
+     * @param string $title
      * @param string $version Version of MusicXML
+     * @param string $format
      * @return string
      */
     public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::FORMAT_XML)
     {
         $domdoc = $this->getDOMDocument();
-        $midi2mxl = new MusicXMLFromMidi();
-        $domdoc->appendChild($midi2mxl->convertMidiToMusicXML($midi, $title, $domdoc, $version));
+        $domdoc->appendChild($this->convertMidiToMusicXML($midi, $title, $domdoc, $version));
         if($format == MXL::FORMAT_MXL)
         {
             // compress MusicXML
@@ -462,7 +471,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         else
         {
             return $domdoc->saveXML();
-        }  
+        }
     }
 
     /**
@@ -514,7 +523,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $port = $ch;
 
                         $this->addPartList(
-                            $channelId, 
+                            $channelId,
                             $partId,
                             $programId,
                             $instrumentId,
@@ -678,7 +687,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         $xml .= "</MIDIFile>";
     }
-    
+
     /**
      * Get measure division
      *
@@ -722,7 +731,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         return isset($this->partPan[$partId]) ? $this->partPan[$partId] : 0;
     }
-    
+
     /**
      * Check if need rest in the beginning or not
      *
@@ -735,7 +744,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         return $offset > 0 && $cnt == 0;
     }
 
-    
+
     /**
      * Check if need rest in the middle or not
      *
@@ -772,7 +781,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         return $duration > 0 && $message['event'] == 'On' && $message['value'] > 0 && $message['note'] > 13;
     }
-    
+
     /**
      * Convert Midi to MusicXML
      *
@@ -782,15 +791,15 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param string $version
      * @return DOMNode
      */
-    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0") 
+    public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0")
     {
-        
+
         $this->resetProperties();
         $timebase = $midi->getTimebase();
         $scorePartwise = new ScorePartwise();
         $scorePartwise->version = $version;
         $scorePartwise->identification = $this->getIdentification($this->copyright);
-        $scorePartwise->work = MusicXMLUtil::getWork($title);        
+        $scorePartwise->work = MusicXMLUtil::getWork($title);
         $scorePartwise->partList = new PartList();
         $scorePartwise->partList->partGroup = array();
 
@@ -806,11 +815,11 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         // begin part list
         $partIndex = 1;
-        
+
         $scorePartwise->partList->scorePart = array();
-        
+
         $this->buildTimeDivisions($timebase);
-        
+
         foreach ($this->partList as $part) {
             // start add score part
             // this block will be iterated each channel
@@ -836,7 +845,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $instrumentId = $part['instrumentId'];
                 $volumeRaw = $this->getPartVolume($partId);
                 $volume = $volumeRaw * 100 / (0.9 * 127);
-                
+
                 // 4 place decimal
                 $volume = round($volume, 4);
                 $panRaw = $this->getPartPan($partId);
@@ -846,9 +855,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $midiDevice = $this->getMidiDevice($instrumentId, $midiChannel);
                 $scorePartwise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
-            
+
             $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
-            
+
             // end add score part
             $partIndex++;
         }
@@ -856,24 +865,24 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         $scorePartwise->part = array();
 
-        
+
 
         $totalMeasure = $this->maxMeasure + 1;
         if($totalMeasure == 0)
         {
             $totalMeasure = 1;
         }
-        
+
         // begin process pitch bend
         // TODO: process pitch bend here
         // end process pitch bend
 
-        
+
         // begin process chord
         // TODO: process chord here
         // end process chord
-        
-        
+
+
         // begin part
 
         foreach ($this->partList as $part) {
@@ -883,6 +892,13 @@ class MusicXMLFromMidi extends MusicXMLBase
             $part->id = $partId;
             $part->measure = array();
             for ($measureIndex = 0; $measureIndex < $totalMeasure; $measureIndex++) {
+                // Reset tie continuation for each part before processing its measures
+                if (isset($this->tieContinue[$partId])) {
+                    unset($this->tieContinue[$partId]);
+                }
+                // The loop will now naturally handle tie continuation from one measure to the next
+                // for this specific part.
+
                 $measure = $this->getMeasure($partId, $channelId, $measureIndex, $timebase);
                 $part->measure[] = $measure;
             }
@@ -912,12 +928,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePart->partName = new PartName($partName);
         $scorePart->partAbbreviation = new PartAbbreviation($partAbbreviation);
         ksort($this->channel10);
-        foreach ($this->channel10 as $key => $value) 
+        foreach ($this->channel10 as $key => $value)
         {
             $scoreInstrument = new ScoreInstrument();
             $midiInstrument = new MidiInstrument();
             $id = $partId . '-I' . $key;
-            $scoreInstrument->id = $id; 
+            $scoreInstrument->id = $id;
             $midiCode = $value['note'] - 1;
             if(isset(MusicXMLInstrument::DRUM_SET[$midiCode]) && isset(MusicXMLInstrument::DRUM_SET[$midiCode][0]))
             {
@@ -965,7 +981,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         $tempoList = array();
         $keySignatureList = array();
-        foreach ($controlEvents as $message) 
+        foreach ($controlEvents as $message)
         {
             $time = $message['time'];
             if($message['event'] == 'Tempo')
@@ -987,7 +1003,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         return new MidiEvent($tempoList, $keySignatureList);
     }
-    
+
     /**
      * Build measure divisions
      *
@@ -1015,7 +1031,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                         {
                             $maxMeasure = $measureIndex;
                         }
-                        $notes[$measureIndex][] = $event; 
+                        $notes[$measureIndex][] = $event;
                     }
                 }
             }
@@ -1034,7 +1050,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
         }
     }
-    
+
     /**
      * Set measure divison
      *
@@ -1070,10 +1086,10 @@ class MusicXMLFromMidi extends MusicXMLBase
         $attributes = new Attributes();
         $measure->number = $measureIndex + 1;
         $directions = array();
-        
+
         if ($this->hasMessage(0, $measureIndex)) {
             $midiEventMessages = $this->measures[0][$measureIndex];
-            
+
             // events whithout channel information
             $controlEvents0 = MusicXMLUtil::getControlEvent($midiEventMessages);
             $midiEvent = $this->getEventList($controlEvents0);
@@ -1082,20 +1098,20 @@ class MusicXMLFromMidi extends MusicXMLBase
 
             if(!empty($tempoList)) {
                 $directions = MusicXMLUtil::getDirections($tempoList);
-            } 
+            }
             if(!empty($keySignatureList)) {
                 $attributes->key = array();
                 foreach($keySignatureList as $keySignature)
                 {
                     $attributes->key[] = $this->getKey($keySignature['fifths'], $keySignature['mode']);
                 }
-            }       
+            }
         }
-        
+
         if ($this->hasMessage($channelId, $measureIndex)) {
             $midiEventMessages = $this->measures[$channelId][$measureIndex];
             $controlEvents = MusicXMLUtil::getControlEvent($midiEventMessages);
-            
+
             if (!empty($controlEvents)) {
                 foreach ($controlEvents as $message) //NOSONAR
                 {
@@ -1105,23 +1121,23 @@ class MusicXMLFromMidi extends MusicXMLBase
 
             $divisions = $this->getDivisions($measureIndex);
             $attributes->divisions = new Divisions($divisions);
-            if($measureIndex == 0) {                   
+            if($measureIndex == 0) {
                 // only add clef on first
-                $attributes->time = $this->getTime($this->timeSignature);           
-                $attributes->clef = $this->clefs[$channelId];                
+                $attributes->time = $this->getTime($this->timeSignature);
+                $attributes->clef = $this->clefs[$channelId];
                 if(count($attributes->clef) > 1) {
                     $attributes->staves = new Staves(count($attributes->clef));
-                }     
+                }
             }
         }
         else {
             $attributes = new Attributes();
-            $attributes->divisions = new Divisions($this->getDivisions($measureIndex));            
+            $attributes->divisions = new Divisions($this->getDivisions($measureIndex));
         }
         $measure->elements[] = $attributes;
-        
+
         // add attribute
-        
+
         // add directions
         if(!empty($directions)) {
             foreach($directions as $direction)
@@ -1129,11 +1145,11 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $measure->elements[] = $direction;
             }
         }
-        
-        if ($this->hasMessage($channelId, $measureIndex)) 
+
+        if ($this->hasMessage($channelId, $measureIndex))
         {
             // begin add note
-            
+
             $noteMessages = MusicXMLUtil::getNotes($midiEventMessages);
             if(!empty($noteMessages)) {
                 if($channelId != 10)
@@ -1146,9 +1162,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                             {
                                 continue;
                             }
-                            if($message1['abstime'] == $message2['abstime'] 
-                                && isset($message1['duration']) && isset($message2['duration']) 
-                                && $message1['duration'] == $message2['duration'] 
+                            if($message1['abstime'] == $message2['abstime']
+                                && isset($message1['duration']) && isset($message2['duration'])
+                                && $message1['duration'] == $message2['duration']
                                 && $message1['event'] == 'On' && $message2['event'] == 'On'
                             )
                             {
@@ -1161,12 +1177,12 @@ class MusicXMLFromMidi extends MusicXMLBase
                                 {
                                     $noteMessages[$idx1]['chord'] = true;
                                 }
-                                
+
                             }
                         }
                     }
                 }
-                
+
                 $measureContainer = $this->addMeasureElement($measureIndex, $measure, $noteMessages, $channelId, $divisions, $timebase);
 
                 // add element index to $noteMessages
@@ -1174,9 +1190,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $noteMessages = $measureContainer->getNoteMessages();
             }
             // end add note
-            
-            
-            if (!empty($controlEvents)) 
+
+
+            if (!empty($controlEvents))
             {
                 $pbIndexes = array();
                 foreach ($controlEvents as $message) //NOSONAR
@@ -1188,18 +1204,18 @@ class MusicXMLFromMidi extends MusicXMLBase
                         {
                             $pbIndexes[] = array($idx, $message['value']);
                         }
-                    }                
+                    }
                 }
-                
+
                 // pre bend
-                
+
                 foreach($pbIndexes as $idx=>$pitchBend)
                 {
                     $elementIndex = MusicXMLUtil::getElementIndexFromNoteIndex($noteMessages);
-                    if($elementIndex !== false 
-                        && $measure->elements[$elementIndex] instanceof Note 
-                        && isset($measure->elements[$elementIndex]->notations) 
-                        && is_array(isset($measure->elements[$elementIndex]->notations)) 
+                    if($elementIndex !== false
+                        && $measure->elements[$elementIndex] instanceof Note
+                        && isset($measure->elements[$elementIndex]->notations)
+                        && is_array(isset($measure->elements[$elementIndex]->notations))
                         && !empty(isset($measure->elements[$elementIndex]->notations)))
                     {
                         $bend = $this->getBend($pitchBend[0]);
@@ -1214,9 +1230,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                             $measure->elements[$elementIndex]->notations[0]->technical[0] = $technical;
                         }
                     }
-                }                
+                }
             }
-            
+
             // set beam if any
             $beams = MusicXMLUtil::getBeams($noteMessages, $timebase, $this->timeSignature);
             if($beams !== false)
@@ -1229,8 +1245,8 @@ class MusicXMLFromMidi extends MusicXMLBase
                     }
                 }
             }
-        }    
-        
+        }
+
         return $measure;
     }
 
@@ -1254,6 +1270,27 @@ class MusicXMLFromMidi extends MusicXMLBase
         $end = 0;
         $max = $timebase * $this->timeSignature->getBeats();
 
+        // Check if there is a continued tie from the previous measure for this part
+        if (isset($this->tieContinue[$channelId]) && $this->tieContinue[$channelId]['duration'] > 0) {
+            $continuedTie = $this->tieContinue[$channelId];
+            $note = $continuedTie['note'];
+            $remainingDuration = $continuedTie['duration'];
+
+            // Create the continuation of the tied note
+            $note->unsetTextContent(); // Important: remove previous text content if any
+            $note->pitch = $this->getPitch($continuedTie['note_code']);
+            $note->notations = array($this->getNotation());
+            $note->notations[0]->tied = new \MusicXML\Model\Tied(array('type'=>'stop'));
+            $note->tie = new \MusicXML\Model\Tie(array('type'=>'stop'));
+
+            $measure->elements[] = $note; // Add the tied note first
+            $lastEnd = $remainingDuration; // The measure effectively starts after this tied note ends
+
+            // Reset the continuation flag
+            unset($this->tieContinue[$channelId]);
+        }
+
+
         // before add current note, if this measure has tie stop, create it first
         if(isset($this->tieStop[$measureIndex]))
         {
@@ -1262,7 +1299,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 // add tie note
                 $measure->elements[] = $tieStop->getNote();
             }
-        }      
+        }
 
         foreach ($noteMessages as $idx => $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
@@ -1273,7 +1310,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     if ($mod > 0) {
                         // add rest at the beginning
                         $noteRest = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
-                        
+
                         // add rest note
                         $measure->elements[] = $noteRest;
 
@@ -1291,7 +1328,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     // add rest at the middle
                     $mod = $offset - $lastEnd;
                     $noteRest = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
-                    
+
                     // add rest note
                     $measure->elements[] = $noteRest;
                 }
@@ -1301,42 +1338,29 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
 
                 $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);
-                
+
                 if(isset($message['chord']) && $message['chord'] === true)
                 {
                     $note->chord = new Chord();
                 }
 
                 $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());
-                
-                $tend = $toffset + $duration;
-                if($tend > $max)
-                {
-                    $originalDuration = $note->duration->textContent;
-                    $note = $this->trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max);
-                    $remaining = $originalDuration - $note->duration->textContent;
-                    
-                    $tieRange = $remaining / $this->timeSignature->getBeats();
 
-                    $durationRemaining = $remaining % ($divisions * $this->timeSignature->getBeats());
-                    if($durationRemaining != 0)
-                    {
-                        $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions);
-                    }
-                    else
-                    {
-                        $nextMeasureIndex = $measureIndex + ceil($tieRange/$divisions) - 1;
-                        $durationRemaining = ($remaining % ($divisions * $this->timeSignature->getBeats())) + ($divisions * $this->timeSignature->getBeats());
-                    }
-                    
-                    if(!isset($this->tieStop[$nextMeasureIndex]))
-                    {
-                        $this->tieStop[$nextMeasureIndex] = array();
-                    }
-                    $timeRemaining = $message['duration'] - ($duration * $divisions / $timebase);
-                    
-                    $this->tieStop[$nextMeasureIndex][] = new TieStop($nextMeasureIndex, $measureIndex, $note, $tieRange, $durationRemaining, $timeRemaining, $divisions);
-                }             
+                $tend = $toffset + $duration;
+                if ($tend > $max) {
+                    $durationInMeasure = $max - $toffset;
+                    $remainingDuration = $tend - $max;
+
+                    // Trim the current note
+                    $note = $this->trimNoteDuration($note, $durationInMeasure, $divisions, $timebase);
+
+                    // Store info for the next measure
+                    $this->tieContinue[$channelId] = array(
+                        'note' => new Note(), // We'll build the note in the next measure
+                        'note_code' => $message['note'],
+                        'duration' => $remainingDuration
+                    );
+                }
 
                 // add note
                 $measure->elements[] = $note;
@@ -1361,27 +1385,21 @@ class MusicXMLFromMidi extends MusicXMLBase
      * Trim note duration
      *
      * @param Note $note
-     * @param integer $toffset Offset of note
+     * @param integer $newRawDuration New duration in MIDI ticks
      * @param integer $divisions
      * @param integer $timebase
-     * @param integer $duration Original duration
-     * @param integer $tend Actual time end of note
-     * @param integer $max Maximum time of measure
      * @return Note
      */
-    private function trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max)
+    private function trimNoteDuration($note, $newRawDuration, $divisions, $timebase)
     {
-        $newDuration = $max - $toffset;      
-        while($newDuration < 0)
-        {
-            $newDuration += $timebase;
-        }
-        if($duration > 0)
-        {
-            $newDuration = $this->fixDuration($newDuration, $divisions, $timebase);
-            $note->duration = new Duration($newDuration);                                
-            $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
-            $note->release = $note->attack + $newDuration;
+        if ($newRawDuration > 0) {
+            $musicXMLDuration = $this->fixDuration($newRawDuration, $divisions, $timebase);
+            if ($musicXMLDuration == 0 && $newRawDuration > 0) {
+                $musicXMLDuration = 1; // Smallest possible duration
+            }
+            $note->duration = new Duration($musicXMLDuration);
+            $note->type = new Type(MusicXMLUtil::getNoteType($musicXMLDuration, $divisions));
+            $note->release = $note->attack + $newRawDuration;
             $tie = new Tie();
             $tie->type = 'start';
             $tied = new Tied();
@@ -1410,7 +1428,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $note->rest = $rest;
         $duration = $this->fixDuration($duration, $divisions, $timebase);
         $note->duration = new Duration($duration);
-        $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));    
+        $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));
         if($begining)
         {
             $note->attack = 0;
@@ -1440,7 +1458,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     {
         $noteCode = $message['note'];
         $note = new Note();
-            
+
         $note->voice = $channelId;
 
         $note->dynamics = round($message['value'] / 0.9, 2);
@@ -1464,14 +1482,14 @@ class MusicXMLFromMidi extends MusicXMLBase
         $note->stem = 'up';
         $note->notations = array($this->getNotation());
         $duration = $this->fixDuration($originalDuration, $divisions, $timebase);
-        $note->duration = new Duration($duration);                          
-        $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));            
-        
+        $note->duration = new Duration($duration);
+        $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));
+
         $attackRelease = MusicXMLUtil::getAttackRelease($measureIndex, $message, $timebase, $this->timeSignature, $duration);
         $note->attack = $attackRelease->getAttack();
         $note->release = $attackRelease->getRelease();
 
         return $note;
     }
-    
+
 }
