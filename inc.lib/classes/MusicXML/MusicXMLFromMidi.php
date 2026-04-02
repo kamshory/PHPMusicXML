@@ -36,7 +36,6 @@ use MusicXML\Model\Volume;
 use MusicXML\Properties\MeasureDivision;
 use MusicXML\Properties\MeasurePartwiseContainer;
 use MusicXML\Properties\MidiEvent;
-use MusicXML\Properties\TieStop;
 use MusicXML\Properties\TimeSignature;
 use MusicXML\Util\MXL;
 
@@ -273,7 +272,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         $rawtime = $message[0];
         $tm = $message[0] / ($this->timeSignature->getBeats() * $timebase);
-        $tmInteger = floor($tm);
+        $tmInteger = (int) floor($tm);
         if($this->maxMeasure < $tmInteger)
         {
             $this->maxMeasure = $tmInteger;
