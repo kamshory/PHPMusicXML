@@ -15,15 +15,36 @@ function fileExtension($name)
 
 $fileList = array();
 
-$directory = __DIR__ . "/test-files";
-$items = glob($directory . '/*');
-foreach ($items as $item) {
-    if (is_file($item)) {
-        $fileList[] = $item;
+// Command-line usage:
+// php convert.php input.mid            -> output: input.xml
+// php convert.php input.mid output.xml -> output file explicitly
+// php convert.php --dir=test-files     -> convert all .mid files in folder
+$input = isset($argv[1]) ? $argv[1] : null;
+$output = isset($argv[2]) ? $argv[2] : null;
+
+if ($input && strpos($input, '--dir=') === 0) {
+    $directory = substr($input, 6);
+    if (!is_dir($directory)) {
+        fwrite(STDERR, "Directory not found: $directory\n");
+        exit(1);
+    }
+    $items = glob(rtrim($directory, '/\\') . '/*.mid');
+    foreach ($items as $item) {
+        if (is_file($item)) {
+            $fileList[] = $item;
+        }
+    }
+} elseif ($input && strtolower(pathinfo($input, PATHINFO_EXTENSION)) === 'mid') {
+    $fileList[] = $input;
+} else {
+    $directory = __DIR__ . "/test-files";
+    $items = glob($directory . '/*.mid');
+    foreach ($items as $item) {
+        if (is_file($item)) {
+            $fileList[] = $item;
+        }
     }
 }
-
-$fileList = array(__DIR__."/test-files/test-4.mid");
 
 // Create a single instance of the converter
 $musicXMLConverter = new MusicXMLFromMidi();
@@ -34,20 +55,20 @@ foreach ($fileList as $file) {
     if (strtolower(fileExtension($file)) == 'mid') {
         try {
             $source = $file;
-            $result = str_replace(".mid", ".xml", $source);
-            echo "Convert file $source\r\n";
+            if ($output) {
+                $result = $output;
+            } else {
+                $result = preg_replace('/\.mid$/i', '.xml', $source);
+            }
+            echo "Convert file $source -> $result\n";
+
             $midi = $musicXMLConverter->loadMidi($source); // This returns a MidiMeasure object
-            $xml = $musicXMLConverter->midiToMusicXml($midi, "Online", "4.0", MXL::FORMAT_XML);
+            $xml = $musicXMLConverter->midiToMusicXml($midi, basename($source, '.mid'), '4.0', MXL::FORMAT_XML);
 
-            // To create a compressed .mxl file, you can use:
-            // $mxl = new MXL();
-            // file_put_contents(str_replace(".mid", ".mxl", $source), $mxl->xmlToMxl("Online", $xml));
-
-            //uncompressed version
-            echo $result."\r\n";
             file_put_contents($result, $xml);
         } catch (Exception $e) {
-            echo $e->getMessage();
+            echo "Error converting $file: " . $e->getMessage() . "\n";
         }
     }
 }
+

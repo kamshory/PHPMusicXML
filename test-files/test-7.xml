@@ -2,13 +2,13 @@
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="4.0">
   <work>
-    <work-title>Online</work-title>
+    <work-title>test-7</work-title>
   </work>
   <identification>
     <rights type="music"></rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-27</encoding-date>
+      <encoding-date>2026-04-02</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" type="no" attribute="new-page"/>
@@ -107,7 +107,7 @@
           </articulations>
         </notations>
       </note>
-      <note attack="10" dynamics="141.11" release="13">
+      <note attack="10" dynamics="141.11" release="730">
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -134,6 +134,20 @@
       <attributes>
         <divisions>2</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
       <note attack="12" dynamics="141.11" release="13">
         <pitch>
           <step>D</step>
@@ -238,14 +252,14 @@
           </articulations>
         </notations>
       </note>
-      <note attack="26" dynamics="141.11" release="27">
+      <note attack="26" dynamics="141.11" release="266">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
         <duration>1</duration>
         <tie type="start"/>
-        <type>quarter</type>
+        <type>16th</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -268,10 +282,12 @@
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>4</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
+          <articulations>
+            <staccato/>
+          </articulations>
         </notations>
       </note>
       <note attack="0" release="5">
@@ -318,18 +334,6 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
-      <note>
-        <pitch>
-          <step>F</step>
-          <alter>1</alter>
-          <octave>3</octave>
-        </pitch>
-        <duration>3</duration>
-        <tie type="stop"/>
-        <notations>
-          <tied type="stop"/>
-        </notations>
-      </note>
       <note attack="36" dynamics="141.11" release="37">
         <pitch>
           <step>A</step>
@@ -387,7 +391,7 @@
           </articulations>
         </notations>
       </note>
-      <note attack="50" dynamics="141.11" release="51">
+      <note attack="50" dynamics="141.11" release="290">
         <pitch>
           <step>A</step>
           <alter>1</alter>
@@ -395,7 +399,7 @@
         </pitch>
         <duration>1</duration>
         <tie type="start"/>
-        <type>whole</type>
+        <type>eighth</type>
         <accidental>sharp</accidental>
         <notations>
           <tied type="start"/>
@@ -414,6 +418,20 @@
       <attributes>
         <divisions>1</divisions>
       </attributes>
+      <note>
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <tie type="stop"/>
+        <notations>
+          <tied type="stop"/>
+          <articulations>
+            <staccato/>
+          </articulations>
+        </notations>
+      </note>
     </measure>
   </part>
 </score-partwise>
