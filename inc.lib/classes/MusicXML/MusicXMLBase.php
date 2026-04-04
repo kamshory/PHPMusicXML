@@ -41,6 +41,18 @@ use MusicXML\Model\Time;
 use MusicXML\Model\Volume;
 use MusicXML\Properties\TimeSignature;
 
+/**
+ * Base class for building MusicXML documents.
+ *
+ * Provides helper methods for:
+ * - Duration conversion
+ * - XML document creation
+ * - MusicXML model construction (pitch, key, time, instruments, etc.)
+ * - Metadata (identification, encoding)
+ *
+ * This class is intended to be extended by concrete converters
+ * such as MIDI-to-MusicXML or other formats.
+ */
 abstract class MusicXMLBase
 {
     const XML_VERSION = "1.0";
@@ -53,82 +65,83 @@ abstract class MusicXMLBase
     const ENCODING_DESCRIPTION = "This software is not ready for production yet";
 
     /**
-     * Fix duration
-     * Convert MIDI duration (ticks) to MusicXML divisions using proper integer arithmetic
-     * to avoid rounding errors when notes span multiple measures
+     * Convert MIDI duration (ticks) to MusicXML duration (divisions).
      *
-     * @param integer $duration
-     * @param integer $divisions
-     * @param integer $timebase
-     * @param TimeSignature $timeSignature
-     * @return integer
+     * Uses integer-safe calculation to avoid floating point drift,
+     * especially for notes spanning multiple measures.
+     *
+     * @param int $duration   Duration in MIDI ticks
+     * @param int $divisions  Divisions per quarter note (MusicXML)
+     * @param int $timebase   MIDI ticks per quarter note
+     * @return int            Duration in MusicXML divisions
      */
     public function fixDuration($duration, $divisions, $timebase)
     {
-        // Use integer division: multiply first to maintain precision, then divide
         return (int) round($duration * $divisions / $timebase);
     }
-    
+
+    /**
+     * Calculate duration (alternative method)
+     *
+     * @param int $duration0  Durasi dasar (biasanya dalam beat/quarter)
+     * @param int $divisions  Nilai divisions MusicXML
+     * @param int $timebase   Resolusi tick MIDI
+     * @return float|int      Durasi hasil perhitungan (dibatasi maksimal)
+     */
     public function calculateDuration($duration0, $divisions, $timebase)
     {
         $duration = $divisions * $duration0 * $timebase / 4;
-        if($duration > $divisions * 16)
-        {
+        if ($duration > $divisions * 16) {
             $duration = $divisions * 16;
         }
         return $duration;
     }
-    
+
     /**
-     * Get notation
+     * Get default notation (staccato)
      *
-     * @return Notations
+     * @return Notations  Objek notasi default dengan articulations (staccato)
      */
     public function getNotation()
     {
         $notations = new Notations();
         $articulation = new Articulations();
-        $articulation->staccato = array(new Staccato());
+        $articulation->staccato = [new Staccato()];
         $notations->articulations = $articulation;
         return $notations;
     }
 
-    
     /**
-     * Initialize array
+     * Initialize array jika null
      *
-     * @param array|null
-     * @return array
+     * @param array|null $initialValue Nilai awal array (bisa null)
+     * @return array                  Array kosong jika null, atau nilai asli
      */
     public function initializeArray($initialValue)
     {
-        if(!isset($initialValue))
-        {
-            return array();
-        }
-        return $initialValue;
+        return isset($initialValue) ? $initialValue : [];
     }
-    
+
     /**
-     * Get time
+     * Get time signature dalam format MusicXML
      *
-     * @param TimeSignature $timeSignature
-     * @return Time
+     * @param TimeSignature $timeSignature Objek time signature (beats & beat-type)
+     * @return Time                        Objek Time untuk MusicXML
      */
     public function getTime($timeSignature)
     {
         $time = new Time();
-        $time->beats = array(new Beats($timeSignature->getBeats()));
-        $time->beatType = array(new BeatType($timeSignature->getBeatType()));
+        $time->beats = [new Beats($timeSignature->getBeats())];
+        $time->beatType = [new BeatType($timeSignature->getBeatType())];
         return $time;
     }
-    
+
     /**
-     * Get key
+     * Get key signature
      *
-     * @param integer $fifths
-     * @param integer $mode
-     * @return Key
+     * @param int $fifths  Jumlah sharps/flats (misalnya: 0 = C, 1 = G, -1 = F)
+     * @param int $mode    Mode tangga nada (0 = major, 1 = minor)
+     * @return Key         Objek Key MusicXML
      */
     public function getKey($fifths, $mode)
     {
@@ -141,9 +154,9 @@ abstract class MusicXMLBase
     /**
      * Get MIDI device
      *
-     * @param integer $midiId
-     * @param integer $port
-     * @return MidiDevice
+     * @param int $midiId  ID perangkat MIDI
+     * @param int $port    Port MIDI
+     * @return MidiDevice  Objek MidiDevice
      */
     protected function getMidiDevice($midiId, $port)
     {
@@ -154,9 +167,12 @@ abstract class MusicXMLBase
     }
 
     /**
-     * Get score instrument
+     * Get score instrument (informasi instrumen)
      *
-     * @return ScoreInstrument
+     * @param string $instrumentId    ID unik instrumen
+     * @param string $instrumentName  Nama instrumen (misalnya Piano)
+     * @param string $instrumentSound Nama sound (MusicXML sound id)
+     * @return ScoreInstrument        Objek ScoreInstrument
      */
     protected function getScoreInstrument($instrumentId, $instrumentName, $instrumentSound)
     {
@@ -168,9 +184,14 @@ abstract class MusicXMLBase
     }
 
     /**
-     * Get score instrument
+     * Get MIDI instrument
      *
-     * @return MidiInstrument
+     * @param int $midiChannel    Channel MIDI (0–15)
+     * @param string $instrumentId ID instrumen
+     * @param int $midiProgramId  Program MIDI (1–128)
+     * @param float $volume       Volume (0–100)
+     * @param float $pan          Pan (-90 sampai 90)
+     * @return MidiInstrument     Objek MidiInstrument
      */
     protected function getMidiInstrument($midiChannel, $instrumentId, $midiProgramId, $volume = 100, $pan = 0)
     {
@@ -178,10 +199,11 @@ abstract class MusicXMLBase
         $midiInstrument->id = $instrumentId;
         $midiInstrument->midiChannel = new MidiChannel($midiChannel);
         $midiInstrument->midiProgram = new MidiProgram($midiProgramId);
-        if($volume > 100)
-        {
+
+        if ($volume > 100) {
             $volume = 100;
         }
+
         $midiInstrument->volume = new Volume($volume);
         $midiInstrument->pan = new Pan($pan);
         return $midiInstrument;
@@ -190,13 +212,13 @@ abstract class MusicXMLBase
     /**
      * Get score part
      *
-     * @param string $partId
-     * @param string $partName
-     * @param string $partAbbreviation
-     * @param ScoreInstrument $scoreInstrument
-     * @param MidiInstrument $midiInstrument
-     * @param MidiDevice $midiDevice
-     * @return ScorePart
+     * @param string $partId            ID part (misal: P1)
+     * @param string $partName          Nama part
+     * @param string $partAbbreviation  Singkatan part
+     * @param ScoreInstrument $scoreInstrument  Informasi instrumen
+     * @param MidiInstrument $midiInstrument    Informasi MIDI
+     * @param MidiDevice $midiDevice            Perangkat MIDI
+     * @return ScorePart                Objek ScorePart lengkap
      */
     public function getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice)
     {
@@ -204,66 +226,75 @@ abstract class MusicXMLBase
         $scorePart->id = $partId;
         $scorePart->partName = new PartName($partName);
         $scorePart->partAbbreviation = new PartAbbreviation($partAbbreviation);
-        $scorePart->scoreInstrument = array($scoreInstrument);
-        $scorePart->midiInstrument = array($midiInstrument);
-        $scorePart->midiDevice = array($midiDevice);
+        $scorePart->scoreInstrument = [$scoreInstrument];
+        $scorePart->midiInstrument = [$midiInstrument];
+        $scorePart->midiDevice = [$midiDevice];
         return $scorePart;
     }
-    
+
     /**
-     * Create new DOMDocument for MusicXML version 4.0
+     * Create DOMDocument untuk MusicXML
      *
-     * @return DOMDocument
+     * @return DOMDocument  Dokumen XML siap pakai (dengan DOCTYPE MusicXML)
      */
     public function getDOMDocument()
     {
         $domdoc = new DOMDocument();
         $domdoc->xmlVersion = self::XML_VERSION;
         $domdoc->encoding = self::XML_ENCODING;
+
         $implementation = new DOMImplementation();
-        $domdoc->appendChild($implementation->createDocumentType(self::DOCUMENT_ID, self::PUBLIC_ID, self::SYSTEM_ID));
+        $domdoc->appendChild(
+            $implementation->createDocumentType(
+                self::DOCUMENT_ID,
+                self::PUBLIC_ID,
+                self::SYSTEM_ID
+            )
+        );
+
         $domdoc->preserveWhiteSpace = false;
         $domdoc->formatOutput = true;
+
         return $domdoc;
     }
 
     /**
-     * Get picth from note
+     * Convert MIDI note number to MusicXML Pitch object.
      *
-     * @param integer $note
+     * @param int $note MIDI note number (0–127)
      * @return Pitch
      */
     protected function getPitch($note)
     {
         $pitchStr = MusicXMLInstrument::NOTE_LIST[$note];
+
         $pitch = new Pitch();
+
         $step = new Step();
         $step->textContent = preg_replace("/[^A-G]/", "", $pitchStr);
         $pitch->step = $step;
-        
-        $octaveStr = (preg_replace("/[^\-\d]/", "", $pitchStr));
-        if(empty($octaveStr))
-        {
+
+        $octaveStr = preg_replace("/[^\-\d]/", "", $pitchStr);
+        if (empty($octaveStr)) {
             $octaveStr = "0";
         }
-        $pitch->octave = new Octave(intval($octaveStr));
+
+        $pitch->octave = new Octave((int) $octaveStr);
+
         if (strpos($pitchStr, 's') !== false) {
             $alter = new Alter();
             $alter->textContent = 1;
             $pitch->alter = $alter;
         }
-        if($pitch->step == 'B' && $pitch->octave->textContent == -1)
-        {
-            echo "NOTE = $note; PITH = ".$pitch."\r\n";
-        }
+
         return $pitch;
     }
-    
+
     /**
-     * Get identification
+     * Get identification metadata MusicXML
      *
-     * @param string $copyright
-     * @return Identification
+     * @param string $copyright  Teks hak cipta
+     * @return Identification    Objek Identification lengkap
      */
     public function getIdentification($copyright = "")
     {
@@ -272,29 +303,36 @@ abstract class MusicXMLBase
         $rights = new Rights();
         $rights->textContent = $copyright;
         $rights->type = 'music';
-        
-        $identification->rights = array($rights);
+
+        $identification->rights = [$rights];
 
         $encoding = new Encoding();
-        $encoding->encodingDate = array(new EncodingDate(new DateTime()));
-        $encoding->software = array(new Software(self::SOFTWARE_NAME));
-        $encoding->encoder = array(new Encoder('music'));
-        $encoding->encodingDescription = array(new EncodingDescription(self::ENCODING_DESCRIPTION));
+        $encoding->encodingDate = [new EncodingDate(new DateTime())];
+        $encoding->software = [new Software(self::SOFTWARE_NAME)];
+        $encoding->encoder = [new Encoder('music')];
+        $encoding->encodingDescription = [new EncodingDescription(self::ENCODING_DESCRIPTION)];
 
-        $support = array();
-        $support[] = new Supports(array('element' => 'accidental', 'type' => 'yes'));
-        $support[] = new Supports(array('element' => 'beam', 'type' => 'yes'));
-        $support[] = new Supports(array('element' => 'print', 'attribute' => 'new-page', 'type' => 'no'));
-        $support[] = new Supports(array('element' => 'print', 'attribute' => 'new-system', 'type' => 'no'));
-        $support[] = new Supports(array('element' => 'stem', 'type' => 'yes'));
+        $encoding->supports = [
+            new Supports(['element' => 'accidental', 'type' => 'yes']),
+            new Supports(['element' => 'beam', 'type' => 'yes']),
+            new Supports(['element' => 'print', 'attribute' => 'new-page', 'type' => 'no']),
+            new Supports(['element' => 'print', 'attribute' => 'new-system', 'type' => 'no']),
+            new Supports(['element' => 'stem', 'type' => 'yes']),
+        ];
 
-        $encoding->supports = $support;
         $identification->encoding = $encoding;
 
         return $identification;
     }
-    
 
+    /**
+     * Get instrument sound (auto detect)
+     *
+     * @param int $channelId       Channel MIDI
+     * @param int $programId       Program MIDI
+     * @param string $instrumentName Nama instrumen
+     * @return string|null         Nama sound MusicXML jika ditemukan
+     */
     public function getIsntrumentSound($channelId, $programId, $instrumentName)
     {
         $array = explode(" ", strtolower($instrumentName));
@@ -302,64 +340,61 @@ abstract class MusicXMLBase
     }
 
     /**
-     * Check instrument name
+     * Match nama instrumen terhadap daftar referensi
      *
-     * @param array $explodedName
-     * @param integer $channelId
-     * @param integer $programId
-     * @param string $instrumentName
-     * @return string|null
+     * @param array $explodedName   Nama instrumen yang sudah di-split
+     * @param int $channelId        Channel MIDI
+     * @param int $programId        Program MIDI
+     * @param string $instrumentName Nama asli instrumen
+     * @return string|null          Hasil match terbaik atau null
      */
     protected function match1($explodedName, $channelId, $programId, $instrumentName)
     {
-        $found = array();
-        foreach($explodedName as $search)
-        {
-            foreach(MusicXMLInstrument::INSTRUMENT_LIST as $index=>$chk)
-            {
+        $found = [];
+
+        foreach ($explodedName as $search) {
+            foreach (MusicXMLInstrument::INSTRUMENT_LIST as $index => $chk) {
                 $chkArr = explode('.', $chk[0]);
-                if(in_array($search, $chkArr))
-                {
-                    echo "NAME = $instrumentName; SERACH = '$search', CHANNEL ID = $channelId, PROGRAM ID = $programId; $index; $chk \r\n";
-                    if(!isset($found[$chk]))
-                    {
-                        $found[$chk] = 1;
-                    }
-                    else
-                    {
-                        $found[$chk] ++;
+
+                if (in_array($search, $chkArr)) {
+                    if (!isset($found[$chk[0]])) {
+                        $found[$chk[0]] = 1;
+                    } else {
+                        $found[$chk[0]]++;
                     }
                 }
             }
         }
-        if(!empty($found))
-        {
+
+        if (!empty($found)) {
             arsort($found);
-            $keys = array_keys($found);
-            return $keys[0];
+            return array_keys($found)[0];
         }
+
         return null;
     }
-    
+
     /**
-     * Get bend
+     * Get pitch bend
      *
-     * @param integer $value
-     * @return Bend
+     * @param int $value     Nilai pitch bend (0–16383, default tengah 8192)
+     * @param bool $preBend  Apakah pre-bend (opsional)
+     * @param bool $release  Apakah release bend (opsional)
+     * @return Bend          Objek Bend MusicXML
      */
     protected function getBend($value, $preBend = false, $release = false)
     {
         $bend = new Bend();
-        $bend->bendAlter = round(($value-8192)*2/16383, 4);
-        if($preBend)
-        {
+        $bend->bendAlter = round(($value - 8192) * 2 / 16383, 4);
+
+        if ($preBend) {
             $bend->preBend = new PreBend();
         }
-        if($release)
-        {
+
+        if ($release) {
             $bend->release = new Release();
         }
+
         return $bend;
     }
-    
 }
