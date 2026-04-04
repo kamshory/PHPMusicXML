@@ -1302,6 +1302,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             $note->duration = new Duration($xmlDuration);
             $note->type = new Type(MusicXMLUtil::getNoteType($xmlDuration, $divisions));
             $note->attack = 0;
+            // Set release to match actual XML duration for consistent playback timing
             $note->release = $xmlDuration;
 
             $measure->elements[] = $note;
@@ -1392,6 +1393,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
     /**
      * Trim note duration
+     * Split note when it exceeds measure boundary, applying tie notation
      *
      * @param Note $note
      * @param integer $newRawDuration New duration in MIDI ticks
@@ -1408,7 +1410,8 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
             $note->duration = new Duration($musicXMLDuration);
             $note->type = new Type(MusicXMLUtil::getNoteType($musicXMLDuration, $divisions));
-            $note->release = $note->attack + $newRawDuration;
+            // Set release to match the actual XML duration, not the raw MIDI duration
+            $note->release = $note->attack + $musicXMLDuration;
             $tie = new Tie();
             $tie->type = 'start';
             $tied = new Tied();

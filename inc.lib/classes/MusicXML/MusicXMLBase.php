@@ -54,6 +54,8 @@ abstract class MusicXMLBase
 
     /**
      * Fix duration
+     * Convert MIDI duration (ticks) to MusicXML divisions using proper integer arithmetic
+     * to avoid rounding errors when notes span multiple measures
      *
      * @param integer $duration
      * @param integer $divisions
@@ -63,7 +65,8 @@ abstract class MusicXMLBase
      */
     public function fixDuration($duration, $divisions, $timebase)
     {
-        return round($duration * $divisions / $timebase);
+        // Use integer division: multiply first to maintain precision, then divide
+        return intval($duration * $divisions / $timebase);
     }
     
     public function calculateDuration($duration0, $divisions, $timebase)
