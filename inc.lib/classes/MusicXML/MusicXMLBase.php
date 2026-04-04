@@ -66,7 +66,7 @@ abstract class MusicXMLBase
     public function fixDuration($duration, $divisions, $timebase)
     {
         // Use integer division: multiply first to maintain precision, then divide
-        return intval($duration * $divisions / $timebase);
+        return (int) round($duration * $divisions / $timebase);
     }
     
     public function calculateDuration($duration0, $divisions, $timebase)
