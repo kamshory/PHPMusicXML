@@ -679,6 +679,11 @@ class MusicXMLFromMidi extends MusicXMLBase
                             if ($tag == 'CopyrightNotice') {
                                 $this->copyright = $txt;
                             }
+
+                            if ($tag == 'Lyric' || $tag == 'TextEvent') {
+                                // Kirim event ke addEvent agar disimpan dalam $this->lyrics
+                                $this->addEvent($msg[1], $msg, $timebase, $abstime, 0, 0);
+                            }
                         } else {
                             if ($mtype == 'TrkEnd') {
                                 $xml .= "<EndOfTrack/>\n";
@@ -864,8 +869,13 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $scorePartwise->partList->scorePart[] = $this->getScorePart($partId, $partName, $partAbbreviation, $scoreInstrument, $midiInstrument, $midiDevice);
             }
 
-            $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
-
+            if ($channelId == 10) {
+                $percussionClef = new \MusicXML\Model\Clef(array('sign' => new \MusicXML\Model\Sign('percussion')));
+                $this->clefs[$channelId] = array($percussionClef);
+            } else {
+                $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
+            }
+            
             // end add score part
             $partIndex++;
         }
@@ -939,21 +949,29 @@ class MusicXMLFromMidi extends MusicXMLBase
             $scoreInstrument = new ScoreInstrument();
             $midiInstrument = new MidiInstrument();
             $id = $partId . '-I' . $key;
+            $drumSound = 'percussion.drums'; // Default generic drum sound
             $scoreInstrument->id = $id;
             $midiCode = $value['note'] - 1;
-            if(isset(MusicXMLInstrument::DRUM_SET[$midiCode]) && isset(MusicXMLInstrument::DRUM_SET[$midiCode][0]))
+            
+            if (isset(MusicXMLInstrument::DRUM_SET[$midiCode])) 
             {
-                $scoreInstrument->instrumentName = new InstrumentName(MusicXMLInstrument::DRUM_SET[$midiCode][0]);
+                if (isset(MusicXMLInstrument::DRUM_SET[$midiCode][0])) {
+                    $scoreInstrument->instrumentName = new InstrumentName(MusicXMLInstrument::DRUM_SET[$midiCode][0]);
+                }
+                if (isset(MusicXMLInstrument::DRUM_SET[$midiCode][2])) {
+                    $drumSound = MusicXMLInstrument::DRUM_SET[$midiCode][2];
+                }
             }
-            else
+            
+            if (!isset($scoreInstrument->instrumentName))
             {
                 $scoreInstrument->instrumentName = new InstrumentName('Instrument ' . $key);
             }
-            $scoreInstrument->instrumentSound = new \MusicXML\Model\InstrumentSound('percussion.drums');
+            $scoreInstrument->instrumentSound = new \MusicXML\Model\InstrumentSound($drumSound);
             $midiInstrument->id = $id;
             $midiInstrument->midiChannel = new MidiChannel($channelId);
             $midiInstrument->midiProgram = new MidiProgram($programId);
-            $midiInstrument->midiUnpitched = new MidiUnpitched($key);
+            $midiInstrument->midiUnpitched = new MidiUnpitched($midiCode);
             $volume = isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0;
             if($volume > 100)
             {
@@ -1343,9 +1361,16 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note = $this->createSoundNote($measureIndex, $partId, $channelId, $message, $divisions, $timebase, $duration);
 
                 // Attach lyrics if available at this abstime
-                if (isset($this->lyrics[$channelId][$message['abstime']])) {
+                // Only attach lyrics to channel 4 to avoid overlapping across multiple channels/parts
+                $lyricText = null;
+                if ($channelId == 4) {
+                    // Cek lirik di channel nada saat ini atau channel 0 (global MIDI text)
+                    $lyricText = isset($this->lyrics[$channelId][$message['abstime']]) ? $this->lyrics[$channelId][$message['abstime']] : (isset($this->lyrics[0][$message['abstime']]) ? $this->lyrics[0][$message['abstime']] : null);
+                }
+                
+                if ($lyricText !== null) {
                     $lyric = new Lyric();
-                    $lyric->text = array(new TextElement($this->lyrics[$channelId][$message['abstime']]));
+                    $lyric->text = array(new TextElement($lyricText));
                     $note->lyric = array($lyric);
                 }
 
@@ -1465,7 +1490,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             // Pemetaan standar: Kick di F4, Snare di C5, Lainnya (Hi-hat/Cymbal) di G5
             $note->unpitched->displayStep = new DisplayStep(($noteCode == 35 || $noteCode == 36) ? 'F' : (($noteCode == 38 || $noteCode == 40) ? 'C' : 'G'));
             $note->unpitched->displayOctave = new DisplayOctave(($noteCode == 35 || $noteCode == 36) ? 4 : 5);
-            $note->instrument = new \MusicXML\Model\Instrument($partId . '-I' . ($noteCode + 1));
+            $note->instrument = new \MusicXML\Model\Instrument(array('id' => $partId . '-I' . ($noteCode + 1)));
         } else {
             $pitch = $this->getPitch($noteCode);
             $note->pitch = $pitch; // Pitched notes for non-percussion channels
