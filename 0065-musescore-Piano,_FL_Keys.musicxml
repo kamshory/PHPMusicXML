@@ -4,7 +4,7 @@
   <identification>
     <encoding>
       <software>MuseScore Studio 4.6.5</software>
-      <encoding-date>2026-04-04</encoding-date>
+      <encoding-date>2026-04-25</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="yes" value="yes"/>
@@ -75,7 +75,7 @@
         <instrument-name>Piano</instrument-name>
         <instrument-sound>keyboard.piano</instrument-sound>
         </score-instrument>
-      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-device id="P1-I1" port="2"></midi-device>
       <midi-instrument id="P1-I1">
         <midi-channel>4</midi-channel>
         <midi-program>1</midi-program>
@@ -175,18 +175,6 @@
           <syllabic>single</syllabic>
           <text>Di</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         </note>
       <note default-x="74.84" default-y="-50" dynamics="123.33">
         <pitch>
@@ -249,10 +237,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ge</text>
@@ -322,27 +306,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
+          <text>lam</text>
           </lyric>
         </note>
       <note default-x="106.33" default-y="-30" dynamics="120">
@@ -414,18 +378,6 @@
           <syllabic>single</syllabic>
           <text>ber</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
         </note>
       <note default-x="95.65" default-y="-25" dynamics="124.44">
         <pitch>
@@ -492,18 +444,6 @@
           <syllabic>single</syllabic>
           <text>tan</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.68" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
         </note>
       <note default-x="246.69" default-y="-25" dynamics="125.56">
         <pitch>
@@ -538,14 +478,14 @@
           </lyric>
         </note>
       </measure>
-    <measure number="9" width="216.91">
+    <measure number="9" width="216.85">
       <print new-system="yes">
         <system-layout>
           <system-margins>
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>85.08</system-distance>
+          <system-distance>85.42</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="124.44">
@@ -578,30 +518,10 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
+          <text>ya</text>
           </lyric>
         </note>
-      <note default-x="136.36" default-y="-30" dynamics="123.33">
+      <note default-x="136.33" default-y="-30" dynamics="123.33">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -610,27 +530,27 @@
         <tie type="stop"/>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="154.35" default-y="-25"/>
+        <dot default-x="154.33" default-y="-25"/>
         <stem>up</stem>
         <notations>
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="187.57" default-y="-20">
+      <note default-x="187.52" default-y="-20">
         <rest/>
         <duration>4</duration>
         <voice>1</voice>
         <type>eighth</type>
         </note>
       </measure>
-    <measure number="10" width="250.39">
+    <measure number="10" width="250.33">
       <note default-x="12.5" default-y="-20">
         <rest/>
         <duration>4</duration>
         <voice>1</voice>
         <type>eighth</type>
         </note>
-      <note default-x="39.43" default-y="-35" dynamics="120">
+      <note default-x="39.42" default-y="-35" dynamics="120">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -643,20 +563,8 @@
           <syllabic>single</syllabic>
           <text>Di</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         </note>
-      <note default-x="73.38" default-y="-35" dynamics="124.44">
+      <note default-x="73.37" default-y="-35" dynamics="124.44">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -672,7 +580,7 @@
           <text>ngin</text>
           </lyric>
         </note>
-      <note default-x="113.18" default-y="-35" dynamics="122.22">
+      <note default-x="113.17" default-y="-35" dynamics="122.22">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -687,7 +595,7 @@
           <text>nya</text>
           </lyric>
         </note>
-      <note default-x="140.11" default-y="-30" dynamics="124.44">
+      <note default-x="140.08" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -707,7 +615,7 @@
           <text>a</text>
           </lyric>
         </note>
-      <note default-x="158.07" default-y="-30" dynamics="124.44">
+      <note default-x="158.03" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -721,7 +629,7 @@
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="197.38" default-y="-30" dynamics="124.44">
+      <note default-x="197.34" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -730,7 +638,7 @@
         <duration>12</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="215.37" default-y="-25"/>
+        <dot default-x="215.34" default-y="-25"/>
         <accidental>sharp</accidental>
         <stem>up</stem>
         <notations>
@@ -742,21 +650,9 @@
           <syllabic>single</syllabic>
           <text>ngin</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
         </note>
       </measure>
-    <measure number="11" width="273.97">
+    <measure number="11" width="274.13">
       <note default-x="17.12" default-y="-20" dynamics="123.33">
         <pitch>
           <step>B</step>
@@ -805,18 +701,6 @@
           <syllabic>single</syllabic>
           <text>suk</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
         </note>
       <note default-x="116.76" default-y="-45" dynamics="122.22">
         <pitch>
@@ -852,7 +736,7 @@
           <text>ga</text>
           </lyric>
         </note>
-      <note default-x="188.01" default-y="-35" dynamics="123.33">
+      <note default-x="188" default-y="-35" dynamics="123.33">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -866,7 +750,7 @@
           <text>tu</text>
           </lyric>
         </note>
-      <note default-x="220.96" default-y="-50" dynamics="122.22">
+      <note default-x="221.14" default-y="-50" dynamics="122.22">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -874,22 +758,20 @@
         <duration>12</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="238.95" default-y="-45"/>
+        <dot default-x="239.14" default-y="-45"/>
         <stem>up</stem>
         <notations>
           <articulations>
             <staccato default-x="4.93" default-y="-59.3"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-55.32" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lang
-</text>
-          <text></text>
+          <text>lang</text>
           </lyric>
         </note>
       </measure>
-    <measure number="12" width="321.16">
+    <measure number="12" width="321.11">
       <note default-x="12.5" default-y="-55" dynamics="125.56">
         <pitch>
           <step>B</step>
@@ -936,18 +818,6 @@
           <syllabic>single</syllabic>
           <text>meng</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
         </note>
       <note default-x="111.33" default-y="-45" dynamics="124.44">
         <pitch>
@@ -985,7 +855,7 @@
           <text>gil</text>
           </lyric>
         </note>
-      <note default-x="167.73" default-y="-45" dynamics="124.44">
+      <note default-x="167.71" default-y="-45" dynamics="124.44">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -1001,7 +871,7 @@
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="185.68" default-y="-45" dynamics="122.22">
+      <note default-x="185.66" default-y="-45" dynamics="122.22">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -1017,7 +887,7 @@
           <text>da</text>
           </lyric>
         </note>
-      <note default-x="217.01" default-y="-40" dynamics="122.22">
+      <note default-x="216.99" default-y="-40" dynamics="122.22">
         <pitch>
           <step>E</step>
           <alter>-1</alter>
@@ -1033,7 +903,7 @@
           <text>lam</text>
           </lyric>
         </note>
-      <note default-x="257.41" default-y="-40" dynamics="125.56">
+      <note default-x="257.36" default-y="-40" dynamics="125.56">
         <pitch>
           <step>E</step>
           <alter>-1</alter>
@@ -1042,7 +912,7 @@
         <duration>3</duration>
         <voice>1</voice>
         <type>16th</type>
-        <dot default-x="275.4" default-y="-35"/>
+        <dot default-x="275.36" default-y="-35"/>
         <stem>up</stem>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
@@ -1051,7 +921,7 @@
           <text>ke</text>
           </lyric>
         </note>
-      <note default-x="291.36" default-y="-45" dynamics="124.44">
+      <note default-x="291.31" default-y="-45" dynamics="124.44">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -1135,10 +1005,6 @@
           <syllabic>single</syllabic>
           <text>a</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
         </note>
       <note default-x="148.72" default-y="-40" dynamics="123.33">
         <pitch>
@@ -1187,13 +1053,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-54.28" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>an</text>
           </lyric>
         </note>
       <note default-x="237.64" default-y="-45" dynamics="122.22">
@@ -1246,34 +1108,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>up</stem>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ku</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Ku</text>
@@ -1344,26 +1178,6 @@
           <syllabic>single</syllabic>
           <text>la</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
         </note>
       <note default-x="240.13" default-y="-50" dynamics="123.33">
         <pitch>
@@ -1429,51 +1243,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-54.28" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
+          <text>lam</text>
           </lyric>
         </note>
       <note default-x="123.07" default-y="-30" dynamics="120">
@@ -1498,14 +1268,14 @@
         <type>eighth</type>
         </note>
       </measure>
-    <measure number="17" width="367.23">
+    <measure number="17" width="367.28">
       <print new-system="yes">
         <system-layout>
           <system-margins>
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>85.08</system-distance>
+          <system-distance>85.42</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="124.44">
@@ -1554,36 +1324,8 @@
           <syllabic>single</syllabic>
           <text>tu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
         </note>
-      <note default-x="139.49" default-y="-25" dynamics="124.44">
+      <note default-x="139.5" default-y="-25" dynamics="124.44">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -1599,7 +1341,7 @@
           <text>bin</text>
           </lyric>
         </note>
-      <note default-x="178.28" default-y="-25" dynamics="124.44">
+      <note default-x="178.29" default-y="-25" dynamics="124.44">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -1608,7 +1350,7 @@
         <tie type="start"/>
         <voice>1</voice>
         <type>eighth</type>
-        <dot default-x="196.28" default-y="-25"/>
+        <dot default-x="196.29" default-y="-25"/>
         <stem>up</stem>
         <beam number="1">end</beam>
         <notations>
@@ -1619,7 +1361,7 @@
           <text>tang</text>
           </lyric>
         </note>
-      <note default-x="214.56" default-y="-25" dynamics="124.44">
+      <note default-x="214.59" default-y="-25" dynamics="124.44">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -1635,7 +1377,7 @@
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="233.64" default-y="-25" dynamics="122.22">
+      <note default-x="233.67" default-y="-25" dynamics="122.22">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -1651,7 +1393,7 @@
           <text>se</text>
           </lyric>
         </note>
-      <note default-x="260.76" default-y="-20" dynamics="123.33">
+      <note default-x="260.79" default-y="-20" dynamics="123.33">
         <pitch>
           <step>B</step>
           <alter>-1</alter>
@@ -1666,28 +1408,8 @@
           <syllabic>single</syllabic>
           <text>ba</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ba</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ba</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ba</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ba</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ba</text>
-          </lyric>
         </note>
-      <note default-x="303.68" default-y="-25" dynamics="125.56">
+      <note default-x="303.73" default-y="-25" dynamics="125.56">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -1702,12 +1424,8 @@
           <syllabic>single</syllabic>
           <text>gai</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gai</text>
-          </lyric>
         </note>
-      <note default-x="337.43" default-y="-30" dynamics="125.56">
+      <note default-x="337.48" default-y="-30" dynamics="125.56">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -1724,7 +1442,7 @@
           </lyric>
         </note>
       </measure>
-    <measure number="18" width="180.37">
+    <measure number="18" width="180.43">
       <note default-x="12.5" default-y="-40" dynamics="124.44">
         <pitch>
           <step>E</step>
@@ -1739,7 +1457,7 @@
           <text>du</text>
           </lyric>
         </note>
-      <note default-x="41.12" default-y="-30" dynamics="123.33">
+      <note default-x="41.13" default-y="-30" dynamics="123.33">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -1748,61 +1466,17 @@
         <tie type="start"/>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="59.11" default-y="-25"/>
+        <dot default-x="59.12" default-y="-25"/>
         <stem>up</stem>
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text></text>
+          <text>an</text>
           </lyric>
         </note>
-      <note default-x="95.53" default-y="-30" dynamics="123.33">
+      <note default-x="95.57" default-y="-30" dynamics="123.33">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -1811,27 +1485,27 @@
         <tie type="stop"/>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="113.53" default-y="-25"/>
+        <dot default-x="113.56" default-y="-25"/>
         <stem>up</stem>
         <notations>
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="149.95" default-y="-20">
+      <note default-x="150" default-y="-20">
         <rest/>
         <duration>4</duration>
         <voice>1</voice>
         <type>eighth</type>
         </note>
       </measure>
-    <measure number="19" width="238.53">
+    <measure number="19" width="238.59">
       <note default-x="12.5" default-y="-20">
         <rest/>
         <duration>4</duration>
         <voice>1</voice>
         <type>eighth</type>
         </note>
-      <note default-x="41.12" default-y="-35" dynamics="120">
+      <note default-x="41.13" default-y="-35" dynamics="120">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -1844,36 +1518,8 @@
           <syllabic>single</syllabic>
           <text>Tia</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Tia</text>
-          </lyric>
         </note>
-      <note default-x="70.43" default-y="-35" dynamics="124.44">
+      <note default-x="70.44" default-y="-35" dynamics="124.44">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -1889,7 +1535,7 @@
           <text>da</text>
           </lyric>
         </note>
-      <note default-x="95.31" default-y="-35" dynamics="122.22">
+      <note default-x="95.32" default-y="-35" dynamics="122.22">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -1904,7 +1550,7 @@
           <text>au</text>
           </lyric>
         </note>
-      <note default-x="123.93" default-y="-30" dynamics="124.44">
+      <note default-x="123.95" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -1924,7 +1570,7 @@
           <text>ro</text>
           </lyric>
         </note>
-      <note default-x="143.01" default-y="-30" dynamics="124.44">
+      <note default-x="143.04" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -1938,7 +1584,7 @@
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="182.32" default-y="-30" dynamics="124.44">
+      <note default-x="182.35" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -1947,7 +1593,7 @@
         <duration>12</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="200.31" default-y="-25"/>
+        <dot default-x="200.34" default-y="-25"/>
         <accidental>sharp</accidental>
         <stem>up</stem>
         <notations>
@@ -1959,29 +1605,9 @@
           <syllabic>single</syllabic>
           <text>ra</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ra</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ra</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ra</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ra</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ra</text>
-          </lyric>
         </note>
       </measure>
-    <measure number="20" width="276.29">
+    <measure number="20" width="276.12">
       <note default-x="17.12" default-y="-20" dynamics="123.33">
         <pitch>
           <step>B</step>
@@ -2030,34 +1656,6 @@
           <syllabic>single</syllabic>
           <text>pat</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pat</text>
-          </lyric>
         </note>
       <note default-x="111.51" default-y="-45" dynamics="122.22">
         <pitch>
@@ -2093,7 +1691,7 @@
           <text>te</text>
           </lyric>
         </note>
-      <note default-x="184.91" default-y="-35" dynamics="123.33">
+      <note default-x="184.92" default-y="-35" dynamics="123.33">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -2106,12 +1704,8 @@
           <syllabic>single</syllabic>
           <text>mu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>mu</text>
-          </lyric>
         </note>
-      <note default-x="220.07" default-y="-50" dynamics="122.22">
+      <note default-x="219.88" default-y="-50" dynamics="122.22">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -2119,18 +1713,16 @@
         <duration>12</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="238.06" default-y="-45"/>
+        <dot default-x="237.88" default-y="-45"/>
         <stem>up</stem>
         <notations>
           <articulations>
             <staccato default-x="4.93" default-y="-59.3"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-52.17" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-52.17" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>kan
-</text>
-          <text></text>
+          <text>kan</text>
           </lyric>
         </note>
       </measure>
@@ -2141,7 +1733,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>85.08</system-distance>
+          <system-distance>85.42</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-55" dynamics="125.56">
@@ -2186,34 +1778,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ber</text>
@@ -2284,10 +1848,6 @@
           <syllabic>single</syllabic>
           <text>tan</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
         </note>
       <note default-x="301.54" default-y="-40" dynamics="125.56">
         <pitch>
@@ -2302,10 +1862,6 @@
         <stem>up</stem>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pa</text>
@@ -2386,34 +1942,6 @@
           <syllabic>single</syllabic>
           <text>a</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
         </note>
       <note default-x="95.6" default-y="-40" dynamics="123.33">
         <pitch>
@@ -2462,21 +1990,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-67.35" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>an</text>
           </lyric>
         </note>
       <note default-x="173.99" default-y="-45" dynamics="122.22">
@@ -2539,30 +2055,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Ti</text>
@@ -2732,30 +2224,6 @@
           <syllabic>single</syllabic>
           <text>lin</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
         </note>
       <note default-x="129.74" default-y="-50" dynamics="118.89">
         <pitch>
@@ -2841,9 +2309,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>bar
-</text>
-          <text></text>
+          <text>bar</text>
           </lyric>
         </note>
       <note default-x="279.63" default-y="-50" dynamics="117.78">
@@ -2883,30 +2349,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Di</text>
@@ -3038,10 +2480,6 @@
           <syllabic>single</syllabic>
           <text>hu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
         </note>
       </measure>
     <measure number="27" width="158.04">
@@ -3073,47 +2511,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
+          <text>jan</text>
           </lyric>
         </note>
       <note default-x="94.25" default-y="-50" dynamics="117.78">
@@ -3153,30 +2553,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
           <text>A</text>
@@ -3346,30 +2722,6 @@
           <syllabic>single</syllabic>
           <text>hu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
         </note>
       <note default-x="149.06" default-y="-50" dynamics="118.89">
         <pitch>
@@ -3453,11 +2805,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-62.11" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
+          <text>ti</text>
           </lyric>
         </note>
       <note default-x="291.72" default-y="-50" dynamics="117.78">
@@ -3497,30 +2847,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Ber</text>
@@ -3652,10 +2978,6 @@
           <syllabic>single</syllabic>
           <text>la</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
         </note>
       </measure>
     <measure number="31" width="179.12">
@@ -3689,59 +3011,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>gi</text>
           </lyric>
         </note>
       <note default-x="95.49" default-y="-50" dynamics="117.78">
@@ -3813,30 +3083,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pun</text>
@@ -3926,30 +3172,6 @@
           <syllabic>single</syllabic>
           <text>ri</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
         </note>
       </measure>
     <measure number="33" width="281.59">
@@ -3959,7 +3181,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>85.08</system-distance>
+          <system-distance>85.42</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="125.56">
@@ -4008,30 +3230,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
           <syllabic>single</syllabic>
           <text>rus</text>
@@ -4119,45 +3317,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
+          <text>ri</text>
           </lyric>
         </note>
       </measure>
@@ -4208,30 +3368,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
           <syllabic>single</syllabic>
           <text>nge</text>
@@ -4321,30 +3457,6 @@
           <syllabic>single</syllabic>
           <text>pi</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
         </note>
       </measure>
     <measure number="35" width="261.69">
@@ -4394,30 +3506,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
           <syllabic>single</syllabic>
           <text>per</text>
@@ -4503,47 +3591,9 @@
             <staccato default-x="4.93" default-y="-43.44"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
+          <text>ti</text>
           </lyric>
         </note>
       </measure>
@@ -4598,30 +3648,6 @@
           <syllabic>single</syllabic>
           <text>nya</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
         </note>
       <note default-x="107.89" default-y="-35" dynamics="124.44">
         <pitch>
@@ -4669,10 +3695,6 @@
           <syllabic>single</syllabic>
           <text>ja</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ja</text>
-          </lyric>
         </note>
       <note default-x="184.39" default-y="-30" dynamics="124.44">
         <pitch>
@@ -4688,30 +3710,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.16" relative-y="-30">
           <syllabic>single</syllabic>
           <text>di</text>
@@ -4757,7 +3755,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>85.08</system-distance>
+          <system-distance>85.42</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-45" dynamics="124.44">
@@ -4788,47 +3786,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
+          <text>si</text>
           </lyric>
         </note>
       <note default-x="150.99" default-y="-40" dynamics="124.44">
@@ -4900,30 +3860,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ka</text>
@@ -5013,30 +3949,6 @@
           <syllabic>single</syllabic>
           <text>gi</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
         </note>
       </measure>
     <measure number="39" width="263.63">
@@ -5086,30 +3998,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
           <syllabic>single</syllabic>
           <text>rus</text>
@@ -5197,45 +4085,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
+          <text>ni</text>
           </lyric>
         </note>
       </measure>
@@ -5286,30 +4136,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ta</text>
@@ -5399,30 +4225,6 @@
           <syllabic>single</syllabic>
           <text>gi</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.18" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
         </note>
       </measure>
     <measure number="41" width="304.46">
@@ -5432,7 +4234,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>85.08</system-distance>
+          <system-distance>85.42</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="124.44">
@@ -5481,30 +4283,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
           <text>kan</text>
@@ -5590,47 +4368,9 @@
             <staccato default-x="4.93" default-y="-43.44"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
+          <text>di</text>
           </lyric>
         </note>
       </measure>
@@ -5685,30 +4425,6 @@
           <syllabic>single</syllabic>
           <text>gu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
         </note>
       <note default-x="121.53" default-y="-35" dynamics="124.44">
         <pitch>
@@ -5756,10 +4472,6 @@
           <syllabic>single</syllabic>
           <text>ga</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ga</text>
-          </lyric>
         </note>
       <note default-x="210.28" default-y="-30" dynamics="124.44">
         <pitch>
@@ -5775,30 +4487,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pa</text>
@@ -5868,59 +4556,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>ri</text>
           </lyric>
         </note>
       <note default-x="100.25" default-y="-40" dynamics="124.44">
@@ -5992,26 +4628,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ke</text>
@@ -6101,26 +4717,6 @@
           <syllabic>single</syllabic>
           <text>tan</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
         </note>
       </measure>
     <measure number="45" width="299.04">
@@ -6179,26 +4775,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
           <syllabic>single</syllabic>
           <text>nya</text>
@@ -6284,29 +4860,9 @@
             <staccato default-x="4.93" default-y="-43.44"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.9" default-y="-48.48" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.9" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.9" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.9" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
+          <text>a</text>
           </lyric>
         </note>
       </measure>
@@ -6326,18 +4882,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>up</stem>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Me</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Me</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Me</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Me</text>
@@ -6408,18 +4952,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
           <syllabic>single</syllabic>
           <text>per</text>
@@ -6510,39 +5042,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
+          <text>ngan</text>
           </lyric>
         </note>
       <note default-x="97.07" default-y="-35" dynamics="126.67">
@@ -6647,53 +5147,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-48.48" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-48.48" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-48.48" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>han</text>
           </lyric>
         </note>
       <note default-x="97.07" default-y="-40" dynamics="126.67">
@@ -6720,7 +5176,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="126.67">
@@ -6795,38 +5251,6 @@
           <syllabic>single</syllabic>
           <text>Di</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         </note>
       <note default-x="69.63" default-y="-50" dynamics="123.33">
         <pitch>
@@ -6889,26 +5313,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ge</text>
@@ -6978,51 +5382,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
+          <text>lam</text>
           </lyric>
         </note>
       <note default-x="99.88" default-y="-30" dynamics="120">
@@ -7094,34 +5454,6 @@
           <syllabic>single</syllabic>
           <text>ber</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
         </note>
       <note default-x="92.25" default-y="-25" dynamics="124.44">
         <pitch>
@@ -7188,26 +5520,6 @@
           <syllabic>single</syllabic>
           <text>tan</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
         </note>
       <note default-x="233.9" default-y="-25" dynamics="125.56">
         <pitch>
@@ -7220,10 +5532,6 @@
         <stem>up</stem>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
-        <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.29" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pa</text>
@@ -7246,14 +5554,14 @@
           </lyric>
         </note>
       </measure>
-    <measure number="56" width="216.91">
+    <measure number="56" width="216.85">
       <print new-system="yes">
         <system-layout>
           <system-margins>
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="124.44">
@@ -7286,54 +5594,10 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
+          <text>ya</text>
           </lyric>
         </note>
-      <note default-x="136.36" default-y="-30" dynamics="123.33">
+      <note default-x="136.33" default-y="-30" dynamics="123.33">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7342,27 +5606,27 @@
         <tie type="stop"/>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="154.35" default-y="-25"/>
+        <dot default-x="154.33" default-y="-25"/>
         <stem>up</stem>
         <notations>
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="187.57" default-y="-20">
+      <note default-x="187.52" default-y="-20">
         <rest/>
         <duration>4</duration>
         <voice>1</voice>
         <type>eighth</type>
         </note>
       </measure>
-    <measure number="57" width="250.39">
+    <measure number="57" width="250.33">
       <note default-x="12.5" default-y="-20">
         <rest/>
         <duration>4</duration>
         <voice>1</voice>
         <type>eighth</type>
         </note>
-      <note default-x="39.43" default-y="-35" dynamics="120">
+      <note default-x="39.42" default-y="-35" dynamics="120">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7375,36 +5639,8 @@
           <syllabic>single</syllabic>
           <text>Di</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         </note>
-      <note default-x="73.38" default-y="-35" dynamics="124.44">
+      <note default-x="73.37" default-y="-35" dynamics="124.44">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7420,7 +5656,7 @@
           <text>ngin</text>
           </lyric>
         </note>
-      <note default-x="113.18" default-y="-35" dynamics="122.22">
+      <note default-x="113.17" default-y="-35" dynamics="122.22">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7435,7 +5671,7 @@
           <text>nya</text>
           </lyric>
         </note>
-      <note default-x="140.11" default-y="-30" dynamics="124.44">
+      <note default-x="140.08" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7455,7 +5691,7 @@
           <text>a</text>
           </lyric>
         </note>
-      <note default-x="158.07" default-y="-30" dynamics="124.44">
+      <note default-x="158.03" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -7469,7 +5705,7 @@
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="197.38" default-y="-30" dynamics="124.44">
+      <note default-x="197.34" default-y="-30" dynamics="124.44">
         <pitch>
           <step>G</step>
           <alter>1</alter>
@@ -7478,7 +5714,7 @@
         <duration>12</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="215.37" default-y="-25"/>
+        <dot default-x="215.34" default-y="-25"/>
         <accidental>sharp</accidental>
         <stem>up</stem>
         <notations>
@@ -7490,29 +5726,9 @@
           <syllabic>single</syllabic>
           <text>ngin</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
         </note>
       </measure>
-    <measure number="58" width="273.97">
+    <measure number="58" width="274.13">
       <note default-x="17.12" default-y="-20" dynamics="123.33">
         <pitch>
           <step>B</step>
@@ -7561,34 +5777,6 @@
           <syllabic>single</syllabic>
           <text>suk</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
         </note>
       <note default-x="116.76" default-y="-45" dynamics="122.22">
         <pitch>
@@ -7624,7 +5812,7 @@
           <text>ga</text>
           </lyric>
         </note>
-      <note default-x="188.01" default-y="-35" dynamics="123.33">
+      <note default-x="188" default-y="-35" dynamics="123.33">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -7637,12 +5825,8 @@
           <syllabic>single</syllabic>
           <text>tu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
         </note>
-      <note default-x="220.96" default-y="-50" dynamics="122.22">
+      <note default-x="221.14" default-y="-50" dynamics="122.22">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -7650,22 +5834,20 @@
         <duration>12</duration>
         <voice>1</voice>
         <type>quarter</type>
-        <dot default-x="238.95" default-y="-45"/>
+        <dot default-x="239.14" default-y="-45"/>
         <stem>up</stem>
         <notations>
           <articulations>
             <staccato default-x="4.93" default-y="-59.3"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-55.32" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lang
-</text>
-          <text></text>
+          <text>lang</text>
           </lyric>
         </note>
       </measure>
-    <measure number="59" width="321.16">
+    <measure number="59" width="321.11">
       <note default-x="12.5" default-y="-55" dynamics="125.56">
         <pitch>
           <step>B</step>
@@ -7712,34 +5894,6 @@
           <syllabic>single</syllabic>
           <text>meng</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
         </note>
       <note default-x="111.33" default-y="-45" dynamics="124.44">
         <pitch>
@@ -7777,7 +5931,7 @@
           <text>gil</text>
           </lyric>
         </note>
-      <note default-x="167.73" default-y="-45" dynamics="124.44">
+      <note default-x="167.71" default-y="-45" dynamics="124.44">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -7793,7 +5947,7 @@
           <tied type="stop"/>
           </notations>
         </note>
-      <note default-x="185.68" default-y="-45" dynamics="122.22">
+      <note default-x="185.66" default-y="-45" dynamics="122.22">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -7809,7 +5963,7 @@
           <text>da</text>
           </lyric>
         </note>
-      <note default-x="217.01" default-y="-40" dynamics="122.22">
+      <note default-x="216.99" default-y="-40" dynamics="122.22">
         <pitch>
           <step>E</step>
           <alter>-1</alter>
@@ -7824,12 +5978,8 @@
           <syllabic>single</syllabic>
           <text>lam</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam</text>
-          </lyric>
         </note>
-      <note default-x="257.41" default-y="-40" dynamics="125.56">
+      <note default-x="257.36" default-y="-40" dynamics="125.56">
         <pitch>
           <step>E</step>
           <alter>-1</alter>
@@ -7838,7 +5988,7 @@
         <duration>3</duration>
         <voice>1</voice>
         <type>16th</type>
-        <dot default-x="275.4" default-y="-35"/>
+        <dot default-x="275.36" default-y="-35"/>
         <stem>up</stem>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
@@ -7846,12 +5996,8 @@
           <syllabic>single</syllabic>
           <text>ke</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
         </note>
-      <note default-x="291.36" default-y="-45" dynamics="124.44">
+      <note default-x="291.31" default-y="-45" dynamics="124.44">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -7880,7 +6026,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-45" dynamics="124.44">
@@ -7935,34 +6081,6 @@
           <syllabic>single</syllabic>
           <text>a</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
         </note>
       <note default-x="142.06" default-y="-40" dynamics="123.33">
         <pitch>
@@ -8011,21 +6129,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-67.35" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>an</text>
           </lyric>
         </note>
       <note default-x="221.64" default-y="-45" dynamics="122.22">
@@ -8088,30 +6194,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ti</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Ti</text>
@@ -8272,30 +6354,6 @@
           <syllabic>single</syllabic>
           <text>lin</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lin</text>
-          </lyric>
         </note>
       <note default-x="92.08" default-y="-50" dynamics="118.89">
         <pitch>
@@ -8381,9 +6439,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-67.35" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>bar
-</text>
-          <text></text>
+          <text>bar</text>
           </lyric>
         </note>
       <note default-x="252.85" default-y="-50" dynamics="117.78">
@@ -8408,7 +6464,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-20">
@@ -8432,30 +6488,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Di</text>
@@ -8587,10 +6619,6 @@
           <syllabic>single</syllabic>
           <text>hu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
         </note>
       </measure>
     <measure number="65" width="155.16">
@@ -8622,47 +6650,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="5.29" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>jan
-</text>
-          <text></text>
+          <text>jan</text>
           </lyric>
         </note>
       <note default-x="92.93" default-y="-50" dynamics="117.78">
@@ -8702,30 +6692,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>A</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
           <text>A</text>
@@ -8886,30 +6852,6 @@
           <syllabic>single</syllabic>
           <text>hu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>hu</text>
-          </lyric>
         </note>
       <note default-x="103.47" default-y="-50" dynamics="118.89">
         <pitch>
@@ -8993,11 +6935,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-62.51" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-62.51" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
+          <text>ti</text>
           </lyric>
         </note>
       <note default-x="243.52" default-y="-50" dynamics="117.78">
@@ -9022,7 +6962,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-20">
@@ -9046,30 +6986,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>down</stem>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Ber</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Ber</text>
@@ -9201,10 +7117,6 @@
           <syllabic>single</syllabic>
           <text>la</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>la</text>
-          </lyric>
         </note>
       </measure>
     <measure number="69" width="189.99">
@@ -9238,59 +7150,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>gi</text>
           </lyric>
         </note>
       <note default-x="100.35" default-y="-50" dynamics="117.78">
@@ -9362,30 +7222,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pun</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pun</text>
@@ -9475,30 +7311,6 @@
           <syllabic>single</syllabic>
           <text>ri</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri</text>
-          </lyric>
         </note>
       </measure>
     <measure number="71" width="258.98">
@@ -9548,30 +7360,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
           <text>rus</text>
@@ -9659,45 +7447,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-62.11" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text></text>
+          <text>ri</text>
           </lyric>
         </note>
       </measure>
@@ -9708,7 +7458,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="125.56">
@@ -9757,30 +7507,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nge</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
           <syllabic>single</syllabic>
           <text>nge</text>
@@ -9870,30 +7596,6 @@
           <syllabic>single</syllabic>
           <text>pi</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pi</text>
-          </lyric>
         </note>
       </measure>
     <measure number="73" width="277.07">
@@ -9943,30 +7645,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
           <syllabic>single</syllabic>
           <text>per</text>
@@ -10052,47 +7730,9 @@
             <staccato default-x="4.93" default-y="-43.44"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ti
-</text>
-          <text></text>
+          <text>ti</text>
           </lyric>
         </note>
       </measure>
@@ -10147,30 +7787,6 @@
           <syllabic>single</syllabic>
           <text>nya</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
         </note>
       <note default-x="111.01" default-y="-35" dynamics="124.44">
         <pitch>
@@ -10218,10 +7834,6 @@
           <syllabic>single</syllabic>
           <text>ja</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ja</text>
-          </lyric>
         </note>
       <note default-x="196.7" default-y="-30" dynamics="124.44">
         <pitch>
@@ -10237,30 +7849,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
           <syllabic>single</syllabic>
           <text>di</text>
@@ -10328,47 +7916,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-46.53" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-46.53" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>si
-</text>
-          <text></text>
+          <text>si</text>
           </lyric>
         </note>
       <note default-x="97.22" default-y="-40" dynamics="124.44">
@@ -10400,7 +7950,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-40" dynamics="124.44">
@@ -10449,30 +7999,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ka</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ka</text>
@@ -10562,30 +8088,6 @@
           <syllabic>single</syllabic>
           <text>gi</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
         </note>
       </measure>
     <measure number="77" width="247.16">
@@ -10635,30 +8137,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>rus</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
           <syllabic>single</syllabic>
           <text>rus</text>
@@ -10746,45 +8224,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ni
-</text>
-          <text></text>
+          <text>ni</text>
           </lyric>
         </note>
       </measure>
@@ -10835,30 +8275,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ta</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ta</text>
@@ -10948,30 +8364,6 @@
           <syllabic>single</syllabic>
           <text>gi</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gi</text>
-          </lyric>
         </note>
       </measure>
     <measure number="79" width="251.48">
@@ -11021,30 +8413,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>kan</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
           <syllabic>single</syllabic>
           <text>kan</text>
@@ -11130,47 +8498,9 @@
             <staccato default-x="4.93" default-y="-43.44"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-41.56" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-41.56" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>di
-</text>
-          <text></text>
+          <text>di</text>
           </lyric>
         </note>
       </measure>
@@ -11181,7 +8511,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-45" dynamics="124.44">
@@ -11234,30 +8564,6 @@
           <syllabic>single</syllabic>
           <text>gu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>gu</text>
-          </lyric>
         </note>
       <note default-x="167.07" default-y="-35" dynamics="124.44">
         <pitch>
@@ -11305,10 +8611,6 @@
           <syllabic>single</syllabic>
           <text>ga</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ga</text>
-          </lyric>
         </note>
       <note default-x="255.65" default-y="-30" dynamics="124.44">
         <pitch>
@@ -11324,30 +8626,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pa</text>
@@ -11417,59 +8695,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ri
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>ri</text>
           </lyric>
         </note>
       <note default-x="100.09" default-y="-40" dynamics="124.44">
@@ -11541,26 +8767,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ke</text>
@@ -11650,26 +8856,6 @@
           <syllabic>single</syllabic>
           <text>tan</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
         </note>
       </measure>
     <measure number="83" width="259.93">
@@ -11719,26 +8905,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>nya</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
           <text>nya</text>
@@ -11824,29 +8990,9 @@
             <staccato default-x="4.93" default-y="-43.44"/>
             </articulations>
           </notations>
-        <lyric number="1" default-x="6.9" default-y="-48.31" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-48.31" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.9" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.9" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.9" default-y="-48.31" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a
-</text>
-          <text></text>
+          <text>a</text>
           </lyric>
         </note>
       </measure>
@@ -11857,7 +9003,7 @@
             <left-margin>0</left-margin>
             <right-margin>0</right-margin>
             </system-margins>
-          <system-distance>98.19</system-distance>
+          <system-distance>98.37</system-distance>
           </system-layout>
         </print>
       <note default-x="58.09" default-y="-20">
@@ -11875,18 +9021,6 @@
         <voice>1</voice>
         <type>eighth</type>
         <stem>up</stem>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Me</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Me</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Me</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Me</text>
@@ -11957,18 +9091,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>per</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
           <syllabic>single</syllabic>
           <text>per</text>
@@ -12059,39 +9181,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngan
-</text>
-          <text></text>
+          <text>ngan</text>
           </lyric>
         </note>
       <note default-x="93.41" default-y="-35" dynamics="126.67">
@@ -12196,53 +9286,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.3" default-y="-47.91" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-47.91" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.3" default-y="-47.91" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>han
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>han</text>
           </lyric>
         </note>
       <note default-x="93.07" default-y="-40" dynamics="126.67">
@@ -12344,38 +9390,6 @@
           <syllabic>single</syllabic>
           <text>Di</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         </note>
       <note default-x="128.21" default-y="-50" dynamics="123.33">
         <pitch>
@@ -12438,26 +9452,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ge</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ge</text>
@@ -12527,51 +9521,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam
-</text>
-          <text></text>
+          <text>lam</text>
           </lyric>
         </note>
       <note default-x="114.22" default-y="-30" dynamics="120">
@@ -12632,34 +9582,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ber</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ber</text>
@@ -12730,26 +9652,6 @@
           <syllabic>single</syllabic>
           <text>tan</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tan</text>
-          </lyric>
         </note>
       <note default-x="262.45" default-y="-25" dynamics="125.56">
         <pitch>
@@ -12762,10 +9664,6 @@
         <stem>up</stem>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>pa</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
           <syllabic>single</syllabic>
           <text>pa</text>
@@ -12819,51 +9717,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.83" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ya
-</text>
-          <text></text>
+          <text>ya</text>
           </lyric>
         </note>
       <note default-x="114.22" default-y="-30" dynamics="123.33">
@@ -12918,34 +9772,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Di</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Di</text>
@@ -13032,26 +9858,6 @@
           <syllabic>single</syllabic>
           <text>ngin</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ngin</text>
-          </lyric>
         </note>
       </measure>
     <measure number="96" width="322.21">
@@ -13099,34 +9905,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>suk</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
           <text>suk</text>
@@ -13179,10 +9957,6 @@
           <syllabic>single</syllabic>
           <text>tu</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>tu</text>
-          </lyric>
         </note>
       <note default-x="244.45" default-y="-50" dynamics="122.22">
         <pitch>
@@ -13194,11 +9968,9 @@
         <type>quarter</type>
         <dot default-x="262.45" default-y="-45"/>
         <stem>up</stem>
-        <lyric number="1" default-x="6.7" default-y="-55.32" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lang
-</text>
-          <text></text>
+          <text>lang</text>
           </lyric>
         </note>
       </measure>
@@ -13245,34 +10017,6 @@
         <type>eighth</type>
         <stem>up</stem>
         <beam number="1">end</beam>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>meng</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
           <text>meng</text>
@@ -13361,10 +10105,6 @@
           <syllabic>single</syllabic>
           <text>lam</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>lam</text>
-          </lyric>
         </note>
       <note default-x="314.41" default-y="-40" dynamics="125.56">
         <pitch>
@@ -13379,10 +10119,6 @@
         <stem>up</stem>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
-        <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>ke</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-55.32" relative-y="-30">
           <syllabic>single</syllabic>
           <text>ke</text>
@@ -13472,34 +10208,6 @@
           <syllabic>single</syllabic>
           <text>a</text>
           </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>a</text>
-          </lyric>
         </note>
       <note default-x="179.97" default-y="-40" dynamics="123.33">
         <pitch>
@@ -13548,21 +10256,9 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.7" default-y="-59.75" relative-y="-30">
+        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
-          </lyric>
-        <lyric number="1" default-x="6.7" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>an
-</text>
-          <text>
-</text>
-          <text></text>
+          <text>an</text>
           </lyric>
         </note>
       <note default-x="301.85" default-y="-45" dynamics="122.22">
@@ -13593,34 +10289,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>Bim</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
           <syllabic>single</syllabic>
           <text>Bim</text>
@@ -13656,30 +10324,6 @@
         <notations>
           <tied type="start"/>
           </notations>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>bang</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>bang</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>bang</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>bang</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>bang</text>
-          </lyric>
-        <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
-          <syllabic>single</syllabic>
-          <text>bang</text>
-          </lyric>
         <lyric number="1" default-x="6.5" default-y="-59.75" relative-y="-30">
           <syllabic>single</syllabic>
           <text>bang</text>

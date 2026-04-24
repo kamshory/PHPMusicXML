@@ -850,6 +850,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $midiChannel = $part['channelId'];
                 $midiProgramId = $part['programId'];
                 $instrumentId = $part['instrumentId'];
+                $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
                 $volumeRaw = $this->getPartVolume($partId);
                 $volume = $volumeRaw * 100 / (0.9 * 127);
 
@@ -948,6 +949,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $scoreInstrument->instrumentName = new InstrumentName('Instrument ' . $key);
             }
+            $scoreInstrument->instrumentSound = new \MusicXML\Model\InstrumentSound('percussion.drums');
             $midiInstrument->id = $id;
             $midiInstrument->midiChannel = new MidiChannel($channelId);
             $midiInstrument->midiProgram = new MidiProgram($programId);
@@ -1459,10 +1461,10 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         if ($channelId == 10) { // Percussion handling
             // MusicXML unpitched notes for percussion
-            $unpitched = new Unpitched();
-            $unpitched->displayStep = new DisplayStep('C');
-            $unpitched->displayOctave = new DisplayOctave(5);
-            $note->unpitched = $unpitched;
+            $note->unpitched = new Unpitched();
+            // Pemetaan standar: Kick di F4, Snare di C5, Lainnya (Hi-hat/Cymbal) di G5
+            $note->unpitched->displayStep = new DisplayStep(($noteCode == 35 || $noteCode == 36) ? 'F' : (($noteCode == 38 || $noteCode == 40) ? 'C' : 'G'));
+            $note->unpitched->displayOctave = new DisplayOctave(($noteCode == 35 || $noteCode == 36) ? 4 : 5);
             $note->instrument = new \MusicXML\Model\Instrument($partId . '-I' . ($noteCode + 1));
         } else {
             $pitch = $this->getPitch($noteCode);
