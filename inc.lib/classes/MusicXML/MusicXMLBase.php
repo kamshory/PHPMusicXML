@@ -65,10 +65,25 @@ abstract class MusicXMLBase
     const ENCODING_DESCRIPTION = "This software is not ready for production yet";
 
     /**
+     * Quantize MIDI ticks to nearest standard division to avoid jitter.
+     *
+     * @param int $ticks
+     * @param int $timebase
+     * @return int
+     */
+    public function quantize($ticks, $timebase)
+    {
+        $grid = $timebase / 8; // snap to 32nd notes
+        $quantized = (int) round($ticks / $grid) * $grid;
+        return ($quantized == 0 && $ticks > 0) ? (int)$grid : $quantized;
+    }
+
+    /**
      * Convert MIDI duration (ticks) to MusicXML duration (divisions).
      *
      * Uses integer-safe calculation to avoid floating point drift,
      * especially for notes spanning multiple measures.
+     * Applies quantization before conversion.
      *
      * @param int $duration   Duration in MIDI ticks
      * @param int $divisions  Divisions per quarter note (MusicXML)
@@ -77,7 +92,8 @@ abstract class MusicXMLBase
      */
     public function fixDuration($duration, $divisions, $timebase)
     {
-        return (int) round($duration * $divisions / $timebase);
+        $quantized = $this->quantize($duration, $timebase);
+        return (int) round($quantized * $divisions / $timebase);
     }
 
     /**
@@ -264,26 +280,28 @@ abstract class MusicXMLBase
      * @param int $note MIDI note number (0–127)
      * @return Pitch
      */
-    protected function getPitch($note)
+    protected function getPitch($note, $preferSharps = true)
     {
         $pitchStr = MusicXMLInstrument::NOTE_LIST[$note];
 
         $pitch = new Pitch();
 
         $step = new Step();
-        $step->textContent = preg_replace("/[^A-G]/", "", $pitchStr);
+        $step->textContent = substr(preg_replace("/[^A-G]/", "", $pitchStr), 0, 1);
         $pitch->step = $step;
 
         $octaveStr = preg_replace("/[^\-\d]/", "", $pitchStr);
-        if (empty($octaveStr)) {
-            $octaveStr = "0";
-        }
+        $octaveStr = ($octaveStr === "" || $octaveStr === "-") ? "0" : $octaveStr;
 
         $pitch->octave = new Octave((int) $octaveStr);
 
-        if (strpos($pitchStr, 's') !== false) {
+        if (strpos($pitchStr, 's') !== false || strpos($pitchStr, '#') !== false) {
             $alter = new Alter();
             $alter->textContent = 1;
+            $pitch->alter = $alter;
+        } else if (strpos($pitchStr, 'f') !== false || strpos($pitchStr, 'b') !== false) {
+            $alter = new Alter();
+            $alter->textContent = -1;
             $pitch->alter = $alter;
         }
 
@@ -333,7 +351,7 @@ abstract class MusicXMLBase
      * @param string $instrumentName Nama instrumen
      * @return string|null         Nama sound MusicXML jika ditemukan
      */
-    public function getIsntrumentSound($channelId, $programId, $instrumentName)
+    public function getInstrumentSound($channelId, $programId, $instrumentName)
     {
         $array = explode(" ", strtolower($instrumentName));
         return $this->match1($array, $channelId, $programId, $instrumentName);

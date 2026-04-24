@@ -844,7 +844,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 if (isset(MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1]) && isset(MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2])) {
                     $instrumentSound = MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2];
                 } else {
-                    $this->getIsntrumentSound($channelId, $programId, $instrumentName);
+                    $this->getInstrumentSound($channelId, $programId, $instrumentName);
                     $instrumentSound = strtolower(str_replace(' ', '.', $part['instrument'][0]));
                 }
                 $midiChannel = $part['channelId'];
@@ -1318,12 +1318,16 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         foreach ($noteMessages as $idx => $message) {
             $duration = isset($message['duration']) ? $message['duration'] : 0;
+            $duration = $this->quantize($duration, $timebase);
+            
             if ($this->isAudible($message, $duration)) {
-                $isChord = ($message['abstime'] == $prevAbstime);
                 
-                // Gunakan posisi absolut XML untuk mencegah drifting
                 $offsetTicks = $message['abstime'] % $measureLength;
                 $xmlStart = (int) round($offsetTicks * $divisions / $timebase);
+                
+                // If current note starts before or at the cursor, it must be a chord 
+                // to prevent measure duration overflow.
+                $isChord = ($xmlStart <= $xmlCursor && $idx > 0) || ($message['abstime'] == $prevAbstime);
 
                 if (!$isChord && $xmlStart > $xmlCursor) {
                     $xmlGap = $xmlStart - $xmlCursor;
@@ -1452,7 +1456,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         $noteCode = $message['note'];
         $note = new Note();
         $note->voice = $channelId;
-        $note->dynamics = round($message['value'] / 0.9, 2);
 
         if ($channelId == 10) { // Percussion handling
             // MusicXML unpitched notes for percussion
