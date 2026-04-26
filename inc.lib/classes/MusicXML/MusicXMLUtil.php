@@ -40,6 +40,10 @@ class MusicXMLUtil
         }
         return '1024th';
     }
+
+    /**
+     * @var array
+     */
     protected static $type = array(
         'maxima'=>8,
         'long'=>4,
@@ -64,6 +68,7 @@ class MusicXMLUtil
      * @param array $message
      * @param integer $divisions
      * @param integer $timebase
+     * @param TimeSignature $timeSignature
      * @param float $width
      * @return Coordinate
      */
@@ -80,8 +85,8 @@ class MusicXMLUtil
      *
      * @param integer $measureIndex
      * @param array $message
-     * @param integer $divisions
      * @param integer $timebase
+     * @param TimeSignature $timeSignature
      * @param integer $duration
      * @return AttackRelease
      */
@@ -157,6 +162,9 @@ class MusicXMLUtil
         return $lt;
     }
     
+    /**
+     * @param array $tempoList
+     */
     public static function getDirections($tempoList)
     {
         $lastBpm = 0;

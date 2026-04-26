@@ -53,27 +53,27 @@ class PicoAnnotationParser
 
     /**
      * Constructor
+     * 
+     * @param string|object $target Class name or object instance
+     * @param string|null $name Method or property name
+     * @param string $type Member type (self::METHOD or self::PROPERTY)
+     * @throws ZeroArgumentException If target is not provided
      */
-    public function __construct()
+    public function __construct($target = null, $name = null, $type = self::METHOD)
     {
-        $arguments = func_get_args();
-        $count = count($arguments);
-
-        // get reflection from class or class/method
-        // (depends on constructor arguments)
-        if ($count === 0) {
-            throw new ZeroArgumentException("No zero argument constructor allowed");
-        } else if ($count === 1) {
-            $reflection = new ReflectionClass($arguments[0]);
-        } else {
-            $type = $count === 3 ? $arguments[2] : self::METHOD;
-
-            if ($type === self::METHOD) {
-                $reflection = new ReflectionMethod($arguments[0], $arguments[1]);
-            } else if ($type === self::PROPERTY) {
-                $reflection = new ReflectionProperty($arguments[0], $arguments[1]);
-            }
+        if ($target === null) {
+            throw new ZeroArgumentException("Target class or object must be provided");
         }
+
+        if ($name === null) {
+            $reflection = new ReflectionClass($target);
+        } else if ($type === self::PROPERTY) {
+            $reflection = new ReflectionProperty($target, $name);
+        } else {
+            // Default to Method
+            $reflection = new ReflectionMethod($target, $name);
+        }
+
         $this->reflection = $reflection;
         $this->rawDocBlock = $reflection->getDocComment();
         $this->parameters = array();
