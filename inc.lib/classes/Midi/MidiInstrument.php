@@ -2,7 +2,7 @@
 
 namespace Midi;
 
-use stdClass;
+use \stdClass;
 
 /**
  * Class MidiInstrument
