@@ -507,7 +507,7 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param string $midiPath
      * @return MidiMeasure
      */
-    public function loadMidi($midiPath)
+    public function loadMidiFile($midiPath)
     {
         if(file_exists($midiPath))
         {
