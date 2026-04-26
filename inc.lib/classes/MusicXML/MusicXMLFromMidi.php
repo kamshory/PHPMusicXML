@@ -512,7 +512,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         if(file_exists($midiPath))
         {
             $midi = new MidiMeasure();
-            $midi->importMid($midiPath);
+            $midi->importMidiFile($midiPath);
             return $midi;
         }
         else
@@ -520,6 +520,20 @@ class MusicXMLFromMidi extends MusicXMLBase
             throw new FileNotFoundException("Specified file does not exists: ".$midiPath);
         }
     }
+
+    /**
+     * Load midi from string
+     *
+     * @param string $midiString
+     * @return MidiMeasure
+     */
+    public function loadMidiString($midiString)
+    {
+        $midi = new MidiMeasure();
+        $midi->parseMidi($midiString);
+        return $midi;
+    }
+
 
     /**
      * Convert MIDI to MusicXML
