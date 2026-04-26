@@ -2,7 +2,7 @@
 
 namespace Midi;
 
-use stdClass;
+use \stdClass;
 
 /**
  * Class MidiMeasure
@@ -19,7 +19,7 @@ class MidiMeasure extends Midi
         $duration = 0;
         $t = 0;
         $track = $this->tracks[0];
- 
+
         foreach ($this->tracks as $trk) {
             $mc = count($trk);
             for ($i = 0; $i < $mc; $i++) {
@@ -153,43 +153,7 @@ class MidiMeasure extends Midi
         return $tempoEvents;
     }
 
-    /**
-     * returns duration in seconds
-     *
-     * @access public
-     * @return int absolute time
-     */
-    public function getAbsoluteTime($relativeTime)
-    {
-        $duration = 0;
-        $currentTempo = 0;
-        $t = 0;
-        
-        $f = 1 / $this->getTimebase() / 1000000;
-
-        foreach ($this->tracks as $trk) {
-            $mc = count($trk);
-            for ($i = 0; $i < $mc; $i++) {
-                $msg = explode(' ', $trk[$i]);
-
-                $tm = (int)@$msg[0];
-                if ($tm > $relativeTime) {
-                    break 2;
-                }
-
-                if (@$msg[1] == 'Tempo') {
-                    $dt = (int)$msg[0] - $t;
-                    $duration += $dt * $currentTempo * $f;
-                    $t = (int)$msg[0];
-                    $currentTempo = (int)$msg[2];
-                }
-            }
-        }
-
-        $dt = $relativeTime - $t;
-        $duration += $dt * $currentTempo * $f;
-        return $duration * 1000;
-    }
+    
 
     /**
      *
@@ -200,4 +164,4 @@ class MidiMeasure extends Midi
     {
         return $this->tempo;
     }
-} 
+}

@@ -4,9 +4,28 @@ namespace Midi;
 
 use stdClass;
 
+/**
+ * Class MidiInstrument
+ * 
+ * Extends Midi to handle instrument (program change) extraction and data mapping.
+ * 
+ * @package Midi
+ */
 class MidiInstrument extends Midi{
+
+	/**
+	 * Program
+	 * @var array
+	 */
 	protected $program = array();
 	
+	/**
+	 * Get instrument and tempo information
+	 * 
+	 * Parses tracks for program change (PrCh) events and tempo settings.
+	 *
+	 * @return stdClass
+	 */
 	public function getInstrument()
 	{
 		$midi = $this;
@@ -21,14 +40,11 @@ class MidiInstrument extends Midi{
 		foreach($midi->tracks as $i=>$track)
 		{
 			$program->program->tracks[$i] = array();
-			$j = 0;
 			$k = 0;
 			foreach($track as $j=>$raw)
 			{
 				$arr = explode(' ', $raw, 4);
-				$time = $arr[0];
 				$type = $arr[1];
-				$data = $arr[2];
 				if($type == 'PrCh')
 				{
 
@@ -49,14 +65,11 @@ class MidiInstrument extends Midi{
 		foreach($midi->tracks as $i=>$track)
 		{
 			$program->time->tracks[$i] = array();
-			$j = 0;
 			$k = 0;
 			foreach($track as $j=>$raw)
 			{
 				$arr = explode(' ', $raw, 3);
-				$time = $arr[0]; // NOSONAR
 				$type = $arr[1];
-				$data = $arr[2]; // NOSONAR
 				if($type == 'Tempo')
 				{
 					$program->time->tracks[$i][$k] = $raw;
@@ -68,9 +81,15 @@ class MidiInstrument extends Midi{
 		$program->timebase = $this->getTimebase();
 		return $program;
 	}
+
+	/**
+	 * Get MIDI data without copyright events
+	 *
+	 * @return stdClass
+	 */
 	public function getMidData()
 	{
-		$midi = new StdClass();
+		$midi = new stdClass();
 		$midi->tempo = $this->tempo;
 		$midi->timebase = $this->timebase;
 		$midi->tempoMsgNum = $this->tempoMsgNum;
@@ -91,50 +110,5 @@ class MidiInstrument extends Midi{
 		}
 		return $midi;
 	}
-	/**
-	 * returns absolute time in mili seconds
-	 *
-	 * @access public
-	 * @return int absolute time
-	 */
-	function getAbsoluteTime($relativeTime)
-	{
-		$duration = 0;
-		$currentTempo = 0;
-		$t = 0;
-		
-		$track = $this->tracks[0];
-		
-		
-		$f = 1 / $this->getTimebase() / 1000000;
-		
-		foreach($this->tracks as $trk)
-		{
-			$mc = count($trk);
-			for ($i=0;$i<$mc;$i++)
-			{
-				$msg = explode(' ',$trk[$i]);
-				
-				$tm = (int)@$msg[0];
-				if($tm > $relativeTime)
-				{
-					break 2;
-				}
-				
-				if (@$msg[1]=='Tempo')
-				{
-					$dt = (int)$msg[0] - $t;
-					$duration += $dt * $currentTempo * $f;
-					$t = (int)$msg[0];
-					$currentTempo = (int)$msg[2];
-				}
-			}
-		}
-		
-		$dt = $relativeTime - $t;
-		$duration += $dt * $currentTempo * $f;
-		return $duration * 1000;
-	}
-	
 	
 }
