@@ -8,6 +8,10 @@ use MusicXML\Map\NodeType;
 
 class MusicXML extends MusicXMLBase
 {
+    /**
+     * Load XML
+     * @param string  $path
+     */
     public function loadXml($path)
     {
         $domdoc = new DOMDocument();

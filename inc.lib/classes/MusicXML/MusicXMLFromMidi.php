@@ -14,6 +14,7 @@ use MusicXML\Model\DisplayStep;
 use MusicXML\Model\Divisions;
 use MusicXML\Model\Duration;
 use MusicXML\Model\InstrumentName;
+use MusicXML\Model\InstrumentSound;
 use MusicXML\Model\MeasurePartwise;
 use MusicXML\Model\MidiChannel;
 use MusicXML\Model\MidiInstrument;
@@ -892,7 +893,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             if ($channelId == 10) {
                 $scorePartwise->partList->scorePart[] = $this->getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation);
             } else {
-                if (isset(MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1]) && isset(MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2])) {
+                if (null !== (MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1]) && null != (MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2])) {
                     $instrumentSound = MusicXMLInstrument::INSTRUMENT_LIST[$programId - 1][2];
                 } else {
                     $this->getInstrumentSound($channelId, $programId, $instrumentName);
@@ -999,12 +1000,12 @@ class MusicXMLFromMidi extends MusicXMLBase
             $scoreInstrument->id = $id;
             $midiCode = $value['note'] - 1;
             
-            if (isset(MusicXMLInstrument::DRUM_SET[$midiCode])) 
+            if (null !== (MusicXMLInstrument::DRUM_SET[$midiCode])) 
             {
-                if (isset(MusicXMLInstrument::DRUM_SET[$midiCode][0])) {
+                if (null !== (MusicXMLInstrument::DRUM_SET[$midiCode][0])) {
                     $scoreInstrument->instrumentName = new InstrumentName(MusicXMLInstrument::DRUM_SET[$midiCode][0]);
                 }
-                if (isset(MusicXMLInstrument::DRUM_SET[$midiCode][2])) {
+                if (null !== (MusicXMLInstrument::DRUM_SET[$midiCode][2])) {
                     $drumSound = MusicXMLInstrument::DRUM_SET[$midiCode][2];
                 }
             }
@@ -1013,7 +1014,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 $scoreInstrument->instrumentName = new InstrumentName('Instrument ' . $key);
             }
-            $scoreInstrument->instrumentSound = new \MusicXML\Model\InstrumentSound($drumSound);
+            $scoreInstrument->instrumentSound = new InstrumentSound($drumSound);
             $midiInstrument->id = $id;
             $midiInstrument->midiChannel = new MidiChannel($channelId);
             $midiInstrument->midiProgram = new MidiProgram($programId);
