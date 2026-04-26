@@ -8,7 +8,7 @@ use MusicXML\Map\ModelParser;
 use MusicXML\Map\NodeType;
 use MusicXML\Util\PicoAnnotationParser;
 use ReflectionClass;
-use stdClass;
+use \stdClass;
 
 /**
  * MusicXMLWrtiter to write MusicXML document using annotation
@@ -36,8 +36,14 @@ class MusicXMLWriter extends stdClass // NOSONAR
      */
     private $nullProperties = array();
     
+    /**
+     * @var string
+     */
     private $_objectName = '';
     
+    /**
+     * @var string
+     */
     private $_className = '';
 
     /**
@@ -98,6 +104,11 @@ class MusicXMLWriter extends stdClass // NOSONAR
         return ModelParser::parseModel($this->_className, $this);
     }
     
+    /**
+     * Load XML data from a DOM node
+     *
+     * @param \DOMNode $data The DOM node containing attributes and children
+     */
     private function loadXml($data)
     {
         $maps = $this->mapAttribute();
@@ -114,7 +125,6 @@ class MusicXMLWriter extends stdClass // NOSONAR
             else if($child->nodeType == NodeType::ATTRIBUTE)
             {
                 // process element
-                echo "ATTRIBUTE\r\n";
             }
             
             
@@ -237,7 +247,7 @@ class MusicXMLWriter extends stdClass // NOSONAR
      * Set property value
      *
      * @param string $propertyName
-     * @param mixed|null
+     * @param mixed|null $propertyValue
      * @param bool $skipModifyNullProperties
      * @return self
      */
@@ -270,7 +280,8 @@ class MusicXMLWriter extends stdClass // NOSONAR
      * Get property value 
      *
      * @param string $propertyName
-     * @return mixed|null
+     * @param mixed|null $defaultValue
+     * @return mixed|null 
      */
     public function getOrDefault($propertyName, $defaultValue = null)
     {
@@ -359,6 +370,8 @@ class MusicXMLWriter extends stdClass // NOSONAR
 
     /**
      * Get object value
+     * 
+     * @param bool $snakeCase
      * @return stdClass
      */
     public function value($snakeCase = false)
@@ -385,6 +398,8 @@ class MusicXMLWriter extends stdClass // NOSONAR
     
     /**
      * Get object value
+     * 
+     * @param bool $snakeCase
      * @return stdClass
      */
     public function valueObject($snakeCase = false)
@@ -394,6 +409,8 @@ class MusicXMLWriter extends stdClass // NOSONAR
 
     /**
      * Get object value as associative array
+     * 
+     * @param bool $snakeCase
      * @return array
      */
     public function valueArray($snakeCase = false)
@@ -474,8 +491,8 @@ class MusicXMLWriter extends stdClass // NOSONAR
     
     /**
      * Property list
-     * @var bool $reflectSelf
-     * @var bool $asArrayProps
+     * @param bool $reflectSelf
+     * @param bool $asArrayProps
      * @return array
      */
     protected function propertyList($reflectSelf = false, $asArrayProps = false)
@@ -693,6 +710,8 @@ class MusicXMLWriter extends stdClass // NOSONAR
     /**
      * Get XML
      *
+     * @param \DOMDocument $domdoc DOM document
+     * @param string|null $name Tag name
      * @return DOMNode
      */
     public function toXml($domdoc, $name = null)

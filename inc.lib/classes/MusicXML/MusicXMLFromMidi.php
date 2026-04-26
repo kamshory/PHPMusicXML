@@ -9,6 +9,7 @@ use MusicXML\Exceptions\FileNotFoundException;
 use MusicXML\Model\Accidental;
 use MusicXML\Model\Attributes;
 use MusicXML\Model\Chord;
+use MusicXML\Model\Clef;
 use MusicXML\Model\DisplayOctave;
 use MusicXML\Model\DisplayStep;
 use MusicXML\Model\Divisions;
@@ -31,6 +32,7 @@ use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\ScorePartwise;
+use MusicXML\Model\Sign;
 use MusicXML\Model\Staves;
 use MusicXML\Model\Technical;
 use MusicXML\Model\TextElement;
@@ -917,7 +919,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             }
 
             if ($channelId == 10) {
-                $percussionClef = new \MusicXML\Model\Clef(array('sign' => new \MusicXML\Model\Sign('percussion')));
+                $percussionClef = new Clef(array('sign' => new Sign('percussion')));
                 $this->clefs[$channelId] = array($percussionClef);
             } else {
                 $this->clefs[$channelId] = MusicXMLUtil::getClef($this->noteMin, $this->noteMax);
@@ -1365,16 +1367,16 @@ class MusicXMLFromMidi extends MusicXMLBase
                 }
 
                 if ($remainingDuration <= $measureLength) {
-                    $note->notations[0]->tied = array(new \MusicXML\Model\Tied(array('type'=>'stop')));
-                    $note->tie = new \MusicXML\Model\Tie(array('type'=>'stop'));
+                    $note->notations[0]->tied = array(new Tied(array('type'=>'stop')));
+                    $note->tie = new Tie(array('type'=>'stop'));
                 } else {
                     $note->notations[0]->tied = array(
-                        new \MusicXML\Model\Tied(array('type'=>'stop')),
-                        new \MusicXML\Model\Tied(array('type'=>'start'))
+                        new Tied(array('type'=>'stop')),
+                        new Tied(array('type'=>'start'))
                     );
                     $note->tie = array(
-                        new \MusicXML\Model\Tie(array('type'=>'stop')),
-                        new \MusicXML\Model\Tie(array('type'=>'start'))
+                        new Tie(array('type'=>'stop')),
+                        new Tie(array('type'=>'start'))
                     );
                 }
 

@@ -27,12 +27,12 @@ class MusicXML extends MusicXMLBase
                 break;
             }
         }
-        echo $object;  
-        
+        echo $object;
+
     }
 
-    
-    
 
-    
+
+
+
 }

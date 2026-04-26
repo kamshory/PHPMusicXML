@@ -10,9 +10,9 @@ use MusicXML\Util\PicoAnnotationParser;
 
 class MusicXMLBuilder
 {
-    const ANNOTATION_VAR = "var"; 
+    const ANNOTATION_VAR = "var";
     const ANNOTATION_ELEMENT = "Element";
-    const ANNOTATION_PROPERTY_ELEMENT = "PropertyElement"; 
+    const ANNOTATION_PROPERTY_ELEMENT = "PropertyElement";
     const ANNOTATION_ATTRIBUTE = "Attribute";
     const ANNOTATION_TEXT_CONTENT = "TextContent";
     const ANNOTATION_XML = "Xml";
@@ -21,7 +21,7 @@ class MusicXMLBuilder
     const KEY_IDENTIFICATION = "identification";
     const ELEMENT = "element";
     const DATE_FORMAT = "Y-m-d";
-    
+
     /**
      * Class name
      *
@@ -42,7 +42,12 @@ class MusicXMLBuilder
      * @var MusicXMLWriter
      */
     private $object = null;
-    
+
+    /**
+     * Constructor
+     *
+     * @param MusicXMLWriter $object The object instance to build XML from
+     */
     public function __construct($object)
     {
         $this->className = get_class($object);
@@ -65,7 +70,7 @@ class MusicXMLBuilder
             }
         }
     }
-    
+
     /**
      * Get value name
      *
@@ -77,7 +82,7 @@ class MusicXMLBuilder
     {
         return !empty($values) && isset($values[self::KEY_NAME]) ? trim($values[self::KEY_NAME]) : $propertyName;
     }
-    
+
     /**
      * Get value identification
      *
@@ -88,7 +93,7 @@ class MusicXMLBuilder
     {
         return !empty($values) && isset($values[self::KEY_IDENTIFICATION]) ? trim($values[self::KEY_IDENTIFICATION]) : null;
     }
-    
+
     /**
      * Get tag name
      *
@@ -108,7 +113,7 @@ class MusicXMLBuilder
         }
         return $tagName;
     }
-    
+
     /**
      * Get data type
      *
@@ -130,7 +135,7 @@ class MusicXMLBuilder
         }
         return $paramValue;
     }
-    
+
     /**
      * MusicXMLPropertyInfo
      *
@@ -143,11 +148,11 @@ class MusicXMLBuilder
         $parameters = $reflexProp->getParameters();
         $musicXMLPropertyInfo = new MusicXMLPropertyInfo();
         $musicXMLPropertyInfo->setName($propertyName);
-        
+
         foreach($parameters as $param=>$paramValue)
         {
             if(strcasecmp($param, self::ANNOTATION_VAR) == 0)
-            {            
+            {
                 $musicXMLPropertyInfo->setType($this->getType($paramValue));
             }
             else if(strcasecmp($param, self::ANNOTATION_ATTRIBUTE) == 0)
@@ -180,9 +185,9 @@ class MusicXMLBuilder
         }
         return $musicXMLPropertyInfo;
     }
-    
-    
-    
+
+
+
     /**
      * Create DOMDocument recorsively
      *
@@ -215,7 +220,7 @@ class MusicXMLBuilder
                                 {
                                     $tag = $propertInfo->getElementName();
                                 }
-                                else 
+                                else
                                 {
                                     $tag = $propertInfo->getName();
                                 }
@@ -246,7 +251,7 @@ class MusicXMLBuilder
                 {
                     // process object
                     if($propertyValue instanceof MusicXMLWriter)
-                    {                     
+                    {
                         if($propertInfo->getElement())
                         {
                             $child = $propertyValue->toXml($domdoc, $propertInfo->getElementName());
@@ -255,13 +260,13 @@ class MusicXMLBuilder
                     }
                     else
                     {
-                        
+
                         // Traditional and PHP data type
                         if($propertInfo->getPropertyElement())
-                        {                          
+                        {
                             if(is_array($propertyValue))
                             {
-                                
+
                                 foreach($propertyValue as $value)
                                 {
                                     if($value instanceof MusicXMLWriter)
@@ -272,7 +277,7 @@ class MusicXMLBuilder
                                 }
                             }
                             else
-                            {                               
+                            {
                                 $value = "";
                                 if($propertyValue instanceof DateTime)
                                 {
@@ -287,7 +292,7 @@ class MusicXMLBuilder
                         }
                         else if($propertInfo->getAttribute())
                         {
-                            
+
                             if($this->notNullAndNotEmpty($propertyValue))
                             {
                                 $domnode->setAttribute($propertInfo->getAttributeName(), $propertyValue);
@@ -304,7 +309,7 @@ class MusicXMLBuilder
         }
         return $domnode;
     }
-    
+
     /**
      * Convert object to string
      *
@@ -323,7 +328,7 @@ class MusicXMLBuilder
         }
         return $value;
     }
-    
+
     /**
      * Check if data is not null and not empty
      *
@@ -339,7 +344,7 @@ class MusicXMLBuilder
      * Get class name
      *
      * @return  string
-     */ 
+     */
     public function getObjectName()
     {
         return $this->objectName;
