@@ -944,7 +944,7 @@ class Midi
 	 * @param string $song
 	 * @return void
 	 */
-	public function parseMid($song)
+	public function parseMidi($song)
 	{
 		if (strpos($song, 'MThd') > 0) {
 			$song = substr($song, strpos($song, 'MThd')); //get rid of RMID header
@@ -986,15 +986,15 @@ class Midi
 	 * Imports Standard MIDI File (typ 0 or 1) (and RMID)
 	 * (if optional parameter $tn set, only track $tn is imported)
 	 *
-	 * @param string $smf_path
+	 * @param string $smfPath
 	 * @return void
 	 */
-	public function importMid($smf_path)
+	public function importMidiFile($smfPath)
 	{
-		$SMF = fopen($smf_path, "rb"); // Standard MIDI File, typ 0 or 1
-		$song = fread($SMF, filesize($smf_path));
-		fclose($SMF);
-		$this->parseMid($song);
+		$smf = fopen($smfPath, "rb"); // Standard MIDI File, typ 0 or 1
+		$song = fread($smf, filesize($smfPath));
+		fclose($smf);
+		$this->parseMidi($song);
 	}
 
 	/**
@@ -1059,9 +1059,9 @@ class Midi
 		if (count($this->tracks) < 1) {
 			$this->_err('MIDI song has no tracks');
 		}
-		$SMF = fopen($mid_path, "wb"); // SMF
-		fwrite($SMF, $this->getMid());
-		fclose($SMF);
+		$smf = fopen($mid_path, "wb"); // SMF
+		fwrite($smf, $this->getMid());
+		fclose($smf);
 		if ($chmod !== false) {
 			@chmod($mid_path, $chmod);
 		}
