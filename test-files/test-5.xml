@@ -2,13 +2,13 @@
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="4.0">
   <work>
-    <work-title>Online</work-title>
+    <work-title>test-5</work-title>
   </work>
   <identification>
     <rights type="music"></rights>
     <encoding>
       <software>Planetbiru</software>
-      <encoding-date>2023-10-27</encoding-date>
+      <encoding-date>2026-04-02</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" type="no" attribute="new-page"/>
@@ -70,14 +70,14 @@
           </articulations>
         </notations>
       </note>
-      <note attack="12" dynamics="141.11" release="13">
+      <note attack="12" dynamics="141.11" release="492">
         <pitch>
           <step>A</step>
           <octave>3</octave>
         </pitch>
         <duration>1</duration>
         <tie type="start"/>
-        <type>quarter</type>
+        <type>eighth</type>
         <notations>
           <tied type="start"/>
           <articulations>
@@ -100,10 +100,12 @@
           <step>A</step>
           <octave>3</octave>
         </pitch>
-        <duration>2</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
+          <articulations>
+            <staccato/>
+          </articulations>
         </notations>
       </note>
       <note attack="0" release="4">
@@ -139,7 +141,7 @@
           </articulations>
         </notations>
       </note>
-      <note attack="26" dynamics="141.11" release="27">
+      <note attack="26" dynamics="141.11" release="266">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -169,10 +171,12 @@
           <step>C</step>
           <octave>4</octave>
         </pitch>
-        <duration>1</duration>
         <tie type="stop"/>
         <notations>
           <tied type="stop"/>
+          <articulations>
+            <staccato/>
+          </articulations>
         </notations>
       </note>
       <note attack="0" release="1">

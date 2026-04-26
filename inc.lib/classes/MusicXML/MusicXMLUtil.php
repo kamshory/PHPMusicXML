@@ -33,28 +33,28 @@ class MusicXMLUtil
         $value = $duration/(4*$divisions);
         foreach(self::$type as $type=>$valueType)
         {
-            if($value > $valueType)
+            if($value >= $valueType)
             {
                 return $type;
             }
         }
-        return 'whole';
+        return '1024th';
     }
     protected static $type = array(
-        'maxima'=>5,
+        'maxima'=>8,
         'long'=>4,
         'breve'=>2,
         'whole'=>1,
-        'half'=>1/2,
-        'quarter'=>1/4,
-        'eighth'=>1/8,
-        '16th'=>1/16,
-        '32nd'=>1/32,
-        '64th'=>1/64,
-        '128th'=>1/128,
-        '256th'=>1/256,
-        '512th'=>1/512,
-        '1024th'=>1/1024
+        'half'=>0.5,
+        'quarter'=>0.25,
+        'eighth'=>0.125,
+        '16th'=>0.0625,
+        '32nd'=>0.03125,
+        '64th'=>0.015625,
+        '128th'=>0.0078125,
+        '256th'=>0.00390625,
+        '512th'=>0.001953125,
+        '1024th'=>0.0009765625
     );
     
     /**
@@ -87,7 +87,8 @@ class MusicXMLUtil
      */
     public static function getAttackRelease($measureIndex, $message, $timebase, $timeSignature, $duration)
     {
-        $timeRelative = $message['abstime'] - ($measureIndex * $timebase);
+        $measureLength = $timebase * $timeSignature->getBeats();
+        $timeRelative = $message['abstime'] - ($measureIndex * $measureLength);
         $attack = $timeRelative * $timeSignature->getBeats() / ($timebase);
         $release = $attack + $duration;
         return new AttackRelease($attack, $release);     

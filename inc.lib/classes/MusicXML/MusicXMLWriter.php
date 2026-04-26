@@ -604,7 +604,10 @@ class MusicXMLWriter extends stdClass // NOSONAR
         }
         else if (strncasecmp($method, "unset", 5) === 0) {
             $var = lcfirst(substr($method, 5));
-            $this->removeValue($var, $params[0]);
+            if(isset($this->{$var}))
+            {
+                $this->removeValue($var, isset($params[0]) ? $params[0] : false);
+            }
             return $this;
         }
         else if (strncasecmp($method, "booleanToTextBy", 15) === 0) {
