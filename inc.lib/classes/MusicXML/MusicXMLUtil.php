@@ -387,7 +387,7 @@ class MusicXMLUtil
     {
         if ($channelId == 10) {
             $id = $instrumentId + 1;
-            if(isset(MusicXMLInstrument::DRUM_SET[$instrumentId]))
+            if(null !== (MusicXMLInstrument::DRUM_SET[$instrumentId]))
             {
                 return MusicXMLInstrument::DRUM_SET[$instrumentId];
             }
