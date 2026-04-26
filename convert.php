@@ -78,7 +78,7 @@ foreach ($fileList as $file) {
             }
             echo "Convert file $source -> $result\n";
 
-            $midi = $musicXMLConverter->loadMidi($source); // This returns a MidiMeasure object
+            $midi = $musicXMLConverter->loadMidiFile($source); // This returns a MidiMeasure object
             $musicXMLConverter->setSelectedChannels($channels);
             $xml = $musicXMLConverter->midiToMusicXml($midi, basename($source, '.mid'), '4.0', MXL::FORMAT_XML);
 

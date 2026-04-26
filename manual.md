@@ -71,7 +71,7 @@ use MusicXML\MusicXMLFromMidi;
 use MusicXML\Util\MXL;
 
 $converter = new MusicXMLFromMidi();
-$midi = $converter->loadMidi('input.mid');
+$midi = $converter->loadMidiFile('input.mid');
 $mxlContent = $converter->midiToMusicXml($midi, 'Title', '4.0', MXL::FORMAT_MXL);
 file_put_contents('output.mxl', $mxlContent);
 ```
