@@ -191,6 +191,19 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private $lyrics = array();
 
+    /**
+     * Selected channels to convert. If null, all channels are converted.
+     *
+     * @var array
+     */
+    private $selectedChannels = null;
+
+    /**
+     * Measure onsets and their calculated X positions
+     * @var array
+     */
+    private $measureOnsets = array();
+
 
     /**
      * Divisions per quarter note, derived from MIDI timebase.
@@ -222,7 +235,19 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->divisionsPerQuarter = 0;
         $this->tieStop = array();
         $this->tieContinue = array();
+        $this->measureOnsets = array();
         $this->lyrics = array();
+    }
+
+    /**
+     * Set selected channels
+     *
+     * @param array $selectedChannels
+     * @return void
+     */
+    public function setSelectedChannels($selectedChannels)
+    {
+        $this->selectedChannels = $selectedChannels;
     }
 
 
@@ -263,6 +288,9 @@ class MusicXMLFromMidi extends MusicXMLBase
         $port
     )
     {
+        if ($this->selectedChannels !== null && !in_array($channelId, $this->selectedChannels)) {
+            return;
+        }
         $this->partList[$instrumentId] = array(
             'instrumentId' => $instrumentId,
             'channelId' => $channelId,
@@ -287,6 +315,9 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function addEvent($eventName, $message, $timebase, $abstime, $n = 0, $ch = 0, $v = 0) //NOSONAR
     {
+        if ($ch > 0 && $this->selectedChannels !== null && !in_array($ch, $this->selectedChannels)) {
+            return;
+        }
         if(!isset($this->timeSignature))
         {
             $this->timeSignature = new TimeSignature(array(0, 'TimeSig', '4/4', 24, 8));
@@ -816,6 +847,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePartwise->partList->partGroup = array();
 
         $this->buildPartList($midi);
+        $this->buildTimeDivisions($timebase);
         if (isset($this->copyright)) {
             $scorePartwise->identification->rights = array(new Rights($this->copyright));
         }
@@ -1037,41 +1069,60 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function buildTimeDivisions($timebase)
     {
-        $maxMeasure = 0;
+        $measureLength = $this->timeSignature->getBeats() * $timebase;
+        $this->measureOnsets = array();
+        $allOnsets = array();
         $notes = array();
+
         foreach($this->partList as $part)
         {
             $ch = $part['channelId'];
+            if (!isset($this->measures[$ch])) continue;
             foreach($this->measures[$ch] as $measureIndex => $events)
             {
                 foreach($events as $event)
                 {
-                    if($event['event'] == 'On')
+                    if($event['event'] == 'On' || $event['event'] == 'Off')
                     {
-                        if(!isset($notes[$measureIndex]))
-                        {
-                            $notes[$measureIndex] = array();
+                        $mIdx = (int)$measureIndex;
+                        if(!isset($allOnsets[$mIdx])) $allOnsets[$mIdx] = array();
+                        $allOnsets[$mIdx][$event['abstime']] = true;
+                        
+                        if($event['event'] == 'On') {
+                            if(!isset($notes[$mIdx])) $notes[$mIdx] = array();
+                            $notes[$mIdx][] = $event;
                         }
-                        if($maxMeasure < $measureIndex)
-                        {
-                            $maxMeasure = $measureIndex;
-                        }
-                        $notes[$measureIndex][] = $event;
                     }
                 }
             }
         }
-        for($i = 0; $i < $maxMeasure; $i++)
+
+        for($i = 0; $i <= $this->maxMeasure; $i++)
         {
-            if(isset($notes[$i]))
-            {
+            $this->setMeasureDivisions($i, $timebase);
+            if(isset($notes[$i])) {
                 $measureDivison = new MeasureDivision($timebase, $notes[$i]);
-                $divisions = $measureDivison->getDivision();
-                $this->setMeasureDivisions($i, $divisions);
+                $this->setMeasureDivisions($i, $measureDivison->getDivision());
             }
-            else
-            {
-                $this->setMeasureDivisions($i, $timebase);
+
+            if (isset($allOnsets[$i])) {
+                ksort($allOnsets[$i]);
+                $currentX = 60; // Padding kiri birama
+                $this->measureOnsets[$i] = array();
+                
+                foreach ($allOnsets[$i] as $abstime => $val) {
+                    $this->measureOnsets[$i][$abstime] = $currentX;
+                    
+                    // Cari lirik terpanjang pada titik waktu ini
+                    $maxLen = 0;
+                    foreach ($this->lyrics as $chLyrics) {
+                        if (isset($chLyrics[$abstime])) $maxLen = max($maxLen, mb_strlen($chLyrics[$abstime]));
+                    }
+                    // Porsi minimal per nada adalah 60 tenths, atau disesuaikan lirik (karakter * 14)
+                    $currentX += max(60, $maxLen * 14.0);
+                }
+                // Set lebar birama total agar tidak memotong nada terakhir
+                $this->measureWidth[$i] = $currentX + 60;
             }
         }
     }
@@ -1111,6 +1162,9 @@ class MusicXMLFromMidi extends MusicXMLBase
         $measure = new MeasurePartwise();
         $attributes = new Attributes();
         $measure->number = $measureIndex + 1;
+        if (isset($this->measureWidth[$measureIndex])) {
+            $measure->width = $this->measureWidth[$measureIndex];
+        }
         $directions = [];
         $divisions = $this->divisionsPerQuarter;
         $noteMessages = array();
@@ -1311,6 +1365,11 @@ class MusicXMLFromMidi extends MusicXMLBase
 
                 $note->duration = new Duration($xmlDuration);
                 $note->type = new Type(MusicXMLUtil::getNoteType($xmlDuration, $divisions));
+                
+                $absTime = $measureIndex * $measureLength;
+                if (isset($this->measureOnsets[$measureIndex][$absTime])) {
+                    $note->defaultX = $this->measureOnsets[$measureIndex][$absTime];
+                }
 
                 $measure->elements[] = $note;
                 if ($firstTie) $xmlCursor += $xmlDuration;
@@ -1345,9 +1404,13 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $offsetTicks = $message['abstime'] % $measureLength;
                 $xmlStart = (int) round($offsetTicks * $divisions / $timebase);
                 
-                // If current note starts before or at the cursor, it must be a chord 
-                // to prevent measure duration overflow.
-                $isChord = ($xmlStart <= $xmlCursor && $idx > 0) || ($message['abstime'] == $prevAbstime);
+                /**
+                 * SEBELUMNYA: $isChord = ($xmlStart <= $xmlCursor && $idx > 0) || ...
+                 * Ini salah karena nada yang mulai tepat saat nada sebelumnya habis dianggap chord.
+                 * 
+                 * SEKARANG: Chord hanya jika abstime benar-benar sama.
+                 */
+                $isChord = ($idx > 0 && $message['abstime'] == $prevAbstime);
 
                 if (!$isChord && $xmlStart > $xmlCursor) {
                     $xmlGap = $xmlStart - $xmlCursor;
@@ -1361,17 +1424,23 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note = $this->createSoundNote($measureIndex, $partId, $channelId, $message, $divisions, $timebase, $duration);
 
                 // Attach lyrics if available at this abstime
-                // Only attach lyrics to channel 4 to avoid overlapping across multiple channels/parts
-                $lyricText = null;
-                if ($channelId == 4) {
-                    // Cek lirik di channel nada saat ini atau channel 0 (global MIDI text)
-                    $lyricText = isset($this->lyrics[$channelId][$message['abstime']]) ? $this->lyrics[$channelId][$message['abstime']] : (isset($this->lyrics[0][$message['abstime']]) ? $this->lyrics[0][$message['abstime']] : null);
-                }
+                $lyricText = isset($this->lyrics[$channelId][$message['abstime']]) ? $this->lyrics[$channelId][$message['abstime']] : (isset($this->lyrics[0][$message['abstime']]) ? $this->lyrics[0][$message['abstime']] : null);
                 
-                if ($lyricText !== null) {
+                /**
+                 * Sesuai permintaan, lirik hanya dilampirkan pada channel 4.
+                 * Hal ini mencegah lirik muncul tumpang tindih di banyak staff
+                 * dan mengikuti konvensi umum pada MuseScore.
+                 */
+                if ($lyricText !== null && !$isChord && $channelId == 4) {
                     $lyric = new Lyric();
                     $lyric->text = array(new TextElement($lyricText));
+                    $lyric->justify = 'center';
                     $note->lyric = array($lyric);
+                }
+
+                // Atur koordinat X eksplisit
+                if (isset($this->measureOnsets[$measureIndex][$message['abstime']])) {
+                    $note->defaultX = $this->measureOnsets[$measureIndex][$message['abstime']];
                 }
 
                 if ($isChord) {
@@ -1405,6 +1474,11 @@ class MusicXMLFromMidi extends MusicXMLBase
             $note = $this->createRestNote($measureIndex, isset($message) ? $message : array(), $divisions, $timebase, 0, $xmlCursor == 0);
             $note->duration = new Duration($xmlRemain);
             $note->type = new Type(MusicXMLUtil::getNoteType($xmlRemain, $divisions));
+            
+            $absTime = ($measureIndex * $measureLength) + (int)round($xmlCursor * $timebase / $divisions);
+            if (isset($this->measureOnsets[$measureIndex][$absTime])) {
+                $note->defaultX = $this->measureOnsets[$measureIndex][$absTime];
+            }
             $measure->elements[] = $note;
         }
 

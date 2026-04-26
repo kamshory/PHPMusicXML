@@ -1,24 +1,54 @@
 # PHPMusicXML
 
-PHPMUsicXML is a library for creating MusicXML files and converting music from MIDI format to MusicXML format. This library contains logic and models. Each element in MusicXML is represented by one class as its model.
+PHPMusicXML is a robust PHP library for creating, manipulating, and converting music notation files. It specializes in converting MIDI files into highly readable MusicXML format, with advanced logic to handle complex musical notation and lyrics. Each element in the MusicXML schema is represented by a dedicated class model within the library.
 
-# Elements
+## Key Features
 
-PHPMusicXML refer to https://github.com/w3c/musicxml/tree/gh-pages/docs/musicxml-reference/elements to create models.
+1. **Advanced Lyric Spacing**: Automatically calculates and intervenes in note positioning (`default-x`) to prevent lyric overlaps, ensuring professional-looking scores.
+2. **Channel Filtering**: Convert specific MIDI channels or the entire file.
+3. **Percussion Support**: Automatic mapping of MIDI Channel 10 to standard MusicXML percussion notation.
+4. **Chord Detection**: Intelligent detection of simultaneous notes.
+5. **High Compatibility**: Optimized for popular notation software like MuseScore, Sibelius, and Finale.
+6. **Comprehensive Models**: Implements elements based on the MusicXML 4.0 Reference.
 
-## Expected Result
+## Core Capabilities
 
-Expected capabilities of this library are:
+1. Read, modify, and write MusicXML files.
+2. Convert MIDI to MusicXML (Compressed `.mxl` or Uncompressed `.xml`).
+3. Convert MusicXML to MIDI (Experimental).
 
-1. read MusicXML file, modify and write modified MusicXML file
-2. convert music from MIDI format to MusicXML format either compressed or uncompressed
-3. convert music from MusicXML format to MIDI format either compressed or uncompressed
+## Getting Started
 
-## Example
+### 1. Command Line Usage (CLI)
 
-### Convert MIDI to uncompressed MusicXML
+The easiest way to convert files is using the `convert.php` script:
 
-Uncompressed MusicXML is XML file according to https://www.w3.org/2021/06/musicxml40/
+**Basic Conversion:**
+```bash
+php convert.php "input.mid"
+```
+
+**Select Specific Channels (e.g., Vocal on Channel 4):**
+```bash
+php convert.php "input.mid" --channels=4
+```
+
+**Bulk Conversion:**
+```bash
+php convert.php --dir="midi_folder"
+```
+
+*For more detailed CLI instructions, please refer to manual.md.*
+
+---
+
+### 2. Library Usage (PHP)
+
+You can integrate PHPMusicXML directly into your project.
+
+#### Convert MIDI to Uncompressed MusicXML
+
+Uncompressed MusicXML is a standard XML file compatible with most notation software.
 
 ```php
 <?php
@@ -94,6 +124,7 @@ catch(Exception $e)
 2. October 9th 2023 - 21 percent (95 of 444) elements created
 3. October 10th 2023 - 53 percent (235 of 444) elements created
 4. October 11th 2023 - 100 percent elements created
+5. April 26th 2026 - Success convert complex MIDI into MusicXML with many notes
 
 ## Support Is Required
 

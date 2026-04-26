@@ -15,12 +15,28 @@ function fileExtension($name)
 
 $fileList = array();
 
-// Command-line usage:
-// php convert.php input.mid            -> output: input.xml
-// php convert.php input.mid output.xml -> output file explicitly
-// php convert.php --dir=test-files     -> convert all .mid files in folder
-$input = isset($argv[1]) ? $argv[1] : null;
-$output = isset($argv[2]) ? $argv[2] : null;
+$input = null;
+$output = null;
+$channels = null;
+
+// Parse arguments and flags
+foreach ($argv as $idx => $arg) {
+    if ($idx == 0) continue;
+    
+    if (strpos($arg, '--channels=') === 0) {
+        $channelsRaw = substr($arg, 11);
+        if (!empty($channelsRaw)) {
+            $channels = array_map('intval', explode(',', $channelsRaw));
+        }
+    } elseif (strpos($arg, '--dir=') === 0) {
+        $input = $arg;
+    } elseif (strpos($arg, '--') === 0) {
+        // ignore unknown flags
+    } else {
+        if ($input === null) $input = $arg;
+        elseif ($output === null) $output = $arg;
+    }
+}
 
 if ($input && strpos($input, '--dir=') === 0) {
     $directory = substr($input, 6);
@@ -63,6 +79,7 @@ foreach ($fileList as $file) {
             echo "Convert file $source -> $result\n";
 
             $midi = $musicXMLConverter->loadMidi($source); // This returns a MidiMeasure object
+            $musicXMLConverter->setSelectedChannels($channels);
             $xml = $musicXMLConverter->midiToMusicXml($midi, basename($source, '.mid'), '4.0', MXL::FORMAT_XML);
 
             file_put_contents($result, $xml);
@@ -71,4 +88,3 @@ foreach ($fileList as $file) {
         }
     }
 }
-
