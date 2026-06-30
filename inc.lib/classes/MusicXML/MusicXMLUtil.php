@@ -42,6 +42,39 @@ class MusicXMLUtil
     }
 
     /**
+     * Get number of dots for a given duration and divisions
+     *
+     * @param integer $duration
+     * @param integer $divisions
+     * @return integer
+     */
+    public static function getNoteDots($duration, $divisions)
+    {
+        if ($divisions <= 0 || $duration <= 0) {
+            return 0;
+        }
+        $value = $duration / (4 * $divisions);
+        foreach (self::$type as $type => $valueType) {
+            if ($value >= $valueType) {
+                $baseDuration = $valueType * 4 * $divisions;
+                $ratio = $duration / $baseDuration;
+                if (abs($ratio - 1.5) < 0.01) {
+                    return 1;
+                }
+                if (abs($ratio - 1.75) < 0.01) {
+                    return 2;
+                }
+                if (abs($ratio - 1.875) < 0.01) {
+                    return 3;
+                }
+                break;
+            }
+        }
+        return 0;
+    }
+
+
+    /**
      * @var array
      */
     protected static $type = array(
@@ -208,24 +241,19 @@ class MusicXMLUtil
      */
     public static function getClef($min, $max)
     {
-        $mod = $min % 12;
-
         $clefs = array();
-        for($i = $max; $i > $min; $i-=36)
-        {
-            $clef1 = new Clef();
-            if($mod >= 5)
-            {
-                $clef1->sign = new Sign('F');
-                $clef1->line = new Line(4);
-            }
-            else
-            {
-                $clef1->sign = new Sign('G');
-                $clef1->line = new Line('2');
-            }
-            $clefs[] = $clef1;
-        }        
+        $clef1 = new Clef();
+
+        // Jika nada terendah berada di bawah F3 (MIDI 53), gunakan Kunci F (Bass).
+        // Selain itu, gunakan Kunci G (Treble).
+        if ($min < 53) {
+            $clef1->sign = new Sign('F');
+            $clef1->line = new Line(4);
+        } else {
+            $clef1->sign = new Sign('G');
+            $clef1->line = new Line(2);
+        }
+        $clefs[] = $clef1;
         
         return $clefs;
     }
@@ -394,19 +422,19 @@ class MusicXMLUtil
     public static function getInstrumentName($instrumentId, $channelId)
     {
         if ($channelId == 10) {
-            $id = $instrumentId + 1;
-            if(null !== (MusicXMLInstrument::DRUM_SET[$instrumentId]))
+            if(isset(MusicXMLInstrument::DRUM_SET[$instrumentId]))
             {
                 return MusicXMLInstrument::DRUM_SET[$instrumentId];
             }
             else
             {
-                return array('Instrument ' . $id, 'Instrument ' . $id);
+                return array('Percussion ' . ($instrumentId + 1), 'Perc.');
             }
-            
-        } else {
+        } 
+        if (isset(MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId])) {
             return MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId];
         }
+        return array('Instrument ' . ($instrumentId + 1), 'Instr.');
     }
 
 }

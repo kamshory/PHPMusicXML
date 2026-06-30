@@ -121,9 +121,6 @@ abstract class MusicXMLBase
     public function getNotation()
     {
         $notations = new Notations();
-        $articulation = new Articulations();
-        $articulation->staccato = [new Staccato()];
-        $notations->articulations = $articulation;
         return $notations;
     }
 
