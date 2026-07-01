@@ -2,15 +2,27 @@
 
 namespace MusicXML;
 
-require_once dirname(dirname(__DIR__)) . '/vendor/autoload.php';
-
 /**
  * SheetMusicPDF class extending FPDF to draw music notation elements
  */
 class SheetMusicPDF extends \Fpdf\Fpdf
 {
     /**
-     * Draw page footer with page number
+     * Composer name
+     *
+     * @var string
+     */
+    public $composer = 'Unknown';
+
+    /**
+     * Copyright year
+     *
+     * @var string
+     */
+    public $year = '';
+
+    /**
+     * Draw page footer with copyright and page number
      *
      * @return void
      */
@@ -18,6 +30,14 @@ class SheetMusicPDF extends \Fpdf\Fpdf
     {
         $this->SetY(-15);
         $this->SetFont('Times', 'I', 8);
+        
+        $yearStr = !empty($this->year) ? $this->year : date('Y');
+        $copyrightText = chr(169) . ' ' . $this->composer . ' ' . $yearStr;
+        
+        $this->SetX(12);
+        $this->Cell(0, 10, $copyrightText, 0, 0, 'L');
+        
+        $this->SetX(12);
         $this->Cell(0, 10, $this->PageNo() . ' of {nb}', 0, 0, 'R');
     }
 
@@ -31,48 +51,112 @@ class SheetMusicPDF extends \Fpdf\Fpdf
      * @param string $style Border/Fill style ('D', 'F', 'FD', 'DF')
      * @return void
      */
-    public function Ellipse($x, $y, $rx, $ry, $style = 'D')
+    public function Ellipse($x, $y, $rx, $ry, $style = 'D', $rotation = 0)
     {
-        if ($style == 'F') {
-            $op = 'f';
-        } elseif ($style == 'FD' || $style == 'DF') {
-            $op = 'B';
-        } else {
-            $op = 'S';
-        }
-        
-        $lx = 4 / 3 * (M_SQRT2 - 1) * $rx;
-        $ly = 4 / 3 * (M_SQRT2 - 1) * $ry;
-        
+        $op = match ($style) {
+            'F' => 'f',          // fill saja
+            'FD', 'DF' => 'B',   // fill + stroke
+            'D' => 'S',          // stroke saja
+        };
+
         $k = $this->k;
         $h = $this->h;
-        
+        $c = 0.5522847498;
+
+        $lx = $rx * $c;
+        $ly = $ry * $c;
+
+        // Simpan transformasi lama
+        $this->_out('q');
+
+        // Rotasi sistem koordinat di sekitar titik pusat
+        $rot = deg2rad($rotation);
+        $cosR = cos($rot);
+        $sinR = sin($rot);
+        $this->_out(sprintf('%.5f %.5f %.5f %.5f %.5f %.5f cm',
+            $cosR, $sinR, -$sinR, $cosR, $x * $k, ($h - $y) * $k));
+
+        // Gambar elips di koordinat lokal (tanpa rotasi)
         $this->_out(sprintf(
             '%.2f %.2f m %.2f %.2f %.2f %.2f %.2f %.2f c',
-            ($x + $rx) * $k, ($h - $y) * $k,
-            ($x + $rx) * $k, ($h - ($y - $ly)) * $k,
-            ($x + $lx) * $k, ($h - ($y - $ry)) * $k,
-            $x * $k, ($h - ($y - $ry)) * $k
+            $rx * $k, 0,
+            $rx * $k, -$ly * $k,
+            $lx * $k, -$ry * $k,
+            0, -$ry * $k
         ));
         $this->_out(sprintf(
             '%.2f %.2f %.2f %.2f %.2f %.2f c',
-            ($x - $lx) * $k, ($h - ($y - $ry)) * $k,
-            ($x - $rx) * $k, ($h - ($y - $ly)) * $k,
-            ($x - $rx) * $k, ($h - $y) * $k
+            -$lx * $k, -$ry * $k,
+            -$rx * $k, -$ly * $k,
+            -$rx * $k, 0
         ));
         $this->_out(sprintf(
             '%.2f %.2f %.2f %.2f %.2f %.2f c',
-            ($x - $rx) * $k, ($h - ($y + $ly)) * $k,
-            ($x - $lx) * $k, ($h - ($y + $ry)) * $k,
-            $x * $k, ($h - ($y + $ry)) * $k
+            -$rx * $k, $ly * $k,
+            -$lx * $k, $ry * $k,
+            0, $ry * $k
         ));
         $this->_out(sprintf(
             '%.2f %.2f %.2f %.2f %.2f %.2f c %s',
-            ($x + $lx) * $k, ($h - ($y + $ry)) * $k,
-            ($x + $rx) * $k, ($h - ($y + $ly)) * $k,
-            ($x + $rx) * $k, ($h - $y) * $k,
+            $lx * $k, $ry * $k,
+            $rx * $k, $ly * $k,
+            $rx * $k, 0,
             $op
         ));
+
+        // Kembalikan transformasi
+        $this->_out('Q');
+    }
+
+    /**
+     * Draw a note flag (eighth, sixteenth, thirty-second) at the specified position and direction
+     * 
+     * @param float $x X coordinate
+     * @param float $y Y coordinate
+     * @param string $direction 'up' or 'down'
+     * @param string $type 'eighth', '16th', or '32nd'
+     */
+    public function DrawNoteFlag($x, $y, $direction = 'up', $type = 'eighth')
+    {
+        // Path SVG daun not ramping dan tajam di ujung
+        $flagPathUp = "M -0.112 3.631 
+                    C -0.112 0 -0.3031 0 0 0 
+                    C 0.28 0.1911 0 0 0 0 
+                    C 0.42 0.6879 0.512 0.7834 0.531 0.898 
+                    C 1.4 2.8 1.4 2.8 2.327 4.051 
+                    C 4.028 5.943 4.525 7.071 4.525 8.581 
+                    C 4.506 9.994 3.263 13.014 2.996 12.899 
+                    C 3.378 11.829 3.913 10.682 4.047 9.727 
+                    C 4.219 8.561 3.741 6.879 1.831 5.16 
+                    C 0.779 4.294 0 4.2 -0.112 3.631 Z";
+
+        $flagPathDown = "M -0.112 -3.631 
+                        C -0.112 0 -0.3031 0 0 0 
+                        C 0.28 -0.1911 0 0 0 0 
+                        C 0.42 -0.6879 0.512 -0.7834 0.531 -0.898 
+                        C 1.4 -2.8 1.4 -2.8 2.327 -4.051 
+                        C 4.028 -5.943 4.525 -7.071 4.525 -8.581 
+                        C 4.506 -9.994 3.263 -13.014 2.996 -12.899 
+                        C 3.378 -11.829 3.913 -10.682 4.047 -9.727 
+                        C 4.219 -8.561 3.741 -6.879 1.831 -5.16 
+                        C 0.779 -4.294 0 -4.2 -0.112 -3.631 Z";
+
+        $path = ($direction === 'up') ? $flagPathUp : $flagPathDown;
+
+        // Skala proporsional (lebih kecil agar ramping)
+        $scale = 0.42;
+
+        // Gambar sesuai tipe not
+        if ($type === 'eighth' || $type === '1/8') {
+            $this->DrawSVGPath($path, $x, $y, $scale, $scale, true);
+        } elseif ($type === '16th' || $type === '1/16') {
+            $this->DrawSVGPath($path, $x, $y, $scale, $scale, true);
+            $this->DrawSVGPath($path, $x, $y + (($direction === 'up') ? 1.7 : -1.7), $scale, $scale, true);
+        } elseif ($type === '32nd' || $type === '1/32') {
+            $this->DrawSVGPath($path, $x, $y, $scale, $scale, true);
+            $this->DrawSVGPath($path, $x, $y + (($direction === 'up') ? 1.7 : -1.7), $scale, $scale, true);
+            $this->DrawSVGPath($path, $x, $y + (($direction === 'up') ? 3.4 : -3.4), $scale, $scale, true);
+        }
     }
 
     /**
@@ -222,7 +306,7 @@ class SheetMusicPDF extends \Fpdf\Fpdf
      * @param bool|string $fill Fill flag or fill/stroke style indicator ('B', true, false)
      * @return void
      */
-    public function DrawSVGPath($pathStr, $xOffset, $yOffset, $scaleX, $scaleY, $fill = true)
+    public function DrawSVGPath($pathStr, $xOffset, $yOffset, $scaleX, $scaleY, $fill = true, $stroke = 'solid')
     {
         // Tokenize numbers and commands (expanded to support Q, q, T, t, H, h, V, v, A, a)
         preg_match_all('/([MLCQHVZTAmlcqhvzta])|(-?\d*\.?\d+)/', $pathStr, $matches);
@@ -497,13 +581,21 @@ class SheetMusicPDF extends \Fpdf\Fpdf
             $lastCmdWasQ = $isQ;
         }
         
-        if ($fill === 'B') {
-            $op = " B "; // Fill and stroke
+        // Tentukan operator akhir berdasarkan fill dan stroke
+        if ($stroke === 'none') {
+            $op = $fill ? " f* " : ""; // gunakan even‑odd fill rule
+        } elseif ($stroke === 'solid') {
+            $op = $fill ? " f* " : " S ";
+        } elseif ($stroke === 'B') {
+            $op = " B ";
         } else {
-            $op = $fill ? " f " : " S ";
+            $op = $fill ? " f* " : " S ";
         }
+
+
         $pdfCmds .= $op;
         $this->_out($pdfCmds);
+
     }
 
     /**
@@ -550,8 +642,11 @@ class SheetMusicPDF extends \Fpdf\Fpdf
     public function DrawSharp($x, $y)
     {
         // Custom ultra-thin elegant sharp path with shorter stems
-        $path = "M 1.6 0.5 L 2.0 0.5 L 2.0 9.5 L 1.6 9.5 Z M 3.0 2.0 L 3.4 2.0 L 3.4 11.0 L 3.0 11.0 Z M 0 4.0 L 5 2.5 L 5 1.7 L 0 3.2 Z M 0 7.5 L 5 6.0 L 5 5.2 L 0 6.7 Z";
-        $this->DrawSVGPath($path, $x - 1.1, $y - 2.1, 0.45, 0.45, true);
+        $path = "M1.2 0 L1.6 0 L1.6 10 L1.2 10 Z
+              M3.0 0 L3.4 0 L3.4 10 L3.0 10 Z
+              M0 3.5 L5 2.5 L5 3.0 L0 4.0 Z
+              M0 6.5 L5 5.5 L5 6.0 L0 7.0 Z";
+        $this->DrawSVGPath($path, $x - 1.1, $y - 2.1, 0.45, 0.45, true, 'B');
     }
 
     /**
@@ -565,7 +660,7 @@ class SheetMusicPDF extends \Fpdf\Fpdf
     {
         // Closed loop flat path with defined thin stem thickness (0.4 units) so it fills properly
         $path = "M 1.2 0 L 1.6 0 L 1.6 9 C 4.8 9 4.8 18 1.6 18 L 1.2 18 Z";
-        $this->DrawSVGPath($path, $x - 0.63, $y - 6.07, 0.45, 0.45, true);
+        $this->DrawSVGPath($path, $x - 0.63, $y - 6.07, 0.45, 0.45, true, 'none');
     }
 
     /**
