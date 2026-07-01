@@ -18,6 +18,7 @@ use MusicXML\Model\InstrumentName;
 use MusicXML\Model\InstrumentSound;
 use MusicXML\Model\MeasurePartwise;
 use MusicXML\Model\MidiChannel;
+use MusicXML\Model\MidiDevice;
 use MusicXML\Model\MidiInstrument;
 use MusicXML\Model\MidiProgram;
 use MusicXML\Model\MidiUnpitched;
@@ -233,6 +234,18 @@ class MusicXMLFromMidi extends MusicXMLBase
     private $xml = null;
 
     /**
+     * Map of CC Volume events per channel
+     * @var array
+     */
+    private $ccVolumeMap = array();
+
+    /**
+     * Map of CC Expression events per channel
+     * @var array
+     */
+    private $ccExpressionMap = array();
+
+    /**
      * Reset properties
      *
      * @return void
@@ -259,12 +272,14 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->tieContinue = array();
         $this->measureOnsets = array();
         $this->lyrics = array();
+        $this->ccVolumeMap = array();
+        $this->ccExpressionMap = array();
     }
 
     /**
      * Set selected channels
      *
-     * @param array $selectedChannels
+     * @param array $selectedChannels An array of channel numbers to be included in the conversion.
      * @return void
      */
     public function setSelectedChannels($selectedChannels)
@@ -276,9 +291,9 @@ class MusicXMLFromMidi extends MusicXMLBase
      * Set note duration
      *
      * @deprecated 1.0
-     * @param integer $ch
-     * @param integer $indexOn
-     * @param float $duration
+     * @param integer $ch The MIDI channel number.
+     * @param integer $indexOn The index of the measure.
+     * @param float $duration The new duration for the note.
      * @return void
      */
     public function setNoteDuration($ch, $indexOn, $duration)
@@ -291,12 +306,12 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Add part list
      *
-     * @param integer $channelId
-     * @param integer $partId
-     * @param integer $programId
-     * @param integer $instrumentId
-     * @param array $instrument
-     * @param integer $port
+     * @param integer $channelId The MIDI channel ID (0-15).
+     * @param string $partId The MusicXML part ID (e.g., "P1").
+     * @param integer $programId The MIDI program ID (1-128).
+     * @param string $instrumentId The MusicXML instrument ID (e.g., "P1-I1").
+     * @param array $instrument An array containing the instrument's name and abbreviation.
+     * @param integer $port The MIDI port number.
      * @return void
      */
     private function addPartList(
@@ -324,13 +339,13 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Add ecent
      *
-     * @param string $eventName Event name
-     * @param array $message Parse message
-     * @param integer $timebase Timebase
-     * @param integer $abstime Absolute time
-     * @param mixed $n
-     * @param mixed $ch
-     * @param mixed $v
+     * @param string $eventName The type of MIDI event (e.g., 'On', 'Off', 'PrCh', 'Tempo').
+     * @param array $message The raw parsed MIDI message from the parser.
+     * @param integer $timebase The MIDI file's timebase (ticks per quarter note).
+     * @param integer $abstime The absolute time of the event in ticks.
+     * @param mixed $n Primary value (e.g., note number, program ID, controller number).
+     * @param mixed $ch Channel number.
+     * @param mixed $v Secondary value (e.g., velocity, pressure, controller value).
      * @return void
      */
     private function addEvent($eventName, $message, $timebase, $abstime, $n = 0, $ch = 0, $v = 0) //NOSONAR
@@ -534,7 +549,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Load midi from file
      *
-     * @param string $midiPath
+     * @param string $midiPath The file path to the MIDI file.
      * @return MidiMeasure
      */
     public function loadMidiFile($midiPath)
@@ -554,7 +569,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Load midi from string
      *
-     * @param string $midiString
+     * @param string $midiString The binary content of the MIDI file.
      * @return MidiMeasure
      */
     public function loadMidiString($midiString)
@@ -568,10 +583,10 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Convert MIDI to MusicXML
      *
-     * @param MidiMeasure $midi
-     * @param string $title
-     * @param string $version Version of MusicXML
-     * @param string $format
+     * @param MidiMeasure $midi The parsed MidiMeasure object.
+     * @param string $title The title for the musical work.
+     * @param string $version The MusicXML version to use (e.g., "4.0").
+     * @param string $format The output format, either 'xml' or 'mxl'.
      * @return string
      */
     public function midiToMusicXml($midi, $title, $version = "4.0", $format = MXL::FORMAT_XML)
@@ -593,7 +608,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Build part list
      *
-     * @param MidiMeasure $midi
+     * @param MidiMeasure $midi The parsed MidiMeasure object.
      * @return void
      */
     private function buildPartList($midi) // NOSONAR
@@ -705,6 +720,19 @@ class MusicXMLFromMidi extends MusicXMLBase
                             $this->partPan[$partId] = $v;
                         }
 
+                        if ($c == 7) {
+                            if (!isset($this->ccVolumeMap[$ch])) {
+                                $this->ccVolumeMap[$ch] = array();
+                            }
+                            $this->ccVolumeMap[$ch][$abstime] = $v;
+                        }
+                        if ($c == 11) {
+                            if (!isset($this->ccExpressionMap[$ch])) {
+                                $this->ccExpressionMap[$ch] = array();
+                            }
+                            $this->ccExpressionMap[$ch][$abstime] = $v;
+                        }
+
                         // add event, $c is controller number, $v is value
                         $this->addEvent($msg[1], $msg, $timebase, $abstime, $c, $ch, $v);
 
@@ -812,12 +840,19 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         $xml .= "</MIDIFile>";
         $this->xml = $xml;
+
+        foreach ($this->ccVolumeMap as $ch => &$events) {
+            ksort($events);
+        }
+        foreach ($this->ccExpressionMap as $ch => &$events) {
+            ksort($events);
+        }
     }
 
     /**
      * Get measure division
      *
-     * @param integer $measureIndex (This parameter is now unused as divisions are global)
+     * @param integer $measureIndex The index of the measure (now unused as divisions are global).
      * @return integer
      */
     private function getDivisions($measureIndex)
@@ -828,7 +863,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Ger part ab
      *
-     * @param array $part
+     * @param array $part The part metadata array.
      * @return string
      */
     private function getPartAbbreviation($part)
@@ -839,7 +874,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Get part volume
      *
-     * @param integer $partId
+     * @param string $partId The MusicXML part ID.
      * @return integer
      */
     private function getPartVolume($partId)
@@ -850,7 +885,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Get part pan
      *
-     * @param integer $partId
+     * @param string $partId The MusicXML part ID.
      * @return integer
      */
     private function getPartPan($partId)
@@ -861,8 +896,8 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Check if note is audible or not
      *
-     * @param array $message
-     * @param integer $duration
+     * @param array $message The note event message array.
+     * @param integer $duration The calculated duration of the note in ticks.
      * @return boolean
      */
     private function isAudible($message, $duration)
@@ -871,13 +906,15 @@ class MusicXMLFromMidi extends MusicXMLBase
     }
 
     /**
-     * Convert Midi to MusicXML
+     * Converts a MidiMeasure object into a MusicXML score-partwise DOM structure.
+     * This is the core conversion logic that builds the entire MusicXML hierarchy
+     * from the parsed MIDI data.
      *
-     * @param MidiMeasure $midi
-     * @param string $title
-     * @param DOMDocument $domdoc
-     * @param string $version
-     * @return DOMNode
+     * @param MidiMeasure $midi The parsed MIDI data object.
+     * @param string $title The title of the work.
+     * @param DOMDocument $domdoc The parent DOMDocument to which the new nodes will be appended.
+     * @param string $version The MusicXML version string to set in the score-partwise element.
+     * @return DOMNode The root DOMNode of the generated score-partwise element.
      */
     public function convertMidiToMusicXML($midi, $title, $domdoc, $version = "4.0")
     {
@@ -972,16 +1009,6 @@ class MusicXMLFromMidi extends MusicXMLBase
             $totalMeasure = 1;
         }
 
-        // begin process pitch bend
-        // TODO: process pitch bend here
-        // end process pitch bend
-
-
-        // begin process chord
-        // TODO: process chord here
-        // end process chord
-
-
         // begin part
 
         // Determine which channel should hold the lyrics
@@ -1017,11 +1044,11 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Get score part channel 10
      *
-     * @param integer $partId
-     * @param integer $channelId
-     * @param integer $programId
-     * @param string $partName
-     * @param string $partAbbreviation
+     * @param string $partId The MusicXML part ID (e.g., "P10").
+     * @param integer $channelId The MIDI channel ID (should be 10).
+     * @param integer $programId The MIDI program ID for the drum kit.
+     * @param string $partName The display name for the part (e.g., "Drums").
+     * @param string $partAbbreviation The abbreviated name (e.g., "Drs.").
      * @return ScorePart
      */
     private function getScorePartChannel10($partId, $channelId, $programId, $partName, $partAbbreviation)
@@ -1031,37 +1058,36 @@ class MusicXMLFromMidi extends MusicXMLBase
         $scorePart->scoreInstrument = array();
         $scorePart->midiInstrument = array();
 
+        $midiDevice = new MidiDevice();
+        $midiDevice->port = 1; // Always route drum kit to Port 1 for unified synthesizer compatibility
+        $scorePart->midiDevice = array($midiDevice);
+
         $scorePart->partName = new PartName($partName);
         $scorePart->partAbbreviation = new PartAbbreviation($partAbbreviation);
-        ksort($this->channel10);
-        foreach ($this->channel10 as $key => $value)
+        
+        foreach (MusicXMLInstrument::DRUM_SET as $midiCode => $drumDetails)
         {
             $scoreInstrument = new ScoreInstrument();
             $midiInstrument = new MidiInstrument();
+            $key = $midiCode + 1;
             $id = $partId . '-I' . $key;
-            $drumSound = 'percussion.drums'; // Default generic drum sound
             $scoreInstrument->id = $id;
-            $midiCode = $value['note'];
-            if (isset(MusicXMLInstrument::DRUM_SET[$midiCode])) 
-            {
-                if (isset(MusicXMLInstrument::DRUM_SET[$midiCode][0])) {
-                    $scoreInstrument->instrumentName = new InstrumentName(MusicXMLInstrument::DRUM_SET[$midiCode][0]);
-                }
-                if (isset(MusicXMLInstrument::DRUM_SET[$midiCode][2])) {
-                    $drumSound = MusicXMLInstrument::DRUM_SET[$midiCode][2];
-                }
+            $scoreInstrument->instrumentName = new InstrumentName($drumDetails[0]);
+            
+            if (isset($drumDetails[2]) && !empty($drumDetails[2])) {
+                $scoreInstrument->instrumentSound = new InstrumentSound($drumDetails[2]);
             }
             
-            if (!isset($scoreInstrument->instrumentName))
-            {
-                $scoreInstrument->instrumentName = new InstrumentName('Instrument ' . $key);
-            }
-            $scoreInstrument->instrumentSound = new InstrumentSound($drumSound);
             $midiInstrument->id = $id;
             $midiInstrument->midiChannel = new MidiChannel($channelId);
             $midiInstrument->midiProgram = new MidiProgram($programId);
             $midiInstrument->midiUnpitched = new MidiUnpitched($midiCode + 1);
-            $volume = isset($value['v']) ? round($value['v'] * 100 / 127, 2) : 0.0;
+            
+            $volume = 80.0;
+            if (isset($this->channel10[$key])) {
+                $val = $this->channel10[$key];
+                $volume = isset($val['v']) ? round($val['v'] * 100 / 127, 2) : 80.0;
+            }
             if($volume > 100)
             {
                 $volume = 100;
@@ -1076,8 +1102,8 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Check that measure has message or not
      *
-     * @param integer $channelId
-     * @param integer $measureIndex
+     * @param integer $channelId The MIDI channel ID.
+     * @param integer $measureIndex The index of the measure to check.
      * @return boolean
      */
     private function hasMessage($channelId, $measureIndex)
@@ -1088,7 +1114,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Get MIDI Events
      *
-     * @param array $controlEvents
+     * @param array $controlEvents An array of MIDI control event messages for a measure.
      * @return MidiEvent
      */
     private function getEventList($controlEvents)
@@ -1114,7 +1140,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Build measure divisions
      *
-     * @param integer $timebase
+     * @param integer $timebase The MIDI file's timebase (ticks per quarter note).
      * @return void
      */
     private function buildTimeDivisions($timebase)
@@ -1180,9 +1206,9 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Fix duration
      *
-     * @param integer $rawDuration
-     * @param integer $divisions
-     * @param integer $timebase
+     * @param integer $rawDuration The duration in MIDI ticks.
+     * @param integer $divisions The number of divisions per quarter note for the score.
+     * @param integer $timebase The MIDI file's timebase (ticks per quarter note).
      * @return integer
      */
     public function fixDuration($rawDuration, $divisions, $timebase)
@@ -1200,8 +1226,8 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Set measure divison
      *
-     * @param integer $measureIndex
-     * @param float $divisions
+     * @param integer $measureIndex The index of the measure.
+     * @param float $divisions The proposed divisions value.
      * @return void
      */
     private function setMeasureDivisions($measureIndex, $divisions)
@@ -1221,11 +1247,11 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Get measure
      *
-     * @param string $partId
-     * @param integer $channelId
-     * @param integer $measureIndex
-     * @param integer $timebase
-     * @param integer $lyricChannelId
+     * @param string $partId The MusicXML part ID.
+     * @param integer $channelId The MIDI channel ID.
+     * @param integer $measureIndex The index of the measure to build.
+     * @param integer $timebase The MIDI file's timebase.
+     * @param integer $lyricChannelId The channel ID designated to carry the main lyrics.
      * @return MeasurePartwise
      */
     private function getMeasure($partId, $channelId, $measureIndex, $timebase, $lyricChannelId)
@@ -1370,10 +1396,10 @@ class MusicXMLFromMidi extends MusicXMLBase
 
     /**
      * Mendapatkan lirik untuk birama dan channel saat ini
-     * @param int $measureIndex
-     * @param int $measureLength
-     * @param int $channelId
-     * @param int $lyricChannelId
+     * @param int $measureIndex The index of the current measure.
+     * @param int $measureLength The length of the measure in MIDI ticks.
+     * @param int $channelId The current channel being processed.
+     * @param int $lyricChannelId The channel designated to hold lyrics.
      * @return array Map dari abstime => text
      */
     private function getLyricsForMeasure($measureIndex, $measureLength, $channelId, $lyricChannelId)
@@ -1400,7 +1426,7 @@ class MusicXMLFromMidi extends MusicXMLBase
 
     /**
      * Membuat objek model Lyric
-     * @param string $text
+     * @param string $text The lyric text.
      * @return Lyric
      */
     private function createLyricModel($text)
@@ -1415,14 +1441,14 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Add element to measure
      *
-     * @param integer $measureIndex
-     * @param MeasurePartwise $measure
-     * @param array $noteMessages
-     * @param string $partId
-     * @param integer $channelId
-     * @param integer $divisions
-     * @param integer $timebase
-     * @param integer $lyricChannelId
+     * @param integer $measureIndex The index of the measure being built.
+     * @param MeasurePartwise $measure The measure object to populate.
+     * @param array $noteMessages An array of sorted note events for this measure.
+     * @param string $partId The MusicXML part ID.
+     * @param integer $channelId The MIDI channel ID.
+     * @param integer $divisions The divisions per quarter note.
+     * @param integer $timebase The MIDI file's timebase.
+     * @param integer $lyricChannelId The channel ID designated for lyrics.
      * @return MeasurePartwiseContainer
      */
     private function addMeasureElement($measureIndex, $measure, $noteMessages, $partId, $channelId, $divisions, $timebase, $lyricChannelId)
@@ -1458,6 +1484,9 @@ class MusicXMLFromMidi extends MusicXMLBase
                 if ($xmlDuration <= 0 && $continueDuration > 0) $xmlDuration = 1; // Ensure minimum duration
 
                 $note = new Note();
+                if (isset($tieInfo['dynamics'])) {
+                    $note->dynamics = $tieInfo['dynamics'];
+                }
                 $voice = new \MusicXML\Model\Voice();
                 $voice->textContent = '1';
                 $note->voice = $voice;
@@ -1579,6 +1608,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                     
                     $this->tieContinue[$channelId][$message['note']] = array(
                         'duration' => $remainingDuration,
+                        'dynamics' => $note->dynamics
                     );
                 } else {
                     $xmlDuration = $note->duration->textContent;
@@ -1620,13 +1650,13 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Mengisi celah dalam birama dengan tanda istirahat, memecahnya jika terdapat lirik.
      *
-     * @param MeasurePartwise $measure
-     * @param int $measureIndex
-     * @param int $divisions
-     * @param int $timebase
-     * @param int $xmlStart Posisi awal kursor XML
-     * @param int $xmlEnd Posisi target akhir XML
-     * @param array &$lyricCarrier Lirik yang tersisa untuk birama tersebut
+     * @param MeasurePartwise $measure The measure object to add rests to.
+     * @param int $measureIndex The index of the current measure.
+     * @param int $divisions The divisions per quarter note.
+     * @param int $timebase The MIDI file's timebase.
+     * @param int $xmlStart The starting position of the gap in XML divisions.
+     * @param int $xmlEnd The ending position of the gap in XML divisions.
+     * @param array &$lyricDivisions A reference to the remaining lyrics map for the measure.
      */
     private function fillGapWithRests($measure, $measureIndex, $divisions, $timebase, $xmlStart, $xmlEnd, &$lyricDivisions)
     {
@@ -1676,10 +1706,10 @@ class MusicXMLFromMidi extends MusicXMLBase
      * Trim note duration
      * Split note when it exceeds measure boundary, applying tie notation
      *
-     * @param Note $note
-     * @param integer $newRawDuration New duration in MIDI ticks
-     * @param integer $divisions
-     * @param integer $timebase
+     * @param Note $note The note object to modify.
+     * @param integer $newRawDuration The new duration for the note within the current measure, in MIDI ticks.
+     * @param integer $divisions The divisions per quarter note.
+     * @param integer $timebase The MIDI file's timebase.
      * @return Note
      */
     private function trimNoteDuration($note, $newRawDuration, $divisions, $timebase)
@@ -1710,12 +1740,12 @@ class MusicXMLFromMidi extends MusicXMLBase
     /**
      * Create rest note
      *
-     * @param integer $measureIndex
-     * @param array $message
-     * @param integer $divisions
-     * @param integer $timebase
-     * @param integer $duration
-     * @param boolean $begining
+     * @param integer $measureIndex The index of the current measure.
+     * @param array $message The (often empty) message array.
+     * @param integer $divisions The divisions per quarter note.
+     * @param integer $timebase The MIDI file's timebase.
+     * @param integer $duration The duration of the rest in MIDI ticks.
+     * @param boolean $begining (Unused) Was intended to mark if the rest is at the start of a measure.
      * @return Note
      */
     private function createRestNote($measureIndex, $message, $divisions, $timebase, $duration, $begining = false)
@@ -1743,22 +1773,9 @@ class MusicXMLFromMidi extends MusicXMLBase
     }
 
     /**
-     * Create sound note
-     *
-     * @param integer $measureIndex
-     * @param string $partId
-     * @param integer $channelId
-     * @param array $message
-     * @param integer $divisions
-     * @param integer $timebase
-     * @param integer $originalDuration
-     * @return Note
-     */
-    /**
      * Get drum visual mapping (step, octave, notehead, stem).
-     *
-     * @param int $noteCode
-     * @return array
+     * @param int $noteCode The MIDI note number for the drum sound.
+     * @return array An associative array with 'step', 'octave', 'notehead', and 'stem'.
      */
     private function getDrumVisuals($noteCode)
     {
@@ -1878,6 +1895,21 @@ class MusicXMLFromMidi extends MusicXMLBase
         );
     }
 
+    /**
+     * Creates a MusicXML <note> element for a pitched or unpitched sound.
+     *
+     * This includes setting the pitch/unpitched properties, duration, type, stem,
+     * dynamics (based on velocity, volume, and expression), and instrument mapping for percussion.
+     *
+     * @param integer $measureIndex The index of the current measure.
+     * @param string $partId The MusicXML part ID (e.g., 'P1').
+     * @param integer $channelId The MIDI channel ID (0-15).
+     * @param array $message The note 'On' event message array, containing details like note number and velocity.
+     * @param integer $divisions The number of divisions per quarter note for the score.
+     * @param integer $timebase The MIDI file's timebase (ticks per quarter note).
+     * @param integer $originalDuration The original duration of the note in MIDI ticks.
+     * @return Note The fully constructed Note object, ready to be added to a measure.
+     */
     private function createSoundNote($measureIndex, $partId, $channelId, $message, $divisions, $timebase, $originalDuration)
     {
         $noteCode = $message['note'];
@@ -1886,6 +1918,15 @@ class MusicXMLFromMidi extends MusicXMLBase
         $voice = new \MusicXML\Model\Voice();
         $voice->textContent = '1';
         $note->voice = $voice;
+
+        // Apply CC Volume and CC Expression dynamics scaling formula
+        $velocity = isset($message['value']) ? $message['value'] : 64;
+        $tick = isset($message['abstime']) ? $message['abstime'] : 0;
+        $volume = $this->getVolume($channelId, $tick);
+        $expression = $this->getExpression($channelId, $tick);
+        
+        $v = ($velocity / 127.0) * ($volume / 127.0) * ($expression / 127.0) * 100.0;
+        $note->dynamics = round($v, 2);
 
         if ($channelId == 10) { // Percussion handling
             $note->unpitched = new Unpitched();
@@ -1958,6 +1999,52 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
         return $duration;
     }
+    /**
+     * Get CC Volume value for a given channel and tick
+     *
+     * @param int $channelId The MIDI channel ID.
+     * @param int $tick The absolute time in ticks.
+     * @return int
+     */
+    public function getVolume($channelId, $tick)
+    {
+        if (!isset($this->ccVolumeMap[$channelId]) || empty($this->ccVolumeMap[$channelId])) {
+            return 100;
+        }
+        $lastVal = 100;
+        foreach ($this->ccVolumeMap[$channelId] as $eventTick => $val) {
+            if ($eventTick <= $tick) {
+                $lastVal = $val;
+            } else {
+                break;
+            }
+        }
+        return $lastVal;
+    }
+
+    /**
+     * Get CC Expression value for a given channel and tick
+     *
+     * @param int $channelId The MIDI channel ID.
+     * @param int $tick The absolute time in ticks.
+     * @return int
+     */
+    public function getExpression($channelId, $tick)
+    {
+        if (!isset($this->ccExpressionMap[$channelId]) || empty($this->ccExpressionMap[$channelId])) {
+            return 127;
+        }
+        $lastVal = 127;
+        foreach ($this->ccExpressionMap[$channelId] as $eventTick => $val) {
+            if ($eventTick <= $tick) {
+                $lastVal = $val;
+            } else {
+                break;
+            }
+        }
+        return $lastVal;
+    }
+
     /**
      * Get XML
      */

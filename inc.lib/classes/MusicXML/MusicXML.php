@@ -20,9 +20,9 @@ class MusicXML extends MusicXMLBase
         $object = null;
         foreach($nodes as $node)
         {
-            if($node->nodeType == NodeType::ELEMENT && isset(ModelMap::CLASS_MAP[$node->tagName])) //NOSONAR
+            if($node->nodeType == NodeType::ELEMENT && isset(ModelMap::CLASS_MAP[$node->tagName]))
             {
-                $className = ModelMap::CLASS_MAP[$node->tagName]; //NOSONAR
+                $className = ModelMap::CLASS_MAP[$node->tagName];
                 $object = new $className($node);
                 break;
             }
@@ -30,9 +30,4 @@ class MusicXML extends MusicXMLBase
         echo $object;
 
     }
-
-
-
-
-
 }

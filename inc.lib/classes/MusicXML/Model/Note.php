@@ -252,11 +252,21 @@ class Note extends MusicXMLWriter
 	public $timeOnly;
 
     /**
+     * Grace
+     *
      * @Element
-     * @var Rest
+     * @var Grace
      */
-    public $rest;
-	
+    public $grace;
+
+    /**
+     * Cue
+     *
+     * @Element(name="cue")
+     * @var Cue
+     */
+    public $cue;
+
 	/**
      * @Element
      * @var Chord
@@ -272,6 +282,20 @@ class Note extends MusicXMLWriter
     public $pitch;
 
     /**
+ 	 * Unpitched
+ 	 *
+     * @Element
+     * @var Unpitched
+     */
+    public $unpitched;
+
+    /**
+     * @Element
+     * @var Rest
+     */
+    public $rest;
+
+    /**
      * @Element
      * @var Duration
      */
@@ -283,6 +307,14 @@ class Note extends MusicXMLWriter
      * @var Tie
      */
     public $tie;
+
+    /**
+     * Instrument
+     *
+     * @Element(name="instrument")
+     * @var Instrument
+     */
+    public $instrument;
 
     /**
      * Voice
@@ -300,74 +332,6 @@ class Note extends MusicXMLWriter
     public $type;
 
     /**
-     * @Element
-     * @var Accidental
-     */
-    public $accidental;
-
-	/**
-     * @Element
-     * @var Beam
-     */
-    public $beam;
-
-    /**
-	 * Notations
-	 *
-     * @Element
-     * @var Notations[]
-     */
-    public $notations;
-
-    /**
-	 * Unpitched
-	 *
-     * @Element
-     * @var Unpitched
-     */
-    public $unpitched;
-
-    /**
-	 * Staff
-	 *
-     * @Element
-     * @var Staff
-     */
-    public $staff;
-
-    /**
-     * Lyric
-     *
-     * @Element
-     * @var Lyric
-     */
-    public $lyric;
-
-    /**
-     * Grace
-     *
-     * @Element
-     * @var Grace
-     */
-    public $grace;
-
-    /**
-     * Time modification
-     *
-     * @Element(name="time-modification")
-     * @var TimeModification
-     */
-    public $timeModification;
-
-    /**
-     * Instrument
-     *
-     * @Element(name="instrument")
-     * @var Instrument
-     */
-    public $instrument;
-
-    /**
      * Dot
      *
      * @Element(name="dot")
@@ -376,12 +340,18 @@ class Note extends MusicXMLWriter
     public $dot;
 
     /**
-     * Cue
-     *
-     * @Element(name="cue")
-     * @var Cue
+     * @Element
+     * @var Accidental
      */
-    public $cue;
+    public $accidental;
+
+    /**
+     * Time modification
+     *
+     * @Element(name="time-modification")
+     * @var TimeModification
+     */
+    public $timeModification;
 
     /**
      * Stem
@@ -406,5 +376,35 @@ class Note extends MusicXMLWriter
      * @var NoteheadText
      */
     public $noteheadText;
+
+    /**
+ 	 * Staff
+ 	 *
+     * @Element
+     * @var Staff
+     */
+    public $staff;
+
+	/**
+     * @Element
+     * @var Beam
+     */
+    public $beam;
+
+    /**
+ 	 * Notations
+ 	 *
+     * @Element
+     * @var Notations[]
+     */
+    public $notations;
+
+    /**
+     * Lyric
+     *
+     * @Element
+     * @var Lyric
+     */
+    public $lyric;
 
 }
