@@ -422,14 +422,18 @@ class MusicXMLUtil
     public static function getInstrumentName($instrumentId, $channelId)
     {
         if ($channelId == 10) {
-            if(isset(MusicXMLInstrument::DRUM_SET[$instrumentId]))
-            {
-                return MusicXMLInstrument::DRUM_SET[$instrumentId];
-            }
-            else
-            {
-                return array('Percussion ' . ($instrumentId + 1), 'Perc.');
-            }
+            $drumkits = array(
+                0 => 'Drum Kit',
+                8 => 'Room Kit',
+                16 => 'Power Kit',
+                24 => 'Electronic Kit',
+                32 => 'Jazz Kit',
+                40 => 'Brush Kit',
+                48 => 'Orchestra Kit',
+                56 => 'SFX Kit'
+            );
+            $kitName = isset($drumkits[$instrumentId]) ? $drumkits[$instrumentId] : 'Drum Kit';
+            return array($kitName, 'D. Kit');
         } 
         if (isset(MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId])) {
             return MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId];

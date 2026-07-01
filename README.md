@@ -16,6 +16,7 @@ PHPMusicXML is a robust PHP library for creating, manipulating, and converting m
 1. Read, modify, and write MusicXML files.
 2. Convert MIDI to MusicXML (Compressed `.mxl` or Uncompressed `.xml`).
 3. Convert MusicXML to MIDI (Experimental).
+4. Convert MIDI to PDF for direct sheet music printing.
 
 ## Getting Started
 
@@ -125,6 +126,12 @@ catch(Exception $e)
 3. October 10th 2023 - 53 percent (235 of 444) elements created
 4. October 11th 2023 - 100 percent elements created
 5. April 26th 2026 - Success convert complex MIDI into MusicXML with many notes
+6. July 1st 2026
+   - Fix rithm
+   - Fix drum sound
+   - Fix note volume (include volume and expression)
+   - Add MIDI to PDF converter
+
 
 ## Support Is Required
 

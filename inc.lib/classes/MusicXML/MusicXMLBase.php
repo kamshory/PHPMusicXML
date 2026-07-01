@@ -6,7 +6,6 @@ use DateTime;
 use DOMDocument;
 use DOMImplementation;
 use MusicXML\Model\Alter;
-use MusicXML\Model\Articulations;
 use MusicXML\Model\Beats;
 use MusicXML\Model\BeatType;
 use MusicXML\Model\Bend;
@@ -34,7 +33,6 @@ use MusicXML\Model\Rights;
 use MusicXML\Model\ScoreInstrument;
 use MusicXML\Model\ScorePart;
 use MusicXML\Model\Software;
-use MusicXML\Model\Staccato;
 use MusicXML\Model\Step;
 use MusicXML\Model\Supports;
 use MusicXML\Model\Time;
@@ -175,7 +173,7 @@ abstract class MusicXMLBase
     {
         $midiDevice = new MidiDevice();
         $midiDevice->id = $midiId;
-        $midiDevice->port = $port;
+        $midiDevice->port = 1; // Always route to MIDI Port 1 for unified synthesizer compatibility
         return $midiDevice;
     }
 
