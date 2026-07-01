@@ -84,30 +84,39 @@ class MusicConverter
             $partId = $this->detectBestPart($xml);
         }
 
-        $bpm = 120; // Default BPM
+        $tempoMap = array();
         if (isset($xml->part)) {
             foreach ($xml->part as $part) {
                 if (isset($part->measure)) {
+                    $mIdx = 0;
                     foreach ($part->measure as $measure) {
                         if (isset($measure->direction)) {
                             foreach ($measure->direction as $direction) {
                                 if (isset($direction->sound) && isset($direction->sound['tempo'])) {
-                                    $bpm = round((float)$direction->sound['tempo']);
-                                    break 3;
+                                    $tempoMap[$mIdx] = round((float)$direction->sound['tempo']);
                                 }
                                 if (isset($direction->{'direction-type'}->metronome->{'per-minute'})) {
-                                    $bpm = round((float)$direction->{'direction-type'}->metronome->{'per-minute'});
-                                    break 3;
+                                    $tempoMap[$mIdx] = round((float)$direction->{'direction-type'}->metronome->{'per-minute'});
                                 }
                             }
                         }
+                        $mIdx++;
                     }
                 }
             }
         }
 
+        $firstTempo = 120;
+        foreach ($tempoMap as $m => $t) {
+            $firstTempo = $t;
+            break;
+        }
+        if (!isset($tempoMap[0])) {
+            $tempoMap[0] = $firstTempo;
+        }
+
         // 4. Render the part to PDF
-        return $this->renderPartToPdf($xml, $partId, $songTitle, $composer, $bpm, $compressEmptyMeasures);             
+        return $this->renderPartToPdf($xml, $partId, $songTitle, $composer, $tempoMap, $compressEmptyMeasures);             
     }
 
     /**
@@ -163,7 +172,7 @@ class MusicConverter
      * @return string
      * @throws Exception
      */
-    private function renderPartToPdf($xml, $partId, $songTitle, $composer, $bpm = null, $compressEmptyMeasures = false)
+    private function renderPartToPdf($xml, $partId, $songTitle, $composer, $tempoMap = array(), $compressEmptyMeasures = false)
     {
         // Find part element and part name
         $targetPart = null;
@@ -188,7 +197,9 @@ class MusicConverter
         }
 
         // Initialize PDF renderer
-        $pdf = new SheetMusicPDF();
+        $pdf = new SheetMusicPDF('P', 'mm', 'A4');
+        $pdf->composer = $composer;
+        $pdf->year = date('Y');
         $pdf->AliasNbPages();
         $pdf->SetAutoPageBreak(false);
         $pdf->AddPage();
@@ -214,28 +225,12 @@ class MusicConverter
         }
 
         // Grid parameters
-        $systemX = 15;
+        $tempoOffset = -8.5; // shift tempo text slightly left to avoid overlapping with barline
+        $systemX = 12; // horizontal start on page 1
         $systemY = 40; // vertical start on page 1
         $measuresPerSystem = $hasLyrics ? 2 : 3;
-        $printableWidth = 180;
+        $printableWidth = 185; // A4 width 210mm - 15mm left margin - 11mm right margin
         $lineSpacing = 2; // distance between staff lines in mm
-
-        // Draw Tempo on the first page above the first system
-        if ($bpm !== null && $bpm > 0) {
-            $pdf->SetFont($this->fontFamily, 'B', 9);
-            $pdf->SetXY(15, $systemY - 10.5);
-            $pdf->Cell(12, 4, "Tempo: ", 0, 0, 'L');
-            
-            // Draw a tiny quarter note
-            $pdf->Ellipse(28.5, $systemY - 7.5, 1.3, 0.9, 'F');
-            $pdf->SetLineWidth(0.2);
-            $pdf->SetDrawColor(0, 0, 0);
-            $pdf->Line(29.675, $systemY - 7.5, 29.675, $systemY - 11.5);
-            
-            // Draw the "= 120" text
-            $pdf->SetXY(31, $systemY - 10.5);
-            $pdf->Cell(30, 4, "= " . $bpm, 0, 0, 'L');
-        }
 
         // Default attributes
         $divisions = 4;
@@ -381,7 +376,26 @@ class MusicConverter
             }
 
             // Calculate current measure start coordinate
-            $currentMeasureX = $systemX + $systemStartIndent + ($layoutIdx % $measuresPerSystem) * $measureWidth;
+            $currentMeasureX = $systemX + $systemStartIndent + (($layoutIdx % $measuresPerSystem) * $measureWidth);
+
+            // Draw Tempo from tempoMap if present for this measure
+            if (isset($tempoMap[$mIdx])) {
+                $bpmVal = $tempoMap[$mIdx];
+                $pdf->SetFont($this->fontFamily, 'B', 8);
+                $pdf->SetXY($currentMeasureX + $tempoOffset - 2, $systemY - 6.5);
+                $pdf->Cell(10, 3, "Tempo: ", 0, 0, 'L');
+                
+                // Draw a tiny quarter note
+                $noteX = $currentMeasureX + 10.5;
+                $pdf->Ellipse($noteX + $tempoOffset, $systemY - 4.5, 1.035, 0.65, 'FD', 15);
+                $pdf->SetLineWidth(0.2);
+                $pdf->SetDrawColor(0, 0, 0);
+                $pdf->Line($noteX + $tempoOffset + 1, $systemY - 4.8, $noteX + $tempoOffset + 1, $systemY - 7.5);
+                
+                // Draw the "= 120" text
+                $pdf->SetXY($noteX + $tempoOffset + 1.8, $systemY - 6.5);
+                $pdf->Cell(15, 3, "= " . $bpmVal, 0, 0, 'L');
+            }
 
             // Draw vertical barlines (slightly longer and darker for better visibility)
             $pdf->SetLineWidth(0.35);
@@ -538,7 +552,8 @@ class MusicConverter
 
                     // Draw Notehead
                     $typeStr = isset($note->type) ? (string)$note->type : 'quarter';
-                    $style = ($typeStr === 'half' || $typeStr === 'whole') ? 'D' : 'F';
+                    $style = ($typeStr === 'half' || $typeStr === 'whole') ? 'D' : 'FD';
+                    
 
                     if ($notehead === 'x') {
                         // Draw 'x' for hi-hats/cymbals
@@ -553,53 +568,29 @@ class MusicConverter
                         $pdf->SetLineWidth(0.2);
                     } else {
                         // Draw normal oval/tilted notehead
-                        $pdf->Ellipse($noteX, $noteY, 1.6, 1.1, $style);
+                        $pdf->SetLineWidth(0.35);
+                        $pdf->Ellipse($noteX, $noteY, 1.55, 0.92, $style, 15);
                     }
 
                     // Determine stem direction (used for stem drawing and ties)
                     $stemDir = 'up';
-                    if (isset($note->stem)) {
-                        $stemDir = (string)$note->stem;
-                    } else {
-                        $stemDir = ($stepIndex >= 4) ? 'down' : 'up';
-                    }
+
+                    $stemDir = ($stepIndex >= 4) ? 'down' : 'up';
 
                     // Draw Stem (for all types except whole notes)
+                    // Draw Stem (for all types except whole notes)
                     if ($typeStr !== 'whole') {
-                        $pdf->SetLineWidth(0.25);
+                        $pdf->SetLineWidth(0.35);
                         if ($stemDir === 'up') {
-                            $stemEndY = $noteY - 6.5;
-                            $pdf->Line($noteX + 1.5, $noteY, $noteX + 1.5, $stemEndY);
-                            
-                            // Draw SVG flags as stroke-only curves (fill = false)
-                            $flagPath = "M 0 0 C 0.9 0.9, 1.35 1.875, 1.125 3.0";
-                            if ($typeStr === 'eighth' || $typeStr === '1/8') {
-                                $pdf->DrawSVGPath($flagPath, $noteX + 1.5, $stemEndY, 1.0, 1.0, false);
-                            } elseif ($typeStr === '16th' || $typeStr === '1/16') {
-                                $pdf->DrawSVGPath($flagPath, $noteX + 1.5, $stemEndY, 1.0, 1.0, false);
-                                $pdf->DrawSVGPath($flagPath, $noteX + 1.5, $stemEndY + 1.5, 1.0, 1.0, false);
-                            } elseif ($typeStr === '32nd' || $typeStr === '1/32') {
-                                $pdf->DrawSVGPath($flagPath, $noteX + 1.5, $stemEndY, 1.0, 1.0, false);
-                                $pdf->DrawSVGPath($flagPath, $noteX + 1.5, $stemEndY + 1.5, 1.0, 1.0, false);
-                                $pdf->DrawSVGPath($flagPath, $noteX + 1.5, $stemEndY + 3.0, 1.0, 1.0, false);
-                            }
+                            $stemEndY = $noteY - 8.5;
+                            $pdf->Line($noteX + 1.512, $noteY - 0.4, $noteX + 1.512, $stemEndY);
+                            $pdf->DrawNoteFlag($noteX + 1.56, $stemEndY, 'up', $typeStr);
                         } else {
-                            $stemEndY = $noteY + 6.5;
-                            $pdf->Line($noteX - 1.5, $noteY, $noteX - 1.5, $stemEndY);
-                            
-                            // Draw SVG flags as stroke-only curves (fill = false)
-                            $flagPath = "M 0 0 C 0.9 -0.9, 1.35 -1.875, 1.125 -3.0";
-                            if ($typeStr === 'eighth' || $typeStr === '1/8') {
-                                $pdf->DrawSVGPath($flagPath, $noteX - 1.5, $stemEndY, 1.0, 1.0, false);
-                            } elseif ($typeStr === '16th' || $typeStr === '1/16') {
-                                $pdf->DrawSVGPath($flagPath, $noteX - 1.5, $stemEndY, 1.0, 1.0, false);
-                                $pdf->DrawSVGPath($flagPath, $noteX - 1.5, $stemEndY - 1.5, 1.0, 1.0, false);
-                            } elseif ($typeStr === '32nd' || $typeStr === '1/32') {
-                                $pdf->DrawSVGPath($flagPath, $noteX - 1.5, $stemEndY, 1.0, 1.0, false);
-                                $pdf->DrawSVGPath($flagPath, $noteX - 1.5, $stemEndY - 1.5, 1.0, 1.0, false);
-                                $pdf->DrawSVGPath($flagPath, $noteX - 1.5, $stemEndY - 3.0, 1.0, 1.0, false);
-                            }
+                            $stemEndY = $noteY + 8.5;
+                            $pdf->Line($noteX - 1.512, $noteY + 0.4, $noteX - 1.512, $stemEndY);
+                            $pdf->DrawNoteFlag($noteX - 1.56, $stemEndY, 'down', $typeStr);
                         }
+
                         $pdf->SetLineWidth(0.2);
                     }
 
@@ -637,14 +628,14 @@ class MusicConverter
                             
                             $pdf->DrawTie($sx, $sy, $ex, $ey, $bendDir);
                         } else {
-                            // Different systems - draw the second segment (starts at left edge of the measure)
+                            // Different systems - draw the second segment (starts to the left of the notehead)
                             $bendDir = ($stemDir === 'up') ? 'down' : 'up';
                             $ex = $noteX - 1.2;
                             $ey = ($bendDir === 'down') ? ($noteY + 0.5) : ($noteY - 0.5);
                             
-                            // Left boundary of the current measure:
-                            $leftBoundary = $currentMeasureX;
-                            $sx = max($leftBoundary + 1, $noteX - 8);
+                            // Start the incoming tie curve 6.5mm to the left of the notehead
+                            // to ensure it is clearly visible and crosses the barline.
+                            $sx = $noteX - 6.5;
                             $sy = $ey; // keep it horizontal
                             
                             $pdf->DrawTie($sx, $sy, $ex, $ey, $bendDir);
