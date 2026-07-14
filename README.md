@@ -1,5 +1,11 @@
 # PHPMusicXML
 
+> **Archive Notice**
+>
+> This repository is no longer actively maintained. Development has been fully moved to a new repository under the Planetbiru organization.
+>
+> **Please visit the new repository at: [https://github.com/Planetbiru/MusicXML](https://github.com/Planetbiru/MusicXML)**
+
 PHPMusicXML is a robust PHP library for creating, manipulating, and converting music notation files. It specializes in converting MIDI files into highly readable MusicXML format, with advanced logic to handle complex musical notation and lyrics. Each element in the MusicXML schema is represented by a dedicated class model within the library.
 
 ## Key Features
